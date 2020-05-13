@@ -1,0 +1,61 @@
+template {
+  name: "TSR 8380P"
+  synonym: "WTC 083800520"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  world: "Dragonlance"
+  description: "The fearless \\Monster{draconians} of the \\Event{War of the Lance} have\n  retired from the field of battle to a pleasant valley in the \\Place{Kharolis\n  Mountains}. Well, it would be pleasant, if it weren\'t for some\n  \\Monster{dwarves}, whose irritating feuding prevents the \\Monster{draconians}\n  from realizing their greatest hope -- the ability to continue their doomed\n  race.\n\n  When the \\Monster{dwarves} discover a map leading to a fortune buried in the\n  \\Monster{dwarven} kingdom of \\Place{Thorbardin}, the \\Monster{draconians} are\n  swept up in a feverish race for treasure. Little do both sides realize that\n  they are part of the strange and terrible destiny descending upon\n  \\Place{Krynn} during the \\Event{Summer of Flame}.\n\n  A desinty that includes the \\Monster{children of Chaos}... the \\Monster{fire\n  dragons}!\n\n  \\Product{The Doom Brigade} is the first installment in \\Product{The Chaos\n  War} and \\Product{Kang\'s Regiment} series. \\Product{The Chaos War} series\n  features stories set during the war of the \\Product{Dragons of Summer Flame},\n  the New York Times best-selling novel co-authored by Margaret Weis."
+  short_description: "The first book in the Chaos War Series."
+}
+title: "Doom Brigade"
+leader: "The"
+subtitle: "War can get a fellow killed."
+notes: "According to the WotC website, this released with ISBN 0-7869-0785-1"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Perrin, Don"
+}
+cover {
+  name: "Parkinson, Keith"
+}
+date {
+  year: 1998
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0785"
+  check: 1
+}
+isbn13 {
+}
+pages: 344
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book 1"
+series: "Chaos War Series"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

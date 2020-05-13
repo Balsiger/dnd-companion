@@ -1,0 +1,28 @@
+template {
+  name: "Reaper 2319"
+  description: "An arch mage with owl and staff"
+}
+title: "Amathor Arch Mage"
+author {
+  name: "Johnson, J."
+}
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: DARK_HEAVEN
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+series: "Legends"
+price {
+  currency: "$ "
+  number: 275
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}

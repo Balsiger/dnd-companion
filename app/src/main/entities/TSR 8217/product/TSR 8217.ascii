@@ -1,0 +1,41 @@
+template {
+  name: "TSR 8217"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+  description: "it was he who was picked to save men\'s lives"
+}
+title: "Web of Futures"
+date {
+  year: 1991
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "059"
+  check: 1
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

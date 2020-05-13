@@ -1,0 +1,20 @@
+template {
+  name: "DMA 000029"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "unknown D&D product"
+}
+title: "Monster & Treasure Assortment, Set Three: Dungeon Levels Seven to Nine"
+date {
+  year: 1978
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+price {
+}

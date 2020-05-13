@@ -1,0 +1,61 @@
+template {
+  name: "WTC 9502074"
+  world: "Dragonlance"
+  description: "This collection of tales is edited by the creators of the\n  \\Place{Dragonlance} mythology. The \\Product{War of the Lance} contains a\n  number of short stories by popular \\Place{Dragonlance} authors as well as two\n  stories by Weis and Hickman."
+}
+title: "War of the Lance"
+author {
+}
+author {
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3777"
+  check: 7
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume VI"
+series: "Tales"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

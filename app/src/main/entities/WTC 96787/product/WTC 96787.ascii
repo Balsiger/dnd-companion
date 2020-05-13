@@ -1,0 +1,28 @@
+template {
+  name: "WTC 96787"
+  world: "Star Wars"
+  description: "The \\Product{Universe Huge Pack} contains a randomized selection of figures\n  designed to enhance and expand any collection of \\Product{Star Wars}\n  miniatures. The miniatures in this product are randomized and playable right\n  out of the box and, for the first time, include huge figures similar in scale\n  to previously released D&D huge figures. This is also the first set featuring\n  legendary creatures and characters from all eras of the \\Place{Star Wars}\n  timeline.\n\n  Booster Pack components\n\n  \\list\n  {Seven randomized miniatures with stat cards, including one huge figure}\n  {Very rare, rare, common, and uncommon miniatures}"
+}
+title: "Star Wars Universe Huge Pack"
+date {
+  year: 2005
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3741"
+  check: 6
+}
+isbn13 {
+}
+system: D20
+audience: ALL
+type: MINIATURE
+style: BOX
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 1999
+  precision: 100
+}

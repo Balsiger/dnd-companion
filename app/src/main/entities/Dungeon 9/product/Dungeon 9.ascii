@@ -1,0 +1,119 @@
+template {
+  name: "Dungeon 9"
+  world: "Generic"
+  description: "This is issue 9 of the dungeon magazine."
+}
+title: "Dungeon 9"
+author {
+  name: "Elrod, Patricia Nead"
+}
+author {
+  name: "Fichera, Richard"
+}
+author {
+  name: "Garcia, Vince"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Maxwell, Randy"
+}
+author {
+  name: "Boucher, Grant"
+}
+author {
+  name: "Boucher, David"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Jenkins, Robin"
+  job: "editorial assistant"
+}
+editor {
+  name: "Lucas, Eileen"
+  job: "editorial assistant"
+}
+editor {
+  name: "Moore, Georgia"
+  job: "editorial assistant"
+}
+editor {
+  name: "Price, Patrick Lucien"
+  job: "editorial assistant"
+}
+cover {
+  name: "Valusek, Valerie"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Dixon, Larry"
+}
+illustrator {
+  name: "Gorby, C. Bradford"
+}
+illustrator {
+  name: "Horne, Daniel R."
+}
+illustrator {
+  name: "Bennett, Richard"
+}
+illustrator {
+  name: "Lybarger, Wanda"
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+illustrator {
+  name: "Raupp, Roger"
+  job: "art director"
+}
+manager {
+  name: "Cook, Mike"
+  job: "publisher"
+}
+manager {
+  name: "Marilyn, Favaro"
+  job: "production assistant"
+}
+manager {
+  name: "Svikel, Lori"
+  job: "production assistant"
+}
+manager {
+  name: "Schulz, Pat"
+  job: "subscriptions"
+}
+date {
+  year: 1988
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "II 3"
+number: "9"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

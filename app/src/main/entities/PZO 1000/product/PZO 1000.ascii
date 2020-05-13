@@ -1,0 +1,46 @@
+template {
+  name: "PZO 1000"
+  world: "Generic"
+  description: "Evil schemes are afoot in \\Place{Cauldron}, a metropolis of merchants built\n                    into the caldera of a long-dormant volcano. Driven by the dreams of an insane\n                    \\Monster{demon} prince, bizarre cultists known as the \\Group{Cagewrights}\n                    scheme from ancient tunnels beneath the volcano, stoking it once more to\n                    terrible life. To prevent their agenda, your band of adventurers must brave\n                    haunted jungle ruins, slay mighty \\Monster[dragon]{dragons}, and bind\n                    themselves to a layer of the infinite \\Place{Abyss}. Will their swords and\n                    spell be enough to save the \\Place{Shackled City}?\n                    Originally published as 11 linked adventures in the award-winning\n                    \\Product{Dungeon} magazine, the \\Product{Shackled City Adventure Path} is the\n                    most ambitious official Dungeons & Dragons campaign ever created. Now, for\n                    the first time ever, everything you need to play the campaign has been\n                    compiled into a deluxe 416-page full-color hardcover that also includes an\n                    8-panel fully detailed map booklet, and a brand new \\Place{Shackled City}\n                    adventure written by fan favorite author Christopher Perkins.\n                    To use this Adventure Path, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook} and \\Product{Dungeon Master;s Guide} published by Wizards of the\n                    Coast."
+}
+title: "The Shackled City"
+subtitle: "A Complete Dungeons & Dragons Campaign"
+date {
+  year: 2005
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "9770071"
+  title: "0"
+  check: 3
+}
+isbn13 {
+}
+pages: 416
+system: DND_3RD
+type: ADVENTURE
+style: HARDCOVER
+producer: "Paizo"
+series: "Adventure Path"
+price {
+  currency: "$ "
+  number: 5995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "maps"
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"

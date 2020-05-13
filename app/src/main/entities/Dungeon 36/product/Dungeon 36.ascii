@@ -1,0 +1,88 @@
+template {
+  name: "Dungeon 36"
+  world: "Generic"
+  description: "This is issue 36 of the dungeon magazine."
+}
+title: "Dungeon 36"
+author {
+  name: "Walsh, Willie"
+}
+author {
+  name: "Dean, William S."
+}
+author {
+  name: "Baker, Roger"
+}
+author {
+  name: "Kurtz, Steve"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "assistant editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Jaquays, Paul"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Dow, Tom"
+}
+illustrator {
+  name: "Wolf, P.L."
+}
+illustrator {
+  name: "Williams, L.A."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1992
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "VI 6"
+number: "36"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

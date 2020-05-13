@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9211"
+  synonym: "AC10"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Bestiary of Dragons and Giants"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

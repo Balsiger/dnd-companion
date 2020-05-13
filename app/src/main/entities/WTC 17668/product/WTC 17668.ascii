@@ -1,0 +1,28 @@
+template {
+  name: "WTC 17668"
+  world: "Generic"
+  description: "\\large{Ancient Creatures of Legend}\n                    Endless tomes recount epic tales illuminating the might and majesty of\n                    \\Monster{dragons}. Formidable allies and more fearsome opponents, no other\n                    creatures have ever inspired such awe and wonder.\n                    This lavishly illustrated supplement for the D&D game presents a\n                    comprehensive overview of the most evocative creatures in fantasy\n                    roleplaying. Along with the physiology, psychology, personality, and society\n                    of \\Monster{dragons}, you\'ll discover statistics for all ten of the classic\n                    \\Monster{dragons} at each of their twelve age categories. With new feats,\n                    spells, magic items, and prestige classes for \\Monster{dragons}, their\n                    allies, and those brave or foolish enough to hunt them,\n                    \\Product{Dragonomicon: The Book of Dragons} also provides illustrated lairs\n                    for each of the classic \\Monster{dragons} and rules for generating their\n                    all-important treasure hoards.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}.\n                    A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Draconomicon"
+subtitle: "The Book of Dragons"
+date {
+  year: 2003
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 288
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,34 @@
+template {
+  name: "WTC 88164"
+  world: "Generic"
+  description: "\\large{A Guidebook to \\Class{Barbarians}, \\Class{Druids}, and\n                    \\Class{Rangers}}\n                    \\large{These Forces of Nature Can Weather Any Storm}\n                    \\Class{Barbarians}, \\Class{druids}, and \\Class{rangers} are the rugged and\n                    noble champions of untamed lands. This book teems with new ways to customize\n                    even the most seasoned characters, including:\n                    \\list\n                    {New feats, weapons, spells, and magic items.}\n                    {Improved, more detailed rules for the wild shape ability.}\n                    {New prestige classes such as the frenzied berserker, the\n                    \\Class{windrider}, and the \\Class{oozemaster}.}\n                    {A new type of magic item---the infusion.}\n                    Dungeon Masters and players who want to add a new dimension to their\n                    \\Class{barbarians}, \\Class{druids}, and \\Class{rangers} will uncover a cache\n                    of indispensable material within these pages.\n                    To use this accessory, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}. A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Masters of the Wild"
+date {
+  year: 2002
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2653"
+  check: 8
+}
+isbn13 {
+}
+pages: 96
+system: DND_3RD
+audience: ALL
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Class Guidebook"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,225 @@
+template {
+  name: "WTC C2209"
+  category: "Rules Supplement"
+  world: "Generic"
+  description: "The beholder \\NPC{Xanatha}, \\Place{Waterdeep}\'s most infamous crime lord, is known to hoard information on friend and foes alike. He catalogs lore about adenturers and ponders methods to thwart them. His twisted mind imagines that he can eventually record everything!\n\nAssembled here for the first time are a set of new rules and story options for all character classes in the \\Product{Player\'s Handbook}, including over twenty-five new subclasses. The book also presents new spells for both player characters and monsters.\n\nDungeon Master will find new rules for traps, magic items, downtime activities, and more -- all designed to enhance a D&D campaign and push it in new directions. \n\nAmid all this edxpansion material, the \\NPC{Xanathar} offers bizarre observations about whatever his eyestalks happen to glimpse. Pray they don\'t come to rest on you!"
+  short_description: "A set of new rules and story options."
+}
+title: "Xanathar\'s Guide to Everything"
+subtitle: "Beauty and Guile are in the Eyes of the Beholder"
+author {
+  name: "Crawford, Jeremy"
+  job: "lead designer"
+}
+author {
+  name: "Mearls, Mike"
+  job: "lead designer"
+}
+author {
+  name: "Schwalb, Robert J."
+  job: "designer"
+}
+author {
+  name: "Lee, Adam"
+  job: "additional design"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "additional design"
+}
+author {
+  name: "Sernett, Matt"
+  job: "additional design"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "development"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Carter, Michele"
+  job: "additional editing"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+  job: "additional editing"
+}
+cover {
+  name: "Rainville, Jason"
+}
+cover {
+  name: "Hydro74"
+  job: "alternative cover"
+}
+illustrator {
+  name: "Alexander, Rob"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Bradley, Christopher"
+}
+illustrator {
+  name: "Bradley, Noah"
+}
+illustrator {
+  name: "Burley, Sam"
+}
+illustrator {
+  name: "Chevrier, Jedd"
+}
+illustrator {
+  name: "jD"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Ejsing, Jesper"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Hannigan, Leesha"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Hurwitz, Lake"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "L?bke, Raphael"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Molnar, Mark"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "Sartor, A.M."
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Sladek, David"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Vega, Jose"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Yum, Min"
+}
+illustrator {
+  name: "Irvin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna"
+  job: "additional art direction"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+manager {
+  name: "Stan!"
+  job: "project management"
+}
+manager {
+  name: "Fleming, Heather"
+  job: "project management"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production services"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production services"
+}
+manager {
+  name: "Gershman, David"
+  job: "production services"
+}
+manager {
+  name: "Yee, Kevin"
+  job: "production services"
+}
+date {
+  year: 2017
+  month: 11
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6611"
+}
+pages: 192
+system: DND_NEXT
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

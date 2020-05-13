@@ -1,0 +1,39 @@
+template {
+  name: "TSR 11507"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Ravenloft"
+  description: "Once again, the undead arise to terrify AD&D game characters everywhere with\n                    the aid of this, the second in a series of works detailing the most dreadful\n                    and evil creatures imaginable.\n                    This compilation contains the complete texts of \\Product{Van Richten\'s Guide\n                    to Ghosts}, \\Product{Van Richten\'s Guide to the Lich}, and \\Product{Van\n                    Richten\'s Guide to the Ancient Dead}, updated and usable in any AD&D\n                    campaign."
+}
+title: "Van Richten\'s Monster Hunter\'s Compendium, Volume Two"
+date {
+  year: 1999
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1507"
+  check: 2
+}
+isbn13 {
+}
+pages: 288
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+number: "Volume Two"
+series: "Van Richten\'s Monster Hunter\'s Compendium"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

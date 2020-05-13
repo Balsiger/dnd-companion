@@ -1,0 +1,59 @@
+template {
+  name: "TSR 8492"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "For decades the ghastly \\Group{Night Parade} has haunted the sleep of many\n                    in the \\Place{Realms}, but most thought it was nothing more than figments\n                    born of troubled minds. They were wrong.\n                    \\NPC{Myrmeen Lhal}, the seductive rules of \\Place{Arabel}, becomes embroiled\n                    in a war against the \\Group{Night Parade}, a war in which the \\Group{Harpers}\n                    are her only allies. She must triumph against these creatures who live in\n                    fear and mistery---for the monstrous band\'s leaders have the daughter she\n                    thought dead for fourteen years past.\n                    \\Product{The Night Parade} is the fourth in an open-ended series of novels\n                    focusing on the \\Group{Harpers}, the secret organization for Good in the\n                    \\Place{Forgotten Realms} fantasy world."
+}
+title: "Night Parade"
+leader: "The"
+author {
+  name: "Ciencin, Scott"
+}
+cover {
+  name: "Fields, Fred"
+}
+date {
+  year: 1992
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "323"
+  check: 10
+}
+isbn13 {
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Four"
+series: "Harpers Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

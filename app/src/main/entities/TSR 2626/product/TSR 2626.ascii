@@ -1,0 +1,33 @@
+template {
+  name: "TSR 2626"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Planescape"
+  description: "\\large{Four doors of mystery appear in the cage. They lead to four\n                    adventures, if a basher has the dark of them.}\n                    \\emph{\'These aren\'t doors in the traditional sense, cutter, but they\'re\n                    portals just the same. They appear for a short time every 500 years, popping\n                    up in different pars of \\Place{Sigil}. Each hides a mystery that\'s waiting to\n                    be solved, and together they just might hold the key to a secret of the\n                    \\Place{multiverse}. All a body\'s got to do is tumble to the right keys, open\n                    the doors, and face the Unknown.\'\n                    \\right{--- \\NPC{Estavan}, merchant lord}}\n                    \\Product{Doors to the Unknown} is a collection of four \\Product{Planescape}\n                    adventures that can be played separately or as a mini-campaign. When four\n                    doors appear in the \\Place{Cage}, the barmies crawl out of the shadows, and\n                    the heroes get drawn into events that could have consequences for the entire\n                    \\Place{multiverse}. Each doors leads to a different plane and a different\n                    deadly challenge for the player characters. Together they offer a way to stop\n                    an ancient menace before it strikes again.\n                    The \\Product{Planescape Campaign Setting} boxed set is required to run these\n                    adventures. The \\Product{Planescape Monstrous Compendium Appendix I} and\n                    \\Product{II} and \\Product{Uncaged: Faces of Sigil} are recommended to enhance\n                    play."
+}
+title: "Doors to the Unknown"
+date {
+  year: 1996
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0447"
+  check: 10
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}

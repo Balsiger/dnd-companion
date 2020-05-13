@@ -1,0 +1,156 @@
+template {
+  name: "WTC 17761"
+  world: "Generic"
+  description: "Kick down the door and be ready for anything. Inside, you\'ll confront\n  animals, aliens, aberrations, adversaries, and even a few allies. The\n  \\Product{d20 Menace Manual} provides creatures, characters, and organizations\n  to challenge or confound the heroes of any d20 Modern roleplaying game---so\n  watch your back.\n\n  To use this product, you also need the \\Product{d20 Modern Roleplaying Game}\n  core rulebook. For players and Gamemasters, this product is compatible with\n  other d20 System roleplaying games."
+}
+title: "d20 Menace Manual"
+subtitle: "Keep Your Guard Up and Your Pistol Loaded"
+author {
+  name: "Wikder, JD"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "additional design"
+}
+editor {
+  name: "Horner, Miranda"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Stan!"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "managing editor and design manager"
+}
+cover {
+  name: "Johnson, Dave"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Alexander, Jason"
+}
+illustrator {
+  name: "Barrum, Joachim"
+}
+illustrator {
+  name: "Beargeon, Ted"
+}
+illustrator {
+  name: "Foss, Langdon"
+}
+illustrator {
+  name: "Irving, Frazer"
+}
+illustrator {
+  name: "Kerschl, Karl"
+}
+illustrator {
+  name: "Lawrence, Chester"
+}
+illustrator {
+  name: "McLeod, Kagan"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Noguchi, Mikael"
+}
+illustrator {
+  name: "Ormston, Dean"
+}
+illustrator {
+  name: "Parker, Jake"
+}
+illustrator {
+  name: "Plucinski, Zak"
+}
+illustrator {
+  name: "Schomburg, Scott"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Wayshak, Jonathon"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Fliege, Cynthia"
+  job: "original graphic design"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "digital production specialist"
+}
+typographer {
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Kirchoff, Mary"
+  job: "vice president of publishing"
+}
+manager {
+  name: "Valterra, Anthony"
+  job: "category manager"
+}
+manager {
+  name: "Durham, Martin"
+  job: "project manager"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production manager"
+}
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2899"
+  check: 9
+}
+isbn13 {
+}
+pages: 224
+system: D20_MODERN
+type: MONSTER_COMPENDIUM
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

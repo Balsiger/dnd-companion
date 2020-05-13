@@ -1,0 +1,119 @@
+template {
+  name: "Dungeon 10"
+  world: "Generic"
+  description: "The Shrine of Ilisdahur, The Artisan\'s Tomb, They Also Serve, Monsterquest, Secrets of the Towers, Threshold of Evil"
+}
+title: "Dungeon 10"
+subtitle: "Issue 10"
+author {
+  name: "Nephew, John"
+}
+author {
+  name: "Bennie, Scott"
+}
+author {
+  name: "Church, Larry"
+}
+author {
+  name: "Garcia, Vince"
+}
+author {
+  name: "Kelk, Robert"
+}
+author {
+  name: "Maaske, Matthew"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Price, Patrick Lucien"
+  job: "editorial assistant"
+}
+editor {
+  name: "Lucas, Eileen"
+  job: "editorial assistant"
+}
+editor {
+  name: "Jenkins, Robin"
+  job: "editorial assistant"
+}
+cover {
+  name: "Horne, Daniel"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Valusek, Valerie A."
+}
+illustrator {
+  name: "Raupp, Roger"
+  job: "art director"
+}
+illustrator {
+  name: "Bennett, Richard"
+}
+illustrator {
+  name: "Horne, Daniel"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Dixon, Larry"
+}
+typographer {
+}
+manager {
+  name: "Cook, Mike"
+  job: "publisher"
+}
+manager {
+}
+manager {
+}
+manager {
+  name: "Schulz, Pat"
+  job: "subscriptions"
+}
+manager {
+  name: "Svikel, Lori"
+  job: "production assistant"
+}
+manager {
+  name: "Favaro, Marilyn"
+  job: "production assistant"
+}
+date {
+  year: 1988
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+type: MAGAZINE
+style: BOOKLET
+producer: "TSR"
+volume: "II"
+number: "4"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: COLOR_COVER

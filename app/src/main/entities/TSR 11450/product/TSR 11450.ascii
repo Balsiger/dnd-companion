@@ -1,0 +1,53 @@
+template {
+  name: "TSR 11450"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Generic"
+  description: "game of comabt with everything needed to play"
+}
+title: "Dungeons & Dragons game"
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+  year: 1999
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1450"
+  check: 5
+}
+isbn13 {
+}
+system: DND_3RD
+type: CAMPAIGN_SETTING
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 999
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 2
+}
+content {
+  part: FOLDER
+  description: "heros"
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  description: "DM"
+  number: 1073741824
+}
+content {
+  part: DICE
+  number: 6
+}

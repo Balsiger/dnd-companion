@@ -1,0 +1,24 @@
+template {
+  name: "TSR 6902"
+  synonym: "MSL3"
+  reference {
+    name: "catalog91W"
+  }
+  world: "Generic"
+  description: "someone uses cosmic control rods to create chaos on Earth"
+}
+title: "Spore of Arthros"
+date {
+  year: 1991
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: MARVEL_SUPER_HEROES
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

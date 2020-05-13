@@ -1,0 +1,280 @@
+template {
+  name: "DMA 000086"
+  synonym: "Dungeonology"
+  world: "Forgotten Realms"
+  description: "Welcome, my intrepid friends, to a guide to the Forgotten Realms of myth and legend and how to best explore their most intriguing features: the monster-plagued, treasure-laden dungeons that plunge deep beneath the earth and riddle the highest mountains.\n\nWith my capable help, you will become both wise in the ways of such places and wary of their dangers. If you value your life, do not enter a dungeon without this book!\n\n\\right{-- \\NPC{Volothamp Geddarm},}\n\\right{your industrious guide and servant}"
+  short_description: "Description of dungeons in the Forgotten Realms."
+}
+title: "Volothamp Geddarm\'s Dungeonology"
+subtitle: "An Epic Adventure through the Forgotten Realms"
+author {
+  name: "Forbeck, Matt"
+}
+author {
+  name: "Greenwood, Ed"
+  job: "introduction"
+}
+author {
+  name: "Butterworth, Gareth"
+  job: "designer"
+}
+author {
+  name: "Chapman, Helen"
+  job: "designer"
+}
+author {
+  name: "Golden, Mark"
+  job: "designer"
+}
+author {
+  name: "Upstone, Ian"
+  job: "designer"
+}
+illustrator {
+  name: "Riley, Aaron J."
+}
+illustrator {
+  name: "Stone, Alex"
+}
+illustrator {
+  name: "Rain Turkel, Autumn"
+}
+illustrator {
+  name: "Oliver, Ben"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Matyas, Brian"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Nunez de Castro Torres, Carlos"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Burdett, Christopher"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Cearley, Clint"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Van Der Haegen, Cyril"
+}
+illustrator {
+  name: "Sheppard, Cynthia"
+}
+illustrator {
+  name: "Landerman, Daniel"
+}
+illustrator {
+  name: "Bader, Daren"
+}
+illustrator {
+  name: "Palumbo, David"
+}
+illustrator {
+  name: "Gist, E.M."
+}
+illustrator {
+  name: "Hekaton, E.W."
+}
+illustrator {
+  name: "Tanji, Emi"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Elmasli, Emrah"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Burburan, Filip"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Kuip, Guido"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Henriquez, Ilich"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Blando, Jared"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Ejsing, Jesper"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Wen, Joon"
+}
+illustrator {
+  name: "Kotaki, Kekai"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Hurwitz, Lake"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Look, Lindsey"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Stawicki, Matt"
+}
+illustrator {
+  name: "Dunbar, Max"
+}
+illustrator {
+  name: "Berube, Michael"
+}
+illustrator {
+  name: "Komarck, Michael"
+}
+illustrator {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Ceran, Milivoj"
+}
+illustrator {
+  name: "Yum, Min"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Swandland, Raymond"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Raper, Robert"
+}
+illustrator {
+  name: "Rey, Rob"
+}
+illustrator {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Burley, Sam"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Fischer, Scott M."
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Thenery, Thom"
+}
+illustrator {
+  name: "Babbey, Tom"
+}
+illustrator {
+  name: "Feizo Gas, Toma"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Walpole, Tyler"
+}
+illustrator {
+  name: "Maury, Victor"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "O\'Conner, William"
+}
+illustrator {
+  name: "Stella, Zack"
+}
+manager {
+  name: "Walters, Kirsty"
+}
+manager {
+  name: "Wicks, Helen"
+}
+date {
+  year: 2016
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7636"
+  title: "9353"
+  check: 4
+}
+pages: 22
+audience: ALL
+type: SPECIAL_BOOK
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2499
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

@@ -1,0 +1,70 @@
+template {
+  name: "TSR 9412"
+  synonym: "RR6"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Ravenloft"
+  description: "There is a black terror that amasses great authority in the farthest reaches\n                    of \\Place{Ravenloft}, quietly insinuating its sway upon the land like a\n                    creeping poison in the body: Its name is \\Monster{lich}.\n                    Until now, \\Monster{vampires} have been the undisputed masters of darkness,\n                    but the sheer genius of the \\Monster{lich} (coupled with its immortal quest\n                    for ever more powerful magic) has proven to be a malevolent threat to the\n                    cause of Goodness. \\Monster{Liches} were once all-powerful wizards in life,\n                    yet they have sacrificed everything to leap beyond the bounds of humanity and\n                    acquire unspeakable necromantic mastery.\n                    In the face of such might and malice, there appears to be one hope:\n                    \\NPC{Dr. Rudolph Van Richten}, scholar and bane to all creatures of the\n                    night, has once again picked up quill and parchment---this time to expose\n                    this dreaded monster\'s darkest secrets! Within these pages the reader will\n                    learn of the \\Monster{lich}\'s origins, its powers, its lair, and even its\n                    very psychological makeup as well as the keys to a successful hunt and\n                    termination. Deadly new minions and unique \\Monster{lich} magicks are also\n                    brought to the fore.\n                    Take back the night, all ye of courageous heart and keen blade! With each\n                    chime of the clock, the \\Monster{lich} seeks to complete another of its\n                    diabolical schemes. Unchecked, the monster will obliterate the light of day,\n                    and \\Place{Ravenloft} is already much too dark..."
+}
+title: "Van Richten\'s Guide to the Lich"
+author {
+  name: "Haddock, Erik W."
+}
+author {
+  name: "Wise, David"
+}
+editor {
+  name: "Wise, David"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Brown, Timothy B."
+  job: "product coordination"
+}
+manager {
+  name: "Watry, Dori \'the Barbarian\'"
+  job: "product coordination"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "production"
+}
+date {
+  year: 1993
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+series: "Van Richten\'s Guide"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

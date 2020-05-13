@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9106"
+  synonym: "B8"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Journey to the Rock"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

@@ -1,0 +1,75 @@
+template {
+  name: "TSR 9504"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "Generic"
+  description: "This accessory for the AD&D game includes two six-panel screens containing\n                    all the information necessary to quickly and efficiently handle complex\n                    encounters. New tables covering gaze attacks, gems, carrying capacity, and\n                    other subjects will help any game session run faster and smoother.\n                    One of the screens is filled with information drawn from the\n                    \\Product{Player\'s Option} and \\Product{Dungeon Master Option} rulebooks:\n                    \\Product{Combat & Tactics}, \\Product{Skills & Powers}, and\n                    \\Product{High-Level Campaigns}.\n                    The 32-page Master Index in this package includes a complete spell index plus\n                    a compilation of topic references from the \\Product{Player\'s Handbook},\n                    \\Product{Dungeon Master Guide}, \\Product{Tome of Magic}, \\Product{Combat &\n                    Tacticts}, \\Product{Skills & Powers}, and \\Product{High-Level Campaigns},\n                    with each entry keyed to the proper book---everything a DM needs, all in one\n                    place!"
+}
+title: "Dungeon Master Screen and Master Index"
+author {
+  name: "Butler, Jim"
+}
+cover {
+  name: "Easley, Jeff"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Winter, Steve"
+  job: "project coordination"
+}
+manager {
+  name: "Jaquays, Paul"
+  job: "graphics coordination"
+}
+manager {
+  name: "Daniele, Stephen A."
+  job: "graphic design"
+}
+date {
+  year: 1995
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0331"
+  check: 7
+}
+isbn13 {
+}
+pages: 16
+system: ADND_REVISED
+type: ACCESSORY
+style: SCREEN
+producer: "TSR"
+series: "Screen"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: SCREEN
+  number: 2
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "cover"
+  number: 1073741824
+}

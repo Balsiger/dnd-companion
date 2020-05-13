@@ -1,0 +1,33 @@
+template {
+  name: "TSR 21355"
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Star*Drive"
+  description: "collection of short stories"
+}
+title: "Starfall"
+author {
+  name: "Martin H. Greenberg"
+}
+date {
+  year: 1999
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1355"
+  check: 10
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

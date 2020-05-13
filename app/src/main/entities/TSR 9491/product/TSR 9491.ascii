@@ -1,0 +1,69 @@
+template {
+  name: "TSR 9491"
+  synonym: "(FOR8)"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 225"
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{\'Any rogue can craft a spell---but it takes a really reckless fool to\n                    write one down\'.}\n                    Thus, the wizard \\NPC{Elminster} introduces the latest collection of wizardly\n                    lore from the \\Place{Forgotten Realms} campaign setting, including:\n                    \\list\n                    {New spells from mages such as \\NPC{Daltim}, \\NPC{Darsson}, and\n                    \\NPC{Myrl}.}\n                    {Fell creatures---the \\Monster{Tome Guardian}, the\n                    \\Monster{Disenchanter}, and the \\Monster{Scalamagdiron}.}\n                    {Details of more than 40 spellbooks---appearance, history, the magic\n                    they contain, and what is known of the fates of their makers.}\n                    {And just for fun---\\NPC{Elminster}\'s very own traveling spellbook!}\n                    \\emph{\'All this could have been avoided, of course...If the handful of\n                    heedful folk in the worlds\'d listen to me but a few moments more, much\n                    trouble could be averted---and, I suppose, much high\n                    adventure. Hmmm...perhaps \'tis the doom of \\Monster[Human]{humans} to always\n                    rush in heedless of the costs---and to open and read every old, crumbling\n                    book they find.\'\n                    \\right{---\\NPC{Elminster}}}"
+}
+title: "Pages from the Mages"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Beach, Tim"
+}
+editor {
+  name: "Pickens, Jon"
+}
+cover {
+  name: "Easley, Jeff"
+}
+cover {
+  name: "Ciske, Renee"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+illustrator {
+  name: "Olson, Erik"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+date {
+  year: 1995
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

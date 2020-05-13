@@ -1,0 +1,84 @@
+template {
+  name: "TLG NGU1"
+  world: "Generic"
+  description: "\\Product{The Mother of All Encounter Tables} is here! This utility unlike any\n  before conceived! This is not just a random book of tables, but a well\n  thought out DM utility that will make wilderness travel, city streets and\n  dungeon corridors all more interesting. It contains encounters for each\n  terrain type from mountains to the ocean, in each climate from artic to\n  tropical, and has separate tables for day and night encounters, with space\n  left for the DM to insert new monsters of his choosing. In addition to\n  encounters with monsters and men, there are tables for unusual weather\n  events, strange occurrences, accidents, and encounters with NPCs. Trade\n  routes and caravans are detailed as well as \\Monster{trolls} and\n  \\Monster{dragons}. After all, you never know when ants will infest your food,\n  or when a cleric will get struck by lightning!"
+  short_description: "The Ultimate Sourcebook for Overworked DMs"
+}
+title: "Mother of All Encounter Tables"
+leader: "The"
+subtitle: "One Table to Rule Them All!"
+author {
+  name: "Ragland, Greg"
+}
+author {
+  name: "Webb, Bill"
+  job: "design"
+}
+author {
+  name: "Ragland, Greg"
+  job: "design"
+}
+author {
+  name: "Webb, Bill"
+  job: "developer"
+}
+editor {
+  name: "Webb, Bill"
+}
+editor {
+  name: "Greene, Scott"
+  job: "d20 content editor"
+}
+cover {
+  name: "Bourelle, Ed"
+  job: "front & back cover design"
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+  name: "Hudson, Heather"
+}
+illustrator {
+  name: "Chenault, David"
+  job: "art director"
+}
+typographer {
+  name: "Wright, Charles A."
+  job: "layout and typesetting"
+}
+typographer {
+}
+manager {
+  name: "Peterson, Clark"
+  job: "producer"
+}
+manager {
+}
+date {
+  year: 2003
+}
+isbn {
+  group: "1"
+  publisher: "931275"
+  title: "54"
+  check: 8
+}
+isbn13 {
+}
+pages: 142
+system: D20
+type: ACCESSORY
+style: HARDCOVER
+producer: "Necromancer Games"
+price {
+  currency: "$ "
+  number: 2795
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

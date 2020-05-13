@@ -1,0 +1,38 @@
+template {
+  name: "TSR 21659"
+  reference {
+    name: "net"
+  }
+  world: "Rokugan"
+  description: "\\NPC{Doji Hoturi}, the young Champion of the \\Group{Crane}, is everything a\n                    \\Class{samurai} could wish to be: swift of sword and pure of heart . . . but\n                    his eyes hide a terrible secret.\n                    Bloody magic whispers through \\Place{Rokugan}\'s greatest cities, and the\n                    undead servants of a Dark God rise. From the shadows, \\NPC{Doji Hoturi}\n                    watches as a new champion of evil lifts his sword and laughs -- and the face\n                    beneath the armor is his own."
+}
+title: "Crane"
+leader: "The"
+subtitle: "A Spring of War."
+author {
+  name: "Ree Soesbee"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1659"
+  check: 1
+}
+isbn13 {
+}
+pages: 288
+system: LEGEND_OF_THE_FIVE_RINGS
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Third Scroll"
+series: "The Clan War"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

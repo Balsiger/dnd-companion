@@ -1,0 +1,73 @@
+template {
+  name: "TSR 9440"
+  synonym: "ALQ5"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Al-Qadim"
+  description: "\\large{Unveil the forbidden secrets of \\Place{Nog} and \\Place{Kadar}!}\n                    The \\Place{Nogaro River} has seen the rise and fall of countless empires,\n                    unequaled in their evil and terror. Buried but not destroyed, their legacy\n                    lives on, shrouded by the tangled jungle and by time itself.\n                    With \\Product{Ruined Kingdoms}, bold explorers can at last lift the veil of\n                    oblivion and unravel the mysteries of a dark and sinister past. Inside you\'ll\n                    discover:\n                    \\list\n                    {A 32-page campaign booklet describing the \\Place{Ruined Kingdoms} and\n                    their many secrets.}\n                    {A 64-page book packed with adventures---nine plots of intrigue and\n                    danger that transport player characters from \\Place{Dihliz} to\n                    \\Place{Afyal} and into the heat of the ruin-choked jungle. Adventurers\n                    face \\Monster{yak-men}, \\Monster{genies}, and \\Monster{giants}, and\n                    unearth artifacts of awesome magical power.}\n                    {A 8-page booklet filled with villainous women and deadly reptilian\n                    monsters.}\n                    {Six cardstock sheets featuring detailed maps and player aids.}\n                    {A stunning poster map of eastern \\Place{Zakhara}, depicting the\n                    twisting valleys and ancient capitals of the \\Place{Ruined Kingdoms}.}\n                    Recommended for use with the \\Product{Arabian Adventures} rulebook."
+}
+title: "Ruined Kingdoms"
+author {
+  name: "Kurtz, Steven"
+}
+editor {
+  name: "Pike-Brown, Richard"
+}
+editor {
+  name: "Rateliff, John D."
+}
+cover {
+  name: "Fields, Fred"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+date {
+  year: 1994
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: ADND_2ND
+type: ADVENTURE
+style: BOX
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Campaign Guide"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Adventure Book"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Monstrous Compendium"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "color"
+  number: 6
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

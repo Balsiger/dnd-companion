@@ -1,0 +1,175 @@
+template {
+  name: "Dragon 348"
+  world: "Generic"
+  description: "Issue 348 of the magazine. "
+}
+title: "Dragon 348"
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Davis, Graeme"
+}
+author {
+  name: "Drain, Jonathan"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Frost, Josh"
+}
+author {
+  name: "Hantzmon, Christopher"
+}
+author {
+  name: "Happ, Stenf"
+}
+author {
+  name: "Herold, Nicholas"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "John, E. Ling, Jr"
+}
+author {
+  name: "McArtor, Mike"
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "Montesano, Michael J."
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Weiss, Saueml D."
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "managing editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Pozca, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXXI 5"
+number: "348"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

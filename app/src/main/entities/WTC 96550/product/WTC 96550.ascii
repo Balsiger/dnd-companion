@@ -1,0 +1,45 @@
+template {
+  name: "WTC 96550"
+  world: "Forgotten Realms"
+  description: "\\NPC{Drizzt Do\'Urden} has become the Hunter, a bane of the \\Monster{orc}\n                    hordes still ravaging the \\Place{North}. Cut off, alone, convinced that\n                    everything he ever valued has been destroyed, all that\'s left is to kill, and\n                    kill, and kill, until there are no enemies left. But there are a lot of\n                    enemies, and even the Hunter is just one lone \\Monster{drow}.\n                    \\emph{\'Salvatore\'s latest series... includes tense battles, vivid landscapes\n                    and memorable characters.\'}\n                    \\right{---Library Journal}"
+}
+title: "Lone Drow"
+leader: "The"
+subtitle: "Alone on the Battlefield. Surrounded by Death. Cornered by Enemies. And Ready to Die."
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+date {
+  year: 2004
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3228"
+  check: 7
+}
+isbn13 {
+}
+pages: 370
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "The Hunter\'s Blades Trilogy"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

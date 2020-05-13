@@ -1,0 +1,20 @@
+template {
+  name: "TSR 6002"
+  reference {
+    name: "net price list"
+  }
+}
+title: "Chainmail"
+date {
+  year: 1975
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

@@ -1,0 +1,44 @@
+template {
+  name: "TSR 2702"
+  synonym: "AM3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "rules for extra-vehicular activity and weapons"
+}
+title: "Bughunters"
+author {
+  name: "TSR Staff"
+}
+date {
+  year: 1993
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "623"
+  check: 9
+}
+isbn13 {
+}
+pages: 128
+system: AMAZING_ENGINE
+type: RULES_SUPPLEMENT
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}

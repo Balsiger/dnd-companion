@@ -1,0 +1,80 @@
+template {
+  name: "PZO 3036"
+  world: "Generic"
+  description: "Make your getaways and rundowns about more than just movement speeds. This beautifully illustrated deck of 51 full-color cards gives you a new way to run chases and races in your Pathfinder Roleplaying Game. Whether starting your life on the run or continuing the pursuit from the original Chase Cards set, this deck presents complete rules for fleet-footed flights through city streets, wilderness trails, and dungeon corridors. Get in the race with Chase Cards 2: Hot Pursuit, and don\'t get left in the dust!"
+  short_description: "Card deck to play out a chase."
+}
+title: "Chase Cards 2 Hot Pursuit"
+subtitle: "Pathfinder Cards"
+author {
+  name: "Bulmahn, Jason"
+  job: "designer"
+}
+author {
+  name: "Radney-MacFarland, Stephan"
+  job: "designer"
+}
+editor {
+  name: "Bauer, Judy"
+}
+editor {
+  name: "Carey, Christopher"
+}
+editor {
+  name: "Macklin, Ryan"
+}
+cover {
+  name: "Beisner, Ralph"
+  job: "box illustration"
+}
+illustrator {
+  name: "Beisner, Ralph"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Beisner, Ralph"
+  job: "card back illustrations"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "art director"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2014
+  month: 2
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "606"
+  check: 5
+}
+system: DND_3_5
+audience: ALL
+type: CARDS_TYPE
+style: SMALL_BOX
+producer: "Paizo"
+series: "Pathfinder Cards"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: BOX
+  description: "packaging"
+  number: 1
+}
+content {
+  part: CARD
+  description: "chase card"
+  number: 51
+}
+layout: FULL_COLOR

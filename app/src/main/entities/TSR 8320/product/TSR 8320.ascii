@@ -1,0 +1,46 @@
+template {
+  name: "TSR 8320"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "the set of the Chronicles series"
+}
+title: "Chronicles Trilogy"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "543"
+  check: 10
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "all volumes"
+series: "Chronicles Trilogy"
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}

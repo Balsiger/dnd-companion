@@ -1,0 +1,38 @@
+template {
+  name: "TSR 3118"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  world: "Birthright"
+  description: "hero-regents from Anuire and Khinasi against the Abomination, levels 5-8"
+}
+title: "Sword of Roele"
+author {
+  name: "Baur, Wolfgang H."
+}
+date {
+  year: 1996
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}

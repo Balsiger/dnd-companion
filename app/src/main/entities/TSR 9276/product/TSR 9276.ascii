@@ -1,0 +1,33 @@
+template {
+  name: "TSR 9276"
+  synonym: "LNA1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Lankhmar"
+  description: "characters are caught in a frenzied chase"
+}
+title: "Thieves of Lankhmar"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

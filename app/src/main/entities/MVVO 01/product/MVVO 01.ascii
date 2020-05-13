@@ -1,0 +1,56 @@
+template {
+  name: "MVVO 01"
+  world: "Confrontation"
+  description: "2 miniatures."
+}
+title: "Anges Morbides I"
+author {
+}
+author {
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2000
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "Rackham"
+series: "Confrontation"
+price {
+  currency: "Euro "
+  number: 1070
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 2
+}

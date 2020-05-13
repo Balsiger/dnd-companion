@@ -1,0 +1,137 @@
+template {
+  name: "Dungeon 143"
+  world: "Generic"
+  description: "This is issue 143 of the dungeon magazine."
+}
+title: "Dungeon 143"
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Kortes, Michael"
+}
+author {
+  name: "Greer, Stephen S."
+}
+author {
+  name: "Holian, James"
+}
+author {
+  name: "Logue, Nicolas"
+}
+author {
+  name: "Wissel, Christopher"
+}
+editor {
+  name: "Jacobs, James"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Walker, Jeremy"
+  job: "assistant editor"
+}
+editor {
+  name: "Sutter, James Lafond"
+  job: "assistant editor"
+}
+cover {
+  name: "Campus, Roberto"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christ"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Lazaretti, Robert"
+}
+illustrator {
+  name: "Mahey, Warren"
+}
+illustrator {
+  name: "Moseley, Tom"
+}
+illustrator {
+  name: "UDON"
+}
+illustrator {
+  name: "West, Chris"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Pocza, Drew"
+  job: "art director"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising & sales director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2007
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "2 21"
+number: "143"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

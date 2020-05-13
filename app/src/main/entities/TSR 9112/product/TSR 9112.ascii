@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9112"
+  synonym: "WG5"
+  reference {
+    name: "net price list"
+  }
+  world: "Greyhawk"
+}
+title: "Mordenkainen\'s Fantastic Adventure"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

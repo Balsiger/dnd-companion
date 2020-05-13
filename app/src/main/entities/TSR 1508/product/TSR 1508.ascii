@@ -1,0 +1,42 @@
+template {
+  name: "TSR 1508"
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  world: "Generic"
+  description: "Dragon Dice Book, book one"
+}
+title: "Cast of Fate"
+author {
+  name: "Varney, Allen"
+}
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0510"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: DRAGON_DICE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

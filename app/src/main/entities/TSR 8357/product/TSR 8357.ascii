@@ -1,0 +1,40 @@
+template {
+  name: "TSR 8357"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dragonlance"
+}
+title: "Dark Queen"
+leader: "The"
+date {
+  year: 1994
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "925"
+  check: 4
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume Six"
+series: "Villains Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

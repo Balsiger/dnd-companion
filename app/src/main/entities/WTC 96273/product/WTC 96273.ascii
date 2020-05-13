@@ -1,0 +1,27 @@
+template {
+  name: "WTC 96273"
+  world: "None"
+  description: "With the Hall-of-Fame and Super Season sub-set cards in the MLB Showdown\n  2003 Pennant Run expansion set, you can add legendary players from the past\n  and cards featuring the best players in their best season. Acquire these\n  great sub-set cards and give your opponent a lesson in history."
+}
+title: "MLB Showdown 2003 Pennant Run Booster Pack"
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7430"
+  title: "0677"
+  check: 1
+}
+isbn13 {
+}
+system: MLB_SHOWDOWN_2003
+audience: ALL
+type: BOOSTER_PACK
+style: CARDS_STYLE
+price {
+  currency: "$ "
+  number: 299
+  precision: 100
+}

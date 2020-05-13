@@ -1,0 +1,164 @@
+template {
+  name: "Dragon 243"
+  world: "Generic"
+}
+title: "Dragon 243"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Adkison, Peter D."
+}
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Brown, Lloyd III"
+}
+author {
+  name: "Brumbaugh, David E."
+}
+author {
+  name: "Kenson, Stepehen"
+}
+author {
+  name: "Nystul, Mike"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Dunnell, Brian"
+}
+author {
+  name: "Richards, Jonathan M."
+}
+author {
+  name: "Doolan, Tom"
+}
+author {
+  name: "Nixon, Anthony"
+}
+author {
+  name: "Head, David"
+}
+author {
+  name: "Perrin, Don"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Smith, Lester"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "publisher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Pillsbury, Joseph"
+}
+illustrator {
+  name: "Lindstrom, Steve"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "Williams, L.A."
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Frazier, Dan"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Vrbanic, George"
+}
+illustrator {
+  name: "Morales, Rags"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Hrenchuk, Bill"
+}
+illustrator {
+  name: "Dolan, Harry"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+manager {
+  name: "Mangelson, Roger"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 1998
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXII 6"
+number: "243"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

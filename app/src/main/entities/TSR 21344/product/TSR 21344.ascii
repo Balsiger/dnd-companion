@@ -1,0 +1,35 @@
+template {
+  name: "TSR 21344"
+  synonym: "WTC 86523"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "\\NPC{Urza Planeswalker} has enlisted the most brilliant minds from across\n                    \\Place{Dominaria} to study at his academy on \\Place{Tolaria}. Together they\n                    work to bring to life the greatest artifact weapon \\NPC{Urza} has ever\n                    devised, hoping to use it to defend their home from an imminent\n                    \\Place{Phyrexian} invasion. But treachery and tragedy stalk the tiny island,\n                    as \\NPC{Urza} and his followers seek to manipulate time itself."
+}
+title: "Time Streams"
+subtitle: "\\NPC{Urza}\'s Legacy Unfolds."
+author {
+  name: "King, Robert J."
+}
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1344"
+  check: 4
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 3"
+series: "Artifacts Cycle"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

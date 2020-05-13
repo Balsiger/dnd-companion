@@ -1,0 +1,29 @@
+template {
+  name: "TSR 3566"
+  synonym: "25CA2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "join the group of freedom fighters, the N.E.O."
+}
+title: "N.E.O. In the 25th Century"
+date {
+  year: 1993
+}
+isbn {
+}
+isbn13 {
+}
+system: XXVC
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

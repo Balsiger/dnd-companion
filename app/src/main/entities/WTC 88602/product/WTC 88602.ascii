@@ -1,0 +1,36 @@
+template {
+  name: "WTC 88602"
+  world: "Dragonlance"
+  description: "The flames of war devour \\Place{Ansalon}. The army of dead souls marches\n                    toward conquest, led by the mystical warrior \\NPC{Mina}, who serves the\n                    powerful \\God{One God}.\n                    A small band of heroes, driven to desperate measures, leads the fight against\n                    overwhelming odds.\n                    Two unlikely protagonists emerge. One is a \\Monster{dragon} overlord who will\n                    not easily relinquish her rule. The other is an irrepressible\n                    \\Monster{kender} who has been on a strange and remarkable journey that will\n                    end in startling and unforeseen fashion.\n                    The stirring climax of the \\Product{War of Souls}."
+}
+title: "Dragons of a Vanished Moon"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 2002
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7896"
+  title: "2740"
+  check: 10
+}
+isbn13 {
+}
+pages: 560
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Volume III"
+series: "War of Souls"
+price {
+  currency: "$ "
+  number: 2795
+  precision: 100
+}

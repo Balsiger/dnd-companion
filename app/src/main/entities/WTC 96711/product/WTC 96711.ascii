@@ -1,0 +1,45 @@
+template {
+  name: "WTC 96711"
+  world: "Forgotten Realms"
+  description: "\\bold{The stories of Ed Greenwood together in one volume for the first\n                    time!}\n                    This anthology present your favorite Ed Greenwood stories taken from over\n                    fifteen years of \\Place{Forgotten Realms} books, in addition to three brand\n                    new stories.\n                    Adventure across the myriad faces of \\Place{Faer\\hat{u}} with warriors like\n                    \\NPC{Mirt the Moneylender} and \\NPC{Alusair the Steel Regent}, and with\n                    wizards like \\NPC{Elminster}, the \\NPC{Sage of Shadowdale} and his three\n                    charges, \\NPC{Dove}, \\NPC{Storm}, and \\NPC{Laeral}, as they roam the\n                    \\Place{Realms}, protecting the innocent from villainy, the ignorant from\n                    deception, and the insane from themselves.\n                    This anthology consists of fiction by Ed Greenwood, creator of the\n                    \\Place{Forgotten Realms} world. Greenwood has written hundreds of articles,\n                    novels, and game products set in the \\Place{Forgotten Realms}, and his\n                    signature character, \\NPC{Elminster the Sage of Shadowdale}, has become a\n                    staple of \\Place{Forgotten Realms} fiction and game play for millions of\n                    fans."
+}
+title: "Best of the Realms"
+leader: "The"
+subtitle: "The Stories of Ed Greenwood"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Morris, Susan J."
+}
+cover {
+  name: "Walker, Kev"
+}
+date {
+  year: 2005
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3760"
+  check: 2
+}
+isbn13 {
+}
+pages: 338
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "The Best of the Realms"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

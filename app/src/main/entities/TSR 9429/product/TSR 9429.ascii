@@ -1,0 +1,72 @@
+template {
+  name: "TSR 9429"
+  synonym: "HHQ4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\Place{Pommeville} is a sleepy little town that seems like a good place to\n                    stay for the night. That is, until the town\'s dead rise from their graves and\n                    begin terrorizing the village! Ancient evil threatens to overwhelm the good\n                    fold of \\Place{Pommeville} unless someone can find a way to comfort the\n                    restless dead. A lone, player character cleric will have to be clever,\n                    courageous, and more than a little lucky to solve the mystery and save\n                    \\Place{Pommeville} from the mindless zombies that threaten it!\n                    \\Product{Cleric\'s Challenge} is a special One-On-One Advanced Dungeons &\n                    Dragons adventure designed for a Dungeon Master and one player---perfect for\n                    very small playing groups, for those times when the whole group can\'t get\n                    together, or for the player who wants his or her character to earn some extra\n                    experience."
+}
+title: "Cleric\'s Challenge"
+author {
+  name: "III, L. Richard Baker"
+}
+editor {
+  name: "Shub, Andrew"
+}
+cover {
+  name: "Elmore, Larry"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Frank, Ken"
+}
+illustrator {
+  name: "Frank, Charles"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+date {
+  year: 1993
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "659"
+  check: 10
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "One on One Adventure"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

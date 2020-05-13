@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5708"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Magic Users"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

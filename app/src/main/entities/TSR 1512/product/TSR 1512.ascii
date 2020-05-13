@@ -1,0 +1,36 @@
+template {
+  name: "TSR 1512"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "keeps track of spells and their effects, lists troops, ..."
+}
+title: "Dragon Dice Dragon Shield"
+date {
+  year: 1996
+}
+isbn {
+}
+isbn13 {
+}
+pages: 16
+system: DRAGON_DICE
+audience: ALL
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  number: 1073741824
+}

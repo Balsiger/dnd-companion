@@ -1,0 +1,34 @@
+template {
+  name: "WTC 96539"
+  world: "Dragonlance"
+  description: "This direct follow-up to the best-selling \\Product{War of Souls} trilogy\n  deals with the \\Monster{minotaurs}, a race with which New York Times\n  best-selling author Knaak is particularly known for. This series moves the\n  \\Monster{minotaur} species to the forefront of the \\Place{Dragonlance}\n  world."
+}
+title: "Night of Blood"
+author {
+  name: "Knaak, Richard A."
+}
+date {
+  year: 2004
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3196"
+  check: 5
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume I"
+series: "The Minotaur Wars"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

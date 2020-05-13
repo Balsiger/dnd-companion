@@ -1,0 +1,76 @@
+template {
+  name: "TSR 11641"
+  synonym: "WTC 86349"
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "The easiest way to learn how to play the Third Edition Dungeons & Dragons\n                    game.\n                    The first new edition of the Dungeons & Dragons game in ten years improves\n                    and updates the world\'s bestselling roleplaying game. Third Edition D&D is\n                    the biggest thing to ever hit the roleplaying game market, and the D&D\n                    Adventure Game is the best way to enter the limitless realms of\n                    imagination. Every game lover who wants to learn how to play the D&D game\n                    should start with this box, which includes introductory rules, adventure\n                    material for beginning a D&D campaign, and everything needed to play --\n                    rules, dice, counters, character sheets, and more."
+}
+title: "D&D Adventure Game"
+author {
+  name: "Tweet, Jonathan"
+}
+author {
+  name: "Carl, Jason"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Noonan, Dave"
+}
+date {
+  year: 2000
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1641"
+  check: 9
+}
+isbn13 {
+}
+system: DND_3RD
+type: ADVENTURE
+style: BOX
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "introductory rules"
+  number: 1073741824
+}
+content {
+  part: BOOK
+  description: "adventure material"
+  number: 1073741824
+}
+content {
+  part: DICE
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "dice bag"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "characters"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "more"
+  number: 1073741824
+}

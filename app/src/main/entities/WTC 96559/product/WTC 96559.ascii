@@ -1,0 +1,34 @@
+template {
+  name: "WTC 96559"
+  world: "Dragonlance"
+  description: "This second title in \\Product{The Minotaur Wars} trilogy continues the tale\n  of the fallout from the end of the New York Times best-selling \\Product{War\n  of Souls} series. Author Richard A. Knaak is particularly associated with\n  writing about \\Monster{minotaurs} of \\Place{Dragonlance}, making him the\n  ideal author to move the \\Monster{minotaurs} to the forefront of the\n  \\Place{Dragonlance} novel storyline."
+}
+title: "Tides of Blood"
+author {
+  name: "Knaak, Richard A."
+}
+date {
+  year: 2004
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3251"
+  check: 1
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume Two"
+series: "The Minotaur Wars"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}

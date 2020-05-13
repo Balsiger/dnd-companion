@@ -1,0 +1,43 @@
+template {
+  name: "TSR 3115"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Birthright"
+  description: "story of Richard Endier"
+}
+title: "Spider\'s Test"
+leader: "The"
+author {
+  name: "McKeone, Dixie Lee"
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0512"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

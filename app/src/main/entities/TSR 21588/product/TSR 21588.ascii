@@ -1,0 +1,42 @@
+template {
+  name: "TSR 21588"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  world: "Forgotten Realms"
+  description: "a novel collection of Homeland, Sojourn, and Exile"
+}
+title: "Dark Elf Trilogy Collector\'s Edition"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+date {
+  year: 2000
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1588"
+  check: 9
+}
+isbn13 {
+}
+pages: 816
+system: NONE
+type: NOVEL
+style: PAPERBACK
+number: "Collector\'s Edition"
+series: "Dark Elf Trilogy"
+price {
+  currency: "$"
+  number: 1795
+  precision: 100
+}

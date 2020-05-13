@@ -1,0 +1,37 @@
+template {
+  name: "WTC 96208"
+  world: "Dragonlance"
+  description: "The third title published in the \\Product{Dragonlance} line is now being\n  released in a trade hardcover edition for the first time ever. Featuring the\n  stunning art and design that graced the cover of the paperback edition, this\n  new version is the final edition in the hardcover release of the entire\n  \\Product{Chronicles} trilogy. This release also continues the planned release\n  of all the core \\Product{Dragonlance} titles from Weis & Hickman in trade\n  hardcover, allowing fans and collectors alike the first-ever chance to obtain\n  the entire set in hardcover."
+}
+title: "Dragons of Spring Dawning"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 2003
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3070"
+  check: 5
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume III"
+series: "Dragonlance Chronicles"
+price {
+  currency: "$ "
+  number: 2795
+  precision: 100
+}

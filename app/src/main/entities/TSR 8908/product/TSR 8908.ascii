@@ -1,0 +1,133 @@
+template {
+  name: "TSR 8908"
+  synonym: "LC1"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "Enter the gates of \\Place{Ravens Bluff}, \\Place[Ravens Bluff]{The Living\n                    City}. Nestled in the \\Place{Forgotten Realms}, the city calls to\n                    adventurers.\n                    Inside the gates are many businesses with colorful proprietors, officials and\n                    noblemen working to shape the city\'s future, and exciting adventures just\n                    waiting to be joined.\n                    This product, created by RPGA Network members, features several businesses\n                    and officials, a complete city adventure, a \\Place{Ravens Bluff} encounter\n                    chart, and more. A large, full color map of \\Place{Ravens Bluff} is\n                    included.\n                    Enter the gates of \\Place{Ravens Bluff}, a city that is ever-changing and\n                    growing, a city you can be a part of in the \\Place{Forgotten Realms}."
+}
+title: "Gateway to Ravens Bluff, The Living City"
+author {
+  name: "Rydberg, Richard"
+}
+author {
+  name: "Sollers, Ed"
+}
+author {
+  name: "Johnson, Harold"
+}
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Wright, Lew"
+}
+author {
+  name: "Farstad, Errol"
+}
+author {
+  name: "Martin, Jeff"
+}
+author {
+  name: "Kramarsky, Daniel"
+}
+author {
+  name: "Tummelson, Jay"
+}
+author {
+  name: "Hague, Peter"
+}
+author {
+  name: "Garcia, Vince"
+}
+author {
+  name: "Ehlenfeldt, Rollin"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Ward, James"
+}
+author {
+  name: "Parker, Rembert"
+}
+editor {
+  name: "Rabe, Jean"
+}
+editor {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Sollers, Ed"
+}
+cover {
+  name: "Parkinson, Keith"
+}
+cartographer {
+  name: "McLimore, Guy"
+}
+cartographer {
+  name: "Valucek, Valerie A."
+}
+illustrator {
+  name: "Bostick, Angela"
+}
+illustrator {
+  name: "Bradstreet, Timothy"
+}
+illustrator {
+  name: "Lowry, Rick"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "keylining"
+}
+manager {
+  name: "Johnson, Harold"
+  job: "design concept"
+}
+manager {
+  name: "Ward, James"
+  job: "design concept"
+}
+manager {
+  name: "Lowry, Rick"
+  job: "design concept"
+}
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+series: "RPGA"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

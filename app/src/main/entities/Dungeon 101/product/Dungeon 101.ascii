@@ -1,0 +1,124 @@
+template {
+  name: "Dungeon 101"
+  world: "Generic"
+  description: "This is issue 101 of the dungeon magazine, together with the\n   \\Product{Polyhedron 160} issue."
+}
+title: "Dungeon 101"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Varady, Desmond R."
+}
+author {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Williams, Penny"
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+cover {
+  name: "Staples, Greg"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Staples, Greg"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Tsang, Arnold"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "advertising sales director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffice manager"
+}
+date {
+  year: 2003
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 75
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XVII 5"
+number: "101"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "Monster Matrix & Player Matrix"
+  number: 1073741824
+}
+layout: FULL_COLOR

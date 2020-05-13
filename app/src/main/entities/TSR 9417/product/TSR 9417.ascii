@@ -1,0 +1,60 @@
+template {
+  name: "TSR 9417"
+  world: "Ravenloft"
+  description: "\\emph{...by the glimmer of the half-extinguished light, I saw the dull\n                    yellow eye of the creature open; it breathed hard, and a convulsive motion\n                    agitated its limbs.}\n                    \\right{---Mary Shelley, \\emph{Frankenstein}}\n                    Armed with satchel and saw, the creator slips into the night. He seeks the\n                    freshly dug grave and the unguarded morgue, selecting each body part with\n                    care. In the twilight before dawn, he tailors a perfect form, seeing no fault\n                    in the livid flesh or the crude black stitching. Creating a new life is his\n                    sole obsession---yet the thing he creates brings only misery and death.\n                    The \\Monster{golems} of Ravenloft boast powers unsee in other realms, for\n                    they are shaped by the demiplane\'s mysterious forces. Join \\NPC{Dr. Van\n                    Richten} as he exposes the evil that is the Created. Learn his theories on\n                    construction and animation, and discover his hard-won notes on the\n                    \\Monster{golem}\'s phenomenal strength. Heed well his sage advice, for whether\n                    their parts are \\Monster{human} or otherwise, the Created are cunning and\n                    relentless foes, rising again and again from apparent death. Only with the\n                    knowledge herein can a hunter utterly destroy such a monster, until nothing\n                    but ashes and nightmares remain."
+}
+title: "Van Richten\'s Guide to the Created"
+author {
+  name: "Woodruff, Teeuwynn"
+}
+editor {
+  name: "Hayday, Andria"
+}
+cover {
+  name: "Ruppel, Robh"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+manager {
+  name: "Watry, Dori Jean"
+  job: "project coordination"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphics coordination"
+}
+manager {
+  name: "Lokotz, Angelika"
+  job: "production"
+}
+date {
+  year: 1994
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "819"
+  check: 3
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+series: "Van Richten\'s Guide"
+price {
+  currency: "$ "
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

@@ -1,0 +1,106 @@
+template {
+  name: "WTC 9536474"
+  world: "Generic"
+  description: "\\emph{The  \\Place{Kings Road} cuts  across fields  where great  battles once\n                    raged---fields littered with bones, shattered weapons, the wreckage of mighty\n                    siege engines.  Follow the road to  the sundered gates of  the \\Place{Keep of\n                    Fallen Kings}, a great ruin wherein lies the fabled \\Item{Earthcrown}. But be\n                    warned! The  keep has  attracted its share  of monsters and  treasure hunters\n                    over the years,  and rumors of a fiendish dragon beneath  the keep have lured\n                    many adventurers to their doom.}\n                    \\Product{The Fantastic Locations: Fields of Ruin} accessory contains two\n                    beautifully illustrated, double-sided battle maps scaled for Dungeon &\n                    Dragons play. The battle maps feature fantastic terrain designed to create\n                    large, fluid encounters, key scenes, and exciting game sessions. Rather than\n                    simple dungeon encounters, these maps generate the epic struggles that\n                    campaign memories are made of.\n                    Three of the maps also make ideal battlegrounds for D&D Miniatures Game\n                    play. Build your warband and fight for control of the \\Place{Kings Road}, the\n                    \\Place{Keep of Fallen Kings}, or the dreaded \\Place{Dungeon of Blood}. A\n                    16-page encounter booklet includes both roleplaying game encounters and\n                    skirmish game options for use with the four battle maps.\n                    An exciting poster map product!\n                    \\Product{Fantastic Locations: Fields of Ruin} features two double-sided\n                    poster maps designed for roleplaying and miniatures skirmish play. An\n                    accompanying 16-page adventure can be dropped into any campaign. Enemies\n                    include creatures from the recent \\Product{D&D War Drums} miniatures\n                    expansion. The two poster maps can be put together to form a ruined\n                    stronghold, while the reverse sides feature more ruins and battlefields\n                    players can explore."
+}
+title: "Fields of Ruin"
+subtitle: "Conquer Ancient Battlefields to Plunder the Keep of Fallen Kings"
+author {
+  name: "Pett, Richard"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "developer"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Tsai, Rrancis"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Trabbold, Andrew"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3908"
+  check: 7
+}
+isbn13 {
+}
+pages: 16
+system: DND_3_5
+type: ACCESSORY
+style: BOOKLET
+series: "Fantastic Locations"
+price {
+  currency: "$ "
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "poster-sized, color"
+  number: 2
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Miniatures Game"
+layout: COLOR_COVER

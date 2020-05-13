@@ -1,0 +1,62 @@
+template {
+  name: "PZOTGL 3001"
+  world: "None"
+  description: "To celebrate the 10th anniversary of Falling, Titanic Games proudly brings you a re-envisioning of James Ernest\'s highly popular card game. You\'re all goblins and you\'re plummeting toward the ground. Be the last one to hit and you win!\n\nFalling is a fast-paced, real-time card game for 5 to 8 players, suitable for any audience."
+  short_description: "A fast-paced, real-time card game."
+}
+title: "Falling: Goblin Edition"
+subtitle: "Goblins here, goblins there, goblins falling everywhere!"
+author {
+  name: "Ernest, James"
+  job: "game design"
+}
+illustrator {
+  name: "Pocza, Drew"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "Paizo CEO"
+}
+date {
+  year: 1971
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "147"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "147"
+  check: 3
+}
+pages: 12
+system: NONE
+audience: ALL
+type: CARD_GAME
+style: SMALL_BOX
+producer: "Paizo"
+price {
+  currency: "$"
+  number: 999
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "rules"
+  number: 1
+}
+content {
+  part: CARD
+  description: "playing cards"
+  number: 55
+}
+layout: FULL_COLOR

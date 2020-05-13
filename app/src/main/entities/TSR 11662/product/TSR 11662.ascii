@@ -1,0 +1,38 @@
+template {
+  name: "TSR 11662"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Generic"
+  description: "\\large{The End of the World Is at Hand}\n                    A hideous death cult has seized control of an ancient artifact-monument known\n                    as \\Place{Tovag Baragu}. The power behind the cult is the \\God{Old One}\n                    himself, \\God{Iuz the Evil}, demonic master of an empire. He\'s on an\n                    all-or-nothing quest for supremacy over the world---and the heavens beyond.\n                    To stop him, heroes must face horrors never dreamed of, journeying to a\n                    shadowed city where \\God{Death} rules and the living cower. Here, \\God{Iuz}\n                    will achieve his mad dream by destroying the imprisoned master of that alien\n                    citadel---\\NPC{Vecna}, the mightiest \\Monster{lich}, an inmmortal demigod.\n                    Two items exist with the power to stop \\God{Iuz}---the \\Item{Eye} and the\n                    \\Item{Hand of \\NPC{Vecna}}---but using them carries fantastic risks. Not even\n                    the gods know what will be unleashed when these items are fully activated.\n                    \\Product{Die Vecna Die!} takes the heroes from the \\Product{Greyhawk}\n                    campaign to the demiplane of \\Product{Ravenloft} and then to the\n                    \\Product{Planescape} city of \\Place{Sigil}. However, none of the material\n                    from those settings is required to play."
+}
+title: "Die Vecna Die!"
+date {
+  year: 2000
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1662"
+  check: 1
+}
+isbn13 {
+}
+pages: 160
+system: ADND_REVISED
+type: ADVENTURE
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

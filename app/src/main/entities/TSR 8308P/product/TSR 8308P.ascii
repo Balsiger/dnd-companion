@@ -1,0 +1,65 @@
+template {
+  name: "TSR 8308P"
+  synonym: "TSR 8308"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "The fiery mountain struck \\Place{Krynn}. The gods shattered the \\Place{Temple of \\Place{Istar}}. One hundred years later, the continent of \\Place{Ansalon} is a desolate land, its people struggling for survival in a world ravaged by plague, starvation, and war.\n\nEscaping the doomed city of \\Place{Istar}, \\NPC{Raistlin} --- now a wizard with great power --- casts a spell that brings his twin brother, \\NCP{Caramon}, and the cleric \\NPC{Crysania} forward to this point in time. Here, in the \\Place{Tower of High Sorcery}, \\NPC{Raistlin} intends to enter the \\Place{Portal} and challenge the \\NPC{Dark Queen}.\n\nBut, one by one, \\NPC{Raistlin}\'s plans start to unravel.\n\nToo late he discovers that he is caught in a time loop --- one that must lead inexorably to his own destruction! One from which there seems to be no escape..."
+  short_description: "Second book in the Legends series."
+}
+title: "War of the Twins"
+subtitle: "The New York Times Best-Selling Series"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+cover {
+  name: "Elmore, Larry"
+}
+date {
+  year: 1986
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0263"
+  check: 9
+}
+isbn13 {
+}
+pages: 387
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume Two"
+series: "Legends Trilogy"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

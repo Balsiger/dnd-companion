@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9053"
+  synonym: "I4"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Oasis of the White Palm"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

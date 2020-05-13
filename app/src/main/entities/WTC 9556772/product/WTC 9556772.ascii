@@ -1,0 +1,150 @@
+template {
+  name: "WTC 9556772"
+  world: "Eberron"
+  description: "Join the struggle to save the cradle of humanity from monstrous and alien\n  overlords. Venture to the frozen land of the shifters to make your fortune,\n  or smuggle exotic goods and strange dissidents from a freewheeling southern\n  port. Stand on the world\'s tallest mountain, or rove the vast wilderness that\n  makes up the empire of \\Place{Riedra}. Seek venerated masters, and learn\n  powers and abilities unheard of in \\Place{Khorvaire}. Come to\n  \\Place{Sarlona}, ancient homeland of \\Monster{couatls} and \\Monster{fiends},\n  and explore a land of lost empires and esoteric arts.\n\n  Inside this book, you\'ll find everything you need to explore the enigmatic\n  continent of \\Place{Sarlona}:\n\n  \\list\n\n  {Comprehensive overview of \\Place{Sarlona}\'s nations, including their\n   governments and relations, as well as locations, communities, organizations,\n   and NPCs.}\n  {Detailed maps of the continent, nations, settlements, and adventure sites.}\n  {Unique new feats, magic items, prestige classes, psionic powers, and\n   spells.}\n  {Bizarre monsters and templates unique to \\Place{Sarlona}.}\n\n  \\Product{Secrets of Sarlona} explores the continent of \\Place{Sarlona} for\n  the first time. It gives players and Dungeon Masters their first real glimpse\n  inside the empire of \\Place{Riedra}, home of the \\Group{Inspired} and the\n  \\Group{kalashtar}. It also explores the mysteries of \\Place{Adar}, a nation\n  isolated from the rest of the world, and never-before seen\n  locations. \\Product{Secrets of Sarlona} also presents new options (feats,\n  prestige classes, spells, and magic items) available to Sarlonan characters\n  and characters with psionics"
+  short_description: "Information about Sarlona"
+}
+title: "Secrets of Sarlona"
+subtitle: "Mystery and Madness Await"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Fitzgerald Gray, Scott"
+}
+author {
+  name: "McDonald, Glenn"
+}
+author {
+  name: "Sims, Chris"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Moyer, Lee"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Coker, Tomm"
+}
+illustrator {
+  name: "Hopper, Fred"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Pilcerova, Martina"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4037"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4037"
+}
+pages: 160
+system: DND_3_5
+type: CAMPAIGN_EXPANSION
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Eberron Campaign Setting"
+required_requirements: "D&D Miniatures"
+layout: FULL_COLOR

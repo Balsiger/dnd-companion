@@ -1,0 +1,117 @@
+template {
+  name: "WTC 31713"
+  synonym: "DN2"
+  world: "Generic"
+  description: "You tabletop never looked better! With this pack of customizable terrain tiles, you can add a new dimension to you Dungeons & Dragons adventures. Easy to set up and infinitely expandable, this pack allows you to create the adventures you want to play. Pick up additional packs to create larger, more elaborate encounters.\n\nThis pack contains six durable, double-sided card stock sheets of illustrated terrain, with die-cut tiles you can use to build monster-infested swamps, complete with crumbling ruins, ramshackle buildings, deadfalls, and other features. Use this product with other \\Product{Dungeon Tiles} accessories to make great D&D encounters that enhance your roleplaying game experience."
+  short_description: "A set of dungeon tiles for swamps and ruins."
+}
+title: "Witchlight Fens"
+leader: "The"
+subtitle: "Sinister Swamps and Haunted Ruins."
+author {
+  name: "Lee, Peter"
+  job: "designer"
+}
+editor {
+}
+cover {
+  name: "Engle, Jason A."
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+typographer {
+}
+manager {
+  name: "Tapp, Gretchen"
+  job: "senior product engineer"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D senior producer"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "D&D producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D RPG group manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "D&D R&D and book publishing director"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+date {
+  year: 2011
+  month: 6
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5800"
+  check: 9
+}
+system: NONE
+type: ACCESSORY
+style: FOLDER
+producer: "WTC"
+series: "Dungeon Tiles"
+price {
+  currency: "$"
+  number: 1195
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "die-cut map tiles"
+  number: 6
+}
+optional_requirements: "Rules Compendium"
+optional_requirements: "Dungeon Master\'s Kit"
+optional_requirements: "Monster Vault"
+optional_requirements: "D&D Dungeon Tiles Master Sets"
+layout: FULL_COLOR

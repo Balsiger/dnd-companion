@@ -1,0 +1,42 @@
+template {
+  name: "WTC 17993"
+  world: "Forgotten Realms"
+  description: "A hand-picked team of the most capable \\Monster{drow} adventurers begin a\n                    perilous journey through the treacherous \\Place{Underdark}, all the while\n                    surrounded by the chaos of war. Their path will take them through the very\n                    heart of darkness, and the \\Place{Underdark} will be shaken to its core. If\n                    the powerful \\Monster{dark elves} falter, the world below is open for\n                    \\Product{Insurrection}.\n                    The \\Event{War of the \\God{Spider Queen}} spreads.\n                    The second novel in an epic six-part series from the fertile imaginations of\n                    R.A. Salvatore and a select group of the newest, most exciting authors in the\n                    genre. Join them as they shine a light into the blackest recesses of the\n                    \\Place{Forgotten Realms} world, scattering the spiders within."
+}
+title: "Insurrection"
+author {
+  name: "Reid, Thomas M."
+}
+editor {
+  name: "Athans, Philip"
+}
+editor {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Brom"
+}
+date {
+  year: 2003
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 365
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "War of the Spider Queen"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

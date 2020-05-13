@@ -1,0 +1,80 @@
+template {
+  name: "TSR 9513"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  world: "Ravenloft"
+  description: "\\bold{Behold the many faces of mankdind\'s darkest enemy}\n                    Twin puncture wounds mark the kiss of the \\Monster{nosferatu}. Blood trickles\n                    with the slow crawl of despair. A shadow lingers, black against black. Chill\n                    mist clings damply to every surface, and the echo of an anguished shriek\n                    still hangs in the air....\n                    \\Product{Vampires} introduces 13 unique and terrifying villains of horrific\n                    proportions. Each one challenges \\Monster{vampire} hunters to rethink common\n                    perceptions of these foes---for these are no ordinary undead. Each creature\n                    presented in this book is a unique individual with its own history,\n                    personality, and powers.\n                    The lords of the night that adventurers will meet include:\n                    \\list\n                    {\\NPC{Jander Sunstar}, one of the oldest \\Monster{vampires} in the\n                    \\Place{Land of Mists.}}\n                    {\\NPC{Myxitzajal}, a seagoing monster with a taste for fishermen.}\n                    {\\NPC{Lady Adeline}, an \\Monster{elf} \\Monster{vampire} who seeks out\n                    light rather than hiding from it.}\n                    {\\NPC{Lyssa von Zarovich}, who covets the power of her great-uncle\n                    \\NPC{Strahd}.}\n                    {And many more!}\n                    \\bold{These are the Children of the Night}\n                    \\Product{Children of the Night: Vampires} is the first book in a new series\n                    that brings to unlife the creature types treated in the best-selling\n                    \\Product{Van Richten\'s Guides}. Each volume offers biographies of distinct\n                    and monstrous villains easily added to any game; short adventures featuring\n                    each nemesis, which can stand alone or form a mini-campaign; unique ways to\n                    fight each foe; and adventure hooks for using them as recurring villains.\n                    For all character levels."
+}
+title: "Children of the Night: Vampires"
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Miller, Steve"
+}
+editor {
+  name: "Johnson, Carol L."
+}
+editor {
+  name: "Caspian, Jonatha Ariadne"
+}
+cover {
+  name: "Horne, Daniel"
+}
+cartographer {
+  name: "Lazzzaretti, Rob"
+}
+illustrator {
+  name: "Burrows, Jason"
+}
+typographer {
+  name: "Isler, Tracey L."
+}
+manager {
+  name: "Johnson, Harold"
+  job: "project coordinator"
+}
+manager {
+  name: "Miller, Steve"
+  job: "project coordinator"
+}
+manager {
+  name: "Adelsperger, Matt"
+  job: "graphic designer"
+}
+manager {
+  name: "Daniele, Stephen A."
+  job: "art director"
+}
+date {
+  year: 1996
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0378"
+  check: 3
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1595
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

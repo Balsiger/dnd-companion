@@ -1,0 +1,152 @@
+template {
+  name: "Dungeon 137"
+  world: "Generic"
+  description: "This is issue 137 of the dungeon magazine."
+}
+title: "Dungeon 137"
+author {
+  name: "Brown, Russ"
+}
+author {
+  name: "Brown, Sam"
+}
+author {
+  name: "Connors, Tim"
+}
+author {
+  name: "Connors, Eileen"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "MacLean, Hal"
+}
+author {
+  name: "Nelson-Brown, Jason"
+}
+author {
+  name: "Vinogradov, Peter"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+editor {
+  name: "Walker, Jeremy"
+  job: "editorial assistant"
+}
+editor {
+  name: "Sutter, James Lafond"
+  job: "editorial assistant"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Choi, Christine"
+}
+illustrator {
+  name: "Dixon, Mat"
+}
+illustrator {
+  name: "Gordine, Dax"
+}
+illustrator {
+  name: "Hepburn, Scott"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Van Der Haegen, Cyril"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Schley, Mike"
+  job: "associate art director"
+}
+illustrator {
+  name: "Pocza, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising sales director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "20 8"
+number: "137"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,45 @@
+template {
+  name: "WTC 17992"
+  world: "Generic"
+  description: "The mighty warrior \\NPC{Regdar} is unsuited to a life of inaction, even as\n  an officer of the \\Group{Ducal Guard} in \\Place{New Koratia}. His position\n  brings him unwanted attention from the \\NPC{Duke}\'s scheeming\n  \\NPC{daughter}---a deadly predicament when the girl\'s suitors begin turning\n  up dead, slain by a mysterious, unseen force. \\NPC{Regdar} can trust no one\n  when magic and murder prowl the palace halls.\n\n  Will he become the next victim of the death ray?"
+}
+title: "Death Ray"
+leader: "The"
+author {
+  name: "T.H. Lain"
+}
+cover {
+  name: "Todd Lockwood"
+}
+cover {
+  name: "Wayne Reynolds"
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3030"
+  check: 6
+}
+isbn13 {
+}
+pages: 183
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 10"
+series: "D&D 3rd Edition Introduction Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

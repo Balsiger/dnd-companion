@@ -1,0 +1,58 @@
+template {
+  name: "TSR 6922"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "None"
+  description: "two games in one"
+}
+title: "Clash Game"
+author {
+  name: "TSR Staf"
+}
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 16
+system: MARVEL_SUPER_DICE
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: DICE
+  description: "sets of random"
+  number: 2
+}
+content {
+  part: MISC
+  description: "dice bag"
+  number: 2
+}
+content {
+  part: CARD
+  description: "area"
+  number: 10
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

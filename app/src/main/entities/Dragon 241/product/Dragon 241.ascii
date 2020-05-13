@@ -1,0 +1,154 @@
+template {
+  name: "Dragon 241"
+  world: "Generic"
+}
+title: "Dragon 241"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Bebris, Carrie A."
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Piziks, Steven"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Pickens, Jon"
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Winter, Steve"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "publisher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "Post, R.K."
+}
+illustrator {
+  name: "Pollack, Alan"
+}
+illustrator {
+  name: "D\\umlaut{u}rer, Albrecht"
+}
+illustrator {
+  name: "Pillsbury, Joseph"
+}
+illustrator {
+  name: "Post, R.K."
+}
+illustrator {
+  name: "Wald, Christina"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Scott, Michael L."
+}
+illustrator {
+  name: "Shipman, R. Ward"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Steamy"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Lindstrom, Steve"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Haas, Jeff"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+manager {
+  name: "Mangelson, Roger"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+manager {
+  name: "Whiting, Sharon"
+  job: "subscriptions manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 1997
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXI 11"
+number: "241"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

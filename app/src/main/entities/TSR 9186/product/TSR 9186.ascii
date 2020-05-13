@@ -1,0 +1,77 @@
+template {
+  name: "TSR 9186"
+  synonym: "OA2"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "While \\Place{Maeshi} province revels in the festival spirit, clouds gather\n                    over the political scene. Two warlords are vying for control of this\n                    otherwise peaceful place, and you are guests of one of them. Sun Temple\n                    officials have offered complete support to the faction which successfully\n                    travels to \\Place{Ito-jo Castle} (said to hold relics of great importance to\n                    the Sun Temple), brings them back sfaely, and returns them to the \\Place{Inn\n                    of the Globefish}.\n                    The plan is laid before you. You are to leave immediately under secrecy for\n                    the castle of the \\Group{Ito} clan, also known as the \\Group{Seven Swords}\n                    clan. Find the relics, and return them to the renowned inn \\Place{Doi no\n                    Fugu}. Extreme caution is needed here, for your warlord\'s rival must not hear\n                    of this!\n                    Is the castle really haunted? What lies in the caverns beneath it? Will\n                    Korimori\'s troops discover your plan and try to wrest the relics from you,\n                    should you even get that far? What will you find at the \\Place{Inn of the\n                    Globefish}?\n                    Come, honorable stranger---the \\Group{Seven Swords} await!"
+}
+title: "Night of the Seven Swords"
+author {
+  name: "Pickens, Jon"
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Johnson, Harold"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Carmien, Ed"
+}
+author {
+  name: "Ritchie, David James"
+}
+editor {
+  name: "Martin, Karen S."
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Holloway, James"
+}
+typographer {
+  name: "Vanderbilt, Carolyn"
+}
+date {
+  year: 1986
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "327"
+  check: 5
+}
+isbn13 {
+}
+pages: 48
+system: ADND_1ST
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Oriental Adventures"
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

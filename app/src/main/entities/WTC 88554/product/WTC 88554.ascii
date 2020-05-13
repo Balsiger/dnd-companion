@@ -1,0 +1,40 @@
+template {
+  name: "WTC 88554"
+  world: "Forgotten Realms"
+  description: "While their whole world is changing around them, four \\Monster{dark elves}\n                    struggle against different enemies. Yet their paths will lead them all to the\n                    most terrifying discovery in the long history of the \\Monster{drow} and set\n                    them on a quest to save not only \\Place{Menzoberranzan} but the entire\n                    \\Monster{dark elf} frace from Dissolution.\n                    The war of the Spider Queen begins here.\n                    The first novel in an epic six-part series from the fertile imagination of\n                    R.A. Salvatore and a select group of the newest, most exciting authors in the\n                    genre. Join them as they peel back the surface of the richest fantasy world\n                    ever created to show the dark heart beneath."
+}
+title: "Dissolution"
+author {
+  name: "Byers, Richard Lee"
+}
+cover {
+  name: "Brom"
+}
+date {
+  year: 2002
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2683"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book 1"
+series: "War of the Spider Queen"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,199 @@
+template {
+  name: "WTC 39889"
+  world: "Generic"
+  description: "\\emp{\'There\'s no Place like Home\'}\n\\right{--- Drow proverb}\n\nThe profane beauty of \\Place{Menzoberranzan} reflects the true nature of the \\Place{drow} and \\God{Lolth}, their vile spider queen. Within sculpted palaces, factions view for domination, spin webs of conspiracy, wage war on the surface realms, and spread poisonous rumors. Meanwhile, predators stalk the twisted streets, plotting murder and mayhem. The city has no pity for fools and weaklings.\n\n\\Poduct{Menzoberranzan City of Intrigue} breathes new life into the fabled home of \\NPC{Drizzt Do\'Urden} and leaves no stone unturned. This book explores the city, tells the storeis behind important \\Monster{drow}  houses and factions, and peeks at the mysteries waiting to unfold in the deadliest city of the \\Place{Forgotten Realms} world. This product is compatible with all editions of the Dungeons & Dragons Roleplaying Game and features a poster map of the city."
+  short_description: "Information about the underdark city of Menzoberranzan."
+}
+title: "Menzoberranzan"
+subtitle: "City of Intrigue"
+author {
+  name: "James, Brian R."
+}
+author {
+  name: "Menge, Eric"
+}
+author {
+  name: "Sernett, Matt"
+  job: "additional design"
+}
+author {
+  name: "Wyatt, James"
+  job: "additional design"
+}
+author {
+  name: "LaPille, Tom"
+  job: "additional design"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "development lead"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Moore, Cal"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "editing lead"
+}
+cover {
+  name: "Ejsing, Jesper"
+}
+cartographer {
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Ceran, Milivoj"
+}
+illustrator {
+  name: "Ejsing, Jesper"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Malidore, Chris"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Moyer, Lee"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D R&D senior producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D R&D group manager"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2012
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6036"
+  check: 1
+}
+pages: 128
+system: NONE
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: POSTER
+  description: "map of Menzoberranzan"
+  number: 1
+}
+layout: FULL_COLOR

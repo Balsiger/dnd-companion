@@ -1,0 +1,40 @@
+template {
+  name: "TSR 3124"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Birthright"
+  description: "first elven kingdom for players to rule"
+}
+title: "Tuarhievel"
+author {
+  name: "Maxwell, Duane"
+}
+author {
+  name: "Miller, Steve"
+}
+date {
+  year: 1996
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0398"
+  check: 8
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+audience: PLAYER
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}

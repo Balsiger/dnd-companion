@@ -1,0 +1,44 @@
+template {
+  name: "WTC 9502174"
+  world: "Forgotten Realms"
+  description: "Then, in the bitter wilds of \\Place{Rashemen}, they receive a desperate plea\n                    they alone can answer.\n                    If they succeed, it could mean their redemption. But if they fail, a troubled\n                    past will be the least of their problems."
+}
+title: "Bladesinger"
+subtitle: "They are the half-bloods, the broken, the unforgiven. They failed themselves and their people. They are outcasts"
+author {
+  name: "Strohm, Keith Francis"
+}
+cover {
+  name: "Swanland, Raymond"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+date {
+  year: 2006
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3835"
+  check: 8
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "The Fighters"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 4
+}
+layout: COLOR_COVER

@@ -1,0 +1,48 @@
+template {
+  name: "TSR 8571P"
+  synonym: "WTC 866770520"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Forgotten Realms"
+  description: "Six years. Not so long in the lifespan of a \\Monster{drow}. And yet---in\n                    counting the months, the weeks, the days, the hours---it seemed to me as if I\n                    had been away from \\Place{Mithril Hall} a hundred times that number. The\n                    place was another lifetime, another way of life, a mere stepping stone\n                    to...\n                    To what? To where?\n                    I ride the waves along the \\Place{sword coast} now, the wind and spray in my\n                    face. My ceiling is the rush of the clouds and the canopy of stars; my floor,\n                    the creaking boards of a swift, well-weathered ship. Beyond that lies the\n                    azure blanked, flat and still, heaving and rolling, hissing in the rain and\n                    exploding under the fall of a breaching whale.\n                    It this, then, my home?"
+}
+title: "Passage to Dawn"
+author {
+  name: "Salvatore, R. A."
+}
+cover {
+  name: "Ruppel, Robh"
+}
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0750"
+  check: 9
+}
+isbn13 {
+}
+pages: 339
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book 4"
+series: "Legacy of the Drow"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

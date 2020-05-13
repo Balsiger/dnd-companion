@@ -1,0 +1,52 @@
+template {
+  name: "TSR 9419"
+  synonym: "RM5"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+  description: "classic adventure about werewolves, levels 5-8"
+}
+title: "Dark of the Moon"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1994
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "688"
+  check: 3
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

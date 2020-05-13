@@ -1,0 +1,36 @@
+template {
+  name: "TSR 21336"
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Dragonlance"
+  description: "Gargantuan \\Monster{dragons} soar over \\Place{Krynn}, battling for control\n  of the lands below. On the isle of \\Place{Sancrist}, the weakened\n  \\Group{Knights of Solamnia} ask their old enemies the \\Group{Knights of\n  Takhisis}, for help. At the insistence of \\NPC{Lord Gunthar}, the knights\n  renew the alliance forged during the last days of the \\Event{Chaos War}. But\n  when the \\NPC{Grand Master} of the \\Group{Knights of Solamnia} abruptly dies,\n  the leadership of the knights -- in fact their very existence -- is\n  challenged.\n\n  Jeff Crook\'s novel tells a tale of the \\Group{Knights of Solamnia}, the\n  greatest knightly order on \\Place{Krynn}, faced with what may be their\n  greatest challenge."
+}
+title: "Rose and the Skull"
+leader: "The"
+author {
+  name: "Crook, Jeff"
+}
+date {
+  year: 1999
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1336"
+  check: 3
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "Bridges of Times"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

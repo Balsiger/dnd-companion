@@ -1,0 +1,79 @@
+template {
+  name: "TSR 9444"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "\\Product[TSR 9444]{Marco Volo: Departure} is the first volume of the\n                    \\Product[Marco Volo Trilogy]{Marco Volo} trilogy, designed for four to eight\n                    player characters of levels 6-8. This free-wheeling adventure begins with an\n                    intrigue-laden journey from \\Place{Waterdeep} to \\Place{Shadowdale}. The\n                    party is thrown into the company of one \\NPC[Marcus Wands]{Marcus Wands}\n                    (also known as \'\\NPC{Marco Volo}\'), a bothersome but likeable little\n                    rogue. In his guise of \\NPC[Marco Volo]{Marco}, he gains unintentional help\n                    from the party members, leading only to their own arrests. To remedy that\n                    predicament, the characters are strong-armed into carrying an important\n                    letter to Shadowdale, and taking along \\NPC[Marcus Wands]{Marcus} as their\n                    \'guide\'.\n                    Of course, things are nowhere near as simple as they seem.\n                    There\'s this little matter of the \\Item{Dragonking\'s Eye}, a powerful\n                    artifact from another plane. Naively, \\NPC[Marcus Wands]{Marcus} thought he\n                    could steal the thing and pin the theft on \\NPC{Volothamp Geddarm}, the\n                    roguish author of many popular books about cities in the \\Place[Forgotten\n                    Realms]{Realms}. The notorious mage-assassin \\NPC{Felibarr Blacklance} has\n                    been hired to hunt the thief, and he is a man grimly determined to earn his\n                    fee.\n                    Then, there\'s the business about this letter that\'s on its way to\n                    \\Place{Shadowdale}. It is accompanied by a rare enchanted item that wizards\n                    and fortune hunters want to obtain at all costs.\n                    A series of adventures ensues that takes the adventurers from\n                    \\Place{Waterdeep} to the \\Place{Way Inn}, by which time they will doubtless\n                    suspect there is more to \\NPC{Marco Volo} than meets the eye. Amid the brawls\n                    and mistaken identities, the wild rides and glowering villains, the\n                    characters never have a chance to slow down or catch their collective\n                    breath. What results is a light-hearted, picaresque adventure in the manner\n                    of Dumas and Sabatini, and a good time is had by all!\n                    (Except the bad guys, of course. They\'re never happy with how things are\n                    turning out...)"
+}
+title: "Marco Volo: Departure"
+author {
+  name: "Pryor, Anthony"
+}
+editor {
+  name: "Danforth, Elizabeth T."
+}
+cover {
+  name: "Lakey, Laura"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Danforth, Elizabeth T."
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Greenwood, Ed"
+  job: "original realms design"
+}
+manager {
+  name: "Boomgarden, Karen S."
+  job: "product group manager"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1994
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "848"
+  check: 7
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+number: "Part One"
+series: "Volo Adventures"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

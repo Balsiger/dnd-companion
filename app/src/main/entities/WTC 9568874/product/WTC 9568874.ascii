@@ -1,0 +1,47 @@
+template {
+  name: "WTC 9568874"
+  world: "Ravenloft"
+  description: "In a world that fears spellcraft, a girl discovers her own strange talent for magic.\n\nBut in a land crawling with curruption, can she trust its gift?"
+  short_description: "A novel in the Ravenloft horror series (reprint)."
+}
+title: "Death of a Darkloard"
+subtitle: "Reprint!"
+author {
+  name: "Hamilton, Laurell K."
+}
+cover {
+  name: "Foster, Jon"
+}
+cover {
+  name: "Adelsperger, Matt"
+}
+date {
+  year: 2006
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4122"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4122"
+  check: 3
+}
+pages: 306
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

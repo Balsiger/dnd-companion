@@ -1,0 +1,35 @@
+template {
+  name: "WTC 11838"
+  synonym: "WTC 88232"
+  world: "Generic"
+  description: "\\emph{What terror stalks the villagers of \\Place{Ossington}? Who is the\n                    ghostly horseman haunting the road, stopping anyone from leaving? Why are the\n                    \\Monster{wild elves} slaying villagers from afar with deadly stone-tipped\n                    arrows? What lies buried in the old \\Place{Great Barrow}, and why is it\n                    stirring anew? What secret do the ancient standing stones surrounding the\n                    village hold, and can the heroes solve the mystery before a foul plot comes\n                    to fruition?}\n                    \\Product{The Standing Stone} is a stand-alone adventure for the Dungeons &\n                    Dragons game. Designed to challenge 7th-level D&D heroes, it presents a\n                    mystery for the heroes to solve if they wish to save an isolated village from\n                    the dangers that threaten to overwhelm it."
+}
+title: "Standing Stone"
+leader: "The"
+subtitle: "Evil Lurks in the Forest"
+date {
+  year: 2001
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1838"
+  check: 1
+}
+isbn13 {
+}
+pages: 32
+system: DND_3RD
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

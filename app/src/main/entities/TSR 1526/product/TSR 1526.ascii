@@ -1,0 +1,43 @@
+template {
+  name: "TSR 1526"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "None"
+  description: "dice based adventure game"
+}
+title: "Hercules: Endless Quest"
+author {
+  name: "Stark, Ed"
+}
+date {
+  year: 1998
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1255"
+  check: 3
+}
+isbn13 {
+}
+pages: 16
+system: ENDLESS_QUEST
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}

@@ -1,0 +1,141 @@
+template {
+  name: "WTC 8829172"
+  world: "Eberron"
+  description: "Magic suffuses the world of \\Place{Eberron}, enriching it with\n  power. \\Monster{Dragons} were the first to master it, but over time it has\n  evolved to server the needs of countless others, from the \\Monster{giants} of\n  \\Place{Xen\'drik} and the \\Monster{elves} of \\Place{Aerenal} to the citizens\n  of modern \\Place{Khorvaire}. Whether you choose to explore the magic of the\n  present age or delve into the truly ancient arts is up to you.\n\n  This book exposes the magic and eldritch wonders of \\Place{Eberron}. In\n  addition to presenting new arcane and divine spells, feats, prestige classes,\n  and magic items, \\Product{Magic of Eberron} offers new options and infusions\n  for \\Class{artificiers}, explorer dragon totem magic and the twisted\n  experiments of the \\Monster{daelkyr}, sheds light on the process of elemental\n  binding, and touches on other types of magic present in the world.\n\n  \\Product{Magic of Eberron} explores the variety of magic available in the\n  \\Place{Eberron} world. It introduces a wealth of new arcane and divine\n  spells, and artificer infusions. Chapters explore the more unusual\n  manifestations of magic in \\Place{Eberron}, such as elemental binding,\n  dragonshards and dragon magic, and the corrupted magic of the\n  \\Group{daelkyr}. A chapter on lost magic explains how to make the discovery\n  of new magical secrets a central feature of any \\Place{Eberron} campaign."
+}
+title: "Magic of Eberron"
+subtitle: "A Trove of Magical Lore for Spellcasters and Artificers"
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Schubert, Stephen"
+}
+author {
+  name: "Thomasson, Chris"
+}
+author {
+  name: "Collins, Andy"
+  job: "development"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "development"
+}
+author {
+  name: "Decker, Jesse"
+  job: "development"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Moyer, Lee"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Beck, David Michael"
+}
+illustrator {
+  name: "Draxhall Jump Entertainment"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "art director"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic design"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Cheung, Carmen"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins Christoper"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Joshua C.J."
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3696"
+  check: 7
+}
+isbn13 {
+}
+pages: 160
+system: DND_3RD
+type: CAMPAIGN_EXPANSION
+style: HARDCOVER
+producer: "WTC"
+series: "Eberron Campaign Supplement"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 86400"

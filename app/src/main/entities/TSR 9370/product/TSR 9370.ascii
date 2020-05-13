@@ -1,0 +1,21 @@
+template {
+  name: "TSR 9370"
+  world: "Generic"
+}
+title: "Mighty Fortress"
+leader: "A"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+producer: "TSR"
+number: "4"
+series: "Historical Reference"
+price {
+  currency: "$ "
+  precision: 100
+}

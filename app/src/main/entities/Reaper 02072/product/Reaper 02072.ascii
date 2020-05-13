@@ -1,0 +1,28 @@
+template {
+  name: "Reaper 02072"
+  description: "Darius The Blue, a \\Monster{human} mage with staff, pointing."
+}
+title: "Darius The Blue"
+author {
+  name: "Sandra Garrity"
+}
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: DARK_HEAVEN
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+series: "Apocalypse"
+price {
+  currency: "$ "
+  number: 275
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}

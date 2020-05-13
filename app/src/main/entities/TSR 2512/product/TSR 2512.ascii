@@ -1,0 +1,98 @@
+template {
+  name: "TSR 2512"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Mystara"
+  description: "\\bold{With the new Dungeon Master Survival Kit, the mazing world of\n  \\Place{Mystara} will take on a new life right before your eyes!}\n\n  Whether you\'re an experienced Dungeon Master or a novice taking his first\n  steps on the road to adventure, the \\Product{Dungeon Master Survival Kit}\n  will make your campaign more exciting and dramatic than ever!\n\n  \\bold{Within this unusual product you\'\' find...}\n\n  \\list\n  {Two dozen loose sheets covered with a wide array of forms, charts and\n   handouts designed to make the DM\'s job easier and his games more\n   exciting.}\n  {A special deck of cards that introduces over 20 new magical items to\n   the \\Place{Mystara} campaign. Plus, DM\'s will find a copy of the}\n  {\\Item{Deck of Spheres}, a new artifact tha may well be the most\n   powerful magical item in the \\Place{Known World}.}\n  {A 16-page booklet of DM\'s information that includes information about\n   the languages of \\Place{Mystara} and tips on making better, more\n   exciting maps.}\n  {A full-color, 16-page Campaign Log that allows the DM to keep track\n   of the highlights of his campaign.}\n\n  \\emph{Master the world of \\Place{Mystara} with the \\Product{Dungeon Master\n  Survival Kit}.}"
+}
+title: "Dungeon Master Survival Kit"
+author {
+  name: "Schend, Steven"
+}
+editor {
+  name: "Connors, William W."
+}
+cover {
+  name: "Higginbotham, Henry"
+}
+cartographer {
+  name: "LaForce, Diesel"
+}
+illustrator {
+  name: "Hotz, Eric"
+}
+illustrator {
+  name: "Asplund-Faith, Randy"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Grubb, Jeff"
+  job: "additional design concepts"
+}
+manager {
+  name: "Hayday, Andria"
+  job: "project coordinator"
+}
+manager {
+  name: "Moore, Roger"
+  job: "project coordinator"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphics coordinator"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "page design"
+}
+manager {
+  name: "Coumbe, Tim"
+  job: "electronic prepress coordinator"
+}
+date {
+  year: 1995
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0110"
+  check: 1
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ACCESSORY
+style: FOLDER
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Character Book"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Campaign Log"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "Handouts"
+  number: 24
+}
+content {
+  part: CARD
+  description: "game"
+  number: 54
+}

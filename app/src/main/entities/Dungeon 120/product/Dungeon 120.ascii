@@ -1,0 +1,156 @@
+template {
+  name: "Dungeon 120"
+  world: "Generic"
+  description: "This is issue 120 of the dungeon magazine."
+}
+title: "Dungeon 120"
+author {
+  name: "Austin, Alec"
+}
+author {
+  name: "Brown, Russell"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Haener, Timothy J."
+}
+author {
+  name: "Logue, Nicolas"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Victorson, Brendan"
+}
+author {
+  name: "Wheaton, Wil"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+editor {
+  name: "Walker, Jeremy"
+  job: "editorial assistant"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Adorjany, Attila"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Du Lac, Chad"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Ferriere, Gala"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Perez, Ramon"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Shaw, Stan"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Zubkavich, Jim"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Schley, Mike"
+  job: "associate art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "publisher"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2005
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "19 3"
+number: "120"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

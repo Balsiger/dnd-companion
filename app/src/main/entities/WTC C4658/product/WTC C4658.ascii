@@ -1,0 +1,240 @@
+template {
+  name: "WTC C4658"
+  world: "Forgotten Realms"
+  description: "Famed explorer \\NPC{Volothamp Geddarm} needs you to complete a simple quest. Thus begins a mad romp through the wards of \\NPC{Waterdeep} as you uncover a villainous plot involving some of the city\'s most influential figures.\n\nA grand urban caper awaits you. Pit your skill and bravado against villains the likes of which you\'ve never faced before, and let the \\Monster{dragon} hunt begin!"
+  short_description: "An adventure for levels 1-5"
+}
+title: "Waterdeep: Dragon Heist"
+subtitle: "Welcome to \\Place{Waterdeep}"
+author {
+  name: "Perkins, Christoper"
+  job: "lead designer"
+}
+author {
+  name: "Haeck, James J."
+  job: "designer"
+}
+author {
+  name: "Introcaso, James"
+  job: "designer"
+}
+author {
+  name: "Lee, Adam"
+  job: "designer"
+}
+author {
+  name: "Sernett, Matt"
+  job: "designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "rules developer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "rules developer"
+}
+author {
+  name: "Welch, Kate"
+  job: "rules developr"
+}
+author {
+  name: "Mercer, Matthew"
+  job: "story consultant"
+}
+author {
+  name: "Sanders, Charles"
+  job: "story consultant"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+editor {
+  name: "Perkins, Christoper"
+  job: "lead editor"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Fitzgerald Gray, Scott"
+}
+editor {
+  name: "Mohan, Kim"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Dyson Logos"
+}
+cartographer {
+  name: "Engle, Jason"
+  job: "poster map"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Cearley, Clint"
+}
+illustrator {
+  name: "Chaturvedi, Sidharth"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Hannigan, Leesha"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Keiser, Sam"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Lemmer, Alayna"
+}
+illustrator {
+  name: "Moeller, Christopher"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "Rogers, Ned"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Thompson, Jason"
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Winters, Mark"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Wu, Bayard"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Narciso, Shauna"
+  job: "additional art direction"
+}
+illustrator {
+  name: "Whitters, Richard"
+  job: "additional art direction"
+}
+manager {
+  name: "Tovar, Daniel"
+  job: "producer"
+}
+manager {
+  name: "Warren, Matt"
+  job: "producer"
+}
+manager {
+  name: "Stan!"
+  job: "producer"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "product engineer"
+}
+manager {
+  name: "Gershman, David"
+  job: "art administration"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+date {
+  year: 2018
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6625"
+  check: 7
+}
+pages: 224
+system: DND_NEXT
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: MAP
+  description: "poster map"
+  number: 1
+}
+layout: FULL_COLOR

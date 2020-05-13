@@ -1,0 +1,27 @@
+template {
+  name: "TSR 8447"
+  reference {
+    name: "catalog98"
+  }
+  world: "Dragonlance"
+  description: "the splendid artwork of the Dragonlance artists"
+}
+title: "Art of the Dragonlance Saga"
+leader: "The"
+author {
+  name: "Kirchoff, Mary"
+}
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: NONE
+audience: ALL
+type: SPECIAL_BOOK
+price {
+}

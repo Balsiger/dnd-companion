@@ -1,0 +1,53 @@
+template {
+  name: "TSR 9562"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  world: "Forgotten Realms"
+  description: "\\Place{Hellgate Keep}---a name that once made the boldest of heroes shudder\n                    in fear---was long ago known as the fair citadel of \\Place{Ascalhorn}, a\n                    haven for \\Monster[Elf]{elves} and \\Monster[Human]{humans}. Then a\n                    \\Monster[Demon]{demonic} horde of \\Monster[Baatezu]{baatezu} and\n                    \\Monster[Tanar\'ri]{tanar\'ri} destroyed all remnants of real civilization and\n                    turned it into a den of malevolence. Today, the citadel lies ruined. The\n                    \\NPC{Mistmaster} and the \\Group{Harpers} destroyed the keep and ended its\n                    centuries-long reign of evil in the autumn of the Year of the Gauntlet (1369\n                    DR)...or so they believed.\n                    With the coming of the following spring, many scavengers streamed to the\n                    \\Place{Upvale} to uncover treasures and artifacts long hidden by the\n                    \\Monster[Tanar\'ri]{tanar\'ri} of \\Place{Hellgate Keep}. They went forth\n                    assuming they could find easy plunder. They were wrong.\n                    Prepare to meet a new race of creatures spawned both of \\Place{Faer\\hat{u}n}\n                    and the \\Place{Lower Planes}. Uncover the corruption of an\n                    \\Monster[Elf]{elven} house that was ancient before \\Place{Myth Drannor} ever\n                    rose. Find out what survived the havoc visited upon the \\Place[Hellgate\n                    Keep]{Keep}, and who or what leads the survivors to a new lair. All this and\n                    more awaits amid the depths of ruined \\Place{Hellgate Keep}!\n                    This stand-alone 32-page adventure is set within the northern wilderness of\n                    the \\Place[Forgotten Realms]{Realms}. It easily fits within an existing\n                    \\Place{Forgotten Realms} \\Product[TSR 1085]{campaign}, though it can also be\n                    incorporated into any other AD&D campaign world with minor modifications."
+}
+title: "Hellgate Keep"
+date {
+  year: 1998
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0786"
+  check: 10
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: SOFT_COVER
+producer: "TSR"
+series: "Dungeon Crawl"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

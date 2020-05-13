@@ -1,0 +1,58 @@
+template {
+  name: "WTC 17626"
+  world: "Dragonlance"
+  description: "\\Product{Blades of the Tiger} kicks off a series that will explore beyond\n  the realms of \\Place{Ansalon}, the traditional setting for\n  \\Place{Dragonlance} novels, and into the land of \\Place{Taladas}. No title\n  has ever been set in this unexplored region on the other side of the world,\n  allowing for an infinite variety of new characters and experiences within the\n  context of the \\Place{Dragonlance} setting."
+}
+title: "Blades of the Tiger"
+author {
+  name: "Pierson, Chris"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3569"
+  check: 3
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume One"
+series: "The Taladas Chronicles"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

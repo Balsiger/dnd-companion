@@ -1,0 +1,43 @@
+template {
+  name: "TSR 9406"
+  synonym: "WGM1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Greyhawk"
+  description: "battle the tides of evil from the vast northern empire of Iuz, levels 1-3"
+}
+title: "Border Watch"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1993
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "631"
+  check: 10
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

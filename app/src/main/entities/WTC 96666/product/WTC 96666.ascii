@@ -1,0 +1,162 @@
+template {
+  name: "WTC 96666"
+  world: "Generic"
+  description: "Through sheer force of will, a psionic character can unleash awesome powers\n                    that rival any physical force or magical energy. Within these pages, you will\n                    discover the secrets of unlocking the magic of the mind---the art of\n                    psionics.\n                    With updated and increased content, including a newly balanced psionics power\n                    system, the \\Product{Expanded Psionics Handbook} easily integrates psionic\n                    characters, powers, and monsters into any Dungeons & Dragons campaign.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, \\Product{Dungeon Master\'s Guide}, and \\Product{Monster Manual}. A\n                    player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Expanded Psionics Handbook"
+subtitle: "Tap into the Power of the Mind"
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Noonan, David"
+  job: "additional design"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "development team"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "development team"
+}
+author {
+  name: "Finch, Andrew"
+  job: "development team"
+}
+author {
+  name: "Stark, End"
+  job: "development team"
+}
+author {
+  name: "Tweet, Jonothan"
+  job: "development team"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+}
+editor {
+  name: "Ryan, Charles"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+  job: "additional editing"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Higginbotham, Henry"
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Despain, Brian"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Hudson, Heather"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Moore, Monte"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+illustrator {
+  name: "Jordan, Robert"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+typographer {
+}
+manager {
+  name: "Stark, Ed"
+  job: "design manager"
+}
+manager {
+  name: "Finch, Andrew"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3301"
+  check: 1
+}
+isbn13 {
+}
+pages: 224
+system: DND_3_5
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Player Guide"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

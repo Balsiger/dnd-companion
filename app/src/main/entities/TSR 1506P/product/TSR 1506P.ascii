@@ -1,0 +1,31 @@
+template {
+  name: "TSR 1506P"
+  reference {
+    name: "net"
+  }
+  world: "Generic"
+  description: "dices for the game"
+}
+title: "Dragon Dice Kicker Pack 5: Swamp Stalkers POP"
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0426"
+  check: 7
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$"
+  number: 8340
+  precision: 100
+}

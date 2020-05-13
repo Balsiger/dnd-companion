@@ -1,0 +1,232 @@
+template {
+  name: "WTC 31729"
+  world: "Forgotten Realms"
+  description: "Left a desolate ruin after a terrible cataclysm, the city of \\Place{Neverwinter} now rises from the ashes to reclaim its title as the \\Place{Jewel of the North}. Yet even as its citizens return and rebuild, hidden forces pursue their own goals and vendettas --- any one of which could tear the city apart. If \\Place{Neverwinter} is to survive, it\'s up to heroes to face down secret cults, sinister necromancers, would-be kings, and the terrible monsters stirring beneath the city. \n\nThis supplement for the Dungeons & Dragons roleplaying game explores the \\Place{Neverwinter} region, providing details for both players and Dungeon Masters to experience everything the setting has to offer. Players can use this book to enhance their adventures with exciting options that tie in to the setting. They can choose from new character themes, cleric domains and powers, a new type of \\Class{wizard} called the \\Class{bladesinger}, and variants for classic races such as \\Monster{dwarves} and \\Monster{elves}. For Dungeon Masters, this supplement is a sandbox of adventure and plot options. It gives a Dungeon Master all the tools to build a thrilling campaign that spans the \\Place{Neverwinter} region."
+  short_description: "Information about the region in and around \\Place{Neverwinter}."
+}
+title: "Neverwinter Campaign Setting"
+subtitle: "Adventure in a Realm of Intrigue"
+author {
+  name: "Sernett, Matt"
+  job: "lead design"
+}
+author {
+  name: "Marmell, Ari"
+  job: "design"
+}
+author {
+  name: "Scott de Bie, Erik"
+  job: "design"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "development"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+editor {
+  name: "O\'Conner, Tanis"
+  job: "lead"
+}
+editor {
+  name: "Geluso, Dawn J."
+}
+editor {
+  name: "Fitzgerald Gray, Scott"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Cortijo, Brian"
+  job: "editorial assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Horsley, Ralph"
+  job: "front"
+}
+cover {
+  name: "Paquette, Adam"
+  job: "back"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Altman, Scott"
+}
+illustrator {
+  name: "Argyle, Steve"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Szikszai, Gabor"
+}
+illustrator {
+  name: "Burley, Sam"
+}
+illustrator {
+  name: "Chippy"
+}
+illustrator {
+  name: "Dal Lago, Alberto"
+}
+illustrator {
+  name: "Denmark, Thomas"
+}
+illustrator {
+  name: "Ejsing, Jesper"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Elmasli, Emrah"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Franchina, Mike"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Kassis, Mazin"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Maniak, Slawomir"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Rapoza, David"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Walpole, Tyler"
+}
+illustrator {
+  name: "Winters, Mark"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "arti director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D R&D senior producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D &D group manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "D&D director D&D games and novels"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "Production Manager"
+}
+date {
+  year: 2011
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5814"
+  check: 6
+}
+pages: 224
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Roleplaying Game Supplement"
+price {
+  currency: "$"
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "rulebook"
+  number: 1
+}
+content {
+  part: MAP
+  description: "regional map"
+  number: 1
+}
+required_requirements: "Dungeos & Dragons Essentials"
+required_requirements: "WTC 2173672"
+required_requirements: "WTC 2398772"
+required_requirements: "WTC 2172072"
+required_requirements: "WTC 2182872"
+optional_requirements: "D&D Miniatures"
+optional_requirements: "D&D Dungeon Tiles"
+layout: FULL_COLOR

@@ -1,0 +1,133 @@
+template {
+  name: "WTC 9536872"
+  world: "Eberron"
+  description: "What does an \\Monster{elf} from the \\Place{Shae Cairdal} know about the\n  nation of \\Place{Aerenal}? How do you play a \\Monster{half-orc} from the\n  \\Place{Shadow Marches}? What does your character know about the Blood of Vol\n  or the royal line of \\Place{Califar}? The \\Product{Player\'s Guide to Eberron}\n  supplement answers these questions and more. This companion to the\n  \\Product{Eberron Campaign Setting} explores the world from the player\'s point\n  of view and presents exciting new options for Eberron characters.\n\n  \\Product{Player\'s Guide to Eberron} describes important locations, events,\n  organizations, races, and features of the Eberron campaign setting, organized\n  in an accessible and easily digestible format so that players can use the\n  book as a handy reference guide. In addition, this book provides new feats,\n  prestige classes, spells, and magic items.\n\n  The Player\'s Guide to Eberron contains everything a player needs to know\n  about the Eberron campaign setting. Presenting information in an innovative\n  spread format, this comprehensive gazetteer covers key topics a character\n  should know about, from Aerenal to Zilargo, house politics to the Last War,\n  dragons to the Lords of Dust, without revealing information meant for Dungeon\n  Masters only. New feats, prestige classes, magic items, and spells are\n  included in the relevant entries."
+  short_description: "The ultimate rules companion and gazetteer for Eberron players."
+}
+title: "Player\'s Guide to Eberron"
+subtitle: "Secrets Every Hero should Know"
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Johnson, Luke"
+}
+author {
+  name: "Brown, Steven \'Stan!\'"
+}
+author {
+  name: "Collins, Andy"
+  job: "development"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Gray, Scott"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Moyer, Lee"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Chumley, Brent"
+}
+illustrator {
+  name: "Beck, David Michael"
+}
+illustrator {
+  name: "Draxhall Jump Entertainment"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "art director"
+}
+illustrator {
+  name: "Jordan, Robert"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+}
+date {
+  year: 2006
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3912"
+  check: 5
+}
+isbn13 {
+}
+pages: 160
+system: DND_3RD
+audience: PLAYER
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Eberron Campaign Setting"
+layout: FULL_COLOR

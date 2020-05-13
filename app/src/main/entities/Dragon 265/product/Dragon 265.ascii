@@ -1,0 +1,189 @@
+template {
+  name: "Dragon 265"
+  world: "Generic"
+}
+title: "Dragon 265"
+author {
+  name: "Winninger, Ray"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Perkins, Chris"
+}
+author {
+  name: "Reid, Thomas"
+}
+author {
+  name: "Stack, Jennifer, Tittle"
+}
+author {
+  name: "Brown, Lloyd III"
+}
+author {
+  name: "Quick, Jeff \'Zippy\'"
+}
+author {
+  name: "Miller, Andy"
+}
+author {
+  name: "Anthony, Mark"
+}
+author {
+  name: "Wiker, J.D."
+}
+author {
+  name: "Bishop, Jim"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Mendoza, Jeffrey N."
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistant editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "rk post"
+}
+illustrator {
+  name: "Goldhawk, Andrew"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Guay, Rebecca"
+}
+illustrator {
+  name: "Matson, John"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photos"
+}
+illustrator {
+  name: "Rabinowitz, Alan"
+}
+illustrator {
+  name: "Delgado Jr., Peter"
+}
+illustrator {
+  name: "Pillsbury, Joe"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Wolf-Narciso, Shauna"
+  job: "senior art director"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+illustrator {
+  name: "Garfield, Susan"
+  job: "designer"
+}
+illustrator {
+  name: "Gough, Dan"
+  job: "designer"
+}
+illustrator {
+  name: "Ricker, Scott"
+  job: "designer"
+}
+illustrator {
+  name: "Whitley, Peter"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "advertising traffifc manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Blaskowsky, Barbara"
+  job: "circulation manager"
+}
+manager {
+  name: "Heft, Rebecca"
+  job: "circulation assistant"
+}
+date {
+  year: 1999
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXIV 6"
+number: "265"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,72 @@
+template {
+  name: "TSR 2128"
+  synonym: "DMGR4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\God{Maglubiyet}... \\God{Blibdoolpoolp}... \\God{Diinkarazan}...\n                    \\God{Panzuriel}... Such names are whispered in the dark on the far side of\n                    midnight, or muttered fearfully around jugs of wine when old, scarred\n                    adventurers tell their tales. They are the unseen, unknown things worshipped\n                    by monsters and monstrosities. Learn all about the avatars and shamans of\n                    \\Monster{giants}, \\Monster{goblins}, the \\Place{underdark}, even\n                    \\Monster{illithids} and \\Monster{beholders}, in this expansion of the\n                    popular \\Product{Legends & Lore}."
+}
+title: "Monster Mythology"
+author {
+  name: "Sargent, Carl"
+}
+editor {
+  name: "Haring, Scott"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Feggestad, Sarah"
+}
+date {
+  year: 1992
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "4"
+series: "Dungeon Master Guide"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

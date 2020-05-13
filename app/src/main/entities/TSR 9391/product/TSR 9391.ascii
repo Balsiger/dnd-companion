@@ -1,0 +1,82 @@
+template {
+  name: "TSR 9391"
+  synonym: "FRQ3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Forgotten Realms"
+  description: "\\NPC{Randal Morn} certainly has hins hands full! The temple of\n                    \\God{Lathander}, which burned to the ground eight years ago, seems to be the\n                    source of a curse affecting the entire town. People are taking ill, animals\n                    are dying overnight, crops are failing. All this seems to have started after\n                    \\NPC{Eragyn}, priestess of \\God{Cyric}, disappeared from\n                    \\Place{Daggerdale}. Shortly before that, a forgotten mage-lord\'s crypt was\n                    discovered and opened; things just haven\'t been the same since.\n                    \\NPC[Tren]{Constable Tren} is displeased with the situation, what with\n                    suspicion being cast in the \\Group{Zhentarim}\'s direction as well as toward\n                    \\God{Cyric}\'s priesthood. He\'s undoubtedly making the \\Group{Dalesfolk}\'s\n                    lives more difficult than usual because of this upheaval. \\NPC[Randal\n                    Morn]{Randal} has sent out the call for aid to all who are interested and\n                    able to help; his \\Group[Freedom Riders]{freedom riders} have their hands\n                    full already.\n                    A missing evil priestess, a mage-lord\'s crypt-curse, a plague, a possible\n                    \\Group{Zhentarim} involvement: all the elements of a rousing adventure in one\n                    place! Where do your characters sign up? Step right this way, won\'t you?\n                    \\emph{This is the first module created for use with the revised\n                    \\Place{Forgotten Realms} \\Product[TSR 1085]{Campaign Setting}. However, it is\n                    not necessary to have that edition in order to play this adventure.}"
+}
+title: "Doom of Daggerdale"
+author {
+  name: "Baur, Wolfgang H."
+}
+editor {
+  name: "Stewart, Georgia"
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Murin, Dawn"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Hotz, Eric"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphic coordination"
+}
+date {
+  year: 1993
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "654"
+  check: 9
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,155 @@
+template {
+  name: "Dragon 278"
+  world: "Generic"
+  description: "Issue 278 of the magazine. The main theme are dwarves."
+}
+title: "Dragon 278"
+author {
+  name: "Kenneth Hite"
+}
+author {
+  name: "Sean K Reynolds"
+}
+author {
+  name: "Owen K.C. Stephens"
+}
+author {
+  name: "Wolfgang Baur"
+}
+author {
+  name: "Herndon, Cory J."
+}
+author {
+  name: "Robin D. Laws"
+}
+author {
+  name: "James Wyatt"
+}
+author {
+  name: "Paul Kidd"
+}
+author {
+  name: "Jesse Decker"
+}
+author {
+  name: "Michael G. Ryan"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Rich Baker"
+}
+author {
+  name: "Monte Cook"
+}
+author {
+  name: "Mike McVey"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "J.E. Sawyer"
+}
+author {
+  name: "Ray Winniger"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Haddock, Eric"
+}
+editor {
+  name: "Matthew Sernett"
+}
+cover {
+  name: "Greg Staples"
+}
+illustrator {
+  name: "Peter Whitley"
+}
+illustrator {
+  name: "Travers W. Dow"
+}
+illustrator {
+  name: "Kyle Stanley Hunter"
+}
+illustrator {
+  name: "Kennon James"
+}
+illustrator {
+  name: "Jeff Laubenstein"
+}
+illustrator {
+  name: "Wayne Reynolds"
+}
+illustrator {
+  name: "Rex, Adam"
+}
+illustrator {
+  name: "Ron Spencer"
+}
+illustrator {
+  name: "Mike Vilardi"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Justin Sweet"
+}
+manager {
+  name: "John Wilson"
+}
+manager {
+  name: "Wendy Noritake"
+}
+manager {
+  name: "Pierce Watters"
+}
+manager {
+  name: "Bob Henning"
+}
+manager {
+  name: "John Dunn"
+}
+manager {
+  name: "Maas, Bobbi"
+}
+manager {
+  name: "Miesner, Dawnelle"
+}
+manager {
+  name: "Chung, Alice"
+}
+date {
+  year: 2000
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXV"
+number: "278"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

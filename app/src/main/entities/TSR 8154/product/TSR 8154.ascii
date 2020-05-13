@@ -1,0 +1,40 @@
+template {
+  name: "TSR 8154"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+}
+title: "Suitors Duel"
+author {
+  name: "Niles, Douglas"
+}
+date {
+  year: 1995
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "922"
+  check: 10
+}
+isbn13 {
+}
+pages: 288
+system: FIRST_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Two"
+series: "Quest Triad"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

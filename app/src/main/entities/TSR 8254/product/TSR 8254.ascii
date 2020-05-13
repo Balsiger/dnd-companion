@@ -1,0 +1,33 @@
+template {
+  name: "TSR 8254"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "evil darkness lurks in the island of the Charonti and the Knorr"
+}
+title: "Knorrman Steel and Charonti"
+author {
+  name: "Jeff Grubb"
+}
+date {
+  year: 1997
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0686"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

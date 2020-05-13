@@ -1,0 +1,23 @@
+template {
+  name: "TSR 8026?"
+  reference {
+    name: "catalogue94"
+  }
+  description: "terrifying murder mystery, audio CD adventure"
+}
+title: "Track of the Werewolf"
+date {
+  year: 1994
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: TERROR_TRACKS
+type: ADVENTURE
+price {
+  currency: "\302\254\302\243"
+  number: 1099
+  precision: 100
+}

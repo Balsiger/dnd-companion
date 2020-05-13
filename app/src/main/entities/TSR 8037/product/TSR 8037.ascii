@@ -1,0 +1,41 @@
+template {
+  name: "TSR 8037"
+  reference {
+    name: "complete product listing"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+}
+title: "Fall of Magic"
+leader: "The"
+author {
+  name: "Heinrich, D.J."
+}
+date {
+  year: 1993
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "663"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: DND_1ST
+audience: ALL
+type: NOVEL
+number: "Volume Three"
+series: "Penhalion Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

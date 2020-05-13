@@ -1,0 +1,87 @@
+template {
+  name: "Polyhedron 145"
+  world: "Generic"
+  description: "Issue 144 of Polyhedron. This is the second global, color issue."
+}
+title: "Polyhedron 145"
+author {
+  name: "Wise, David"
+}
+author {
+  name: "Wes Nicholson"
+}
+author {
+  name: "van Dam, Ann"
+}
+author {
+  name: "Ian Richards"
+}
+author {
+  name: "Richards, David"
+}
+author {
+  name: "Watson, Bob"
+}
+author {
+  name: "John Bacon"
+}
+author {
+  name: "Stephen Radney-Macfarland"
+}
+author {
+  name: "Matt Brebner"
+}
+author {
+  name: "Lisa Gordon"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Simon Taylor"
+}
+author {
+  name: "Tom Harrison"
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "Gibson, Ed"
+}
+author {
+  name: "Lisa A. Chippendale"
+}
+author {
+  name: "Mark Middleton"
+}
+author {
+  name: "Massimo Bianchini"
+}
+illustrator {
+  name: "Granov, Adi"
+}
+illustrator {
+  name: "Vince Locke"
+}
+illustrator {
+  name: "Ted Beargeon"
+}
+date {
+  year: 2000
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "20"
+number: "6"
+series: "Polyhedron"
+price {
+}

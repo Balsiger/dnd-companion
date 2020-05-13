@@ -1,0 +1,26 @@
+template {
+  name: "DMA 000007"
+  description: "British catalog of the 1994 stock of TSR."
+}
+title: "1994 Hobby Shop Catalogue"
+leader: "The"
+date {
+  year: 1994
+}
+isbn {
+}
+isbn13 {
+}
+pages: 66
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

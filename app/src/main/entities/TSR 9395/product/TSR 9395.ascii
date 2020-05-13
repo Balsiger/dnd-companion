@@ -1,0 +1,43 @@
+template {
+  name: "TSR 9395"
+  synonym: "DLT1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "the tale of Tika\'s quest for her missing father and more"
+}
+title: "New Tales: The Land Reborn"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1993
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "607"
+  check: 7
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

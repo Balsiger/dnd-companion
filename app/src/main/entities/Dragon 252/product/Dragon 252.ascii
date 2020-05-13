@@ -1,0 +1,150 @@
+template {
+  name: "Dragon 252"
+  world: "Generic"
+}
+title: "Dragon 252"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Zuvich, Ted"
+}
+author {
+  name: "Brown, Anne K."
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Salvatore, R.A."
+}
+author {
+  name: "Winkle, Michael D."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Hudson, Brian P."
+}
+author {
+  name: "Martin, Matthew L."
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Winniger, Ray"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Ruppel, Robh"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Haas, Jeff"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "McDevitt, Brad"
+}
+illustrator {
+  name: "Wald, Christina"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Vrbanic, George"
+}
+illustrator {
+  name: "Williams, L.A."
+}
+illustrator {
+  name: "Taylor, Mike"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Pillsbury, Joe"
+}
+illustrator {
+  name: "Anderson, Dori"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "ad traffifc manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+date {
+  year: 1998
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXIII 5"
+number: "252"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

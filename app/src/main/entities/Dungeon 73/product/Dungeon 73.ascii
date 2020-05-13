@@ -1,0 +1,124 @@
+template {
+  name: "Dungeon 73"
+  world: "Generic"
+  description: "This is issue 73 of the dungeon magazine."
+}
+title: "Dungeon 73"
+author {
+  name: "Rick, Greg"
+}
+author {
+  name: "Rea, Cal"
+}
+author {
+  name: "Chadbourne, Kate"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Duke, Jason"
+}
+author {
+  name: "Miller, Andy"
+}
+author {
+  name: "Crook, Jeff"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistant editor"
+}
+editor {
+  name: "Carlson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "Daniele, Stephen A."
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Atkinson, Toren \'MacBin\'"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Bryant, Steve"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+manager {
+  name: "Blaskowsky, Barbara"
+  job: "circulation manager"
+}
+manager {
+  name: "Heft, Rebecca"
+  job: "circulation assistant"
+}
+date {
+  year: 1999
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 80
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XIII 1"
+number: "73"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

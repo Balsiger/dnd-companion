@@ -1,0 +1,47 @@
+template {
+  name: "DMA 000014"
+  world: "None"
+  description: "This is the official convention program book of the 30th anniversary gen con\n  game fair of the year 1997."
+}
+title: "1997 Gen Con Game Fair"
+editor {
+  name: "Westman, Dee"
+}
+cover {
+  name: "Heather LeMay"
+}
+typographer {
+  name: "Julie Mazurek"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphic designer"
+}
+manager {
+  name: "Poutsch, Debbie"
+  job: "proofreader"
+}
+manager {
+  name: "Cindy Rick"
+  job: "advertising manager"
+}
+date {
+  year: 1997
+}
+isbn {
+}
+isbn13 {
+}
+pages: 160
+system: NONE
+audience: ALL
+type: PROMOTION
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

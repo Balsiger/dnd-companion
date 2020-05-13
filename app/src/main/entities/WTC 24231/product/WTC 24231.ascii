@@ -1,0 +1,56 @@
+template {
+  name: "WTC 24231"
+  world: "Forgotten Realms"
+  description: "Twelve years old and already guarding a secret that could jeopardize his young life, \\NPC{Maimun} is marked for death. With a \\Monster{demon} called \\NPC{Asbeel} tracking his every move through \\Place{Baldur\'s Gate}, the orphaned boy flees out to sea, stowing away on the pirate hunting ship, \\Item{Sea Sprite}, where he comes across a most unlikely ally: the \\Monster{dark elf} \\NPC{Drizzt Do\'Urden}. As the ship careens through the \\Place{Sea of Swords}, fighting pirates and agents of \\NPC{Asbeel}, \\NPC{Maimun} must come to terms with the secret he carries and find out what family really means."
+  short_description: "First book in the Stone of Tymora series."
+}
+title: "Stowaway"
+leader: "The"
+subtitle: "Stone of Tymora"
+author {
+  name: "Salvatore, R. A."
+}
+author {
+  name: "Salvatore, Geno"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2009
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5257"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5257"
+  check: 1
+}
+pages: 287
+system: NONE
+audience: PLAYER
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book I"
+series: "Stone of Tymora"
+price {
+  currency: "$"
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

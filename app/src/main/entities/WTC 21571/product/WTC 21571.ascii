@@ -1,0 +1,60 @@
+template {
+  name: "WTC 21571"
+  world: "Dragonlance"
+  description: "Cold, forbidding, remote, it stands like a dim white cloud on the very edge\n  of sight. There \\NPC{Kerrick}, an \\Monster{elf} from the \\Place{golden woods\n  of Silvanesti}, has been sent, an exile in disgrace. There too, a band of\n  barbarian villagers make their stand against the remnants of an\n  \\Monster{ogre} empire that is determined to once again rule the frozen\n  wastes.\n\n  In the first book of this thrilling trilogy, Douglas Niles takes his readers\n  to a land that most in \\Place{Krynn} have heard of only in legend -- the\n  legend of the \\Place{Icewall}."
+}
+title: "Messenger"
+leader: "The"
+subtitle: "The Icewall"
+author {
+  name: "Niles, Douglas"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1571"
+  check: 4
+}
+isbn13 {
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume One"
+series: "Icewall Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

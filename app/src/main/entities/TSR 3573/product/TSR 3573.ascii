@@ -1,0 +1,34 @@
+template {
+  name: "TSR 3573"
+  synonym: "25CR3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "join the force of the New Earth Organisation"
+}
+title: "Matter of Gravitol"
+leader: "A"
+date {
+  year: 1991
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+system: XXVC
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

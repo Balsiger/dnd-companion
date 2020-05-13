@@ -1,0 +1,51 @@
+template {
+  name: "WTC 2186574"
+  world: "Forgotten Realms"
+  description: "Death flows from the Fortress of the \\NPC{Old Man} hidden in the canyons of \\Place{Sentinelspire}, a vast and dormant volcano. The secret paradise of Faerun\'s most dangerous assassins, the Fortress specializes in high-profile murders that leave no witnesses.\n                    But with the powers of an archdruid at hand, the mad master of the fortress will bring death to more than just the enemies of his patrons -- he will call down doom on all of Faer\\hat{u}n.\n                    \\emph{\\Place{Sentinelspire} has been waiting to complete the cycle.}"
+  short_description: "The fourth book in The Citadels series."
+}
+title: "Sentinelspire"
+subtitle: "The Fortress of \\Place{Sentinelspire} looks down from the canopy of the world, ready to sow the seeds of destruction."
+author {
+  name: "Sehestedt, Mark"
+}
+cover {
+  name: "Seidman, David"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2008
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4937"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4937"
+  check: 3
+}
+pages: 375
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "4"
+series: "The Citadels"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

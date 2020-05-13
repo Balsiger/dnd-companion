@@ -1,0 +1,53 @@
+template {
+  name: "WTC 2402874"
+  world: "Forgotten Realms"
+  description: "\\Place{The Mere-That-Was} nurses the nightmare children of the \\Event{Spellplague}. Along the dry lake bed, monsters unlike anything in \\Place{Toril} haunt the landscape. From the depths of the wilds, an eerie hymm draws strange disciples to the lair of one plaguechanged child.\n                    Its hypnotic song urges them to seek the key to completing the lullaby: a new voice.\n                    A trio of strangers must trust each other as they chase the cult of the Choir -- and the girl they\'ve taken -- through the wilds of \\Place{Akan\\hat{u}l}.\n                    But all their fears are coming true.\n                    "
+  short_description: "The Wilds, Book 2"
+}
+title: "Restless Shore"
+leader: "The"
+subtitle: "Akan\\hat{u}l"
+author {
+  name: "Davis, James P."
+}
+cover {
+  name: "Gist, Erik M."
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2009
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5131"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5131"
+  check: 4
+}
+pages: 308
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "2"
+series: "The Wilds"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

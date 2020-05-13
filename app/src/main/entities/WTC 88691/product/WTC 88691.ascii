@@ -1,0 +1,80 @@
+template {
+  name: "WTC 88691"
+  synonym: "WTC 21899"
+  world: "Dragonlance"
+  description: "The \\Event{War of Souls} cast a long shadow over the world of \\Place{Krynn}. In the ruins of \\Place{Krolus} and the upper reaches of \\Place{Neraka}, in dusty \\Place{Tarsis} and the forbidding \\Place{Icewall}, dangerous magic and fatastical creatures stir. Amid this vast panaroma are powerful \\Monster{dragons}, ghosts of war, \\Group{Qualinesti} rebels, \\Monster{kender} pipedreams, \\Monster{gnome} antics, and much, much more.\n\nDelve into tales by best-selling Dragonlance authors Paul B. Thompson, Nancy Varian Berberick, Richard A. Knaak, Don Perrin, and others.\n\nThis is the first anthology to tie in to the bestselling \\Product{War of Souls} trilogy by Margaret Weis and Tracy Hickman. It contains 11 stories, written by well-known \\Place{Dragonlance} authors, that elaborate on the characters and locations from the \\Product{War of Souls} trilogy. The stories\nlink to the ongoing saga through the time frames of the main characters.\n"
+  short_description: "Tales from the War of Souls"
+}
+title: "Search for Magic"
+leader: "The"
+subtitle: "Tales form the War of Souls"
+author {
+  name: "Murphy, Brian"
+}
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "Baker, Linda P."
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Tompson, Paul B."
+}
+author {
+  name: "Crook, Jeff"
+}
+author {
+  name: "Stein, Kevin T."
+}
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Perrin, Don"
+}
+author {
+  name: "Bingle, Donald J."
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+cover {
+  name: "Stawicki, Matt"
+}
+date {
+  year: 2001
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1899"
+  check: 3
+}
+isbn13 {
+}
+pages: 340
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

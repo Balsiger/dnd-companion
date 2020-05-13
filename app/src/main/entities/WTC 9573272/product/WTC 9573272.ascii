@@ -1,0 +1,145 @@
+template {
+  name: "WTC 9573272"
+  world: "Generic"
+  description: "\\emph{Day, night, I can no longer tell. \\Monster{Gargoyles} carried off the wizard while we were roping our way down \\Place{Belkram\'s Fall}. \\NPC{Evendur} the paladin fell beneath the axe of a blood-maddend \\Monster{minotaur} two rests later, then \\NPC{Ironhewer} stumbled into a magical portal and vanished screaming. We dared not follow him. It is said that these halls hide treasure beyond imagining, but even if we found \\NPC{Halaster}\'s hoard in the next chamber, we are so hopelessly lost that I doubt I would live to spend a copper of it.}\n                    This Dungeons & Dragons adventure presents the vastest, deepest, most legendary dungeon of them all --- \\Place{Undermountain}, the domain of the mad archmage \\NPC{Halaster}. Below the streets of the city lie more than twenty levels and sublevels, some miles in extent. Ruined fortresses, secret shrines, subterranean rivers, forgotten crypts, and monsters of every description lurk in the darkness below.\n                    This campaign adventure is designed for characters 1-10 and features an easy-to-use combat encounter format. This book also presents new magic items for player characters and an overview of \\NPC{Undermountain} as the basis for any D&D campaign."
+}
+title: "Expedition to Undermountain"
+subtitle: "No one knows what lurks in the depths of the mad archmage\'s halls... but you\'re about to find out."
+author {
+  name: "Boyd, Eric L."
+  job: "designer"
+}
+author {
+  name: "Greenwood, Ed"
+  job: "designer"
+}
+author {
+  name: "Lindsay, Christopher"
+  job: "designer"
+}
+author {
+  name: "Reynolds, Sean K."
+  job: "designer"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "development and editing"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+  name: "Lazarretti, Rob"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Isaac, Nick"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Martin, Michael"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "freelance manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4157"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4157"
+  check: 5
+}
+pages: 224
+system: DND_3_5
+type: ADVENTURE
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 96582"
+layout: FULL_COLOR

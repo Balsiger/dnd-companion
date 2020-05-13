@@ -1,0 +1,33 @@
+template {
+  name: "WTC 88661"
+  world: "Generic"
+  description: "The noblest heroes must contend with the foulest monters. Whether torn from\n                    the darkest planes of existence or spawned as blights upon the natural world,\n                    the creatures bound within these covers will challenge stalwart adveturers of\n                    every experience level.\n                    This accessory for the D&D game captures over 150 monsters, including some of\n                    hte most diabolical beings imaginable. While focused on extraplanar and\n                    otherworldly creatures, you\'ll also stumble across new creatures of every\n                    type, with Challange Ratings that range from \\frac{1}{8} to 25. Along with\n                    three new fiendish prestige classes, six new templates, and rules for swarms,\n                    grafts and symbionts, the \\Product{Fiend Folio} offers a multitude of\n                    challenges for every hero.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook} and the \\Product{Dungeon Master\'s Guide}. A player needs only the\n                    \\Product{Player\'s Handbook}."
+}
+title: "Fiend Folio"
+subtitle: "Vanquish Terrible Evil"
+date {
+  year: 2003
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2780"
+  check: 1
+}
+isbn13 {
+}
+pages: 224
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Monster Manual"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,28 @@
+template {
+  name: "WTC 96784"
+  world: "Star Wars"
+  description: "The \\Product{Star Wars Miniatures Starter Game} provides those new to\n  \\Place{Star Wars} miniatures with an introduction to the basic concepts of\n  miniatures gameplay. It contains everything needed to play exciting\n  \\Place{Star Wars} battles, including a full-size gameboard, basic and\n  advanced rules, and 6 pre-painted plastic miniatures. A gameboard and game\n  play components allow for easy introduction to rules for head-to-head battles\n  as well as the collectable component of the \\Product{Star Wars Miniatures}\n  game. This box contains two exclusive figures not available in the\n  \\Product{Revenge of the Sith} booster packs, also releasing in May.\n\n  Starter Set components\n\n  \\list\n  {Two exclusive miniatures: \\NPC{Supreme Commander Grevious} and\n   \\NPC{Obi- Wan Kenobi}, \\Class{Jedi Master}, plus four additional miniatures\n    with stat cards}\n  {High-quality painted figures}\n  {Quick-start and Advanced Rulebooks}\n  {A 20-sided die}\n  {A checklist for the Revenge of the Sith set}\n  {Fold-out gameboard}\n  {Counters}\n  {Characters drawn from Star Wars Episode III: Revenge of the Sith movie}"
+}
+title: "Star Wars Miniatures Revenge of the Sith Starter Game"
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3666"
+  check: 5
+}
+isbn13 {
+}
+system: D20
+audience: ALL
+type: MINIATURE
+style: BOX
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}

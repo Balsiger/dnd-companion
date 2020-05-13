@@ -1,0 +1,115 @@
+template {
+  name: "Dungeon 48"
+  world: "Generic"
+  description: "This is issue 48 of the dungeon magazine."
+}
+title: "Dungeon 48"
+author {
+  name: "Smedman, Lisa"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Wilson, Leonard"
+}
+author {
+  name: "Wilson, Ann"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Beattie, Paul Hamilton"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Clarke, Peter"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Dow, Tom"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Ward, Kevin"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Clarke, Peter"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+typographer {
+  name: "Isler, Tracy"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1994
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "VIII 6"
+number: "48"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

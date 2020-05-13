@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9171"
+  synonym: "IM1"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+}
+title: "Immortal Storm"
+leader: "The"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}

@@ -1,0 +1,54 @@
+template {
+  name: "WTC 96451"
+  world: "Forgotten Realms"
+  description: "The \\Event{Time of Troubles} is at an end, and the gods have been restored\n                    to their rightful places.\n                    The soul of \\God{Kelemvor Lyonsbane}, former lover of the \\God{goddess of\n                    magic}, remains hidden from the mad god \\God{Cyric}.\n                    The will of one such as \\God{Cyric}, when bent on revenge, is not so easily\n                    thwarted."
+}
+title: "Prince of Lies"
+subtitle: "Revenge of a God"
+author {
+  name: "Lowder, James"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book IV"
+series: "Avatar Series"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

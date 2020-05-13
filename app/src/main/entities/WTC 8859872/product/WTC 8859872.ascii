@@ -1,0 +1,180 @@
+template {
+  name: "WTC 8859872"
+  world: "Generic"
+  description: "The essential spellcaster\'s companion, \\Product{Spell Compendium} gathers\n                    over 1\'000 of the best spells from previously published Dungeons & Dragons\n                    game supplements and campaign settings, \\Product{Dragon} magazine articles,\n                    and articles posted on the Wizards of the Coast website.\n                    The spells contained herein complement those presented in the\n                    \\Product{Player\'s Handbook} and have been updated to include official\n                    errata. In addition, this book contains descriptive read-aloud text telling\n                    you what a spell looks like, sounds like, or feels like.\n                    \\Product{Spell Compendium} provides players and Dungeon Masters with quick\n                    access to the D&D spells they need most. Drawing from a treasure trove of\n                    sources, \\Product{Spell Compendium} is the one place to find spells that are\n                    referenced time and again: the best, most iconic, most popular, and most\n                    frequently used. This convenient reference introduces a new spell format that\n                    includes descriptive text."
+}
+title: "Spell Compendium"
+subtitle: "Unlock the Lore of a Thousand Spellcasters"
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "McArtor, Mike"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "development team"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "development team"
+}
+author {
+  name: "Watkins, Rob"
+  job: "development team"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Moray, Victor"
+}
+cover {
+  name: "Baugher, Nyssa"
+}
+cover {
+  name: "Heath, N. Eric"
+  job: "cover photographer"
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Cotie, Mitch"
+}
+illustrator {
+  name: "Dien, Chris"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Hooper, Fred"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Spears, Ron"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Vohwinkel, Frank"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "art director D&D"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3702"
+  check: 5
+}
+isbn13 {
+}
+pages: 288
+system: DND_3_5
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"

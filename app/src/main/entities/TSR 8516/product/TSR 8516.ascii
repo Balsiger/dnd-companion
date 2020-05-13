@@ -1,0 +1,22 @@
+template {
+  name: "TSR 8516"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Dragon\'s Ransom"
+leader: "The"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Sixteen"
+price {
+}

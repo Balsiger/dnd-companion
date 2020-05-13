@@ -1,0 +1,41 @@
+template {
+  name: "WTC 88250"
+  world: "Generic"
+  description: "In the sands of a great desert, a once-heroic paladin has turned to evil and\n  enlisted an army of \\Monster{gnolls} to help retrieve a powerful relic,\n  reputed to be kept in the vaults of the \\Place{City of Fire}. If they find\n  it, the world will never be at peace.\n\n  Can a party of four stop an army of hundreds?"
+}
+title: "City of Fire"
+author {
+  name: "T.H. Lain"
+}
+cover {
+  name: "Todd Lockwood"
+}
+date {
+  year: 2002
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2854"
+  check: 9
+}
+isbn13 {
+}
+pages: 183
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 4"
+series: "D&D 3rd Edition Introduction Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "the story"
+  number: 1073741824
+}

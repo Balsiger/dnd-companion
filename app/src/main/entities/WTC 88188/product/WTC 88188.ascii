@@ -1,0 +1,69 @@
+template {
+  name: "WTC 88188"
+  world: "Dominaria"
+  description: "What beasts rule our dreams?\n                    Ancient Primevals enslaved our ancestors, and modern \\Monster{dragon} engines\n                    enslave us. \\Monster{Plains dragons} defend \\Monster{humans}, and\n                    \\Monster{undead dragons} destroy them. And all \\Monster{dragons} hold\n                    mysteries deep within.\n                    Uncover the secrets of the \\Monster{dragons} of \\Place{Dominaria}."
+}
+title: "Dragons of Magic"
+author {
+  name: "Moore, Vance"
+}
+author {
+  name: "Lassieur, A.L."
+}
+author {
+  name: "Lebow, Jess"
+}
+author {
+  name: "Bolme, Edward"
+}
+author {
+  name: "Schend, Steven E."
+}
+author {
+  name: "Graham, Denise R."
+}
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Ryan, Tim"
+}
+author {
+  name: "Dupree, Tom"
+}
+author {
+  name: "Belkom, Edo van"
+}
+author {
+  name: "Thomsen, Brian M."
+}
+author {
+  name: "McGough, Scott"
+}
+editor {
+  name: "King, Robert J."
+}
+date {
+  year: 2001
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1872"
+  check: 1
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

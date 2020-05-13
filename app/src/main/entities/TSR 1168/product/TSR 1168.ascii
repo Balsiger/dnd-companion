@@ -1,0 +1,39 @@
+template {
+  name: "TSR 1168"
+  reference {
+    name: "internet"
+  }
+  description: "A board game for up to 6 players."
+}
+title: "Dungeons & Dragons Board Game"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0879"
+  check: 3
+}
+isbn13 {
+}
+system: SPECIAL
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+}
+content {
+  part: BOOKLET
+  description: "rule"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "decks of 108 cards each"
+  number: 2
+}

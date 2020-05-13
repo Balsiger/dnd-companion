@@ -1,0 +1,47 @@
+template {
+  name: "WTC C6035"
+  world: "Generic"
+  description: "Epxerience fantastic illustrations inspired by Dungeons & Dragons, featuring classic monsters from the game as seen through the eyes of world-renowned artist Todd James. Color your way through each adventure with these delighful designs. This coloring book features beholders, trolls, goblins, and dragons, providing hours of creativity and fun."
+  short_description: "Coloring Book"
+}
+title: "Adventures Outlined"
+subtitle: "Coloring Book"
+author {
+  name: "Lee, Adam"
+  job: "\t"
+}
+cover {
+  name: "James, Todd"
+}
+illustrator {
+  name: "James, Todd"
+}
+date {
+  year: 2018
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6664"
+  check: 6
+}
+pages: 87
+system: NONE
+audience: ALL
+type: SPECIAL_BOOK
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

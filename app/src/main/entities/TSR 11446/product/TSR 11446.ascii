@@ -1,0 +1,39 @@
+template {
+  name: "TSR 11446"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "a novel and sourcebook about Dragonlance"
+}
+title: "Odyssey of Gilthanas"
+leader: "The"
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Miller, Steve"
+}
+author {
+  name: "Stan"
+}
+date {
+  year: 1999
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1446"
+  check: 7
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,32 @@
+template {
+  name: "WTC 96561"
+  world: "Dragonlance"
+  description: "The latest title from best-selling author and \\Place{Dragonlance} setting\n  cocreator Margaret Weis, \\Product{Amber and Ashes} takes up where the\n  \\Product{War of Souls} left off with the central character \\NPC{Mina}. While\n  following her story, this new trilogy will also explore the chaos that is\n  post-war \\Place{Krynn}. This is Weis\'s first solo hardcover since the\n  publication of the extremely popular \\Place{Dragonlance} title \\Product{The\n  Soulforge} in 1998."
+}
+title: "Amber & Ashes"
+author {
+  name: "Weis, Margaret"
+}
+author {
+}
+date {
+  year: 2004
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume 1"
+series: "The Dark Disciple"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

@@ -1,0 +1,21 @@
+template {
+  name: "TSR 1038"
+  reference {
+    name: "net price list"
+  }
+  description: "Unknown"
+}
+title: "Mertwig\'s Maze"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

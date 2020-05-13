@@ -1,0 +1,119 @@
+template {
+  name: "Polyhedron 122"
+  world: "Generic"
+  description: "Issue 122 of Polyhedron."
+}
+title: "Polyhedron 122"
+author {
+  name: "Scott \'Papa\' Douglas"
+}
+author {
+  name: "Robert Wiese"
+}
+author {
+  name: "Jeff \'Zippy\' Quick"
+}
+author {
+  name: "Wes Nicholson"
+}
+author {
+  name: "Sandy Douglas"
+}
+author {
+  name: "Kline, Eric"
+}
+author {
+  name: "Gail Resse"
+}
+author {
+  name: "Thompson, Agnes V."
+}
+author {
+  name: "Laura Braslow"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Baker, David"
+}
+author {
+  name: "Steve Jay"
+}
+author {
+  name: "Bob Farnsworth"
+}
+author {
+  name: "Shaun Horner"
+}
+author {
+  name: "Hauptmann, Andrew"
+}
+author {
+  name: "Gary Labrecque"
+}
+author {
+  name: "Roger E. Moore"
+}
+author {
+  name: "William R. Gilsdorf"
+}
+author {
+  name: "Kathy Bayles"
+}
+author {
+  name: "Linda Baldwin"
+}
+author {
+  name: "Tim Hernandez"
+}
+author {
+  name: "Thomas Prusa"
+}
+author {
+  name: "John Paul Carney"
+}
+author {
+  name: "Weatherbee, Don"
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "publisher"
+}
+manager {
+  name: "Scott Douglas"
+  job: "network coordination"
+}
+manager {
+  name: "Robert Wiese"
+  job: "network administration"
+}
+manager {
+  name: "Conant, Dave"
+  job: "production"
+}
+manager {
+  name: "Terry Craig"
+  job: "production"
+}
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "16"
+number: "7"
+series: "Polyhedron"
+price {
+}

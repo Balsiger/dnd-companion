@@ -1,0 +1,57 @@
+template {
+  name: "WTC 88193"
+  world: "Dragonlance"
+  description: "The port town of \\Place{Flotsam} has always been left to handle its own\n  problems, neither asking for nor wanting help from the rest of\n  \\Place{Krynn}. That is, until the young \\Class{mage} \\NPC{Ulin Majere} and\n  his traveling companion are summoned there to identify a murder victim. They\n  quickly discover there is more to the rough seaport than just one dead body,\n  including cagey thieves, failing magic, the \\Group{Knights of Neraka}, and a\n  very greedy, very deadly \\Monster{red dragon}."
+}
+title: "Dragon\'s Bluff"
+author {
+  name: "Herbert, Mary H."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1877"
+  check: 2
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Crossroads Series"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

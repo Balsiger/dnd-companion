@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9153"
+  synonym: "WG6"
+  reference {
+    name: "net price list"
+  }
+  world: "Greyhawk"
+}
+title: "Isle of the Ape"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}

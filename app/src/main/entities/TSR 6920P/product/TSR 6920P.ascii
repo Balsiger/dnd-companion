@@ -1,0 +1,49 @@
+template {
+  name: "TSR 6920P"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "collectibel dice game, base"
+}
+title: "MARVEL Super Dice Game"
+author {
+  name: "James M. Ward"
+}
+author {
+  name: "Wise, David"
+}
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0839"
+  check: 4
+}
+isbn13 {
+}
+system: MARVEL_SUPER_DICE
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: DICE
+  description: "random"
+  number: 16
+}
+content {
+  part: BOOKLET
+  description: "rules"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "areas"
+  number: 1073741824
+}

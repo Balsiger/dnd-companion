@@ -1,0 +1,93 @@
+template {
+  name: "TSR 9346"
+  synonym: "FOR3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\'Aye, fightin\' ship to ship is a grand thing. Makes ya feel like a real\n                    pirate, amin\' \\Item[Ballista]{ballistas} and \\Item[Catapult]{catapults} and\n                    such at the enemy, blasin\' great holes in her hull, wathin\' \'em flee like\n                    rats...\'  \\bold{\\NPC{Jomo Shanbaeren}\'s eyes glaze over with memories, and\n                    for a moment the looks like a young man again as he relives his glory days.}\n                    \'And board\'!  That\'s the thrill---leapin\' from yer own gunwales onto the\n                    enemy\'s deck, cutlass flashin\', givin\' \'em the ol\' hook-and-eye---\' \\bold{the\n                    retired pirate slashes at an invisible opponent with the iron hook that takes\n                    the place of his right hand---} \'drivin\' \'em back to the rails! Let me tell\n                    yer about the time we took on \\NPC{Teldar} and the \\Item[Kissing\n                    Maiden]{kissing Maiden}...\'\n                    \\Product[TSR 9346]{Pirates of the Fallen Stars} reveals for the first time\n                    the details about the \\Place{Pirate Isles}, in the center of the \\Place{Inner\n                    Sea}. Here are facts about their societies, their interactions with the\n                    \\Place{Inner Sea} nations, their pirate kings, their ships, their style of\n                    combat; in fact, here is everything any DM or player needs to know to enjoy a\n                    campaign in the \\Place{Sea of Fallen Stars} and its environs."
+}
+title: "Pirates of the Fallen Stars"
+author {
+  name: "Scott, Curtis M."
+}
+editor {
+  name: "Ewell, Newton H."
+}
+cover {
+  name: "Olson, Erik"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Beck, Steve"
+}
+illustrator {
+  name: "Lombardo, Jaime"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Cook, David \'Zeb\'"
+  job: "combat system development"
+}
+manager {
+  name: "Grubb, Jeff"
+  job: "combat system development"
+}
+manager {
+  name: "Boomgarden, Karen S."
+  job: "product management"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphic design"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "320"
+  check: 5
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

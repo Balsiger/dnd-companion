@@ -1,0 +1,54 @@
+template {
+  name: "TSR 8575"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  world: "Forgotten Realms"
+}
+title: "Elminster in Myth Drannor"
+author {
+  name: "Greenwood, Ed"
+}
+date {
+  year: 1997
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0661"
+  check: 8
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "2"
+series: "Elminster Series"
+price {
+  currency: "$"
+  number: 1999
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

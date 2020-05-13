@@ -1,0 +1,79 @@
+template {
+  name: "TSR 9450"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "\\Product[TSR 9450]{Marco Volo---Journey} is the second volume of the\n                    \\Product[Marco Volo Trilogy]{Marco Volo} trilogy, designed for four to eight\n                    player characters of 6th--8th level. This free-wheeling adventure began in\n                    \\Place{Waterdeep} as the characters set out an intrigue-laden journey to\n                    \\Place{Shadowdale}. Accompanying them is \\NPC{Marcus Wands} (also known as\n                    \'\\NPC{Marco Volo}\'), a bothersome but likeable little rogue.\n                    After leaving the \\Place{Way Inn}, the party heads for the\n                    \\God[Chauntea]{Chauntean} Monastery near \\Place{Berdusk}, where they have\n                    been promised save shelter. Arriving at the monastery, all seems pastoral and\n                    pleasant... but of course, things are never quite that simple.\n                    After escaping from the monsastery, the PCs run afoul of \\NPC[King Azoun\n                    IV]{King Azoun}\'s \\Group{Purple Dragons} on the lookout for the infamous\n                    thief, \\NPC{Marco Volo}. Only the timely intervention of a band of wandering\n                    entertainers enables the party to continue on its way.\n                    While on the road with \\Group{Heino\'s Woodland Troupe}, the characters learn\n                    the joys of being in a traveling repertory company, performing for a\n                    different audience each night. In the course of the adventure, the PCs also\n                    learn more about \\NPC[Marcus Wands]{Marcus} and his secrets---some of his\n                    secrets, anyway. There\'s still the matter of the mysterious letter, and that\n                    powerful artifact from another plane, the \\Item{Dragonking\'s Eye}.\n                    The adventure ends with \\Place{Shadowdale} in sight not to be reached,\n                    however, without a final confrontation with the notorious mage-assassin\n                    \\NPC{Felibarr Blacklance}.\n                    This volume of the \\Product[Marco Volo Trilogy]{Marco Volo} trilogy offers\n                    DMs the opportunity to run unusual encounters, and it call for considerable\n                    role playing from all. Player characters cannot easily rely on their swords\n                    and spells to get them out of the brawls and misunderstandings that\n                    arise. What results is a dramatic but picaresque enterprise as the adventure\n                    continues!"
+}
+title: "Marco Volo: Journey"
+author {
+  name: "Pryor, Anthony"
+}
+editor {
+  name: "Danforth, Elizabeth T."
+}
+cover {
+  name: "Lakey, John"
+}
+cover {
+  name: "Lakey, Laura"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Danforth, Elizabeth T."
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Greenwood, Ed"
+  job: "original realms design"
+}
+manager {
+  name: "Boomgarden, Karen S."
+  job: "product group manager"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "production"
+}
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "869"
+  check: 10
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+number: "Part Two"
+series: "Volo Adventures"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

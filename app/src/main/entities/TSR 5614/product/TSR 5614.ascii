@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5614"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Black Dragon, Onyx"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

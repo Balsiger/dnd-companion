@@ -1,0 +1,97 @@
+template {
+  name: "WTC 17730"
+  world: "Eberron"
+  description: "Deep in the jungles of \\Place{Xen\'drik}, a relic of great power has lain\n  hidden for thousands of years. Now, determined adventurers race against time\n  and the nefarious agents of the \\Group{Order of the Emerald Claw} to locate\n  the relic, overcome unimagined obstacles, and unlock its ancient secret.\n\n  \\Product{Grasp of the Emerald Claw} may be used as the conclusion to the\n  storyline from \\Product{Shadows of the Last War} and \\Product{Whispers of the\n  Vampire\'s Blade} or as a stand-alone adventure for the Dungeon & Dragons game\n  that will immerse your characters in the \\Product{Eberron} campaign\n  setting. Designed to challenge 6th-level D&D heroes, it sends them on a\n  perilous journey to the heart of the mysterious and uncharted continent of\n  \\Place{Xen\'drik}.\n\n  To use this adventures, a Dungeon Master also needs the \\Product{Eberron\n  Campaign Setting}, the \\Product{Player\'s Handbook}, \\Product{Dungeon Master\'s\n  Guide}, and \\Product{Monster Manual}. A player needs only the\n  \\Product{Eberron Campaign Setting} and the \\Product{Player\'s Handbook}."
+}
+title: "Grasp of the Emerald Claw"
+subtitle: "Scramble to Claim a Key to Untold Power"
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "additional design"
+}
+editor {
+  name: "Kim Mohan"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Cheung, Carmen"
+  job: "graphic productions specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG R&D"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Raper, Robert"
+  job: "eberron brand art director"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production manager"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3652"
+  check: 5
+}
+isbn13 {
+}
+pages: 32
+system: DND_3RD
+type: ADVENTURE
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

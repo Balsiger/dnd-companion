@@ -1,0 +1,159 @@
+template {
+  name: "WTC 17738"
+  world: "Forgotten Realms"
+  description: "The ruins and remnants of once-mighty nations lie scattered across the lands\n                    of \\Place{Faer\\hat{u}n}. Hidden within the dusty vaults and passages of these\n                    crumbling monuments, great treasures and terrible dangers await\n                    discovery. Only those bold explorers armed with courage and equipped with\n                    knowledge dare to delve into these earliest secrets of the \\Place{Forgotten\n                    Realms} setting.\n                    For the first time, the secrets of past empires of the \\Place{Forgotten\n                    Realms} world are chronicled in one comprehensive sourcebook. For players,\n                    this book contains new options for characters wishing to delve into ancient\n                    ruins, including new feats, prestige classes, magic, and equipment. For\n                    Dungeon Masters, this book contains new material associated with ruins,\n                    including rules for how to build and sustain a ruin-based campaign, more than\n                    a dozen detailed adventure sites with maps, monsters and artifacts.\n                    \\Product{Lost Empires of Faer\\hat{u}n} contains five new in-depth prestige\n                    classes, 16 new feats, and 29 new monsters"
+}
+title: "Lost Empires of Faer\\hat{u}n"
+subtitle: "Explore the echoes of a vanished time"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Bonny, Ed"
+}
+author {
+  name: "Stout, Travis"
+}
+author {
+  name: "Wyatt, James"
+  job: "additional design"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Sasso, Marc"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+illustrator {
+  name: "Despain, Brian"
+}
+illustrator {
+  name: "Djordjevic, Marko"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Frank, Eearl"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Garres, Rafa"
+}
+illustrator {
+  name: "Hawkes, Chris"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+illustrator {
+  name: "Locke, Vince"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Tasi, Francis"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG R&D"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "assistant art director"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3654"
+  check: 1
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

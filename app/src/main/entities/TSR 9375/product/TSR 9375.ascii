@@ -1,0 +1,41 @@
+template {
+  name: "TSR 9375"
+  synonym: "RQ3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Ravenloft"
+  description: "Lord Azalikn sends creatures of the night to othre worlds"
+}
+title: "From the Shadows"
+date {
+  year: 1992
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "353"
+  check: 1
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$\303\224\303\270\316\251"
+  number: 995
+  precision: 100
+}

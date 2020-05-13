@@ -1,0 +1,35 @@
+template {
+  name: "WTC 96884"
+  world: "None"
+  description: "The ronin \\NPC{Toshi} has sought to avoid the great conflict between the\n                    spirit and \\Monster{human} realms. But despite his best efforts, he\'s not\n                    only involved in it -- he\'s at the center of it. Together with \\NPC{Princess\n                    Michiko}, daughter of \\NPC{Daimyo Konda}, he must find a way to stave off the\n                    impending victory of the \\Monster{kami}, while preserving his own life into\n                    the bargain.\n                    Amid the complicated maneuvers of the \\Monster{fox people}, the \\Monster{moon\n                    folk}, and the \\NPC{Daimyo} himself, \\NPC{Toshi} can rely on only one person.\n                    Himself."
+}
+title: "Guardian: Saviors of Kamigawa"
+subtitle: "The Victory of the Spirit World is at Hand."
+author {
+  name: "McGough, Scott"
+}
+date {
+  year: 2005
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3786"
+  check: 6
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "Kamigawa Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

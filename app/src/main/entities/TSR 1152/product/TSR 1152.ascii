@@ -1,0 +1,40 @@
+template {
+  name: "TSR 1152"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+  description: "Cards for the game."
+}
+title: "Spellfire Birthright Booster Pack, Set 9"
+author {
+  name: "Olmesdahl, Bill"
+}
+date {
+  year: 1996
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0609"
+  check: 10
+}
+isbn13 {
+}
+system: SPELLFIRE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  number: 12
+}

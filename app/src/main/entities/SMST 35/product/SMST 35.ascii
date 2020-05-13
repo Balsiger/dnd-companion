@@ -1,0 +1,37 @@
+template {
+  name: "SMST 35"
+  synonym: "Dice, Steampunk"
+  world: "None"
+  description: "This box contains a set of 7 finest polyhedral dice with unique Q-workshop designs crafted in metal. Feel their weight when You game and let your gaming table shake when You roll these dice Made to survive even the most exhausting games these dice were made to last! Now You can have painted metal dice that will never wear off!\n\n"
+  short_description: "Fullset of 7 Metal Steampunk Polyhedral Dice (d4, d6, d8, d10, d12, d20, d100)"
+}
+title: "Steampunk Dice"
+subtitle: "Metal Dice"
+date {
+  year: 2013
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: DICE
+style: SMALL_BOX
+producer: "Q-Workshop"
+price {
+  currency: "$"
+  number: 5346
+  precision: 100
+}
+content {
+  part: DICE
+  description: "metal"
+  number: 7
+}
+content {
+  part: BOX
+  description: "container"
+  number: 1
+}
+layout: FULL_COLOR

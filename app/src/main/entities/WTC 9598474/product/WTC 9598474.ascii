@@ -1,0 +1,47 @@
+template {
+  name: "WTC 9598474"
+  world: "Forgotten Realms"
+  description: "\\bold{...nightmares that have become reality.}\n                    Guarded by fell magic, deep within the heart of \\Place{Stardeep}, death and madness sleep. Defending this heart are warriors who kill rather than question intruders. The only way in is with a key -- a key that falls into unknowing hands, pulling danger in its wake."
+}
+title: "Stardeep"
+subtitle: "Nightmares of the Traitor\'s Escape Haunt Her..."
+author {
+  name: "Cordell, Bruce R."
+}
+cover {
+  name: "Gist, E.M."
+}
+date {
+  year: 2007
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4338"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4338"
+  check: 8
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "3"
+series: "The Dungeons"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

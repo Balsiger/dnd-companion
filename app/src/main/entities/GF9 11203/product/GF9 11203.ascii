@@ -1,0 +1,44 @@
+template {
+  name: "GF9 11203"
+}
+title: "Wall of Ice"
+subtitle: "Game Accessories Pack #12"
+author {
+}
+editor {
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+system: D20
+type: MINIATURE
+style: PACK
+producer: "Gale Force Nine"
+number: "12"
+series: "Game Accessories"
+price {
+  currency: "$"
+  number: 989
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "Wall of Ice"
+  number: 2
+}
+layout: FULL_COLOR

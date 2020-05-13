@@ -1,0 +1,73 @@
+template {
+  name: "WTC 28089"
+  synonym: "DN1"
+  world: "Generic"
+  description: "You tabletop never looked better! With this pack of customizable terrain tiles, you can add a new dimension to your Dungeons & Dragons adventures. Easy to set up and infinitely expandable, this pack allows you to create the adventures you want to play. Pick up additional packs to create larger, more elaborate encounters.\n\nThis pack contains six durable, double-sided sheets of illustrated terrain inspired by the \\Place{Forgotten Realms} world and the adventures of \\NPC{Drizzt Do\'Urden}, the legendary \\Monster{drow} hero created by the New York Times best-selling author R.A. Salvatore. Use this product and other \\Product{Dungeon Tiles} accessories to make great D&D encounters that enhance your roleplaying game experience."
+  short_description: "Dungeon Tiles depicting frozen surroundings."
+}
+title: "Caverns of Icewind Dale"
+subtitle: "Make Your Adventures Cooler"
+author {
+  name: "Lee, Peter"
+  job: "designer"
+}
+editor {
+}
+cover {
+  name: "Engle, Jason A."
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+typographer {
+}
+manager {
+  name: "Tapp, Gretchen"
+  job: "senior product engineer"
+}
+date {
+  year: 2011
+  month: 1
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5746"
+}
+pages: 6
+system: NONE
+type: ACCESSORY
+style: FOLDER
+producer: "WTC"
+number: "DN1"
+series: "Dungeon Tiles"
+price {
+  currency: "$"
+  number: 1195
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "cardboard map tiles"
+  number: 6
+}
+optional_requirements: "Rules Compendium"
+optional_requirements: "Dungeon Master\'s Kit"
+optional_requirements: "Monster Vault"
+optional_requirements: "D&D Dungeon Tiles Master Set"
+layout: FULL_COLOR

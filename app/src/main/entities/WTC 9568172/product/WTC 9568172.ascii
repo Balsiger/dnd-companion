@@ -1,0 +1,255 @@
+template {
+  name: "WTC 9568172"
+  world: "Generic"
+  description: "This supplement for the Dungeons & Dragons roleplaying game presents more than a hundred monstrous foes to challenge even the toughest player characters, including draconic masterminds, demonic horrors,l vengeful fey that haunt ancient ruins, and \\Monster{mind flayers} driven mad from their journey beyond the planes. This book also provides powerful, ready-to-play varieties of popular monsters such as the \\Monster{hobgoblin}, the \\Monster{kuo-toa} and the \\Monster{vampire}, saving Dungeon Masters precious time at the game table.\n                    In addition to scores of new monsters, this tome features sample encounters, easy-to-follow tactics, and guidance for integrating these new creatures into any D&D campaign setting."
+}
+title: "Monster Manual V"
+subtitle: "The Darkest Dungeons of Your World Just Got a Little Darker"
+author {
+  name: "Noonan, David W."
+  job: "lead designer"
+}
+author {
+  name: "Broadhurst, Creighton"
+  job: "additional design"
+}
+author {
+  name: "Bulmahn, Jason"
+  job: "additional design"
+}
+author {
+  name: "Chart, David"
+  job: "additional design"
+}
+author {
+  name: "Conklin, B. Matthew III"
+  job: "additional design"
+}
+author {
+  name: "Decker, Jesse"
+  job: "additional design"
+}
+author {
+  name: "Desborough, James \'Grim\'"
+  job: "additional design"
+}
+author {
+  name: "Heinsoo, Rob"
+  job: "additional design"
+}
+author {
+  name: "Hershey, Sterling"
+  job: "additional design"
+}
+author {
+  name: "Hitchcock, Tim"
+  job: "additional design"
+}
+author {
+  name: "Johnson, Luke"
+  job: "additional design"
+}
+author {
+  name: "Logue, Nicolas"
+  job: "additional design"
+}
+author {
+  name: "McArtor, Mike"
+  job: "additional design"
+}
+author {
+  name: "Rosenberg, Aaron"
+  job: "additional design"
+}
+author {
+  name: "Schwalb, Robert J."
+  job: "additional design"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "additional design"
+}
+author {
+  name: "Upchurch, Wil"
+  job: "additional design"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "development team"
+}
+author {
+  name: "Kestrel, Gwendoly F.M."
+  job: "development team"
+}
+author {
+  name: "Mearls, Mike"
+  job: "development team"
+}
+author {
+  name: "Sernett, Matthew"
+  job: "development team"
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Bonner, Logan"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Higginbotham, Henry"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Chan, Jason"
+}
+illustrator {
+  name: "Coimbra, Miguel"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Mahey, Warren"
+}
+illustrator {
+  name: "Medrano, Izzy"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Srisuwan, Skan"
+}
+illustrator {
+  name: "Spears, Ron"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Sweckel, Arnie"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Waters, Anthony S."
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Martin, Michael"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "freelance manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4115"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4115"
+  check: 5
+}
+pages: 222
+system: DND_3_5
+audience: ALL
+type: MONSTER_COMPENDIUM
+style: HARDCOVER
+number: "V"
+series: "Monster Manual"
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+layout: FULL_COLOR

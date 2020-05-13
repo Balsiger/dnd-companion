@@ -1,0 +1,24 @@
+template {
+  name: "TSR 8729"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+}
+title: "Battle Against Necros"
+date {
+  year: 1994
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+system: WILD_SPACE
+type: ADVENTURE
+number: "Book One"
+price {
+  currency: "\302\254\302\243 "
+  number: 199
+  precision: 100
+}

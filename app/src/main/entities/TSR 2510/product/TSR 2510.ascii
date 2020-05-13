@@ -1,0 +1,96 @@
+template {
+  name: "TSR 2510"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Mystara"
+  description: "\\bold{At last! Everything you need to breathe life into your player\n  character!}\n\n  Herein lies a treasure trove of game props and playing aids no bold\n  adventurer can afford to be without! Whether you\'re trying to choose the\n  perfect name for your first character, designing a shield for your favorite\n  fighter, or just trying to remember who\'s carrying the magical broad sword,\n  the \\Product{Player\'s Survival Kit} has what you need.\n\n  Inside you\'ll discover...\n\n  \\list\n  {a 16-page full-color \\emph{Character Book} that includes a\n   \'Dictionary of Names\' (with more than a thousand names to choose\n   from) and \'Heraldry Made Easy\' (simple instructions to create your\n   own heraldic designs)}\n  {a 16-page full color \\emph{Adventurer\'s Log} to keep track of\n   monsters slain, treasures gained, and mysteries yet to be solved.}\n  {24 handouts, including spell lists for speciality wizards, a complete\n   system for rolling up a character\'s family, letters of credit,\n   diplomas, an advertisment for henchmen, and the character\'s last will\n   & testament (don\'t go adventuring wihtout it!)}\n  {A deck of 54 \'Fame & Fortune\' cards designed to help player\n   characters get out of sticky situations.}\n\n  Explore the world of \\Place{Mystara} with your handy Survival Kit at your\n  side..."
+}
+title: "Player\'s Survival Kit"
+author {
+  name: "Ratecliff, John D."
+}
+editor {
+  name: "Brown, Anne K."
+}
+cover {
+  name: "Higgenbotham, Henry"
+}
+illustrator {
+  name: "Frazier, Daniel"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Kimble, Mike"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Moore, Roger E."
+  job: "project coordination"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphics coordination"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Coumbe, Tim"
+  job: "electronic prepress coordination"
+}
+date {
+  year: 1995
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0099"
+  check: 7
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+style: FOLDER
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "character book"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Adventurer\'s Log"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "Fame and Fortune"
+  number: 54
+}
+content {
+  part: SHEET
+  description: "handouts"
+  number: 24
+}
+content {
+  part: GATEFOLD
+  description: "wraparound cover"
+  number: 1073741824
+}

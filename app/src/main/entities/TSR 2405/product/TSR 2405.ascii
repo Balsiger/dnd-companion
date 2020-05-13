@@ -1,0 +1,46 @@
+template {
+  name: "TSR 2405"
+  synonym: "MC12"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dark Sun"
+  description: "a lot of monsters"
+}
+title: "Monstrous Compendium"
+leader: "Dark Sun Appendix I"
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "272"
+  check: 1
+}
+isbn13 {
+}
+system: ADND_2ND
+type: MONSTER_COMPENDIUM
+number: "12"
+series: "Monstrous Compendium"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}

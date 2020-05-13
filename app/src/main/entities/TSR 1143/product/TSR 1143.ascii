@@ -1,0 +1,62 @@
+template {
+  name: "TSR 1143"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Odyssey"
+  description: "Strange lights in the sky, prophecies of doom, and a threat unlike any other\n                    draw the heroes to \\Place{Aston Point}. In this small frontier town, the fate\n                    of the world will be decided. If the heroes and their strange new allies\n                    defeat the invaders, they must then pass through a portal to another\n                    battleground, a metal city on a far-distant world, where aliens fight\n                    desperately against death machines that threaten to overwhelm all organic\n                    life. So trade in your sword for a blaster rifle, your sling stone for a few\n                    high-explosive grenades, and see what happens when you mix magic with high\n                    technology.\n                    This box contains\n                    \\list\n                    {A 32-page book, \\emph{The Cast and Props}, describing new, high-tech\n                    equipment, detailing the background of the \\Event{Rael-Voerseer war},\n                    and explaining how to mix fantasy and science under the AD&D game\n                    system.}\n                    {Two 64-page books, \\emph{The Tale Begins} and \\emph{Crossing Over},\n                    presenting the grand adventure that is the \\Product[TSR 1143]{Tale of the\n                    Comet}.}\n                    {Eight sheets of charts, maps, art, and statistics for the players and\n                    the DM.}\n                    {Two posters, one a double-sided map of the regions where the action\n                    takes place and the other an illustration of all the technological\n                    terrors the heroes will have to face in the course of the adventure.}"
+}
+title: "Tale of the Comet"
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0653"
+  check: 7
+}
+isbn13 {
+}
+pages: 160
+system: ADND_REVISED
+type: ADVENTURE
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "The Cast & Props"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Adventure Begins"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Crossing Over"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "color poster"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "cards"
+  number: 8
+}

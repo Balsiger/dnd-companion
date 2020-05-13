@@ -1,0 +1,58 @@
+template {
+  name: "TSR 8562"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{A vast and deadly labyrinth...}\n                    Beneath the city of \\Place{Waterdeep} lies a city of another sort, created by\n                    a mad wizard in ages past. Its subterranean byways are home to all manner of\n                    creatures, \\Monster{human} and otherwise.\n                    When \\NPC{Artek the Knife} is offered release from prison in exchange for one\n                    small errand, he leaps at the chance. All he must do is retrieve one missing\n                    nobleman from the twisting corridors of the dungeon that lies beneath the\n                    city.\n                    Accompanied by comely but klutzy \\NPC{Beckla}, a small-time wizard who may\n                    not be exactly what she claims to be, \\NPC{Artek} must go deeper into\n                    \\Place{Undermountain} than anyone else has before.\n                    Getting in will be the hardest thing he\'s ever done. Getting out will be\n                    impossible..."
+}
+title: "Escape from Undermountain"
+author {
+  name: "Anthony, Mark"
+}
+cover {
+  name: "Velez, Walter"
+}
+illustrator {
+  name: "Murin, Dawn"
+}
+date {
+  year: 1996
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0477"
+  check: 1
+}
+isbn13 {
+}
+pages: 316
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Three"
+series: "Nobles"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

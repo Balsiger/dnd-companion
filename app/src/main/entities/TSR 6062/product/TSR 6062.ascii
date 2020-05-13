@@ -1,0 +1,22 @@
+template {
+  name: "TSR 6062"
+  synonym: "R3"
+  reference {
+    name: "net price list"
+  }
+}
+title: "Egg of the Phoenix"
+leader: "The"
+date {
+  year: 1982
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 500
+  precision: 100
+}

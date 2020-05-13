@@ -1,0 +1,39 @@
+template {
+  name: "WTC 12015"
+  synonym: "WTC 88244"
+  world: "Generic"
+  description: "\\Product{Oriental Adventures} introduces the infinite worlds of fantastic\n                    \\Place{Asia} to the Dungeons & Dragons game. In these pages, you\'ll find:\n                    \\list\n                    {5 new races, including \\Monster{hengeyokai}, \\Monster{nezumi}, and\n                    \\Monster{spirit folk}}\n                    {5 new classes, including the samurai, the shugenja, and the wu jen}\n                    {Over 25 new prestige classes, including the ninja, the tattooed monk,\n                    and the yakuza}\n                    {100 new spells}\n                    {75 new monsters}\n                    {A complete campaign setting: \\Place{Rokugan}, the world of the\n                    \\Product{Legend of the Five Rings} trading card game}\n                    To use this supplement, a Dungeon Master needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}. A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Oriental Adventures"
+date {
+  year: 2001
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2015"
+  check: 7
+}
+isbn13 {
+}
+pages: 256
+system: DND_3RD
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

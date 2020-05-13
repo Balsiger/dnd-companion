@@ -1,0 +1,32 @@
+template {
+  name: "TSR 8322P"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Dragonlance"
+  description: "collectors edition of the Dragonlance Tales Trilogy"
+}
+title: "Dragonlance Tales Paperback"
+date {
+  year: 1993
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "all volumes"
+series: "Tales Trilogy"
+price {
+  currency: "\302\254\302\243"
+  number: 1300
+  precision: 100
+}

@@ -1,0 +1,47 @@
+template {
+  name: "TSR 2627P"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  world: "Planescape"
+  description: "\\large{Some questions are better left unasked...}\n\n  There is a void in my chest where I once had a heart, and from this emptiness\n  springs all the suffering of the \\Place{Multiverse}. At first, the Pains are\n  like a kiss, hot and breathy and welcome. They reach out with long, cajoling\n  fingers and make my bones hum with delight. I warm to the touch and, though I\n  know what must follow, yearn for more. My flesh tingles and flushes and\n  shudders, and the more my ecstasy builds, the more the void pours forth until\n  bliss rolls half a turn and becomes sweet agony.\n\n  Then my body nettles with a blistering itch no ointment can heal, and the\n  greater my woe, the more scalding the anguish that seethes from the empty\n  well inside. I boil in my own sick regret, and I cannot staunch the flow. It\n  billows up in white plumes and blanches my bones with sorrow. I burn with the\n  shame of a thousand evils I cannot recall, and still the well pours\n  forth...."
+}
+title: "Pages of Pain"
+author {
+  name: "Troy Denning"
+}
+cover {
+  name: "Robh Ruppel"
+}
+illustrator {
+  name: "Diesel"
+}
+date {
+  year: 1997
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0671"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

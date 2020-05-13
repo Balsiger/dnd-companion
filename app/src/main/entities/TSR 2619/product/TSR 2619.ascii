@@ -1,0 +1,53 @@
+template {
+  name: "TSR 2619"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  world: "Planescape"
+  description: "\\large{Every Berk in \\Place{Sigil} struggles to keep his savage side at\n                    bay. But now the bars of the cage are breaking down...}\n                    \\emph{Don\'t go to sleep, cutter---that\'s where the shadows link, gnawing at\n                    the frail cord of sanity. The dream-touched sods of \\Place{Sigil} are\n                    snapping one by one, turning on each other like wildcats in the streets. And\n                    as people become animals, animals become monsters, rending friend and foe\n                    alike with fang and claw. The lawful factions have enough trouble dealing\n                    with a rash of breakout from the \\Place{Prison}. But when the shackles of\n                    society fall away, it\'s all a body can do to keep the beast within from\n                    bursting free---and running wild.}\n                    \\Product{Something Wild} is a \\Product{Planescape} adventure for four to six\n                    characters of 4th to 7th levels. When \\Place{Sigil} falls prey to disturbing\n                    nightmares and outbreaks of violent fury, the heroes must follow bloody\n                    trails to treacherous peaks of \\Place{Carceri} and the savage jungles of the\n                    \\Place{Beastlands}. And ancient terror threatens the planes anew, and only\n                    the player characters can stop it from feasting on the flesh of the\n                    \\Place{multiverse}.\n                    The \\Product{Planescape Campaign Setting} boxed set is required to run this\n                    adventure. The \\Product{Planes of Conflict Campaign Expansion} boxed set, the\n                    \\Product{Planescape Monstrous Compendium Appendix}, and \\Product{In the Cage:\n                    A Guide to Sigil} are recommended as well."
+}
+title: "Something Wild"
+date {
+  year: 1996
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0377"
+  check: 5
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "color handout"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

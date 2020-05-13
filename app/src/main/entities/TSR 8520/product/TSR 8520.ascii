@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8520"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Endless Catacombs"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Twenty-two"
+price {
+}

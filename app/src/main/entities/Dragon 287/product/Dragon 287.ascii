@@ -1,0 +1,182 @@
+template {
+  name: "Dragon 287"
+  world: "Generic"
+  description: "Issue 287 of the magazine. Issue about the Planes."
+}
+title: "Dragon 287"
+author {
+  name: "Gary Gygax"
+}
+author {
+  name: "Jeff Grubb"
+}
+author {
+  name: "Todd Crapper"
+}
+author {
+  name: "Campbell, Christopher"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Neal Barrett Jr."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "James Jacobs"
+}
+author {
+  name: "Julia Martin"
+}
+author {
+  name: "Haddock, Eric"
+}
+author {
+  name: "Monte Cook"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Rick Moscatello"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Robin D. Laws"
+}
+author {
+  name: "Ray Winninger"
+}
+author {
+  name: "Mike McVey"
+}
+author {
+  name: "Johnn Four"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Matthew Sernett"
+}
+editor {
+  name: "Stacie Fiorito"
+}
+cover {
+  name: "Kev Walker"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "John Kovalic"
+}
+illustrator {
+  name: "Scott Fischer"
+}
+illustrator {
+  name: "Greg Staples"
+}
+illustrator {
+  name: "Mike May"
+}
+illustrator {
+  name: "Gregory, Doug Alexander"
+}
+illustrator {
+  name: "Jeff Laubenstein"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Riche, Darrell"
+}
+illustrator {
+  name: "Calero, Dennis"
+}
+illustrator {
+  name: "Mark Zug"
+}
+illustrator {
+  name: "Ted Beargeon"
+}
+illustrator {
+  name: "Tony Moseley"
+}
+illustrator {
+  name: "Delgado Jr., Peter"
+}
+illustrator {
+  name: "Jerry Seltzer"
+}
+illustrator {
+  name: "Phil Foglio"
+}
+manager {
+  name: "John Wilson"
+  job: "group publishing"
+}
+manager {
+  name: "Pierce Watters"
+  job: "circulation direction"
+}
+manager {
+  name: "Bob Henning"
+  job: "advertising sales direction"
+}
+manager {
+  name: "John Dunn"
+  job: "production direction"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistance"
+}
+manager {
+  name: "Jen Gilbert"
+  job: "design"
+}
+manager {
+  name: "Peter Whitley"
+  job: "art direction"
+}
+date {
+  year: 2001
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII"
+number: "287"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "part 1 of the Forgotten Realms map"
+  number: 1073741824
+}

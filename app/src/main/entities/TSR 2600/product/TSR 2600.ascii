@@ -1,0 +1,141 @@
+template {
+  name: "TSR 2600"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Planescape"
+  description: "\\large{Glory? Majesty?}\n                    \\large{You Don\'t Know the Dark of It!}\n                    Discover the \\Place{multiverse}! Enter infinite universes of infinite\n                    variety, worlds beyond the \\Place{prime-material} settings of the AD&D\n                    game. Explore \\Place{Sigil}, the \\Place{City of Doors}, filled with portals\n                    to every layer of every plane. All you need is the right key, including...\n                    \\list\n                    {\\bold{A Player\'s Guide to the \\Place{Planes}}, a 32-page primer that\n                    introduces DMs and players alike to the grand design of the\n                    \\Place{multiverse}.}\n                    {\\bold{A DM Guide to the \\Place{Planes}}, a 64-page book of valuable\n                    information solely for the Dungeon Master.}\n                    {\\bold{\\Place{Sigil} and Beyond}, a 96-page gazetteer than introduces\n                    \\Place{Sigil} and its surrounding plane as the starting point for\n                    planar adventures. From \\Place{Sigil} all the \\Place{Outer Planes}\n                    may be sampled by novice and veteran explorers alike.}\n                    {\\bold{Monstrous Supplement}, a 32-page, full-color Monstrous Compendium\n                    booklet.}\n                    {Four poster-sized maps depicting the \\Place{planes}.}\n                    {A four-panel DM screen designed especially for planar campaigns.}\n                    Until now, only the most powerful wizards could peek into the magnificient\n                    \\Place{multiverse}, but no longer! Gone are the unimaginable distances and\n                    the insurmountable obstacles that only the ultrapowerful could hope to\n                    overcome. Now even the greenest adventurer can enter the \\Place{planes},\n                    though surviving long is another matter...\n                    Have at it, berk! \\Monster{Powers}, \\Monster{proxies}, \\Monster{planars},\n                    \\Monster{petitioners}, and wondrous monsters await just beyond the\n                    portal. Step through and partake of the infinite excitement of\n                    \\Place{Planescape} adventures!"
+}
+title: "Planescape Campaign Setting"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+editor {
+  name: "Wise, David"
+}
+cover {
+  name: "Ruppel, Robh"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Repp, Robert"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Hein, Dori Jean"
+  job: "project coordinator"
+}
+manager {
+  name: "Knutson, Dana"
+  job: "conceptual artist"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphics coordinator"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordinator"
+}
+manager {
+  name: "Coumbe, Tim"
+  job: "electronic prepress coordinator"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+manager {
+  name: "Ward, James M."
+  job: "proofreading"
+}
+manager {
+  name: "Williams, Skip"
+  job: "proofreading"
+}
+manager {
+  name: "Carter, Michele"
+  job: "proofreading"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "proofreading"
+}
+manager {
+  name: "Kowal, Brian"
+  job: "design review"
+}
+date {
+  year: 1994
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "834"
+  check: 7
+}
+isbn13 {
+}
+pages: 224
+system: ADND_2ND
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Sigil and Beyond"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "A Player\'s Guide to the Planes"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "A DM Guide to the Planes"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Monstrous Supplement"
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  description: "4 panel DM"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color maps"
+  number: 4
+}

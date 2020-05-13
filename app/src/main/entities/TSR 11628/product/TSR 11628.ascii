@@ -1,0 +1,39 @@
+template {
+  name: "TSR 11628"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Gamma World"
+  description: "all-new update of the classic post-apocalyptic world"
+}
+title: "Gamma World Campaign Setting"
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Jeff Grubb"
+}
+date {
+  year: 2000
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1629"
+  check: 10
+}
+isbn13 {
+}
+pages: 192
+system: ALTERNITY
+type: CAMPAIGN_SETTING
+style: SOFT_COVER
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}

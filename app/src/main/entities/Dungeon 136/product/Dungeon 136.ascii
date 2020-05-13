@@ -1,0 +1,143 @@
+template {
+  name: "Dungeon 136"
+  world: "Generic"
+  description: "This is issue 136 of the dungeon magazine."
+}
+title: "Dungeon 136"
+author {
+  name: "Austin, Alec"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Doyon, Ashavan"
+}
+author {
+  name: "MacLean, Hal"
+}
+author {
+  name: "Smalley, Ryan"
+}
+author {
+  name: "Vaughan, Greg A."
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+editor {
+  name: "Walker, Jeremy"
+  job: "editorial assistant"
+}
+editor {
+  name: "Sutter, James Lafond"
+  job: "editorial assistant"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "UDON"
+}
+illustrator {
+  name: "Franchina, Mike"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Schley, Mike"
+  job: "associate art director"
+}
+illustrator {
+  name: "Pocza, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising sales director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "20 7"
+number: "136"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

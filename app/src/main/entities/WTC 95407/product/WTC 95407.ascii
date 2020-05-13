@@ -1,0 +1,33 @@
+template {
+  name: "WTC 95407"
+  world: "Forgotten Realms"
+  description: "\\emph{With each kill, I grow wiser, and with added wisdom, I grow stronger.}\n                    \\bold{The Assassin}\n                    For a man like \\NPC{Artemis Entreri}, lives hold little value.\n                    \\bold{The \\Monster{Drow}}\n                    For the \\Monster{dark elf} mercenary \\NPC{Jarlaxle}, the only currency is\n                    power.\n                    The malevolent \\Item{Crystal Shard}\'s influence on \\NPC{Jarlaxle} intensifies\n                    until even his own drow agents grow fearful of its terrifying\n                    intentions. When \\Group{Bregan D\'aerthe} itself begins to turn on him, the\n                    mercenary will be forced to find a savior in the assassin he\'s come to\n                    enslave."
+}
+title: "Servant of the Shard"
+author {
+  name: "Salvatore, R.A."
+}
+date {
+  year: 2005
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3950"
+  check: 8
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "Sellswords"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

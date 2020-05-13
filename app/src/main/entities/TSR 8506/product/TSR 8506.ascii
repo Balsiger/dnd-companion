@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8506"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Revenge of the Rainbow Dragons"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Six"
+price {
+}

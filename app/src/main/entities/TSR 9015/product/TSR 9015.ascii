@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9015"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Monster & Treasure Assortment, Set Three"
+date {
+  year: 1978
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 300
+  precision: 100
+}

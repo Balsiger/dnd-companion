@@ -1,0 +1,131 @@
+template {
+  name: "WTC 9556972"
+  world: "Forgotten Realms"
+  description: "\\Group{Zhentish} soldires, \\Place{Maerimydran} \\Monster{drow}, and \\God{Sharran} cultists have forged a dark alliance to subjugate the peaceful land of \\Place{Shadowdale}. \\NPC{Elminter}\'s tower lies in ruins, \\NPC{Lord Amcathra} governs at the sufferance of the \\Place{dale}\'s conquerors, and the very Weave of magic in this embattled lands seems to fray with each passing day. The \\Group{Zhentish} yoke lies heavy over \\Place{Shadowdale}---but the \\Group{Dalesfolk} are ready to fight for their freedom, if only they can find true heroes to lead the way!\n                    This \\Place{Forgotten Realms} campaign adventure is designed for characters of levels 9-13. It can be played as a stand-alone adventure or as the second adventure in a three-part series. Each encounter contains tactical information for the Dungeon Master and expanded map features for ease of play."
+}
+title: "Shadowdale: The Scouring of the Land"
+subtitle: "\\NPC{Shadodale} Lies Conquered! Who Can Free This Oppressed Land?"
+author {
+  name: "Baker, Richard L. III"
+  job: "designer"
+}
+author {
+  name: "Boyd, Eric L."
+  job: "designer"
+}
+author {
+  name: "Reid, Thomas M."
+  job: "designer"
+}
+editor {
+  name: "Thompson, John"
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+cover {
+  name: "O\'Conner, William"
+}
+cartographer {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "Coimbra, Miguel"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Isaac, Nick"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4039"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4039"
+  check: 4
+}
+pages: 160
+system: DND_3_5
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 11836"
+required_requirements: "WTC 96582"
+layout: FULL_COLOR

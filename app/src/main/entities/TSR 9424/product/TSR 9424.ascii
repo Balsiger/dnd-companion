@@ -1,0 +1,68 @@
+template {
+  name: "TSR 9424"
+  synonym: "GA2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "The city of \\Place{Chala}, nestled on the banks of the \\Place{Leal} river,\n                    has prospered for generations. But now the city faces misfortune, pestilence,\n                    and decay, because the icon which brought it prosperity has been stolen. All\n                    the clues suggest that the sacred object was carried into the heart of nearby\n                    \\Place{Blackweed Swamp}. But who, or what, would commit such a crime? Whoever\n                    is responsible, the statue must be recovered, at any cost.\n                    Are there heroes who can face the horrors of the swamp and reclaim the\n                    precious statue? Are they clever enough to unravel a scheme far more sinister\n                    than simple theft? Or will they, like others before them, be lured into the\n                    clutches of some terrible evil inhabiting the gloomy marsh and disappear\n                    forever?"
+}
+title: "Swamplight"
+author {
+  name: "Rabe, Jean"
+}
+editor {
+  name: "Kandler, Lance"
+}
+cover {
+  name: "Jaquays, Paul"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+date {
+  year: 1993
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "588"
+  check: 7
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

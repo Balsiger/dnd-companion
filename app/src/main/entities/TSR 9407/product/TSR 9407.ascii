@@ -1,0 +1,50 @@
+template {
+  name: "TSR 9407"
+  synonym: "CR4"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "The road rounds a bend. A glitter catches your eye. There\'s something in the\n                    ditch, and it looks like gold....\n                    Now---endless encounters! This is a treasure chest full of over 400\n                    encounters in all kinds of terrain, for AD&D 2nd Edition game player\n                    characters of all levels. Encounters with monsters, traps, and\n                    tricks. Encounters requiring brawn and a quick sword. Encounters requiring\n                    quick wits, courage, and imagination.\n                    The front of each card details the basic of the encounter---danger level,\n                    terrain, climate, character attributes needed for success, encounter types,\n                    and the experience-point value for rapid reference. Each detail has its own\n                    icon, making the task of selecting just the right encounter even easier.\n                    Concentrate on your campaign and leave the encounters to the \\Product{Deck of\n                    Encounters}!"
+}
+title: "Deck of Encounters, Set One"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1994
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "900"
+  check: 9
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+style: MEDIUM_BOX
+producer: "TSR"
+number: "Set One"
+series: "Deck of Encounters"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: CARD
+  description: "encounter"
+  number: 400
+}

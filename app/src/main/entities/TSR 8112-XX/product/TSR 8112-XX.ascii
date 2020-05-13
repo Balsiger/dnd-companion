@@ -1,0 +1,23 @@
+template {
+  name: "TSR 8112-XX"
+  reference {
+    name: "catalog95"
+  }
+  description: "1995 issues of Dragon magazine (number of month added to TSR number)"
+}
+title: "Dragon Magazine \'95"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MAGAZINE
+style: BOOKLET
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

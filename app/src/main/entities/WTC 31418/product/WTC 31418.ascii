@@ -1,0 +1,44 @@
+template {
+  name: "WTC 31418"
+  world: "Generic"
+  description: "For as long as anyone can remember, the mountain village of \\Place{Haven} has been under the protection of an ancient warlock known as the \\Place{Old Stargazer}. But after countless years spent deciphering the mysteries of the night sky, the old man is starting to slip. Now, a dark figure controls the forest with minions of \\Monster{kenku} marauders - crowlike men who menace the villagers with violence and mayhem.\n\nIf the \\NPC{Old Stargazer} cannot or will not protect them, the villagers will have find someone who can. \\NPC{Nergei}, an orphan raised by the warlock, is chosen to find help. Since \\NPC{Nergei} has nothing to offer potential mercenaries, his taks seems futile until he meets \\NPC{Sten}, a battle-weary adventurer whose sense of justice is stronger than his desire for gold.\n\nTogether they recruit an unlikely band of heroes to protect \\Place{Haven} from the ever-threatening incursions of the \\Monster{kenku} minions. When the group flushes the marauders into the light of day, the shadows cast by the crow-men are like none they have ever imagined."
+  short_description: "Story about protecting a magically hidden village in the mountains."
+}
+title: "Last Garrison"
+leader: "The"
+subtitle: "In the Shadows Between the Living World and the Land of the Dead, the Night\'s Terrors Lurk..."
+author {
+  name: "Beard, Matthew"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+date {
+  year: 2011
+  month: 12
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5793"
+  check: 4
+}
+pages: 308
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

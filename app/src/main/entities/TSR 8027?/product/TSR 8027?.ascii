@@ -1,0 +1,23 @@
+template {
+  name: "TSR 8027?"
+  reference {
+    name: "catalogue94"
+  }
+  description: "most horrific storm of the late 1870\'s, audio CD adventure"
+}
+title: "Track of the Vampire"
+date {
+  year: 1994
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: TERROR_TRACKS
+type: ADVENTURE
+price {
+  currency: "\302\254\302\243"
+  number: 1099
+  precision: 100
+}

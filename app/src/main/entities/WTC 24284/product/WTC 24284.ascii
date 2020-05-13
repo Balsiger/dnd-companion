@@ -1,0 +1,44 @@
+template {
+  name: "WTC 24284"
+  world: "Generic"
+  description: "With Martial Power Power Cards, you don\'t need to crack open a rulebook every time you cast a spell or swing your sword --- all the crucial information is at your fingertips. Just pick out the deck for your your character class, select the cards for your character\'s powers, and you\'re ready to play the Dungeons & Dragons Roleplaying Game!"
+}
+title: "Martial Power - Ranger Power Cards"
+subtitle: "Power Up Your D&D Game!"
+cover {
+  name: "O&#39Conner, William"
+}
+date {
+  year: 2009
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5282"
+  check: 2
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5282"
+  check: 3
+}
+system: NONE
+type: ACCESSORY
+style: BOOKLET
+producer: "WTC"
+number: "Ranger"
+series: "Martial Power Cards"
+price {
+  currency: "$"
+  number: 999
+  precision: 100
+}
+content {
+  part: CARD
+  description: "power card"
+  number: 110
+}
+layout: FULL_COLOR

@@ -1,0 +1,115 @@
+template {
+  name: "WTC 88046"
+  world: "Generic"
+  description: "In the aftermath of a nuclear holocaust, alien invasion, supernatural\n  Armageddon, or some other terrible cataclysm, life as we know it has\n  ended. Doomsday has left in its wake a world filled with mutants, scavengers,\n  rogue technology, environmental hazards, or other perils. In \\Product{d20\n  Apocalypse}, heroes must salvage the remnants of civilization and survive the\n  dangers that await in a grim future.\n\n  New rules designed for running a \\Product{d20 Modern} campaign in a\n  postapocalyptic setting.\n\n  This new rules supplement provides everything players and Gamemasters need to\n  participate in adventures in a post-apocalyptic setting, including rules and\n  designs for apocalyptic events, such as nuclear war, environmental disaster,\n  alien invasion, or \\Event{Armageddon}. The book provides new rules for\n  barter, scavenging, equipment, mutations and robots. Three ready-to-play\n  campaign models are included."
+}
+title: "d20 Apocalypse"
+subtitle: "It\'s the End of the World"
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Drader, Darrin"
+}
+author {
+  name: "Ryan, Charles"
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Perkins, Christopher"
+  job: "development"
+}
+author {
+  name: "Ryan, Charles"
+  job: "development"
+}
+editor {
+  name: "Ryan, Tammie Webb"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Johnson, Dave"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Grafiksismik Inc."
+}
+illustrator {
+  name: "Kerschl, Karl"
+}
+illustrator {
+  name: "Perez, Ramon"
+}
+illustrator {
+  name: "Trevas, Chris"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "graphic design"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christoper"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+  name: "Fischer, Joshua"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3273"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: D20_MODERN
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 88190"
+required_requirements: "WTC 88597"

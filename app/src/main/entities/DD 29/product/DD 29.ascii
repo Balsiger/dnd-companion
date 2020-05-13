@@ -1,0 +1,119 @@
+template {
+  name: "DD 29"
+  world: "Generic"
+  description: "\\large{The characters might rest between adventures, but their adversaries\n  don\'t...}\n\n  \\list\n  {More than 150 complete descriptions of magic and mechanical traps}\n  {Dozens of beautiful illustrations detailing the mechanisms behind these\n   sinister creations}\n  {Tricks and techniques for making traps even more difficult to bypass}\n  {Rules for poison rarity, two new types of poisons, and more than 80\n   detailed listings of new poisons, natural and supernatural alike}\n  {A chapter devoted to unique puzzles and challenges to test the abilities of\n   both the players and their characters}"
+}
+title: "Traps & Treachery II"
+subtitle: "A Sourcebook of More Deadly Machinations"
+author {
+  name: "Upchurch, Wil"
+  job: "lead developer"
+}
+author {
+  name: "Benage, Greg"
+  job: "managing developer"
+}
+author {
+  name: "Bourelle, Ed"
+}
+author {
+  name: "Brown, Kurt"
+}
+author {
+  name: "Cashman, Shaun"
+}
+author {
+  name: "Chance, Mark"
+}
+author {
+  name: "Ely, Catten"
+}
+author {
+  name: "Lizard"
+}
+author {
+  name: "Patterson, Brian"
+}
+author {
+  name: "Stoecker, Scott"
+}
+author {
+  name: "Sudlow, Paul"
+}
+author {
+  name: "Timmins, William"
+}
+author {
+  name: "Zastrow, Bree"
+}
+editor {
+  name: "Benage, Greg"
+}
+editor {
+  name: "Upchurch, Wil"
+}
+cover {
+  name: "Schomburg, Brian"
+}
+illustrator {
+  name: "Atkinson, Toren \'MacBin\'"
+}
+illustrator {
+  name: "Butler, Paul"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Kay, Kenneth"
+}
+illustrator {
+  name: "Schomburg, Brian"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Walpole, Tyler"
+}
+illustrator {
+  name: "Upchurch, Wil"
+  job: "art direction"
+}
+typographer {
+  name: "Schomburg, Brian"
+  job: "graphic design"
+}
+typographer {
+  name: "Upchurch, Wil"
+  job: "layout"
+}
+manager {
+  name: "Petersen, Christian T."
+  job: "publisher"
+}
+date {
+}
+isbn {
+  group: "1"
+  publisher: "58994"
+  title: "027"
+  check: 10
+}
+isbn13 {
+}
+pages: 172
+system: D20
+type: ACCESSORY
+style: HARDCOVER
+producer: "Fantasy Flight Games"
+series: "Legends & Lairs"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

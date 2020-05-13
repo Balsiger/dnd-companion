@@ -1,0 +1,75 @@
+template {
+  name: "TSR 9281"
+  synonym: "FRA1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\Group{The Horde} is riding.\n                    The mountains rumble under the thundering hoofbeats of 40\'000 barbaric\n                    horsemen. When the player characters find themselves in their path they have\n                    no choice except to flee.\n                    Their journey takes them into the forbidden kingdom of \\Place{Ra-Khati}, a\n                    land of ancient mysteries and untold wealth nestled deep within the\n                    \\Place{Katakoro Mountains}. As honored guests they are invited to partake of\n                    its extravagance. Wealth, power, romance---anything can be theirs for the\n                    asking. That is, anything short of their freedom!\n                    But when invaders threaten the \\Place{Hidden Kingdom}, the player characters\n                    are given a chance to earn their liberty. They are charged with escorting a\n                    spoiled princess and her dowry, a ferocious black\n                    \\Monster[Horse]{stallion}, to a nearby kingdom as a bribe to stop a\n                    war. Nothing stands in their way except 40\'000 bloodthirsty riders and a\n                    vengeful \\Monster[Purple Dragon]{purple dragon}.\n                    \\Product[TSR 9281]{Storm Riders} is the first adventure in the\n                    \\Product{Empires Adventures Trilogy}, and the first adventure taking place in\n                    the new \\Place{Forgotten Realms} campaign world territories described in the\n                    \\Product[TSR 1055]{The Horde} campaign set. The \\Product{Empires Adventures\n                    Trilogy} is also set amidst the turbulent events portrayed in the\n                    \\Product{Empires Novel Trilogy}. This adventure is designed for four to eight\n                    player characters of levels 5--7.\n                    Look for the sequels to \\Product[TSR 9281]{Storm Riders}---\\Product[TSR\n                    9290]{The Black Courser} and \\Product[TSR 9304]{Blood Charge}---coming\n                    soon."
+}
+title: "Storm Riders"
+author {
+  name: "Denning, Troy"
+}
+editor {
+  name: "Brown, Timothy B."
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Abrams, Paul"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Parker, Roy E."
+  job: "graphic design"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "834"
+  check: 10
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+number: "Module One"
+series: "Empires Adventures Trilogy"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

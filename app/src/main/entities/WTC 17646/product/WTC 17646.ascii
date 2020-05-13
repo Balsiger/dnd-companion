@@ -1,0 +1,70 @@
+template {
+  name: "WTC 17646"
+  world: "Dragonlance"
+  description: "The first book in a series of classic \\Place{Dragonlance} tales, now with a\n                    new cover.\n                    This re-release of the second volume of \\Place{Dragonlance} short stories\n                    ever published features a dramatic new cover treatment. It includes stories\n                    by some of the best-loved authors writing in the \\Place{Dragonlance} world,\n                    including a novella by New York Times best-selling authors and\n                    \\Place{Dragonlance} setting co-creators Margaret Weis and Tracy Hickman."
+}
+title: "Magic of Krynn"
+leader: "The"
+author {
+  name: "Williams, Michael"
+}
+author {
+  name: "Siegel, Barbara"
+}
+author {
+  name: "Siegel, Scott"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Smith, Warren B."
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "Kirchoff, Mary"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 2005
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3593"
+  check: 6
+}
+isbn13 {
+}
+pages: 368
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Volume One"
+series: "Tales"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

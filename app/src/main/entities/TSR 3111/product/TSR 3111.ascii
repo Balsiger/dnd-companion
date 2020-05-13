@@ -1,0 +1,44 @@
+template {
+  name: "TSR 3111"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "Birthright"
+  description: "information on this domain"
+}
+title: "Ariya"
+author {
+  name: "Varney, Allen"
+}
+date {
+  year: 1995
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0186"
+  check: 1
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

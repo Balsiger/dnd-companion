@@ -1,0 +1,183 @@
+template {
+  name: "Dragon 328"
+  world: "Generic"
+  description: "Issue 328 of the magazine. "
+}
+title: "Dragon 328"
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Bergting, Peter"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Davis, Richard"
+}
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Farrese, Richard"
+}
+author {
+  name: "Fehlauer, Mike"
+}
+author {
+  name: "Haddock, Eric"
+}
+author {
+  name: "Hahn, Robert J."
+}
+author {
+  name: "Hart, Mark A."
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Lightner, Rob"
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Pocklington, Richard"
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Seligman, Erik"
+}
+author {
+  name: "Taylor, Troy E."
+}
+author {
+  name: "Thalasinos, Nicholas J."
+}
+author {
+  name: "Trice, Michael"
+}
+author {
+  name: "Tuerley, Kieran"
+}
+author {
+  name: "Yanez, Cristo"
+}
+author {
+  name: "Yang, Jishou"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "associate editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Anderson, Kyle J."
+}
+illustrator {
+  name: "Anderson, Kyle J."
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Gallagher, John"
+}
+illustrator {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "Jansson, Niklas"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Mitten, Cara"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Serfass, Anna"
+}
+illustrator {
+  name: "Walstrohm, David"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "Wiedermann, Eva"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+date {
+  year: 2005
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 102
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIX 9"
+number: "328"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

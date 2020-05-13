@@ -1,0 +1,164 @@
+template {
+  name: "DMA 000089"
+  category: "endless quest"
+  world: "Forgotten Realms"
+  description: "When you tried to pick the pocket of a civilar in the night-shrouded streets of \\Place{Waterdeep}, you never thought she\'d catch you --- and you never dreamed she\'d press you into her service! Now you must find a baby \\Monster{griffon} stolen by the \\Monster{beholder} \\NPC{Xanathar}, the leader of the city\'s powerful \\Group{Thieve\'s Guild}, or you can count on spending the rest of your life behind bars..."
+  short_description: "An endless quest novel set in the Forgotten Realms"
+}
+title: "To Catch a Thief"
+subtitle: "For the Good of the City"
+author {
+  name: "Forbeck, Matt"
+}
+author {
+  name: "Crazy Monkey Creative"
+  job: "designer"
+}
+author {
+  name: "Bellwood, Rosie"
+  job: "designer"
+}
+editor {
+  name: "Walters, Kirsty"
+}
+cover {
+  name: "Ejsing, Jesper"
+}
+cover {
+  name: "Nelson, Mark A."
+}
+illustrator {
+  name: "Riley, Aaron J."
+}
+illustrator {
+  name: "Stegg, Annie"
+}
+illustrator {
+  name: "Syme, Bryan"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Hueso, David"
+}
+illustrator {
+  name: "Hekaton, E.W."
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Elmasli, Emrah"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Tasi, Francis"
+}
+illustrator {
+  name: "Juta, Jason"
+}
+illustrator {
+  name: "Kok Joon Wen, Julian"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Pillon, Klaus"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Look, Lindsey"
+}
+illustrator {
+  name: "Nelson, Mark A."
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Berube, Michael"
+}
+illustrator {
+  name: "Faille, Mike"
+}
+illustrator {
+  name: "Bradley, Noah"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Burley, Sam"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "O\'Conner, William"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+date {
+  year: 2018
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "5362"
+  title: "0066"
+  check: 9
+}
+pages: 124
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Endless Quest"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

@@ -1,0 +1,53 @@
+template {
+  name: "TSR 1155"
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "Dices for character generation."
+}
+title: "AD&D Character Generation Dice"
+author {
+  name: "Winter, Steve"
+}
+author {
+  name: "Reid, Thomas M."
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0511"
+  check: 5
+}
+isbn13 {
+}
+system: ADND_REVISED
+audience: ALL
+type: ACCESSORY
+style: BOX
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: DICE
+  number: 6
+}
+content {
+  part: BOOKLET
+  number: 4
+}
+content {
+  part: MAP
+  description: "double-sided poster-sized"
+  number: 3
+}

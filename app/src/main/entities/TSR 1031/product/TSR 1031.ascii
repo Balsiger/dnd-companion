@@ -1,0 +1,105 @@
+template {
+  name: "TSR 1031"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{Campaign Set}\n                    Within this box is everything needed to visit the fabulous \\Place{Forgotten\n                    Realms}. The 96-page player\'s book contains entries on all known areas,\n                    cities, people, and things, presented in alphabetical order. Numerous maps\n                    outline the more well-known cities and lands. The 96-page DM\'s book contains\n                    all the information pertinent to running a campaign set in this fantasy\n                    world, from how to bring existing characters into the \\Place{Forgotten\n                    Realms} to two complete introductory mini-adventures to a listing of known\n                    magical texts and the magics contained therin. Four full-color maps show the\n                    entire lands and details of the more well-known areas. Adventuring rules\n                    specific to the \\Place{Forgotten Realms} have been included.\n                    \\emph{Everything you need is here---save for your imagination.}"
+}
+title: "Forgotten Realms Campaign Set"
+subtitle: "Forgotten Realms --- a New Campaign World for the Advanced Dungeon & Dragon Game!"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Grubb, Jeff"
+}
+editor {
+  name: "Martin, Karen S."
+}
+cover {
+  name: "Parkinson, Keith"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Kauth, Ron"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+illustrator {
+  name: "Conrad, Tim"
+}
+typographer {
+  name: "Elmore, Betty"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "graphic design"
+}
+manager {
+  name: "Holz, Paula M."
+  job: "calligraphy"
+}
+manager {
+  name: "Martin, David E."
+  job: "deity and faith symbols"
+}
+date {
+  year: 1987
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "472"
+  check: 7
+}
+isbn13 {
+}
+pages: 192
+system: ADND_1ST
+type: CAMPAIGN_SETTING
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Cyclopedia of the Realms"
+  number: 1073741824
+}
+content {
+  part: BOOK
+  description: "DM\'s Sourcebook of the Realms"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color maps"
+  number: 4
+}
+content {
+  part: SHEET
+  description: "transparent overlay"
+  number: 2
+}

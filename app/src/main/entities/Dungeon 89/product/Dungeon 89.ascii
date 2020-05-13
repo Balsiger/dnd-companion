@@ -1,0 +1,126 @@
+template {
+  name: "Dungeon 89"
+  world: "Generic"
+  description: "This is issue 89 of the dungeon magazine."
+}
+title: "Dungeon 89"
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Leach, Paul"
+}
+author {
+  name: "Shell, J. Bradley"
+}
+author {
+  name: "Tweet, Jonathan"
+}
+author {
+  name: "Zenz, Dave"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assisstant editor"
+}
+cover {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Kennon, James"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "art director"
+}
+illustrator {
+  name: "Whitley, Peter"
+  job: "cover designer"
+}
+illustrator {
+  name: "Ricker, Scott"
+  job: "design consultant"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "assistant production manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Chung, Alice"
+  job: "advertis intern"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 2001
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XV 4"
+number: "89"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

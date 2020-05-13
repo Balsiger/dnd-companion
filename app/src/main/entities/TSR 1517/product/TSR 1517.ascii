@@ -1,0 +1,32 @@
+template {
+  name: "TSR 1517"
+  reference {
+    name: "net"
+  }
+  world: "Generic"
+  description: "dices for the game"
+}
+title: "Unearthly"
+author {
+  name: "Steve Miller"
+}
+date {
+  year: 1998
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1233"
+  check: 2
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOOSTER_PACK
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

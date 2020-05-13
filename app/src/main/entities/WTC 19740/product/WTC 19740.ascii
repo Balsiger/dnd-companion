@@ -1,0 +1,81 @@
+template {
+  name: "WTC 19740"
+  synonym: ""
+  world: "Generic"
+  description: "Once the gem of the \\Monster{tiefling} empire of \\Place{Bael Turath}, \\Place{Vor Rokuth} fell into ruin and was lost. Now rediscovered, the ancient city draws heroes and villains to its shattered streets in search of treasure. Monsters and intrigue abound in this cursed place, protecting the deepest secrets. Visitors must tread softly, lest they invoke the wrath of \\Place{Vor Rukoth}\'s undead lord, \\NPC{Queen Najala}.\n                    If you\'re a Dungeon Master looking for an exciting adventure location that fits into your Dungeons & Dragons campaign, this book is for you. It features dozens of adventure hooks, a variety of unique items and threats, and a full-color, double-sided battle map. Herein you\'ll find threads for adventures from 5th to 15th level, making \\Place{Vor Rukoth} a location that characters can visit again and again."
+  short_description: "An Acient Adventure Site"
+}
+title: "Vor Rokuth"
+subtitle: "Explore a Wicked City"
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "managing editor"
+}
+cover {
+  name: "Stawicki, Matt"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Tardiff, Christopher"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2010
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5549"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5549"
+  check: 7
+}
+pages: 32
+system: DND_4
+type: SOURCEBOOK
+style: FOLDER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "adventure"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "double-sided battle map"
+  number: 1073741824
+}
+layout: FULL_COLOR

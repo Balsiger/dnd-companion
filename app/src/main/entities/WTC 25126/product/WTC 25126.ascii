@@ -1,0 +1,122 @@
+template {
+  name: "WTC 25126"
+  world: "Generic"
+  description: "You step through a shimmering portal onto the deck of an \\Item{astral galleon}. Prepare for a voyage unlike any other as you fend off \\Monster{githyanki} pirates, thward sinister machinations of \\Monster{angels} and \\Monster{devils}, and challenge the might of the gods and their \\Monster{exarchs}. From the cavernous layers of the \\Place{Nine Hells} to the dark dungeons of \\Place{Tytherion}, adventure awaits in every astral dominion and on the vast, uncharted sea that stretches between them.\n                    This Dungeon & Dragon game supplement explores the \\Place{Astral Sea} in detail, featuring key locations throughout the plane. It also presents new monsters, adventure hooks, encounters, hazards, and everything Dungeon Masters need to make the \\Place{Astral Sea} a featured setting in their campaigns."
+  short_description: "Secrets of the Astral Sea"
+}
+title: "Plane Above"
+leader: "The"
+subtitle: "Explore the Realm of the Gods"
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "lead developer"
+}
+author {
+  name: "Schaefer, Peter"
+  job: "developer"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+editor {
+  name: "Struble, Lynnette"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "O&#39Conner, William"
+  job: "front"
+}
+cover {
+  name: "Horsley, Ralph"
+  job: "back"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Hemmi, Soe"
+  job: "additional graphic designer"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+date {
+  year: 2010
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5392"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5392"
+  check: 9
+}
+pages: 160
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Roleplaying Game Supplement"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

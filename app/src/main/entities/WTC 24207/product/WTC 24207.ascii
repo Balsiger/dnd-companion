@@ -1,0 +1,41 @@
+template {
+  name: "WTC 24207"
+  world: "Generic"
+  description: "Every week, Dragon magazine presents new online rules content for your 4th Edition Dungeon & Dragons game on D&D Insider. Whether you want to enhance your character or explore new races and campaign horizons, Dragon has something for you!\n                    The \\Product{Dragon Magazine Annual} collects the best material published by Dragon magazine since the launch of 4th Edition. Within these pages, you\'ll find more than a dozen updated articles presenting new feats, powers, monsters, paragon paths, and game advice. This supplement also features official rules for the D&D game, including rules for gladitorial combat, intelligent magic items, and more."
+  short_description: "Collection of the best material published by Dragon magazine online."
+}
+title: "Dragon Magazine Annual"
+subtitle: "From the Website to your Bookshelf"
+date {
+  year: 2009
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5245"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5245"
+  check: 8
+}
+pages: 160
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Dragon Annual"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

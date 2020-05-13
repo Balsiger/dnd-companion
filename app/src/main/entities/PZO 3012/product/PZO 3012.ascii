@@ -1,0 +1,74 @@
+template {
+  name: "PZO 3012"
+  synonym: ""
+  world: "Generic"
+  description: "Tame the wilderness and forge your kingdom with these weapons of heroes and regalia of rule. Treasures and tools to raise an empire wait to be claimed in the Kingmaker Adventure Path. This 54-card set of beautifully illustrated, full-color item cards allows you to track your newest and most lordly treasures in vibrant detail."
+  short_description: "GameMastery Item Cards"
+}
+title: "Kingmaker"
+subtitle: "GameMastery"
+author {
+  name: "Alvarez, Jeff"
+}
+author {
+  name: "Self, Chris"
+}
+editor {
+}
+illustrator {
+  name: "Abysscal Inc"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "art direction"
+}
+illustrator {
+  name: "Fraiser, Crystal"
+  job: "graphic design"
+}
+illustrator {
+  name: "Boulden, Joe"
+  job: "card design"
+}
+manager {
+  name: "Bulmahn, Jason"
+  job: "product concept and coordination"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "231"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "231"
+  check: 9
+}
+pages: 54
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Item Cards"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: CARD
+  description: "Item"
+  number: 54
+}
+layout: FULL_COLOR

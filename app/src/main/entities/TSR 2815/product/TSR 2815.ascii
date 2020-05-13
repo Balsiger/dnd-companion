@@ -1,0 +1,36 @@
+template {
+  name: "TSR 2815"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Star*Drive"
+  description: "reveals the details of the emerging alien menace"
+}
+title: "Threats from Beyond"
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+  year: 1999
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1218"
+  check: 9
+}
+isbn13 {
+}
+pages: 96
+system: ALTERNITY
+type: ACCESSORY
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

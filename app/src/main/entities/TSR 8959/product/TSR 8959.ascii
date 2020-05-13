@@ -1,0 +1,22 @@
+template {
+  name: "TSR 8959"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Socerer\'s Crown"
+leader: "The"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Nine"
+price {
+}

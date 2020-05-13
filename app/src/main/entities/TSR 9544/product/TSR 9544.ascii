@@ -1,0 +1,38 @@
+template {
+  name: "TSR 9544"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Forgotten Realms"
+  description: "An ominous encounter with a fortuneteller sends a party of adventurers on a\n                    200-mile journey across the \\Place{Lands of Intrigue}. While traveling\n                    through the towns and terrain (detailed here for the first time) that lie in\n                    their path, they hear rumors and obtain clues about their mission. Their\n                    ultimate destination if \\Place{Castle Spluzeer}, a once proud stronghold that\n                    has become a den of terror.\n                    When the heroes enter the haunted keep, they meet a terrifying trio of\n                    residents: a madman armed with stolen magical power, a \\Monster[Lich]{lich}\n                    whose secret laboratory houses untold horrors and treasure, and furious\n                    \\Monster[Ghost]{ghost} bent on revenge. These three ensnare the party in\n                    their fight over an ancient weapon. Each will stop at nothing to keep it from\n                    the other two. The heroes must choose with whom they will ally---and the\n                    wrong choice could lead to their doom.\n                    \\Product[TSR 9544]{Castle Spulzeer} is an adventure complete in\n                    itself. However, as a crossover story, it offers every Dungeon Master a\n                    choice between two endings. The first leaves the party in the\n                    \\Place[Forgotten Realms]{Realms}. The second transports the characters to the\n                    \\Place{Demiplane of Dread}, where the plot continues in the \\Place{Ravenloft}\n                    adventure \\Product[TSR 9537]{The Forgotten Terror}."
+}
+title: "Castle Spulzeer"
+date {
+  year: 1997
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0669"
+  check: 3
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9078"
+  synonym: "B5"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Horror on the Hill"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

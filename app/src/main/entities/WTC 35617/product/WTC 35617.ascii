@@ -1,0 +1,205 @@
+template {
+  name: "WTC 35617"
+  world: "Generic"
+  description: "Image untamed oceans wracked by lightning, whirlwinds of seething flame and roaring thunder, and massive shards of flying earth and ice. Welcome to the \\Place{Elemental Chaos}, the raw plane from which the gods and the primordials fashioned the world. The plane forms the foundation of the D&D cosmos and is home to countless elemental beings, including \\Monster{genies}, \\Monster{archons}, and \\Monster{demons}. It\'s also a source of tremendous arcane power, the place where all fireballs and lightning bolts are born. \n\nNow you can play a hero who harnesses the raw power of the \\Place{Elemental Chaos}. \\Product{Player\'s Option: Heroes of the Elemental Chaos} presents the elementalist sorcerer and the sha\'ir wizard as new class options, as well as new character themes, feats, powers, paragon paths, epic destinies, and elemental companions."
+  short_description: "A player\'s option around the \\Place{Elemental Chaos}"
+}
+title: "Heroes of the Elemental Chaos"
+subtitle: "Command the Elements"
+author {
+  name: "Baker, Richard"
+}
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "developer"
+}
+author {
+  name: "O\'Connor, Tanis"
+  job: "developer"
+}
+author {
+  name: "Sims, Chris"
+  job: "developer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "additional development"
+}
+author {
+  name: "Horner, Miranda"
+  job: "additional development"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Thompson, Rodney"
+  job: "additional editing"
+}
+editor {
+  name: "Horner, Miranda"
+  job: "additional editing"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+  job: "front"
+}
+cover {
+  name: "Ellis, Steve"
+  job: "back"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Cristensen, Anna"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Foti, Tony"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Lacera, Jorge"
+}
+illustrator {
+  name: "Maniak, Slawomir"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Rapoza, David"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D R&D senior producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D RPG senior manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Cynda Callaway"
+  job: "production manager"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+date {
+  year: 2012
+  month: 2
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5981"
+  check: 5
+}
+pages: 160
+system: DND_4
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Player\'s Option"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

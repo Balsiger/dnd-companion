@@ -1,0 +1,43 @@
+template {
+  name: "TSR 8899"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  world: "Dragonlance"
+  description: "annual art calendar"
+}
+title: "1999 Dragonlance Calendar"
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1193"
+  check: 10
+}
+isbn13 {
+}
+pages: 24
+system: NONE
+audience: ALL
+type: CALENDAR
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}

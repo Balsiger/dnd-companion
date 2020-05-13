@@ -1,0 +1,28 @@
+template {
+  name: "Reaper 2114"
+  description: "A casting mage with staff.."
+}
+title: "Galladon"
+author {
+  name: "Garrity, S."
+}
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: DARK_HEAVEN
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+series: "Legends"
+price {
+  currency: "$ "
+  number: 275
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}

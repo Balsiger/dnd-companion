@@ -1,0 +1,30 @@
+template {
+  name: "TSR 2629"
+  reference {
+    name: "net"
+  }
+  world: "Planescape"
+  description: "\\large{\\Place{Sigil}\'s been at peace for over 600 years. All good things\n                    come to an end.}\n                    \\emph{Six centuries ago, events surrounding the \\Event{Great Upheaval}\n                    imposed an uneasy peace in the \\Place{City of Doors}. Since that time, the 15\n                    factions have quietly conducted their philosophical battle for the hearts and\n                    minds of all Cagers---and always stopped short of all-out war. But now\n                    tensions are flaring, tempers are rising, and the \\Place{Cage} is about to\n                    explode into conflict!}\n                    \\Product{Faction War} is a 128-page adventure that tracks the war from its\n                    nefarious origins through its bitter battles to its ultimate resolution and\n                    beyon---and puts the future of \\Place{Sigil} in the hands of the player\n                    characters. This book reveals secrets, unravels mysteries, brings\n                    long-simmering plots to a head, and marks the beginning of a new era for the\n                    \\Place{City of Doors}. It also features:\n                    \\list\n                    {new details on \\Place{Sigil}\'s wards, personalities, and politics.}\n                    {adventures that draw player characters into the heart of the struggle and\n                    toward the secrets surrounding the war\'s beginning and ultimate end.}\n                    {extensive notes on the aftermath of the conflict.}\n                    {a detailed Timeline of the war, including additional events that the DM may\n                    use to expand the adventure.}\n                    \\Product{Faction War} builds on story elements first explored in the\n                    \\Product{Planescape} accessoires \\Product{In the Cage}, \\Product{Factol\'s\n                    Manifesto}, and \\Product{Uncaged: Faces of Sigil}. Familiarity with those\n                    products is recommended but not required."
+}
+title: "Faction War"
+date {
+  year: 1998
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ADVENTURE
+style: SOFT_COVER
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,20 @@
+template {
+  name: "TSR 1002"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "Unknown"
+}
+title: "Dungeon Geomorps, Set One: Basic Dungeon"
+date {
+  year: 1976
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+producer: "TSR"
+price {
+}

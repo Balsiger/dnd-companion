@@ -1,0 +1,45 @@
+template {
+  name: "WTC 9553774"
+  world: "Eberron"
+  description: "For years, rumors have spoken of Ashrem\'s Legacy, a device beyond\n  imagination. Some say it was a weapon, some a portal to other worlds. But in\n  Cyre, on the Day of Mourning, Ashrem and his Legacy vanished in the\n  destruction.\n\n  Now a young thief on the streets of Wroat has stumbled upon a clue that may\n  lead to the lost Legacy. To stay alive, she and the crew of The Mourning Dawn\n  must find Ashrem\'s Legacy, for if they fail, Eberron will plunge into another\n  century of war."
+}
+title: "Voyage of the Morning Dawn"
+author {
+  name: "Wulf, Rich"
+}
+cover {
+  name: "Thiemeyer, Thomas"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2006
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4006"
+  check: 9
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book I"
+series: "Heirs of Ash"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,99 @@
+template {
+  name: "Polyhedron 154"
+  world: "Generic"
+  description: "November 2002 issue of polyhedron (together with Dungeon 95)."
+}
+title: "Polyhedron 154"
+subtitle: "Mecha Crusade"
+author {
+  name: "Stan!"
+}
+author {
+  name: "Wiese, Robert"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Tweet, Jonathan"
+}
+editor {
+  name: "Mona, Erik"
+}
+cover {
+  name: "Martiniere, Stephan"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Shaw, Stan"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+  job: "component illustrations"
+}
+illustrator {
+  name: "Dogan, Omar"
+}
+illustrator {
+  name: "UDON"
+}
+illustrator {
+  name: "Parker, Jake"
+}
+illustrator {
+  name: "Hattn, Matthew"
+}
+illustrator {
+  name: "Noguchi, Mikael"
+}
+illustrator {
+  name: "Lawrence, Chester Laquaian"
+}
+illustrator {
+  name: "Jansson, Niklas"
+}
+illustrator {
+  name: "Trevas, Christopher"
+}
+illustrator {
+  name: "Grun, Chris"
+}
+illustrator {
+  name: "Detwiler, Dennis"
+}
+illustrator {
+  name: "Hunter, Kyle"
+  job: "art direction"
+}
+date {
+  year: 2002
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 61
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "154"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+layout: FULL_COLOR

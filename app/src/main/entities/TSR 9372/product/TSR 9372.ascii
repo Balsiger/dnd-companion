@@ -1,0 +1,43 @@
+template {
+  name: "TSR 9372"
+  synonym: "AC1010"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "pocket guid about everyone and everything in D&D"
+}
+title: "Poor Wizard\'s Almanac"
+leader: "The"
+date {
+  year: 1992
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "385"
+  check: 10
+}
+isbn13 {
+}
+system: DND_1ST
+type: ACCESSORY
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

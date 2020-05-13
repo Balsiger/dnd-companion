@@ -1,0 +1,33 @@
+template {
+  name: "TSR 21334"
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Star*Drive"
+}
+title: "Storm at Eldala"
+author {
+  name: "Duane, Diane"
+}
+date {
+  year: 1999
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1334"
+  check: 7
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book 2"
+series: "The Harbringer Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

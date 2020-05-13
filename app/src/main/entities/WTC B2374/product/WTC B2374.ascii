@@ -1,0 +1,46 @@
+template {
+  name: "WTC B2374"
+  world: "Forgotten Realms"
+  description: "Whispers race the streets of \\Place{Cormyr}: the reclusive \\NPC{Lord Halaunt} has aquicred the legendary Lost Spell. The crowning achievement of the late god of spells, it\'s said to be potent enough to turn even a minor magician into a threat to be reckoned with. And an archwizard night unto a god.\n\nArchwizards of every stripe descend on \\NPC{Lord Halaunt}\'s manor, intent on taking the spell for themselves. The spellcasters soon find themselves trapped inside the manor, with their magic next to useless.\n\nPlaying host fo the furious archwizards is \\NPC{Elminster of Shadowdale}, Chosen of \\God{Mystra}, who claims he\'s just there to decide who gets the Lost Spell, but who clearly has an agenda of his own. But before \\NPC{Elminster} can put his plan in motion, someone starts killing archwizards.\n\n\\bold{The Lost Spell has been found.}"
+  short_description: "The Lost Spell has been found."
+}
+title: "Spellstorm"
+subtitle: "Have you not Heard the Rumors"
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Briclot, Aleksi"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+date {
+  year: 2016
+  month: 6
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6576"
+  check: 2
+}
+pages: 321
+system: NONE
+audience: PLAYER
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

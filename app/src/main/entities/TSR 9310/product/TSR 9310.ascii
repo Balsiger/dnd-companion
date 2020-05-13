@@ -1,0 +1,35 @@
+template {
+  name: "TSR 9310"
+  synonym: "HWA2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Hollow World"
+  description: "explore a myriad of new cultures and kingdoms"
+}
+title: "Nightrage"
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "898"
+  check: 6
+}
+isbn13 {
+}
+system: DND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$\302\254\342\200\240"
+  number: 895
+  precision: 100
+}

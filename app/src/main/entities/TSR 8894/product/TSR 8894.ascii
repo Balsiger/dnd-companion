@@ -1,0 +1,35 @@
+template {
+  name: "TSR 8894"
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "None"
+  description: "art calendar"
+}
+title: "Women of Fantasy Calendar 1994"
+date {
+  year: 1993
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "624"
+  check: 7
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: CALENDAR
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9187"
+  synonym: "I11"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Needle"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}

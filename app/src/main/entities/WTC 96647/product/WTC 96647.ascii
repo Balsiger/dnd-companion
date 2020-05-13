@@ -1,0 +1,52 @@
+template {
+  name: "WTC 96647"
+  world: "Generic"
+  description: "This brand-new boxed set is designed to give those new to roleplaying an\n                    introduction to, and a good understanding of, the D&D game experience. It\n                    contains everything needed to play including exciting adventures, a complete\n                    set of roleplaying dice, streamlined rules drawn straight from the Dungeons &\n                    Dragons core rulebooks, and 16 miniatures from the D&D Miniatures line.\n                    In celebration of the 30th anniversary of Dungeons & Dragons, this box was\n                    named for a classic boxed set from the first years of the game\'s history and\n                    is a great way for current players to share the game with a whole new\n                    generation.\n                    Components:\n                    \\list{16 non-random miniatures}\n                    {Rulebooks}\n                    {Character cards}\n                    {4 double-sided map boards}\n                    {Complete set of D&D dice}"
+}
+title: "D&D Basic Game"
+date {
+  year: 2004
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3409"
+  check: 3
+}
+isbn13 {
+}
+system: DND_3RD
+audience: ALL
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$ "
+  number: 2499
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "non random"
+  number: 16
+}
+content {
+  part: BOOK
+  description: "rulebooks"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "character"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "double-sided map board"
+  number: 4
+}
+content {
+  part: DICE
+  description: "complete set of D&D dice"
+  number: 1073741824
+}

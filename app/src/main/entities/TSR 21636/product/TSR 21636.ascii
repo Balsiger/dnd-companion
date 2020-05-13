@@ -1,0 +1,33 @@
+template {
+  name: "TSR 21636"
+  reference {
+    name: "net"
+  }
+  world: "Dark.Matter"
+  description: "an unspeakable evil stirs beneath the nation\'s capital"
+}
+title: "In Hollow Houses"
+author {
+  name: "Gary A. Braunback"
+}
+date {
+  year: 2000
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1636"
+  check: 2
+}
+isbn13 {
+}
+system: ALTERNITY
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

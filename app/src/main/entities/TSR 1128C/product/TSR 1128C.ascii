@@ -1,0 +1,41 @@
+template {
+  name: "TSR 1128C"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+  description: "Base set fro the Blood Wars game."
+}
+title: "Blood Wars Card Game"
+author {
+  name: "Steven E. Schend"
+}
+date {
+  year: 1995
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0291"
+  check: 4
+}
+isbn13 {
+}
+system: BLOOD_WARS
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: MISC
+  description: "deck of 50 cards"
+  number: 2
+}

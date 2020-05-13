@@ -1,0 +1,72 @@
+template {
+  name: "PZO 5005"
+  world: "Generic"
+  description: "Draw upon the power of the elements! From burning swords to icy shields to feathers wings, this 54-card set of beautifully illustrated full-color item cards allows you to track your treasure in vibrant detail.\n\nUnique codes and space for notes help you and your players track their loot."
+}
+title: "Elements of Power"
+subtitle: "GameMastery Item Cards"
+author {
+  name: "Bulmahn, Jason"
+  job: "card text"
+}
+author {
+  name: "McArtor, Mike"
+  job: "card text"
+}
+illustrator {
+  name: "Dutrait, Vincent"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art direction"
+}
+illustrator {
+  name: "Pocza, Drew"
+  job: "graphic design"
+}
+illustrator {
+  name: "Boulden, Joe"
+  job: "card design"
+}
+manager {
+  name: "Bulmahn, Jason"
+  job: "product concept and coordination"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2007
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "061"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "061"
+  check: 2
+}
+system: NONE
+type: CARDS_TYPE
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery"
+series: "GameMastery Item Cards"
+price {
+  currency: "$"
+  number: 995
+  precision: 100
+}
+content {
+  part: CARD
+  description: "full-color item"
+  number: 54
+}
+layout: FULL_COLOR

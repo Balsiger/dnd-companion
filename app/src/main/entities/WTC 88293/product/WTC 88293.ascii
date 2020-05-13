@@ -1,0 +1,30 @@
+template {
+  name: "WTC 88293"
+  world: "Wheel of Time"
+  description: "The Shadow Looms Ever Nearer\n\nThe events leading up to Tarmon Gai\'don have long been foretold.\nTreacherous Darkfriends conspire to permanently sever the Dragon\nReborn\'s link to the One Power. Brave, new heroes must emerge from\nthe Great Pattern and discover those insidious plans to give the forces\nof light a chance to prevail over the Dark One.\n\nProphecies of the Dragon is a stand-alone adventure of epic scope for\nThe Wheel of Time Roleplaying Game. Designed to serve as the\nfoundation of an ongoing campaign, it weaves the players into the\nstoryline of Robert Jordans Wheel of Time series,\n\nTo use this accessory a Gamemaster also needs\nThe Wheel of Time Roleplaying Game."
+}
+title: "Prophecies of the Dragon"
+subtitle: "An Adventure Taking Characters from 1st to 6th Level"
+cover {
+  name: "Sweet, Darrell K."
+}
+cartographer {
+  name: "Mitchell, Ellisa"
+}
+date {
+  year: 2002
+}
+isbn {
+}
+isbn13 {
+}
+pages: 191
+system: D20
+type: ADVENTURE
+style: SOFT_COVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}

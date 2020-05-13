@@ -1,0 +1,41 @@
+template {
+  name: "DSP 1014"
+  description: "This fourth tome in the \\NPC{Nodwick} saga starts with the birth of a new\n  sear word and pretty much goes downhill from there. In these pages you\'ll\n  find the power of profanity, the perils of omniscience, the rescue of a fair\n  maiden, earsplitting Broadway musical numbers, a parody of the biggest\n  fantasy movie trilogy ever, and a fish story that\'ll make you wish you owned\n  a horned helmet!\n\n  \\NPC{Nodwick} is the critically-acclaimed fantasy humor comic book that\n  presents the adventures of the world\'s most favorite henchman as he toils for\n  a somewhat inept (but well-meaning) bad of adventurers."
+}
+title: "Obligatory Dragon on the Cover"
+subtitle: "...and the Obligatory Fantasy Map on the Back"
+author {
+  name: "Williams, Aaron"
+}
+cover {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+date {
+  year: 2003
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "930964"
+  title: "97"
+  check: 8
+}
+isbn13 {
+}
+pages: 160
+system: NONE
+audience: ALL
+type: COMICS
+style: PAPERBACK
+producer: "Henchman Publishing"
+number: "Book IV"
+series: "The Nodwick Chronicles"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

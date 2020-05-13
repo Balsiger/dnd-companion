@@ -1,0 +1,21 @@
+template {
+  name: "TSR 9038A"
+  synonym: "C2"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Ghost Tower of Inverness"
+leader: "The"
+date {
+  year: 1979
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+}

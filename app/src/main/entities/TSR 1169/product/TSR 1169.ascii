@@ -1,0 +1,49 @@
+template {
+  name: "TSR 1169"
+  reference {
+    name: "internet"
+  }
+  description: "A board game for up to 4 players."
+}
+title: "GOBLINZ!"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0878"
+  check: 5
+}
+isbn13 {
+}
+system: SPECIAL
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+}
+content {
+  part: BOARD
+  description: "game"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "rules"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "plastic dragon"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "cardboard goblinz"
+  number: 4
+}

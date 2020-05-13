@@ -1,0 +1,38 @@
+template {
+  name: "TSR 11392"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Generic"
+  description: "\\large{See how the other half lives!}\n                    \\emph{\\NPC{Herpulh} the \\Monster{goblin} heard a knock-knock-knocking in the\n                    upper corridor---those nosy explorers have found the secret entrance to the\n                    \\Monster{goblin} den! \\NPC{Herpulh} must hurry to warn the tribe. If the\n                    invaders cut him off at the pass, there will be no means of stopping their\n                    mad advance into the lair!}\n                    Welcome to \\Product{Reverse Dungeon}, the adventure where everything is\n                    backward! Instead of playing bold heroes who venture into dens of evil, the\n                    players take the roles of the monsters, determined to stop adventurers from\n                    invading their homes. Instead of always being the good guys, the players get\n                    a chance to be the bad guys.\n                    \\Product{Reverse Dungeon} contains three linked minicampaigns in which the\n                    players represent:\n                    \\list\n                    {\\Monster{Goblins} whose warrens are under siege from a band of heroes\n                    seeking fame and fortune;}\n                    {Guardian abominations whose vaults are attacked from several\n                    directions at once; and}\n                    {Ancient undead that must defend the silence of their tomb against\n                    crusading clerics intent on destroying them.}\n                    Enter the \\Product{Reverse Dungeon}---and find out how it feels to be on the\n                    receiving end of a hero\'s blade."
+}
+title: "Reverse Dungeon"
+date {
+  year: 2000
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1392"
+  check: 4
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ADVENTURE
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

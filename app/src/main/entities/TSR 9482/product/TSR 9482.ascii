@@ -1,0 +1,78 @@
+template {
+  name: "TSR 9482"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "\\large{Get out of town and into the world!}\n                    \\Product{Country Sites}, the third in a series of AD&D game accessories, is a\n                    companion of challenging and distinctive settings that will test the mettle\n                    of any group of player characters. Herein is all the information a Dungeon\n                    Master needs to build adventures within these settings and incorporate them\n                    into an existing campaign: background information, maps, location\n                    descriptions, and summary profiles of the unusual characters who populate\n                    these strange places.\n                    Take your character into the \'\\Place{City of the Dead}\'. See if they can\n                    overcome the obstacles of \'\\Place{Darians Wall}\', or arrange for them to pay\n                    a visit to \'\\Place{The Place of Broken Dreams}\'. Every one of the 11\n                    \\Product{Country Sites} in this 96-page book will open new vistas for\n                    adventuring in (and sometimes under) the great outdoors.\n                    Previous books in this series include \\Product{City Sites} and\n                    \\Product{Castle Sites}.\n                    Suitable for all levels of play."
+}
+title: "Country Sites"
+author {
+  name: "Jenkins, Robin"
+}
+author {
+  name: "Nephew, John"
+}
+author {
+  name: "Nurnbeger, Paul"
+}
+editor {
+  name: "Mohan, Kim"
+}
+cover {
+  name: "Jaquays, Paul"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Robb, Phillip"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Daniele, Stephen A."
+  job: "graphic design"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "graphic design"
+}
+manager {
+  name: "Danowski, Don"
+  job: "graphic design"
+}
+date {
+  year: 1995
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0180"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+series: "Sites"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

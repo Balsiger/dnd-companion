@@ -1,0 +1,248 @@
+template {
+  name: "WTC 28088"
+  world: "Generic"
+  description: "The \\Place{Shadowfell} is a cold, grim place through which the spirits of the dead must travel on their way to the afterlife. Dark, evil things live there, suffused with the power of shadow. Some mortals in the natural world learn how to tap into the source. However, not all beings that draw strength from the \\Place{Shadowfell} are vile, black-hearted fiends. A few even dare to call themselves heroes, using the power of darkness to fight darkness.\n\n\\Product{Player\'s Option: Heros of Shadow} is aimed at players who are ready to reach beyond the Dungeon & Dragons Essentials books, \\Product{Heroes of the Fallen Lands} and \\Product{Heroes of the Forgotten Kingdoms}. In addition to exploring the nature of the shadow power source, this roleplaying game supplement presents races, classes, feats, powers, and other options aimed at players hungry to play the archetypal antihero with a dark edge. "
+  short_description: "A Players Option game supplement around dark, shadowy antiheroes."
+}
+title: "Heroes of Shadow"
+subtitle: "Give Your Hero a Dark Edge"
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Pozas, Claudio"
+}
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Bernstein, Eytan"
+  job: "designer"
+}
+author {
+  name: "Sernett, Matt"
+  job: "designer"
+}
+author {
+  name: "Sims, Chris"
+  job: "designer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "designer"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "lead developer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "developer"
+}
+author {
+  name: "Bilsland, Greg"
+  job: "additional development"
+}
+author {
+  name: "Jurkat, M. Alexander"
+  job: "additional development"
+}
+editor {
+  name: "Carter, Michele"
+  job: "lead"
+}
+editor {
+  name: "Fitzgerald Gray, Scott"
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+editor {
+  name: "Moore, Cal"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Moeller, Christopher"
+  job: "front"
+}
+cover {
+  name: "Wootten, Ben"
+  job: "back"
+}
+cartographer {
+}
+illustrator {
+  name: "Baxa, Tom"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Dal Lago, Alberto"
+}
+illustrator {
+  name: "Kassis, Mazin"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "McEvoy, Patrick"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Photos, Nico"
+}
+illustrator {
+  name: "Rapoza, David"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Walpole, Tyler"
+}
+illustrator {
+  name: "Winters, Mark"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Tardiff, Christopher"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "D&D R&D and book publishing director"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D RPG group manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D senior producer"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "D&D producer"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2011
+  month: 4
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5745"
+  check: 3
+}
+pages: 160
+system: DND_4
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Player Option"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Heroes of the Fallen Lands"
+required_requirements: "Heroes of the Forgotten Kingdoms"
+required_requirements: "Rules Compendium"
+layout: FULL_COLOR

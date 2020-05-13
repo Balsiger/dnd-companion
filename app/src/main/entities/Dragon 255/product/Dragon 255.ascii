@@ -1,0 +1,163 @@
+template {
+  name: "Dragon 255"
+  world: "Generic"
+}
+title: "Dragon 255"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Schwartz, Christopher M."
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Brown, Lloyd III"
+}
+author {
+  name: "Wright, Samuel M."
+}
+author {
+  name: "Avellone, Chris"
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Odom, Mel"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Eckelberry, David"
+}
+author {
+  name: "Collins, Andy"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistand editor"
+}
+editor {
+  name: "Carlson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "Guay, Rebecca"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Pillsbury, Joe"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Black Isle Studios"
+}
+illustrator {
+  name: "McDevitt, Brad"
+}
+illustrator {
+  name: "Vilardi, Mike"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Delgado Jr., Peter"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Tomasic, Richard"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+illustrator {
+  name: "Ricker, Scott"
+  job: "designer"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "advertising traffifc manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Blaskowsky, Barbara"
+  job: "circulation manager"
+}
+date {
+  year: 1999
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXIII 8"
+number: "255"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

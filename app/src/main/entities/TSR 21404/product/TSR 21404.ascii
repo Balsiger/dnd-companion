@@ -1,0 +1,49 @@
+template {
+  name: "TSR 21404"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{Even the brutal streets of a treacherous city can\'t hide a tortured\n                    soul forever.}\n                    The barbarian \\NPC{Wulfgar} sets upon a dangerous path toward redemption when\n                    an old friend finds him in the city of \\Place{Luskan}. \\NPC{Wulfgar}\'s\n                    journey twists up the windswept peaks of the \\Place{Spine of the World}. He\n                    will persevere, for at the end lies his most prized possession---the life he\n                    thought he\'d lost forever.\n                    \\emph{\'Salvatore shows...intelligence in using the classic elements, a\n                    pleasant dry wit and a narrative gift.\'}\n                    \\right{---Publishers Weekly}\n                    \\bold{Contains 15 pages of roleplaying game rules based on \\Product{The Spine\n                    of the World}.}"
+}
+title: "Spine of the World"
+leader: "The"
+subtitle: "The Road to Redemption"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Lockwood, Todd"
+}
+date {
+  year: 2000
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1404"
+  check: 1
+}
+isbn13 {
+}
+pages: 381
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 2"
+series: "Paths of Darkness"
+series: "Legacy of the Drow"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

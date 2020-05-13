@@ -1,0 +1,34 @@
+template {
+  name: "TSR 8896"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Dragonlance"
+  description: "annual art calendar"
+}
+title: "1996 Dragonlance and Other Worlds Calendar"
+date {
+  year: 1995
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0306"
+  check: 6
+}
+isbn13 {
+}
+pages: 24
+system: NONE
+audience: ALL
+type: CALENDAR
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

@@ -1,0 +1,26 @@
+template {
+  name: "DMA 000054"
+  reference {
+    name: "net"
+  }
+  world: "Star*Drive"
+}
+title: "Aegis"
+author {
+  name: "William W. Connors"
+}
+author {
+  name: "Steven Schend"
+}
+date {
+  year: 2000
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: ALTERNITY
+type: ACCESSORY
+price {
+}

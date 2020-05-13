@@ -1,0 +1,49 @@
+template {
+  name: "TSR 21391"
+  synonym: "WTC 88024"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "A young brother and sister escape a pack of predators and strike out on\n  their own, their lives taking parallel courses linked to the destiny of\n  different tribes.\n\n  But dark powers watch the rise of civilization with cold calculation and\n  deadly intent.\n\n  Best-selling writing team Thompson and Cook make a long-awaited return to the\n  fantastical world of \\Place{Dragonlance} with this new epic trilogy."
+  short_description: "First book in the Barbarians Trilogy"
+}
+title: "Children of the Plains"
+subtitle: "From the mists of \\Place{Krynn}\'s earliest history came the \\Class{Barbarians}."
+author {
+  name: "Paul B. Thompson"
+}
+author {
+  name: "Tonya C. Cook"
+}
+cover {
+  name: "Wolfe, Corey"
+}
+date {
+  year: 2000
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1391"
+  check: 6
+}
+isbn13 {
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Volume One"
+series: "The Barbarians"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

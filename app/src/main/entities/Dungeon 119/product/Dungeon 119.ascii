@@ -1,0 +1,145 @@
+template {
+  name: "Dungeon 119"
+  world: "Generic"
+  description: "This is issue 119 of the dungeon magazine."
+}
+title: "Dungeon 119"
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Simcoe, John"
+}
+author {
+  name: "Vaughan, Greg A."
+}
+author {
+  name: "Wheaton, Wil"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+editor {
+  name: "Walker, Jeremy"
+  job: "editorial assistant"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Barrum, Joachim"
+}
+illustrator {
+  name: "Campus, Roberto"
+}
+illustrator {
+  name: "Hooper, Fred"
+}
+illustrator {
+  name: "Hou, Andew"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Kim, Eric"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Shaw, Stan"
+}
+illustrator {
+  name: "Zubkavich, Jim"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Schley, Mike"
+  job: "associate art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "publisher"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "circulation manager"
+}
+date {
+  year: 2005
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "19 2"
+number: "119"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

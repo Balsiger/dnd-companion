@@ -1,0 +1,43 @@
+template {
+  name: "TSR 3110"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Birthright"
+  description: "getting into the Stonecrowns and getting out alive, leves mid to high"
+}
+title: "Warlock of the Stonecrowns"
+author {
+  name: "Baur, Wolfgang H."
+}
+date {
+  year: 1995
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0185"
+  check: 3
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

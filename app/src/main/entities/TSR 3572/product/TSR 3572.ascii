@@ -1,0 +1,33 @@
+template {
+  name: "TSR 3572"
+  synonym: "25CR3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "the political and military interaction of the inner worlds"
+}
+title: "Inner Worlds"
+date {
+  year: 1991
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+system: XXVC
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

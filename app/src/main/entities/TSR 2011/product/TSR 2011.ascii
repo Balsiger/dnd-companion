@@ -1,0 +1,26 @@
+template {
+  name: "TSR 2011"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+}
+title: "Dungeon Master Guide"
+date {
+  year: 1979
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

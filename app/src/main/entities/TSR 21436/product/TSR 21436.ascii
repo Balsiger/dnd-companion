@@ -1,0 +1,50 @@
+template {
+  name: "TSR 21436"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Forgotten Realms"
+  description: "The seer \\NPC{Alaundo} prophesied that seven scourges would sweep\n                    \\Place{Cormyr} away in ruin. For centuries the royal family has stood watch\n                    against that day and devoted their lives to the protection of the\n                    \\Place{realm}.\n                    But in a time when their ancient guardians slumber and their most loyal\n                    servants disappear, when a terrible evil prepares to sweep down upon their\n                    throne---\n                    Who will protect the royal family."
+}
+title: "Beyond the High Road"
+author {
+  name: "Denning, Troy"
+}
+cover {
+  name: "Stawicki, Matt"
+}
+cartographer {
+  name: "Gamble, Todd Alan"
+}
+date {
+  year: 1999
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1436"
+  check: 10
+}
+isbn13 {
+}
+pages: 375
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book 2"
+series: "Cormyr Saga"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

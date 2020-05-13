@@ -1,0 +1,37 @@
+template {
+  name: "TSR 9047"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+  description: "Are you running out of ideas for ways to stock your dungeon full of\n                    treasure? Do you need a quick an easy way to fill your castle of 1,000 rooms\n                    with monsters? The \\Product{Monster & Treasure Assortment} has 900 monsters,\n                    900 treasures, a host of treasure containers/protection devices/concealments,\n                    and complete instructions for using the assortment to fill in partially\n                    stocked or newly encountered levels.\n                    Designing and stocking any number of dungeon levels becomes a snap when\n                    \\Product{Monster and Treasure Assortment} is used in conjunction with\n                    \\Product{Dungeon Geomorphs}. TSR\'s geomorphs allow an almost endless variety\n                    of rooms to be laid out in virtually no time at all."
+}
+title: "Monster and Treasure Assortment, levels 1 to 9"
+author {
+  name: "staff, TSR"
+}
+date {
+  year: 1980
+}
+isbn {
+  group: "0"
+  publisher: "935696"
+  title: "36"
+  check: 9
+}
+isbn13 {
+}
+pages: 34
+system: DND_1ST
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

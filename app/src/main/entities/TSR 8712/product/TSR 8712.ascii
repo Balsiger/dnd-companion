@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8712"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Backward Magic"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+audience: ALL
+type: NOVEL
+number: "2"
+series: "Cartoon Show"
+price {
+}

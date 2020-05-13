@@ -1,0 +1,43 @@
+template {
+  name: "TSR 1514"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "Dragon Dice Book, book three"
+}
+title: "Time of Champions"
+leader: "The"
+author {
+  name: "Stark, Ed"
+}
+date {
+  year: 1997
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0755"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: DRAGON_DICE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: DICE
+  description: "DRAGON DICE die"
+  number: 1073741824
+}

@@ -1,0 +1,54 @@
+template {
+  name: "WTC 28058"
+  world: "Forgotten Realms"
+  description: "\\large{Knowledge of the sword is useless without knowledge of the world.}\n\n\\NPC{Cephas} has no memories of how he came to fight in the gladiatorial arena of the floating earthmote called the \\Place{Island of the Free}. All he knows of the world beyond, he has gleaned from stories the master of the games reads to his followers.\n\n\\large{You are wise to realize you must trust me. You are wise to find this terrifying.}\n\nFrom a distance\\NPC{Corvus Nightfeather} and his \\Group{Circus of Wonders} have watched the \\Place{Island of the Free}, piecing together its weaknesses and its defenses. And watching with interest the young \\Monster{genasi} gladiator whose feet have never once touched the earth.\n\n\\large{Now open this book again. Now begin anew. There is more yet in these pages.}\n\nFor the first time \\NPC{Cephas} can harness his inborn powers and control the stones and dirt beneath his feet. But \\NPC{Corvus} has plans for Cephas that extend beyond the circus\342\200\231s shows."
+  short_description: "A Forgotten Realms novel about a \\NPC{genasi} gladiator."
+}
+title: "Sandstorm"
+subtitle: "Think this desert\'s dangerous?"
+author {
+  name: "Rowe, Christopher"
+}
+editor {
+}
+cover {
+  name: "Swanland, Raymond"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2011
+  month: 3
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5742"
+  check: 2
+}
+pages: 288
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "book"
+  number: 1
+}
+layout: COLOR_COVER

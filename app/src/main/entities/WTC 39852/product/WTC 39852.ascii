@@ -1,0 +1,44 @@
+template {
+  name: "WTC 39852"
+  world: "Forgotten Realms"
+  description: "A race of people, said to be forged from precious metal, face a devastating disease: Stoneplague. Those afflicted suffer agony. Eyes become opaque and glassy, skin flakes off in scales, bones fuse into an immovable skeleton, and blood turns dark and muddy. Death comes when the heart stops beating and hardens into stone. And the plague is spreading.\n\n\\large{A Dwarven Soul in Human Form...}\n\n\\NPC{Torrin Ironstar} is a delver, an adventurer whose daft quest to find the \\NPC{Soulforge} in \\Place{Faer\\hat{u}n} invites ridicule and scorn. But he\'s used to that. He\'s an outsider, a human who believes he\'s really a \\Monster{dwarf}, right down to the silver hammers in his beard.\n\n\\large{An impossible Puzzle...}\n\nThe other citizens in \\Place{Earthheart} shun him, suspicious of his true intentions. Little do they know, \\NPC{Torring} holds the key to the cure, if only he can figure it out in time. But time is running out."
+  short_description: "A fatal disease turn \\Monster{dwarves} into stone."
+}
+title: "Gilded Run"
+leader: "The"
+subtitle: "A Plague that Turns Dwarves to Stone..."
+author {
+  name: "Smedman, Lisa"
+}
+cover {
+  name: "Simonetti, Marc"
+}
+date {
+  year: 2012
+  month: 7
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6030"
+  check: 9
+}
+pages: 372
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

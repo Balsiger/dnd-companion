@@ -1,0 +1,37 @@
+template {
+  name: "TSR 2407"
+  synonym: "DSR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Dark Sun"
+  description: "players deal with merchants of every class"
+}
+title: "Dune Trader"
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "462"
+  check: 7
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

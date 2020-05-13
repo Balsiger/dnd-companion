@@ -1,0 +1,83 @@
+template {
+  name: "GRR 3004"
+  world: "Generic"
+  description: "The most famous artifact of the all comes to life with Green Ronin\'s\n  \\Product{Deck of Many Things}. Each deck includes 22 cards beautifully\n  illustrated by Eliane Bettocchi and 2 rules card. \\Product{The Deck of Many\n  Things} can be used with any edition of the world\'s most popular fantasy RPG\n  and is sure to spice up any game.\n\n  Pray for the Moon and beware the dreaded Donjon with the \\Product{Deck of\n  Many Things}!."
+  short_description: "The legendary artifact."
+}
+title: "Deck of Many Things"
+leader: "The"
+subtitle: "Draw If You Dare!"
+author {
+  name: "Mangold, Hal"
+  job: "design"
+}
+cover {
+  name: "Bettocchi, Eliane"
+}
+illustrator {
+  name: "Bettocchi, Elian"
+}
+illustrator {
+  name: "Mangold, Hal"
+  job: "layout"
+}
+manager {
+  name: "Pramas, Chris"
+  job: "staff"
+}
+manager {
+  name: "Lindroos, Nicole"
+  job: "staff"
+}
+manager {
+  name: "Mangold, Hal"
+  job: "staff"
+}
+manager {
+  name: "Kenson, Steve"
+  job: "staff"
+}
+manager {
+  name: "Sass, Evan"
+  job: "staff"
+}
+manager {
+  name: "Schwalb, Robert J. \'Dr. Evil\'"
+  job: "staff"
+}
+manager {
+  name: "pinto, mim"
+  job: "staff"
+}
+manager {
+  name: "Bodden, Bill"
+  job: "staff"
+}
+manager {
+  name: "Schmalz, Marc"
+  job: "staff"
+}
+date {
+  year: 2007
+}
+isbn {
+  group: "1"
+  publisher: "932442"
+  title: "77"
+  check: 4
+}
+isbn13 {
+}
+system: NONE
+type: ACCESSORY
+style: SMALL_BOX
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: CARD
+  number: 24
+}
+layout: FULL_COLOR

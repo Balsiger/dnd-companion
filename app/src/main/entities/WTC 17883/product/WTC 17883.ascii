@@ -1,0 +1,35 @@
+template {
+  name: "WTC 17883"
+  world: "None"
+  description: "Amid the titanic clash between \\NPC{Phage} and \\NPC{Akroma}, all\n                    \\Place{Dominaria} shuddered. Now, out of the destruction and chaos a new\n                    force arises, and \\NPC{Kamahl} must face his greatest foe: \\NPC{Karoma}. Her\n                    arms spread to the very clouds, and her robes trail like rays of sunlight.\n                    She is the destroyer.\n                    She is the answer."
+}
+title: "Scourge"
+subtitle: "The battle rages on!"
+author {
+  name: "King, Robert J."
+}
+date {
+  year: 2003
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2956"
+  check: 1
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "Onslaught Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,39 @@
+template {
+  name: "TSR 21357"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "\\Place{Terisiare} lies in ruins. Nations have fallen, \\Monster{goblins} raid\n                    the land, and an oppressive faith throttles the city-states. Now deep within\n                    the walls of the \\Place{Conclave of Mages}, \\NPC{Jodah} must decide if\n                    unlocking his own immense power is worth taking a step into the dark lands.\n                    The epic of the \\Event{Ice Age} begins."
+}
+title: "Gathering Dark"
+leader: "The"
+subtitle: "After the war comes the darkness"
+author {
+  name: "Grubb, Jeff"
+}
+date {
+  year: 1999
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1357"
+  check: 6
+}
+isbn13 {
+}
+pages: 342
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book I"
+series: "Ice Age Cycle"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

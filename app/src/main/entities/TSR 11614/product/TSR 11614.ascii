@@ -1,0 +1,42 @@
+template {
+  name: "TSR 11614"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  world: "Generic"
+  description: "\\large{The end time approach...}\n                    To everything there is a season. Every campaign has to come to an end\n                    sometime, so why not go out with a bang? \\Product{The Apocalypse Stone} is an\n                    epic adventure to challenge high-level characters, but beware---it will\n                    destroy your world!\n                    This adventure has it all: gods and \\Monster{devils}, plague and pestilence,\n                    rains of fire, and world-shattering conflicts. Here is an opportunity for PCs\n                    do display undreamt-of heroism...or fall to ultimate defeat.\n                    \\Product{The Apocalypse Stone} is a tool for Dungeon Masters to present\n                    exremely challenging encounters for high-level parties, to wrap up a\n                    long-running campaign...or both.\n                    This adventure can be used with your own game world or any Advanced Dungeons\n                    & Dragons setting."
+}
+title: "Apocalypse Stone"
+leader: "The"
+date {
+  year: 2000
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1614"
+  check: 1
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ADVENTURE
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

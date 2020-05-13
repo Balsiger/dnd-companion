@@ -1,0 +1,26 @@
+template {
+  name: "TSR 2707"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  description: "complete game with adventure and rules"
+}
+title: "Once and Future King"
+date {
+  year: 1994
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+system: AMAZING_ENGINE
+type: RULES_SUPPLEMENT
+price {
+  currency: "\302\254\302\243 "
+  number: 499
+  precision: 100
+}

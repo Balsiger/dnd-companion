@@ -1,0 +1,45 @@
+template {
+  name: "WTC B2366"
+  world: "Forgotten Realms"
+  description: "The \\Group{Companions of the Hall} are united in body, in spirit, but not in ideals. The world changes around \\NPC{Drizzt Do\'Urden} once more and old debts insist on payment, old wrongs demand to be set right. And dwarves and orcs once again look at each other with hatred and distrust.\n\n\\NPC{Tos\'un Armgo} and {Tiago Baenre} work to make matters worse, and they work as only drow can - from the shadows, but with blades drawn.\n\nThe king of Many-Arrows is the very image of the new peace in the \\Place{North}, and that\'s why he needs to die. When a new \\Monster{orc} king takes the throne, and \\God{Gruumsh} himself calls for war, the savage hordes gather.\n\nAfter decades of peace, the \\Place{North} explodes in war once again. \\Monster{Dwarf} steel meets ancient enemies, and once they taste blood, those blades will not soon be sheathed. Not until all the \\Place{Spine of the World} runs red.\n\nIn the middle of this chaos, the \\Group{Companions} fight, and \\NPC{Drizzt} is forced to defend himself, his newly rediscovered friends, and his adopted home, from the treachery of his own black-souled kind.\n\nThe \\Group{Companions of the Hall} are back in action in a world that seems to be falling apart again, but may simply be repeating a dealy cycle of violence and hate, a cycle that brings one of the fantasy genre\'s best-love characters into a fight for his life, his loves, and his very soul."
+  short_description: "The second book in the Companions Codex"
+}
+title: "Rise of the King"
+subtitle: "Companions Codex II"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+date {
+  year: 2014
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6568"
+  check: 7
+}
+pages: 428
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+volume: "II"
+series: "Companions Codex"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

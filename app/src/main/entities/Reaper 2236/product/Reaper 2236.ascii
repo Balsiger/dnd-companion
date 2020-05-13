@@ -1,0 +1,28 @@
+template {
+  name: "Reaper 2236"
+  description: "Sturm Jagstone, a \\Monster{dwarf} with a big hammer."
+}
+title: "Sturm Jagstone"
+author {
+  name: "Sandra Garrity"
+}
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: DARK_HEAVEN
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+series: "Legends"
+price {
+  currency: "$ "
+  number: 275
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}

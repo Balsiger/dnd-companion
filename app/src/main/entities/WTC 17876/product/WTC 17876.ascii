@@ -1,0 +1,35 @@
+template {
+  name: "WTC 17876"
+  world: "None"
+  description: "Though his assassins have failed, the godlike \\Place{Madaran} emperor has\n                    other ways of crushing rebellion. He sends the brutal imperial army to rein\n                    in a defiant island chain, and the empire is once more plunged into\n                    violence. The emperor\'s champion accompanies the army, but his\n                    loyalty will be tested by the horrors of war. Can the champion achieve\n                    honorable victory, or will he and the rebels alike be crushed by the\n                    Emperor\'s Fist?"
+}
+title: "Emperor\'s Fist"
+subtitle: "Honor Tested by War"
+author {
+  name: "McGough, Scott"
+}
+date {
+  year: 2003
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2935"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book II"
+series: "Magic Legends Cycle Two"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

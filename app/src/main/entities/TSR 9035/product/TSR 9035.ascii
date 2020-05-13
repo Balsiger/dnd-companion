@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9035"
+  synonym: "Q1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Queen of the Demonweb Pits"
+date {
+  year: 1980
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 400
+  precision: 100
+}

@@ -1,0 +1,42 @@
+template {
+  name: "TSR 9331"
+  synonym: "RR1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Ravenloft"
+  description: "hideous creatures roaming the mists of Ravenloft"
+}
+title: "Darklords"
+date {
+  year: 1991
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "137"
+  check: 7
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

@@ -1,0 +1,53 @@
+template {
+  name: "TSR 8563"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{\\NPC{Volo} Is Back...}\n                    \\Place{Mulmaster}---a center for commerce and industry...where an innocent\n                    man is imprisoned, his identity obscured by a magically forged iron mask.\n                    \\Place{Mulmaster}---benevolently ruled by a council of nobles called the\n                    \\Group{Blades}...whose leader, the \\NPC{High Blade}, brutally murdered his\n                    own father in order to succeed him on the throne and whose marriage to the\n                    \\NPC{Tharchioness of \\Place{Eltabbar}} draws an uneasy alliance with the\n                    \\Group{Red Wizards}.\n                    \\Place{Mulmaster}---nicknamed \'\\Place{the City of Danger}\'...the next stop on\n                    \\NPC{Volothamp Geddarm}\'s research trip for his upcoming \\emph{Guide to the\n                    Moonsea}, and maybe his final resting place when the bailing out of a friend\n                    from the \\Place{Mulmaster} prison embroils \\NPC{Volo} in a sinister plot that\n                    threatens the tenuous political stability of all \\Place{Faer\\hat{u}n}"
+}
+title: "Mage in the Iron Mask"
+leader: "The"
+author {
+  name: "Thomsen, Brian"
+}
+cover {
+  name: "Velez, Walter"
+}
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0506"
+  check: 9
+}
+isbn13 {
+}
+pages: 304
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Four"
+series: "Nobles"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

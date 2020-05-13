@@ -1,0 +1,80 @@
+template {
+  name: "TSR 11634"
+  world: "Forgotten Realms"
+  description: "As war-ravaged Cormyr tries to rebuild, a host of eager seekers---expert\n                    adventurers, hardened mercenaries, scheming wizards, misguided patriots,\n                    covetous rivals, and more---scramble to find the dragon\'s treasure.\n                    Will your band of heroes venture across the dangerous landscape of the Forest\n                    Kingdom to secure Cormyr\'s future, or will they seek the hoard for\n                    themselves.\n                    This adventure is inspired by the novel \\Product[TSR 21637]{Death of the\n                    Dragon} by Ed Greenwood and Troy Denning. Details of the novel are presented\n                    herein."
+}
+title: "Into the Dragon\'s Lair"
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Miller, Steve"
+}
+editor {
+  name: "Donovan, Dale A."
+}
+cover {
+  name: "Bonner, Paul"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Collins, Michael"
+}
+typographer {
+  name: "Ausland, Victoria L."
+}
+manager {
+  name: "Heinsoo, Rob"
+}
+manager {
+  name: "Wyatt, James"
+}
+manager {
+  name: "Baker, Richard L. III"
+}
+manager {
+  name: "Barnett, Dee"
+}
+manager {
+  name: "Hanchette, Paul"
+}
+manager {
+  name: "Raper, Robert"
+}
+manager {
+  name: "Campbell, Robert"
+}
+manager {
+  name: "Fisher, Joshua"
+}
+manager {
+  name: "DeLong, Chas"
+}
+date {
+  year: 2000
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1634"
+  check: 6
+}
+isbn13 {
+}
+pages: 96
+system: DND_3RD
+type: ADVENTURE
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 1795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

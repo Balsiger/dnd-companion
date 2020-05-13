@@ -1,0 +1,59 @@
+template {
+  name: "WTC 88551"
+  world: "Dragonlance"
+  description: "Summer has come to \\Place{Krynn}, a summer unlike any before. The sun bears\n  down on land and sea, searing the world with relentless light and\n  heat. Clouds and rain are nowhere to be found, and even the darkness of night\n  brings little relief from the strange and oppressive day.\n\n  Meanwhile, those who commune regularly with their gods are uneasy. Every day,\n  their deities become more distant, more difficult to reach. Clerics\' prayers\n  go unanswered, and magic goes awry. As the tension on \\Place{Ansalon} builds,\n  estranged cousins \\NPC{Palin Majere} and \\NPC{Steel Brightblade} search for\n  an explanation. It soon becomes evident that more than just magic is at\n  stake.\n\n  The fate of all \\Place{Krynn} hangs in the balance.\n\n  This is a new paperback edition of \\Place{Dragonlance} cocreators Margaret\n  Weis and Tracy Hickman\'s first hardcover New York Times bestseller. It is the\n  direct prequel to the current \\Product{War of Souls} trilogy. This edition\n  features a new cover design that ties into the recent rereleases of other\n  core \\Place{Dragonlance} titles."
+}
+title: "Dragons of Summer Flame"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2708"
+  check: 9
+}
+isbn13 {
+}
+pages: 608
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

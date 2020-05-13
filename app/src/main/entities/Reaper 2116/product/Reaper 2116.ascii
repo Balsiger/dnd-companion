@@ -1,0 +1,28 @@
+template {
+  name: "Reaper 2116"
+  description: "Cthal T\'Chuk, a gesticulating \\Monster{mind flayer} with staff."
+}
+title: "Cthal T\'Chuk"
+author {
+  name: "Sandra Garrity"
+}
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: DARK_HEAVEN
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+series: "Legends"
+price {
+  currency: "$ "
+  number: 275
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}

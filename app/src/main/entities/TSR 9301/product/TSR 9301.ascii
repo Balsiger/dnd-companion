@@ -1,0 +1,70 @@
+template {
+  name: "TSR 9301"
+  synonym: "FA1"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "Someone in the misty, wooded \\Place{Moonshea Isles} needs hundreds of\n                    brand-new \\Item[Sword]{swords} taken under guard from \\Place{Sword Coast}\n                    smiths to a certain place on the \\Place[Moonshea Isles]{Isles}.\n                    The swords are needed so badly, and their safe arrival is considered so\n                    unlikely, that someone is willing to pay adventurers a lot of gold---someone\n                    fairly important.\n                    Adventurers foolish enough to take assignments to good to be true (or merely\n                    desperate for coins) will soon find themselves embroiled in a dark and\n                    mysterious struggle against evil that will take them into sacred groves,\n                    crumbling castles, and through ancient \\Item[Gate]{magical gates} to the\n                    \\Place[Halls of the High King]{halls of the High King}---and beyond.\n                    This sourcebook contains background lore on the \\Place[Moonshea\n                    Isles]{Moonsheas}, a DM\'s delight of new monsters, magic items, and spells\n                    usable in any AD&D campaign and enough adventure ideas to keep the most\n                    energetic player characters seeking their fortunes in the \\Place[Moonshea\n                    Isles]{Moonsheas} for years to come!"
+}
+title: "Halls of the High King"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Phillips, Terry C."
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Bradstreet, Timothy"
+}
+illustrator {
+  name: "Harris, Rick"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "881"
+  check: 1
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

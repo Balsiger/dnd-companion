@@ -1,0 +1,47 @@
+template {
+  name: "TSR 8349"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dragonlance"
+}
+title: "Covenant of the Forge"
+leader: "The"
+author {
+  name: "Parkinson, Dan"
+}
+date {
+  year: 1993
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "558"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume One"
+series: "Dwarven Nations Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

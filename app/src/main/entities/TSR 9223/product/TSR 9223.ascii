@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9223"
+  synonym: "GAZ5"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Elves of Alfheim"
+leader: "The"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

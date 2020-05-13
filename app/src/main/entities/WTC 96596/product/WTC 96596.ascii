@@ -1,0 +1,31 @@
+template {
+  name: "WTC 96596"
+  world: "Dragonlance"
+  description: "The kingdom of \\Place{Arngrim} is a cold and mysterious place. Home to the\n  \\Group{Scarlet Brethren}, a sect of powerful mages, this near-forgotten place\n  may hold the key to restoring \\NPC{Nearra}\'s memory. But neither \\NPC{Nearra}\n  nor her friends realize the price they\'ll have to pay.\n\n  Distracted by the charms of \\NPC{Alric}, \\NPC{Arngrim}\'s heir apparent,\n  \\NPC{Catriona} fails to see the danger that lies before them. As\n  \\NPC{Nearra}\'s dark visions grow stronger, \\NPC{Davyn} struggles to hide the\n  secret that could save her. Soon the companions find they\'ve blundered into a\n  terrifying plot. And this time, \\NPC{Nearra} isn\'t the only one who will have\n  to fight for her life.\n\n  \\Product{The Dying Kingdom} continues a new series of \\Place{Dragonlance}\n  adventures written specifically for readers ages 10 and up. Sized to fit the\n  young readers, the series features a new band of young companions who band\n  together for friendship and excitement during the \\Event{golden age} of the\n  \\Place{Dragonlance} world."
+}
+title: "Dying Kingdom"
+leader: "The"
+author {
+  name: "Sullivan, Stephen D."
+}
+date {
+  year: 2004
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "2"
+series: "The New Adventures"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

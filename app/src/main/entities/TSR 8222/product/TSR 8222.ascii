@@ -1,0 +1,47 @@
+template {
+  name: "TSR 8222"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+}
+title: "Lightning\'s Daughter"
+date {
+  year: 1991
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "078"
+  check: 8
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+series: "Dark Horse Series"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

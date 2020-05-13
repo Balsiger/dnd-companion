@@ -1,0 +1,105 @@
+template {
+  name: "WTC 86410"
+  world: "Eberron"
+  description: "The ruined \\Place{House Cannith citadel of Whitehearth} holds the key to\n  constructing a terrible magic weapon. Agents of the \\Group{Emerald Claw} will\n  stop at nothing to recover the ancient device. As malevolent forces hunt for\n  the artifact, resourceful heroes battle the perils of the \\Place{Mournland}\n  to reach \\Place{Whitehearth} first and discover the secrets that lie\n  within.\n\n  \\Product{Shadows of the Last War} is a stand-alone adventure for the Dungeon\n  & Dragons game that will immerse your characters in the \\Place{Eberron}\n  \\Product{campaign setting}. Designed to challenge 2nd-level D&D heroes, it\n  pits them against one of \\Place{Eberron}\'s most nefarious organizations.\n\n  To use this adventure, a Dungeon Master also needs the \\Product{Eberron\n  Campaign Setting}, the \\Product{Player\'s Handbook}, \\Product{Dungeon Master\'s\n  Guide}, and \\Product{Monster Manual}.\n\n  A player needs only the \\Product{Eberron Campaign Setting} and the\n  \\Product{Player\'s Handbook}."
+}
+title: "Shadows of the Last War"
+subtitle: "Race to Uncover Secrets Buried by Disaster"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "additional design"
+}
+editor {
+  name: "Slavicsek, Bill"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cover {
+  name: "Hawkins, Daniel"
+  job: "sculpted cover design"
+}
+cover {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Castillo, Tommy"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Baker, Candice"
+  job: "image technician"
+}
+typographer {
+  name: "Cheung, Carmen"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Finch, Andrew"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3276"
+  check: 7
+}
+isbn13 {
+}
+pages: 48
+system: DND_3_5
+type: ADVENTURE
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Shadows of the Last War"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Death at Whiteearth"
+  number: 1073741824
+}

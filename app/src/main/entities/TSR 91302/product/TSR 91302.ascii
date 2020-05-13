@@ -1,0 +1,27 @@
+template {
+  name: "TSR 91302"
+  reference {
+    name: "net"
+  }
+  world: "Dominaria"
+}
+title: "Official Guide to Urza\'s Saga"
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1302"
+  check: 9
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1699
+  precision: 100
+}

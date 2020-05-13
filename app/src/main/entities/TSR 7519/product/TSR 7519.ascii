@@ -1,0 +1,42 @@
+template {
+  name: "TSR 7519"
+  synonym: "GWQ2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  description: "a lighthearted adventure of politics and intrigue"
+}
+title: "All Animals are Equal"
+author {
+  name: "TSR Staff"
+}
+date {
+  year: 1993
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "638"
+  check: 7
+}
+isbn13 {
+}
+pages: 64
+system: GAMMA_WORLD
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

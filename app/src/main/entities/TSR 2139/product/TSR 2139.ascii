@@ -1,0 +1,46 @@
+template {
+  name: "TSR 2139"
+  synonym: "MC16"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Ravenloft"
+  description: "A lot of monsters."
+}
+title: "Monstrous Compendium Ravenloft Appendix Volume II: Children of the Night"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1993
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: RULEBOOK
+style: FOLDER
+producer: "TSR"
+number: "16"
+series: "Monster Manual"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}
+content {
+  part: SHEET
+  number: 1073741824
+}

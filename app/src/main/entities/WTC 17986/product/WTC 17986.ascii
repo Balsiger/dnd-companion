@@ -1,0 +1,58 @@
+template {
+  name: "WTC 17986"
+  world: "Forgotten Realms"
+  description: "Alone on the battlefield.\n                    Surrounded by death.\n                    Cornered by enemies.\n                    And ready to die.\n                    \\NPC{Drizzt Do\'Urden} has become an \\Monster{orc}\'s worst nightmare: a lone\n                    \\Monster{drow} with nothing to lose and nowhere to run. As the \\Place{North}\n                    spirals into chaos and war, one \\Monster{dark elf} has decided to take it\n                    personally, and it will take an army to stop him.\n                    \\Product{The Hunter\'s blades} have been drawn, and \\NPC{Drizzt} will never\n                    be the same."
+}
+title: "Lone Drow"
+leader: "The"
+author {
+  name: "R.A. Salvatore"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3012"
+  check: 8
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book II"
+series: "The Hunter\'s Blades Trilogy"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

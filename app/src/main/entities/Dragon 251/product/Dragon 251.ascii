@@ -1,0 +1,165 @@
+template {
+  name: "Dragon 251"
+  world: "Generic"
+}
+title: "Dragon 251"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Perry, Chris"
+}
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Horner, Miranda"
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Valterra, Anthony"
+}
+author {
+  name: "Barret, Neal Jr."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Johnson, Kristin J."
+}
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Eckelberry, David"
+}
+author {
+  name: "Winniger, Ray"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Guay, Rebecca"
+}
+illustrator {
+  name: "Burr, Dan"
+}
+illustrator {
+  name: "Cavalier, Bill"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Vrbanic, George"
+}
+illustrator {
+  name: "McDevitt, Brad"
+}
+illustrator {
+  name: "Schwartz, Steven"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Delgado Jr., Peter"
+}
+illustrator {
+  name: "Guay, Rebecca"
+}
+illustrator {
+  name: "Tomasic, Richard"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Cavalier, Bill"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Pillsbury, Joe"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "ad traffifc manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXIII 4"
+number: "251"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

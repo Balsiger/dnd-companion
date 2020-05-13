@@ -1,0 +1,73 @@
+template {
+  name: "WTC 2173672"
+  world: "Generic"
+  description: "In a fantastic world of magic and monsters, a new age of adventure unfolds. This core rulebook for the Dungeons & Dragons Roleplaying Game provides everything players need to create and run heroic characters through legendary dungeons of dread.\n                    The \\Product{Player\'s Handbook} features the 4th Edition game rules, including character creation, combat and adventuring, classes and races, equipment and magic items, skills, feats, powers, and more."
+  short_description: "Roleplaying game core rules."
+}
+title: "Player\'s Handbook"
+subtitle: "The World Needs Heroes"
+author {
+  name: "Youngs, Chris"
+  job: "additional design and development"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Crawford, Jeremy"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+  job: "front"
+}
+cover {
+  name: "Alexander, Rob"
+  job: "back"
+}
+cartographer {
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production management"
+}
+date {
+  year: 2008
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4867"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4867"
+  check: 3
+}
+pages: 320
+system: DND_4
+audience: PLAYER
+type: RULEBOOK
+style: HARDCOVER
+series: "Core Books"
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOARD
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9191"
+  synonym: "DA3"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "City of the Gods"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}

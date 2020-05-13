@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5027"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Odious Ogre & Treasure Chest"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

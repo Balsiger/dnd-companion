@@ -1,0 +1,107 @@
+template {
+  name: "Dungeon 54"
+  world: "Generic"
+  description: "This is issue 54 of the dungeon magazine."
+}
+title: "Dungeon 54"
+author {
+  name: "De Fazio, Dan"
+}
+author {
+  name: "Maaske, Matt"
+}
+author {
+  name: "Howery, David"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Crook, Jeff"
+}
+author {
+  name: "Selinker, Michael"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "associate editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "Miller, David O."
+}
+cartographer {
+  name: "Scott, Michael"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Miller, David O."
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+illustrator {
+  name: "Scott, Michael"
+}
+illustrator {
+  name: "Holloway, James"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+typographer {
+  name: "Isler, Tracy"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1995
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 80
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "IX 6"
+number: "54"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

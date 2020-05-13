@@ -1,0 +1,28 @@
+template {
+  name: "TSR 06071"
+  reference {
+    name: "net"
+  }
+  description: "47 new Pok\342\210\232\302\251mon fossil cards"
+}
+title: "Fossil Booster"
+date {
+  year: 1999
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "57530"
+  title: "827"
+  check: 4
+}
+isbn13 {
+}
+system: POKEMON
+audience: ALL
+type: BOOSTER_PACK
+price {
+  currency: "$ "
+  number: 329
+  precision: 100
+}

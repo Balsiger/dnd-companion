@@ -1,0 +1,39 @@
+template {
+  name: "TSR 2809"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Star*Drive"
+  description: "more than 100 weapons and equipment"
+}
+title: "Arms and Equipment Guide"
+author {
+  name: "Richard Baker"
+}
+date {
+  year: 1998
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1214"
+  check: 6
+}
+isbn13 {
+}
+pages: 96
+system: ALTERNITY
+type: ACCESSORY
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}

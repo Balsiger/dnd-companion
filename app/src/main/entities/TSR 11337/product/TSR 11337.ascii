@@ -1,0 +1,39 @@
+template {
+  name: "TSR 11337"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{\\Place{Icewind Dale}, \\Place{Ten Towns}, \\NPC{Regis} the lovable\n                    \\Monster[Halfling]{halfling} scoundrel, and \\NPC{Drizzt Do\'Urden},\n                    \\Monster[Drow]{drow} ranger. These names are legendary in the annals of the\n                    \\Place{Forgotten Realms} \\Product[TSR 1085]{setting}, made famous in the\n                    bestselling novels by author R.A. Salvatore.}\n                    Now, Salvatore and his original gaming group, the \\Group{Seven Swords},\n                    return to the \\Place{Savage Frontier} in this exciting 32-page adventure. The\n                    PCs begin in the port city of \\Place{Luskan}, where they\'re hired on by a\n                    caravaning merchant to perform guard duty for the long, dangerous journey\n                    over the \\Place{Spine of the World} Mountains. If the heroes do well, they\n                    reach the small town of \\Place{Targos}, where they hear rumors of a dead\n                    mage\'s lost tower out on the tundra. In order to find it, the PCs must\n                    overcome numerous obstacles but may find allies in the peoples of the\n                    \\Place{Ten-Towns} region, including a barbarian prince, a sly\n                    \\Monster[Halfling]{halfling}, and a unique ranger.\n                    Not all is as it seems, though, nor can all smiling faces be trusted. Can the\n                    PCs separate the truth from the lies, locate the \\Place{Accursed Tower},\n                    determine all its secrets, and survive?\n                    This low-level, stand-alone adventure fits into any existing \\Place{Forgotten\n                    Realms} \\Product[TSR 1085]{campaign}. It\'s also easily adapted to any other\n                    AD&D game campaign world.\n                    For four to eight characters of levels 1--3"
+}
+title: "Accursed Tower"
+leader: "The"
+date {
+  year: 1999
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1337"
+  check: 1
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

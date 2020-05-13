@@ -1,0 +1,52 @@
+template {
+  name: "TSR 8354"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dragonlance"
+}
+title: "Emperor of Ansalon"
+author {
+  name: "Niles, Douglas"
+}
+date {
+  year: 1993
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "680"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume Three"
+series: "Villains Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

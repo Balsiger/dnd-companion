@@ -1,0 +1,82 @@
+template {
+  name: "WTC 17968"
+  world: "Forgotten Realms"
+  description: "Raging \\Monster{dragons} threaten to destroy civilization on\n                    \\Place{Faer\\hat{u}n}, but that hasn\'t always been the case. There have been\n                    times when \\Monster{humans} and \\Monster{dragons} have worked together to\n                    preserve life and combat evil.\n                    Of course, that doesn\'t happen very often. Most of the time, they just try to\n                    kill each other and steal as much treasure as they can in the process.\n                    This collection of all new stories by \\Place{Forgotten Realms} creator Ed\n                    Greenwood; New York Times best selling authors Elain Cunningham, Richard\n                    Baker, Lisa Smedman, and R.A. Salvatore; The Year of the Rogue Dragons author\n                    Richard Lee Byers; and many more, bring the myriad sides of the\n                    \\Monster{dragons} of \\Place{Far\\hat{u}n} to life.\n                    The year of the Rogue Dragons has only just begun, but the history of that\n                    powerful race of enchanted creatures is long, frightening, and beautiful\n                    indeed."
+}
+title: "Realms of the Dragons"
+subtitle: "The Year of Rogue Dragons"
+author {
+  name: "Kemp, Paul S."
+}
+author {
+  name: "Bolme, Edward"
+}
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Lebow, Jess"
+}
+author {
+  name: "Salvatore, R.A."
+}
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Reid, Thomas M."
+}
+author {
+  name: "Smedman, Lisa"
+}
+author {
+  name: "Whitney-Robinson, Veronica"
+}
+author {
+  name: "Strohm, Keith Francis"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Bassingthwaite, Don"
+}
+author {
+  name: "Byers, Richard Lee"
+}
+editor {
+  name: "Athans, Philip"
+}
+cover {
+  name: "Stawicki, Matt"
+}
+date {
+  year: 2004
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3394"
+  check: 1
+}
+isbn13 {
+}
+pages: 375
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "The Year of Rogue Dragons"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,163 @@
+template {
+  name: "WTC 17745"
+  world: "Generic"
+  description: "Dauntless adventurers arise from among the spirited races of the\n                    \\Monster{warforged}, \\Monster{shifters}, \\Monster{changelings}, and\n                    \\Monster{kalashtar}. These bold explorers hurl themselves into the most\n                    dangerous quests with an unquenchable thirst for fortune and glory.\n                    This supplement for the D&D game provides detailed information on the\n                    psychology, society, culture, behavior, religion, folklore, and other aspects\n                    of the races originally presented in the \\Product{Eberron Campaign\n                    Setting}. In addition, \\Product{Races of Eberron} also provides new\n                    substitution levels, prestige classes, feats, spells, magic items, equipment,\n                    and other options for creating exciting characters ready to explore any\n                    campaign world.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, \\Product{Dungeon Master\'s Guide}, and \\Product{Monster Manual}.\n                    A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Races of Eberron"
+subtitle: "Heroes Ready for Anything, Anywhere"
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+author {
+  name: "Wyatt, James"
+  job: "developer"
+}
+editor {
+  name: "Lyons, Michelle"
+}
+editor {
+  name: "Fitzgerald Gray, Scott"
+}
+editor {
+  name: "Sellers, Janice"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Gregory, Doug"
+}
+illustrator {
+  name: "Joshua the James"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Madureira, Joe"
+}
+illustrator {
+  name: "Percial, Nick"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Sook, Ryan"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Walker, Kev"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Wen, Charlie"
+}
+illustrator {
+  name: "Wimberly, Ronald"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director or RPG R&D"
+}
+manager {
+  name: "Fischer, Joshua C.J."
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3658"
+  check: 4
+}
+isbn13 {
+}
+pages: 192
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Races"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

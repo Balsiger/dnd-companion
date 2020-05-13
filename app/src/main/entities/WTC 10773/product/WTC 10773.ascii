@@ -1,0 +1,55 @@
+template {
+  name: "WTC 10773"
+  description: "\\NPC{Drizzt Do\'Urden} was raised in the underground city of \\Place{Menzoberranzan, home of the \\Monster{drow}---a race of twisted, evil dark \\Monster{elves}. However, \\NPC{Drizzt} fled the \\Place{Underdark} for the surface realm, where he befriended the human barbarian \\NPC{Wulfgar}. Together they battled the most terrible threat ever to ravage \\Place{Icewind Dale}: the \\Monster{white draong} \\NPC{Icingdeath}!\n                    \\bold{Collect}\n                    Proudly display \\NPC{Drizzt}, \\NCP{Wulfgar}, and \\NPC{Icingdeath} with your finest collectable figures\n                    \\bold{Battle}\n                    Play out the legendary battle between \\NPC{Drizzt}, \\NCP{Wulfgar}, and \\NPC{Icingdeath}, or pit the Gargantuan \\Monster{White Dragon} against the best warbands your friends can muster.\n                    \\bold{Roleplay}\n                    Unleash the \\NPCP{Terror of Icewind Dale}---the \\Monster{white dragon} \\NPC{Icingdeath}---upon your party of unsuspecting adventurers.\n                    "
+}
+title: "Legend of Drizzt Scenario Pack"
+leader: "The"
+subtitle: "Some Legends Are Born out of Darkness"
+date {
+  year: 2007
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4350"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4350"
+}
+system: DND_3_5
+audience: ALL
+type: MINIATURE
+style: BOX
+series: "Icons"
+price {
+  currency: "$"
+  number: 4999
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "Drizzt, Wulfgar, and Icingdeath"
+  number: 3
+}
+content {
+  part: MAP
+  description: "Poster sized battle map"
+  number: 1
+}
+content {
+  part: CARD
+  description: "Game stat cards"
+  number: 5
+}
+content {
+  part: BOOKLET
+  description: "Scenario booklet"
+  number: 1
+}
+required_requirements: "WTC 96582"
+layout: FULL_COLOR

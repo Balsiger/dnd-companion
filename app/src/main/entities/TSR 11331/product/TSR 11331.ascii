@@ -1,0 +1,32 @@
+template {
+  name: "TSR 11331"
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "tips & tricks for running a dungeon adventure"
+}
+title: "Wrath of the Minotaur"
+author {
+  name: "Grubb, Jeff"
+}
+date {
+  year: 1999
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1331"
+  check: 2
+}
+isbn13 {
+}
+pages: 48
+system: DND_3RD
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

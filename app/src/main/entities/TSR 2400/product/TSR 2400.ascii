@@ -1,0 +1,37 @@
+template {
+  name: "TSR 2400"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dark Sun"
+  description: "original campaign setting"
+}
+title: "Dark Sun"
+date {
+  year: 1991
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

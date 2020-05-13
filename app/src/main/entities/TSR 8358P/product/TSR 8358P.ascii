@@ -1,0 +1,53 @@
+template {
+  name: "TSR 8358P"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dragonlance"
+  description: "Many years ago, Margaret Weis and Tracy Hickman told the story of how the \\Group{Companions of the Lance} fought to save the world from sliding into darkness, fought to restore the fragile balance of good and evil.\n\nThe war was won. Peace cam to \\Place{Krynn}. The \\Group{Companions of the Lance} become heroes. The river of time flowed on.\n\nThe heroes dreamed of finding safe harbor ion that swift-running river. But the balance of eternal power is ever shifting, ever changing. The \\God{Queen of Darkness} was defeated, not destroyed. Her powers are strong; people are weak. The forget the lessons of the past or close their eyes to them. The river\'s waters grow more turbulent, dangerous.\n\nIt is not, however, the \\Group{Heroes of the Lance} who will be forced to plunge into the raging river of coming war. Their time is past. Their stories are told. It is for them now to hand the future to those younger, stronger.\n\nIt is time to pass the sword --- or the staff --- to those who will become the \\Group{Heroes of the Second Generation}. Or to those who will bring about its doom."
+  short_description: "First book beyond the time frame of the Chronicles and Legends trilogies."
+}
+title: "Second Generation"
+leader: "The"
+subtitle: "The children of heroes. A fabulous quest to retrieve the \\Item{Graystone Gem}. The levend of \\NPC{Raistlin}\'s daughter."
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+cover {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+date {
+  year: 1995
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0260"
+  check: 4
+}
+isbn13 {
+}
+pages: 440
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

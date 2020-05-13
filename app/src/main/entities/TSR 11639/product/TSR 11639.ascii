@@ -1,0 +1,52 @@
+template {
+  name: "TSR 11639"
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "\\large{The Ideal Dungeon Master\'s Aid}\n                    If you\'re a Dungeon Master for the Dungeons & Dragons game, or if you plan to\n                    be, this package is designed just for you.\n                    Inside is a four-panel cardboard screen filled with tables from the\n                    \\Product{Player\'s Handbook} that you\'ll want to reference often, plus a\n                    couple of tables created especially for the screen. When you put the screen\n                    up in front of you, players won\'t be able to see your game notes, and you can\n                    make die rolls without showing everyone else the results. What players will\n                    see is a striking piece of artwork that will put them in the mood for\n                    adventuring.\n                    You also get an eight-page booklet that includes more tables, plus some\n                    diagrams from the \\Product{Dungeon Master\'s Guide}, a Combat Planner form to\n                    help you run combat encounters smoothly, and a page lined with one-inch\n                    squares that you can photocopy and use with miniature figures.\n                    Developed and assembled by Dale Donovan and Kim Mohan."
+}
+title: "Dungeon Master\'s Screen"
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Mohan, Kim"
+}
+date {
+  year: 2000
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1639"
+  check: 7
+}
+isbn13 {
+}
+pages: 8
+system: DND_3RD
+type: ACCESSORY
+style: FOLDER
+producer: "TSR"
+series: "Screen"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: SCREEN
+  description: "four panel"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "envelope"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

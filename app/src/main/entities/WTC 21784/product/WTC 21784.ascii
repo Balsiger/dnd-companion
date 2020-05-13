@@ -1,0 +1,41 @@
+template {
+  name: "WTC 21784"
+  synonym: "DU2"
+  world: "Generic"
+  description: "Your tabletop never looked better! With Dungeon & Dragons Miniatures and this pack of customizable terrain tiles, you can add a new dimension to your D&D adventures. Easy to set up and infinitely expandable, this pack allows you to create the D&D adventures you want to play. Pick up additional packs to create larger, more elaborate encounters!"
+  short_description: "Dungeon Tiles"
+}
+title: "Streets of the Shadow"
+subtitle: "Stalk the Mean Streets of the Urban Dungeon"
+date {
+  year: 2008
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4979"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4979"
+  check: 3
+}
+system: NONE
+type: ACCESSORY
+style: BOOKLET
+series: "Dungeon Tiles"
+price {
+  currency: "$"
+  number: 1195
+  precision: 100
+}
+content {
+  part: CARD
+  description: "dungeon tile"
+  number: 6
+}
+layout: FULL_COLOR

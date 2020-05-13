@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9156"
+  synonym: "AC7"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Master Players Screen / The Spindle"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

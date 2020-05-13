@@ -1,0 +1,52 @@
+template {
+  name: "TSR 9507"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  reference {
+    name: "Dragon 331"
+  }
+  world: "Generic"
+  description: "\\large{The secrets of the \\Place{spirit world} unveiled for the first time!}\n                    There is a world unseen by mortals, a world filled with invisible beings that\n                    whisper words unheard by all---all but the shaman. The shaman alone knows how\n                    to listen for the \\Monster{spirits}, and the shaman alone knows their\n                    secrets.\n                    This 96-page AD&D game accessory introduces three new priest classes with\n                    unique powers and exciting potential. More subtle and versatile than clerics\n                    and wizards, the shamans tap the energies of the mysterious \\Place{spirit\n                    world}, using their extraordinary abilities to further their personal goals,\n                    as well as the agendas of their unseen \\Monster{spirit} patrons.\n                    \\Product{Shaman} offers complete information on the new classes, tips for\n                    incorporating then into established campaigns, new skills, new spells, and a\n                    detailed look at the unseen world of \\Monster{spirits}."
+}
+title: "Shaman"
+date {
+  year: 1995
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+series: "Options"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

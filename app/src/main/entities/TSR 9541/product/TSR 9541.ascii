@@ -1,0 +1,48 @@
+template {
+  name: "TSR 9541"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  world: "Ravenloft"
+  description: "a massive witch hunt"
+}
+title: "Servants of Darkness"
+author {
+  name: "Miller, Steve"
+}
+author {
+  name: "Melka, Kevin"
+}
+date {
+  year: 1998
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0659"
+  check: 6
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}

@@ -1,0 +1,80 @@
+template {
+  name: "Polyhedron 126"
+  world: "Generic"
+  description: "Issue 126 of Polyhedron."
+}
+title: "Polyhedron 126"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Richard Dansky"
+}
+author {
+  name: "Nicky Rea"
+}
+author {
+  name: "Jackie Cassada"
+}
+author {
+  name: "Walker, Craig"
+}
+author {
+  name: "Donnelly, Dan"
+}
+author {
+  name: "Paul Sudlow"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Roger E. Moore"
+}
+author {
+  name: "Woollums, Erica"
+}
+author {
+  name: "Sherrie Miller"
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "The Globe Theater"
+}
+manager {
+  name: "Scott Douglas"
+  job: "director"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "propmaster"
+}
+manager {
+  name: "Anway, Carol"
+  job: "stage hand"
+}
+manager {
+  name: "Lisa Stevens"
+  job: "stage hand"
+}
+date {
+  year: 1997
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "17"
+number: "1"
+series: "Polyhedron"
+price {
+}

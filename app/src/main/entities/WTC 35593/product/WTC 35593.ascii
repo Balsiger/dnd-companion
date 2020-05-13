@@ -1,0 +1,182 @@
+template {
+  name: "WTC 35593"
+  description: "\\Place{Gardmore Abbey}. Once the bastion of a \\Class{paladin} order devoted to \\God{Bahamut}, this sacred monastery has become a monster-infested ruin. According to legend, the \\Class{paladins} brought back an artifact from a far-off campaign and stored it in the abbey for safekeeping, and evil forces assaulted the abbey in a failed bid to recapture it. What the legends don\'t reveal is that this artifact is a \\Item{Deck of Many Things}!\n\nThis Dungeons & Dragons Roleplaying Game adventure lures heroes into the ruins of \\Place{Gardmore Abbey} --- a place warped and twisted by the chaotic forces surrounding the \\Item{Deck of Many Things}, forces that transform the location with each successive visit.\n\nThis box contains the following components:\n\n\\list\n{Four 32-page books describing \\Place{Gardmore Abbey} and its inhabitants, along with quests and encounters}\n{2 double-sided battle maps depicting key adventure locations}\n{2 die-cut sheets of cardstock tokens and dungeon tiles}\n{The \\Item{Deck of Many Things} (22 cards) plus 2 exclusive Treasure Cards}\n"
+}
+title: "Madness at Gardmore Abey"
+subtitle: "Pick a Card, Any Card..."
+author {
+  name: "Wyatt, James"
+  job: "lead designer"
+}
+author {
+  name: "Broadhurst, Creighton"
+  job: "designer"
+}
+author {
+  name: "Townshend, Steve"
+  job: "designer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "additional design and development"
+}
+editor {
+  name: "Clarke Wilkes, Jennifer"
+  job: "lead editor"
+}
+editor {
+  name: "Winters, Chris"
+}
+editor {
+  name: "Clarke Wilkes, Jennifer"
+  job: "managing editor"
+}
+cover {
+  name: "Horsley, Ralph"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Szikszai, Gabor"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Masbruch, Jake"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of D&D and book publishing"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D group manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D lead producer"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "D&D producer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2011
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5872"
+  check: 6
+}
+pages: 128
+system: DND_4
+type: ADVENTURE
+style: BOX
+producer: "WTC"
+price {
+  currency: "$"
+  number: 3999
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Gardmore Abbey"
+  number: 1
+}
+content {
+  part: BOOKLET
+  description: "Enemies and Allies"
+  number: 1
+}
+content {
+  part: BOOKLET
+  description: "Encounters Part 1"
+  number: 1
+}
+content {
+  part: BOOKLET
+  description: "Encounters Part 2"
+  number: 1
+}
+content {
+  part: MAP
+  description: "two-sided battle map"
+  number: 2
+}
+content {
+  part: SHEET
+  description: "Monster tokens"
+  number: 1
+}
+content {
+  part: SHEET
+  description: "Dungeon Tiles"
+  number: 1
+}
+content {
+  part: CARD
+  description: "Deck of Many Things"
+  number: 12
+}
+content {
+  part: CARD
+  description: "Treasure Card"
+  number: 2
+}
+required_requirements: "Rules Compendium"
+optional_requirements: "Heroes of the Fallen Lands"
+optional_requirements: "Heroes of the Forgotten Kingdoms"
+optional_requirements: "Dungeon Master\'s Kit"
+optional_requirements: "Monster Vault"
+optional_requirements: "D&D Dungeon Tiles"
+layout: FULL_COLOR

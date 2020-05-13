@@ -1,0 +1,40 @@
+template {
+  name: "TSR 9378"
+  synonym: "HWQ1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Hollow World"
+  description: "unveil the dark conspiracy behind the emperor\'s death"
+}
+title: "Milenian Scepter"
+leader: "The"
+date {
+  year: 1992
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "386"
+  check: 8
+}
+isbn13 {
+}
+system: DND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

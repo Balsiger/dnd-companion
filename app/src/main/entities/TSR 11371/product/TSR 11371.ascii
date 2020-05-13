@@ -1,0 +1,32 @@
+template {
+  name: "TSR 11371"
+  reference {
+    name: "net"
+  }
+  world: "Star*Drive"
+  description: "detailed information on many star systems"
+}
+title: "Star Compendium: Systems of the Verge"
+author {
+  name: "Eckelberry, David"
+}
+date {
+  year: 1999
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1371"
+  check: 1
+}
+isbn13 {
+}
+pages: 128
+system: ALTERNITY
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 2195
+  precision: 100
+}

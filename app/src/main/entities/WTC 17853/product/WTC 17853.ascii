@@ -1,0 +1,74 @@
+template {
+  name: "WTC 17853"
+  world: "Dragonlance"
+  description: "Across the ages roams an immortal troupe of actors, gifted with fantastical\n  powers and led by a mysterious artiste with a penchant for meddling. Wherever\n  they roam, they encounter magic and monsters and evil that requires taming.\n\n  This is the first anthology based on characters from the extraordinary\n  novella \'\\Product{The Travelling Players of Gilean}\', by Margaret Weis and\n  Aron Eisenberg, which was featured in \\Product{The Best of Tales}, Volume\n  One. This new anthology also features novellas by best-selling\n  \\Place{Dragonlance} authors Douglas Niles, Richard A. Knaak, Paul\n  B. Thompson, and a new collaboration by Jean Rabe and Aron Eisenberg."
+}
+title: "Players of Gilean: Tales from the War of Souls"
+leader: "The"
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Ryan, Fergus"
+}
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Bingle, Donald J."
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Eisenberg, Aron"
+}
+author {
+  name: "Rabe, Jean"
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

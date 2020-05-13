@@ -1,0 +1,56 @@
+template {
+  name: "PZO 3008"
+  synonym: ""
+  world: "Generic"
+  description: "Magic genie lamps and flying carpets. Mischievous fez-wearing monkeys and cities in bottles. These treasures and more await discovery in the Arabian Nights-inspired \\Product{Legacy of Fire} Adventure Path. This 54-card set of beautifully illustrated, full-color item cards allows you to track your greatest treasures in vibrant detail."
+}
+title: "Legacy of Fire"
+subtitle: "GameMastery"
+author {
+  name: "Alvarez, Jeff"
+}
+author {
+  name: "Self, Chris"
+}
+manager {
+  name: "Bulmahn, Jason"
+  job: "product concept and coordination"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2009
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "176"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "176"
+  check: 3
+}
+pages: 54
+system: NONE
+type: CARDS_TYPE
+style: SMALL_BOX
+producer: "Paizo"
+series: "GameMastery Item Cards"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: CARD
+  description: "item card"
+  number: 54
+}
+layout: FULL_COLOR

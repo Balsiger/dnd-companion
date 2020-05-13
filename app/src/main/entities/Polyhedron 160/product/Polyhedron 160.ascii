@@ -1,0 +1,83 @@
+template {
+  name: "Polyhedron 160"
+  world: "Generic"
+  description: "August 2003 issue of polyhedron (together with Dungeon 101)."
+}
+title: "Polyhedron 160"
+subtitle: "Iron Lords of Jupiter"
+author {
+  name: "Richards, Ian"
+}
+author {
+  name: "Stan!"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Lizard"
+}
+editor {
+  name: "Mona, Erik"
+}
+cover {
+  name: "Janssen, Niklas"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Trevas, Christopher"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Adorjany, Attila"
+}
+illustrator {
+  name: "Hendee, David"
+}
+illustrator {
+  name: "Tamai, Tony"
+}
+illustrator {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "Hunter, Kyle S."
+  job: "art direction"
+}
+date {
+  year: 2003
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 49
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "160"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+layout: FULL_COLOR

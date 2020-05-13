@@ -1,0 +1,142 @@
+template {
+  name: "Dungeon 94"
+  world: "Generic"
+  description: "This is issue 94 of the dungeon magazine, together with the\n   \\Product{Polyhedron 153} issue."
+}
+title: "Dungeon 94"
+author {
+  name: "Brunner, Frank"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Johnson, Luke"
+}
+author {
+  name: "Kuciak, Michael T."
+}
+author {
+  name: "Noonan, Dadiv"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Wilber, James"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Mona, Erik"
+  job: "contributing editor"
+}
+editor {
+  name: "Fiorito, Stacie A."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Beet"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "James, Kennon"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Zipse, Craig"
+}
+illustrator {
+  name: "Hunter, Kyle S."
+  job: "art director"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "advertising sales director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffice manager"
+}
+date {
+  year: 2002
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 111
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XVI 4"
+number: "94"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "Monster Tokens #8"
+  number: 1073741824
+}
+layout: FULL_COLOR

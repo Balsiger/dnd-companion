@@ -1,0 +1,46 @@
+template {
+  name: "WTC 9598174"
+  world: "Forgotten Realms"
+  description: "\\emph{\\NPC{Kaanyr Vhok}\'s howl of anguish and betrayal made \\NPC{Aliisza} clamp her hands over her ears.}\n                    The \\Monster{half-demon} who once led the \\Group{Scoured Legion} finds himself exactly where he wanted to be --- in the heart of heaven --- under exactly the wrong circumstances --- bound by divine oath to the whims of an angel.\n                    \\emph{\\NPC{Aliisza} laughed. \'When all is said and done, I still serve one person only.\' Me, she silently added.}\n                    Tricked by her lover into a torturous imprisonment in heaven, the \\Monster{succubus} \\NPC{Aliisza}\'s learned the folly of depending on \\Monster{demons} to keep her best interests at heart. Now she\'s looking forward to teaching him the same hard-earned lesson.\n                    Delve into the endless expanse of the \\Place{Forgotten Realms} multiverse in the continuation of an epic adventure that crosses the planes of existence"
+  short_description: "The Empyrean Odyssey, Book II"
+}
+title: "Fractured Sky"
+leader: "The"
+subtitle: "The Empyrean Odyssey"
+author {
+  name: "Reid, Thomas M."
+}
+cover {
+  name: "Nentrup, Jeff"
+}
+date {
+  year: 2008
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4807"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4807"
+  check: 9
+}
+pages: 312
+audience: UNKNOWN
+type: NOVEL
+number: "Book II"
+series: "The Empyrean Odyssey"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

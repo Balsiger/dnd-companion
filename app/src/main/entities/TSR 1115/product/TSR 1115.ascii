@@ -1,0 +1,75 @@
+template {
+  name: "TSR 1115"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Generic"
+  description: "A complete pack for thieves."
+}
+title: "Thief\'s Pack"
+date {
+  year: 1994
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0042"
+  check: 3
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: SCREEN
+  description: "thief\'s"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "metal figures"
+  number: 3
+}
+content {
+  part: BOOKLET
+  description: "painting guides"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "instruction book"
+  number: 1073741824
+}
+content {
+  part: DICE
+  number: 7
+}
+content {
+  part: SHEET
+  description: "Character Record"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "pencil"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "more"
+  number: 1073741824
+}

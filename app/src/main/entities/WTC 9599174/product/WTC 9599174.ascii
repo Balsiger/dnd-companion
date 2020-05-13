@@ -1,0 +1,58 @@
+template {
+  name: "WTC 9599174"
+  world: "Forgotten Realms"
+  description: "\\Monster{Giants} are little written about, and this trilogy, written by New\n                    York Times best-selling author Troy Denning ten years ago, was the first to\n                    detail them. \\Product{The Titan of Twilight} is the third novel in a trilogy\n                    that deals with the \\Monster{giants} of the \\Place{Forgotten Realms}\n                    setting. This reissue features new cover art."
+}
+title: "Titan of Twilight"
+leader: "The"
+author {
+  name: "Denning, Troy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3798"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "Twilight Giants"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

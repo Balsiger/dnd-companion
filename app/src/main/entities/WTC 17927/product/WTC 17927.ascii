@@ -1,0 +1,69 @@
+template {
+  name: "WTC 17927"
+  world: "Generic"
+  description: "Inside you\'ll discover intimidating walls, comfortable cottages, a bustling\n                    smithy, and other three-dimensional structures. This accessory for the D&D\n                    game provides a small village of highly detailed cardstock buildings, walls,\n                    and other structures for you to assemble and use in any game. Scaled for use\n                    with Dungeons & Dragons Miniatures, each building may be used individually or\n                    combined with others. Full-color exteriors enhance your game and capture your\n                    players\' imagination.\n                    Originally developed for the Fold-Up Paper Models feature on the official D&D\n                    website, these models are the third in a new series of materials created to\n                    help you add flavor and functionality to your D&D game."
+}
+title: "Map Folio 3D"
+subtitle: "Set the Scene for Adventure"
+author {
+  name: "Kauth, Dennis"
+}
+author {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Kauth, Dennis"
+  job: "fold-up paper model design"
+}
+illustrator {
+  name: "Gamble, Todd"
+  job: "fold-up paper model design"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic design"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+manager {
+  name: "Perkins, Christoper"
+  job: "design manager"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3437"
+  check: 9
+}
+isbn13 {
+}
+pages: 32
+system: DND_3RD
+type: ACCESSORY
+style: PAPERBACK
+series: "Map Folio"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "paper fold-ups"
+  number: 32
+}

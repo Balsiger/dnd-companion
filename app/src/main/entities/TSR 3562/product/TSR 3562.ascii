@@ -1,0 +1,50 @@
+template {
+  name: "TSR 3562"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "complete starter edition to role play in the 25th Century"
+}
+title: "XXCV: The 25th Century"
+date {
+  year: 1991
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "847"
+  check: 1
+}
+isbn13 {
+}
+system: XXVC
+type: BOARD_GAME
+style: BOX
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 3
+}
+content {
+  part: CARD
+  description: "sheets"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "maps"
+  number: 1073741824
+}

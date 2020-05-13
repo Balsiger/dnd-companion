@@ -1,0 +1,55 @@
+template {
+  name: "WTC 17982"
+  world: "Dragonlance"
+  description: "This slip-covered gift set contains the three New York Times best-selling\n  titles that make up the epic \\Product{War of Souls trilogy}: \\Product{Dragons\n  of a Fallen Sun}, \\Product{Dragons of a Lost Star}, and \\Product{Dragons of a\n  Vanished Moon}. Authored by \\Place{Dragonlance} saga cocreators Margaret Weis\n  & Tracy Hickman, these titles each hit multiple best-seller lists upon\n  initial release."
+}
+title: "War of Souls Gift Set"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: BOX
+producer: "WTC"
+series: "War of Souls"
+price {
+  currency: "$ "
+  number: 2399
+  precision: 100
+}

@@ -1,0 +1,42 @@
+template {
+  name: "DMA 000065"
+}
+title: "Verlagsprogramm 2000 millenium"
+author {
+  name: "Immig, Michael"
+}
+author {
+  name: "Simon, Robert"
+}
+editor {
+  name: "Don-Schauen, Florian"
+}
+editor {
+  name: "Simon, Robert"
+}
+illustrator {
+  name: "Berszuck, Ralf"
+  job: "Satz & Druck"
+}
+date {
+  year: 2000
+}
+isbn {
+}
+isbn13 {
+}
+pages: 54
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+producer: "Fantasy Productions"
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,57 @@
+template {
+  name: "PZO 3011"
+  synonym: ""
+  world: "Generic"
+  description: "What \\Monster{dragon}\'s hoard or palace treasury is complete without a trove of magical weapons? And what self-respecting hero leaves home without his trusty instruments of adventure? Weapons are a mainstay of any fantasy roleplaying game, and this 54-card set of beautifully illustrated, full-color item cards allows you to track your treasured weapons in vibrant detail."
+  short_description: "GameMastery Item Cards"
+}
+title: "Weapons Locker"
+subtitle: "Game Mastery"
+author {
+  name: "Alvarez, Jeff"
+}
+author {
+  name: "Self, Chris"
+}
+manager {
+  name: "Bulmahn, Jason"
+  job: "product concept and coordination"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2009
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "212"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "212"
+  check: 8
+}
+pages: 54
+system: NONE
+type: CARDS_TYPE
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Item Cards"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: CARD
+  description: "Item"
+  number: 54
+}
+layout: FULL_COLOR

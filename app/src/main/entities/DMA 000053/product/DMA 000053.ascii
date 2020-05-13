@@ -1,0 +1,20 @@
+template {
+  name: "DMA 000053"
+  reference {
+    name: "net"
+  }
+}
+title: "Power Reserve Theme Deck"
+date {
+  year: 1999
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+system: POKEMON
+audience: ALL
+type: BOARD_GAME
+price {
+}

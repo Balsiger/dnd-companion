@@ -1,0 +1,48 @@
+template {
+  name: "TSR 9517"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Dragonlance"
+  description: "rules for playing the bravest freedom fighters"
+}
+title: "Heroes of Defiance"
+author {
+  name: "Miller, Steve"
+}
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0656"
+  check: 1
+}
+isbn13 {
+}
+pages: 144
+system: ADND_REVISED
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 1073741824
+}

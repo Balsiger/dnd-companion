@@ -1,0 +1,58 @@
+template {
+  name: "WTC 88619"
+  world: "Forgotten Realms"
+  description: "One \\Monster{Dark Elf}.\n                    Two Enchanted Blades.\n                    One Unknown Enemy.\n                    And a Horde of Invaders.\n                    It\'s been a long time since \\NPC{Drizzt Do\'Urden} has had to fight\n                    alone. When a ravaging mob of vicious \\Monster{orcs} overruns the\n                    \\Place{North} and his friends are washed away in its evil tide, he must take\n                    matters into his own deadly hands.\n                    An all-new trilogy takes \\NPC{Drizzt} to the edge . . . and beyond."
+}
+title: "Thousand Orcs"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2804"
+  check: 2
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book I"
+series: "The Hunter\'s Blades Trilogy"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

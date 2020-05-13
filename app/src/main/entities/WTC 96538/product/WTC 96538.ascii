@@ -1,0 +1,92 @@
+template {
+  name: "WTC 96538"
+  world: "Dragonlance"
+  description: "This newest anthology focuses on the lives and ways of \\Monster{dragons} in\n  the era following the end of the New York Times best-selling \\Product{War of\n  Souls} trilogy by Margaret Weis and Tracy Hickman. Edited by Margaret Weis\n  and filled with a dozen stories from both well-known \\Place{Dragonlance}\n  authors and a few newcomers, this is the first anthology to feature stories\n  that take place in the current \\Place{Dragonlance} time period.\n\n  Contents\n\n  \\list\n  {Introduction by Margaret Weis}\n  {\'Osuin\'s Treasure\' by Mark Sehestedt}\n  {\'Loyalty\' by Richard A. Knaak}\n  {\'The Dragon\'s Child\' by Nancy Varian Berberick}\n  {\'Four Ends\' by John Helfers}\n  {\'At the Water\'s Edge\' by Jamie Chambers}\n  {\'Lake of Death\' by Dan Willis}\n  {\'The Dragonslayers\' by Douglas W. Clark}\n  {\'Inventory\' by Jean Rabe}\n  {\'Special Delivery\' by Jeff Grubb}\n  {\'Marine Skies\' by Lucien Soulban}\n  {\'Wyrm\'s Claw Inn\' by Miranda Horner}\n  {\'Coin of Adament\' by Kevin Stein}\n  {\'The Box\' by Paul B. Thompson}\n  {\'The Albino\' by Douglas Niles}"
+}
+title: "Search for Power: Dragons from the War of Souls"
+leader: "The"
+author {
+  name: "Sehestedt, Mark"
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "Helfers, John"
+}
+author {
+  name: "Chambers, Jamie"
+}
+author {
+  name: "Willis, Dan"
+}
+author {
+  name: "Clark, Douglas W."
+}
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Soulban, Lucien"
+}
+author {
+  name: "Horner, Miranda"
+}
+author {
+  name: "Stein, Kevin"
+}
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Niles, Douglas"
+}
+editor {
+  name: "Weis, Margaret"
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,41 @@
+template {
+  name: "WTC 2155000"
+  world: "Generic"
+  description: "In an ancient time of magic and monsters, the factions of light and darkness battle for the fate of the world. With unexplored ruins and dread dungeons, bold adventurers clash with horrific creatures--including \\Monster[Dragon]{dragons}, \\Monster{demons}, and \\Monster{umber hulks}.\n                    Create classic battles when you collect all 60 miniatures of the \\Product{Dungeon of Dread} set. You build your warband. You challenge your friends. You conquer the dungeons with the \\Product{D&D Miniatures Game}."
+  short_description: "A booster pack for the 4th edition miniature game."
+}
+title: "Dungeon of Dread Booster Pack"
+subtitle: "Dare the Darkness"
+date {
+  year: 2008
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4755"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4755"
+  check: 3
+}
+system: DND_4
+audience: ALL
+type: BOOSTER_PACK
+style: MEDIUM_BOX
+series: "D&D Miniatures"
+price {
+  currency: "$"
+  number: 1499
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}
+required_requirements: "WTC 2155100"
+layout: FULL_COLOR

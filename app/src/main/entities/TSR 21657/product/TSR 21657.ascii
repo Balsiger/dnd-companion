@@ -1,0 +1,35 @@
+template {
+  name: "TSR 21657"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "Jarlaxle gets his greedy hands on the Crystal Shard"
+}
+title: "Servant of the Shard"
+author {
+  name: "Salvatore, R.A."
+}
+date {
+  year: 2000
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1657"
+  check: 5
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+series: "Dark Elf Chronicles"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}

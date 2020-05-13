@@ -1,0 +1,129 @@
+template {
+  name: "WTC 17929"
+  world: "Forgotten Realms"
+  description: "Travelers to the distant lands beyond the \\Place{Lake of Steam} and the\n                    \\Place{Firesteap Mountains} return with incredible tales of the people and\n                    places they\'ve encountered or avoided. From the \\Group{magehounds of\n                    \\Place{Halruaa}} and \\Monster{wemics} of the \\Place{Shaar} to the\n                    \\Monster{halflings} of \\Place{Luiren} and the \\Monster{Crinti} of\n                    \\Monster{Dambrath}, the denizens of the region are as varied as their\n                    homelands. Discover each of the many realms of the \\Place{Shining South},\n                    along with the magic and monsters native to this diverse corner of the\n                    \\Product{Forgotten Realms} game setting.\n                    \\list\n                    {9 new prestige classes}\n                    {33 new spells}\n                    {3 short adventures}"
+}
+title: "Shining South"
+subtitle: "A Wondrous Land of Ancient Cultures and Fallen Empires"
+author {
+  name: "Reid, Thomas M."
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "developer"
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Wood, Sam"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Hawkes, Chris"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Rush, Christopher"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Locke, Vince"
+}
+illustrator {
+  name: "Dubisch, Mike"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Jason"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Finch, Andrew, J."
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Joshua C.J."
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3492"
+  check: 1
+}
+isbn13 {
+}
+pages: 192
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

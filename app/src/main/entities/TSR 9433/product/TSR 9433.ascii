@@ -1,0 +1,83 @@
+template {
+  name: "TSR 9433"
+  synonym: "ALQ4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Al-Qadim"
+  description: "\\large{Exciting Adventures in the \\Place{City of Brass} And Other\n                    \\Monster{Genie} Lands!}\n                    Revealed within are the greatest secrets of the \\Monster{genies}: their\n                    magics, their rulers, and their homelands. From the \\Place{Citadel of Ice and\n                    Steel} to the \\Place{Great Dismal Delve}, the works of \\Monster{geniekind}\n                    are as wondrous as they are magnificent.  Tour the \\Place{City of Brass},\n                    from its golden towers to its brazen streets, foil the evil \\Monster{yak men}\n                    and their \\Monster{dao} servants, travel on the desert whirlwinds of the\n                    \\Monster{jann}. Learn the legends and secret history of the \\Monster{genies},\n                    their cities, their foibles, and their feuds.\n                    \\Product{Secrets of the Lamp} includes a 64-page sourcebook about\n                    \\Monster{genies}, a 32-page booklet of adventures set in \\Place{Zakhara} and\n                    the \\Place{City of Brass}, a full-color poster map, six cards showing details\n                    of the \\Place{City}, and four \\Product{Monstrous Compendium} pages that\n                    introduce new \\Monster{genies} and other elemental creatures."
+}
+title: "Secrets of the Lamp"
+author {
+  name: "Baur, Wolfgang H."
+}
+editor {
+  name: "Pickens, Jon"
+}
+cover {
+  name: "Heyer, Carol"
+}
+cartographer {
+  name: "III, David Sutherland"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+date {
+  year: 1993
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "647"
+  check: 6
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Genie Lore"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Adventure Book"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "color"
+  number: 6
+}
+content {
+  part: SHEET
+  description: "Monstrous Compendium insert"
+  number: 4
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

@@ -1,0 +1,44 @@
+template {
+  name: "TV 75001"
+  world: "None"
+  description: "The Epic battle between Good and Evil... since time in memoriam the entities of darkness has slithered and crept through the World. They conceal themselves withing the liminal, the place in between light and dark, until a weary believer loses enough faith to allow them entrance. Then they attack, forcing themselves into the flesh, quashing the host\'s spirit until they have control. Opening their fleshly eyes, they see in a new light, and walk among the living. However one such malevolent being is known above the rest, feared throughout time ... \\emph{\'And he asked him, What is thy name? And he answered, saying, My name is Legion: for we are many.\'} He comes even now... pray that your inner light waxes bright to fend off the encroaching evil.\n\n\\Product{Possession}, the newest game from Toy Vault, is a deceptively fun party game that lets YOU battle the onslaught of Legion. As the weeks roll past, you must use your wits and special talents to keep Legion\'s evil essence from spreading throughout the group. With Holy Men, the Parishioners, and the outcast Shaman, you stand in the path of evil, preventing the Old One from gaining the power needed to bring forth his demonic gathering. Hope that you seek Him out in time!"
+}
+title: "Possession"
+author {
+  name: "Howington, Walt"
+}
+cover {
+  name: "Gonzalez, Raul"
+}
+illustrator {
+  name: "Gonzalez, Raul"
+}
+date {
+  year: 2007
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: CARD_GAME
+style: SMALL_BOX
+producer: "Toy Vault"
+price {
+  currency: "$"
+  number: 1999
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "instructions"
+  number: 1
+}
+content {
+  part: CARD
+  description: "playing cards"
+  number: 46
+}
+layout: FULL_COLOR

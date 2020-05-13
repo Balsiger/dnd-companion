@@ -1,0 +1,31 @@
+template {
+  name: "TSR 2132"
+  synonym: "MC14"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "A lot of monsters."
+}
+title: "Monstrous Compendium"
+leader: "Fiend Folio Appendix"
+date {
+  year: 1992
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: RULEBOOK
+producer: "TSR"
+number: "14"
+series: "Monster Manual"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

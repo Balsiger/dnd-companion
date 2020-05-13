@@ -1,0 +1,37 @@
+template {
+  name: "TSR 2522"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Savage Coast"
+  description: "Orc\'s Head Peninsula"
+}
+title: "Orc\'s Head Gazetteer"
+author {
+  name: "Rea, Nicky"
+}
+date {
+  year: 1996
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0387"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1595
+  precision: 100
+}

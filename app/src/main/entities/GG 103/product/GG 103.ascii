@@ -1,0 +1,26 @@
+template {
+  name: "GG 103"
+  description: "One ugly, horse like miniature."
+}
+title: "Minotaur Scout Unarmed & Unarmoured"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "Global Games Europe"
+series: "Legendary Creatures"
+price {
+  currency: "DM "
+  number: 2000
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}

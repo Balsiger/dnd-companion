@@ -1,0 +1,42 @@
+template {
+  name: "TSR 2439"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  world: "Dark Sun"
+  description: "nation of halflings, the Windriders, Wanderers Chronciles"
+}
+title: "Windriders of the Jagged Cliffs"
+leader: "The"
+author {
+  name: "Cook, Monte J."
+}
+date {
+  year: 1996
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0169"
+  check: 1
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

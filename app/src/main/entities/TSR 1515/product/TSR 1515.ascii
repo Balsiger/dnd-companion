@@ -1,0 +1,51 @@
+template {
+  name: "TSR 1515"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "Generic"
+  description: "dices for the game"
+}
+title: "Dragon Dice Kicker Pack 8: Treefolk"
+author {
+  name: "Olmesdahl, Bill"
+}
+date {
+  year: 1998
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0703"
+  check: 7
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOOSTER_PACK
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: DICE
+  description: "randomly assorted"
+  number: 8
+}
+content {
+  part: BOOKLET
+  description: "rules"
+  number: 1073741824
+}

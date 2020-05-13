@@ -1,0 +1,26 @@
+template {
+  name: "DMA 000033"
+  world: "Generic"
+  description: "When the fabled \\Item{Star of Kolhapur} gem is stolen, \\NPC{Raja Shivaji} is\n                    rightfully incensed. He blames the \\Group{Thugs}, vicious murdering\n                    worshippers of the black goddess \\God{Kali}. But the \\Group{Thugs} are not\n                    the only dangers in this land. Fiendish spirits wander the city, thieves\n                    prowl the streets of \\Place{Kolhapur}, and something even more sinister\n                    emerges at night..."
+}
+title: "Star of Kolhapur"
+leader: "The"
+date {
+  year: 1997
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "RPGA"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

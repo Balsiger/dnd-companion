@@ -1,0 +1,34 @@
+template {
+  name: "TSR 21375"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "comprehensive strategy guide for Magic: The Gathering"
+}
+title: "Official Classic Sixth Edition Game Strategy Guide"
+author {
+  name: "Randy Buehler"
+}
+date {
+  year: 1999
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1375"
+  check: 4
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "Strategy Guide"
+price {
+  currency: "$"
+  number: 1699
+  precision: 100
+}

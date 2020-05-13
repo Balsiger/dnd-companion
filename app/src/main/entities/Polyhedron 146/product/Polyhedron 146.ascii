@@ -1,0 +1,60 @@
+template {
+  name: "Polyhedron 146"
+  world: "Generic"
+  description: "Issue 146 of Polyhedron."
+}
+title: "Polyhedron 146"
+author {
+  name: "Wise, David"
+}
+author {
+  name: "Stephen Radney-Macfarland"
+}
+author {
+  name: "Matthew Sernett"
+}
+author {
+  name: "Matt Hancock"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Ian Richards"
+}
+author {
+  name: "Wes Nicholson"
+}
+author {
+  name: "van Dam, Ann"
+}
+author {
+  name: "Simon Taylor"
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "Gibson, Ed"
+}
+illustrator {
+  name: "Vince Locke"
+}
+date {
+  year: 2001
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "21"
+number: "1"
+series: "Polyhedron"
+price {
+}

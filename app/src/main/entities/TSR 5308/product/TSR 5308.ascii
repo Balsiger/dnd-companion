@@ -1,0 +1,18 @@
+template {
+  name: "TSR 5308"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "AD&D Heroes"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

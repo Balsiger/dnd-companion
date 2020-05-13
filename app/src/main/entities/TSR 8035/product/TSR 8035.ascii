@@ -1,0 +1,42 @@
+template {
+  name: "TSR 8035"
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "complete product listing"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+}
+title: "Tainted Sword"
+leader: "The"
+author {
+  name: "Heinrich, D.J."
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "395"
+  check: 7
+}
+isbn13 {
+}
+system: DND_1ST
+audience: ALL
+type: NOVEL
+number: "Volume One"
+series: "Penhalion Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

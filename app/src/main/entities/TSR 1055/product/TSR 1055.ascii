@@ -1,0 +1,94 @@
+template {
+  name: "TSR 1055"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{The Endless Waste}\n                    Between East and West, between Earth and Sky, lies the \\Place{Endless\n                    Waste}. Barren and desolate, this windswept land forms the barrier between\n                    the feuding kingdoms of \\Place{Faer\\hat{u}n} and the ancient empires of\n                    \\Place{Kara-Tur}. The eternal steppe is home only to hardy, nomadic horsemen\n                    who travel its secret paths.\n                    This region, long ignored by its neighbors, is about to erupt in the\n                    gloodiest conflict ever to sweep across the \\Place{Forgotten\n                    Realms}. \\NPC{Yamun Khahan}, Emperor of the \\Group{Tuigan}, has united the\n                    barbarian tribes into an unstoppable horde. Already he rules the steppes,\n                    from the \\Place{Cave of a Thousand Gods} to the \\Place{Valley of the\n                    Dog-Men}. Driven to conquer, \\NPC{Yamun Khahan} looks both east and west, and\n                    sees a world ripe for harvest.\n                    \\Product[TSR 1055]{The Horde} Campaign Set includes:\n                    \\list\n                    {Two 64-page encyclopedias describing the \\Place{Endless Waste} and\n                    the barbarians who live there;}\n                    {Four full-color maps, showing the \\Place{Endless Waste} from\n                    \\Place{Rashemen} and \\Place{Thay} in the west to \\Place{Shou Lung} in\n                    the east, plus the \\Place{Caliphate of Semphar} and many other\n                    locales.}\n                    {Eight pages of monster descriptions ready to be added to your\n                    Monstrous Compendium;}\n                    {Twenty-four individual hand-outs with adventure information,\n                    background on the region, and illustrations of the nomadic barbarians;}\n                    {A clear plastic measuring overlay.}"
+}
+title: "Horde"
+leader: "The"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+editor {
+  name: "Winter, Steve"
+}
+cover {
+  name: "Elmore, Larry"
+}
+cover {
+  name: "Chaffee, Douglas"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Chaffee, Douglas"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "868"
+  check: 4
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "The Horde, Volume I"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Horde, Volume II"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 4
+}
+content {
+  part: PAGE
+  description: "monstrous compendium"
+  number: 16
+}
+content {
+  part: SHEET
+  description: "hand-outs"
+  number: 12
+}
+content {
+  part: OVERLAY
+  description: "clear plastic measuring"
+  number: 1073741824
+}

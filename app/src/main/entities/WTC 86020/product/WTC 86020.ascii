@@ -1,0 +1,36 @@
+template {
+  name: "WTC 86020"
+  world: "Dragonlance"
+  description: "For the first time ever, the \\Place{Dragonlance} novel that started the\n  entire series, \\Product{Dragons of Autumn Twilight}, has been made available\n  in a format specifically targeted at young readers. The novel has been\n  divided into two volumes, \\Product{A Rumor of Dragons} and \\Product{Night of\n  the Dragons}, that are sized to fit the young reader market. These titles\n  contain brand new cover art and interior art and are the first in a series of\n  young reader titles that will be adapted from the remaining novels in the\n  \\Product{Dragonlance Chronicles} trilogy."
+}
+title: "Night of the Dragons"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 2003
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3090"
+  check: 10
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Young Reader Dragonlance Chronicles"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

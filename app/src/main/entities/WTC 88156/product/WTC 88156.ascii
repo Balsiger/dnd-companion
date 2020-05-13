@@ -1,0 +1,181 @@
+template {
+  name: "WTC 88156"
+  world: "Generic"
+  description: "This supplement presents an inexhaustible source of new rules to introduce\n                    into your Dungeon & Dragons game. Inside are ideas, options, and alternatives\n                    to the standard D&D rules you can choose from to fit your campaign\'s style of\n                    play. From variant classes, races, feats, and abilities to alternate\n                    spellcasting systems, combat and campaign options, \\Product{Unearthed Arcana}\n                    offers a tremendous array of material for you to explore.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, \\Product{Dungeon Matser\'s Guide}, and \\Product{Monster Manual}.\n                    A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Unearthed Arcana"
+subtitle: "Unlock a Wellspring of Knowledge"
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Redman, Rich"
+}
+author {
+  name: "Finch, Andrew"
+  job: "additional design"
+}
+author {
+  name: "Kenson, Steve"
+  job: "additional design"
+}
+author {
+  name: "Ryan, Charles"
+  job: "additional design"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "additional design"
+}
+author {
+  name: "Stark, Ed"
+  job: "additional design"
+}
+author {
+  name: "Tweet, Jonathan"
+  job: "additional design"
+}
+author {
+  name: "Wiker, JD"
+  job: "additional design"
+}
+author {
+  name: "Wyatt, James"
+  job: "additional design"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+}
+editor {
+  name: "Ryan, Charles"
+}
+editor {
+  name: "Kim Mohan"
+  job: "managing editor"
+}
+cover {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Hudnut, David"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Kovacs, Doug"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "McClain, Dennis Crabapple"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Pavelec, James"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Roach, David"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Tappin, Stephen"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Thompson, Ben"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+typographer {
+  name: "Murin, Dawn"
+  job: "graphic designer"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Sakamoto, Jay"
+  job: "image technician"
+}
+manager {
+  name: "Stark, Ed"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Josh Fisher"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 224
+system: DND_3RD
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Player Guide"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

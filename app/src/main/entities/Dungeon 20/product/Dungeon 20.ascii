@@ -1,0 +1,98 @@
+template {
+  name: "Dungeon 20"
+  world: "Generic"
+  description: "This is issue 20 of the dungeon magazine."
+}
+title: "Dungeon 20"
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Findley, Nigel"
+}
+author {
+  name: "Maxwell, Randy"
+}
+author {
+  name: "Boucher, Grant"
+}
+author {
+  name: "Boucher, David"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Brown, Anne K."
+  job: "editorial assistant"
+}
+editor {
+  name: "Walter, Kim"
+  job: "editorial assistant"
+}
+cover {
+  name: "Horne, Daniel"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Sutherland, Dave"
+}
+illustrator {
+  name: "Menges, Jeff"
+}
+illustrator {
+  name: "Jaquays, Paul"
+}
+illustrator {
+  name: "Nunis, Allen"
+}
+illustrator {
+  name: "Svikel, Lori"
+  job: "art director"
+}
+illustrator {
+  name: "Hanchette, Paul"
+  job: "art director"
+}
+typographer {
+  name: "MacDonald, Kathleen C."
+}
+manager {
+  name: "Cook, Mike"
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1989
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "IV 2"
+number: "20"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

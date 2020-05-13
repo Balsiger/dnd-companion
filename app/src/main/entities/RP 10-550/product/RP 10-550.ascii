@@ -1,0 +1,25 @@
+template {
+  name: "RP 10-550"
+  world: "Forgotten Realms"
+  description: "Ral Partha proudly presents an official \\Place{Forgotten Realms} boxed\n                    set. Having worked closely with the excellent staff at Ral Partha during the\n                    evolution of this set, TSR believes these to be the finest miniatures\n                    possible for the \\Place{Forgotten Relmas} campaign setting."
+}
+title: "Heroes"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+producer: "Ral Partha"
+price {
+}
+content {
+  part: MINIATURE
+  description: "pewter"
+  number: 10
+}

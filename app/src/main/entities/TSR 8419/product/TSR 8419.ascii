@@ -1,0 +1,64 @@
+template {
+  name: "TSR 8419"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "When the \\Group{Harpers} judged the \\NPC{Nameless Bard} responsible for the\n                    death of his apprentices, they sentenced him to exile and obscurity. Now the\n                    \\Group{Harpers} are reconsidering their decision, but with the arrival of the\n                    monster \\Monster{Grypht}, \\NPC{Nameless}\'s new trial dissolves in a string of\n                    disappearances and murder.\n                    It is up to the bard\'s friends, \\NPC{Alias} the swordswoman, \\NPC{Akabar} the\n                    mage, \\NPC{Dragonbait} the paladin, and \\NPC{Ruskettle} the thief, to prove\n                    one enemy is behind all the chaos---the ancient evil god, \\God{Moander the\n                    Darkbringer}.\n                    Unless \\NPC{Alias} and her companions can find \\NPC{Nameless} and convince\n                    him to sacrifice some of his precious power, \\God{Moander} will return to\n                    claim the \\Place{Realms}.\n                    \\Product{Song of Saurials} is Kate Novak and Jeff Grubb\'s exciting conclusion\n                    to the \\Product{Finder\'s Stone Trilogy}, set in the \\Product{Forgotten\n                    Realms} fantasy world from TSR, Inc."
+}
+title: "Song of Saurials"
+author {
+  name: "Novak, Kate"
+}
+author {
+  name: "Grubb, Jeff"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+date {
+  year: 1991
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "060"
+  check: 5
+}
+isbn13 {
+}
+pages: 315
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Three"
+series: "Finder\'s Stone Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

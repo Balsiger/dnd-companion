@@ -1,0 +1,53 @@
+template {
+  name: "TSR 9549"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  world: "Generic"
+  description: "With the coming of the Dragon of Shades, an Age of the World came to an\n                    apocalyptic end. Centuries passed, and civilization limped back into the\n                    light of knowledge. Now a new Age has dawned, as the wizards of the present\n                    seek to discover the lost arcane art of the past know only as The Language\n                    Primeval!\n                    \\Product{College of Wizardry} presents a complete guild of magic that can be\n                    placed \\emph{in its entirety} into any campaign world. This 96-page booklet\n                    contains:\n                    \\list\n                    {The secret history of the \\Place{College of Wizardry}, \'Mathghamhna\'\n                    in the Elder Tongue.}\n                    {A complete listing of the college members, including descriptions and\n                    stats for the chancellor and regents of this \\Group{Arcane Order}.}\n                    {Directions on how to fit the \\Place{College of Wizardry} into any\n                    of TSR\'s currently published worlds.}\n                    {Rules for enrolling PC wizards into the college at any level,\n                    including as apprentices.}\n                    {A full-color poster showing the three towers of \\Place{Mathghamhna}.}\n                    {New spells and magical items.}\n                    {Two unique magical power sources: \\Item{The Spellcrux} and\n                    \\Item{The Language Primeval}.}\n                    {Four mini-adventures for characters who range from apprentice to\n                    11th level.}\n                    {Companion accessory to \\Product{Den of Thieves}.}"
+}
+title: "College of Wizardry"
+date {
+  year: 1998
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0717"
+  check: 7
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+series: "Expansion"
+price {
+  currency: "$"
+  number: 1595
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "color"
+  number: 1073741824
+}

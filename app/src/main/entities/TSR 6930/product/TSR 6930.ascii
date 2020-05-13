@@ -1,0 +1,35 @@
+template {
+  name: "TSR 6930"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Generic"
+  description: "reference guide to the Avengers"
+}
+title: "Avengers Roster"
+author {
+  name: "TSR Staff"
+}
+date {
+  year: 1998
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1231"
+  check: 6
+}
+isbn13 {
+}
+pages: 128
+system: MARVEL_SUPER_HEROES
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}

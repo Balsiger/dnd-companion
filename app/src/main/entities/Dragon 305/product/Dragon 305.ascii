@@ -1,0 +1,173 @@
+template {
+  name: "Dragon 305"
+  world: "Generic"
+  description: "Issue 305 of the magazine. Urban Adventures issue."
+}
+title: "Dragon 305"
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Dent, Greg"
+}
+author {
+  name: "Four, Johnny"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Holian, Gary"
+}
+author {
+  name: "Hollingsworth, Brandon"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+}
+author {
+  name: "Mearls, Michael"
+}
+author {
+  name: "Moscatello, Rick"
+}
+author {
+  name: "Redman, Rich"
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Wyatt, James"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+editor {
+  name: "Williams, Penny"
+  job: "editorial assistance"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Alexander, Rob"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Laubenstein, Jeff"
+}
+illustrator {
+  name: "Lee, Tim"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "McClella, David"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Sweet, Justin"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "senior production designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2003
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 10"
+number: "305"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "battle map"
+  number: 1073741824
+}

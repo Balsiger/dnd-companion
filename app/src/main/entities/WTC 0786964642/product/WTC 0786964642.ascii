@@ -1,0 +1,166 @@
+template {
+  name: "WTC 0786964642"
+  category: "Adventure"
+  world: "Forgotten Realms"
+  description: "The people of \\Place{Icewind Dale} have long stood against the perils of the \\Place{North}. For most of these folk, the events that shook the region a hundred years ago are now distant memories. But what was defeated was not destroyed. Now, as evil forces converge on \\Place{Ten Towns}, the people of the North face their greatest trial yet. Fortunately, they won\'t have to face it alone.\n\n\\Product{Legacy of the Crystal Shard} is a Dungeons & Dragons Roleplaying Game adventure that can be played using rules fro 3rd Edition (v.3.5), 4th Edition, and the D&D Next playtest. Monster and NPC statistics needed to run the adventure for these editions can be downloaded for free at DunongesandDragons.com/sundering.\n\nPlay this adventure every Wednesday at D&D Encounters and help shape the future of the \\Place{Forgotten Realms} setting!"
+}
+title: "Legacy of the Crystal Shard"
+subtitle: "Evil Stirs in Icewind Dale"
+author {
+  name: "Salvatore, R.A."
+}
+author {
+  name: "Ludwig, Jeffrey"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Sernett, Matthew"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Bellisle, Eric"
+}
+illustrator {
+  name: "Carr, Sam"
+}
+illustrator {
+  name: "Crut"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Heiss, Bree"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Dubey, Jessica"
+  job: "publishing prudction specialist"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D RPG senior group manager"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "D&D producer"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "D&D brand team"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Fell, John"
+  job: "D&D brand team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+manager {
+  name: "Tulach, Chris"
+  job: "organized play"
+}
+date {
+  year: 2013
+  month: 11
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6464"
+  check: 2
+}
+pages: 96
+system: NONE
+type: ADVENTURE
+style: FOLDER
+producer: "WTC"
+number: "2"
+series: "Sundering"
+price {
+  currency: "$3"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Campaign Guide"
+  number: 1
+}
+content {
+  part: BOOKLET
+  description: "Adventure"
+  number: 1
+}
+content {
+  part: SCREEN
+  description: "4-panel DM screen"
+  number: 1
+}
+content {
+  part: FOLDER
+  description: "packaging"
+  number: 1
+}
+layout: FULL_COLOR

@@ -1,0 +1,74 @@
+template {
+  name: "TSR 9233"
+  synonym: "FR5"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "North of \\Place{Waterdeep}, the land is cold, vast, and forbidding. The\n                    \\Place{Trackless Sea} stretches northward for what seems like forever,\n                    interrupted only by the occasional island and, eventually, the ice. On land,\n                    towns and villages flourish right up to the \\Place{Spine of the World}\n                    Mountains. It takes a special kind of person to live up here; a determined\n                    person used to hardship, a survivor. A person with a great love for life and\n                    a great respect for the forces---both natural and unnatural---that can end\n                    it.\n                    The \\Place{Savage Frontier} is now fully detailed for your roleplaying\n                    campaign. The cultures, personalities, economies, cities, towns, and\n                    wilderness are described for an AD&D campaign of any size or level. From the\n                    barbarian tribes of the far north to the \\Place{Luskan} pirates of the\n                    \\Place{Trackless Sea}, The \\Place{Savage Frontier} is an exciting land where\n                    adventure can be found anywhere. And, of course, it\'s all part of the\n                    best-selling \\Place{Forgotten Realms} Campaign Set, home of many other AD&D\n                    modules, source-books, and even novels!"
+}
+title: "Savage Frontier"
+leader: "The"
+author {
+  name: "Jacquays, Paul"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Elmore, Larry"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Jacquays, Paul"
+}
+illustrator {
+  name: "Maroto, Esteban"
+}
+typographer {
+  name: "Janke, Kim N."
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "593"
+  check: 6
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color maps"
+  number: 2
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

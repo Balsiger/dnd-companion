@@ -1,0 +1,84 @@
+template {
+  name: "WTC 24211"
+  synonym: ""
+  world: "Generic"
+  description: "A hotbed of adventure opportunities awaits you in the roiling maelstrom of the \\Place{Elemental Chaos} \342\200\232\303\204\303\256 a plane of \\Monster{titans}, \\Monster{elementals}, \\Monster{genies}, \\Monster{slaads}, and \\Monster{demons}. This game supplement builds on the overview of the \\Place{Elemental Chaos} presented in the \\Product{Manual of the Planes} game supplement and explores the tumultuous plane is greater detail. From the \\Place{City of Brass} to the \\Monster{githzerai} monastery of \\Place{Zerthadlun} to the spiraling depths of the \\Place{Abyss}, adventure lurks behind every lava waterfall, across every icy battlefield, and beyond every raging lightning storm.\n                    This game supplement describes the \\Place{Elemental Chaos} in detail, featuring key locations throughout the plane. It also presents a multitude of new monsters, mighty \\Monster{primordials}, and powerful \\Monster{demons}, as well as adventure hooks, encounters, hazards, and everything Dungeon Masters need to make the Elemental Chaos a featured setting in their campaigns.\n                    "
+  short_description: "Secrets of the Elemental Chaos"
+}
+title: "Plane Below"
+leader: "The"
+subtitle: "Where Chaos Rules Adventure Follows"
+cover {
+  name: "Ejsing, Jesper"
+  job: "front"
+}
+cover {
+  name: "Dillon, Julie"
+  job: "back"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "additional graphic designer"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "additional graphic designer"
+}
+illustrator {
+  name: "Reeve, Daniel"
+  job: "script design"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz Angelika"
+  job: "publishing production specialist"
+}
+date {
+  year: 2009
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5249"
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5249"
+  check: 6
+}
+pages: 158
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,46 @@
+template {
+  name: "DSP 210"
+  world: "None"
+  description: "\\Product{Understanding Gamers} collects critically acclaimed, fan-favorite\n  strips from John Kovalic\'s Dork Tower, along with the origins award-nominated\n  Dork Tower #18 comic book and the Dork Tower Lord of the Rings Special! From\n  film fandom to the league of extraordinary gentlegamers, from the Internet to\n  inner geeks, Dork Tower puts the \'fan\' back into \'fanatical obsessive\'!\n\n  What\'s not to understand?"
+}
+title: "Understanding Gamers"
+subtitle: "The Game\'s the Thing"
+author {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Mackintosh, Jeff"
+  job: "interior design and layout"
+}
+date {
+  year: 2003
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "930964"
+  title: "47"
+  check: 1
+}
+isbn13 {
+}
+pages: 144
+system: NONE
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "Dork Storm Press"
+number: "Volume V"
+series: "The Collected Dork Tower"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

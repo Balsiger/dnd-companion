@@ -1,0 +1,53 @@
+template {
+  name: "PZO 4031"
+  description: "Exploring ancient burial grounds and protecting the corpses of the honored dead from unholy transformation are standard fare for bold adventurers. But no Game Master wants to spend valuable game time drawing every looted grave and undead-haunted sepulcher. Fortunately, with Paizo Publishing\342\200\231s latest GameMastery Map Pack, you don\342\200\231t have to! Inside, you\342\200\231ll find 18 captivating 5\'\' \303\227 8\'\' map tiles, all specially coated to allow you to use wet erase and dry erase markers, then remove ink with ease!\n\nThis set includes:\n\n\\list\n{Catacombs}\n{Noble\'s Crypt}\n{Ghoul Lair}\n{Defiled Mausoleum}\n{Soldier\'s Tomb}\n\nGame Masters shouldn\342\200\231t waste their time sketching maps every time an adventure calls for a haunted tomb. With \\Product{GameMastery Map Pack: Crypts}, you\342\200\231ll be ready next time your players go dungeon crawling! Plus, combine this set with \\Product{GameMastery Flip-Mat: Necropolis} to show your crypts in the context of a huge cemetery!\n"
+  short_description: "A set of map tiles detailing crypts."
+}
+title: "Crypts"
+subtitle: "Halls of the Dead!"
+author {
+}
+editor {
+}
+cover {
+  name: "Macourek, Corey"
+}
+cartographer {
+  name: "Macourek, Corey"
+}
+illustrator {
+  name: "Macourek, Corey"
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2011
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "323"
+  check: 1
+}
+system: NONE
+type: ACCESSORY
+style: SHEETS
+producer: "Paizo"
+series: "GameMastery"
+series: "Map Pack"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "Map Tile"
+  number: 18
+}
+layout: FULL_COLOR

@@ -1,0 +1,51 @@
+template {
+  name: "PZO 3010"
+  synonym: ""
+  world: "Generic"
+  description: "Be it a sinister sneer, a welcoming glance, or a sly wink, first impressions count in any game. This 54-card set of beautifully illustrated, full-color Face Cards lets you give a new dimension to your game\'s NPCs. Each Card back includes space to add your own notes for each character. Face Cards are usable with any fantasy roleplaying game."
+}
+title: "Friends & Foes"
+subtitle: "GameMastery"
+illustrator {
+  name: "Woon, Hank"
+  job: "art selection"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Mona, Erik"
+  job: "product concept and coordination"
+}
+date {
+  year: 2009
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "210"
+  check: 2
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "210"
+  check: 4
+}
+pages: 54
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Face Cards"
+price {
+}
+content {
+  part: CARD
+  description: "Face"
+  number: 54
+}
+layout: FULL_COLOR

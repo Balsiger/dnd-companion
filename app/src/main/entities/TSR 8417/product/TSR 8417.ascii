@@ -1,0 +1,61 @@
+template {
+  name: "TSR 8417"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The spellcaster, \\NPC{Shal}, seeks to avenge the death of her wizard master.\n                    The ranger thief, \\NPC{Ren}, hunts the assassin who brutally murdered his\n                    beloved \\NPC{Tempest}.\n                    The cleric, \\NPC{Tarl}, prepares for a confrontation with the undead.\n                    A possessed dragon commands the undead armies of \\Place{Valhingen Graveyard}\n                    and the beasts from the ruins of \\Place{Phlan}. Desperate, \\NPC{Shal},\n                    \\NPC{Ren} an\\NPC{Tarl} join forces to deliver \\Place{Phlan} and the entire\n                    \\Place{Moonsea} from the dark possesion of evil\n                    reincarnate...\\NPC{Tyranthraxus}.\n                    Another exciting novel based on the \\Product{Forgotten Realms} adventures\n                    from TSR, Inc., \\Product{Pool of Radiance} is written by James M. Ward and\n                    Jane Cooper Hong. Now an award-winning computer game by SSI."
+}
+title: "Pool of Radiance"
+author {
+  name: "Ward, James"
+}
+author {
+  name: "Hong, Jane Cooper"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+date {
+  year: 1989
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "735"
+  check: 1
+}
+isbn13 {
+}
+pages: 316
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book One"
+series: "Pool Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

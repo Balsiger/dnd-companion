@@ -1,0 +1,44 @@
+template {
+  name: "TSR 8331P"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+}
+title: "Riverwind, the Plainsman"
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "909"
+  check: 5
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume Four"
+series: "Preludes Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

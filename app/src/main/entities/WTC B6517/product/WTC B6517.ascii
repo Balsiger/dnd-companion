@@ -1,0 +1,178 @@
+template {
+  name: "WTC B6517"
+  category: "Adventure"
+  world: "Generic"
+  world: "Ravenloft"
+  description: "Under raging storm clouds, the vampire \\NPC{Count Strahd von Zarovich} stands silhouetted against the ancient walls of \\Place{Castle Ravenloft}. Rumbling thunder pounds the castle spires. The wind\'s howling increases as he turns his gaze down toward the village of \\Place{Barovia}.\n\nFar below, not yet beyond his keen eyesight, a party of adventurers has just entered his domain. \\NPC{Stahd}\'s face forms the barest hint of a smile as his dark plan unfolds. He knew they were coming, and he knows why they came - all according to his plan.\n\nA lightning flash rips through the darkness, but \\NPC{Strahd} is gone. Only the howling of the wind fills the midnight air. The master of \\Place{Castle Ravenloft} is having guests for dinner. And you are invited.\n\nA Dungeons & Dragons adventure for characters of level 1 - 10.\n\nFor use with the fifth edition Player\'s Handbook, Monster Manual, and Dungeon Master\'s Guide."
+  short_description: "Unravel the mysteries of Ravenloft in this dread adventure for the world\'s greatest roleplaying game."
+}
+title: "Curse of Strahd"
+subtitle: "Bound By Fate"
+author {
+  name: "Perkins, Christopher"
+  job: "lead designer"
+}
+author {
+  name: "Hickman, Tracy"
+  job: "creative consultant"
+}
+author {
+  name: "Hickman, Laura"
+  job: "creative consultant"
+}
+author {
+  name: "Lee, Adam"
+  job: "designer"
+}
+author {
+  name: "Whitters, Richard"
+  job: "designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "designer"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+  job: "editorial assistant"
+}
+cover {
+  name: "Oliver, Ben"
+}
+cartographer {
+  name: "Beauregard, Francois"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+cartographer {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Beauregard, Francois"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Chevrier, Jedd"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Hurwitz, Lake"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Oliver, Ben"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Rey, Rob"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna Wolf"
+  job: "additional art direction"
+}
+illustrator {
+  name: "Whitters, Richard"
+  job: "additional art direction"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphci designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+manager {
+  name: "Schinkle, Neil"
+  job: "project manager"
+}
+manager {
+  name: "Fleming, Heather"
+  job: "project manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "product engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+date {
+  year: 2016
+  month: 3
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6598"
+  check: 4
+}
+pages: 256
+system: DND_NEXT
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+series: "Curse of Strahd"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

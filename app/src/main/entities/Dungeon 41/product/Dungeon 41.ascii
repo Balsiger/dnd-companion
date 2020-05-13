@@ -1,0 +1,103 @@
+template {
+  name: "Dungeon 41"
+  world: "Generic"
+  description: "This is issue 41 of the dungeon magazine."
+}
+title: "Dungeon 41"
+author {
+  name: "Hedberg, Coby"
+}
+author {
+  name: "Baker, Roger"
+}
+author {
+  name: "Woodruff, Teeuwynn"
+}
+author {
+  name: "Beach, Tim"
+}
+author {
+  name: "Kapture, Lawrence"
+}
+author {
+  name: "Lai, Gary"
+}
+author {
+  name: "James, Ted"
+}
+author {
+  name: "Zuvich, Thomas"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "assistant editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Dykstra, Terry"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Walters, Bob"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Miller, David O."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1993
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "VII 5"
+number: "41"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

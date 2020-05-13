@@ -1,0 +1,221 @@
+template {
+  name: "WTC B8669"
+  category: "Adventure"
+  world: "Forgotten Realms"
+  description: "Ages ago, giant and dragons waged war across the \\Place{Savage Frontier}. These battles are long forgotten by the \\Monster{humna} civilizations of today, but ancient relics remain. And now, the land shudders once more with the thunder of giant footsteps.\n\n\\Monster{Hill giants} raid farms for food and livestock, as \\Monster{stone giants} lay waste to settlements in their path. \\Monster{Frost giants} plunder coastal town, as \\Monster{fire giants} gather slaves. \\Monster{Cloud giant} castles drift across the sky, casting ominous shadows on the cities of the \\Place{North}. But no threat compares to the wrath of the \\Monster{storm giants}, who stand betrayed.\n\nPuny adventurers must rise to the challenge, gather their strength, unlock the power of ancient runes, and take the fight to the giants\'doorsteps. Only then can they discover a hidden evil formenting a war between giants and small folk. Only then can they forge an alliance to end the war before it begins."
+  short_description: "An adventure for characters of levels 1 - 10"
+}
+title: "Storm King\'s Thunder"
+subtitle: "To Fight Giants, You Must Be Giant"
+author {
+  name: "Perkins, Christopher"
+  job: "lead designer"
+}
+author {
+  name: "Helland, Jenna"
+  job: "story design"
+}
+author {
+  name: "Lee, Adam"
+  job: "story design and development manager"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "story design and development manager"
+}
+author {
+  name: "Mearls, Mike"
+  job: "additional design"
+}
+author {
+  name: "Salvatore, R. A."
+  job: "story consultanta"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Sernett, Matt"
+  job: "editorial assistant"
+}
+editor {
+  name: "Dupuis, Chris"
+  job: "editorial assistant"
+}
+editor {
+  name: "Petrisor, Ben"
+  job: "editorial assistant"
+}
+editor {
+  name: "Reynolds, Sean K"
+  job: "editorial assistant"
+}
+editor {
+  name: "Stan!"
+  job: "editorial assistant"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Blando, Jared"
+}
+cartographer {
+  name: "Doyle, Will"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+cartographer {
+  name: "Moyer, Lee"
+}
+cartographer {
+  name: "Perkins, Christopher"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Balmet, John-Paul"
+}
+illustrator {
+  name: "Beet"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Chevrier, Jedd"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Dutton, Michael \'Mike\'"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Hurwitz, Lake"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Lawson, Olly"
+}
+illustrator {
+  name: "Moeller, Christopher"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Rahn, Chris"
+}
+illustrator {
+  name: "Rogers, Ned"
+}
+illustrator {
+  name: "Seamen, Chris"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna Wolf"
+  job: "additional art direction"
+}
+illustrator {
+  name: "Whitters, Richard"
+  job: "additional art direction"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+illustrator {
+  name: "Gershman, David"
+  job: "art administration"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D lead designer"
+}
+manager {
+  name: "Crawford, Jeremy"
+  job: "D&D lead designer"
+}
+manager {
+  name: "Fleming, Heather"
+  job: "project manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "product engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+date {
+  year: 2016
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6600"
+  check: 4
+}
+pages: 256
+system: DND_NEXT
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

@@ -1,0 +1,25 @@
+template {
+  name: "DMA 000004"
+  description: "Catalog of the 1993 summer/fall stock of TSR."
+}
+title: "Summer Fall 1993"
+date {
+  year: 1993
+}
+isbn {
+}
+isbn13 {
+}
+pages: 16
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

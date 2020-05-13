@@ -1,0 +1,186 @@
+template {
+  name: "WTC 39888"
+  synonym: "Forgotten Realms, Elminster\'s"
+  world: "Forgotten Realms"
+  description: "\\em{\'Tis the besetting doom of \\Monster{human}s that they forget. This was in fact why thyy mother or a teacher advised thee -- just as sages in the \\Place{Realms} advise Faer\\hat{u}nians - \'Write it down.\' Well, now we have done just that. \'Twas about time, too!}\n\nWith these words, \\NPC{Elminster} of \\Place{Shadowdale} welcomes you to \\Place{Faer\\hat{u}n} and invites you to join Ed Greenwood, the creator of the \\Product{Forgotten Realms setting}, on a guided tour of his famous world. This tome also presents never-before-seen notes and previously unpublished material written by Ed many years ago, when he and \\Place{Fear\\hat{u}n} were both younger.\n\n\\Product{Elminster\'s Forgotten Realms} is appropriate reading for fans of all editions of the Dungeons & Dragons game.\n\nThis 160-page hardcover book describes the campaign setting as it lives and breathes in the imagination of its creator. Through the alter ego of Elminster, Archmage of Shadowdale, Ed Greenwood presents the Realms as a setting where companies of crazed adventurers are born and have rich lives, and where they get to call the shots. In this book, Ed presents a world where friendships are forged, endless intrigues unfold, and heroes wage war against the monstrous inhabitants of famous dungeons and untamed wildernesses."
+  short_description: "Detailed information about life in Faer\\hat{u}n."
+}
+title: "Elminster\'s Forgotten Realms"
+subtitle: "Let Us Speak of Realms Forgotten and Rejoice"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "development lead"
+}
+editor {
+  name: "Morris, Susan"
+}
+editor {
+  name: "Wyatt, James"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+  job: "editorial assistance"
+}
+editor {
+  name: "Sernett, Matt"
+  job: "editorial assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+editor {
+  name: "Jeremy, Crawford"
+  job: "editing lead"
+}
+cover {
+  name: "Ejsing, Jesper"
+  job: "front"
+}
+cover {
+  name: "Jacobson, Tyler"
+  job: "back"
+}
+illustrator {
+  name: "Greenwood, Ed"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Dillon, Julie"
+}
+illustrator {
+  name: "Drennan, Rick"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Komarck, Michael"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "McEvoy, Patrick"
+}
+illustrator {
+  name: "O\'Conner, William"
+}
+illustrator {
+  name: "Schleter, Lorraine"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Murayama, Soe"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Glicksohn, Jen"
+  job: "photography"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D R&D senior producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D R&D group manager"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "D&D brand team"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6034"
+  check: 7
+}
+pages: 160
+system: NONE
+type: CAMPAIGN_EXPANSION
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "book"
+  number: 1
+}
+layout: FULL_COLOR

@@ -1,0 +1,45 @@
+template {
+  name: "TSR 2164"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  world: "Generic"
+  description: "\\large{I wouldn\'t open that if I were you!}\n                    \\right{---last words heard by \\NPC{Gwelthyth the Impetuous}}\n                    In a dangerous, fast paces world of adventuring, knowledge means survival. In\n                    an age of legends, even the greatest heroes need technical advisors. Inside\n                    \\Product{Sages & Specialists} you\'ll find ten new NPC specialist\n                    classes---from apothecary to seer, from engineer to scribe---each with his\n                    own special talents and insights. In addition, this book contains a host of\n                    new rules that directly affect the lives of PCs everywhere. Add depth to your\n                    campaign with these unique and three-dimensional NPCs."
+}
+title: "Sages and Specialists"
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "8"
+series: "Dungeon Master Guide"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

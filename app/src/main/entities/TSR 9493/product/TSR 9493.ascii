@@ -1,0 +1,39 @@
+template {
+  name: "TSR 9493"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+  description: "a tanar\'ri fiend of the Abyss trapped in Ravenloft"
+}
+title: "Circle of Darkness"
+author {
+  name: "Bittner, Drew"
+}
+date {
+  year: 1995
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0128"
+  check: 4
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

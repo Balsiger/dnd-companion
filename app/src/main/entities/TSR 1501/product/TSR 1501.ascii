@@ -1,0 +1,34 @@
+template {
+  name: "TSR 1501"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "dices for the game"
+}
+title: "Dragon Dice Kicker Pack 1: Monsters & Amazons"
+date {
+  year: 1996
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "\302\254\302\243 "
+  number: 499
+  precision: 100
+}
+content {
+  part: DICE
+  description: "randomly assorted"
+  number: 12
+}

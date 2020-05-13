@@ -1,0 +1,33 @@
+template {
+  name: "TSR 11648"
+  reference {
+    name: "net"
+  }
+  world: "Dark.Matter"
+  description: "the ultimate reference guide"
+}
+title: "Xenoforms"
+author {
+  name: "JD Wiker"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1648"
+  check: 6
+}
+isbn13 {
+}
+pages: 224
+system: ALTERNITY
+type: ACCESSORY
+style: SOFT_COVER
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}

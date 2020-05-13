@@ -1,0 +1,39 @@
+template {
+  name: "TSR 11434"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Greyhawk"
+  description: "revision of a classic Greyhawk adventure"
+}
+title: "Return to White Plume Mountain"
+author {
+  name: "Cordell, Bruce R."
+}
+date {
+  year: 1999
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1434"
+  check: 3
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}

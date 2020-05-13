@@ -1,0 +1,44 @@
+template {
+  name: "DMA 000058"
+  description: "That pretty much sums up life for the legendary henchman, \\NPC{Nodwick}. You\n  hold in your hands the first volume of his hilarious adventures with three of\n  the world\'s most unprofessional heroes. \\emph{Thrill} to his being used as a\n  grappling hook! \\emph{Marvel} as he helps to thwart evil and gets no credit!\n  \\emph{Gasp} in awe that there\'s anything left of him for \\NPC{Piffany the\n  Cleric} to duct tape back together!\n\n  This volume contains the first six issues of the uproariously funny (and\n  slightly sasistic) \\Product{Nodwick} comic book by Aaron Williams. It\'s the\n  story of the little guy, the temp worker, the person on the payroll with the\n  title \'\\emph{sacrificial lamb}\'. Read on, and know that while your job may\n  not be the best, there\'s little chance you\'ll be swallowed by a big, scaly\n  monster...\n\n  ...we \\emph{hope}..."
+}
+title: "Lord of the Hirelings"
+subtitle: "\'Where\'s our treasure-moving thingie?\' \'You mean \\NPC{Nodwick}?\' \'Yeah, that\'"
+author {
+  name: "Williams, Aaron"
+}
+cover {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Toni DiTerlizzi"
+}
+date {
+  year: 2003
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "930964"
+  title: "80"
+  check: 3
+}
+isbn13 {
+}
+pages: 160
+system: NONE
+audience: ALL
+type: COMICS
+style: PAPERBACK
+producer: "Dork Storm Press"
+number: "Book 1"
+series: "The Nodwick Chronicles"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

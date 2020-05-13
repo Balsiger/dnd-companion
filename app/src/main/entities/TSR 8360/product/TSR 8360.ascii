@@ -1,0 +1,50 @@
+template {
+  name: "TSR 8360"
+  synonym: "WTC 86989"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "It will soon be the \\Event{Night of the Eye}, a rare time when all three\n  moons align in high sanction over the lands of \\Place{Krynn}. On the eve of\n  \\NPC{Guerrand DiThon}\'s political marriage to a rival family, the young noble\n  is visited by a strange, powerful mage who knows more about him than he does\n  himself. Seduced by promises of wizardly might, \\NPC{Guerrand} slips away\n  beneath the triple moons and journeys for the \\Place{Tower of Wayreth}.\n\n  No one thinks he will survive the deadly trek to the tower, but he does. It\'s\n  only then that \\NPC{Guerrand} realizes that he has made many enemies in his\n  journey. One of these foes would not only see \\NPC{Guerrand} dead, but the\n  three orders of sorcery destroyed with him."
+}
+title: "Night of the Eye"
+subtitle: "Magic at its peak!"
+author {
+  name: "Kirchoff, Mary"
+}
+date {
+  year: 1994
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "840"
+  check: 1
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume I"
+series: "Defenders of Magic Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

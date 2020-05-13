@@ -1,0 +1,24 @@
+template {
+  name: "TSR 8727"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+  description: "video adventure"
+}
+title: "Warrior\'s Tale"
+leader: "The"
+date {
+  year: 1993
+}
+isbn {
+}
+isbn13 {
+}
+system: DRAGON_STRIKE
+type: ADVENTURE
+price {
+  currency: "\302\254\302\243 "
+  number: 199
+  precision: 100
+}

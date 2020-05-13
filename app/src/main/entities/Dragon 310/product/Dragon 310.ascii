@@ -1,0 +1,141 @@
+template {
+  name: "Dragon 310"
+  world: "Generic"
+  description: "Issue 310 of the magazine. Special Update Series 1/3 issue."
+}
+title: "Dragon 310"
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Johnn, Four"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Quick, Jeff"
+}
+author {
+  name: "Redman, Rich"
+}
+author {
+  name: "Stackpole, Mike"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+editor {
+  name: "Williams, Penny"
+  job: "editorial assistance"
+}
+cover {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Harris, Todd"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Snoddy, Brian"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "art director"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "senior production designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2003
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVIII 3"
+number: "310"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

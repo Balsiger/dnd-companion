@@ -1,0 +1,35 @@
+template {
+  name: "WTC 88659"
+  world: "Star Wars"
+  description: "A virulent plague sweeps over the planet \\Place{Endregaad}, forcing the\n  \\Group{Corporate Sector Authority} to quarantine the stricken world with a\n  planetwide blockade. A mission of mercy and a desperate search lead heroes to\n  the \\Place{Hutt} homeworld, where they discover an even greater scourge\n  spreading throughout the galaxy.\n\n  This stand-alone adventure is for 9th-level heroes.\n\n  \\list\n  {Embroils the heroes in various dealings with the \\Group{Hutts}.}\n  {Explores several locations across \\Place{Hutt} space, including\n   \\Place{Nar Shaddaa}, the \\Place{Smuggler\'s Moon}.}\n  {Introduces new \\Monster{Hutt droids} and \\Item{Hutt battle armor}.}\n  {Features new starships, including one for the heroes--complete with a\n   deckplan.}\n\n  To use this adventure, a Gamemaster also needs the \\Product{Star Wars\n  Roleplaying Game}."
+}
+title: "Tempest Feud"
+subtitle: "A Threat of Epidemic Proportions"
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Stephens, Owen K. C."
+}
+date {
+  year: 2002
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2778"
+  check: 10
+}
+isbn13 {
+}
+pages: 128
+system: D20
+type: ADVENTURE
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}

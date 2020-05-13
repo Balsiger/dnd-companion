@@ -1,0 +1,34 @@
+template {
+  name: "TSR 21679"
+  reference {
+    name: "net"
+  }
+  world: "Dark.Matter"
+  description: "unraveling the dark secrets of a ghost in Chicago"
+}
+title: "If Whispers Call"
+author {
+  name: "Bassingthwaite, Don"
+}
+date {
+  year: 2000
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1679"
+  check: 6
+}
+isbn13 {
+}
+pages: 288
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

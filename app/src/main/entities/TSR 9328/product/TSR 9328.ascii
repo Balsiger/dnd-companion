@@ -1,0 +1,73 @@
+template {
+  name: "TSR 9328"
+  synonym: "SRJ4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "Groundlings have no idea, but any spelljamming adventurer worth his salt\n  knows the universe is \\emph{huge}! Let \\Product{Practical Planetology} open\n  new possibilities for your AD&D \\Place{Spelljammer} campaign.\n\n  Herein find fifteen unique planets, exotic and mysterious, ripe for plunder\n  or other less profitable adventures. Weigh anchor at the air world of\n  \\Place{Alabeth}, and float with marooned \\Monster{elves} atop their massive\n  \\Item{holbags}. Visit the \\Monster{mithril dragons} of \\Place{Radole} who\n  ride the hot thermals over lakes of molten tin. Endure the searing flames of\n  the \\Monster{efreeti} city on \\Place{Ignia}, or swim among the island\n  necrocracies---nations of undead from a destroyed planet---on\n  \\Place{Charon}.\n\n  These and other bizarre worlds of adventure await you in \\Product{Practical\n  Planetology}, along with beasts native to them, eleven new monsters in\n  all. All you\'ll need is a ship, a \\Item{helm}, and a start to steer them\n  by!\n\n  \\Product{Practical Planetology} contains material suitable for characters of\n  any level."
+}
+title: "Practical Planetology"
+author {
+  name: "Findley, Nigel"
+}
+editor {
+  name: "Nephew, John A."
+}
+cover {
+  name: "Jaquays, Paul"
+}
+cartographer {
+  name: "Beck, Steve"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Statema, John"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+typographer {
+  name: "Partners, Design"
+}
+date {
+  year: 1991
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "134"
+  check: 2
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}

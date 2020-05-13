@@ -1,0 +1,33 @@
+template {
+  name: "WTC 88158"
+  world: "Generic"
+  description: "\\large{A New Breed of Adventurer}\n                    Whether wondrous or wicked, some monsters have a calling that reaches beyond\n                    the ordinary existence of their kind. Traveling alongside other intrepid\n                    characters, these heroic creatures carve their places in legend with sword,\n                    spell, tooth, and claw.\n                    This supplement for the D&D game provides everything you need to play a\n                    monster as a character or to make the monster your heroes fight even more\n                    formidable. Inside are over 50 all-new monster classes that show how\n                    creatures develop their characteristics and abilities as they gain\n                    levels. Along with new prestige classes and monster templates,\n                    \\Product{Savage Species} also features new feats, spells, magic items, and\n                    more.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide} and the \\Product{Monster\n                    Manual}. A player needs only the \\Product{Player\'s Handbook} and the\n                    \\Product{Monster Manual}."
+}
+title: "Savage Species"
+date {
+  year: 2003
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2648"
+  check: 1
+}
+isbn13 {
+}
+pages: 224
+system: DND_3RD
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Player Guide"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

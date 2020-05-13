@@ -1,0 +1,31 @@
+template {
+  name: "TSR 9218"
+  synonym: "X13"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+}
+title: "Crown of Ancient Glory"
+date {
+  year: 1987
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "495"
+  check: 6
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}

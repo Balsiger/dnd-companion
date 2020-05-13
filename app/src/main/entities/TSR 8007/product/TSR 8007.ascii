@@ -1,0 +1,20 @@
+template {
+  name: "TSR 8007"
+  reference {
+    name: "net price list"
+  }
+}
+title: "Hexagonal Mapping Booklet"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

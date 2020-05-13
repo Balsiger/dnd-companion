@@ -1,0 +1,161 @@
+template {
+  name: "Dragon 324"
+  world: "Generic"
+  description: "Issue 324 of the magazine. "
+}
+title: "Dragon 324"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Burlew, Rich"
+}
+author {
+  name: "Cole, Joshua"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Gray, Scott Fitzgerald"
+}
+author {
+  name: "Hahn, Robert J."
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Leach, Paul"
+}
+author {
+  name: "McArtor, Mike"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Pocklington, Richard"
+}
+author {
+  name: "Richards, Ian"
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Simmonds, Nick"
+}
+author {
+  name: "Taylor, Tracy"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Laubenstein, Jeff"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Sackda, Noi"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Thomas, Rob"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Schley, Mike"
+  job: "graphic designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "group publishing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "circulation manager"
+}
+date {
+  year: 2004
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIX 5"
+number: "324"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

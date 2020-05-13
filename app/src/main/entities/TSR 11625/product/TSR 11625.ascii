@@ -1,0 +1,31 @@
+template {
+  name: "TSR 11625"
+  reference {
+    name: "net"
+  }
+  world: "Dark.Matter"
+  description: "insidious, internaltional consipray having a world bound in terror"
+}
+title: "Final Church"
+leader: "The"
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "JD Wiker"
+}
+date {
+  year: 2000
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+system: ALTERNITY
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

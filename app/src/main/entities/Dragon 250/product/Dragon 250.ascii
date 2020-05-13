@@ -1,0 +1,162 @@
+template {
+  name: "Dragon 250"
+  world: "Generic"
+}
+title: "Dragon 250"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Adkison, Peter D."
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Strohm, Keith Francis"
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Hickman, Tracy"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Richards, Johnathan"
+}
+author {
+  name: "Fraser, Paul"
+}
+author {
+  name: "Brown, Lloyd III"
+}
+author {
+  name: "Winniger, Ray"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Guay, Rebecca"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Diesel"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Williams, L.A."
+}
+illustrator {
+  name: "van Camp, Susan"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Schwartz, Stephen"
+}
+illustrator {
+  name: "Schwartz, Steven"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Pillsbury, Joe"
+}
+illustrator {
+  name: "Tomasic, Richard"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "ad traffifc manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+date {
+  year: 1998
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXIII 3"
+number: "250"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

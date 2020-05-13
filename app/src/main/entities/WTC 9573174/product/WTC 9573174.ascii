@@ -1,0 +1,88 @@
+template {
+  name: "WTC 9573174"
+  synonym: "DT3"
+  world: "Generic"
+  description: "Your tabletop never looked better! These Dungeon Tiles are the third in a\n                    new series of dungeon-building aids for Dungeon Masters. With D&D Miniatures\n                    and this pack of customizable dungeon grids, you can add a new dimension to\n                    your D&D adventures. Easy to set up and infinitely expandable, this pack\n                    allows you to create the dungeons and adventures you want to play. Future\n                    sets will allow players to create larger, more elaborate dungeons!\n                    This pack contains six durable, double-sided, four color illustrated dungeon\n                    grids, featuring rooms, corridors, and passages of various sizes, plus doors,\n                    walls, and other terrain elements that you can use to make great D&D\n                    encounters that enhance your roleplaying game experience."
+  short_description: "Customizable Dungeons for Your D&D Roleplaying Game!"
+}
+title: "Hidden Crypts"
+subtitle: "Build Your Own Crypts and Catacombs"
+author {
+  name: "Collins, Andy"
+  job: "designer"
+}
+author {
+  name: "Decker, Jesse"
+  job: "designer"
+}
+author {
+  name: "Noonan, David"
+  job: "designer"
+}
+author {
+  name: "Perkins, Christoper"
+  job: "designer"
+}
+cover {
+  name: "Cortez, Leon"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "art director"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+date {
+  year: 2007
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4156"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4156"
+  check: 8
+}
+pages: 6
+system: DND_3_5
+type: ACCESSORY
+style: SHEETS
+number: "3"
+series: "Dungeon Tiles"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "map grid"
+  number: 6
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Miniatures Game"
+layout: FULL_COLOR

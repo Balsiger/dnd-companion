@@ -1,0 +1,39 @@
+template {
+  name: "TSR 9476"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+  description: "Lord Soth and his army of death knights emerge from the mists"
+}
+title: "When the Black Roses Bloom"
+author {
+  name: "Smedman, Lisa"
+}
+date {
+  year: 1995
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0101"
+  check: 2
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

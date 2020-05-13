@@ -1,0 +1,19 @@
+template {
+  name: "TSR 6068"
+  reference {
+    name: "net price list"
+  }
+}
+title: "RPGA Network Slipcase"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 750
+  precision: 100
+}

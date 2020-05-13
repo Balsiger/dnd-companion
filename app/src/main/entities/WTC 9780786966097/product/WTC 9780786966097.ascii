@@ -1,0 +1,190 @@
+template {
+  name: "WTC 9780786966097"
+  world: "Generic"
+  description: "When the shadows grow long in Waterdeep and the fireplace in the taproom of the Yawning Portal dims to a deep crimson glow, adventurers from across the Forgotten Realms, and even from other worlds, spin tales and spread rumors of dark dungeons and lost treasures. Some of the yarns overheard by Durnan, the barkeep of the Yawning Portal, are inspired by places and events in far-flung lands from across the D&D multiverse, and these tales have been collected into a single volume.\n\nWithin this tome are seven of the most compelling dungeons from the 40+ year history of Dungeons & Dragons. Some are classics that have hosted an untold number of adventurers, while others are some of the most popular adventures ever printed.\n\nThe seeds of these stories now rest in your hands. D&D\342\200\231s most storied dungeons are now part of your modern repertoire of adventures. Enjoy, and remember to keep a few spare character sheets handy.\n\nFor use with the fifth edition Player\342\200\231s Handbook, Monster Manual, and Dungeon Master\342\200\231s Guide, this book provides fans with adventures, magic items and deadly monsters, all of which have been updated to the fifth edition rules. Explore seven deadly dungeons in this adventure supplement for the world\342\200\231s greatest roleplaying game."
+  short_description: "Explore seven deadly dungoens in this adventure supplement for the world\'s greatest roleplaying game"
+}
+title: "Tales from the Yawning Portal"
+subtitle: "Dread tales told in the dead of night!"
+author {
+  name: "Mohan, Kim"
+  job: "compiler"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "compiler"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Dupuis, Chris"
+  job: "editorial assistance"
+}
+editor {
+  name: "Petrisor, Ben"
+  job: "editorial assistance"
+}
+editor {
+  name: "Sernett, Matt"
+  job: "editorial assistance"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+cartographer {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Bradley, Noah"
+}
+illustrator {
+  name: "Carr, Sam"
+}
+illustrator {
+  name: "Chevrier, Jedd"
+}
+illustrator {
+  name: "Cook, Bud"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Hurwitz, Lake"
+}
+illustrator {
+  name: "Izzy"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Lunter, Titus"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Rogers, Ned"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Winters, Mark"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna"
+  job: "additional art direction"
+}
+illustrator {
+  name: "Whitters, Richard"
+  job: "additional art direction"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+manager {
+  name: "Stan!"
+  job: "producter"
+}
+manager {
+  name: "Fleming, Heather"
+  job: "project manager"
+}
+manager {
+  name: "Gershman, David"
+  job: "art administration"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+date {
+  year: 2017
+  month: 4
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6609"
+  check: 7
+}
+pages: 248
+system: DND_NEXT
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

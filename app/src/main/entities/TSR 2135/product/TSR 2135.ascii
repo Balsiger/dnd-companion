@@ -1,0 +1,83 @@
+template {
+  name: "TSR 2135"
+  synonym: "PHBR10"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "\\emph{Look out adventurers, they\'re here!} This handbook describes in detail\n                    over 20 humanoid races that can be run as player characters---from\n                    mischievious \\Monster{pixies} to stubborn \\Monster{minotaurs}, from the\n                    lixardlike \\Monster{saurial} to the savage \\Monster{half-ogre}---and many\n                    more in between. In addition to many new character types, this handbook\n                    contains new proficiencies, humanoid kits, unusual equipment, and a few new\n                    surprises that will open worlds of adventure within any ongoing\n                    campaign. Move over, common adventurers, \\Product{The Complete Book of\n                    Humanoids} is here!"
+}
+title: "Complete Book of Humanoids"
+leader: "The"
+author {
+  name: "Slavicsek, Bill"
+}
+editor {
+  name: "Pickens, Jon"
+}
+illustrator {
+  name: "Chaffee, Douglas"
+}
+illustrator {
+  name: "Rakeland, Sam"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1993
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "611"
+  check: 5
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "10"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

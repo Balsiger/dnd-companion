@@ -1,0 +1,47 @@
+template {
+  name: "TSR 2506"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "Dragon 211"
+  }
+  world: "Mystara"
+  description: "transition from old D&D Known World to AD&D"
+}
+title: "Poor Wizard\'s Almanac & Book of Facts"
+author {
+  name: "Dupuis, Ann"
+}
+date {
+  year: 1994
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 240
+system: ADND_2ND
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: CD
+  description: "audio"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "adventure"
+  number: 1073741824
+}

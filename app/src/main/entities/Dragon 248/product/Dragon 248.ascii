@@ -1,0 +1,150 @@
+template {
+  name: "Dragon 248"
+  world: "Generic"
+}
+title: "Dragon 248"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Adkison, Peter D."
+}
+author {
+  name: "Lloyd, Richard Alan"
+}
+author {
+  name: "Fraser, Paul"
+}
+author {
+  name: "Ingraham, Holly"
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Bova, Ben"
+}
+author {
+  name: "Archer, Linda"
+}
+author {
+  name: "Detwiler, Gregory W."
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Daviau, Rob"
+}
+author {
+  name: "Roberts, Thomas S."
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Fields, Fred"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Pillsbury, Joe"
+}
+illustrator {
+  name: "May, Rex F."
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Klashnich, Bob"
+}
+illustrator {
+  name: "Burr, Dan"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Schwartz, Stephen"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Meyer, Dwain"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "ad traffifc manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+date {
+  year: 1998
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXIII 1"
+number: "248"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

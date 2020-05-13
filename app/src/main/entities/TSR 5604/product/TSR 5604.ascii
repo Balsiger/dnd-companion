@@ -1,0 +1,26 @@
+template {
+  name: "TSR 5604"
+  reference {
+    name: "complete product listing"
+  }
+  description: "An \\Monster{Ant Lion} and a \\Monster{Piscodaemon} metal miniature."
+}
+title: "Ant Lion & Piscodaemon"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+price {
+}
+content {
+  part: MINIATURE
+  description: "figures"
+  number: 2
+}

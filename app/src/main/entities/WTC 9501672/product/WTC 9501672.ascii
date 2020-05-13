@@ -1,0 +1,54 @@
+template {
+  name: "WTC 9501672"
+  world: "Forgotten Realms"
+  description: "This new release of the R.A. Salvatore classic continues the tale of\n                    Salvatore\'s signature \\Monster{dark elf} \\NPC{Drizzt Do\'Urden}. The titles\n                    have now been placed in their proper chronological order. Each title in\n                    \\Product{The Legend of Drizzt} series showcases the classic \\Monster{dark\n                    elf} novels in new, deluxe hardcover editions. Each title will feature all\n                    new cover art and new introductions written by those who have become familiar\n                    with Salvatore over the years."
+}
+title: "Halfling\'s Gem"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book VI"
+series: "Legend of Drizzt"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

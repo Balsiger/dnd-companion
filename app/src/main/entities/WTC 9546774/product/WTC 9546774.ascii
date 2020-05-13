@@ -1,0 +1,43 @@
+template {
+  name: "WTC 9546774"
+  world: "Eberron"
+  description: "A renegade warrior, a mystic exile, and a magic-wielding soldier are on the\n  run. Their enemies are closing in. Some want to control them, some want to\n  rob them, and others just want them dead.\n\n  Their only hope for survival may be an ancient device of evil, the long-lost\n  \\Item{Grieving Tree}..."
+}
+title: "Grieving Tree"
+leader: "The"
+subtitle: "For three heroes, the past is about to come back to hunt them."
+author {
+  name: "Bassingthwaite, Don"
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2006
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 342
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 2"
+series: "The Dragon Below"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

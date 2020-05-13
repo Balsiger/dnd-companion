@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9243"
+  synonym: "DLE1"
+  reference {
+    name: "catalogue93"
+  }
+  world: "Dragonlance"
+}
+title: "In Search of Dragons"
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

@@ -1,0 +1,33 @@
+template {
+  name: "TSR 9287"
+  synonym: "GAZ13"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "the underground world, where the shadow elves live"
+}
+title: "Shadow Elves"
+leader: "The"
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "846"
+  check: 3
+}
+isbn13 {
+}
+system: DND_1ST
+type: CAMPAIGN_EXPANSION
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

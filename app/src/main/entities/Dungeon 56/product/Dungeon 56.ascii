@@ -1,0 +1,107 @@
+template {
+  name: "Dungeon 56"
+  world: "Generic"
+  description: "This is issue 56 of the dungeon magazine."
+}
+title: "Dungeon 56"
+author {
+  name: "Walsh, Willie"
+}
+author {
+  name: "Ertman, Kent"
+}
+author {
+  name: "Cunningham, J. Lee"
+}
+author {
+  name: "Johnson, Steve"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Howery, David"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Bryant, Anthony J."
+  job: "associate editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "Daniele, Stephen A."
+}
+cartographer {
+  name: "Scott, Michael"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Schwartz, Steven"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Huffman, Craig"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+typographer {
+  name: "Isler, Tracy"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1995
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "X 2"
+number: "56"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

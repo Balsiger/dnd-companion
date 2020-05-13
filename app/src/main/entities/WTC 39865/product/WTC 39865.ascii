@@ -1,0 +1,223 @@
+template {
+  name: "WTC 39865"
+  world: "Generic"
+  description: "Being an adventurer is a hard business. Dungeons offer adventure, treasure, and glory, but they are fraught with deadly traps, vicious monsters, and sinister puzzles. It takes more than a stout heart and a sharp mind to survive. A hero must be equipped with knowledge and tools if he or she is to face the unknown and live to tell about it.\n\n\\Product{Into the Unknown: The Dungeon Survival Handbook} is a guide for players and Dungeon Masters who want to play in a Dungeons & Dragons game that explores dungeons and plumbs the blackest reaches of the \\Place{Underdark}. Whether you\'re a Dungeon Master seeking to create a fantastic location populated with \\Monster{beholders} and \\Monster{mind flayers}, or a player looking to equip your character with the means to fight such threats, this book is for you. Players will find an assortment of new powers, equipment, feats, chracter themes, and player races, including the \\Monster{kobold} and the \\Monster{goblin}. For Dungeon Masters, the book is a trove of dungeon-building advice and details, including lore on classic dungeon monsters, some quirky companions for adventurers, a few timeless treasures, and tips for incorporating players\' character themes into an adventure."
+  short_description: "The Dungeon Survival Handbook"
+}
+title: "Into the Unknown"
+subtitle: "The Darkness Beckons"
+author {
+  name: "Bonner, Logan"
+  job: "lead"
+}
+author {
+  name: "James, Matt"
+}
+author {
+  name: "Morgenroth, Jeff"
+}
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Sernett, Matt"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "developer"
+}
+author {
+  name: "O\'Connor, Tanis"
+  job: "developer"
+}
+author {
+  name: "LaPille, Tom"
+  job: "developer"
+}
+author {
+  name: "Sims, Chris"
+  job: "developer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "developer"
+}
+author {
+  name: "Wilkes, Jennifer Clarke"
+  job: "developer"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+  job: "lead"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Horner, Miranda"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+  job: "front"
+}
+cover {
+  name: "Horsley, Ralph"
+  job: "back"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Bradley, Noah"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Ceran, Milivoj"
+}
+illustrator {
+  name: "Dillon, Julie"
+}
+illustrator {
+  name: "Ejsin, Jesper"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Tappin, Stephen"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Schdehette, Jon"
+  job: "D&D senior creative director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Murayama, Soe"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "producer"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D R&D senior producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D R&D group manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+date {
+  year: 2012
+  month: 5
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6032"
+  check: 3
+}
+pages: 160
+system: DND_4
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

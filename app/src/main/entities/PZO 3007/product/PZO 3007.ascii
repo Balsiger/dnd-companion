@@ -1,0 +1,58 @@
+template {
+  name: "PZO 3007"
+  synonym: ""
+  world: "Generic"
+  description: "Golden rings and royal crowns. Bejeweled necklaces and mounds of gems. Sacks bulging with coins and jewels the size of a man\'s fist! All these treasures and more await within! This 54-card set of beautifully illustrated, full-color item cards allows you to track your greatest treasures in vibrant detail."
+  short_description: "GameMastery Item Cards"
+}
+title: "Wondrous Treasure"
+subtitle: "GameMastery"
+author {
+  name: "Alvarez, Jeff"
+}
+author {
+  name: "Self, Chris"
+}
+illustrator {
+  name: "Boulden"
+  job: "card design"
+}
+manager {
+  name: "Bulmahn, Jason"
+  job: "product concept and coordination"
+}
+manager {
+  name: "Monka"
+  job: "publisher"
+}
+date {
+  year: 2009
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "146"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "146"
+  check: 6
+}
+pages: 54
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Item Cards"
+price {
+}
+content {
+  part: CARD
+  description: "Item"
+  number: 54
+}
+layout: FULL_COLOR

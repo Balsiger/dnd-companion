@@ -1,0 +1,115 @@
+template {
+  name: "WTC 86090"
+  world: "Generic"
+  description: "Great conflicts erupt between rival nations and threaten to sweep across\n                    entire continents. As armies clash in epic battles, the actions of a handful\n                    of bold heroes can turn the tide of war. Whether in the thick of combat or on\n                    a secret mission of dire importance, brave champions have an impact that\n                    echoes across the battlefield and resounds through the ages.\n                    This supplement for the D&D game reveals the pivotal roles characters can\n                    play in the midst of great battles. With rules and options for creating or\n                    playing adventures on and around battlefields, Heroes of Battle plunges\n                    characters into wartime situations and challenges them with climactic battles\n                    of epic proportions.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook} and \\Product{Dungeon Master\'s Guide}. A player needs\n                    only the \\Product{Player\'s Handbook}.\n                    Heroes of Battle provides everything one needs to know to play a\n                    battle-oriented D&D campaign. You can build military characters with new\n                    feats, spells, uses for traditional spells, and prestige classes. Information\n                    is given on tools specific to the battlefield, including siege engines,\n                    weapons, magic items, steeds, and other exotic mounts. Battlefield terrain\n                    aspects are discussed with plenty of illustrative maps and new\n                    rules. Specific types of battlefield encounters are discussed in detail, and\n                    the book provides specific detail on designing battlefields."
+}
+title: "Heroes of Battle"
+subtitle: "Prepare for War"
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "McDermott, Will"
+}
+author {
+  name: "Schubert, Stephen"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+author {
+  name: "Watkins, Rob"
+  job: "developer"
+}
+editor {
+  name: "Rateliff, John D."
+}
+editor {
+  name: "Sarli, Gary"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Hudnut, David"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Kovacs, Doug"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Marchesi, Roberto"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director D&D"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Jason"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+date {
+  year: 2005
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3686"
+  check: 10
+}
+isbn13 {
+}
+pages: 160
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Genre Series"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}

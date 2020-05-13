@@ -1,0 +1,48 @@
+template {
+  name: "TSR 8362"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "A \\Class{wizard} sacrificed himself to preserve the secrets of\n  magic. Centuries later, the survival of magic is again in question. The key\n  is a young lord whose heritage is tied to the \\Monster{tuatha dundarael},\n  \\Monster{faerie folk} who practice powerful earth magic. These secrets are\n  the weapons that \\NPC{Guerrand} and \\NPC{Bram DiThon} will wield in defending\n  their Art against an old, scarred enemy.\n\n  For \\NPC{Lyim}, \\NPC{Guerrand}\'s former friend and now renegade\n  \\Class{wizard}, seeks to destroy the magic that he believes has forsaken\n  him. The final battle will rage across the universe.\n\n  \\Product{The Seventh Sentinel} is the final volume of the \\Product{Defenders\n  of Magic Trilogy}, a series by \\Place{Dragonlance} saga author Mary Kirchoff\n  that explores the secrets of sorcery in the world of \\Place{Krynn}."
+}
+title: "Seventh Sentinel"
+leader: "The"
+subtitle: "Shadow of the past!"
+author {
+  name: "Kirchoff, Mary"
+}
+cover {
+  name: "Elmore, Larry"
+}
+date {
+  year: 1995
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0117"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume 3"
+series: "Defenders of Magic Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

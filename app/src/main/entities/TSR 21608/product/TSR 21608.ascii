@@ -1,0 +1,37 @@
+template {
+  name: "TSR 21608"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "The quest is over. The hero returns home.\n                    A weary \\NPC{Cadderly} makes his way back to the \\Place{Edificant Library},\n                    where he can begin to rebuild his shattered life. But the \\Item{Chaos Curse}\n                    has one last surprise for him.\n                    If he fails to meet the challenge, his beloved \\NPC{Danica} will be lost to\n                    him forever."
+}
+title: "Chaos Curse"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+date {
+  year: 2000
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1608"
+  check: 7
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book V"
+series: "Cleric Quintet"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

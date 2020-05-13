@@ -1,0 +1,49 @@
+template {
+  name: "WTC A6535"
+  category: "drizzt"
+  world: "Forgotten Realms"
+  description: "With the \\Group{Companions of the Hall} gathered together once again, \\NPC{Drizz Do\'Urden} thought he had shed the darkness around him. But darkness does not easily let go.\n\nDeep in the \\Place{Demonweb Pits}, \\God{Mistress of Lies}, \\God{Lady of Shadows}, the goddess \\God{Lolth} screams her scorn.\n\nHeeding her goddess\' call, \\NPC{Matron Mother Quenthel Baenre} plots an epic scheme to break Drizzt in heart and mind, a scheme that will shake \\Place{Menzoberranzan}\'s \\Group{Council of Eight} to its core.\n\nDrawn back into the \\Monster{drow} underworld against his will, assassin \\NPC{Artemis Entreri} curses \\NPC{Drizzt}\'s name, but finds he cannot forget the favors of his erstwhile foe.\n\nBound to rescue an old friend from a fate worse than death, rogue drown \\NPC{Drizzt} has no choice but to lead the newly-reunited \\Group{Companions} into deeper darkness, down into the bowles of \\Place{Gauntlgrym}, down past the undead that haunt its halls, down through a new \\Monster{drow} settlement, down into whatever trouble may come."
+  short_description: "First book of the Companions Codex"
+}
+title: "Night of the Hunter"
+subtitle: "Companions Codex I"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2014
+  month: 3
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6517"
+  check: 5
+}
+pages: 459
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+volume: "I"
+series: "Companions Codex"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

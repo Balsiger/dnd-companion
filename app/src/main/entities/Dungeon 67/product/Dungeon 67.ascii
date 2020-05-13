@@ -1,0 +1,108 @@
+template {
+  name: "Dungeon 67"
+  world: "Generic"
+  description: "This is issue 67 of the dungeon magazine."
+}
+title: "Dungeon 67"
+author {
+  name: "Johnson, Steve"
+}
+author {
+  name: "Hawvermale, Lance"
+}
+author {
+  name: "Maffei, Rich"
+}
+author {
+  name: "Adkins, Matthew G."
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Miller, David O."
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "McDevitt, Bradley"
+}
+illustrator {
+  name: "Morales Rags"
+}
+illustrator {
+  name: "Vrbanic, George"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "publisher"
+}
+manager {
+  name: "Mangelson, Roger"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising traffic manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Whiting, Sharon"
+  job: "subscriptions"
+}
+date {
+  year: 1997
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XII 1"
+number: "67"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

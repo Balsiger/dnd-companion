@@ -1,0 +1,34 @@
+template {
+  name: "TSR 1071"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Rules companion."
+}
+title: "D&D Rules Cyclopedia"
+date {
+  year: 1991
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+type: RULES_SUPPLEMENT
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}

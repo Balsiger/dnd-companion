@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9309"
+  synonym: "WGA4"
+  reference {
+    name: "net price list"
+  }
+  world: "Greyhawk"
+}
+title: "Vecna Lives"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

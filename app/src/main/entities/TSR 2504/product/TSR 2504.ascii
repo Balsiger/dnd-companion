@@ -1,0 +1,50 @@
+template {
+  name: "TSR 2504"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "Dragon 211"
+  }
+  world: "Red Steel"
+  description: "expansion to any world"
+}
+title: "Red Steel"
+author {
+  name: "Beach, Tim"
+}
+date {
+  year: 1994
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "895"
+  check: 9
+}
+isbn13 {
+}
+pages: 160
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: POSTER
+  description: "maps"
+  number: 3
+}

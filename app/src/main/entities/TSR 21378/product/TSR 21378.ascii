@@ -1,0 +1,56 @@
+template {
+  name: "TSR 21378"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Forgotten Realms"
+  description: "The sea war rages up and down the \\Place{Sword Coast}, leaving the busy\n                    harbor of \\Place{Baldur\'s Gate} in flames. Following his mad quest, the evil\n                    \\NPC{Iakhovas} has found a gateway into the protected waters of the\n                    \\Place{Sea of Fallen Stars}, and now no coast is safe from his marauding\n                    armies of the deep.\n                    Praise for \\Product{Raising Tide}: \'Odom does an admirable job of bringing\n                    the sea setting and its varied species to life. The novel\'s detailed fight\n                    sequences are tightly packed, making for a fast, exciting read...\'\n                    \\right{---\\Product{Publisher\'s Weekly}}"
+}
+title: "Under Fallen Stars"
+author {
+  name: "Odom, Mel"
+}
+cover {
+  name: "Maith, Don"
+}
+cartographer {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+date {
+  year: 1999
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1378"
+  check: 9
+}
+isbn13 {
+}
+pages: 344
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book II"
+series: "Threat from the Sea"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

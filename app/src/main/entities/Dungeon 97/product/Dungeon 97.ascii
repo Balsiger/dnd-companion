@@ -1,0 +1,139 @@
+template {
+  name: "Dungeon 97"
+  world: "Generic"
+  description: "This is issue 97 of the dungeon magazine, together with the\n   \\Product{Polyhedron 156} issue."
+}
+title: "Dungeon 97"
+author {
+  name: "Harris, Robert"
+}
+author {
+  name: "Manning, Rob"
+}
+author {
+  name: "Pentney, Campbell"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Woon, Hank"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Mona, Erik"
+  job: "contributing editor"
+}
+editor {
+  name: "Fiorito, Stacie A."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+cover {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Hendee, David"
+}
+illustrator {
+  name: "Lee, Robert"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Mayerick, Val"
+}
+illustrator {
+  name: "Perez, Ramon"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Zipse, Craig"
+}
+illustrator {
+  name: "Whitley, Peter"
+}
+illustrator {
+  name: "Hunter, Kyle S."
+  job: "art director"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "advertising sales director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffice manager"
+}
+date {
+  year: 2003
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 115
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XVII 1"
+number: "97"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+layout: FULL_COLOR

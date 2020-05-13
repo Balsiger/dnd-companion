@@ -1,0 +1,62 @@
+template {
+  name: "WTC 17989"
+  world: "Dragonlance"
+  description: "The peaceful life of \\NPC{Flint Fireforge} is disturbed when he is forced to\n  leave \\Place{Solace} and return to his \\Monster{dwarven} homeland to\n  investigate his brother\'s murder. As he delves into the mystery, unexpected\n  allies and unseen enemies join the fight of truth against treachery.\n\n  \\NPC{Flint} soon discovers that to bring his brother\'s killer to justice, he\n  must either die or become king. He\'s not sure which choice might be worse."
+}
+title: "Flint the King"
+subtitle: "Before the War of the Lance"
+author {
+  name: "Kirchoff, Mary"
+}
+author {
+  name: "Niles, Douglas"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3021"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Five"
+series: "Preludes"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

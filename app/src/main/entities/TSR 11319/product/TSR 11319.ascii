@@ -1,0 +1,32 @@
+template {
+  name: "TSR 11319"
+  reference {
+    name: "net"
+  }
+  world: "Generic"
+  description: "information about the processes and possibilities of starship constructio"
+}
+title: "Starships"
+author {
+  name: "Eckelberry, David"
+}
+date {
+  year: 1999
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1319"
+  check: 3
+}
+isbn13 {
+}
+pages: 96
+system: ALTERNITY
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

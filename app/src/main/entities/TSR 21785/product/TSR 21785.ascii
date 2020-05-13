@@ -1,0 +1,35 @@
+template {
+  name: "TSR 21785"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "novelization of the movie for younger fans"
+}
+title: "Movie"
+leader: "The"
+author {
+  name: "Steve Atley"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1785"
+  check: 7
+}
+isbn13 {
+}
+pages: 192
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

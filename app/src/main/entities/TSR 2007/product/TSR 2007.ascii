@@ -1,0 +1,23 @@
+template {
+  name: "TSR 2007"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Swords & Spells"
+date {
+  year: 1976
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

@@ -1,0 +1,20 @@
+template {
+  name: "TSR 8890"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Forgotten Realms"
+}
+title: "Forgotten Realms calendar"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: CALENDAR
+price {
+}

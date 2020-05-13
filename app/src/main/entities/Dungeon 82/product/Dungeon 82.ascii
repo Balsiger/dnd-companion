@@ -1,0 +1,170 @@
+template {
+  name: "Dungeon 82"
+  world: "Generic"
+  description: "This is issue 82 of the dungeon magazine."
+}
+title: "Dungeon 82"
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Malcomson, Ian"
+}
+author {
+  name: "Ross, Patrick W."
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Haddock, Eric"
+  job: "assistant editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editorial consultant"
+}
+cover {
+  name: "Critchlow, Carl"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Daniele, Stephen A."
+}
+cartographer {
+  name: "Ross, Patrick"
+}
+illustrator {
+  name: "Atkinson, Toren \'MacBin\'"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Garner, John A."
+}
+illustrator {
+  name: "Hairsine, Trevor"
+}
+illustrator {
+  name: "Staples, Greg"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "McDevitt, Brad"
+}
+illustrator {
+  name: "Collins, Michael"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "art director"
+}
+illustrator {
+  name: "Whitley, Peter"
+  job: "consulting art director"
+}
+illustrator {
+  name: "JIE-23"
+  job: "designer"
+}
+illustrator {
+  name: "Jackson, Mark"
+  job: "designer"
+}
+illustrator {
+  name: "Francisco, Kim"
+  job: "designer"
+}
+illustrator {
+  name: "Dalton, Rob"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "assistant production manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Fiorito, Stacie"
+  job: "intern"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 2000
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 112
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XIV 3"
+number: "82"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+layout: FULL_COLOR

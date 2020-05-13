@@ -1,0 +1,39 @@
+template {
+  name: "PZO 1101"
+  world: "Generic"
+  description: "For 30 years, \\Product{Dragon} magazine has published genre-defining fantasy masterpieces. This beautiful treasury features classic art by undisputed masters such as Larry Elmore, Keith Parkinson, Jeff Easley, Wayne Reyunolds, Brom, Todd Lockwood, Tony DiTerlizzi, Clyde Caldweel, and more. Relive three decades of unbridlet imagination with the world\'s finest fantasy artists!"
+}
+title: "Art of Dragon Magazine"
+subtitle: "The World\'s Greatest Fantasy Art!"
+date {
+  year: 2006
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "9776778"
+  title: "6"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "9776778"
+  title: "6"
+  check: 3
+}
+pages: 160
+system: DND_1ST
+type: ACCESSORY
+style: SMALL_BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

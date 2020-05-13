@@ -1,0 +1,45 @@
+template {
+  name: "TSR 11617"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Star*Drive"
+  description: "full-color guide to alien worlds"
+}
+title: "Alien Compendium II: The Exploration of 2503"
+author {
+  name: "William W. Connors"
+}
+author {
+  name: "Steven Schend"
+}
+author {
+  name: "J.D. Wiker"
+}
+date {
+  year: 2000
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1617"
+  check: 6
+}
+isbn13 {
+}
+pages: 96
+system: ALTERNITY
+type: ACCESSORY
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}

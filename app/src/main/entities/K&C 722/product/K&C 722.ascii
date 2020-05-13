@@ -1,0 +1,59 @@
+template {
+  name: "K&C 722"
+  description: "Issues seventy-three through seventy-six of Knights of the Dinner Table crammed between two covers."
+  short_description: "Issues seventy-three through seventy-six of Knights of the Dinner Table."
+}
+title: "Bundle of Trouble: Volume Twenty-Two"
+subtitle: "Knights of the Dinner Table"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+}
+author {
+  name: "Johansson, Steve"
+}
+author {
+  name: "Kenzer, David S."
+}
+cover {
+  name: "Empty Room Studios"
+}
+illustrator {
+  name: "Throm, Colin"
+}
+illustrator {
+  name: "Scholes, Tom"
+  job: "colorist"
+}
+date {
+  year: 2007
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "59459"
+  title: "073"
+  check: 7
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "K&C"
+series: "Knights of the Dinner Table"
+series: "Bundle of Trouble"
+price {
+  currency: "$"
+  number: 1199
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

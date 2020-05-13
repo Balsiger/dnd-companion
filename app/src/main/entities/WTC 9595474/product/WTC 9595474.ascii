@@ -1,0 +1,57 @@
+template {
+  name: "WTC 9595474"
+  world: "Forgotten Realms"
+  description: "For the first time in one volume, the classic Forgotten Realms tales of Elaine Cunningham are joined by three all new stories!\n                    Travel alongside \\NPC{Arilyn} and \\NPC{Danilo}, \\NPC{Liriel} and \\NPC{Fyodor}, and a host of characters valiant and infamous as they tread the forests and cities, the castles and dungeons, of the wide world of \\Place{Faer\\hat{u}n}."
+}
+title: "The Beast of the Realms, Book III"
+subtitle: "Enter the Realms of Elain Cunningham!"
+author {
+  name: "Cunningham, Elaine"
+}
+editor {
+}
+cover {
+  name: "England, Wayne"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4288"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4288"
+  check: 6
+}
+pages: 345
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "The Best of the Realms"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

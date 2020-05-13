@@ -1,0 +1,37 @@
+template {
+  name: "TSR 8372"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dragonlance"
+  description: "history of Dragonlance up to the Second Generation"
+}
+title: "History of Dragonlance"
+leader: "The"
+date {
+  year: 1995
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0305"
+  check: 8
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

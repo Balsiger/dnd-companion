@@ -1,0 +1,84 @@
+template {
+  name: "TSR 21676"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Dragonlance"
+  description: "Welcome to \\Place{Krynn}, where magic and fantasy are commonplace.\n\n  In this collection, Don Perrin offers the story of a family of\n  \\Monster{minotaurs} cursed by \\God{Sargonnas} to repeat their heinous crime\n  of betrayal year after year after year. The god himself enjoys materializing\n  to savor their torment. Until one year, \\God{Sargonnas} doesn\'t show up . . .\n\n  Plus tales of rebels, tyrants, and other inhabitants of the wondrous world of\n  \\Place{Dragonlance} by best-selling authors Margaret Weis, Richard A. Knaak,\n  Nancy Varian Berberick, Paul B. Thompson, Chris Pierson, and Linda P. Baker\n  in a new installment of the long-running short story series celebrating its\n  fifteenth anniversary."
+}
+title: "Rebels and Tyrants"
+subtitle: "Tales of the Fifth Age"
+author {
+  name: "Buraczewksi, Scott M."
+}
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Perrin, Don"
+}
+author {
+  name: "Baker, Linda P."
+}
+author {
+  name: "Stein, Kevin T."
+}
+author {
+  name: "Crook, Jeff"
+}
+author {
+  name: "Kage, Kevin"
+}
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "Grubber, John"
+}
+author {
+  name: "Pierson, Chris"
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Margaret Weis"
+}
+editor {
+  name: "Tracy Hickman"
+}
+date {
+  year: 2000
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1676"
+  check: 1
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

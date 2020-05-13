@@ -1,0 +1,51 @@
+template {
+  name: "TSR 8361"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "The name \\NPC{Guerrand DiThon} has been cursed by his family since the day\n  he disappeaered. When a mysterious plague strikes their beleaguered village,\n  \\NPC{Guerrand}\'s name is invoked again -- as the cause of the disaster.\n\n  \\NPC{Bram DiThon}, \\NPC{Guerrand}\'s nephew, is more like his uncle than the\n  family would care to admit. A skilled herbalist, \\NPC{Bram} has unknowingly\n  turned his skills toward magic. It is to \\NPC{Bram} the villagers turn when\n  the plague changes their eyes to onyx, their limbs to snakes, and their flesh\n  to stone.\n\n  Unable to stop the unexplainable deaths, \\NPC{Bram} sets out to find his\n  missing uncle. He learns that \\NPC{Guerrand} is the High Defender of\n  \\Place{Bastion}, the last stronghold before the \\Place{Lost Citadel}. But in\n  finding him, \\NPC{Bram} has unwittingly given an evil \\Class{mage} -- once\n  \\NPC{Guerrand}\'s friend, now his archenemy -- the key to destroy the three\n  orders of sorcery.\n\n  \\Product{The Medusa Plague} is the second in the \\Product{Defenders of Magic\n  Trilogy}, a series by \\Place{Dragonlance} saga author Mary Kirchoff that will\n  explore for the first time many of the secrets of sorcery in the world of\n  \\Place{Krynn}."
+}
+title: "Medusa Plague"
+leader: "The"
+subtitle: "Between Earth and Sky!"
+author {
+  name: "Kirchoff, Mary"
+}
+date {
+  year: 1994
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "905"
+  check: 10
+}
+isbn13 {
+}
+pages: 314
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume II"
+series: "Defenders of Magic Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

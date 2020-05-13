@@ -1,0 +1,242 @@
+template {
+  name: "WTC 1076272"
+  world: "Generic"
+  description: "Within this tome you\'ll find over 1\'000 of the best magic items created for\n                    the Dungeons & Dragons game, including hundreds of new low-cost items. In\n                    addition, this supplement contains rules for \\Item{augment crystal}s, which\n                    grant new abilities to existing magic items, and item sets, which provide\n                    collection benefits when you have all the items in a set. This tome also\n                    presents new and improved rules for item creation, an updated treasure\n                    generation system, and more!"
+  short_description: "A compendium of magic items."
+}
+title: "Magic Item Compendium"
+subtitle: "More Magic Items Than You Can Fit in a Bag of Holding"
+author {
+  name: "Collins, Andy"
+  job: "lead designer"
+}
+author {
+  name: "Bernstein, Eytan"
+  job: "designer"
+}
+author {
+  name: "Brunner, Frank"
+  job: "designer"
+}
+author {
+  name: "Stephens, Owen K.C."
+  job: "designer"
+}
+author {
+  name: "Snead, John"
+  job: "designer"
+}
+author {
+  name: "Jurkat, Alex"
+  job: "additional design"
+}
+author {
+  name: "McArtor, Mike"
+  job: "additional design"
+}
+author {
+  name: "Schneider, Wes"
+  job: "additional design"
+}
+author {
+  name: "William, Penny"
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "lead developer"
+}
+author {
+  name: "Cordell, Bruce"
+  job: "developer"
+}
+author {
+  name: "Mearls, Mike"
+  job: "developer"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+author {
+  name: "Sernett, Matthew"
+  job: "developer"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Bonner, Logan"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Nagler, Dan"
+  job: "editorial assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Faulkner, Matt"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Hudson, Heather"
+}
+illustrator {
+  name: "Kovacs, Doug"
+}
+illustrator {
+  name: "Lukacs, Chuch"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Poole, Mark"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Tappin, Steven"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4345"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4345"
+  check: 6
+}
+pages: 288
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "player\'s handbook"
+required_requirements: "dungeon master\'s guide"
+required_requirements: "monster manual"
+layout: FULL_COLOR

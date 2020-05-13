@@ -1,0 +1,52 @@
+template {
+  name: "WTC 25380"
+  synonym: ""
+  world: "Forgotten Realms"
+  description: "Murderers with no memory of the ritualistic assassinations they\'ve performed.\n                    Murdering that continues even after the killers have been captured.\n                    Murders that always happen in the \\large{Circle of Skulls}\n                    \\emph{Much that is dark and grim goes on behind closed doors in \\Place{Waterdeep}. This is a book that throws open such doors, and takes the reader through mounting violence and corruption into a thrilling chase through secrets and long-brewing deviltry, toward a confrontation that will shake the largely unwitting \\Place{City of Splendors} to its proverbial sewers and hidden sacrificial altars.\n                    After you finish \\Product{Circle of Skulls}, you\'ll never look at bustling Waterdeep the same way again. For it is dangerous to outlive gods.}\n                    \\right{-- Ed Greendood}"
+  short_description: "Ed Greenwood Presents Waterdeep, Book 6"
+}
+title: "Circle of Skulls"
+subtitle: "Ed Greenwood Presents Waterdeep"
+author {
+  name: "Davis, James P."
+}
+cover {
+  name: "Jones, Android"
+}
+manager {
+}
+date {
+  year: 2010
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5485"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5485"
+  check: 8
+}
+pages: 338
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "6"
+series: "Ed Greenwood Presents Waterdeep"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,44 @@
+template {
+  name: "TSR 1513"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  world: "Generic"
+  description: "introduces heroes into the game"
+}
+title: "Dragon Dice Deluxe Kicker 1: Champions"
+author {
+  name: "Olmesdahl, Bill"
+}
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0730"
+  check: 4
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOOSTER_PACK
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: DICE
+  description: "randomly assorted"
+  number: 8
+}

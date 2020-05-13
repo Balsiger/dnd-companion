@@ -1,0 +1,44 @@
+template {
+  name: "TSR 2624"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  reference {
+    name: "Dragon 228"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Planescape"
+  description: "who\'s who in Sigil"
+}
+title: "Uncaged: Faces of Sigil"
+author {
+  name: "Vallese, Ray"
+}
+date {
+  year: 1996
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0385"
+  check: 6
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

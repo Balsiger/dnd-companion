@@ -1,0 +1,32 @@
+template {
+  name: "TSR 11794"
+  reference {
+    name: "net"
+  }
+  world: "Episode I"
+  description: "the secrets of Naboo revealed"
+}
+title: "The Secrets of Naboo"
+author {
+  name: "JD Wiker"
+}
+author {
+  name: "Steve Miller"
+}
+date {
+  year: 2000
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: STAR_WARS
+type: ACCESSORY
+style: SOFT_COVER
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}

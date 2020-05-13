@@ -1,0 +1,136 @@
+template {
+  name: "TSR 1077"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Al-Qadim"
+  description: "Ride a \\Item{magic carpet} to the land of a thousand and one adventures!\n                    Visit spired cities, lush oases, and mysterious isles set in glittering\n                    seas. Meet sultans and sheikhs. See \\Monster{genies} and\n                    \\Monster{giants}. Discover a trove of new magical treasures! Whether your\n                    character starts from the compatible \\Place{Forgotten Realms} game setting or\n                    begins the journey elsewhere, this box contains everything a bold adventurer\n                    needs to explore the exotic \\Place{Al-Qadim} campaign world.\n                    Contents:\n                    \\list\n                    {2 guidebooks totaling 192 pages}\n                    {12 full-color reference cards}\n                    {8 Monstrous Compendium sheets}\n                    {3 full-color poster maps}\n                    {1 clear map overlay for measuring distance}"
+}
+title: "Land of Fate"
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Hayday, Andria"
+}
+editor {
+  name: "Hayday, Andria"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Fields, Fred"
+}
+cover {
+  name: "Mayo, Henry"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Raab, Robin"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+typographer {
+  name: "Knecht, John"
+}
+typographer {
+  name: "Martin, Julia"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "cover design"
+}
+manager {
+  name: "Lokotz, Angelika"
+  job: "production"
+}
+manager {
+  name: "Knecht, John"
+  job: "production"
+}
+manager {
+  name: "Martin, Julia"
+  job: "production"
+}
+manager {
+  name: "Hayday, Andria"
+  job: "page design and coordination"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "page design"
+}
+date {
+  year: 1992
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "329"
+  check: 9
+}
+isbn13 {
+}
+pages: 188
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Adventurer\'s Guide to Zakhara"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Fortunes and Fates"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "color"
+  number: 12
+}
+content {
+  part: MISC
+  description: "clear plastic measuring overlay"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 3
+}
+content {
+  part: PAGE
+  description: "Monstrous Compendium"
+  number: 16
+}

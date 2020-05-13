@@ -1,0 +1,47 @@
+template {
+  name: "TSR 8548"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{In ancient days, sorceres sought to learn the One True Spell that\n                    would give them power over all the world and understanding of all magic...}\n                    The one True Spell was a woman, and her name was \\God{Mystra}---and her\n                    kisses were wonderful.}\n                    \\right{Priest \\NPC{Halivon Tharnstar}}\n                    \\right{Tales Told to a Blind Wizard}\n                    It is the  time before \\Place{Myth Drannor}, when  the \\Place{Heartlands} are\n                    home to barbarians, and wicked dragons rule the skies. In these ancient days,\n                    \\NPC{Elminster}   is  but  a   shepherd  boy,   dreaming  of   adventure  and\n                    heroics. When a dragon-riding magelord  sweeps down upon him, though, the boy\n                    is  thrust  into  a  world  of  harsh  realities,  corrupt  rules,  and  evil\n                    sorcerers.\n                    With patience and grit, \\NPC{Elminster} sets about to change all that. The\n                    result of his labors is a world reborn and a mage made.\n                    The origins of \\NPC{Elminsters}, mightiest mage in \\Place{Faer\\hat{u}n}, have\n                    long been lost in the wash of time. Only the old wizard himself remembers how\n                    he came into being, and he hasn\'t told.\n                    Until now..."
+}
+title: "Elminster: The Making of a Mage"
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Easley, Jeff"
+}
+date {
+  year: 1994
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "936"
+  check: 10
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "TSR"
+number: "1"
+series: "Elminster Series"
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

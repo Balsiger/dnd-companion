@@ -1,0 +1,90 @@
+template {
+  name: "Dungeon 28"
+  world: "Generic"
+  description: "This is issue 28 of the dungeon magazine."
+}
+title: "Dungeon 28"
+author {
+  name: "Wade, Kristofer"
+}
+author {
+  name: "Varney, Allen"
+}
+author {
+  name: "Shel, Michael"
+}
+author {
+  name: "Lucas, Mark"
+}
+author {
+  name: "Everett, Shonn"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Jaquay, Paul"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Menges, Jeff"
+}
+illustrator {
+  name: "Pavlat, Terry"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Ward, Kevin"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1991
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "V 4"
+number: "28"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

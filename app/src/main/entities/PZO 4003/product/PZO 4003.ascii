@@ -1,0 +1,39 @@
+template {
+  name: "PZO 4003"
+  world: "Generic"
+  description: "Why go the trouble of using miniatures only to push them around an empty\n  table? Paizo\'s \\Product{GameMastery Map Packs} contain full-color gridded\n  maps for use with RPGs and miniatures games. The map cards in this set depict\n  key encounter areas in a massive fortress, including:\n\n  \\list{Drawbridge/Moat/Gatehouse}{Throne Room/Banquet Hall}{Kitchen}{Master\n  Bedroom}{Treasure Vault}{Barracks}{Arrow Slit Corridor}{Prison}\n\n  \\Product{GameMastery Map Packs} provide everything you need to stay a step\n  ahead of your players. Use this product to build fortress encounters that\n  perfectly fit your campaign. Additional map packs explore other locales of\n  interest to fantasy gamers.\n\n  This \\Product{Map Pack} contains 18 full-color 8\'\'x5\'\' map cards suitable for\n  use with \\Product{GameMastery Compleat Encounters} or any standard gaming\n  miniatures."
+  short_description: "Maps of a fortress."
+}
+title: "Map Pack: Fortress"
+subtitle: "Crash the Gates"
+cartographer {
+  name: "Macourek, Corey"
+}
+date {
+  year: 2006
+}
+isbn {
+  group: "0"
+  publisher: "9776778"
+  title: "9"
+  check: 3
+}
+isbn13 {
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: SHEETS
+producer: "Paizo"
+series: "GameMastery Map Pack"
+price {
+  currency: "$ "
+  number: 1295
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "color map"
+  number: 18
+}
+layout: FULL_COLOR

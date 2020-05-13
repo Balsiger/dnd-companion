@@ -1,0 +1,47 @@
+template {
+  name: "TSR 9402"
+  synonym: "TM5"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The mysterious and exotic lands of \\Place{Kara-Tur} covert nearly a quarter\n                    of the globe, stretching from the steaming jungle lands of the south to the\n                    hidden valleys of the Issacortae in the north, from the plains of the horse\n                    barbarians in the west to the war-torn isles of the shogun in the east. And\n                    at the center of it all lies \\Place{Shou Lung}, the empire of the\n                    \\Monster[Dragon]{dragon}.\n                    The \\Product[TSR 9402]{Kara-Tur Trail Map} compiles information from all past\n                    products into one comprehensive and authoritative map of the \\Place[Eastern\n                    Realms]{Eastern realms}. All geographical and political features of note are\n                    included on a 36\'\' by 75\'\' sheet suitable for use in gaming or as a wall\n                    poster."
+}
+title: "Kara-Tur Trail Map"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "763"
+  check: 7
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+style: MAP
+producer: "TSR"
+series: "Trail Map"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}
+content {
+  part: MISC
+  description: "envelope"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "huge map"
+  number: 1073741824
+}

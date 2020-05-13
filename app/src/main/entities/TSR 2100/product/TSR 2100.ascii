@@ -1,0 +1,118 @@
+template {
+  name: "TSR 2100"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "This is the complete guide to being an AD&D game Dungeon Master. Whether\n                    you\'re running a single adventure or masterminding a complete fantasy\n                    campaign, the \\Product{Dungeon Master Guide} is an absolute necessity. The\n                    AD&D 2nd Edition Dungeon Master Guide puts all the information you need right\n                    at your fingertips---in a fresh, new format, fully indexed for your\n                    convenience. Here you\'ll learn all there is to know about magical spells and\n                    items, as well as monsters, combat, travel, NPCs, treasure, encounters,\n                    awarding experience, and more!"
+}
+title: "Dungeon Master Guide"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Winter, Steve"
+}
+author {
+  name: "Pickens, Jon"
+}
+editor {
+  name: "Spector, Warren"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Dorman, David"
+}
+illustrator {
+  name: "Chaffee, Douglas"
+}
+illustrator {
+  name: "Martin, Jean E."
+}
+typographer {
+  name: "Elmore, Betty"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Breault, Mike"
+  job: "layout and storyboard"
+}
+manager {
+  name: "Bakk, Linda"
+  job: "graphic design"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "keylining"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+manager {
+  name: "Graham, Cory"
+  job: "keylinging"
+}
+manager {
+  name: "Pickens, Jon"
+  job: "playtest coordination"
+}
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "729"
+  check: 7
+}
+isbn13 {
+}
+pages: 192
+system: ADND_2ND
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+number: "2"
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

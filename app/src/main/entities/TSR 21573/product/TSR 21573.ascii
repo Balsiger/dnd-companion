@@ -1,0 +1,30 @@
+template {
+  name: "TSR 21573"
+  reference {
+    name: "net"
+  }
+  world: "Star*Drive"
+  description: "a black market courier journeys to the Verge to contact The Fool"
+}
+title: "Gridrunner"
+author {
+  name: "Thomas Reid"
+}
+date {
+  year: 2000
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

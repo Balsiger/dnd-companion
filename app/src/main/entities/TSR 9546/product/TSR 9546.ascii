@@ -1,0 +1,54 @@
+template {
+  name: "TSR 9546"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  world: "Dragonlance"
+  description: "heroes are ona quest to find the ancestral crown"
+}
+title: "Heroes of Hope"
+author {
+  name: "Maxwell, Duane"
+}
+date {
+  year: 1998
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0707"
+  check: 10
+}
+isbn13 {
+}
+pages: 144
+system: ADND_REVISED
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 1073741824
+}

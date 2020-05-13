@@ -1,0 +1,34 @@
+template {
+  name: "TSR 8212"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+  description: "on a quiet night in Wyoming, two robots from the future crash to Earth"
+}
+title: "Warsprite"
+date {
+  year: 1993
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "915"
+  check: 10
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

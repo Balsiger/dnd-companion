@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8711"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Tower of Midnight Dreams"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+audience: ALL
+type: NOVEL
+number: "1"
+series: "Cartoon Show"
+price {
+}

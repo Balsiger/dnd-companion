@@ -1,0 +1,20 @@
+template {
+  name: "DMA 000030"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "unknown (pad)"
+}
+title: "Character Record Sheets"
+date {
+  year: 1977
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+price {
+}

@@ -1,0 +1,47 @@
+template {
+  name: "WTC 17734"
+  world: "Real"
+  description: "The \\Product{MLB Showdown} sports card game is your ticket to the Major\n  Leagues, where you can be the manager of your own baseball team. First,\n  assemble and field your own all-star lineup. Then use real stats and\n  strategies to lead your squad to one nine-inning gem after another.\n\n  The \\Product{MLB Showdown 2002 two-player Starter Set} comes equipped with\n  everything you and a friend need to start throwing heat and swinging for the\n  bleachers!\n\n  \\list\n  {Two 15-card teams}\n  {One 20-sided die}\n  {Playmat with Quick-Play Rules}\n  {Complete Rulebook with Advanced and Expert Rules}"
+}
+title: "MLB Showdown 2002 Two Player Starter Set"
+date {
+  year: 2002
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7430"
+  title: "0554"
+  check: 6
+}
+isbn13 {
+}
+system: MLB_SHOWDOWN_2002
+audience: ALL
+type: CARDS_TYPE
+style: PACK
+price {
+  currency: "$ "
+  number: 899
+  precision: 100
+}
+content {
+  part: CARD
+  description: "15-card team"
+  number: 2
+}
+content {
+  part: DICE
+  description: "20-sided"
+  number: 1073741824
+}
+content {
+  part: BOARD
+  description: "playmat with quick-play rules"
+  number: 1073741824
+}
+content {
+  part: BOOK
+  description: "complete rulebook"
+  number: 1073741824
+}

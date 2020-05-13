@@ -1,0 +1,55 @@
+template {
+  name: "PZO 4021"
+  synonym: ""
+  world: "Generic"
+  description: "The life of an adventurer is never boring and even a simple trip into town to visit some merchants can often lead to a life or death struggle. Worse still, the town guard can get involved, landing the heroes in front of a judge or hauling them off to jail, leaving you with little choice but to stage a jailbreak. Paizo Publishing brings all of these iconic town locales to life in this latest GameMastery Map Pack! This line of gaming products provides simple and elegant tools for the busy Game Master. Inside, you will find 18 beautiful 5"
+  short_description: "GameMastery Map Pack"
+}
+title: "Town"
+subtitle: "You\'re Going to Town!"
+author {
+  name: "Macourek, Corey"
+}
+cover {
+  name: "Macourek, Corey"
+}
+cartographer {
+  name: "Macourek, Corey"
+}
+illustrator {
+  name: "Macourek, Corey"
+}
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "192"
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "192"
+  check: 3
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: SHEETS
+producer: "Paizo"
+number: "21"
+series: "GameMastery Map Pack"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "Map"
+  number: 18
+}
+layout: FULL_COLOR

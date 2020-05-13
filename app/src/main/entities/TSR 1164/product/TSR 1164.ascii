@@ -1,0 +1,36 @@
+template {
+  name: "TSR 1164"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "Cards for the game."
+}
+title: "Spellfire Booster Pack 14: Incantations"
+author {
+  name: "Monte Cook"
+}
+date {
+  year: 1997
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0742"
+  check: 8
+}
+isbn13 {
+}
+system: SPELLFIRE
+type: BOOSTER_PACK
+style: PACK
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  number: 12
+}

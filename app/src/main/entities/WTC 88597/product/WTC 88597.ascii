@@ -1,0 +1,165 @@
+template {
+  name: "WTC 88597"
+  world: "Generic"
+  description: "The future is what you make of it. With access to space travel, cybernetics,\n  mutations, mecha, and more in \\Product{d20 Future}, heroes may battle across\n  alien worlds, survive on postapocalyptic \\Place{Earth}, voyage to distance\n  galaxies, and explore alternate dimensions. Charge your weapons and embark on\n  never-ending adventure within the infinite possibilities of the near and\n  distant future.\n\n  To use this product, you also need the \\Product{d20 Modern Roleplaying Game}\n  core rulebook. For players and Gamemasters, this product is compatible with\n  other d20 System roleplaying games."
+}
+title: "d20 Future"
+subtitle: "High Tech Meets High Adventure"
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "Wiker, JD"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "additional design"
+}
+author {
+  name: "Noonan, David"
+  job: "additional design"
+}
+author {
+  name: "Redman, Rich"
+  job: "additional design"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "additional design"
+}
+author {
+  name: "Stan!"
+  job: "additional design"
+}
+editor {
+  name: "Webb Ryan, Tammie"
+}
+editor {
+  name: "Vuckovich, Michelle"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "managing editor"
+}
+cover {
+  name: "Johnson, Dave"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Timothy II"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Falconer, Daniel"
+}
+illustrator {
+  name: "Foss, Langdon"
+}
+illustrator {
+  name: "Grafikismik"
+}
+illustrator {
+  name: "Hatton, Matthew"
+}
+illustrator {
+  name: "Kerschl, Karl"
+}
+illustrator {
+  name: "Martiniere, Stephan"
+}
+illustrator {
+  name: "Mahey, Warren"
+}
+illustrator {
+  name: "Piccolo, Christian"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Trevas, Chris"
+}
+illustrator {
+  name: "Tasi, Francis"
+}
+illustrator {
+  name: "Wimberly, Ronald"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "graphic design"
+}
+illustrator {
+  name: "Lathrop, Jennifer"
+  job: "graphic design"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+illustrator {
+  name: "Sakamoto, Jay"
+  job: "image technician"
+}
+illustrator {
+  name: "Baker, Candice"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+  name: "Fisher, Joshua"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3423"
+  check: 9
+}
+isbn13 {
+}
+pages: 224
+system: D20_MODERN
+audience: ALL
+type: CAMPAIGN_SETTING
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

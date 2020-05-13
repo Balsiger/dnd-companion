@@ -1,0 +1,26 @@
+template {
+  name: "TSR 9240"
+  synonym: "REF5"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "several short adventures across the Forgotten Realms"
+}
+title: "Lords of Darkness"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: DND_3RD
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

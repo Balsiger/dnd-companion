@@ -1,0 +1,74 @@
+template {
+  name: "Polyhedron 135"
+  world: "Generic"
+  description: "Issue 135 of Polyhedron."
+}
+title: "Polyhedron 135"
+author {
+  name: "Steve Jay"
+}
+author {
+  name: "Gibson, Ed"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "V. Simmons, Chadwick"
+}
+author {
+  name: "Greg Detwiler"
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "Rocco Pisto"
+}
+author {
+  name: "Joe Masdon"
+}
+author {
+  name: "Mark Barnabo"
+}
+editor {
+  name: "Sean Glenn"
+}
+manager {
+  name: "TSR, Inc."
+  job: "The Cathedral"
+}
+manager {
+  name: "Ryan Dancey"
+  job: "Cardinal"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Bishop"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "Choir"
+}
+manager {
+  name: "Mark Painter"
+  job: "Choir"
+}
+date {
+  year: 1999
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "19"
+number: "2"
+series: "Polyhedron"
+price {
+}

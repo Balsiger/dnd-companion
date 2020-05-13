@@ -1,0 +1,55 @@
+template {
+  name: "TSR 2808"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Generic"
+  description: "referee screen and player records"
+}
+title: "Campaign Kit"
+author {
+  name: "Eckelberry, David"
+}
+date {
+  year: 1998
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1213"
+  check: 8
+}
+isbn13 {
+}
+pages: 32
+system: ALTERNITY
+audience: ALL
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  description: "4-panel"
+  number: 1073741824
+}

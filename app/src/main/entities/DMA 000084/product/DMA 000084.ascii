@@ -1,0 +1,31 @@
+template {
+  name: "DMA 000084"
+  synonym: ""
+  description: "Catalog of 2009."
+  short_description: "Catalog of 2009."
+}
+title: "2009 Catalog"
+subtitle: "Paizo Publishing"
+date {
+  year: 2009
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+producer: "Paizo"
+price {
+  currency: "$"
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,28 @@
+template {
+  name: "TSR 1059"
+  reference {
+    name: "complete product listing"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "A fun-filled race through a magical forest."
+}
+title: "Fantasy Forest Game"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+system: SPECIAL
+audience: ALL
+type: BOARD_GAME
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}

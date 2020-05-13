@@ -1,0 +1,142 @@
+template {
+  name: "WTC 17920"
+  world: "Generic"
+  description: "\\large{Exple Never-Ending Realms of Adventure}\n                    Only the most exception characters dare tread the infinite paths of the\n                    planes. From \\Place{Sigil}, the \\Place{City of Doors}, to the \\Place{Blinding\n                    Tower} at the heart of the \\Place{Plane of Shadow}, to the \\Place{Elemental\n                    Plane of Fire}\'s storied \\Place{City of Brass}, countless perilous locations\n                    in the multiverse await bold heroes armed with remarkable talents and\n                    abilities, more than a little courage, and above all, knowledge.\n                    This supplement for the D&D game provides everything you need to create and\n                    player characters prepared for the odyssey of planer travel, including new\n                    planar races, feats, equipment, spells, and magic items. \\Product{Planar\n                    Handbook} also introduces tow power of planer touchstones, along with details\n                    and advice for visiting dozens of planar site.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, \\Product{Dungeon Master\'s Guide}, and \\Product{Monster Manual}.\n                    A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Planar Handbook"
+subtitle: "A Player\'s Guide to the Planes"
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+}
+author {
+  name: "Stan!"
+  job: "additional design"
+}
+author {
+  name: "Wiker, JD"
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "development"
+}
+author {
+  name: "Finch, Andrew"
+  job: "development"
+}
+author {
+  name: "Noonan, David"
+  job: "development"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Chumley, Brent"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Hudnut, David"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+illustrator {
+  name: "Kovacs, Doug"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Crabapple-McClain, Dennis"
+}
+illustrator {
+  name: "Pavelec, James"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Rams, Vinod"
+}
+illustrator {
+  name: "Roach, David"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+illustrator {
+  name: "Baker, Candice"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+typographer {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Stark, Ed"
+  job: "design manager"
+}
+manager {
+  name: "Finch, Andrew"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production maganger"
+}
+date {
+  year: 2004
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3429"
+  check: 8
+}
+isbn13 {
+}
+pages: 192
+system: DND_3_5
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Player Guide"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

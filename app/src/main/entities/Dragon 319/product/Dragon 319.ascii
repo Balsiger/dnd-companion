@@ -1,0 +1,142 @@
+template {
+  name: "Dragon 319"
+  world: "Generic"
+  description: "Issue 319 of the magazine. Dark Sun issue."
+}
+title: "Dragon 319"
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Four, Johnn"
+}
+author {
+  name: "Harlan, Thomas"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Smith, Mat"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Younts, Patrick"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Polack, Eric"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Harris, Todd"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lyon, Howoard"
+}
+illustrator {
+  name: "McClellan, Dave"
+}
+illustrator {
+  name: "Mitten, Cara"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Velotta, Patrick"
+  job: "graphic designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "group publishing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "circulation manager"
+}
+date {
+  year: 2004
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVIII 12"
+number: "319"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

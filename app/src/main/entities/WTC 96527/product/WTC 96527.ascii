@@ -1,0 +1,43 @@
+template {
+  name: "WTC 96527"
+  world: "Forgotten Realms"
+  description: "I shall burn thee with hunger, devour thee with blistering heat and with\n                    bitter destruction. I will send the teeth of beasts upon thee, with the\n                    poison of serpents of the dust.\n                    The spiritual heart of \\Place{Faer\\hat{u}n} beats in time with a hundred\n                    gods, and for each there are a thousand servants or more: \\Product{The\n                    Priests}.\n                    Lady of Poison is the first title in a new \\Place{Forgotten Realms} novel\n                    series focusing specifically on priests, the popular D&D game iconic class\n                    also known as clerics. Each title will chronicle priests loyal to a different\n                    deity in the \\Place{Forgotten Realms} pantheon. Like the preceding series\n                    \\Product{The Rogues}, each novel in \\Product{The Priests} series is written\n                    as a stand-alone adventure."
+}
+title: "Lady of Poison"
+author {
+  name: "Cordell, Bruce R."
+}
+cover {
+  name: "Fishman, Marc"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2004
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3161"
+  check: 2
+}
+isbn13 {
+}
+pages: 307
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "1"
+series: "The Priests"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

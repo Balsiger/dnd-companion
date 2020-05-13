@@ -1,0 +1,38 @@
+template {
+  name: "TSR 11330"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Marvel Super Heroes"
+  description: "adventure anthology"
+}
+title: "Fantastic Voyages"
+author {
+  name: "Mike Selinker"
+}
+author {
+  name: "Teeuwynn Woodruff"
+}
+date {
+  year: 1999
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1330"
+  check: 4
+}
+isbn13 {
+}
+pages: 48
+system: SAGA
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

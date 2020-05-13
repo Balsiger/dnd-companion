@@ -1,0 +1,90 @@
+template {
+  name: "TSR 9467"
+  synonym: "ALQ6"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Al-Qadim"
+  description: "\\large{Uncover vast riches among the ruins!}\n                    On moonlit nights in the \\Place{Land of Fate}, many adventurers hear the call\n                    of long-forgotten cities rich with burial treasure. But is it bravery to\n                    breach the tombs of \\Place{Zakhara}\'s ancients and risk the ire of vengeful\n                    spirits, or is it greed? Fate knows the answer and will guide all to their\n                    destinies among the \\Product{Cities of Bone}!\n                    This sourcebox includes:\n                    \\list\n                    {A 32-page \\emph{Campaign Guide} describing three ancient, mysterious\n                    cities}\n                    {A 64-page book of six adventures set in ruins and crypts throughout\n                    \\Place{Zakhara}}\n                    {An 8-page booklet introducing foes and guides to meet while\n                    adventuring}\n                    {A full-color poster map of the fabled \\Place{Jade Palace} and its\n                    \\Place{Bone Pavillion}}\n                    {six illustrated cards with full-color fronts to dazzle players, plus\n                    detailed maps for the Dungeon Master}\n                    Recommended for use with the \\Product{Arabian Adventures} rulebook."
+}
+title: "Cities of Bone"
+author {
+  name: "Kurtz, Steve"
+}
+editor {
+  name: "Weinlein, Sue"
+}
+cover {
+  name: "Loveless, Rover"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Hayday, Andria"
+  job: "project coordination"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphics coordination"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Coumbe, Tim"
+  job: "electronic prepress coordination"
+}
+date {
+  year: 1994
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "847"
+  check: 9
+}
+isbn13 {
+}
+pages: 104
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Campaign Guide"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Adventure Book"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Monstrous Compendium"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "color"
+  number: 6
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

@@ -1,0 +1,29 @@
+template {
+  name: "WTC 96572"
+  world: "Star Wars"
+  description: "The \\Product{Jedi Guardians} set pits the most powerful Jedi in the\n  \\Place{Republic} against some of the deadliest servants of the dark side.\n\n  This new, 105-card set introduces Reserves, which let you attack from a\n  position of safety, as well as Overkill for directing extra damage at a\n  secondary target. Plan your strategy carefully---the fate of the\n  \\Place{Republic} hangs in the balance.\n\n  Use the additional cards in booster packs to build or add reinforcements to\n  your deck or collection. Booster packs are recommended for expert-level\n  players. Dice and rules not included.\n\n  Each player must have a deck of \\Product{Star Wars trading card game} cards\n  to play. New players should begin with a \\Product{Star Wars: Attack of the\n  Clones Two-Player Trading Card Game}, the \\Product{A New Hope Dark Side Game\n  Pack}, or the \\Product{A New Hope Light Side Game Pack}."
+}
+title: "Jedi Guardians"
+subtitle: "Assemble the Jedi Council or destroy it completely"
+date {
+  year: 2003
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7430"
+  title: "0772"
+  check: 7
+}
+isbn13 {
+}
+system: STAR_WARS_TCG
+audience: ALL
+type: BOOSTER_PACK
+style: CARDS_STYLE
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 329
+  precision: 100
+}

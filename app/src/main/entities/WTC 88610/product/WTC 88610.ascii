@@ -1,0 +1,44 @@
+template {
+  name: "WTC 88610"
+  world: "Dragonlance"
+  description: "This slip-covered gift set contains three key titles from the\n  \\Place{Dragonlance} saga: \\Product{Time of the Twins}, \\Product{War of the\n  Twins}, and \\Product{Test of the Twins}, all of which were written by New\n  York Times bestselling authors Margaret Weis and Tracy Hickman. These are\n  crucial titles for the shelf of any \\Place{Dragonlance} fan.\n\n  In \\Product{Time of the Twins}, \\NPC{Tasslehoff}, \\NPC{Raistlin},\n  \\NPC{Caramon}, and the priestess \\NPC{Crysania} travel back in time to visit\n  the city of \\Place{Istar} before the \\Event{Cataclysm} in an attempt to avert\n  disaster, while \\NPC{Raistlin} plots to seize the magical power of the\n  ancient wizard \\NPC{Fistandantilus}. In \\Product{Test of the Twins},\n  \\NPC{Raistlin} casts a magical spell to open a \\Item{Portal} to the\n  \\Place{Abyss}. At the same instant his brother \\NPC{Caramon} operates a\n  magical device that throws \\NPC{Caramon} and \\NPC{Tasslehoff} into an\n  unexpected place. And in \\Product{War of the Twins}, \\NPC{Raistlin} prepares\n  to enter the \\Place{Abyss} and challenge the \\NPC{Dark Queen} herself, only\n  to discover that he is caught in a time loop from which there seems to be no\n  escape."
+}
+title: "Legends Gift Set"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 2002
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2766"
+  check: 6
+}
+isbn13 {
+}
+pages: 1216
+system: NONE
+audience: ALL
+type: NOVEL
+style: BOX
+producer: "WTC"
+series: "Legends"
+price {
+  currency: "$ "
+  number: 2399
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 3
+}
+content {
+  part: COVER
+  number: 1073741824
+}

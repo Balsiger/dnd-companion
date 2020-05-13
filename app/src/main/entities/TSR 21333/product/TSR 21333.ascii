@@ -1,0 +1,37 @@
+template {
+  name: "TSR 21333"
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Ravenloft"
+  description: "In this chilling sequel to the best-selling \\Product{Knight of the Black\n  Rose}, factions vie for control of \\Place{Sithicus} as \\NPC{Lord Soth} --\n  darklord and former knight from the \\Place{Dragonlance} world -- fights to\n  keep his reign from crumbling. Even as he struggles to defeat his enemies,\n  rumor reaches him that the \\NPC{White Rose} haunts the land. Has\n  \\NPC{Kitiara} finally returned to \\Place{Soth}, or is this another\n  \\Monster{spectre} from the death knight\'s tragic past?"
+}
+title: "Spectre of the Black Rose"
+author {
+  name: "Lowder, James"
+}
+author {
+  name: "Whitney-Robinson, Voronica"
+}
+date {
+  year: 1999
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1333"
+  check: 9
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

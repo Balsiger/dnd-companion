@@ -1,0 +1,59 @@
+template {
+  name: "TSR 8481"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "Travel back to strange and exotic \\Place{Menzoberranzan}, the vast city of\n                    the \\Monster{drow} and homeland to \\Place{Icewind Dale} hero \\NPC{Drizzt\n                    Do\'Urden}.\n                    The you prince of a royal house, \\NPC{Drizzt} grows to maturity in the vile\n                    world of his dark kin. Possessing honor beyond the scope of his unprincipled\n                    society, young \\NPC{Drizzt} faces an inevitable dilemma. Can he live in a\n                    world that rejects integrity?\n                    \\Product{Homeland} is R.A. Salvatore\'s first book in \\Product{The Dark Elf\n                    Trilogy} set in the \\Product{Forgotten Realms} world from TSR, Inc."
+}
+title: "Homeland"
+author {
+  name: "Salvatore, R. A."
+}
+cover {
+  name: "Easley, Jeff"
+}
+date {
+  year: 1990
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "905"
+  check: 2
+}
+isbn13 {
+}
+pages: 314
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book One"
+series: "Legend of Drizzt"
+series: "Dark Elf Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

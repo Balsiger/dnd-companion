@@ -1,0 +1,27 @@
+template {
+  name: "TSR 9097"
+  synonym: "BSOLO"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+}
+title: "Ghost of Lion Castle"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

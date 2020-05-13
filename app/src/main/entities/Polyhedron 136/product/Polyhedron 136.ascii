@@ -1,0 +1,65 @@
+template {
+  name: "Polyhedron 136"
+  world: "Generic"
+  description: "Issue 136 of Polyhedron."
+}
+title: "Polyhedron 136"
+author {
+  name: "Stephen H. Jay"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Miller, Brian"
+}
+author {
+  name: "James C. Alpeter"
+}
+author {
+  name: "Terence G. Kemper"
+}
+author {
+  name: "Cooper, Daniel"
+}
+editor {
+  name: "Sean Glenn"
+}
+manager {
+  name: "TSR, Inc."
+  job: "Lord Mayor"
+}
+manager {
+  name: "Ryan Dancey"
+  job: "Guild Master"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Sheriff"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "City Watch"
+}
+manager {
+  name: "Mark Painter"
+  job: "City Watch"
+}
+date {
+  year: 1999
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "19"
+number: "3"
+series: "Polyhedron"
+price {
+}

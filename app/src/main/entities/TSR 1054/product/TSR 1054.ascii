@@ -1,0 +1,30 @@
+template {
+  name: "TSR 1054"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Hollow World"
+  description: "The inside surface of the hollow Known World."
+}
+title: "Hollow World"
+leader: "The"
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "862"
+  check: 5
+}
+isbn13 {
+}
+system: DND_1ST
+type: CAMPAIGN_SETTING
+style: BOX
+producer: "TSR"
+price {
+}

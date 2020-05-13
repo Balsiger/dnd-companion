@@ -1,0 +1,171 @@
+template {
+  name: "Dragon 325"
+  world: "Generic"
+  description: "Issue 325 of the magazine. "
+}
+title: "Dragon 325"
+author {
+  name: "Alvarez, J.C."
+}
+author {
+  name: "Carter, Scott"
+}
+author {
+  name: "Cole, Joshua"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Diaz, Oliver"
+}
+author {
+  name: "Hahn, Robert J."
+}
+author {
+  name: "Hamilton, Kevin"
+}
+author {
+  name: "Hart, Mark A."
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Kanakia, Rahul"
+}
+author {
+  name: "McArtor, Mike"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Perry, Chis"
+}
+author {
+  name: "Pocklington, Richard"
+}
+author {
+  name: "Scott, Amber"
+}
+author {
+  name: "Strohm, Keith"
+}
+author {
+  name: "Vandgrift, Ben"
+}
+author {
+  name: "Wyatt, James"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Janssen, Niklas"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Luckas, Chuck"
+}
+illustrator {
+  name: "Martinez, Randy"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Perez, Ramon"
+}
+illustrator {
+  name: "Philippi, Michael"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Schley, Mike"
+  job: "graphic designer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "circulation manager"
+}
+date {
+  year: 2004
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIX 6"
+number: "325"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

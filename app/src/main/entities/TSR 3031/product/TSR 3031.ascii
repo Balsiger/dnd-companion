@@ -1,0 +1,36 @@
+template {
+  name: "TSR 3031"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "S.P.I."
+  description: "replay the battle of Pearl Harbour or Midway"
+}
+title: "Pacific Theatre of Operations"
+date {
+  year: 1991
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "896"
+  check: 10
+}
+isbn13 {
+}
+pages: 48
+system: WORLD_WAR_II
+audience: ALL
+type: BOARD_GAME
+price {
+  currency: "$"
+  number: 3995
+  precision: 100
+}

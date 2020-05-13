@@ -1,0 +1,35 @@
+template {
+  name: "TSR 8392"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "Three years after the \\Event{Summer of Chaos}, \\NPC{Sara Dunstan}, adoptive\n  mother of \\NPC{Steel Brightblade}, hears rumors that the \\Group{Knights of\n  Takhisis} are regathering in the evil city of \\Place{Neraka}. Although still\n  branded a renegade by the \\Group{Dark Knights}, she travels to \\Place{Neraka}\n  with the \\Monster{blue dragon}, \\NPC{Cobalt}, to learn the truth. There she\n  discovers the \\Group{knights} are not only rebuilding under the leadership of\n  NPC{General Mirielle Abrena}, but they have imminent plans to return to war.\n\n  Frustrated and seeking answers, \\NPC{Sara} journeys to the \\Place{Tomb of the\n  Last Heroes in Solace}. At the tomb, she receives an answer she never\n  expected, which inspires a new order that could help the people of\n  \\Place{Ansalon} to survive the dark days ahead.\n\n  Mary H. Herbert is the author of the best-selling \\Product{Dark Horse}\n  series."
+}
+title: "Legacy of Steel"
+author {
+  name: "Herbert, Mary H."
+}
+date {
+  year: 1998
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1187"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book 2"
+series: "Bridges of Time"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

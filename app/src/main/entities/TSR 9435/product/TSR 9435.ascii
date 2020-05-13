@@ -1,0 +1,52 @@
+template {
+  name: "TSR 9435"
+  synonym: "Entry 7"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "meet the fearsome Rakastas, Lords of the Cat-Men"
+}
+title: "Rage of the Rakasta"
+leader: "The"
+author {
+  name: "Connors, William"
+}
+date {
+  year: 1993
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "614"
+  check: 10
+}
+isbn13 {
+}
+pages: 16
+system: DND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "die-cut figure"
+  number: 20
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 1073741824
+}

@@ -1,0 +1,78 @@
+template {
+  name: "WTC 2172072"
+  world: "Generic"
+  description: "Within the pages of this core rulebook for the 4th Edition Dungeons & Dragons Roleplaying Game lurk nearly 500 fearsome and deadly monsters for your heroes to face, each one specially designed for ease of use and excitement in play.\n                    The \\Product{Monster Manual} features long-time favorites such as \\Monster{giants}, \\Monster{demons}, and \\Monster{dragons}, as well as the brand-new \\Monster{titans}, \\Monster{angels}, and \\Monster{elemental archons}. The book includes threats for characters of every level, from the lowly \\Monster{kobold} minion to mighty \\NPC{Orcus}, Demon Prince of the Undead!"
+  short_description: "Roleplaying Game Core Rules"
+}
+title: "Monster Manual"
+subtitle: "Monstrous Foes for Every Hero"
+author {
+  name: "Watkins, Rob"
+  job: "additional design and development"
+}
+author {
+  name: "Winter, Steve"
+  job: "additional design and development"
+}
+author {
+  name: "Youngs, Chris"
+  job: "additional design and development"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+  job: "front"
+}
+cover {
+  name: "Hagan, Brian"
+  job: "back"
+}
+cartographer {
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2008
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4852"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4852"
+  check: 9
+}
+pages: 288
+system: DND_4
+type: MONSTER_COMPENDIUM
+style: HARDCOVER
+series: "Corel Rulebook"
+price {
+  currency: "$"
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,120 @@
+template {
+  name: "WTC 2189872"
+  world: "Generic"
+  description: "From the bright towns and darkened wilderness they come: might heroes intent on exploring dungeons, slaying monsters and battling evil.\n                    This companion to the \\Product{Player\'s Handbook} core rulebook introduces the primal power source, which draws on the spirits that preserve and sustain the world. \\Product{Player\'s Handbook 2} includes four classes tied to the primal power source: the barbarian, the druid, the shaman, and the warden. It also presents four new arcane and divine classes: the avenger, the bard, the invoker, and the sorcerer.\n                    This essential book for D&D players contains other exciting options, including new races, powers, feats, paragon paths (including racial paragon paths), epic destinies, magic items (including totems), rituals, and a background section designed to help you develop your character\'s history and personality."
+  short_description: "Player\'s Handbook extension for Primal, Arcane, and Divine Heroes"
+}
+title: "Player\'s Handbook 2"
+subtitle: "Heroes of Primal Might and Ancient Power"
+author {
+  name: "Sernett, Matthew"
+  job: "development"
+}
+author {
+  name: "Wyatt, James"
+  job: "writer"
+}
+author {
+  name: "Heinsoo, Rob"
+  job: "mechanical concepts"
+}
+cover {
+  name: "Scott, Daniel"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+illustrator {
+  name: "Ortiz, Hector"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "art director"
+}
+illustrator {
+  name: "Murayama, Soe"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2009
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5016"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5016"
+  check: 4
+}
+pages: 224
+system: DND_4
+audience: PLAYER
+type: RULEBOOK
+style: HARDCOVER
+producer: "WTC"
+series: "core rulebook"
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

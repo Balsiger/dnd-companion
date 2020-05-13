@@ -1,0 +1,38 @@
+template {
+  name: "TSR 8151"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "None"
+}
+title: "Unicorn Hunt"
+leader: "The"
+author {
+  name: "Cunningham, Elaine"
+}
+date {
+  year: 1995
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0105"
+  check: 5
+}
+isbn13 {
+}
+pages: 256
+system: FIRST_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Two"
+series: "First Quest Books"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

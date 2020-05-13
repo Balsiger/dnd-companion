@@ -1,0 +1,89 @@
+template {
+  name: "TSR 1032"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{The Mysterious Orient}\n                    This box contains everything AD&D game players and DMs need to establish an\n                    exciting Oriental Adventures campaign!  \\Place{Kara-Tur}, world of Eastern\n                    mystery, is on the far side of the planet from the \\Place{Forgotten Realms}\n                    Campaign Setting, but the two cultures interact only if \\emph{you} want them\n                    to! This is the \'official\' campaign setting for the \\Product[TSR\n                    2018]{Oriental Adventures} rulebook. \\Place{Kara-Tur} has everything you\n                    need: Two 96-page books describe the places, culture, politics, monsters,\n                    magic, people, religions, and more, plus advice on running a long-term\n                    \\Product[TSR 2018]{Oriental Adventures} campaign, bringing characters from\n                    other worlds into \\Place{Kara-Tur}, and dimensional travel from\n                    \\Place{Kara-Tur} to other worlds. And there are four full-color, two sided\n                    maps of this land of mighty warriors and powerful enchantments."
+}
+title: "Kara-Tur, The Eastern Realms"
+subtitle: "A New Campaign Setting for Oriental Adventures"
+author {
+  name: "Batista, Jay"
+}
+author {
+  name: "Christian, Deborah"
+}
+author {
+  name: "Nephew, John"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Pondsmith, Mike"
+}
+editor {
+  name: "Winter, Steve"
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+typographer {
+  name: "Elmore, Betty"
+}
+manager {
+  name: "Cook, David \'Zeb\'"
+  job: "coordination"
+}
+manager {
+  name: "O\'Malley, Colleen"
+  job: "graphic design"
+}
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "608"
+  check: 8
+}
+isbn13 {
+}
+pages: 192
+system: ADND_1ST
+type: CAMPAIGN_EXPANSION
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Kara-Tur volume I"
+  number: 1073741824
+}
+content {
+  part: BOOK
+  description: "Kara-Tur volume II"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 4
+}
+content {
+  part: SHEET
+  description: "transparent hex overlay"
+  number: 2
+}

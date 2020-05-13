@@ -1,0 +1,199 @@
+template {
+  name: "Dragon 355"
+  world: "Generic"
+  description: "Issue 355 of the magazine. "
+}
+title: "Dragon 355"
+author {
+  name: "Baase, Kevin"
+}
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Christensen, William L."
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Clough, C. Wesley"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Flemming, John"
+}
+author {
+  name: "Gable, Scott L."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Herold, Nick"
+}
+author {
+  name: "Hitchcock, Nick"
+}
+author {
+  name: "Jansing, Eric"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Logue, Nicholas"
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "Montero, Jos\\acute{e}"
+}
+author {
+  name: "Noel, Scott"
+}
+author {
+  name: "o\'Connor, Shane"
+}
+author {
+  name: "Pett, Richard"
+}
+author {
+  name: "Schneider, Wesley F."
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "managing editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Dillon, Julie"
+}
+illustrator {
+  name: "Gravato, John"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "P\\acute{e}rez, Ram\\acute{o}n"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "art director"
+}
+illustrator {
+  name: "Pozca, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2007
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXXI 12"
+number: "355"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

@@ -1,0 +1,51 @@
+template {
+  name: "WTC 21862"
+  synonym: "WTC 88185"
+  world: "Forgotten Realms"
+  description: "\\large{\\NPC{Shamur Uskevren}}\n                    The matriarch of the \\Group{Uskevren} family swears revenge for the murder of\n                    a loved one.\n                    In her anger, she has forgotten one thing: In the world of intrigue and\n                    deception, of shadows and lies that is \\Place{Sembia}, nothing is ever what\n                    it seems. An angry \\Class{wizard} with a lust for power can alter reality and\n                    distort the truth on a whim. When he is bent on treachery, murder, and\n                    destruction, he can shatter an entire world."
+}
+title: "Shattered Mask"
+leader: "The"
+author {
+  name: "Byers, Richard Lee"
+}
+editor {
+  name: "Baldwin, Lizz"
+}
+editor {
+  name: "Athans, Philip"
+}
+cover {
+  name: "Neilson, Terese"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2001
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1862"
+  check: 4
+}
+isbn13 {
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "Sembia"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

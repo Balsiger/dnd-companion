@@ -1,0 +1,44 @@
+template {
+  name: "TSR 9572"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Generic"
+  description: "\\large{A new age dawns...an age of terror!}\n                    \\emph{They are close. I can feel them even stronger, now. It won\'t be long\n                    before the Masters come again. I have waited for them, waited for their\n                    return. Once they extinguish the Light, the true Dawn can begin.}\n                    The \\Monster{illithids} once ruled a mighty empire that stretched across many\n                    worlds. These foul creatures enslaved or destroyed whole races in their quest\n                    for ultimate power---until a rebellion spread like fire on dry plains. The\n                    \\Monster{mind flayer} empire toppled, and the multiverse was freed from\n                    eternal servitude.\n                    Now, a hundred suns burn toward extinction, their light stolen by the\n                    \\Monster{flayers} to reinvent their past. If the PCs do not stop the new\n                    dawn, the \\Product{Dawn of the Overmind}, the \\Monster{illithids} will rule\n                    once again! Following the clues left by their benefactor, the adventurers\n                    journey over a vast world of ancient ruins. Buried deeply within these ruins\n                    lies an artifact of ancient \\Monster{illithid} manufacture. This item is all\n                    that stands between the \\Monster{illithids} and their nefarious goal:\n                    complete and utter domination.\n                    \\Product{Dawn of the Overmind} is the third adventure in a trilogy\n                    (originating with \\Product{A Darkness Gathering} and continuing in\n                    \\Product{Master of Eternal Night}). It can be played alone or linked with the\n                    other two parts of the trilogy to form an epic-length adventure. The\n                    \\Monster{illithid} trilogy support \\Product{The Illithiad}, a\n                    \\Product{Monstrous Arcana}, supplement that contains invaluable information\n                    on every facet of \\Monster{illithid} life, psychology, technology, and\n                    ability."
+}
+title: "Dawn of the Overmind"
+date {
+  year: 1998
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1211"
+  check: 1
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Monstrous Arcana"
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

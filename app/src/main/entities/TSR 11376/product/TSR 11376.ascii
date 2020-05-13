@@ -1,0 +1,35 @@
+template {
+  name: "TSR 11376"
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "From the pages of \\Product{Dungeon} magazine.\n                    \\large{The road to adventure is fraught with danger. Travel swiftly, and\n                    guard yourselves well.}\n                    For a group of unsung heroes, the challenge begins with six adventures\n                    originally presented in \\Product{Dungeon} Adventures magazine:\n                    \\list\n                    {\\bold{Grakhirt\'s Lair} by John Nephew The villain responsible for the\n                    bloody battle at \\Place{Nolivari} remains at large. Catch him before\n                    he attacks again.}\n                    {\\bold{Trouble At Grog\'s} by Grand and David Boucher: When a crime\n                    wave threatens the town of \\Place{Dagger Rock}, a \\Monster{half-ogre}\n                    innkeeper calls upon brave heroes to find the culprits.}\n                    {\\bold{The Stolen Power} by Robert Kelk: The priests of\n                    \\Place{Highland} need help to catch a thief and recover a \\Item{book\n                    of infinite spells} from his wilderness retreat.}\n                    {\\bold{The Matchmakers} by Patricia Nead Elrod: A love affair torn by\n                    treachery threatens to plunge the city of \\Place{Povero} into civil\n                    war.}\n                    {\\bold{Roarwater Caves} by Willie Walsh: A \\Monster{xvart} shaman\n                    needs brave heroes to attack his own lair, but are the perils worth\n                    the reward?}\n                    {\\bold{The Inheritance} by Paul Culotta: A keep on the edge of\n                    civilization has fallen to the ruthless \\Group{Lostafinge}\n                    tribe. Remove the threat, and claim the castle as your prize!}\n                    \\Product{Road to Danger} is a collection of low-level adventures for the\n                    Advanced Dungeons & Dragons game. Each adventure stands alone, but any or all\n                    of them can be inserted easily into an ongoing AD&D campaign designed to\n                    challenge low-level characters and prepare them for even greater dangers down\n                    the road!"
+}
+title: "Road to Danger"
+date {
+  year: 1998
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1376"
+  check: 2
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

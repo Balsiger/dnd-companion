@@ -1,0 +1,167 @@
+template {
+  name: "Dragon 326"
+  world: "Generic"
+  description: "Issue 326 of the magazine. "
+}
+title: "Dragon 326"
+author {
+  name: "Byers, Richard Lee"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Campbell, Christopher"
+}
+author {
+  name: "Cole, Joshua"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "DeKalb, Chris"
+}
+author {
+  name: "Drain, Jonathan"
+}
+author {
+  name: "Hahn, Robert J."
+}
+author {
+  name: "Hart, Mark A."
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Neale, Julian"
+}
+author {
+  name: "Pocklington, Richard"
+}
+author {
+  name: "Purvis, Jayce K."
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Schwartz, David"
+}
+author {
+  name: "Steinmann, Jacob"
+}
+author {
+  name: "Thalasinos, Nicholas J."
+}
+author {
+  name: "Turley, Kieran"
+}
+author {
+  name: "Ward, Kyla"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Mitten, Cara"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Perez, Ramon"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Wahlstrom, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+date {
+  year: 2004
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIX 7"
+number: "326"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

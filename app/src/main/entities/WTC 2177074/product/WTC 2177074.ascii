@@ -1,0 +1,48 @@
+template {
+  name: "WTC 2177074"
+  world: "Forgotten Realms"
+  description: "Raidon Kane emerges from the \\Event{Spellplague} with a sapphire tattoo burned into his flesh, strange supernatural powers, and eleven missing years.\n                    \\emph{The world had ended\n                    How could he forget that?}\n                    His daughter is dead. His home has been destroyed. His life is empty save for one thing.\n                    \\emph{Everything faded to blue, then to nothing.}\n                    \\large{REVENGE}\n                    "
+  short_description: "Book I in the Abolethic Sovereignity trilogy"
+}
+title: "Plague of Spells"
+subtitle: "29 Tarsakh, 1385 DR - The Horizon Was on Fire"
+author {
+  name: "Cordell, Bruce R."
+}
+cover {
+  name: "Targete, J.P."
+}
+date {
+  year: 2008
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4965"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4965"
+  check: 6
+}
+pages: 307
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "Abolethic Sovereignity"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

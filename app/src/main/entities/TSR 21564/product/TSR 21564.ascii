@@ -1,0 +1,43 @@
+template {
+  name: "TSR 21564"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  world: "Dragonlance"
+}
+title: "Dragons of a Fallen Sun"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+date {
+  year: 2000
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1564"
+  check: 1
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Volume One"
+series: "War of Souls"
+price {
+  currency: "$"
+  number: 2795
+  precision: 100
+}

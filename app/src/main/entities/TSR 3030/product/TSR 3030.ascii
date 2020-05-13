@@ -1,0 +1,26 @@
+template {
+  name: "TSR 3030"
+  reference {
+    name: "catalog93"
+  }
+  description: "historical simulation detailing world war II battles in the skies"
+}
+title: "Battle of Britain"
+date {
+  year: 1993
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "894"
+  check: 3
+}
+isbn13 {
+}
+audience: ALL
+type: BOARD_GAME
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}

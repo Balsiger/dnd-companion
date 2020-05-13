@@ -1,0 +1,80 @@
+template {
+  name: "Polyhedron 128"
+  world: "Generic"
+  description: "Issue 128 of Polyhedron."
+}
+title: "Polyhedron 128"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Nichols, Bobby"
+}
+author {
+  name: "Eckelberry, David"
+}
+author {
+  name: "St\\acute{e}phane Raymond"
+}
+author {
+  name: "Shaun A. Horner"
+}
+author {
+  name: "JD Wiker"
+}
+author {
+  name: "Lisa Tomihiro"
+}
+author {
+  name: "Paul Gosselin"
+}
+author {
+  name: "Bennington, Adam"
+}
+author {
+  name: "Henry R. Gannon"
+}
+author {
+  name: "Boyd, Eric L."
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "The Mighty Cray"
+}
+manager {
+  name: "Lisa Stevens"
+  job: "PowerMac 9600"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Pentium II"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "Toaster"
+}
+manager {
+  name: "Paul Alan Timm"
+  job: "Toaster"
+}
+date {
+  year: 1998
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "18"
+number: "1"
+series: "Polyhedron"
+price {
+}

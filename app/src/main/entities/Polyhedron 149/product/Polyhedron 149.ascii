@@ -1,0 +1,97 @@
+template {
+  name: "Polyhedron 149"
+  world: "Generic"
+  description: "January 2002 issue of polyhedron (together with Dungeon 90)."
+}
+title: "Polyhedron 149"
+subtitle: "Pulp Heroes"
+author {
+  name: "Stan!"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Chambers, Michael"
+}
+author {
+  name: "Pensingstoke, Sir Ian"
+}
+author {
+  name: "Hammerton, Karl"
+}
+author {
+  name: "Fox-Renard, Sylvia"
+}
+author {
+  name: "Savage, Marko"
+}
+author {
+  name: "McKill, Archibald"
+}
+author {
+  name: "Chambers, Dirk"
+}
+author {
+  name: "Hamilton, Munro H."
+}
+editor {
+  name: "Mona, Erik"
+}
+cover {
+  name: "Harris, Tony"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "logos and ad design"
+}
+illustrator {
+  name: "Buckley, Leanne"
+  job: "chapter illustration"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+  job: "class illustration"
+}
+illustrator {
+  name: "Pace, Richard"
+  job: "interior illustration"
+}
+typographer {
+  name: "James, Andy"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "publisher"
+}
+date {
+  year: 2002
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 62
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "149"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Psionics Handbook"
+layout: FULL_COLOR

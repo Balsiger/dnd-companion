@@ -1,0 +1,117 @@
+template {
+  name: "Dungeon 68"
+  world: "Generic"
+  description: "This is issue 68 of the dungeon magazine."
+}
+title: "Dungeon 68"
+author {
+  name: "Reed, Charles C."
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Zenz, David"
+}
+author {
+  name: "Kenower, William"
+}
+author {
+  name: "Baichtal, John W."
+}
+author {
+  name: "Smedman, Lisa"
+}
+author {
+  name: "Corvello, Brian"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "post, rk"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Morales Rags"
+}
+illustrator {
+  name: "Schwartz, Stephen"
+}
+illustrator {
+  name: "Vrbanic, George"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "post, rk"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+date {
+  year: 1997
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 80
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XII 2"
+number: "68"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

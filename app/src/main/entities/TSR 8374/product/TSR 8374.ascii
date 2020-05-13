@@ -1,0 +1,49 @@
+template {
+  name: "TSR 8374"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "\\emph{\'When \\Monster{dragons} make war, \\Place{Krynn} can only tremble in\n  the shaodw of angry wings.\'}\n\n  \\right{--\\NPC{Astinus Lorekeeper}}\n\n  \\NPC{Aurican} and \\NPC{Darlantan}, mighty serpents of \\Monster{gold} and\n  \\Monster{silver}, have been nurtured in a world of wisdom, meditation, and\n  sublime faith. On the other side of \\Place{Ansalon}, \\NPC{Crematia}, a\n  \\Monster{dragon of red}, inherits the \\God{Dark Queen}\'s legacy of betrayal,\n  violence, conquest, and plunder.\n\n  The advent of a worldwide war sweeps these powerful beings and many more into\n  desperate strife. Battles rage over \\Place{Krynn} with a fury that threatens\n  to annihilate nations and whole races -- even \\Monster{dragonkind}. As\n  campaigns ebb and flow, generations of lesser mortals come and go, and the\n  great serpents are left to determine the fate of the world. Their triumphs\n  may create a destiny of all-encompassing light or cast the world beneath the\n  shadoe of ultimate darkness.\n\n  \\bold{The \\Monster{Dragons}}\n\n  The \\Product{Lost Histories Series} probes the historical roots and epic\n  struggles of little-known inhabitants of \\Place{Krynn}."
+}
+title: "Dragons"
+leader: "The"
+subtitle: "War Among the Dragons..."
+author {
+  name: "Niles, Douglas"
+}
+date {
+  year: 1996
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0513"
+  check: 1
+}
+isbn13 {
+}
+pages: 316
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book 6"
+series: "Lost Histories Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

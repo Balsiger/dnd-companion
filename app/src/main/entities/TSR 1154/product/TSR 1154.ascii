@@ -1,0 +1,36 @@
+template {
+  name: "TSR 1154"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+  description: "Latest rules and prints of all cards."
+}
+title: "Spellfire Reference Guide, Volume 2"
+author {
+  name: "Kevin Melka"
+}
+date {
+  year: 1996
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0613"
+  check: 8
+}
+isbn13 {
+}
+pages: 448
+system: SPELLFIRE
+audience: ALL
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}

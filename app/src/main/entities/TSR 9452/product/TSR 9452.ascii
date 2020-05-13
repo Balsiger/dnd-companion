@@ -1,0 +1,31 @@
+template {
+  name: "TSR 9452"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+  description: "awakening of a mummy"
+}
+title: "Awakening"
+leader: "The"
+date {
+  year: 1994
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

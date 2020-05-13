@@ -1,0 +1,34 @@
+template {
+  name: "WTC 88626"
+  world: "Dragonlance"
+  description: "The \\Place{Dragon Isles}: abandoned home of the good \\Monster{dragons}, land\n  of amazing adventure and legendary treasure. The trouble is, no one knows how\n  to get there.\n\n  Now \\NPC{Mikal Vardan} and his crew have found the hidden route, but they\'re\n  not the only ones interested in the isles. A beautiful sea \\Monster{elf}\n  scavenger thinks the wealth of a lost civilization might be worth killing\n  for, and a menacing \\Monster{sea dragon} is determined to bring a reign of\n  terror to the peaceful archipelago."
+}
+title: "Dragon Isles"
+leader: "The"
+author {
+  name: "Sullivan, Stephen D."
+}
+date {
+  year: 2002
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2827"
+  check: 1
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Crossroads"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

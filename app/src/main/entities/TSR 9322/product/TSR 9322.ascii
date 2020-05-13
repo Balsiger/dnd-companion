@@ -1,0 +1,71 @@
+template {
+  name: "TSR 9322"
+  synonym: "HR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\center{\'From the wrath of the \\Group{Northmen}, O \\God{Lord}, deliver\n                    us...}\n                    Now you can take your campaign and player characters into the realms of the\n                    \\Group{Northmen}. This is no mere fantasy world---this sourcebook is set in\n                    the historical world of \\Group{Viking} legend. Included in this sourcebook\n                    are new character classes, new magic, new spells, new monsters, new treasures\n                    and the necessary background information on the life and times of the\n                    \\Group{Vikings}. Numerous floorplans and a full-color map of the Viking world\n                    give you a complete role-playing package."
+}
+title: "Vikings"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+editor {
+  name: "Ewell, Newton H."
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+date {
+  year: 1992
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: SOURCEBOOK
+style: SOFT_COVER
+producer: "TSR"
+number: "1"
+series: "Historical Reference"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}

@@ -1,0 +1,58 @@
+template {
+  name: "WTC 17976"
+  world: "Dragonlance"
+  description: "This is the first title in a new trilogy centering around the character of\n  \\NPC{Linsha Majere}, the grandchild of one of hte central characters to the\n  entire \\Place{Dragonlance} saga. One of the author\'s previous titles,\n  \\Product{The Clandestine Circle}, introduced this character to\n  \\Place{Dragonlance} readers. This new title and trilogy will advance the\n  story of the world after the events of the best-selling \\Product{War of Souls\n  trilogy} and will also introduce a major new villain to the setting."
+}
+title: "City of the Lost"
+author {
+  name: "Herber, Mary H."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2986"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume I"
+series: "Linsha Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

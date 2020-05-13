@@ -1,0 +1,40 @@
+template {
+  name: "WTC 9554774"
+  world: "Forgotten Realms"
+  description: "\\large{The Wizard}\n                    Furthering the plots of the \\Group{Red Wizards} of \\Place{Thay} while\n                    spinning his own webs, he works in the shadows, manipulating the highest\n                    reaches of power.\n                    \\large{The Woman}\n                    Tormented by the ghosts of the past and her own passions, she walks the fine\n                    line between sanity and madness, and her obsession may destroy the one thing\n                    she loves most.\n                    \\large{The Man}\n                    A visionary who cares nothing for the petty squabbling of those in power, his\n                    one desire is to accomplish his greatest work.\n                    Philip Athans, The New York Times best-selling author, continues a new saga\n                    in the Forgotten Realms of a man consumed by obsession and driven by an\n                    overwhelming vision of what might be."
+}
+title: "Lies of Light"
+author {
+  name: "Athans, Philip"
+}
+cover {
+  name: "Critchlow, Carl"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2006
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 308
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "The Watercourse Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,87 @@
+template {
+  name: "TSR 2111"
+  synonym: "PHBR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Open locks; hide in shadows; move silently; find traps. If you thought that\n                    was all a thief was good for, think again. The masters of skulking and\n                    skullduggery are a force to be reckoned with. Is anyone or anything safe from\n                    a person who might be anywhere, anytime? Learn the thief\'s most closely\n                    guarded secrets in this devious accessory for the AD&D game."
+}
+title: "Complete Thief\'s Handbook"
+leader: "The"
+author {
+  name: "Nephew, John"
+}
+author {
+  name: "Sargent, Carl"
+}
+author {
+  name: "Niles, Douglas"
+}
+editor {
+  name: "Haring, Scott"
+}
+editor {
+  name: "staff, TSR"
+}
+illustrator {
+  name: "Barr, George"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Wood, Robin"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "780"
+  check: 7
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "2"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

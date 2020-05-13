@@ -1,0 +1,56 @@
+template {
+  name: "TSR 8554"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 221"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{Out of the Shadows of Time...}\n                    For a cold eternity of centuries, a banished \\Monster{titan} has lurked in\n                    the forbidden dusk of the \\Place{Twilight Vale}---imprisoned for a crime as\n                    black as the boreal night.\n                    With the birth of a new king comes his freedom.\n                    When \\NPC{Queen Brianna} presents her husband with a first-born son,\n                    \\NPC{Tavis Burdun} must choose between the love of his child and the dark\n                    prophecy of a noble \\Monster{firbolg} shaman. Only \\NPC{Tavis} can prevent\n                    the boy from unleashing a cataclysmic war, but first he must track down the\n                    infant\'s gloom-cloaked kidnapper.\n                    The \\Product{Titan of Twilight} Book Three of the \\Product{Twilight Giants\n                    Trilogy}."
+}
+title: "Titan of Twilight"
+leader: "The"
+author {
+  name: "Denning, Troy"
+}
+cover {
+  name: "Lakey, John"
+}
+cover {
+  name: "Lakey, Laura"
+}
+date {
+  year: 1995
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0172"
+  check: 1
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Three"
+series: "Twilight Giants"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

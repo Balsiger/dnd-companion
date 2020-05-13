@@ -1,0 +1,147 @@
+template {
+  name: "Dungeon 121"
+  world: "Generic"
+  description: "This is issue 121 of the dungeon magazine."
+}
+title: "Dungeon 121"
+author {
+  name: "Austin, Alec"
+}
+author {
+  name: "Brown, Russell"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Greer, Stephen S."
+}
+author {
+  name: "Pett, Richard"
+}
+author {
+  name: "Wheaton, Wil"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+editor {
+  name: "Walker, Jeremy"
+  job: "editorial assistant"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Adorjany, Attila"
+}
+illustrator {
+  name: "Barrum, Joachim"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Reed, Ted"
+}
+illustrator {
+  name: "Shaw, Stan"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Schley, Mike"
+  job: "associate art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "publisher"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "19 4"
+number: "121"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,32 @@
+template {
+  name: "WTC 96583"
+  world: "Generic"
+  description: "Ready yourself for a random encounter dominated by dragons and\n                    \\Monster{dragonkind}, along with a horde of other heroes, villains, and\n                    monsters. Taken straight from D&D rulebooks, such as the\n                    \\Product{Draconomicon}, \\Product{Complete Warrior}, \\Product{Miniatures\n                    Handbook}, and the \\Product{Dragonlance Campaign Setting}, these characters\n                    are ready for battle -- right out of the box.\n                    Each randomized \\Product{Dragoneye expansion pack} contains 8 randomly\n                    selected, prepainted, fully assembled, collectible miniatures with\n                    double-sided statistic cards for use with D&D roleplaying game or for\n                    fast-paced head-to-head combat.\n                    Three separate \\Product{Dragoneye miniatures packs} are pictured at\n                    left. Each one contains a random selection of miniatures."
+}
+title: "Dragoneye Expansion Pack"
+subtitle: "Roll for initiative!"
+date {
+  year: 2003
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3317"
+  check: 8
+}
+isbn13 {
+}
+system: DND_3RD
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+number: "2"
+series: "D&D Miniatures"
+price {
+}
+content {
+  part: MINIATURE
+  description: "randomized, prepainted plastic"
+  number: 8
+}

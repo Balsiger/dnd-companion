@@ -1,0 +1,81 @@
+template {
+  name: "TSR 2147"
+  world: "Generic"
+  description: "In the fight against evil, the \\Class{paladin} stands as Good\'s supreme,\n                    undaunted champion. This 128-page accessory helps you play the noblest\n                    warriors of the AD&D game. Create or enhance your \\Class{paladin} with new\n                    proficiencies and equipment, new rules for bonded mounts, and \\Class{paladin}\n                    kits like the \\Class{divinate}, \\Class{envoy}, \\Class{ghosthunter},\n                    \\Class{skyrider}, and the indomitable \\Class{wyrmslayer}. \\Product{The\n                    Complete Paladin\'s Handbook} attends the world\'s finest heroes as they\n                    achieve their lofty ideals"
+}
+title: "Complete Paladin\'s Handbook"
+leader: "The"
+author {
+  name: "Swan, Rick"
+}
+editor {
+  name: "Varney, Allen"
+}
+illustrator {
+  name: "Frank, Ken"
+  job: "black & white"
+}
+illustrator {
+  name: "Nelson, Mark"
+  job: "black & white"
+}
+illustrator {
+  name: "Valusek, Valerie"
+  job: "black & white"
+}
+illustrator {
+  name: "Dorscheid, Les"
+  job: "color"
+}
+illustrator {
+  name: "Fields, Fred"
+  job: "color"
+}
+illustrator {
+  name: "James, L. Dean"
+  job: "color"
+}
+illustrator {
+  name: "Orbik, Glen"
+  job: "color"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Coumbe, Tim"
+  job: "electronic prepress coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1994
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "845"
+  check: 2
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+audience: ALL
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "12"
+series: "Player\'s Handbook"
+price {
+  currency: "$ "
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: BLACK_AND_WHITE

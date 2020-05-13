@@ -1,0 +1,69 @@
+template {
+  name: "TSR 9341"
+  synonym: "FA2"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  world: "Forgotten Realms"
+  description: "What your players say at the start of \\Product[TSR 9341]{Nightmare Keep}:\n                    \'Oh, look, an underground labyrinth filled with treasure. No one who\'s gone\n                    in ever came out alive. Gosh, we\'ve never seen that before, oh no.\' (Stifled\n                    yawn.)\n                    What they say early on in \\Product[TSR 9341]{Nightmare Keep}: \'Hold it!\n                    What\'s going on? Oh, yucccch! We\'re getting out! This way, this way! What\'s\n                    that? Oh, no!\'\n                    Halfway through \\Product[TSR 9341]{Nightmare Keep}: \'Okay. If we stick close\n                    and look sharp and don\'t act stupid, I think we might get out of this alive.\'\n                    At the climax of \\Product[TSR 9341]{Nightmare Keep}: \'Oh no. Oh no.\'\n                    A would-be conqueror is raising hordes of undead insects beneath\n                    \\Place{Wolover\'s Keep} in the \\Place{Veilstone Peaks}. This evil being was\n                    once a \\Monster[Lich]{lich}, a powerful undead wizard...but that was not\n                    enough. Now something strange exists beneath the \\Place[Wolover\'s\n                    Keep]{Keep}, something repellent---and strong beyond measure.\n                    \\Product[TSR 9341]{Nightmare Keep}: for the AD&D game adventurer with\n                    courage, a strong stomach, and superior firepower. This adventures is set\n                    near northwestern \\Place{Cormyr} in the \\Place{Forgotten Realms}, but it fits\n                    easily into any ongoing high-level campaign."
+}
+title: "Nightmare Keep"
+author {
+  name: "Swan, Rick"
+}
+editor {
+  name: "Varney, Allen"
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "keylining"
+}
+date {
+  year: 1991
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color-map"
+  number: 1073741824
+}

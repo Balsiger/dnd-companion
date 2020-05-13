@@ -1,0 +1,22 @@
+template {
+  name: "TSR 1128A"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+  description: "Base set for the Blood Wars game."
+}
+title: "Blood Wars Card Game"
+date {
+  year: 1995
+}
+isbn {
+}
+isbn13 {
+}
+system: BLOOD_WARS
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+}

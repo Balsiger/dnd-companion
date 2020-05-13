@@ -1,0 +1,44 @@
+template {
+  name: "TSR 8571"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  world: "Forgotten Realms"
+}
+title: "Passage to Dawn"
+author {
+  name: "Salvatore, R. A."
+}
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0489"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "book 4"
+series: "Legacy of the Drow"
+price {
+  currency: "$"
+  number: 2399
+  precision: 100
+}

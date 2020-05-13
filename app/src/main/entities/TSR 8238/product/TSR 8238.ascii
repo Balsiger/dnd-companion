@@ -1,0 +1,39 @@
+template {
+  name: "TSR 8238"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+  description: "tale of a noble mouse"
+}
+title: "Mus of Kerbridge"
+author {
+  name: "Paul Kidd"
+}
+date {
+  year: 1995
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0094"
+  check: 6
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

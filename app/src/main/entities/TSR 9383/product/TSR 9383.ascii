@@ -1,0 +1,38 @@
+template {
+  name: "TSR 9383"
+  synonym: "DLR3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "new heroes in the world of Krynn"
+}
+title: "Unsung Heroes"
+date {
+  year: 1993
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "423"
+  check: 6
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

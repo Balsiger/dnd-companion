@@ -1,0 +1,37 @@
+template {
+  name: "TSR 11793"
+  reference {
+    name: "net"
+  }
+  world: "Episode I"
+  description: "everything a player needs for the Star Wars game"
+}
+title: "Star Wars Roleplaying Game"
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Collins, Andy"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1793"
+  check: 8
+}
+isbn13 {
+}
+pages: 288
+system: STAR_WARS
+audience: ALL
+type: RULEBOOK
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}

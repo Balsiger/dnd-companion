@@ -1,0 +1,45 @@
+template {
+  name: "TSR 9458"
+  synonym: "CR6"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "cards with psionic powers"
+}
+title: "Deck of Psionic Powers"
+date {
+  year: 1994
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "902"
+  check: 5
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: CARD
+  number: 288
+}

@@ -1,0 +1,44 @@
+template {
+  name: "TSR 2410"
+  synonym: "DSQ2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dark Sun"
+  description: "outlawed magicians against sorcerer-kings, levels 5-8"
+}
+title: "Arcane Shadows"
+date {
+  year: 1992
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "312"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}

@@ -1,0 +1,44 @@
+template {
+  name: "TSR 9523"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  world: "Ravenloft"
+  description: "Grim Harvest Series, levels 5-7"
+}
+title: "Death Unchained"
+author {
+  name: "Smedman, Lisa"
+}
+date {
+  year: 1996
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0408"
+  check: 9
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

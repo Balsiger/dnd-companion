@@ -1,0 +1,105 @@
+template {
+  name: "Dungeon 52"
+  world: "Generic"
+  description: "This is issue 52 of the dungeon magazine."
+}
+title: "Dungeon 52"
+author {
+  name: "Selinker, Michael"
+}
+author {
+  name: "Walsh, Willie"
+}
+author {
+  name: "Heath, Samuel"
+}
+author {
+  name: "Wilson, Kevin"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Culotta, Paul F."
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "Burdick, Scott"
+}
+cartographer {
+  name: "Ciske, Ren\\grave{e}e"
+}
+illustrator {
+  name: "Burdick, Scott"
+}
+illustrator {
+  name: "Jaquays, Paul"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Wolf, P.L."
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+typographer {
+  name: "Isler, Tracy"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1995
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "IX 4"
+number: "52"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

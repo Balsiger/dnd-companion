@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9185"
+  synonym: "N4"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Treasure Hunt"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}

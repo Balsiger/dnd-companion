@@ -1,0 +1,134 @@
+template {
+  name: "WTC 9538574"
+  world: "Generic"
+  description: "The \\Place{Wyrmsmoke Mountains} shook with the thunder of ten thousand\n                    screaming \\Monster{hobgoblin} soldiers. From the phalanx emerged a single\n                    champion. One by one the tribes fell silent as the warlord rose up, blue\n                    scales gleaming along his shoulders, horns swept back from his head. A\n                    hundred bright yellow banners stood beneath him, each marked with a great\n                    read hand. He stood upon a precipice and raised his arms. \'I am \\NPC{Azarr\n                    Kul}, \\NPC{Son of the Dragon}!\' the warlord bellowed. \'Hear me! Tomorrow we\n                    march to war!\'\n                    \\Product{Red Hand of Doom} is a Dungeons & Dragons adventure designed to take\n                    characters from the 6th level to the 12th level. Confronted with the\n                    relentless advance of \\NPC{Azurr Kul\'s horde}, the characters must undertake\n                    vital missions to influence the outcome of the war. Can they shatter the\n                    armies of the enemy, or will \\NPC{Azarr Kul}\'s dreams rain destruction upon\n                    the human lands?\n                    An exciting super-adventure that pits heroes against an army bent on\n                    domination.\n                    Rampaging \\Monster{hobgoblins} and their allies threaten to destroy the realm\n                    and all who stand before them. Characters who dare confront the horde soon\n                    discover that these particular \\Monster{hobgoblins} worship \\God{Tiamat}, the\n                    evil queen of \\Monster{dragons}, and eventually come face-to-face with her\n                    \\Monster{draconic} minions.\n                    This 128-page adventure features a new format easily used by Dungeon\n                    Masters. The \\Product{Red Hand of Doom} includes encounters designed for use\n                    with the D&D miniatures game."
+}
+title: "Red Hand of Doom"
+subtitle: "Who can Stand Against the Son of the Dragon?"
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+editor {
+  name: "Rateliff, John"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Hudnut, David"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Hanley, Des"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director D&D"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director RPD R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3938"
+  check: 9
+}
+isbn13 {
+}
+pages: 128
+system: DND_3_5
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "adventure"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "color battle map"
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

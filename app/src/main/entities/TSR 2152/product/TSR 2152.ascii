@@ -1,0 +1,96 @@
+template {
+  name: "TSR 2152"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "A lot of magical items from \\Item{Decoy Dust} to \\Item{Phylactery of\n                    Riteousness}."
+}
+title: "Encyclopedia Magica, Volume II"
+author {
+  name: "Henson, Dale \'Slade\'"
+}
+editor {
+  name: "Stewart, Doug"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Fields, Fred"
+}
+illustrator {
+  name: "Jaquays, Paul"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Ruppel, Robh"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Winter, Steve"
+  job: "project coordination"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphic coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0124"
+  check: 1
+}
+isbn13 {
+}
+pages: 416
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+number: "Volume II"
+series: "Encyclopedia Magica"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

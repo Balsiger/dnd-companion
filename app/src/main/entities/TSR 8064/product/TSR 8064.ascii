@@ -1,0 +1,50 @@
+template {
+  name: "TSR 8064"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+  description: "Two young necromancers-in-training accept the invitation of \\NPC{Victor Mordenheim} to aid him in his research. \\NPC{Mordenheim}, man of sience, wishes to revive his dead wife and funnel her essence into a new living receptacle. The newcomers\' consternation is brought to a head when one of them, a lovely young woman, is kidnapped by \\NPC{Adam}, \\NPC{Mordenheim}\'s creation, who swears to kill her should they pursue their plans. From then on it\'s a race across the ice, battling lycanthropes, vengeful \\Group{Vistani}, and the dark forces themselves, as the young necromancers try to escape the dark domains.\n\n\\Product{Mordenheim} is the eighth in an open-ended series of Gothic horror tales dealing with the masters and monsters of the Ravenlof dark fantasy setting."
+}
+title: "Mordenheim"
+author {
+  name: "Williamson, Chet"
+}
+cover {
+  name: "Loveless, Roger"
+}
+date {
+  year: 1994
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "852"
+  check: 5
+}
+isbn13 {
+}
+pages: 315
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book Eight"
+series: "Ravenloft Books"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+layout: COLOR_COVER

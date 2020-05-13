@@ -1,0 +1,60 @@
+template {
+  name: "TSR 8345"
+  synonym: "WTC 86075"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "\\NPC{Caramon}, \\NPC{Sturm}, and \\NPC{Tasslehoff}, on an innocent ship\'s\n  errand, are blown thousands of miles off course by a magic windstorm and\n  transported to the eastern \\Place{Bloodsea}. \\NPC{Caramon} and \\NPC{Sturm}\n  are left for dead while \\NPC{Tasslehoff} mysteriously turns against his\n  friends....\n\n  Back in \\Place{Solace}, \\NPC{Raistlin} convinces \\NPC{Flint Fireforge} and\n  \\NPC{Tanis Half-Elven} that they must make a perilous journey to\n  \\Place{Mithas}, the kingdom of the \\Monster{minotaurs}. Their task: not only\n  to rescue their friends, but also to defeat the elusive \\NPC{Nightmaster}.\n\n  \\Product{The Companions} brings the cast of the \\Place{Dragonlance} series\n  together for their first adventure. Author Tina Daniell wrote the best-seller\n  \\Product{Dark Heart}."
+}
+title: "Companions"
+leader: "The"
+subtitle: "Lost at Sea"
+author {
+  name: "Daniell, Tina"
+}
+date {
+  year: 1993
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "340"
+  check: 10
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume VI"
+series: "Meetings Sextet"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

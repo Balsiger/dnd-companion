@@ -1,0 +1,49 @@
+template {
+  name: "WTC 21807"
+  synonym: "TSR 21807"
+  world: "Dragonlance"
+  description: "The people of \\Place{Krynn} have known war in past ages. Some are still\n  alive who remember the triumph of good at the conclusion of the \\Event{War of\n  the Lance}. Still more remember the devastation of the \\Event{Chaos War},\n  which ended the \\Event{Fourth Age} of the world.\n\n  But now a new war is about to begin, more terrible than any have known. This\n  war is one for the very heart and soul of the world itself."
+}
+title: "Dragons of a Fallen Sun"
+subtitle: "The War of Souls"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+cover {
+  name: "Stawicki, Matt"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2001
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1807"
+  check: 1
+}
+isbn13 {
+}
+pages: 627
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book I"
+series: "The War of Souls"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

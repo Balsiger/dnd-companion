@@ -1,0 +1,161 @@
+template {
+  name: "WTC 88190"
+  world: "Generic"
+  description: "\\large{Play every adventure you can imagine}\n\n  Experience the thrills of every blockbuster action movie, every\n  heart-pounding first-person shooter, and every explosive, high-octane\n  escapade you can dream up. Inside this book, you\'ll discover everything you\n  need to build the ultimate moder-world campaign filled with cinematic\n  adventure, and to create the dynamic heores needed to face the harrowing\n  dangers that await within.\n\n  For players and Gamemasters, this product is compatible with the Dungeons &\n  Dragons roleplaying game and other d20 System roleplaying games."
+}
+title: "d20 Modern"
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Redman, Rich"
+}
+author {
+  name: "Ryan, Charles"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "design assistance and advice"
+}
+author {
+  name: "Stan!"
+  job: "design assistance and advice"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Ryan, Cherles"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Johnson, Dave"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Buckley, Leanne"
+}
+illustrator {
+  name: "Collins, Julie"
+}
+illustrator {
+  name: "Fischer, Scott"
+}
+illustrator {
+  name: "Granato, Anthony"
+}
+illustrator {
+  name: "Gregory, Doug"
+}
+illustrator {
+  name: "Kerschl, Karl"
+}
+illustrator {
+  name: "Noto, Phil"
+}
+illustrator {
+  name: "Ormstom, Dean"
+}
+illustrator {
+  name: "Pucinski, Zak"
+}
+illustrator {
+  name: "Riche, Darrel"
+}
+illustrator {
+  name: "Robinson, Andrew"
+}
+illustrator {
+  name: "Schomburg, Scott"
+}
+illustrator {
+  name: "Sook, Ryan"
+}
+illustrator {
+  name: "Talon, Durwin"
+}
+manager {
+  name: "Raper, Robert"
+  job: "art direction"
+}
+manager {
+  name: "Fliege, Cynthia"
+  job: "graphic design"
+}
+manager {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "proofreading"
+}
+manager {
+  name: "Williams, Penny"
+  job: "proofreading"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design management"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "vice president"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Kirchoff, Mary"
+  job: "vice president of publishing"
+}
+manager {
+  name: "Valterra, Anthony"
+  job: "category management"
+}
+manager {
+  name: "Durham, Martin"
+  job: "project management"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production management"
+}
+manager {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Cheung, Carmen"
+  job: "graphic production specialist"
+}
+date {
+  year: 2002
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 384
+system: D20_MODERN
+audience: ALL
+type: RULEBOOK
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

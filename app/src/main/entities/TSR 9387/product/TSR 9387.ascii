@@ -1,0 +1,51 @@
+template {
+  name: "TSR 9387"
+  synonym: "Entry 4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "one on one adventure, level 1"
+}
+title: "Sword and Shield"
+date {
+  year: 1992
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "498"
+  check: 8
+}
+isbn13 {
+}
+pages: 16
+system: DND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "stand-up figures"
+  number: 1073741824
+}

@@ -1,0 +1,24 @@
+template {
+  name: "TSR 1012B"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+  description: "Unknown"
+}
+title: "Dungeons & Dragons Expert Set"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+type: RULEBOOK
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1200
+  precision: 100
+}

@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5706"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Druids"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

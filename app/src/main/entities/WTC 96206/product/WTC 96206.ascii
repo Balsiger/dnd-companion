@@ -1,0 +1,33 @@
+template {
+  name: "WTC 96206"
+  world: "Dragonlance"
+  description: "Lifelong friends, they went their separate ways. Now they are together\n  again, though each holds secrets from the others in his heart. They speak of\n  a world shadowed with rumors of war. They speak of tales of strange monsters,\n  creatures of myth, creatures of legend. They do not speak of their\n  secrets. Not then. Not until a chance encounter with a beautiful, sorrowful\n  woman, who bears a magical crystal staff, draws the companions deeper into\n  the shadows, forever changing their lives and shaping the fate of the world.\n\n  No one expects them to be heroes.\n\n  The title that started the entire \\Place{Dragonlance} phenomenon is now being\n  released in a trade hardcover edition for the first time in its publishing\n  history. Featuring the stunning art and design that graced the cover of the\n  paperback edition, this title is the first in a series of hardcover releases\n  of all of the core \\Place{Dragonlance} titles by Weis & Hickman. Fans and\n  collectors alike now have the chance to obtain the entire set of core titles\n  in hardcover."
+}
+title: "Dragons of Autumn Twilight"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 2003
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 416
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume I"
+series: "Dragonlance Chronicles"
+price {
+  currency: "$ "
+  number: 2795
+  precision: 100
+}

@@ -1,0 +1,30 @@
+template {
+  name: "TSR 9136"
+  synonym: "DL7"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+}
+title: "Dragons of Light"
+date {
+  year: 1985
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "093"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

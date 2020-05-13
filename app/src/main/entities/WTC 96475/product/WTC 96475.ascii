@@ -1,0 +1,34 @@
+template {
+  name: "WTC 96475"
+  world: "Dragonlance"
+  description: "This title kicks off a key new \\Place{Dragonlance} trilogy from popular\n  \\Place{Dragonlance} author Douglas Niles. This series will explore the\n  post-war era in \\Place{Solamnia}, a central region of the \\Place{Dragonlance}\n  world, continuing key story elements from the New York Times best-selling\n  \\Product{War of Souls} series."
+}
+title: "Lord of the Rose"
+author {
+  name: "Niles, Douglas"
+}
+date {
+  year: 2005
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3146"
+  check: 9
+}
+isbn13 {
+}
+pages: 400
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume I"
+series: "Rise of Solamnia"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

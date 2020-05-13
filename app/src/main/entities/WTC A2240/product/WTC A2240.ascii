@@ -1,0 +1,44 @@
+template {
+  name: "WTC A2240"
+  world: "Forgotten Realms"
+  description: "I am \\NPC{Drizzt Do\'Urden}, once guided by an infallible moral compass, nove following a path that is no longer clear. I draw my swords alongside my lover \\NPC{Dahlia} to settle some long-ago score, though I do not know what greater good it will serve. My heart tells me that I should leave. Yet I cannot deny the thrill of it all.\n\nI am \\NPC{Herzgo Alegni}, \\Group{Shadovar} commander, \\Group{Netherese} lord. I stand on my namesake bridge and await the coming battle. The \\Monster{drow} and his allies think they will surprise me, but do they forget my weapon -- adn the one I have bound to it? \\NPC{Drizzt Do\'Urden} is no match for me.\n\nI am \\Item{Charon\'s Claw}, ancient artifact, sentient sword. I have dominated a once-great city and enslaved a once-legendary assassin. With a whisper of my blade, I can lay \\NPC{Artemis Entreri} low in the street. I sense he seeks my destruction. But is he willing to sacrifice everything for one quick breath of freedom?\n\nThe \\Product{Legend of Drizzt} continues in this prelude to the award-winning action MMORPG Neverwinter."
+  short_description: "The legend of Drizzt continues around Neverwinter in a clash with Charon\'s Claw."
+}
+title: "Charon\'s Claw"
+subtitle: "I Do Not Fight for Betterment. I Just Fight."
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2011
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 442
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "The Neverwinter Saga"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "book"
+  number: 1
+}
+layout: COLOR_COVER

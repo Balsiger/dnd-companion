@@ -1,0 +1,152 @@
+template {
+  name: "WTC 9572872"
+  world: "Eberron"
+  description: "The \\Event{Treaty of \\Place{Thronehold}} stopped the massive march of armies across \\Place{Khorvaire}, but it didn\'t put an end to espionage, unrest, and border skirmishes among the nations of \\Place{Eberron}. And no treaty could ever end the horrors that haunt the dreams of every soldier, spy, and adventurer whose life was shattered by a century of warfare.\n\nThis supplement for the \\Place{Eberron} campaign setting presents everything you need to bring the \\Event{Last War} to life in your Eberron game, whether you\'re playing a character who fought in the war or running adventures that take place during the century of conflict. New character options let you explore battlefield backgrounds, the magic of war, battle scars, and the benefits of working as a team. Campaign seeds help the Dungeon Master introduce the themes and events of the \\Event{Last War} in a current-day campaign or send characters back to their wartime days through flashbacks or actual travel through time. A comprehensive overview of the \\Event{Last War} provides all you need to know about the events, armies, battlefields, and themes of \\Place{Eberron}\'s greatest clash of nations."
+}
+title: "Forge of War"
+leader: "The"
+subtitle: "The Last War Never Ended..."
+author {
+  name: "Wyatt, James"
+  job: "designer"
+}
+author {
+  name: "Marmell, Ari"
+  job: "designer"
+}
+author {
+  name: "Baur, Wolfgang H."
+  job: "designer"
+}
+editor {
+  name: "Jurkat, M. Alexander"
+  job: "development and editing"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Hunter, Kyle"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Coker, Tomm"
+}
+illustrator {
+  name: "Doong, Arnold"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Hooper, Fred"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Pilcerova, Martina"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Jordan, Robert"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "freelance manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4153"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4153"
+  check: 7
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 3795
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 86400"
+layout: FULL_COLOR

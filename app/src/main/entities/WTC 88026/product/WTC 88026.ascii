@@ -1,0 +1,143 @@
+template {
+  name: "WTC 88026"
+  world: "Generic"
+  description: "\\emph{\'Only those who are pure in word, thought, and deed may look upon the\n                    knowledge gathered within this blessed tome. For the blinding truths\n                    inscribed within offer nothing but redemption or destruction for the\n                    wicked. May these consecrated pages forever illuminate the paths of the\n                    righteous.}\n                    \\right{---\\NPC{Raziel the Crusader}, rule of the \\Place{Platinum Heaven}}\n                    This sourcebook for the D&D game is intended for mature audiences and\n                    provides players and Dungeon Masters with inspiring subject matter that will\n                    broaden any campaign. Included is a detailed look at the nature of good and\n                    the complex challenges that face those who join the eternal struggle on the\n                    side of the moral and just. Along with exalted feats, prestige classes, and\n                    spells, the \\Product{Book of Exalted Deeds} also provides descriptions and\n                    statistics for a host of creatures and celestial paragons to ally with\n                    virtuous characters.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, \\Product{Dungeon Master\'s Guide}, and \\Product{Monster Manual}. A\n                    player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Book of Exalted Deeds"
+subtitle: "Strike Down Evil with the Sword of Enlighment"
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Drader, Darrin"
+}
+author {
+  name: "Decker, Jesse"
+  job: "design contributor"
+}
+author {
+  name: "Mona, Erik"
+  job: "design contributor"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+}
+editor {
+  name: "McQuillan, Bill"
+  job: "managing editor"
+}
+cover {
+  name: "Higginbotham, Henry"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+illustrator {
+  name: "Chumley, Brent"
+}
+illustrator {
+  name: "Guay-Mitchell, Rebecca"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Kovacs, Doug"
+}
+illustrator {
+  name: "Kubic, Ginger"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Mitchell, Matt"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Thompson, Ben"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "original interior design"
+}
+typographer {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Stark, Ed"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Kirchoff, Mary"
+  job: "vice-president of publishing"
+}
+manager {
+  name: "Durham, Martin"
+  job: "project manager"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production manager"
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3136"
+  check: 1
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 3295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

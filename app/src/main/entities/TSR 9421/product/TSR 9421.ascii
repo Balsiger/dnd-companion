@@ -1,0 +1,45 @@
+template {
+  name: "TSR 9421"
+  synonym: "MAGIC2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "index of magical items"
+}
+title: "Magic Encyclopedia, Volume II"
+leader: "The"
+author {
+  name: "Henson, Dale"
+}
+date {
+  year: 1993
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "563"
+  check: 1
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

@@ -1,0 +1,89 @@
+template {
+  name: "Polyhedron 130"
+  world: "Generic"
+  description: "Issue 129 of Polyhedron."
+}
+title: "Polyhedron 130"
+author {
+  name: "Jeff Quick"
+}
+author {
+  name: "Keene, Catherine"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Keith Hoffman"
+}
+author {
+  name: "Buehler, Carl"
+}
+author {
+  name: "Gary S. Watkins"
+}
+author {
+  name: "Sean Reynolds"
+}
+author {
+  name: "Jeremy Reinhard"
+}
+author {
+  name: "Spike Y Jones"
+}
+author {
+  name: "Glen R. Goodwin"
+}
+author {
+  name: "Smith, Doug"
+}
+author {
+  name: "Lance Hawvermale"
+}
+author {
+  name: "Matt Brebner"
+}
+author {
+  name: "Boyd, Eric L."
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "Home Port"
+}
+manager {
+  name: "Lisa Stevens"
+  job: "Harbormaster"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Cap\'n"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "All Hand"
+}
+manager {
+  name: "Paul Alan Timm"
+  job: "All Hand"
+}
+date {
+  year: 1998
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 48
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "18"
+number: "3"
+series: "Polyhedron"
+price {
+}

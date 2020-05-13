@@ -1,0 +1,35 @@
+template {
+  name: "WTC 9547174"
+  world: "None"
+  description: "One guild ravages the streets. \\NPC{Teysa} leads another to \'cleanse\'\n                    them. And \\NPC{Agrus Kos} doesn\'t give a damn.\n                    But as he watches the guilds nip and tear at each other like\n                    snakes... something clicks.\n                    Now his mind is clear, as are his options. A disaster grows under the city\'s\n                    crowded streets. He knows what he must do."
+}
+title: "Guildpact"
+author {
+  name: "Herndon, Cory J."
+}
+date {
+  year: 2006
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3989"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book II"
+series: "The Ravnica Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+layout: BLACK_AND_WHITE

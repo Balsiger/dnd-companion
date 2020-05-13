@@ -1,0 +1,49 @@
+template {
+  name: "TSR 2158"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  reference {
+    name: "Dragon 225"
+  }
+  world: "Generic"
+  description: "Back again, and better than ever! Virtually all new AD&D game monsters that\n                    were published by TSR in 1994 have growled, burrowed, and slithered their way\n                    into this second release in a yearly series of Monstrous Compendium\n                    supplements.\n                    More than 100 denizens of land, sky, sea, and ... other places ... are\n                    collected inside. Most of these creatures originally appeared in a specific\n                    AD&D campaign setting, but they\'ve all been updated and edited so they can be\n                    used in any campaign.\n                    This year\'s collection also features the return of long out-of-print\n                    \\Monster{dinosaurs} and \\Monster{pleistocene creatures}, and includes general\n                    encounter tables for the Monstrous Compendium books.\n                    This richly illustrated book is an essential addition to every Dungeon\n                    Master\'s library."
+}
+title: "Monstrous Compendium Annual, Volume II"
+date {
+  year: 1996
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0289"
+  check: 2
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: RULEBOOK
+style: SOFT_COVER
+producer: "TSR"
+number: "Annual Volume II"
+series: "Monster Manual"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

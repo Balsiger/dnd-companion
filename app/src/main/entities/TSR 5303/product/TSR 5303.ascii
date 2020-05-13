@@ -1,0 +1,26 @@
+template {
+  name: "TSR 5303"
+  reference {
+    name: "complete product listing"
+  }
+  description: "\\large{\'A \\Monster{troll} is that much bigger than my magic-user?\'}\n                    Your magic-user could throw a \\Spell{fireball} at the beast, but where\'s the\n                    rest of your party---the fighter, the cleric and the \\Monster{dwarf}? Would\n                    the flames engulf them, too?\n                    AD&D game action is fast-paced. Keeping track of who\'s where in the dungeon\n                    can be hard, especially during combat. That\'s why players and DM\'s agree that\n                    official AD&D miniatures make a great game even greater.\n                    And yes, a \\Monster{troll} \\emph{is} that much bigger than your\n                    character. All 25mm AD&D miniatures are in scale to one another, for added\n                    realism."
+}
+title: "Magic Users & Illusionists"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+price {
+}
+content {
+  part: MINIATURE
+  description: "metal"
+  number: 12
+}

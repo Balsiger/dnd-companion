@@ -1,0 +1,57 @@
+template {
+  name: "TSR 9264"
+  synonym: "REF2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "What weapon would you choose when you have to fight a 100-foot\n                    \\Monster{dragon}? What are your chances of falling off that cliff and\n                    breaking your neck? Do you still have that certain magical potion or did your\n                    character drink it last week?\n                    These questions, and many more, can be answered when you fill out your all\n                    new AD&D 2nd Edition Character Record Sheet. Record your character\'s ability\n                    scores, possessions, background, and much, much more!\n                    And the new record sheets are formatted more clearly than ever for faster,\n                    more spontaneous role-playing fun!"
+}
+title: "AD&D Character Record Sheets"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "752"
+  check: 1
+}
+isbn13 {
+}
+pages: 40
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

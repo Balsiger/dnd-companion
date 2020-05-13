@@ -1,0 +1,18 @@
+template {
+  name: "TSR 5405"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Dragonlance"
+}
+title: "Dragonlance Heroes"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

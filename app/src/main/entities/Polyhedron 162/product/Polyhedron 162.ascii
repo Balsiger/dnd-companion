@@ -1,0 +1,97 @@
+template {
+  name: "Polyhedron 162"
+  world: "Generic"
+  description: "Issue of polyhedron (together with Dungeon 103)."
+}
+title: "Polyhedron 162"
+subtitle: "Pulp Heroes"
+author {
+  name: "Stan!"
+}
+author {
+  name: "Broadhurst, Creighton"
+}
+author {
+  name: "Maguire, Andrew"
+}
+author {
+  name: "Kerrigan, Stuart"
+}
+author {
+  name: "Looby, Paul"
+}
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "West, Christopher"
+}
+editor {
+  name: "Mona, Erik"
+}
+cover {
+  name: "Janssen, Niklas"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Tsang, Arnold"
+}
+illustrator {
+  name: "Dogan, Omar"
+}
+illustrator {
+  name: "Udon Entertainement"
+}
+illustrator {
+}
+illustrator {
+  name: "Trevas, Christopher"
+}
+illustrator {
+  name: "Hill, Jonathan"
+}
+illustrator {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "Hunter, Kyle S."
+  job: "art direction"
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 33
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "162"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+layout: FULL_COLOR

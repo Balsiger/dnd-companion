@@ -1,0 +1,67 @@
+template {
+  name: "TSR 9347"
+  synonym: "SJQ1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "A little information is a very frightening thing.\n\n  Hundreds of years ago, the \\Monster{elves} and the \\Monster{goblinkin} fought\n  for control of known space in the \\Event{Unhuman War}. Though the\n  \\Monster{elves} won that first campaign, they know the \\Monster{goblinkin}\n  are clamoring for a rematch. Recently the \\Monster{elves} commissioned a few\n  good adventurers to infiltrate the base of a new race of advanced\n  \\Monster{orcs} known as the \\Monster{scro}. They are hoping to gain\n  information on their enemies\' numbers and plans.\n\n  The news they found was far worse.\n\n  The \\Monster{scro} have discovered a weapon of awesome destruction, one that\n  can lay waste to entire worlds. But the key to unlock its power lies lost and\n  forgotten.\n\n  Even now the \\Monster{scro} are searching for it. When they find it, they\n  will wreak destruction and revenge on the inhabited planets.\n\n  The \\Monster{elves} are looking for an adventuring team who can win this\n  desperate race, and find the key first. Your PCs may be the only thing that\n  stands between known space and doom.\n\n  \\Product{Heart of the Enemy} is a 96-page adventure set in the \\Event{Second\n  Unhuman War}. The second of a two-part series, it can either be linked with\n  the previous \\Product{Goblins\' Return} or it can be player as a stand-alone\n  adventure.\n\n  \\Product{Heart of the Enemy} is designed for four to six characters of levels\n  8-11."
+}
+title: "Heart of the Enemy"
+author {
+  name: "Swan, Rick"
+}
+editor {
+  name: "Capsian, Jonatha"
+}
+cover {
+  name: "Freas, Kelly"
+}
+cartographer {
+  name: "Beck, Steve"
+}
+illustrator {
+  name: "Miller, David O."
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Brown, Timothy B."
+  job: "project coordination"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "342"
+  check: 6
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

@@ -1,0 +1,91 @@
+template {
+  name: "Dungeon 38"
+  world: "Generic"
+  description: "This is issue 38 of the dungeon magazine."
+}
+title: "Dungeon 38"
+author {
+  name: "Green, Richard"
+}
+author {
+  name: "Stump, Rich"
+}
+author {
+  name: "Wilson, Leonard"
+}
+author {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "assistant editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Clarke, Peter"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Klasnich, Robert"
+}
+illustrator {
+  name: "Wolf, P.L."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1992
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "VII 2"
+number: "38"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

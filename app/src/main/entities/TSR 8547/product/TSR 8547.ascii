@@ -1,0 +1,103 @@
+template {
+  name: "TSR 8547"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "From the secret annals of \\Place{Realms} history come these\n                    never-before-published tales of infamy, featuring the most nefarious villains\n                    of that magical world---\\NPC{Artemis Entreri}, \\NPC{Manshoon of\n                    \\Place{Zhentil Keep}}, \\NPC{Elaith Craulnober}, \\NPC{Zulkir Szass Tam}, and\n                    many others---told by your favorite authors, including:\n                    \\bold{Ed Greenwood}\n                    \\bold{R.A. Salvatore}\n                    \\bold{Elaine Cunningham}\n                    \\bold{Troy Denning}\n                    \\bold{Christie Golden}"
+}
+title: "Realms of Infamy"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Hendee, Barb"
+}
+author {
+  name: "Bergstrom, Elaine"
+}
+author {
+  name: "Salvatore, R.A."
+}
+author {
+  name: "Golden, Christie"
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Ward, James M."
+}
+author {
+  name: "Vitola, Denise"
+}
+author {
+  name: "King, J. Robert"
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Anthony, Mark"
+}
+author {
+  name: "Hong, Jane Cooper"
+}
+author {
+  name: "Herbert, Mary H."
+}
+author {
+  name: "Lowder, James"
+}
+author {
+  name: "Moore, Roger E."
+}
+editor {
+  name: "Lowder, James"
+}
+cover {
+  name: "Gallego, Blas"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+date {
+  year: 1994
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "911"
+  check: 4
+}
+isbn13 {
+}
+pages: 346
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,70 @@
+template {
+  name: "TSR 9228"
+  synonym: "H4"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "The battle between the mighty undead army of the \\NPC{With-King} of\n                    \\Place{Vaasa} and the forces of \\Place{Bloodstone} has come to a\n                    standstill. As long as the source of the \\NPC{With-King}\'s power is at work,\n                    his evil forces will never be defeated!\n                    As the rules of \\Place{Bloodstone Pass}, it is up to you to find and destroy\n                    the source of \\Place{Vaasa}\'s power. All you have to do is journey to the\n                    \\Place{Abyss}, confront the mightiest demon of all, steal the \\Item{Wand of\n                    Orcus}, and take it to the \\Place{Seven Heavens} to be destroyed.\n                    \\Product{Throne of Bloodstone} is the fourth and final installment in a\n                    series of modules especially designed for high-level characters. While it is\n                    not necessary to have played any of the three previous modules, \\Product{The\n                    Throne of Bloodstone} is the climax of an epic struggle for a kingdom against\n                    the forces of darkest evil. Recommended for characters of levels\n                    18-1000. \\Product{The Throne of Bloodstone} is the highest-level adventure\n                    ever published by TSR!"
+  short_description: "The Conclusion of the High-Level Bloodstone Pass Saga!"
+}
+title: "Throne of Bloodstone"
+leader: "The"
+subtitle: "The Conclusion of the High-Level Bloodstone Pass Saga!"
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Dobson, Michael"
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Parkinson, Keith"
+}
+cartographer {
+  name: "Sutherland III, David C."
+}
+cartographer {
+  name: "Sullivan, Stephen"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Nolan, Graham"
+}
+illustrator {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+typographer {
+  name: "Elmore, Betty"
+}
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_1ST
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}

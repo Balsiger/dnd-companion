@@ -1,0 +1,35 @@
+template {
+  name: "TSR 9335"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "man to man battlesystem battles"
+}
+title: "Battlesystem Skirmishes"
+date {
+  year: 1991
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "357"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

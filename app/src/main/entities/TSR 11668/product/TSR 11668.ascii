@@ -1,0 +1,26 @@
+template {
+  name: "TSR 11668"
+  reference {
+    name: "Dragon 268"
+  }
+  description: "Spider-Man and other super heroes must stop mob wars"
+}
+title: "Spider-Man: Marvel Team-Up"
+author {
+  name: "Harold Johnson"
+}
+date {
+  year: 2000
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+system: MARVEL_SUPER_HEROES
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

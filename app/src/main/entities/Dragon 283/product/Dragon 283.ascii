@@ -1,0 +1,185 @@
+template {
+  name: "Dragon 283"
+  world: "Generic"
+  description: "Issue 281 of the magazine. An issue about clerics and deities."
+}
+title: "Dragon 283"
+author {
+  name: "Ryan, Michael G."
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "McCarty, John Dougal"
+}
+author {
+  name: "Selinker, Mike"
+}
+author {
+  name: "Stan!"
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Byers, Richard Lee"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "McVey, Mike"
+}
+author {
+  name: "Winninger, Ray"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robin D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+cover {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "John Kovalic"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Kaluta, Michael"
+}
+illustrator {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Mayerik, Val"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Delgado Jr., Peter"
+}
+illustrator {
+  name: "Mey"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Wagner, E. B."
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Whitley, Peter"
+  job: "art direction"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation direction"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales direction"
+}
+manager {
+  name: "Dunn, John"
+  job: "production management"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistance"
+}
+date {
+  year: 2001
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXV 12"
+number: "283"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

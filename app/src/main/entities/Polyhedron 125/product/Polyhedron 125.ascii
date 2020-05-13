@@ -1,0 +1,95 @@
+template {
+  name: "Polyhedron 125"
+  world: "Generic"
+  description: "Issue 125 of Polyhedron."
+}
+title: "Polyhedron 125"
+author {
+  name: "Keith Strohm"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Robert Wiese"
+}
+author {
+  name: "Gary Labrecque"
+}
+author {
+  name: "Ramon Delgado"
+}
+author {
+  name: "Susan Threadgill"
+}
+author {
+  name: "James W. Cameron"
+}
+author {
+  name: "Blum, Dave"
+}
+author {
+  name: "Baker, David W."
+}
+author {
+  name: "Sheffield, Bill"
+}
+author {
+  name: "Glenn Smith"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Roger E. Moore"
+}
+author {
+  name: "Fred Faber"
+}
+author {
+  name: "Hesperin, Clio"
+}
+author {
+  name: "Jacinth Moonspring"
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "publisher"
+}
+manager {
+  name: "Scott Douglas"
+  job: "network coordination"
+}
+manager {
+  name: "Robert Wiese"
+  job: "tournament coordination"
+}
+manager {
+  name: "Conant, Dave"
+  job: "production"
+}
+manager {
+  name: "Terry Craig"
+  job: "production"
+}
+date {
+  year: 1996
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "16"
+number: "10"
+series: "Polyhedron"
+price {
+}

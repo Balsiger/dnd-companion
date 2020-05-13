@@ -1,0 +1,48 @@
+template {
+  name: "TSR 8337"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+}
+title: "Firstborn"
+date {
+  year: 1991
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "051"
+  check: 6
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume One"
+series: "Elven Nations Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

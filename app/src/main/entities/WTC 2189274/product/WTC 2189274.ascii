@@ -1,0 +1,137 @@
+template {
+  name: "WTC 2189274"
+  synonym: "P3"
+  world: "Generic"
+  description: "Local hero \\NPC{Jothan Ironspell} has fallen in battle, and all attempts to raise him from the dead have failed. And he is not alone. Someone or something is stealing and devouring the spirits of the dead, in defiance of the \\God{Raven Queen}. All sings point to the \\Place{Shadowfell} and an ancient fortress with a monstrous secret."
+  short_description: "An Adventure for Characters of 17th - 20th level."
+}
+title: "Assault on Nightwyrm Fortress"
+subtitle: "Death is Forever"
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Merwin, Shawn"
+}
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "development"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "development"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "additional development"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "managing editing"
+}
+cover {
+  name: "Ejsing, Jesper"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Topia, Matias"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Dutrait, Vincent"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "art director"
+}
+illustrator {
+  name: "Murayama, Soe"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Dumas, Brian"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Miller, Breanne"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Jordan, Robert"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Collins, Andy"
+  job: "mechanical design and development manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "story design and development manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2009
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5000"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5000"
+  check: 3
+}
+pages: 96
+system: DND_4
+type: ADVENTURE
+style: FOLDER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Adventure"
+  number: 2
+}
+content {
+  part: MAP
+  description: "poster-sized double sided battle map"
+  number: 1
+}
+layout: FULL_COLOR

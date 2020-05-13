@@ -1,0 +1,57 @@
+template {
+  name: "WTC 88852"
+  world: "Forgotten Realms"
+  description: "This stunning new release of the classic R.A. Salvatore novel continues the\n                    tale of the origins of Salvatore\'s signature \\Monster{dark elf} character\n                    \\NPC{Drizzt Do\'Urden} and is the first-ever release of this \\Place{Forgotten\n                    Realms} novel title in hardcover. Each title in \\Product{The Legend of\n                    Drizzt} series showcases the classic \\Monster{dark elf} novels in new, deluxe\n                    hardcover editions."
+}
+title: "Exile"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3126"
+  check: 4
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book 2"
+series: "Legend of Drizzt"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

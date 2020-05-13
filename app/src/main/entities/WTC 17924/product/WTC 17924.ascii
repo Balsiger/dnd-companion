@@ -1,0 +1,153 @@
+template {
+  name: "WTC 17924"
+  world: "Generic"
+  description: "Hushed voices tell spine-chilling tales of encounters with the walking dead\n                    and other unliving horrors. No other creatures have evoked such fear and\n                    fascination as this dreadful menagerie of malevolent spirits and mindless\n                    shells.\n                    This supplement for the D&D game presents a comprehensive overview of the\n                    undead. You\'ll uncover information for creating, customizing, and combating\n                    undead characters and monsters -- including strategies and tactics commonly\n                    employed by undead and those who hunt them. \\Product{Libris Mortis: The Book\n                    of Undead} also provides new rules, feats, spells, and prestige classes,\n                    along with a host of new monsters and monster templates.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, \\Product{Dungeon Master\'s Guide}, and \\Product{Monster Manual}.\n                    A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Libris Mortis: The Book of Undead"
+subtitle: "Nightmares from Beyond the Grave"
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Decker, Jesse"
+  job: "development"
+}
+author {
+  name: "Finch, Andrew H."
+  job: "development"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "development"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Rice, Cindi"
+}
+editor {
+  name: "Mohan, Kim"
+}
+cover {
+  name: "Kidd, Tom"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Hunter, Emanuelle"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Snoddy, Brian"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic design"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+illustrator {
+  name: "Baker, Candice"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Stark, Ed"
+  job: "design manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Finch, Andrew J."
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3433"
+  check: 6
+}
+isbn13 {
+}
+pages: 192
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Monsters"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

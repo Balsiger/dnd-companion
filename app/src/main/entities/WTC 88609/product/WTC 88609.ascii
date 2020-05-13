@@ -1,0 +1,59 @@
+template {
+  name: "WTC 88609"
+  world: "Dragonlance"
+  description: "\\large{Or is there no turning back?}\n\n  Gripped by the curse of a \\Monster{dragon}\'s scale, \\NPC{Dhamon Grimwulf}\n  fears death and the insidious power of his own \\Monster{demons}. In a race\n  against time and fate across the face of \\Place{Ansalon}, he seeks to atone\n  for past misdeeds. Agents of a mysterious \\Monster{dragon} stand in his path,\n  and if he cannot overcome them, he will lose his soul."
+}
+title: "Redemption"
+subtitle: "Can a fallen hero achieve redemption?"
+author {
+  name: "Rabe, Jean"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2763"
+  check: 1
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume Three"
+series: "Dhamon Saga"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}

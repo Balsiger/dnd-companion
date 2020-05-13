@@ -1,0 +1,30 @@
+template {
+  name: "TSR 8088"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "None"
+}
+title: "Dungeon of Fear"
+date {
+  year: 1994
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book One"
+series: "New Series"
+series: "Dragon Strike"
+price {
+  currency: "\302\254\302\243 "
+  number: 399
+  precision: 100
+}

@@ -1,0 +1,49 @@
+template {
+  name: "TSR 2608"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Planescape"
+  description: "\\large{In the \\Place{Outer Planes}, a holy sword can be a \\Monster{fiend}\'s\n                    best friend, especially when the owner wants it back...}\n                    \\emph{Sneaking into the second layer of foul \\Place{Baator} ain\'t easy, but\n                    with a little help from the right high-up men, it can be done. \'Course,\n                    exactly who the right high-up men \\emph{are} can give a basher pause, so it\'s\n                    often best not to ask. But there\'s a sword to be found, and bloods needed to\n                    find it. Truth is, those who don\'t end up lost are sure to find out that no\n                    good deed goes unpunished!}\n                    \\Product{Fires of Dis} is a \\Product{Planescape} adventure for four to six\n                    characters of 5th to 9th levels. From \\Place{Sigil}, the \\Place{City of\n                    Doors}, the heroes plunge head-first into a dangerous journey across the\n                    \\Place{Outer Planes}. Their quest for a stolen sword leads them to the\n                    hostile gate-town of \\Place{Ribcage}, the treacherous plane of\n                    \\Place{Baator}, and the disciplined burg of \\Place{Fortitude}---a gate-town\n                    teetering between two planes, just waiting for something to tip the\n                    scales. Your player characters need wits as keen as their steel to brave the\n                    fires of Dis---and survive!"
+}
+title: "Fires of Dis"
+date {
+  year: 1995
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0100"
+  check: 4
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "separate cover"
+  number: 1073741824
+}

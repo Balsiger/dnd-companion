@@ -1,0 +1,32 @@
+template {
+  name: "TSR 9342"
+  synonym: "Entry 1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "stop a horrible winter curse, level 1"
+}
+title: "Quest for the Silver Sword"
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "378"
+  check: 7
+}
+isbn13 {
+}
+system: DND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

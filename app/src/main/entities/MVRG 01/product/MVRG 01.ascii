@@ -1,0 +1,56 @@
+template {
+  name: "MVRG 01"
+  world: "Confrontation"
+  description: "3 miniatures."
+}
+title: "Guerriers Squelettes I"
+author {
+}
+author {
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 1998
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "Rackham"
+series: "Confrontation"
+price {
+  currency: "Euro "
+  number: 910
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 3
+}

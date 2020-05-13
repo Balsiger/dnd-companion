@@ -1,0 +1,93 @@
+template {
+  name: "TSR 2020"
+  reference {
+    name: "complete product listing"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\emph{...the scope of the Advanced Dungeons & Dragons game si much larger\n                    than the most expansive dungeon.}\n                    This book, for new players and Dungeon Masters as well as more experienced\n                    campaigners, presents rules for adventuring in the outdoors. Opportunities\n                    and challenges await characters brave enough and hardy enough to take on the\n                    biggest \'monster\' of all---the wilderness!"
+}
+title: "Wilderness Survival Guide"
+author {
+  name: "Moran, Kim"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Johnson, Harold"
+}
+editor {
+  name: "Mentzer, Frank"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+typographer {
+  name: "Mohan, Kim"
+}
+typographer {
+  name: "Vanderbilt, Carolyn"
+}
+manager {
+  name: "Breault, Mike"
+  job: "proofreading and tinkering"
+}
+manager {
+  name: "Szopinski, Gloria"
+  job: "graphics and keylinging"
+}
+manager {
+  name: "Sutherland, Dave"
+  job: "graphics and keylinging"
+}
+manager {
+  name: "Raupp, Roger"
+  job: "graphics and keylinging"
+}
+manager {
+  name: "O\'Malley, Colleen"
+  job: "graphics and keylinging"
+}
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_1ST
+audience: ALL
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

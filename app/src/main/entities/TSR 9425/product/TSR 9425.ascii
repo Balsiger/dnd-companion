@@ -1,0 +1,80 @@
+template {
+  name: "TSR 9425"
+  synonym: "HR5"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "\\emph{\'It is heaven\'s will that my \\Place{Rome} shall be the capital of the\n                    world\'}\n                    One-thousand years of history are woven around the story of\n                    \\Place{Rome}. With this AD&D game supplement, PCs can stand fast before a\n                    mass of charging \\Group{Gauls} with \\NPC{Julius Caesar}, vie for the\n                    emperor\'s attention in the coliseum, bellow oratory in the senate, or\n                    dispense the \\emph{pax romana} to the ends of the earth in the name of the\n                    emperor \\NPC{Hadrian}. \\Product{The Glory of Rome} describes \\Group{Roman}\n                    character kits, magic, equipment, culture, and settings for exciting\n                    role-playing in \\Place{Earth}\'s past or in a \\Group{Roman}-style realm in any\n                    gamin world. Experience the grandeur that was \\Place{Rome}."
+}
+title: "Glory of Rome"
+leader: "The"
+author {
+  name: "Pulver, David"
+}
+editor {
+  name: "Breault, Mike"
+}
+editor {
+  name: "Reid, Thomas M."
+}
+cartographer {
+  name: "Knecht, John"
+}
+cartographer {
+  name: "Winter, Steve"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+date {
+  year: 1993
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "673"
+  check: 5
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: SOURCEBOOK
+style: SOFT_COVER
+producer: "TSR"
+number: "5"
+series: "Historical Reference"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

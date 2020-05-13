@@ -1,0 +1,61 @@
+template {
+  name: "TSR 8572P"
+  synonym: "WTC 886760520"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "Forgotten Realms"
+  description: "\\Place{Cormyr} has been ruled by the \\Group{Obarskyr} family since its\n                    inception one and a half millennia ago. Now its king, \\NPC{Azoun IV}, lies on\n                    his deathbed, and the vultures are circling, hoping to usurp the throne for\n                    their own. Against this crisis of state, the history of the \\Place{Forest\n                    Kingdom} unfolds, relating the previously untold story of a nation, its\n                    rules, and its wizards.\n                    \\Product{Cormyr: A Novel} is the epic historical saga of the most powerful\n                    nation in the \\Place{Forgotten Realms} fantasy world, as told by the world\'s\n                    co-creators."
+}
+title: "Cormyr: a Novel"
+subtitle: "The Epic Historical Saga of the Most Powerful Nation in the \\Place{Realms}."
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Grubb, Jeff"
+}
+cover {
+  name: "Cabral, Ciruelo"
+}
+date {
+  year: 1998
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0710"
+  check: 10
+}
+isbn13 {
+}
+pages: 486
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book 1"
+series: "Cormyr Saga"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

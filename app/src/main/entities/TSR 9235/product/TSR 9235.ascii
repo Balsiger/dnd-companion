@@ -1,0 +1,63 @@
+template {
+  name: "TSR 9235"
+  synonym: "FR6"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "The \\Group{Red Wizards} of \\Place{Thay}. As cruel and horrible as they are\n                    powerful, they have ruled their eastern realm for as long as any sage can\n                    remember. They can be powerful allies, or deadly enemies. The \\Group{Red\n                    Wizards} know the darkest secrets of the strongest magic, and will sell their\n                    skills to the highest bidder. Thay is a land of slavers and tyrants, of\n                    intrigue and murder, of danger and opportunity. In this book, the government,\n                    personalities, economy, cities, people, and wilderness of \\Place{Thay} are\n                    described for an AD&D campaign of any size and level. \\Product[TSR\n                    9235]{Dreams of the Red Wizards} also includes new spells and magical items\n                    unique to the \\Group{Red Wizards}, plus a four-color map of \\Place{Thay} that\n                    can be added to the previously published maps of the \\Place{Forgotten\n                    Realms}!"
+}
+title: "Dreams of the Red Wizards"
+author {
+  name: "Perrin, Steve"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Janke, Kim N."
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

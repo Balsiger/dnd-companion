@@ -1,0 +1,33 @@
+template {
+  name: "TSR 3561"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Buck Rogers"
+  description: "Inner Planets Trilogy, book one"
+}
+title: "First Power"
+date {
+  year: 1993
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "840"
+  check: 4
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book One"
+series: "Inner Planets Trilogy"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

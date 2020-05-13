@@ -1,0 +1,177 @@
+template {
+  name: "Dragon 307"
+  world: "Generic"
+  description: "Issue 307 of the magazine. Westeros issue."
+}
+title: "Dragon 307"
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Campbell, Christopher"
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Four, Johnny"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Kestrel, Gwendoly F.M."
+}
+author {
+  name: "Mearls, Michael"
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Tanner, Chris"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+editor {
+  name: "Ryan, Tammie"
+  job: "editorial assistance"
+}
+editor {
+  name: "Kristensen, Tom"
+  job: "editorial assistance"
+}
+cover {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Giancola, Danato"
+}
+illustrator {
+  name: "Harris, Todd"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "McClellan, Dave"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Nelson, James"
+}
+illustrator {
+  name: "Mitten, Cara"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Wahlstrom, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "senior production designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2003
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 12"
+number: "307"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "Westeros"
+  number: 1073741824
+}

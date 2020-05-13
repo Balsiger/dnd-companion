@@ -1,0 +1,29 @@
+template {
+  name: "TSR 8089"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Ravenloft"
+}
+title: "Castle of the Undead"
+date {
+  year: 1994
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Two"
+series: "New Series"
+price {
+  currency: "\303\224\303\270\316\251 "
+  number: 399
+  precision: 100
+}

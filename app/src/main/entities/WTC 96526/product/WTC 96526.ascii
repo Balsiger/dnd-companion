@@ -1,0 +1,37 @@
+template {
+  name: "WTC 96526"
+  world: "Dragonlance"
+  description: "The first title in the second \\Place{Dragonlance} novel trilogy is now being\n  released for the first time ever in a trade hardcover edition. Featuring the\n  stunning art and design that graced the cover of the paperback edition, this\n  new version is a follow-up to the release of the \\Place{Dragonlance} novels\n  \\Product{Chronicles} trilogy in hardcover in 2003."
+}
+title: "Time of the Twins"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3158"
+  check: 2
+}
+isbn13 {
+}
+pages: 400
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume I"
+series: "Legends"
+price {
+  currency: "$ "
+  number: 2795
+  precision: 100
+}

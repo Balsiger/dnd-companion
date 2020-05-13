@@ -1,0 +1,34 @@
+template {
+  name: "TSR 8203"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+  description: "five companions have escaped the dungones of Sultan Fazir"
+}
+title: "Red Sands"
+date {
+  year: 1993
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "591"
+  check: 10
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

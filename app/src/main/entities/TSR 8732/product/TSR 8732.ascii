@@ -1,0 +1,34 @@
+template {
+  name: "TSR 8732"
+  reference {
+    name: "catalog98"
+  }
+  world: "None"
+  description: "The war between \\NPC{Urza} and \\NPC{Mishra} is over. Brooding on the death\n                    of his brother at the hands of extraplanar forces, \\NPC{Urza} drifts among\n                    the planes.\n                    But the end of the \\Event{Brother\'s War} has transformed him into something\n                    greater. Deep within his heart, a spark has been kindled to a flame that\n                    cannot be quenched.\n                    \\NPC{Urza} has become a planeswalker."
+}
+title: "Planeswalker"
+subtitle: "Urza Triumphant."
+author {
+  name: "Abbey, Lynn"
+}
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1182"
+  check: 4
+}
+isbn13 {
+}
+pages: 359
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Book 2"
+series: "Artifacts Cycle"
+price {
+}

@@ -1,0 +1,31 @@
+template {
+  name: "TSR 3578"
+  synonym: "22CS4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Buck Rogers"
+  description: "try to persuade the Lunarians to give up custody"
+}
+title: "Phases of the Moon"
+date {
+  year: 1991
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: XXVC
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

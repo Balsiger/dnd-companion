@@ -1,0 +1,55 @@
+template {
+  name: "TSR 8413"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The word brings to mind magic and \\Monster{dragons}.\n                    Unthinkable energy.\n                    Magical energy that a simple scullery maid can\'t possibly control.\n                    \\NPC{Shandril} of \\Place{Highmoon}, an orphaned girl, is bored. Her solution:\n                    run away, in search of adventure.\n                    What \\NPC{Shandril} doesn\'t know is that her whimsical action will take her\n                    to the grotto of the most feared creature in the \\Place{Realms}, ... or that\n                    the only magic strong enough to defeat the unspeakable evil surrounding that\n                    dracolich must---thanks to the \\NPC{Great Mage}, \\NPC{Elminster}---be\n                    channeled through her body, ... or that the burden of saving the\n                    \\Place{Forgotten Realms} will fall on her slender shoulders.\n                    \\NPC{Shandril of \\Place{Highmoon}} finds adventure all right, ... and love,\n                    and death, and terror.\n                    \\Product{Spellfire} is written by Ed Greenwood, the author of the\n                    \\Product{Forgotten Realms} fantasy setting."
+}
+title: "Spellfire"
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+date {
+  year: 1987
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "587"
+  check: 1
+}
+isbn13 {
+}
+pages: 382
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book One"
+series: "Shandril\'s Saga"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

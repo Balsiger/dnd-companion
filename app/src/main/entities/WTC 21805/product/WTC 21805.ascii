@@ -1,0 +1,61 @@
+template {
+  name: "WTC 21805"
+  world: "Dragonlance"
+  description: "One hundred years have passed since the fiery \\Event{Cataclysm} that changed\n  the face of \\Place{Krynn} forever. For one hundred years, the people of\n  \\Place{Krynn} have struggled to survive. But for some, those one hundred\n  years have passed in the blink of an eye.\n\n  Catapulted forward in time by \\NPC{Raistlin}\'s powerful magic, \\NPC{Caramon}\n  and \\NPC{Crysania} find themselves aiding the \\Class{mage}\'s unholy quest to\n  master the \\NPC{Queen of Darkness}. To his dismay, \\NPC{Raistlin} discovers\n  along the way that the annals of Time are not so easily bent to his\n  will. Neither are the longings of his heart."
+}
+title: "War of the Twins"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1805"
+  check: 5
+}
+isbn13 {
+}
+pages: 400
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume 2"
+series: "Dragonlance Legends Trilogy"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

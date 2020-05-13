@@ -1,0 +1,53 @@
+template {
+  name: "WTC 31448"
+  world: "Forgotten Realms"
+  description: "Two\\Monster{devas}, angels given mortal flesh, are sent to guard two star-crossed lovers, born scions of rival merchant houses. The \\Monster{devas} have worked together through countless cycles of reincarnation, guarding each other\342\200\231s backs as they pursue justice.\n\n\\large{Break from Ancient Grudge into New Mutiny}\n\nAt first, it looks as though love will conquer all, and the rift between the rival houses will finally be mended. But there are those who hate the word peace with a passion so great that it poisons everything they touch, turning house against house, mother against child, and \\Monster{deva} against \\Monster{deva}.\n\n\\large[Leaving Even Angels\342\200\231 Hands Unclean}"
+  short_description: "A battle between two houses and two angels."
+}
+title: "Dawnbringer"
+subtitle: "Two Households Both Alike in Dignity..."
+author {
+  name: "Henderson, Samantha"
+}
+editor {
+}
+cover {
+  name: "Stawicki, Matt"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2011
+  month: 5
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5794"
+  check: 1
+}
+pages: 386
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,63 @@
+template {
+  name: "WTC 2175072"
+  world: "Generic"
+  description: "The world has fallen into darkness, but great rewards await those brave adventurers willing to face the terrible dangers ahead. This core rulebook for the Dungeons & Dragons Roleplaying Game holds everything a Dungeon Master needs to create memorable adventures and grand campaigns to challenge bold adventurers.\n                    The \\Product{Dungeon Master\'s Guide} features the 4th Edition game rules and guidelines for creating and running encounters, adventures, and campaigns. It offers a wealth of advice to new and experienced Dungeon Masters, and includes essential game rules for awarding experience, distributing treasure, creating nonplayer characters, and adding mighty artifacts to the game."
+  short_description: "Roleplaying Game Core Rules"
+}
+title: "Dungeon Master\'s Guide"
+subtitle: "Great Heroes Need Great Adventures"
+author {
+  name: "Winter, Steve"
+  job: "additional design and development"
+}
+author {
+  name: "Youngs, Chris"
+  job: "additional design and development"
+}
+cover {
+  name: "Reynolds, Wayne"
+  job: "front"
+}
+cover {
+  name: "Hagan, Brian"
+  job: "back"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+date {
+  year: 2008
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4880"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4880"
+  check: 2
+}
+pages: 224
+system: DND_4
+type: RULEBOOK
+style: HARDCOVER
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

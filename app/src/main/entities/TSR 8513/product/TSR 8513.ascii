@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8513"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Dragon of Doom"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Thirteen"
+price {
+}

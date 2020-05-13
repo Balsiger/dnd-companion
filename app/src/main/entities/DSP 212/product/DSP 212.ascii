@@ -1,0 +1,46 @@
+template {
+  name: "DSP 212"
+  world: "None"
+  description: "Join six characters in search of an authority on life, love and the perfect\n  set of purple shiny dice! Huzzah! It\'s the sixth collection of the critically\n  acclaimed \\Product{Dork Tower} comic book, and Matt, Ken, Igor, Kayleigh,\n  Carson the Muskrat and Gilly the Perky Goth porve that fandom is just another\n  word for nothing left to lose!"
+}
+title: "1d6 degrees of separation"
+subtitle: "1d6 Appeal!"
+author {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Mackintosh, Jeff"
+  job: "interior design and layout"
+}
+date {
+  year: 2003
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "930964"
+  title: "74"
+  check: 9
+}
+isbn13 {
+}
+pages: 160
+system: NONE
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "Dork Storm Press"
+number: "Volume VI"
+series: "The Collected Dork Tower"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

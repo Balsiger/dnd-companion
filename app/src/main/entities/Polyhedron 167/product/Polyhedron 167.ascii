@@ -1,0 +1,56 @@
+template {
+  name: "Polyhedron 167"
+  world: "Generic"
+  description: "Issue of polyhedron (together with Dungeon 108)."
+}
+title: "Polyhedron 167"
+subtitle: "Dark Matter - Shades of Grey"
+author {
+  name: "Collins, Andy"
+}
+editor {
+  name: "Mona, Erik"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+cover {
+  name: "Wood, Ashley"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Wood, Ashley"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art direction"
+}
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 30
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "167"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

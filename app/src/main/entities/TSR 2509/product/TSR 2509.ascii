@@ -1,0 +1,59 @@
+template {
+  name: "TSR 2509"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Mystara"
+  description: "audio CD adventure"
+}
+title: "Night of the Vampire"
+date {
+  year: 1994
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0043"
+  check: 1
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: CD
+  description: "audio"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "loosleaf handouts"
+  number: 16
+}
+content {
+  part: CARD
+  description: "characters"
+  number: 16
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 2
+}

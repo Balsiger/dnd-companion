@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5707"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Rangers"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

@@ -1,0 +1,78 @@
+template {
+  name: "TSR 9545"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "Ever wonder why priesthoods in the \\Place[Forgotten Realms]{Realms} continue\n                    to flourish, despite the secular power of rich merchants and the\n                    land-shattering spells of the archmages?\n                    The answer lies in the mighty spells heretofore kept concealed by the robed\n                    clergy of the cloisters. These sacred spells are now revealed in these pages,\n                    drawn from legendary holy books presently \'lost\' on \\Place{Faer\\hat{u}n}. To\n                    read \\Product[TSR 9545]{Prayers of the Faithful} is to know holy awe and\n                    blessed fear at last!\n                    Learn the long suppressed secrets of:\n                    \\list\n                    {Which gems to place into the eye sockets of the carved faces on\n                    \\Item{Gorothir\'s Girdle} to call forth deadly magics.}\n                    {The hallowed album that was used to slay six \\Monster[Dragon]{dragons}---and\n                    now bears the unblinking, preserved aye of one of them.}\n                    {The divine tome that is a gem that served to lure and slay thieves\n                    for over 30 years.}\n                    {Why it\'s dangerous to hold the \\Item{Chanting Chain} carelessly---and\n                    what awakens to its chants.}\n                    And much more! \\Product[TSR 9545]{Prayers From the Faithful} is an essential\n                    guide to the magic of priests in the \\Place{Forgotten Realms} \\Product[TSR\n                    1085]{campaign world}, and a useful aid to those portraying priests in any\n                    Advanced Dungeons & Dragons campaign."
+}
+title: "Prayers from the Faithful"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Stewart, Douglas"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Angus, Glen Michael"
+}
+illustrator {
+  name: "Keefer, Jack"
+}
+illustrator {
+  name: "Snyder, John T."
+}
+illustrator {
+  name: "Holz, Paula M."
+}
+illustrator {
+  name: "Geier, Earl"
+}
+typographer {
+  name: "Isler, Tracey L."
+}
+manager {
+  name: "Reid, Thomas M."
+  job: "project coordination"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "art coordination"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphic coordination"
+}
+manager {
+  name: "Conant, Dave"
+  job: "prepress coordination"
+}
+manager {
+  name: "Ren, Shan"
+  job: "graphic design"
+}
+date {
+  year: 1997
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

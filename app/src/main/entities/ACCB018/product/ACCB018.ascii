@@ -1,0 +1,46 @@
+template {
+  name: "ACCB018"
+  description: "The highly detailed barrel masters were made the same way a full size barrel would be made, one plank at a time. "
+  short_description: "A set of 7 wooden barrels (unpainted)."
+}
+title: "Wooden Barrels"
+subtitle: "Terraform Battlefield Scenery"
+author {
+}
+editor {
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+  name: "Garton, Cal"
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2011
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Armorcast"
+series: "Terraform Battlefield Scenery"
+price {
+  currency: "$"
+  number: 800
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "Wooden Barrel"
+  number: 7
+}
+layout: BLACK_AND_WHITE

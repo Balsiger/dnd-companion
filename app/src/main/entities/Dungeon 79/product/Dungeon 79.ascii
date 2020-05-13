@@ -1,0 +1,122 @@
+template {
+  name: "Dungeon 79"
+  world: "Generic"
+  description: "This is issue 79 of the dungeon magazine."
+}
+title: "Dungeon 79"
+author {
+  name: "Zollers, Peter"
+}
+author {
+  name: "Ertman, Kent"
+}
+author {
+  name: "Carter, Kevin"
+}
+author {
+  name: "Fairbourn, Jeff"
+}
+author {
+  name: "Adkins, Matthew G."
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistant editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "assistant editor"
+}
+cover {
+  name: "Goldhawk, Andrew"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Perkins, Christopher"
+}
+cartographer {
+  name: "Zispe, Craig"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Schwartz, Stephen"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Heft, Rebecca"
+  job: "circulation assistant"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 2000
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 88
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XIV 1"
+number: "79"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

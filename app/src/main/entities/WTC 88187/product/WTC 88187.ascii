@@ -1,0 +1,54 @@
+template {
+  name: "WTC 88187"
+  world: "Greyhawk"
+  description: "A sinister force, long thought destroyed, stirs in the land. As a\n  \\Monster{she-demon} bent on wreaking worldwide havoc struggles to escape her\n  prison and a foul demigod plots to bend her to his will, a band of desperate\n  heroes must infiltrate the very heart of darkness in a daring attempt to stop\n  them both."
+}
+title: "Temple of Elemental Evil"
+leader: "The"
+author {
+  name: "Reid, Thomas M."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Greyhawk Classics"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

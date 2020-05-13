@@ -1,0 +1,70 @@
+template {
+  name: "TSR 9408"
+  synonym: "HR6"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "\\emph{\'Future generations will marvel at us, as the present age marvels at\n                    us now.\'}\n                    \\right{---\\NPC{Pericles}, the \\Place{Atheninan} statesman}\n                    Their names were \\NPC{Achilles}, \\NPC{Odysseus}, \\NPC{Jason}, \\NPC{Heracles},\n                    and \\NPC{Alexander}. Their deeds pitted them against monsters, \\Monster{men},\n                    and the known world. They were \\Group{Greeks}, and theirs was the \\Event{age\n                    of heroes}. \\Product{Age of Heroes} transforms this epic time of myth and\n                    history into an exciting AD&D setting, with details on spells, magical items,\n                    new character kits, maps, pictures of ancient \\Place{Greek} life, and a\n                    starting adventure.\n                    The challenge has gone out---let only the heroes heed the call."
+}
+title: "Age of Heroes"
+author {
+  name: "Rea, Nicky"
+}
+editor {
+  name: "Forbeck, Matt"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "Knecht, John"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+date {
+  year: 1994
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "814"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: SOURCEBOOK
+style: SOFT_COVER
+producer: "TSR"
+number: "6"
+series: "Historical Reference"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

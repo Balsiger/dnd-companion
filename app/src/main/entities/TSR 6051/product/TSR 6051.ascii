@@ -1,0 +1,20 @@
+template {
+  name: "TSR 6051"
+  reference {
+    name: "net price list"
+  }
+}
+title: "RPGA Blank Jigsaw Puzzle"
+leader: "28-piece, 5.5\'\' x 8\'\'"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 50
+  precision: 100
+}

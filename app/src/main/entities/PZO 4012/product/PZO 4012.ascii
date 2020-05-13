@@ -1,0 +1,46 @@
+template {
+  name: "PZO 4012"
+  world: "Generic"
+  description: "But some secrets are better left buried! Paizo Publishing\'s GameMastery line of gaming accessories continues its mantra of providing simple and elegant tools for the busy GameMaster with the newest GameMastery Map Pack release: \\Product[PZO 4012]{Ruins}. Inside, you\'ll find 18 beautiful 5\'\' x 8\'\' map tiles that can be combined to form a number of ruined sites in ancient city, including:\n\n\\list\n{An Overgrown Boulevard}\n{Shattered Buildings}\n{A Crumbling Temple}\n{An Ancient Amphitheater}\n{A Ruined Observatory}\n\nGameMasters shouldn\'t waste their time drawing block after block of a crumbling city. With \\Product[PZO 4012]{GameMastery Map Pack: Ruins}, you can drop a few tiles and continue on with the game. Keep it simple. Keep it fun."
+  short_description: "Map cards with ruins."
+}
+title: "Map Pack: Ruins"
+subtitle: "The Ancient Ruins Hide Untold Treasure"
+cartographer {
+  name: "Macourek, Corey"
+}
+date {
+  year: 2008
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "066"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "066"
+  check: 7
+}
+pages: 20
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery"
+series: "Map Pack"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "map"
+  number: 18
+}
+layout: FULL_COLOR

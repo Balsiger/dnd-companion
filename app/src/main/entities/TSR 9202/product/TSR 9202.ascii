@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9202"
+  synonym: "I13"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Adventure Pack I"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1200
+  precision: 100
+}

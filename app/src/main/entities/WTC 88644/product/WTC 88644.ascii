@@ -1,0 +1,195 @@
+template {
+  name: "WTC 88644"
+  world: "Call of Cthulhu"
+  description: "\\large{The old ones were, the old ones are, and the old ones shall be.}\n\n  Ancient knowledge and dark secrets await those brave of foolish enough to\n  delve into the depths of the unknown. Discover terrifying, malevolent\n  creatures that defy the darkest recesses of imagination. Confront horrifying\n  truths long hidden away from the minds of the sane. The risks of\n  investigating such arcana reach way beyond death---the rewards exceed\n  explanation.\n\n  Inspired by the works of H.P. Lovecraft, the \\Product{Call of Cthulhu\n  Roleplaying Game} is a self-contained d20 System game that provides\n  everything you need to explore the realm of horror."
+}
+title: "Call of Cthulhu Roleplaying Game"
+author {
+  name: "Monte Cook"
+}
+author {
+  name: "John Tynes"
+}
+author {
+  name: "Lynn Willis"
+  job: "original work"
+}
+author {
+  name: "Sandy Peterson"
+  job: "original work"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "additional design"
+}
+author {
+  name: "John D. Rateliff"
+  job: "additional design"
+}
+author {
+  name: "John Crowe"
+  job: "additional design"
+}
+author {
+  name: "Kenneth Hite"
+  job: "additional design"
+}
+author {
+  name: "Detwiler, Dennis"
+  job: "additional design"
+}
+author {
+  name: "Glancy, Adam Scott"
+  job: "additional design"
+}
+author {
+  name: "Michael Tice"
+  job: "additional design"
+}
+author {
+  name: "Rowe, Eric"
+  job: "additional design"
+}
+author {
+  name: "Shannon Appel"
+  job: "additional design"
+}
+author {
+  name: "Ballon, Bruce"
+  job: "additional design"
+}
+editor {
+  name: "Campbell, Brian \'Chainsaw\'"
+}
+editor {
+  name: "John D. Rateliff"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "coordination"
+}
+cover {
+  name: "Koi, Ann"
+}
+cover {
+  name: "Jason Soles"
+}
+cartographer {
+  name: "Todd Gamble"
+}
+illustrator {
+  name: "Toren \'Macbin\' Atkinson"
+}
+illustrator {
+  name: "Paul Carrick"
+}
+illustrator {
+  name: "Heather Hudson"
+}
+illustrator {
+  name: "Koi, Ann"
+}
+illustrator {
+  name: "Kevin \'the dog ate my homework\' McCann"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Raven Mimura"
+}
+illustrator {
+  name: "Stephan Missal"
+}
+illustrator {
+  name: "Pudd\'n Head"
+}
+illustrator {
+  name: "Rex, Adam"
+}
+illustrator {
+  name: "Wayne Reynolds"
+}
+illustrator {
+  name: "RIchard Sarinha"
+}
+illustrator {
+  name: "Shy, Christopher"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Thomas M. Reid"
+  job: "creative direction"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "creative direction"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "R&D direction"
+}
+manager {
+  name: "Mary Kirchhoff"
+  job: "publishing"
+}
+manager {
+  name: "Valterra, Anthony"
+  job: "business management"
+}
+manager {
+  name: "Stevens, Douglas"
+  job: "project management"
+}
+manager {
+  name: "Justin Ziran"
+  job: "project management"
+}
+manager {
+  name: "Martin Durham"
+  job: "project management"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "art direction"
+}
+manager {
+  name: "Robert Campbell"
+  job: "graphic design"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production management"
+}
+date {
+  year: 2002
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2639"
+  check: 2
+}
+isbn13 {
+}
+pages: 320
+system: D20
+audience: ALL
+type: CAMPAIGN_SETTING
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

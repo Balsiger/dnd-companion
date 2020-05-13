@@ -1,0 +1,43 @@
+template {
+  name: "TSR 8588"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Forgotten Realms"
+  description: "the saga of young Elminster continues"
+}
+title: "Temptation of Elminster"
+leader: "The"
+author {
+  name: "Greenwood, Ed"
+}
+date {
+  year: 1998
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1189"
+  check: 1
+}
+isbn13 {
+}
+pages: 416
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+series: "Elminster"
+price {
+  currency: "$"
+  number: 2195
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

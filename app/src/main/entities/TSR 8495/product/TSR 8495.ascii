@@ -1,0 +1,59 @@
+template {
+  name: "TSR 8495"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "An epic sea voyage...a daring rescue...\n                    The \\God{Earthmother} has returned to the \\Place{Moonshaes}. Now her\n                    mightiest druid, \\NPC{Robyn} Kendrick, faces the greatest challenge of her\n                    life. Aided by a courageous Northman prince, her own daughters, and a crew of\n                    heroes, \\NPC{Robyn} wages a desperate battle against the savage \\NPC{Claws of\n                    the Deep}.\n                    Douglas Niles is the author of the immensely popular \\Product{Maztica} and\n                    \\Product{Moonshae} Trilogies. The \\Product{Druidhome Trilogy} is the\n                    much-anticipated sequel to the \\Product{Moonshae Trilogy}."
+}
+title: "Coral Kingdom"
+leader: "The"
+author {
+  name: "Niles, Douglas"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+date {
+  year: 1992
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "332"
+  check: 9
+}
+isbn13 {
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Two"
+series: "Druidhome Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

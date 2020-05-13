@@ -1,0 +1,23 @@
+template {
+  name: "TSR 8249"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Greyhawk"
+}
+title: "Name of the Game"
+leader: "The"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Six"
+series: "Greyhawk"
+price {
+}

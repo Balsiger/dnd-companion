@@ -1,0 +1,34 @@
+template {
+  name: "TSR 9251"
+  synonym: "WG9"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Greyhawk"
+  description: "two gargoyles wake up to find their wings stolen, levels 1-4"
+}
+title: "Gargoyle"
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "719"
+  check: 10
+}
+isbn13 {
+}
+system: ADND_1ST
+type: ADVENTURE
+price {
+  currency: "$\303\224\303\270\316\251"
+  number: 595
+  precision: 100
+}

@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5013"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Troglodyte & Goblin"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

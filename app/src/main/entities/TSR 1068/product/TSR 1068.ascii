@@ -1,0 +1,38 @@
+template {
+  name: "TSR 1068"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Greyhawk"
+  description: "A boxed set and boardgame."
+}
+title: "Greyhawk Wars"
+date {
+  year: 1991
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "086"
+  check: 9
+}
+isbn13 {
+}
+system: DND_1ST
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

@@ -1,0 +1,29 @@
+template {
+  name: "TSR 2023"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Greyhawk"
+}
+title: "Greyhawk Adventures"
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "649"
+  check: 5
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

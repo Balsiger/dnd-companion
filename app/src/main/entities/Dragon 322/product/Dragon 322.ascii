@@ -1,0 +1,165 @@
+template {
+  name: "Dragon 322"
+  world: "Generic"
+  description: "Issue 322 of the magazine. Darkness and Shadow issue."
+}
+title: "Dragon 322"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Drain, Jonathan"
+}
+author {
+  name: "Farrese, Richard"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Larwood, Phillip"
+}
+author {
+  name: "Leach, Paul"
+}
+author {
+  name: "Mearls, Michael"
+}
+author {
+  name: "Steinman, Jacob"
+}
+author {
+  name: "Tassin, Mark"
+}
+author {
+  name: "Thalasinos, Nicholas J."
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Jannsen, Niklas"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wood, Ashley"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Schley, Mike"
+  job: "graphic designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "group publishing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "circulation manager"
+}
+date {
+  year: 2004
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIX 3"
+number: "322"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

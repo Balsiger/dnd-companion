@@ -1,0 +1,32 @@
+template {
+  name: "WTC 9677776"
+  world: "Forgotten Realms"
+  description: "This collection of \\Product{Daughter of the Drow}, \\Product{Tangled Webs},\n                    and \\Product{Windwalker} brings together for the first time three magical\n                    books about a member of one of the most popular \\Place{Forgotten Realms}\n                    races."
+}
+title: "Starlight & Shadows Gift Set"
+author {
+  name: "Cunningham, Elaine"
+}
+date {
+  year: 2005
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3816"
+  check: 1
+}
+isbn13 {
+}
+system: NONE
+audience: PLAYER
+type: NOVEL
+style: BOX
+producer: "WTC"
+series: "Starlight & Shadows"
+price {
+  currency: "$ "
+  number: 2399
+  precision: 100
+}

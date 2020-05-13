@@ -1,0 +1,19 @@
+template {
+  name: "DMA 000035"
+  synonym: "RP2"
+  reference {
+    name: "complete product listing"
+  }
+  description: "Unknown."
+}
+title: "RPGA Alignment Generators"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

@@ -1,0 +1,30 @@
+template {
+  name: "DMA 000001"
+  world: "None"
+  description: "This is the member handbook for the RPGA Network."
+}
+title: "RPGA Member Handbook"
+author {
+  name: "RPGA"
+}
+date {
+  year: 2001
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: NONE
+audience: ALL
+type: PROMOTION
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

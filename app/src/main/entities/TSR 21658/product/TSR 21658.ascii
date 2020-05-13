@@ -1,0 +1,38 @@
+template {
+  name: "TSR 21658"
+  reference {
+    name: "net"
+  }
+  world: "Rokugan"
+  description: "\\Place{Shadowlands} monsters mass on the edges of \\Place{Rokugan}. The\n                    \\Group{Crab Clan}, long vigilant in battling them, seems unable or unwilling\n                    to stop the \\Monster{demonic} onslaught.\n                    But from an unlikely quarter, a hero arises. She will lead her forces in a\n                    battle that will rend the world: \\bold{The \\Event{Battle at Beiden Pass.}}"
+}
+title: "Unicorn"
+leader: "The"
+subtitle: "The Land is Wounded."
+author {
+  name: "Lassieur, Allison"
+}
+date {
+  year: 2000
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1658"
+  check: 3
+}
+isbn13 {
+}
+pages: 312
+system: LEGEND_OF_THE_FIVE_RINGS
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Second Scroll"
+series: "The Clan War"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

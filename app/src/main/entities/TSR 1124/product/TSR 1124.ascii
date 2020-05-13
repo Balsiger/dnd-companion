@@ -1,0 +1,65 @@
+template {
+  name: "TSR 1124"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  world: "Ravenloft"
+  description: "\\large{It\'s just a bad dream---a very bad dream...}\n                    Beware the night, for sleep provides another path to the \\Place{Demiplane of\n                    Dread}. In the unique domain called the \\Place{Nightmare Lands}, darkness\n                    offers not blissful slumber, but ultimate terror. Heroes enter this realm at\n                    the bidding of the night, drawn from their dreaming bodies and captured by an\n                    enigmatic figure known only as the \\NPC{Nightmare Man}. Trapped in this\n                    region of psychological fear, heroes face their worst nightmares in strange,\n                    surrealistic terrain. If they escape the treacherous clutches of dark\n                    slumber, they\'ll be safe---at least until the next time sleep overtakes\n                    them...\n                    This boxed set contains everything necessary to adventure among dark\n                    dreamscapes and twisted nightmares, including:\n                    \\list\n                    {\\emph{The Journal of Dr. Illhousen:} 32 pages of notes and\n                    information on the \\Place{Nightmare Lands}, compiled by the chief\n                    physician of \\Place{Nova Vaasa}\'s infamous \\Place{Clinic for the\n                    Mentally Distressed}.}\n                    {\\emph{Rules of Dreams and Nightmares:} 64 pages full of rules dealing\n                    with adventuring in dreams and nightmares, setting up nightmare\n                    scenarios, and translating player characters into dreamscape versions\n                    of themselves.}\n                    {\\emph{Book of Nightmares:} 64 pages of ready-to-play nightmares that\n                    incorporates all of the information in this campaign expansion into\n                    one full-lengthadventure.}\n                    {\\emph{New Monsters:} 16 pages of never-before-seen creatures unique\n                    to the \\Place{Nightmare Lands} and the dimensions of dreams.}\n                    {\\emph{Poster Maps:} Two full-color, poster-sized maps of the\n                    \\Place{Nightmare Lands} and other locations described herein.}"
+}
+title: "Nightmare Lands"
+leader: "The"
+date {
+  year: 1995
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0174"
+  check: 8
+}
+isbn13 {
+}
+pages: 176
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Book One: The Journal of Dr. Illhousen"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book Two: The Rules of Dreams and Nightmares"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book Three: Book of Nightmares"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book Four: The Nightmare Lands"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 2
+}

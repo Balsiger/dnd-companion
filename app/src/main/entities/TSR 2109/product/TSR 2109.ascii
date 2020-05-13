@@ -1,0 +1,124 @@
+template {
+  name: "TSR 2109"
+  synonym: "MC7"
+  world: "Spelljammer"
+  description: "Thought you\'d seen it all when you met the \\Monster{neogi}? Threw up your\n  hands in horror at the sight of \\Monster{space barnacles}? Well...get ready\n  for the \\Place{giant space hamster}, the \\Monster{symbionts}, and lots of\n  other wild and weird \\Place{Spelljammer} campaign monsters!\n\n  In this product are some olf the most fantastic creatures ever seen (or not\n  seen, as the case may be), in \\Place{wildspace} or out of it. Yes, Virgina,\n  there really are \\Monster{giant space hamsters} lurking in these pages, a\n  swell as whole new races ready for the DM to launch into a\n  \\Place{Spelljammer} campaign. Once again, there are 64 pages of new beasties\n  for your playing enjoyment, 5-hole punched and ready for insertion in your\n  Monstrous Compendium binder. Plust, the gread full-color divider pages with\n  identification tabs make it easier to organize your critters.\n\n  \\Place{Spelljammer} campaigns will never be the same again..."
+}
+title: "Monstrous Compendium, Spelljammer Appendix"
+author {
+  name: "Boomgarden, Karen S."
+}
+author {
+  name: "Brown, Tim"
+}
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Ewell, Newton H."
+}
+author {
+  name: "Hayday, Andria"
+}
+author {
+  name: "Heard, Bruce"
+}
+author {
+  name: "Henson, Dale \'Slade\'"
+}
+author {
+  name: "Johnson, Harold"
+}
+author {
+  name: "LaFountain, J. Paul"
+}
+author {
+  name: "Lowder, Jim"
+}
+author {
+  name: "Mobley, Blake"
+}
+author {
+  name: "Mohan, Kim"
+}
+author {
+  name: "Moore, Roger"
+}
+author {
+  name: "Nesmith, Bruce"
+}
+author {
+  name: "Niles, Doug"
+}
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Schend, Steven"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Winter, Steve"
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "artistic coordinator"
+}
+manager {
+  name: "Grubb, Jeff"
+  job: "design coordinator and noodger"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "871"
+  check: 4
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: FOLDER
+number: "Volume VII Spelljammer Appendix"
+series: "Monster Compendium"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: SHEET
+  number: 32
+}
+content {
+  part: MISC
+  description: "4 color dividers"
+  number: 1073741824
+}

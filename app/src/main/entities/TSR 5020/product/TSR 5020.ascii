@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5020"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Raging Roper (bendable)"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

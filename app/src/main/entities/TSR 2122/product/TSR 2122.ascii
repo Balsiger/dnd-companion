@@ -1,0 +1,44 @@
+template {
+  name: "TSR 2122"
+  synonym: "MC10"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Ravenloft"
+  description: "a lot of monsters"
+}
+title: "Monstrous Compendium Ravenloft Appendix I"
+date {
+  year: 1991
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "108"
+  check: 3
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+number: "10"
+series: "Monster Compendium"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

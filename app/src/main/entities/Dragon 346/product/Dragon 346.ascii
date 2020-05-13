@@ -1,0 +1,171 @@
+template {
+  name: "Dragon 346"
+  world: "Generic"
+  description: "Issue 346 of the magazine. "
+}
+title: "Dragon 346"
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Fehlauer, Mike"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Grey, Scott Fitzgerald"
+}
+author {
+  name: "Happ, Stefan"
+}
+author {
+  name: "Hudson, Nicholas"
+}
+author {
+  name: "Jackman, Mark"
+}
+author {
+  name: "Krashos, George"
+}
+author {
+  name: "Leach, Paul"
+}
+author {
+  name: "Logue, Nicholas"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Shackleton, Craig"
+}
+author {
+  name: "Sutter, James"
+}
+author {
+  name: "Trice, Michael"
+}
+author {
+  name: "Williams, Seth Irvin"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "managing editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Adorjany, Attila"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Van Der Haegen, Cyril"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Pozca, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+number: "346"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

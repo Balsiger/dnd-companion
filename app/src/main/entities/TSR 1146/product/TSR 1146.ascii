@@ -1,0 +1,62 @@
+template {
+  name: "TSR 1146"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  world: "Ravenloft"
+  description: "Kits, proficiencies for undeads, Grim Harvest series, levels 5-10"
+}
+title: "Requiem: The Grim Harvest"
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Smedman, Lisa"
+}
+date {
+  year: 1996
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0431"
+  check: 3
+}
+isbn13 {
+}
+pages: 192
+system: ADND_REVISED
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 3
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 3
+}
+content {
+  part: SHEET
+  description: "cardsheets"
+  number: 8
+}

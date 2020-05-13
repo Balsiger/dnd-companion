@@ -1,0 +1,49 @@
+template {
+  name: "WTC 88722"
+  world: "Eberron"
+  description: "A world torn by generations of war...\n\n  \\Item{Erethindel}, the fabled \\Item{Crimson Talisman}.\n\n  Long sought by the forces of darkness. Long guarded in secret by one family.\n\n  But now the secret has been revealed, and only one young man can keep it\n  safe. As the \\Item{talisman}\'s powers awaken within him, \\Item{Erethindel}\n  tears at his soul.\n\n  \\Product{The Crimson Talisman} is the first title in a new \\Place{Eberron}\n  series that focuses on war-torn souls that have known nothing but a world in\n  chaos. Each book in this series will focus on the aftermath of \\Event{The\n  Last War}, in which every realm of the \\Place{Eberron} setting fought a\n  bitter and long-lasting battle."
+}
+title: "Crimson Talisman"
+leader: "The"
+author {
+  name: "Cole, Adrian"
+}
+editor {
+}
+editor {
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2005
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3739"
+  check: 4
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book I"
+series: "The War-Torn"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

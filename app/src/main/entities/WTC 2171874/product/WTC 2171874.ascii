@@ -1,0 +1,75 @@
+template {
+  name: "WTC 2171874"
+  world: "Generic"
+  description: "Near the sleepy town of \\Place{Winterhaven}, a ruined keep overlooks a dormant gateway to the otherworldly realm known as the \\Place{Shadowfell}. Though this dark scar on the world has lain dormant for many years, an evil cleric of \\NPC{Orcus}, Demon Prince of the Undead, seeks to reopen the gate. The only thing preventing the forces of darkness from sweeping across the land is a determined band of heroes...\n                    This adventure takes characters from 1st level to 3rd level, and serves as the first chapter of a plot that can expand to fill an entire campaign. Inside this folder are an 80-page Adventure Book, a 16-page 4th Edition Quick-Start Rulebook, five ready-to-play 1st-level characters, and three double-sided battle maps designed for use with D&D Miniatures."
+  short_description: "A Heroic Tier Adventure, characters of 1st to 3rd level"
+}
+title: "Keep on the Shadowfell"
+subtitle: "The Shadows of Evil Are Stirring"
+cover {
+  name: "O&#39Conner, William"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2008
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4850"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4850"
+  check: 5
+}
+pages: 96
+system: DND_4
+type: ADVENTURE
+style: FOLDER
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: FOLDER
+  number: 1
+}
+content {
+  part: BOOKLET
+  description: "Adventure, 80 pages"
+  number: 1
+}
+content {
+  part: BOOKLET
+  description: "Quick Start Rules, 16 pages"
+  number: 1
+}
+content {
+  part: MAP
+  description: "double-sided, color, poster"
+  number: 3
+}
+required_requirements: "WTC 2173672"
+required_requirements: "WTC 2172072"
+required_requirements: "WTC 2175072"
+optional_requirements: "WTC 2155100"
+layout: FULL_COLOR

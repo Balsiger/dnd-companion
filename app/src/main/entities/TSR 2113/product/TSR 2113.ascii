@@ -1,0 +1,79 @@
+template {
+  name: "TSR 2113"
+  synonym: "PHBR3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\Class{Clerics} have long bee player\'s favorites, but now there are new\n                    \\Class{priest} characters for your gaming enjoyment! Within these pages are\n                    new rules for mythos-specific \\Class{priests}, guidelines for creating mythoi\n                    of your own, howto\'s for making new priesthoods. Also here are new\n                    \\Class{Priest} Kits, so you can play a \\Class{fighting monk}, an\n                    \\Class{amazon priestess}, a \\Class{savage priest}, or even a \\Class{peasant\n                    priest} (among many others). All this and more is presented in these 128\n                    pages for players and DMs."
+}
+title: "Complete Priest\'s Handbook"
+leader: "The"
+author {
+  name: "Allston, Aaron"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Olson, Erik"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Dorman, David"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Bennet, Mark"
+  job: "special contributions"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "818"
+  check: 8
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "3"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

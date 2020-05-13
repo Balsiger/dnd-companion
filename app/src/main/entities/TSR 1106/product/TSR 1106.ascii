@@ -1,0 +1,36 @@
+template {
+  name: "TSR 1106"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Generic"
+  description: "Update to the classic game."
+}
+title: "Classic Dungeons & Dragons Game"
+leader: "The"
+date {
+  year: 1994
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "820"
+  check: 7
+}
+isbn13 {
+}
+system: DND_1ST
+type: CAMPAIGN_SETTING
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

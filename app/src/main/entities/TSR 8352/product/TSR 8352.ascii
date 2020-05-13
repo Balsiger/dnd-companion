@@ -1,0 +1,55 @@
+template {
+  name: "TSR 8352"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dragonlance"
+}
+title: "Before the Mask"
+author {
+  name: "Michael Williams"
+}
+author {
+  name: "Williams Teri"
+}
+date {
+  year: 1993
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "583"
+  check: 6
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume One"
+series: "Villains Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

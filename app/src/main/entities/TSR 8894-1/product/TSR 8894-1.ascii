@@ -1,0 +1,41 @@
+template {
+  name: "TSR 8894-1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Dragonlance"
+  description: "annual art calendar"
+}
+title: "Dragonlance and Other Worlds Calendar 1994"
+author {
+  name: "TSR Staff"
+}
+date {
+  year: 1993
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "606"
+  check: 9
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: CALENDAR
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

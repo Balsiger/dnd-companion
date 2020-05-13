@@ -1,0 +1,37 @@
+template {
+  name: "TSR 2438"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dark Sun"
+  description: "expanded and revised campaign setting"
+}
+title: "Dark Sun Revised Edtion"
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+  year: 1995
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0162"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_2ND
+type: CAMPAIGN_SETTING
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}

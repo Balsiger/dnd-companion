@@ -1,0 +1,58 @@
+template {
+  name: "WTC 88556"
+  world: "Dragonlance"
+  description: "How much is an act of betrayal worth?\n\n  Worth the price of a soul?\n\n  \\NPC{Dhamon Grimwulf} and his band of mercenaries greedily eye a\n  long-forgotten treasure concealed beneath a grassy plain. Legends promise\n  riches too numerous to count, wealth too grand to be believed. But in a\n  shifting world of secrets and deception, such fortune comes at a high price,\n  higher even than the searing agony \\NPC{Dhamon} suffers under the curse of a\n  \\Monster{dragon}\'s scale.\n\n  High enough to cost \\NPC{Dhamon} his life.\n\n  \'Jean Rabe\'s characters and stories are a wonderful addition to the saga of\n  \\Place{Krynn}.\'\n  \\right{-- Margaret Weis}\n\n  The paperback version of the sequel to \\Product{Downfall}, the first book of\n  the \\Product{Dhamon Saga}. Betrayal continues the adventures of characters\n  featured in the USA Today bestselling \\Product{Dragons of a New Age}\n  trilogy."
+}
+title: "Betrayal"
+author {
+  name: "Rabe, Jean"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2718"
+  check: 6
+}
+isbn13 {
+}
+pages: 448
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume II"
+series: "Dhamon Saga"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

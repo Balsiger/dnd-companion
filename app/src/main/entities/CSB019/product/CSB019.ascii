@@ -1,0 +1,45 @@
+template {
+  name: "CSB019"
+  description: "For use with the current version of the world\'s most popular RPG or many other games. Zone Effects are great for marking the area of a continuous effect or a sustained power. Scales up or down easily to mark larger or smaller zones and does not occupy squares on a battlemap. No more having to mark up the battlemap only to erase it when the effect is removed. Sold in a pack of four models cast in white resin.\n"
+  short_description: "A set of four zone effect markers in ice white."
+}
+title: "Zone Effects - Snowdrift White Ice"
+subtitle: "Terraform Battlefield Scenery"
+author {
+}
+editor {
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2010
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: SMALL_BOX
+producer: "Armorcast"
+series: "Zone Effects"
+price {
+  currency: "$"
+  number: 600
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "zone effect marker"
+  number: 4
+}
+layout: FULL_COLOR

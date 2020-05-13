@@ -1,0 +1,34 @@
+template {
+  name: "WTC 17755"
+  world: "Generic"
+  description: "\\large{Fearsome and formidable foes lurk within}\n                    \\bold{by Skip Williams, Jonathan Tweet, and Monte Cook}\n                    Encounter a horde of monsters armed and ready to battle the boldest heroes or\n                    fight alongside them. The fully illustrated pages of this book are overrun\n                    with all the creatures, statistics, spells, and strategies you need to\n                    challenge the heroic characters of any Dungeon & Dragons roleplaying game."
+}
+title: "Monster Manual"
+date {
+  year: 2003
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2893"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: DND_3_5
+type: RULEBOOK
+style: HARDCOVER
+number: "Book III"
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

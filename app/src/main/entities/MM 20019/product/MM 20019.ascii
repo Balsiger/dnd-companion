@@ -1,0 +1,35 @@
+template {
+  name: "MM 20019"
+  description: "Two bookshelves for the dungeon."
+  short_description: "Two bookshelves for the dungeon."
+}
+title: "Bookshelves"
+subtitle: "Dungeon Decor"
+illustrator {
+  name: "Ochmann, J."
+  job: "sculptor"
+}
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: SMALL_BOX
+producer: "Mega Miniatures"
+series: "Dungeon Decor"
+price {
+  currency: "$"
+  number: 899
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "bookshelf"
+  number: 2
+}
+layout: FULL_COLOR

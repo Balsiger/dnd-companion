@@ -1,0 +1,43 @@
+template {
+  name: "WTC 21882"
+  world: "Dragonlance"
+  description: "The highways and byways of \\Place{Ansalon} are being ravaged by war.\n\nAs the \\Event{War of Souls} rages, vast armies and powerful wizards vie for control of \\Place{Krynn}. But despite the deeds of the mighty, it is the common people who must endure the great hardships of war.\n\n\\NPC{Bertrem} of the \\Group{Order of Aesthetics}, keeper of the \\Place{Great Library of Palanthas}, gathers accounts of everyday life in \\Place{Ansalon} as it is forever changed by the \\Event{War of Souls}."
+  short_description: "Accounts of the everyday life in \\Place{Ansalon} during the \\Event{War of Souls}."
+}
+title: "Bertrem\'s Guide to the War of Souls"
+subtitle: "Everyday life in \\Place{Ansalon} during the \\Event{War of Souls}"
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2001
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1882"
+  check: 9
+}
+isbn13 {
+}
+pages: 306
+system: NONE
+type: NOVEL
+style: BOOKLET
+producer: "WTC"
+number: "Volume One"
+series: "Bertrem\'s Guide to the War of Souls"
+price {
+  currency: "\302\254\302\243"
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

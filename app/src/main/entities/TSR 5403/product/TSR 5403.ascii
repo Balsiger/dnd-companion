@@ -1,0 +1,18 @@
+template {
+  name: "TSR 5403"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "AD&D Conan Set 2"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

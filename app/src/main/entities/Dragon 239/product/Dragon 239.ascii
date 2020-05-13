@@ -1,0 +1,154 @@
+template {
+  name: "Dragon 239"
+  world: "Generic"
+}
+title: "Dragon 239"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Baichtal, John W."
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Richardson, Tim"
+}
+author {
+  name: "Covello, Brian"
+}
+author {
+  name: "Dancey, Jeff"
+}
+author {
+  name: "Pierson, Chris"
+}
+author {
+  name: "Rea, Nicky"
+}
+author {
+  name: "Carmien, Ed"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "associate editor"
+}
+editor {
+  name: "Baldwin, Lizz"
+  job: "editorial assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "Durfee, Brian"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Sutherland, David"
+}
+illustrator {
+  name: "Schwartz, Stephen F."
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Holloway, James"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Guay, Rebecca"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Steamy"
+}
+illustrator {
+  name: "Pillsbury, Joseph"
+}
+illustrator {
+  name: "Haas, Jeff"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Baerbock, Linda"
+  job: "subscriptions"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising"
+}
+date {
+  year: 1997
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXI 10"
+number: "239"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

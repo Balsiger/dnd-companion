@@ -1,0 +1,55 @@
+template {
+  name: "PZO 3000"
+  world: "Generic"
+}
+title: "Campaign Workbook"
+subtitle: "Take Control of Your Game."
+author {
+  name: "Bulmahn, Jason"
+  job: "lead designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2007
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "9770071"
+  title: "3"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "9770071"
+  title: "3"
+  check: 4
+}
+pages: 320
+system: DND_3_5
+type: ACCESSORY
+style: SOFT_COVER
+producer: "Paizo"
+series: "GameMastery"
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: TWO_COLOR

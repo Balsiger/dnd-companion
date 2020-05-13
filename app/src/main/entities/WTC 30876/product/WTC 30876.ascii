@@ -1,0 +1,60 @@
+template {
+  name: "WTC 30876"
+  world: "Forgotten Realms"
+  description: "After dueling with a \\Monster{dragon} and a \\Monster{demon}, \\NPC{Maimun} knows he must destroy the stone that has kept him on the run for most of his life. The question now is how. With \\NPC{Joen} by his side, \\NPC{Maimun} journeys to the \\Place{Tower of Twilight} to beg famed wizard \\NPC{Malchor Harpell} for answers. But Harpell\342\200\231s help comes at a steep price.\n\nFriends become enemies. Lost secrets come to light. And deep in the shadows, the sentinels are watching, scheming to save the stone\342\200\224even if it means someone must die.\n\nFeaturing the sage wisdom of R.A. Salvatore\342\200\231s beloved character \\NPC{Drizzt Do\342\200\231Urden}, this final book of the \\Product{Stone of Tymora} trilogy is packed with action, magic, intrigue, and a heart-stopping twist that Salvatore fans won\342\200\231t want to miss."
+  short_description: "The final book in the \\Product{Stone of Tymora} trilogy"
+}
+title: "Sentinels"
+leader: "The"
+subtitle: "Stone of Tymora"
+author {
+  name: "Salvatore, R.A."
+}
+author {
+  name: "Salvatore, Geno"
+}
+editor {
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2011
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5785"
+  check: 9
+}
+pages: 297
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "3"
+series: "Stone of Tymora"
+price {
+  currency: "$"
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

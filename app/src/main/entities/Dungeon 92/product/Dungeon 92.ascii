@@ -1,0 +1,122 @@
+template {
+  name: "Dungeon 92"
+  world: "Generic"
+  description: "This is issue 92 of the dungeon magazine, together with the\n   \\Product{Polyhedron 151} issue."
+}
+title: "Dungeon 92"
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Brunner, Frank"
+}
+author {
+  name: "Leati, Tito"
+}
+author {
+  name: "Jacobs, James"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Mona, Erik"
+  job: "contributing editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "contributing editor"
+}
+editor {
+  name: "Fiorito, Stacie A."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+cover {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Thompson, Derek"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Zipse, Craig"
+}
+illustrator {
+  name: "Thomasson, Chris"
+  job: "art director"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2002
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 110
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XVI 2"
+number: "92"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,20 @@
+template {
+  name: "TSR 8422"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Forgotten Realms"
+  description: "solo quest"
+}
+title: "Knight of the Living Dead"
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+audience: ALL
+type: NOVEL
+price {
+}

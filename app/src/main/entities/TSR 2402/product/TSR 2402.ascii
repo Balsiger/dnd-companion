@@ -1,0 +1,46 @@
+template {
+  name: "TSR 2402"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dark Sun"
+  description: "Prism Pentad, book one"
+}
+title: "Verdant Passage"
+leader: "The"
+date {
+  year: 1991
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book One"
+series: "Prism Pentad"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

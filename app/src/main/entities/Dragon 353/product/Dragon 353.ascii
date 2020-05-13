@@ -1,0 +1,175 @@
+template {
+  name: "Dragon 353"
+  world: "Generic"
+  description: "Issue 353 of the magazine. "
+}
+title: "Dragon 353"
+author {
+  name: "Baase, Kevin"
+}
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Christensen, William L."
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Diaz, Oliver"
+}
+author {
+  name: "Drain, Jonathan"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Jansing, Eric"
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Stewart, Todd"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "managing editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Dillon, Julie"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Perez, Ramon"
+}
+illustrator {
+  name: "Simonetti, Marc"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wood, Ashley"
+}
+illustrator {
+  name: "Wooten, Ben"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "art director"
+}
+illustrator {
+  name: "Pozca, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2007
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXXI 10"
+number: "353"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

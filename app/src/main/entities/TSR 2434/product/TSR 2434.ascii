@@ -1,0 +1,41 @@
+template {
+  name: "TSR 2434"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dark Sun"
+  description: "Chronicles of Athas Series, book one"
+}
+title: "Brazen Gambit"
+leader: "The"
+date {
+  year: 1994
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "872"
+  check: 10
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book One"
+series: "Chronicles of Athas"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

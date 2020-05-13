@@ -1,0 +1,24 @@
+template {
+  name: "WTC 96268"
+  world: "None"
+  description: "With \\Product{MLB Showdown} sports card game draft packs, you can draft a\n  new team every day. Draft packs come ready to play with an entire team of MLB\n  stars and enough strategy game cards to turn any game into a nailbiter. And\n  they\'re great for tournament play!\n\n  Each draft pack comes with:\n\n  \\list\n  {15 random player game cards, including 1 premium holographic card}\n  {45 strategy game cards}\n  {All-new scorecard}\n  {Instructions on how to draft for tournament play}"
+}
+title: "MLB Showdown 2003 Draft Pack"
+subtitle: "HOLD YOUR OWN DRAFT"
+date {
+  year: 2003
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+system: MLB_SHOWDOWN_2003
+audience: ALL
+type: CARDS_TYPE
+style: BOX
+price {
+  currency: "$ "
+  number: 999
+  precision: 100
+}

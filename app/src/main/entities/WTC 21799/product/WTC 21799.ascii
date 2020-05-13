@@ -1,0 +1,57 @@
+template {
+  name: "WTC 21799"
+  world: "Forgotten Realms"
+  description: "\\NPC{Arilyn Moonblade} has always feared the elfshadow, the essence of her\n                    sword\'s magic. When she learns the terrible truth behind her inherited\n                    \\Item{moonblade}, she vows to find a way to escape her fate.\n                    What begins as a means to an end becomes a deeply personal\n                    commitment. Determined to succeed in her quest, \\NPC{Arilyn} will risk all\n                    she holds dear."
+}
+title: "Silver Shadows"
+author {
+  name: "Cunningham, Elaine"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1799"
+  check: 7
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "Songs & Swords"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

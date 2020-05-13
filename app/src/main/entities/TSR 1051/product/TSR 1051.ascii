@@ -1,0 +1,21 @@
+template {
+  name: "TSR 1051"
+  reference {
+    name: "net price list"
+  }
+  description: "Unknown"
+}
+title: "Best of Dragon Magazine Games"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}

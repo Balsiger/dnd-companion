@@ -1,0 +1,53 @@
+template {
+  name: "TSR 8566"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Forgotten Realms"
+  description: "\\NPC{Arilyn Moonblade} has always feared the elfshadow, the essence of her\n                    sword\'s magic. When she learns the terrible truth behind her inherited\n                    \\Item{moonblade}, she vows to find a way to escape her fate. The\n                    \\Monster{half-elf} seeks answers from the \\Monster{elves} of\n                    \\Place{Evermeet}, but is asked in exchange to go to the aid of a band of\n                    forest \\Monster{elves} who are threatened with extinction. Posing as a\n                    \\Monster{moonelf} warrior, \\NPC{Arilyn} is drawn into the world of the\n                    \\Monster{wild elves}.\n                    What begins as a means to an end becomes a deeply personal commitment, and\n                    \\NPC{Arilyn} is prepared to do anyting---even sacrifice her\n                    \\Item{moonblade}\'s magic---to win freedom for the \\Monster{forest elves}. But\n                    when her personal quest endangers those she loves---\\NPC{Foxfire}, the\n                    charismatic leader of the \\Monster{wild elves}, and the \\Monster{human} bard\n                    \\NPC{Danilo Thann}, her \\Group{Harper} partner---she will risk far more.\n                    \\Product{Silver Shadows} is the thirteenth in an open-ended series of novels\n                    focusing on the \\Group{Harpers}, the secret organization for Good in the\n                    \\Place{Forgotten Realms} fantasy world."
+}
+title: "Silver Shadows"
+author {
+  name: "Cunningham, Elaine"
+}
+editor {
+}
+cover {
+  name: "Fields, Fred"
+}
+illustrator {
+  name: "Snyder, John"
+}
+date {
+  year: 1996
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0498"
+  check: 4
+}
+isbn13 {
+}
+pages: 374
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Thirteen"
+series: "Harpers Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

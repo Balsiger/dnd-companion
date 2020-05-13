@@ -1,0 +1,178 @@
+template {
+  name: "WTC 2176572"
+  world: "Generic"
+  description: "You are a master of magic, a wielder and shaper of raw arcane power. Armed with your favorite staff, sword, or other implement, you stand ready to crush the forces arrayed against you. This Dungeons & Dragons supplement presents new powers, feats, paragon paths, and epic destinies designed for the bard, sorcerer, swordmage, warlock, and wizard classes. It also includes the vestige pact for warlocks, rules for familiars, a new kind of implement (tomes), and new builds and class features that allow you to play new versions of your favorite arcane classes --- from the prescient bard or storm sorcerer to the illusionist wizard or summoner wizard."
+  short_description: "Options for Bards, Sorcerers, Swordmages, Warlocks, and Wizards."
+}
+title: "Arcane Power"
+subtitle: "Cast a Deadly Spell"
+author {
+  name: "Bonner, Logan"
+  job: "lead designer"
+}
+author {
+  name: "Bernstein, Eytan"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Lee, Peter"
+}
+author {
+  name: "Radney-MacFarlan, Stephen"
+  job: "development"
+}
+author {
+  name: "Schaefer, Peter"
+  job: "development"
+}
+author {
+  name: "Collins, Andy"
+  job: "additional development"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "additional development"
+}
+editor {
+  name: "Martin, Julia"
+  job: "lead editor"
+}
+editor {
+  name: "Bilsland, Greg"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "O\'Conner, William"
+}
+illustrator {
+  name: "Hinton, Woodrow III"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Nash, Mike"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "imaging technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of D&D and book publishing"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D creative manager"
+}
+manager {
+  name: "Wyatt, James"
+  job: "D&D design manager"
+}
+manager {
+  name: "Collins, Andy"
+  job: "D&D development and editing manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2009
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4957"
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4957"
+  check: 1
+}
+pages: 160
+system: DND_4
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ $"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

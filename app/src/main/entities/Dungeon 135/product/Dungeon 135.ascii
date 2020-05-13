@@ -1,0 +1,149 @@
+template {
+  name: "Dungeon 135"
+  world: "Generic"
+  description: "This is issue 135 of the dungeon magazine."
+}
+title: "Dungeon 135"
+author {
+  name: "Happ, Stefan"
+}
+author {
+  name: "Hart, Mark A."
+}
+author {
+  name: "Leati, Tito"
+}
+author {
+  name: "Logues, Nicolas"
+}
+author {
+  name: "MacLean, Hal"
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+editor {
+  name: "Walker, Jeremy"
+  job: "editorial assistant"
+}
+editor {
+  name: "Sutter, James Lafond"
+  job: "editorial assistant"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Barrum, Joachim"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Dogan, Omar"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "P\\acute{e}rez, Ram\\grave{o}n"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Stevens, Chris"
+}
+illustrator {
+  name: "Widermaan, Eva"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Schley, Mike"
+  job: "associate art director"
+}
+illustrator {
+  name: "Pocza, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising sales director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "20 6"
+number: "135"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

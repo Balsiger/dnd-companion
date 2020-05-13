@@ -1,0 +1,56 @@
+template {
+  name: "WTC 38723"
+  world: "Forgotten Realms"
+  description: "Witches cloaked in masks and bones\n\nWith a pride of wild \\Monster{griffons} for the taking.... \n\nat a steep price.\n\nA gathering of foes to fight a growing evil...\n\nAnd decide the fate of this spiritual land."
+  short_description: "Book IV of the Brotherhood of the Griffon"
+}
+title: "Masked Witches"
+leader: "The"
+subtitle: "The \\Monster{Undead} are Walking in \\Place{Rashemen}"
+author {
+  name: "Byers, Richard Lee"
+}
+editor {
+}
+cover {
+  name: "Kotaki, Kekai"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2012
+  month: 2
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5982"
+  check: 2
+}
+pages: 340
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book IV"
+series: "Brotherhood of Griffon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

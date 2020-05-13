@@ -1,0 +1,35 @@
+template {
+  name: "TSR 11352"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Generic"
+  description: "rules for dimensional travel, parallel universes, play tips, adventure ho"
+}
+title: "Tangents"
+author {
+  name: "Cordell, Bruce R."
+}
+date {
+  year: 1999
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1352"
+  check: 5
+}
+isbn13 {
+}
+pages: 96
+system: ALTERNITY
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

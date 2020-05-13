@@ -1,0 +1,31 @@
+template {
+  name: "TSR 3553"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Buck Rogers"
+}
+title: "First 60 Years"
+leader: "The"
+date {
+  year: 1994
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "604"
+  check: 5
+}
+isbn13 {
+}
+system: XXVC
+audience: ALL
+type: NOVEL
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}

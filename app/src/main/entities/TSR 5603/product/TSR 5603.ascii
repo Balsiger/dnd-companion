@@ -1,0 +1,26 @@
+template {
+  name: "TSR 5603"
+  reference {
+    name: "complete product listing"
+  }
+  description: "An \\Monster{Ogre} and a \\Monster{Cyclopskin} miniature."
+}
+title: "Ogre & Cyclopskin"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+price {
+}
+content {
+  part: MINIATURE
+  description: "figures"
+  number: 2
+}

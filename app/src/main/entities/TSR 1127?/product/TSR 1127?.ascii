@@ -1,0 +1,35 @@
+template {
+  name: "TSR 1127?"
+  reference {
+    name: "catalog95"
+  }
+  world: "None"
+  description: "(did this ever appear ?)"
+}
+title: "Spellfire AD&D Spelljammer Booster Pack, Set 7"
+date {
+  year: 1996
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0201"
+  check: 9
+}
+isbn13 {
+}
+system: SPELLFIRE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  description: "random"
+  number: 15
+}

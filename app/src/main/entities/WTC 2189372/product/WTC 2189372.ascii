@@ -1,0 +1,226 @@
+template {
+  name: "WTC 2189372"
+  world: "Generic"
+  description: "Beyond the mortal world awaits great peril, power, and adventure. Welcome to the planes! With this book, you explore the magical realms of the \\Place{Feywild}, the haunted lands of the \\Place{Shadowfell}, the divine dominions of the \\Place{Astral See}, and the savage maelstrom of the \\Place{Elemental Chaos} and the \\Place{Abyss}. Every plane offers unique adventuring locations filled with unparalleled dangers and fantastic features. This supplement for the Dungeons & Dragons Roleplaying Game explores the planes of existence, including the \\Place{Feywild}, the \\Place{Shadowfell}, the \\Place{Astral See}, and the \\Place{Elemental Chaos}. In addition to planar monsters and hazards for Dungeon Masters, this book features new paragon paths, feats, rituals, and magic items for players looking for an edge when adventuring in the planes."
+  short_description: "Information about the planes."
+}
+title: "Manual of the Planes"
+subtitle: "Adventure Beckons Through Planar Portals"
+author {
+  name: "Baker, Richard"
+}
+author {
+  name: "Rogers, John"
+}
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Sims, Chris"
+  job: "additional design"
+}
+author {
+  name: "Bilsland, Greg"
+  job: "additional design"
+}
+author {
+  name: "Bonner, Logan"
+  job: "additional design"
+}
+author {
+  name: "Noonan, David"
+  job: "additional design"
+}
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "additional design"
+}
+author {
+  name: "Schaefer, Peter"
+  job: "additional design"
+}
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "lead developer"
+}
+author {
+  name: "Mearls, Michael"
+  job: "developer"
+}
+author {
+  name: "Schaefer, Peter"
+  job: "developer"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+editor {
+  name: "Martin, Julia"
+  job: "lead editor"
+}
+editor {
+  name: "Bilsland, Greg"
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "managing editor"
+}
+cover {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Alexander, Rob"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Belledin, Steve"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Szikszai, Gabor"
+}
+illustrator {
+  name: "Chippy"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Nordstrand, Torstein"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Reeve, Daniel"
+  job: "D&D script design"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "art director"
+}
+illustrator {
+  name: "Murayama, Soe"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Adams, Chris"
+  job: "image technician"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technician"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Tardiff, Christopher"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "d&d story design and development manager"
+}
+manager {
+  name: "Collins, Andy"
+  job: "d&d system design and development manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manger"
+}
+date {
+  year: 2008
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5002"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5002"
+  check: 7
+}
+pages: 160
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

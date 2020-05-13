@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5017"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Sinister Spectre & Lich"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

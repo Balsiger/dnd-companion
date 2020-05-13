@@ -1,0 +1,95 @@
+template {
+  name: "Polyhedron 123"
+  world: "Generic"
+  description: "Issue 123 of Polyhedron."
+}
+title: "Polyhedron 123"
+author {
+  name: "Scott Douglas"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Harold Johnson"
+}
+author {
+  name: "Glen R. Goodwin"
+}
+author {
+  name: "Robert Wiese"
+}
+author {
+  name: "Nathan Caroland"
+}
+author {
+  name: "Roger E. Moore"
+}
+author {
+  name: "Gary Labrecque"
+}
+author {
+  name: "Fred Faber"
+}
+author {
+  name: "Hesperin, Clio"
+}
+author {
+  name: "Jacinth Moonstrping"
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "publisher"
+}
+manager {
+  name: "Scott Douglas"
+  job: "network coordination dude"
+}
+manager {
+  name: "Conant, Dave"
+  job: "production dude"
+}
+manager {
+  name: "Terry Craig"
+  job: "production dude"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "stylish babe"
+}
+manager {
+  name: "Lokotz, Angelika"
+  job: "stylish babe"
+}
+manager {
+  name: "Sutherland, Dave"
+  job: "production dude"
+}
+manager {
+  name: "Hoeke, Dave"
+  job: "magic folk"
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "16"
+number: "8"
+series: "Polyhedron"
+price {
+}

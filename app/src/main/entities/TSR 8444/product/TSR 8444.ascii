@@ -1,0 +1,31 @@
+template {
+  name: "TSR 8444"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Generic"
+  description: "a collection of cover artwork and interiour illustration of Dragon"
+}
+title: "Art of Dragon Magazine"
+leader: "The"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: ALL
+type: SPECIAL_BOOK
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}

@@ -1,0 +1,34 @@
+template {
+  name: "WTC 88620"
+  world: "Dragonlance"
+  description: "Twenty years have passed since \\NPC{Beldinas the Kingpriest} assumed the\n  throne. His is a realm of unsurpassed grandeur and wealth, a testament to the\n  mightiest age of the empire of \\Place{Istar}.\n\n  But evil exists in this great realm, threatening the peace and sanctity of\n  the province. \\NPC{Beldinas} must turn to his most loyal lieutenant,\n  \\NPC{Cathan}, for help. Following \\NPC{Cathan}\'s lead, the \\Group{Knights of\n  the Divine Hammer} strive to extinguish a foul sorcery that will stop at\n  nothing to serve its own dark ends."
+}
+title: "Divine Hammer"
+subtitle: "Sorcery: A Threat to the Glory of \\Place{Istar}."
+author {
+  name: "Pierson, Chris"
+}
+date {
+  year: 2002
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1902"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+volume: "Kingpriest Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

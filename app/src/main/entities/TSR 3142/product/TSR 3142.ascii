@@ -1,0 +1,33 @@
+template {
+  name: "TSR 3142"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Birthright"
+  description: "an adventure set in the Rjurik lands"
+}
+title: "King of the Giantdowns"
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0719"
+  check: 3
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}

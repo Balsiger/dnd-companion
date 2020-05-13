@@ -1,0 +1,144 @@
+template {
+  name: "WTC 9537972"
+  world: "Forgotten Realms"
+  description: "\\emph{Long ago, \\Monster{dragons} ruled the world, and although their power\n                    has waxed and waned over the millenia, they never forget the glory of the\n                    distant past. Now and then, some world-shaking event or revelation brings out\n                    the words in them ... and transforms \\Place{Faer\\hat{u}} forever.}\n                    This supplement describes some of \\Place{Faer\\hat{u}} most notorious\n                    \\Monster{dragons} and \\Monster{dracoliches} and presents information and\n                    dragon-related organizations such as the \\Group{church of \\God{Tiamat}} and\n                    the \\Group{Cult of the Dragon}. In addition, this book includes ready-to-play\n                    adventures, new traps and treasures found within \\Monster{dragons}\' lairs,\n                    new \\Monster{dragon} spells, and new monsters.\n                    \\Product{Dragons of Faer\\hat{u}n} features an in-depth look at the\n                    \\Monster{dragons} of \\Place{Forgotten Realms}. Dungeon Masters are given\n                    information on adventuring in the Year of Rogue Dragons on specific\n                    \\Monster{dragons} of \\Place{Faer\\hat{u}n} and how they may interact with or\n                    fight against the players. They are given information on organizations that\n                    players can belong to or work against, like the evil \\Group{Cult of the\n                    Dragon}. Also included is information on how to run a campaign that features\n                    the Year of Rogue Dragons, the one time every thousand years the\n                    \\Monster{dragons} of \\Place{Faer\\hat{u}n} rampage across the continent."
+  short_description: "The Forgotten Realms answer to the Draconomicon."
+}
+title: "Dragons of Faer\\hat{u}n"
+subtitle: "Unleash the Dragons Within!"
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Bernstein, Eytan"
+}
+author {
+  name: "Jamieson, Eva"
+  job: "additional design"
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+  job: "additional design"
+}
+author {
+  name: "Krashos, George"
+  job: "additional design"
+}
+editor {
+  name: "Griese, Beth"
+}
+editor {
+  name: "Rice, Cindi"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Parrillo, Lucio"
+}
+cartographer {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Flores, Gonzalo"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Gist, Eric M."
+}
+illustrator {
+  name: "Hooper, Fred"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Forgotten Realms Campaign Setting"
+required_requirements: "Draconomicon"
+layout: FULL_COLOR

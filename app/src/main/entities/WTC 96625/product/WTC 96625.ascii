@@ -1,0 +1,35 @@
+template {
+  name: "WTC 96625"
+  world: "Generic"
+  description: "Brace yourself for a random encounter dominated by \\Monster{demons},\n                    \\Monster{devils}, and other \\Monster{outsiders}, along with a horde of\n                    heroes, villains, and monsters. Taken straight from D&D rulebooks, such as\n                    the \\Product{Monster Manual}, \\Product{Forgotten Realms Campaign Setting},\n                    \\Product{Miniatures Handbook}, \\Product{Psionics Handbook}, and\n                    \\Product{Savage Species}, these characters are ready for battle -- right out\n                    of the box.\n                    Each Archfiends expansion pack contains 8 randomly selected, prepainted,\n                    fully assembled, collectible miniatures with double-sided statistic cards for\n                    use with the D&D roleplaying game or for fast-paced head-to-head combat.\n                    Three separate Archfiends expansion packs are pictured at left. Each pack\n                    contains eight randomly selected miniatures."
+}
+title: "Archfiends Expansion Pack"
+subtitle: "Roll for initiative!"
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3464"
+  check: 6
+}
+isbn13 {
+}
+system: DND_3RD
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+number: "3"
+series: "D&D Miniatures"
+price {
+  currency: "$ "
+  number: 999
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "random"
+  number: 8
+}

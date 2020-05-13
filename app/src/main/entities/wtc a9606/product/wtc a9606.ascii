@@ -1,0 +1,79 @@
+template {
+  name: "wtc a9606"
+  category: "adventure"
+  world: "Generic"
+  description: "In an audacious bid for power, the \\Group{Cult of the Dragon}, along with its \\Monster{dragon} allies and the \\Group{Red Wizards of Thay}, seeks to free \\God{Tiamat} from her prison in the \\Place{Nine Hells} to bring her to the \\Place{Forgotten Realms}.\n\nThe cult\'s forces are sweeping from town to town, laying waste to all who oppose them and gathering a hoard of riches for their dread queen.\n\nThe threat is so dire, factions as disparate as the \\Group{Harpers} and the \\Group{Zhentarim} are banding together to battle the cult. Never before has the need for heroes been as depserate."
+  short_description: "Fight against draconic tyranny in this adventure for the world\'s greatest roleplaying game."
+}
+title: "Hoard of the Dragon Queen"
+subtitle: "The Sword Coast is Under Siege"
+author {
+  name: "Baur, Wolfgang"
+  job: "designer"
+}
+author {
+  name: "Winter, Steve"
+  job: "designer"
+}
+editor {
+  name: "Horner, Miranda"
+}
+cover {
+  name: "Swanland, Raymond"
+}
+cartographer {
+  name: "Blando, Jared"
+}
+illustrator {
+  name: "H\303\274brich, Aaron"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Kuip, Guido"
+}
+illustrator {
+  name: "Mercado, Marcel"
+}
+illustrator {
+  name: "Syme, Bryan"
+}
+illustrator {
+  name: "Radle, Marc"
+  job: "art director"
+}
+manager {
+  name: "Baur, Wolfgang"
+  job: "producer"
+}
+date {
+  year: 2014
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6564"
+  check: 9
+}
+pages: 96
+system: DND_NEXT
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+series: "Tyranny of Dragons"
+price {
+  currency: "$2"
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "adventure"
+  number: 1
+}
+layout: FULL_COLOR

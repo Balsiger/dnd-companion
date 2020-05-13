@@ -1,0 +1,33 @@
+template {
+  name: "WTC 11855"
+  synonym: "WTC 88667"
+  world: "Generic"
+  description: "\\large{The \\Place{Underdark} Holds Many Secrets}\n                    \\emph{A series of earthquakes and eruptions have rocked a normally placid\n                    land. Strange creatures sighted in the dark of night raise fears across the\n                    already disturbed countryside. As tales of a lost race that once warred with\n                    the \\Monster{drow} begin to surface, only the boldest adventurers dare to\n                    descend into the shadowy darkness.}\n                    \\Product{Deep Horizon} is a stand-alone adventure for the Dungeons & Dragons\n                    game. Designed to challenge 13th-level D&D characters, it presents a\n                    long-forgotten civilization for heroes to discover and save, if they can.\n                    To use this accessory, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}."
+}
+title: "Deep Horizon"
+date {
+  year: 2001
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1855"
+  check: 1
+}
+isbn13 {
+}
+pages: 32
+system: DND_3RD
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

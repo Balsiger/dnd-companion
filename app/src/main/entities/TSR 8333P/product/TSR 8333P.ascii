@@ -1,0 +1,44 @@
+template {
+  name: "TSR 8333P"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+}
+title: "Tanis, the Shadow Years"
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "913"
+  check: 3
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume Six"
+series: "Preludes Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

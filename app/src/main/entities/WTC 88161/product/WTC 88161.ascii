@@ -1,0 +1,33 @@
+template {
+  name: "WTC 88161"
+  world: "Generic"
+  description: "\\large{Pages Stained with Unspeakable Knowledge}\n                    \\emph{\'Only the most indomitable minds dare to look upon the malevolent\n                    thoughts and forbidden secrets bound herein. This corrupt tome is filled with\n                    deplorable wisdom, malignant ideas, and descriptions of creatures, rites, and\n                    practices most foul. Evil permeates every word and image inscribed within\n                    it.\'}\n                    \\right{---\\NPC{Orcus}, Demon Prince of the Undead}\n                    This sourcebook for the D&D game is intended for mature audiences and\n                    provides a Dungeon Master with unflinching access to subject matter that will\n                    broaden any campaign. Included is a detailed look at the nature of evil and\n                    the complex challenge of confronting the many dilemmas found within its\n                    deepest shadows. Along with the wicked spells, wondrous items, and artifacts,\n                    \\Product{Book of Vile Darkness} also provides descriptions and statistics for\n                    a host of abominable monsters, \\Monster{archdevils}, and demon princes to pit\n                    against the noblest of heroes.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}."
+}
+title: "Book of Vile Darkness"
+date {
+  year: 2002
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2650"
+  check: 3
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 3295
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "the text"
+  number: 1073741824
+}

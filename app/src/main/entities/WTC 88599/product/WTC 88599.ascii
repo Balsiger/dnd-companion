@@ -1,0 +1,34 @@
+template {
+  name: "WTC 88599"
+  world: "Dragonlance"
+  description: "Consumed by grief and haunted by nightmares, \\NPC{Davyn} has given up on\n  himself and his friends. But he cannot deny his destiny for long.\n\n  \\NPC{Shemnara} rekindles \\NPC{Davyn}\'s hope with a new vision. If \\NPC{Davyn}\n  can enlist the help of the dreaded \\NPC{Dragon Knight}, \\NPC{Nearra} may\n  survive. Only \\NPC{Oddvar}, the shifty \\Place{Theiwar}, has ever entered the\n  \\NPC{Knight}\'s home and lived to tell the tale. But even a \\Place{Theiwar}\'s\n  secrets can be bought, for the right price. Soon, with old friends, new\n  allies, and \\NPC{Oddvar} by his side, \\NPC{Davyn} enters the cursed\n  keep. \\NPC{Nearra}\'s fate rests in his hands. And all he has to do is make it\n  out... alive."
+}
+title: "Dragon Knight"
+author {
+  name: "Willis, Dan"
+}
+date {
+  year: 2005
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3735"
+  check: 1
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume 7"
+series: "Dragonlance the New Adventures"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

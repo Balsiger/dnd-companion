@@ -1,0 +1,45 @@
+template {
+  name: "PZO 3046"
+  category: "face cards"
+  category: "cards"
+  synonym: "Mummy\'s Mask"
+  synonym: "Face Cards: Mummy\'s Mask"
+  world: "Generic"
+  description: "Bring your NPCs to life with the \\Product{Mummy\342\200\231s Mask} Face Cards! More than 50 key characters fill this gorgeously illustrated deck designed for use with the Mummy\342\200\231s Mask Adventure Path, but suitable for any fantasy game! Each card includes the character\342\200\231s name and role, space to record key details, and artwork by Paizo\342\200\231s finest illustrators. These Face Cards bring the most prominent cast members of this epic Adventure Path to your tabletop and let your players look into the faces of the enemy!"
+  short_description: "A set of 50 cards of NPC faces."
+}
+title: "Pathfinder Cards: Mummy\'s Mask"
+subtitle: "Minions Unmasked"
+date {
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "612"
+  check: 6
+}
+system: NONE
+type: CARDS_TYPE
+style: SMALL_BOX
+producer: "Paizo"
+series: "Pathfinder Cards"
+series: "Face Cards"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: BOX
+  description: "wrapping"
+  number: 1
+}
+content {
+  part: CARD
+  description: "face card"
+  number: 50
+}
+layout: FULL_COLOR

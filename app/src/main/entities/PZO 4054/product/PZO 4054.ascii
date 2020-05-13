@@ -1,0 +1,48 @@
+template {
+  name: "PZO 4054"
+  category: "map pack"
+  category: "map"
+  synonym: "Pathfinder Map Pack: River System"
+  world: "Generic"
+  description: "The roar of a river\342\200\231s white waters can fill an adventurer\342\200\231s heart with hope of escaping pursuit or dread at facing an insurmountable obstacle. Whether your heroes are racing down the river in pursuit of villains or investigating rumors of aquatic monsters, there\342\200\231s no need to sketch every rill and eddy. This Pathfinder Map Pack provides stunningly illustrated 5\" \303\227 8\" map tiles that can be positioned to form a variety of modular, customizable river configurations. Inside, you\342\200\231ll find 18 richly crafted map tiles, including:\n\n\\list\n{Fallen Tree}\n{Sandy Banks}\n{Flood-Swollen Waters}\n{Tributary Confluence}\n{Stony Crossing}\n{Exposed Riverbed}\n{Meandering Bend}\n{Cut Bank}\n{Rocky Rapids}\n\nGame Masters shouldn\342\200\231t waste their time drawing maps every time adventurers ford a river or board a boat. With \\Product{Pathfinder Map Pack: River System}, you\342\200\231ll always be ready to brave the rapids!\nSuitable for experienced GMs and novices alike, this product fits perfectly into any Game Master\342\200\231s arsenal.\n\nWet, dry, and permanent markers erase from the tiles! With revised packaging that includes a reusable box for easy storage, Map Packs have never been so useful!"
+  short_description: "Wet, dry and permanent marker erasable set of map tiles."
+}
+title: "River System"
+subtitle: "Take Me To the River"
+cartographer {
+  name: "Engle, Jason"
+}
+date {
+  year: 2015
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "737"
+  check: 6
+}
+system: NONE
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Paizo"
+series: "Pathfinder Map Pack"
+series: "Map Pack"
+price {
+  currency: "$"
+  number: 1399
+  precision: 100
+}
+content {
+  part: BOX
+  description: "packaging"
+  number: 1
+}
+content {
+  part: MAP
+  description: "tile"
+  number: 18
+}
+layout: FULL_COLOR

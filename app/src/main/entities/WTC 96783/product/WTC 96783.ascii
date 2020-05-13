@@ -1,0 +1,28 @@
+template {
+  name: "WTC 96783"
+  world: "Star Wars"
+  description: "The \\Product{Revenge of the Sith Booster Pack} contains a selection of\n  figures designed to enhance and expand any collection of \\Place{Star Wars}\n  miniatures. It features creatures and characters from the Star Wars Episode\n  III: Revenge of the Sith feature film as well as from other sources dealing\n  with this era of the \\Place{Star Wars} timeline. The miniatures in this\n  product are randomized and playable right out of the box."
+}
+title: "Revenge of the Sith Booster Pack"
+date {
+  year: 2005
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3665"
+  check: 7
+}
+isbn13 {
+}
+system: D20
+audience: ALL
+type: MINIATURE
+style: BOX
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 1295
+  precision: 100
+}

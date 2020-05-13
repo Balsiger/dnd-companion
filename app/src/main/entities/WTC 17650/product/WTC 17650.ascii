@@ -1,0 +1,38 @@
+template {
+  name: "WTC 17650"
+  world: "Star Wars"
+  description: "Revised and updated with new information from Star Wars: Attack of the\n  Clones, including game statistics, characters, creatures, and vehicles.\n\n  Containing all the rules needed to play the popular Star Wars Roleplaying\n  Game, this rulebook has been updated and expanded to include changes based on\n  customer feedback and all-new Star Wars: Attack of the Clones material. The\n  book spans all Star Wars eras, including \\Event{The Rise of the Empire} era,\n  \\Event{The Rebellion} era, and \\Event{The New Jedi Order} era, with material\n  that has never been compiled into a single source.\n\n  Added features of the revised rulebook include rules for playing\n  \\Monster{droid} characters, a new starship combat system, and expanded\n  creature design rules. New species, skills, feats, character classes,\n  prestige classes, and equipment will be extremely well received by the\n  players and fans who have asked for them.\n\n  The revised rulebook, which features all-new cover art and interior design,\n  is 100% compatible with previous Star Wars Roleplaying Game products."
+}
+title: "Star Wars Roleplaying Game Revised Rulebook"
+subtitle: "Star Wars Roleplaying Game Core Rulebook"
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Wiker, JD"
+}
+date {
+  year: 2002
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2876"
+  check: 10
+}
+isbn13 {
+}
+pages: 384
+system: D20
+type: RULEBOOK
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 3995
+  precision: 100
+}

@@ -1,0 +1,78 @@
+template {
+  name: "WTC 2160174"
+  world: "Generic"
+  description: "\\large{Build Your Own Dark Labyrinths}\n                    Your tabletop never looked better! With Dungeon & Dragons Miniatures and this pack of customizable dungeon tiles, you can add a new dimension to your D&D adventures. Easy to set up and infinitely expandable, this pack allows you to create the \\Place{Underdark} adventures you want to play. Pick up additional packs to create larger, more elaborate complexes!\n                    This pack contains six durable, fully illustrated map grids, featuring subterranean locales, lava pits, underground rivers, and other terrain elements that you can use to make great D&D encounters that enhance your roleplaying game experience."
+}
+title: "Lost Caverns of the Underdark"
+subtitle: "Customizable Caverns for Your D&D Roleplaying Game!"
+author {
+  name: "Wyatt, James"
+}
+cover {
+  name: "Sansaver, Ryan"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "art director"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+date {
+  year: 2007
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4709"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4709"
+  check: 6
+}
+pages: 6
+system: DND_3_5
+type: ACCESSORY
+style: FOLDER
+number: "V"
+series: "Dungeon Tiles"
+price {
+  currency: "$"
+  number: 995
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "maps"
+  number: 6
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+optional_requirements: "WTC 96582"
+layout: FULL_COLOR

@@ -1,0 +1,37 @@
+template {
+  name: "TSR 3133P"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Birthright"
+  description: "war and anarchy for the throne of Anuire"
+}
+title: "War"
+author {
+  name: "Simon Hawke"
+}
+date {
+  year: 1997
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0720"
+  check: 7
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

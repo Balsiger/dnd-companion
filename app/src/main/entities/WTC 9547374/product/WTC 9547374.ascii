@@ -1,0 +1,35 @@
+template {
+  name: "WTC 9547374"
+  world: "None"
+  description: "Would you dare?\n                    \\NPC{Nova Darling}\'s dream of joining \\NPC{Joe}s band, \\Group{The Charmed\n                    Three}, has finally come true. \\NPC{Nova} should be walking on air about\n                    their upcoming Band Idol competition -- not to mention all that quality time\n                    with her crush. But in the \\Group{Charmed Three}, it turns out three is a\n                    crowd! The band\'s drummer \\NPC{Ivy} has a crush on Joe too and she wants\n                    \\NPC{Nova} out of the way. Will the azy-cray are-day help \\NPC{Nova} rock her\n                    way past \\NPC{Ivy} and into \\NPC{Joe}\'s heart?\n                    Do a dare, earn a charm, change your life!"
+}
+title: "Nova and the Charmed Three"
+subtitle: "Read your favorite book to your least favorite person -- in Pig Latin!"
+author {
+  name: "Emesse, Tea"
+}
+date {
+  year: 2006
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3991"
+  check: 5
+}
+isbn13 {
+}
+pages: 144
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 5"
+series: "Star Sisterz"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

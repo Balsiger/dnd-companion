@@ -1,0 +1,44 @@
+template {
+  name: "WTC 2402574"
+  world: "Forgotten Realms"
+  description: "A dangerous, subterranean labyrinth haunted by outlaws and monsters.\n                    The upper reaches of the legendary \\Place{Undermountain}.\n                    The only law is that of the sword in \\Place{Downshadow}.\n                    \\emph{Every wondered what it\'s really like to be a paladin? A holy knight, struggling to live in a very unholy city? A city crowded with tempting women who take a great interest in you, and old enemies increasingly thirsty for your doom?\n                    \\Product{Downshadow} shows you, in a tale packed with battles, betrayals, sticky situations, lurking foes... and the deadly rooms and passages of \\Place{Waterdeep}\'s most dangerous neighborhood.\n                    This is one wild ride. I highly recommend it, have read it several times through, and look forward to re-reading it many times more!}\n                    \\right{--- Ed Greenwood}\n                    "
+  short_description: "Ed Greenwood presents Waterdeep"
+}
+title: "Downshadow"
+subtitle: "Downshadow"
+author {
+  name: "de Bie, Erik Scott"
+}
+cover {
+  name: "Jones, Android"
+}
+date {
+  year: 2009
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5128"
+  check: 1
+}
+isbn13 {
+}
+pages: 309
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "3"
+series: "Ed Greenwood Presents Waterdeep"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

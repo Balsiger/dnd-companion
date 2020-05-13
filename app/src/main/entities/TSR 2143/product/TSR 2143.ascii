@@ -1,0 +1,48 @@
+template {
+  name: "TSR 2143"
+  synonym: "PG1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Dragonlance"
+  description: "Players campaign infos."
+}
+title: "Player\'s Guide to the Dragonlance Campaign"
+leader: "The"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1993
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+number: "1"
+series: "Player\'s Guide"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

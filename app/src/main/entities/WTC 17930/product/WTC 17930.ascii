@@ -1,0 +1,27 @@
+template {
+  name: "WTC 17930"
+  world: "None"
+  description: "Make a heads-up play. Add these new player and strategy cards to your\n  deck---or build a whole new team. Then get ready for some big innings.\n\n  Each \\Product{MLB Showdown 2004 Booster Pack} booster pack contains 8 random\n  player game cards and 3 random strategy game cards. It doesn\'t include\n  rules. You can get the rules and a playmat in an \\Product{MLB Showdown\n  Starter Game}. Each player must have an MLB Showdown team to play."
+}
+title: "MLB Showdown 2004 Booster Pack"
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3485"
+  check: 9
+}
+isbn13 {
+}
+system: MLB_SHOWDOWN
+audience: ALL
+type: BOOSTER_PACK
+style: PACK
+price {
+  currency: "$ "
+  number: 349
+  precision: 100
+}

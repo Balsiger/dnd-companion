@@ -1,0 +1,48 @@
+template {
+  name: "TSR 2706"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  description: "combination of core rules and bughunters supplement"
+}
+title: "Core Rules / Bughunters Combination Pack"
+author {
+  name: "TSR Staff"
+}
+date {
+  year: 1993
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "689"
+  check: 1
+}
+isbn13 {
+}
+pages: 160
+system: AMAZING_ENGINE
+type: RULES_SUPPLEMENT
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

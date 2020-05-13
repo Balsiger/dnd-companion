@@ -1,0 +1,34 @@
+template {
+  name: "TSR 11711"
+  reference {
+    name: "net"
+  }
+  world: "Generic"
+  description: "setting around the D&D movie"
+}
+title: "Movie Adventure Game"
+leader: "The"
+author {
+  name: "Jeff Grubb"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1711"
+  check: 3
+}
+isbn13 {
+}
+pages: 96
+system: DND_3RD
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}

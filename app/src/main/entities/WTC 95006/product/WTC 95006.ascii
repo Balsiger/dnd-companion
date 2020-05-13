@@ -1,0 +1,49 @@
+template {
+  name: "WTC 95006"
+  world: "Eberron"
+  description: "Behind this sturdy, four-panel screen, you control your \\Place{Eberron}\n  campaign. This invaluable game aid helps you conceal notes, miniatures, and\n  other surprises from your player\'s eyes. The landscape format makes it easier\n  for you to see the game in front of your screen while maximizing the space\n  you have behind it. In addition to providing useful tables from the\n  \\Product{Player\'s Handbook} and \\Product{Dungeon Master\'s Guide}, this deluxe\n  screen provides information of particular interest to \\Place{Eberron} DMs,\n  including a lost of dragonmarked houses and guilds and an \\Place{Eberron}\n  calendar.\n\n  This product also includes a detailed poster map of the continent of\n  \\Place{Khorvaire}, the point of origin of most \\Place{Eberron}\n  campaigns. This comprehensive and richly detailed poster map includes\n  political borders, settlements, roads, lightning rail routes, and\n  never-before-seen sites for adventurers to explore.\n\n  Produced by popular demand, this DM screen is useful to Dungeon Masters\n  running campaigns in the \\Place{Eberron} setting. It includes all the tables\n  from the \\Product{D&D Deluxe Dungeon Master\'s Screen}, with modifications and\n  additional material appropriate for game elements unique to the\n  \\Place{Eberron} setting. The front showcases a beautiful widescreen-format\n  piece of \\Place{Eberron} artwork. Also included is a poster map of\n  \\Place{Khorvaire}, the primary setting of the \\Place{Eberron} campaign, with\n  borders, trade routes, and other details not printed on any previous\n  full-sized map."
+}
+title: "Deluxe Dungeon Master\'s Screen"
+subtitle: "The Eberron DM\'s Best Friend"
+author {
+  name: "Perkins, Christopher"
+}
+date {
+  year: 2005
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3850"
+  check: 1
+}
+isbn13 {
+}
+pages: 4
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: FOLDER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 1495
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 86400"

@@ -1,0 +1,41 @@
+template {
+  name: "TSR 9318"
+  synonym: "LNA3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Lankhmar"
+  description: "a web of intrigue, deceit, and theft"
+}
+title: "Prince of Lankhmar"
+date {
+  year: 1991
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "072"
+  check: 9
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

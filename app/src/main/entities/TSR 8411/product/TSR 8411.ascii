@@ -1,0 +1,57 @@
+template {
+  name: "TSR 8411"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\bold{\'The \\Item{crystal shard} was not content with an existence in a\n                    desolate mountain range...It wanted more. It wanted power.\'}\n                    \\NPC{Akar Kessel} has set in motion events that will lead to the rediscovery\n                    of the \\Item{crystal shard}, a magical device that may be powerful enough to\n                    bring about the destruction of \\Place{Ten-Towns}.\n                    Meanwhile, the barbarians are also planning to attack \\Place{Ten-Towns}, and\n                    their brutal assault on the villages seals their fate and that of\n                    \\NPC{Wulfgar}. \\NPC{Wulfgar}, a young barbarian, proves himself to be a\n                    mighty warrior among his race---one with the power to reshape this harsh\n                    region of the \\Place{Forgotten Realms}. But, even with the help of the\n                    \\Monster{dark elf} \\NPC{Drizzt} and \\NPC{Bruenor} the \\Monster{dwarf}, is he\n                    strong enough to reunite the barbarian tribes? And will the people of\n                    \\Place{Ten-Towns} put aside their petty differences in time to stave off the\n                    mysterious forces of the \\Item{crystal shard}?"
+}
+title: "Crystal Shard"
+leader: "The"
+notes: "According to the WoTC website was rereleased in January 1998"
+author {
+  name: "Salvatore, R. A."
+}
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "535"
+  check: 9
+}
+isbn13 {
+}
+pages: 333
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book One"
+series: "Icewind Dale Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

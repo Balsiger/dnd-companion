@@ -1,0 +1,84 @@
+template {
+  name: "WTC 9598972"
+  world: "Generic"
+  description: "If you want to earn the robes of a wizard, you must know the habits and habitats of the monsters in this book backward and forward. Only then will you be prepared to defend yourself on a quest of your own.\n\n\\large{You have been warned.}\n\nOver fifty creatures -- from the familiar \\Monster[giant]{giants} and \\Monster{goblins} to the utterly fantastical \\Monster{beholders} and \\Monster{behir} -- are showcased in this fully-illustrated eighty-page guide to the monstrous world around us. Discover intimate details about the habits and habitats of each magical beast, pore over maps of their lairs, and find out the best tools and tricks to overcome them."
+}
+title: "Practical Guide to Monsters"
+leader: "A"
+subtitle: "Attention Apprentices: Read this book!"
+author {
+  name: "Hess, Nina"
+}
+editor {
+  name: "Whitman, Stacy"
+}
+cover {
+  name: "Fiegenschuh, Emily"
+}
+cartographer {
+  name: "Moyer, Lee"
+}
+cartographer {
+  name: "Nitzsche, Shane"
+}
+cartographer {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art direction"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic design"
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4809"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4809"
+  check: 3
+}
+pages: 80
+system: NONE
+audience: ALL
+type: MONSTER_COMPENDIUM
+style: HARDCOVER
+producer: "Mirrorstone"
+series: "Monster Manual"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

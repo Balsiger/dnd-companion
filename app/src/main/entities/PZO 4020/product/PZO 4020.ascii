@@ -1,0 +1,44 @@
+template {
+  name: "PZO 4020"
+  world: "Generic"
+  description: "From spell research to treasure raids to summoning a deadly demon,\n  adventurers have no shortage of reasons for visiting the local wizard. But\n  the lair of a powerful arcanist often contains deadly traps, supernatural\n  guardians, and unexpected surprises that can turn your campaign crazy at a\n  moment\342\200\232\303\204\303\264s notice. Even the most potent augury can\342\200\232\303\204\303\264t predict what will happen\n  when your player characters enter the wizard\342\200\232\303\204\303\264s tower, and now this iconic\n  campaign locale explodes into life in the latest of Paizo Publishing\342\200\232\303\204\303\264s\n  GameMastery Map Packs! This line of gaming accessories provides simple and\n  elegant tools for the busy Game Master. Inside, you\342\200\232\303\204\303\264ll find 18 beautiful 5\'\' x\n  8\'\' map tiles, stunningly crafted by cartographer Corey Macourek, that can be\n  combined to form an entire Wizard\342\200\232\303\204\303\264s Tower!\n\n  \\list\n  {These cards present several different wizard\342\200\232\303\204\303\264s tower elements, including: Outer Staircase}\n  {Arcane Library}\n  {Living Quarters}\n  {Summoning Chamber}\n  {Scrying Pool}\n  {Audience Chamber}\n\n  Game Masters shouldn\342\200\232\303\204\303\264t waste their time scribbling arcane circles and\n  bookshelves every time the player characters head to the wizard\342\200\232\303\204\303\264s lair. With\n  GameMastery Map Pack: Wizard\342\200\232\303\204\303\264s Tower, you\342\200\232\303\204\303\264ll always be ready for diabolical\n  summonings or apprentice abuse!"
+  short_description: "Map tiles of a wizards\'s tower."
+}
+title: "Wizard\'s Tower"
+subtitle: "Off To See The Wizard!"
+cartographer {
+  name: "Macourek, Corey"
+}
+date {
+  year: 2009
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "181"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "181"
+  check: 7
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Map Pack"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "map tile"
+  number: 18
+}
+layout: FULL_COLOR

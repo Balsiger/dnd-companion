@@ -1,0 +1,40 @@
+template {
+  name: "TSR 3120"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "Birthright"
+  description: "the only dwarven Kingdom players can rule"
+}
+title: "Baruk-Azhik"
+author {
+  name: "Brown, Anne K."
+}
+date {
+  year: 1996
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0376"
+  check: 7
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+audience: PLAYER
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}

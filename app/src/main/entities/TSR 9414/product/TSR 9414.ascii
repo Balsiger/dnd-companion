@@ -1,0 +1,47 @@
+template {
+  name: "TSR 9414"
+  synonym: "RM2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Ravenloft"
+  description: "a mad puppeteer has set up a shop in a small town, levels 5-8"
+}
+title: "Created"
+leader: "The"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1993
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "610"
+  check: 7
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

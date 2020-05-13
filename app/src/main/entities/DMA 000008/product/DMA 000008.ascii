@@ -1,0 +1,31 @@
+template {
+  name: "DMA 000008"
+  description: "Catalog of the 1995 stock of TSR"
+}
+title: "Best in Games and Books 1995"
+leader: "The"
+date {
+  year: 1995
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: NONE
+audience: ALL
+type: CATALOG
+style: SOFT_COVER
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "shipment"
+  number: 1073741824
+}

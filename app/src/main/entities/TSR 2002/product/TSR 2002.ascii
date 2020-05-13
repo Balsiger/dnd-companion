@@ -1,0 +1,23 @@
+template {
+  name: "TSR 2002"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Original D&D"
+date {
+  year: 1974
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

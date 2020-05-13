@@ -1,0 +1,67 @@
+template {
+  name: "TSR 1045"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "An introduction board game."
+}
+title: "Classic Dungeon! Game"
+leader: "The"
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "733"
+  check: 5
+}
+isbn13 {
+}
+system: SPECIAL
+audience: ALL
+type: BOARD_GAME
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "plastic"
+  number: 6
+}
+content {
+  part: BOARD
+  description: "gameboard"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "rules"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "game cards"
+  number: 250
+}
+content {
+  part: MISC
+  description: "dice"
+  number: 1073741824
+}

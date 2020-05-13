@@ -1,0 +1,54 @@
+template {
+  name: "TSR 2601"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Planescape"
+  description: "\\emph{Welcome to the \\Place{Cage}, friend. You\'ll want to watch your back in\n                    \\Place{Sigil}---it seems every cutter here\'s got a way to peel a clueless\n                    basher, and you\'re no exception. Besides, there\'s something happening down in\n                    the \\Place{Hive} that\'s got the factions in an uproar, and word is you\'re the\n                    cutter to look into it. Barmies and bubbers have been waking up in the Dead\n                    Book, but they haven\'t been staying there. They\'ve been returning to\n                    \\Place{Sigil} with minds restored, telling tales of the \\Place{Eternal\n                    Boundary}. But the air\'s turning foul here in the \\Place{Cage}, and there\'ll\n                    be blood spilled soon if someone doesn\'t learn the dark things, and quick!}\n                    \\Product{The Eternal Boundary} is a \\Place{Planescape} adventure for a party\n                    of four to six characters of 1st to 5th levels. Players are introduced to the\n                    city of \\Place{Sigil}---the \\Place{Cage}, as some call it. Inside this\n                    crossroads to the planes, a sinister plot unfolds, leading the heroes into\n                    the most dangerous and desperate part of town---the ramshackle slum known as\n                    the \\Place{Hive}. Do your player characters have what it takes to confront\n                    the \\Place{Eternal Boundary}---and pass beyond?"
+}
+title: "Eternal Boundary"
+leader: "The"
+date {
+  year: 1994
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "843"
+  check: 6
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  description: "color"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,59 @@
+template {
+  name: "PZO 5003"
+  world: "Generic"
+  description: "The \\Monster{dragon} is dead and all of his treasures are yours for the taking! This 110-card set of masterfully illustrated full-color cards contains all the loot you need to spice up your treasure pile. Each card features original art and plenty of space for notes, allowing you to customize each treasure to your game. Each card also features space for a unique code, allowing the Game Master to keep a log of vial statistics about each item. Dividing up the dragon\'s treasure has never been this much fun."
+}
+title: "Dragon\'s Trove"
+subtitle: "Pillage The Hoard!"
+author {
+  name: "Bulmahn, Jason"
+  job: "item card and lead designer"
+}
+cover {
+  name: "Dutrait, Vincent"
+}
+illustrator {
+  name: "Dutrait, Vincent"
+}
+illustrator {
+  name: "Glenn"
+  job: "art direction"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2007
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "033"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "033"
+  check: 9
+}
+system: DND_3_5
+audience: ALL
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Paizo"
+series: "Item Cards"
+price {
+  currency: "$"
+  number: 1999
+  precision: 100
+}
+content {
+  part: CARD
+  description: "item card"
+  number: 110
+}
+layout: FULL_COLOR

@@ -1,0 +1,32 @@
+template {
+  name: "TSR 11407"
+  reference {
+    name: "net"
+  }
+  world: "Star*Drive"
+  description: "adventure around a diplomatic meeting about a starship"
+}
+title: "Murder in Drivespace"
+author {
+  name: "Richard Dakan"
+}
+date {
+  year: 1999
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1407"
+  check: 6
+}
+isbn13 {
+}
+pages: 64
+system: ALTERNITY
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}

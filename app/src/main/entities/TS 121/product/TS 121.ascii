@@ -1,0 +1,28 @@
+template {
+  name: "TS 121"
+  synonym: ""
+  description: "Skull and bones set."
+  short_description: "Skull and bones set."
+}
+title: "X-bones Marker Set"
+subtitle: "Skull and Bones"
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: PACK
+producer: "Litko"
+price {
+}
+content {
+  part: MINIATURE
+  description: "skull and bones"
+  number: 5
+}
+layout: BLACK_AND_WHITE

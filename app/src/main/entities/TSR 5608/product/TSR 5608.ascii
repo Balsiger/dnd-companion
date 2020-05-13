@@ -1,0 +1,26 @@
+template {
+  name: "TSR 5608"
+  reference {
+    name: "complete product listing"
+  }
+  description: "A \\Monster{Phoenix} and an \\Monster{Aarakocra} miniature."
+}
+title: "Phoenix & Aarakocra"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+price {
+}
+content {
+  part: MINIATURE
+  description: "figures"
+  number: 2
+}

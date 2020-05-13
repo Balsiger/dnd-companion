@@ -1,0 +1,45 @@
+template {
+  name: "WTC 17676"
+  world: "Eberron"
+  description: "Sigils of immense magical power.\n\n  Borne by scions of mighty Houses, used through the centuries to wield\n  authority and shape wonders throughout \\Place{Eberron}. But there are only\n  twelve marks.\n\n  Until now.\n\n  Matt Forbeck begins the terrifying saga of the thirteenth dragonmark...\n\n  \\large{The Mark of Death}\n\n  \\Product{Marked for Death} begins a new epic trilogy set in the world of\n  \\Place{Eberron}, Wizards of the Coast\'s newest D&D campaign setting."
+}
+title: "Marked for Death"
+subtitle: "Twelve Dragonmarks"
+author {
+  name: "Forbeck, Matt"
+}
+cover {
+  name: "Rex, Adam"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2005
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3610"
+  check: 10
+}
+isbn13 {
+}
+pages: 377
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 1"
+series: "The Lost Mark"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,24 @@
+template {
+  name: "TSR 91222"
+  reference {
+    name: "net"
+  }
+}
+title: "Adventure Dice Set"
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1222"
+  check: 7
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}

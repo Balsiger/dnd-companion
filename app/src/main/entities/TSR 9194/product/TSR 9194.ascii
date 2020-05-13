@@ -1,0 +1,33 @@
+template {
+  name: "TSR 9194"
+  synonym: "GAZ2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "land of desert winds and cool oases"
+}
+title: "Emirates of Ylaruam"
+leader: "The"
+date {
+  year: 1987
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "392"
+  check: 5
+}
+isbn13 {
+}
+system: DND_1ST
+type: CAMPAIGN_EXPANSION
+producer: "TSR"
+price {
+  currency: "$\302\254\342\200\240"
+  number: 795
+  precision: 100
+}

@@ -1,0 +1,44 @@
+template {
+  name: "pzo 4033"
+  world: "Generic"
+  description: "No one doubts the power of the gods! Deities of healing, fiendish lords of destruction, spirits of the land, and entities from beyond the stars all receive reverence in their own sanctums and sacred sites. Whether your heroes need healing or are thwarting an enemy cult, no Game Master wants to spend time drawing idols and altars. Fortunately, with Paizo Publishing\342\200\231s latest GameMastery Map Pack, you don\'t have to! This line of gaming accessories provides simple and elegant tools for the busy Game Master.\n\nInside, you\'ll find 18 captivating 5\'\' x 8\'\' map tiles that can be combined into a variety of serene sanctuaries and sinister shrines, including:\n\n\\list\n{Altar to the Old Gods}\n{Dwarven Forge}\n{Eastern Shrine}\n{Ruined Temple}\n{Sacrificial Chamber}\n{Standing Stones}\n{Sylvan Pool}\n{Urban Shrine}\n{Wayside Shrine}\n\nGame Masters shouldn\'t waste their time sketching maps every time their players need to pick up supplies. With GameMastery Map Pack: Shrines, you\'ll always be ready whenever adventurers need to make (or become) offerings to the gods!\n\nWet, dry, and permanent markers erase from the tiles!"
+  short_description: "Map tiles with shrines."
+}
+title: "Shrines"
+subtitle: "An Offering They Can\'t Refuse"
+cover {
+  name: "Engle, Jason"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+date {
+  year: 2013
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "363"
+  check: 7
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Map Pack"
+series: "GameMastery"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "map tile"
+  number: 18
+}
+layout: FULL_COLOR

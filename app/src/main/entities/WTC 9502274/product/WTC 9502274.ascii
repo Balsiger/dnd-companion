@@ -1,0 +1,43 @@
+template {
+  name: "WTC 9502274"
+  world: "Forgotten Realms"
+  description: "Philip Athans, The New York Times best-selling author, begins a new saga in\n                    the \\Place{Forgotten Realms} of a man consumed by obsession and driven by an\n                    overwhelming vision of what might be.\n                    \\large{The Wizard}\n                    Pledged to the \\Group{Red Wizards of Thay} from boyhood, he will do anything\n                    for anyone who can give him more power. In a twisted dimension outside the\n                    walls of time and space, he plots and plans.\n                    \\large{The Senator}\n                    A \\Monster{genasi}, he has fought his way up from the gutter and will never\n                    go back. Amid the tangled streets of \\Place{Innarlith}, he mixes ambition\n                    with thoughts of vengeance.\n                    \\large{The Man}\n                    A master builder, he walks the coast of \\Place{Faer\\hat{u}n}, and the waves\n                    whisper to him of a mighty work, a task worthy of his talents."
+}
+title: "Whisper of Waves"
+author {
+  name: "Athans, Philip"
+}
+cover {
+  name: "Critchlow, Carl"
+}
+cartographer {
+  name: "Bartoletti, Nick"
+}
+date {
+  year: 2005
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3837"
+  check: 4
+}
+isbn13 {
+}
+pages: 309
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "Watercourse Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,32 @@
+template {
+  name: "TS 268-BLK"
+  synonym: "Warhorse, Character Mount Marker"
+  world: "Generic"
+  description: "Markers for black warhorse mounts."
+  short_description: "Markers for black warhorse mounts."
+}
+title: "Character Mount Marker Warhorse"
+subtitle: "Markers"
+date {
+  year: 2013
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "Litko"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "warhorse mount marker"
+  number: 1
+}
+layout: FULL_COLOR

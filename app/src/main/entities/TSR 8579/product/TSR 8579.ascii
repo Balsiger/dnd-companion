@@ -1,0 +1,59 @@
+template {
+  name: "TSR 8579"
+  synonym: "WTC 86582"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  world: "Forgotten Realms"
+  description: "Is it just a myth? Or does it still stand...somewhere in the most ancient\n                    corners of \\Place{Faer\\hat{u}n}?\n                    An interpid human explorer sets out to find the truth and what starts as an\n                    archaeological expedition soon becomes a race against time as an undying\n                    avenger is determined to protect the secrets of the ancient, xenophobic elven\n                    empire of \\Place{Cormanthyr}.\n                    Lost Empires is a bold new series that uncovers the secrets of the lost,\n                    ancient \\Place{Forgotten Realms} world."
+}
+title: "Lost Library of Cormanthyr"
+leader: "The"
+subtitle: "The Lost Library of \\Place{Cormanthyr}"
+author {
+  name: "Odom, Mel"
+}
+cover {
+  name: "Pollack, Alan"
+}
+date {
+  year: 1998
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0735"
+  check: 5
+}
+isbn13 {
+}
+pages: 315
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book 1"
+series: "Lost Empires"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

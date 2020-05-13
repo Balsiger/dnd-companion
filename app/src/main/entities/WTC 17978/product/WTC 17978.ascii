@@ -1,0 +1,61 @@
+template {
+  name: "WTC 17978"
+  world: "Dragonlance"
+  description: "An all-new, fully annotated version of a classic Weis & Hickman trilogy.\n\n  This annotated version of \\Product{Time of the Twins}, \\Product{War of the\n  Twins}, and \\Product{Test of the Twins} contains extensive notes from New\n  York Times best-selling authors Margaret Weis & Tracy Hickman, as well as\n  commentary from the original members of the \\Place{Dragonlance} setting\n  conceptual team. The titles in this collection, though now almost two decades\n  old, continue to be among the most popular books in the entire publishing\n  line from Wizards of the Coast, Inc."
+}
+title: "Annotated Legends"
+leader: "The"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2992"
+  check: 8
+}
+isbn13 {
+}
+pages: 1312
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+series: "Dragonlance Legends"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}

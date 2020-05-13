@@ -1,0 +1,37 @@
+template {
+  name: "TSR 11430"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{Mages kill each other to become the \\NPC{Magister}.}\n                    The \\NPC{Magister} of \\God{Mystra} is one of the most myserious---and\n                    misunderstood---beings in the \\Place{Forgotten Realms} \\Product[TSR\n                    1085]{setting}. Some say the \\NPC{Magister} is simply the most powerful\n                    mortal mage in all of \\Place{Toril}. Perhaps, but there is something more,\n                    something unique, about being so touched by the \\God[Mystra]{Mother of All\n                    Magic}.\n                    The mages of \\Place{Faer\\hat{u}n} roll up their sleeves and craft the spells\n                    and items that they hope will empower them to win the office of the\n                    \\NPC{Magister}. A few will succeed. More will wish they\'d never taken up\n                    magic in the first place.\n                    Here at last, one can learn all the secrets, abilities, and sacred duties of\n                    the \\NPC{Magister}. Plus, discover the fate of \\NPC{Lady Noum\\acute{e}a} and\n                    the identity of her successor as \\NPC{Magister}. Also, read guidelines how a\n                    PC mage might become the \\NPC{Magister}.\n                    This book holds the history of the office, new powers, spells, magic items, a\n                    roster of select \\NPC[Magister]{Magisters} from the past, and guidelines on\n                    how to incorporate the \\NPC{Magister} into your campaign.\n                    \\emph{One \\NPC{Magister} became a god; others have hoped to.}"
+}
+title: "Secrets of the Magister"
+date {
+  year: 2000
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

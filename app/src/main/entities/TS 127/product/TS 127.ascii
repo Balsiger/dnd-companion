@@ -1,0 +1,28 @@
+template {
+  name: "TS 127"
+  synonym: ""
+  description: "Set of three torch bearer markers."
+  short_description: "Set of three torch bearer markers."
+}
+title: "Torch Bearer Marker Set"
+subtitle: "Who bears the torch?"
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: PACK
+producer: "Litko"
+price {
+}
+content {
+  part: MINIATURE
+  description: "torch bearer marker"
+  number: 3
+}
+layout: BLACK_AND_WHITE

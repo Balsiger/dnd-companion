@@ -1,0 +1,43 @@
+template {
+  name: "TSR 9308"
+  synonym: "DDREF1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "character reference sheets"
+}
+title: "Player Character Sheets"
+date {
+  year: 1991
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "283"
+  check: 7
+}
+isbn13 {
+}
+system: DND_1ST
+audience: PLAYER
+type: ACCESSORY
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

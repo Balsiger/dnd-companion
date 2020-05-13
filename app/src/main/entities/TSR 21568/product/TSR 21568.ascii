@@ -1,0 +1,91 @@
+template {
+  name: "TSR 21568"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  world: "Forgotten Realms"
+  description: "When armies of evil rise up from the seas around \\Place{Faer\\hat{u}n}, no\n                    one is safe.\n                    A young mage battles at the side of \\NPC{Khelben Arunsun} to defend the city\n                    of \\Place{Waterdeep}.\n                    A \\Monster{merman} struggles to fulfill his desperate mission to reach the\n                    \\Place{Sea of Fallen Stars}.\n                    Twelve all new stories by such \\Place{Forgotten Realms} stars as Mel Odom, Ed\n                    Greenwood, Elaine Cunningham, Troy Denning, Lynn Abbey, and Clayton Emery!."
+}
+title: "Realms of the Deep"
+author {
+  name: "Abbey, Lynn"
+}
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Archer, Peter"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Byers, Richard Lee"
+}
+author {
+  name: "Emery, Clayton"
+}
+author {
+  name: "Odom, Mel"
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Hobbs, Larry"
+}
+author {
+  name: "Reid, Thomas M."
+}
+author {
+  name: "Schend, Steven E."
+}
+author {
+  name: "Strohm, Keith Francis"
+}
+author {
+}
+editor {
+  name: "Athans, Philip"
+}
+cover {
+  name: "Maitz, Don"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+date {
+  year: 2000
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1568"
+  check: 4
+}
+isbn13 {
+}
+pages: 332
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+series: "Threat from the Sea"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

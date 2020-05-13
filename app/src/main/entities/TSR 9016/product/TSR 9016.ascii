@@ -1,0 +1,41 @@
+template {
+  name: "TSR 9016"
+  synonym: "G1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+  description: "This module contains background information, referee\'s notes, two level\n                    maps, and exploration matrix keys. It provides a complete module for play of\n                    Advanced Dungeon & Dragons, and it can be used alone or as the first of a\n                    three-part expedition adventure which also employs Dungeon Module G2\n                    (\\Product{Glacial Rift of the \\Monster{Frost Giant} \\NPC{Jarl}}) and Dungeon\n                    Module G3 (\\Product{Hall of the \\Monster{Fire Giant} King})."
+}
+title: "Steading of the Hill Giant Chief"
+date {
+  year: 1978
+}
+isbn {
+  group: "0"
+  publisher: "935696"
+  title: "08"
+  check: 3
+}
+isbn13 {
+}
+pages: 8
+system: ADND_1ST
+audience: ALL
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 450
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "separate"
+  number: 1073741824
+}

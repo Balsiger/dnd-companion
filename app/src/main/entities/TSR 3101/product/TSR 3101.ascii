@@ -1,0 +1,47 @@
+template {
+  name: "TSR 3101"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 218"
+  }
+  world: "Birthright"
+  description: "awesome creatures of the Birthright campaign"
+}
+title: "Blood Enemies: Abominations of Cerilla"
+author {
+  name: "slade"
+}
+date {
+  year: 1995
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0194"
+  check: 2
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "war"
+  number: 56
+}

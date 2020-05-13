@@ -1,0 +1,55 @@
+template {
+  name: "TSR 8641"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Forgotten Realms"
+  description: "A mixed company of paladins and mercenaries race back to\n                    \\Place{Faer\\hat{u}n} after the object of their quest is revealed as a threat\n                    to peace and order throughout the \\Place{Realms}. But beware! The evil will\n                    lead them on a chase that ends in the last place any of them expected...\n                    \\Product{Easy Betrayals} is the eigth part in a nine-book serial novel\n                    published by TSR and set in the exciting world of the \\Place{Forgotten\n                    Realms}. Don\'t miss \\Product{The Diamond} the last part of the series! Be\n                    sure to check if you missed any of the previous parts: \\Product{The\n                    Abduction}, \\Product{The Paladins}, \\Product{The Mercenaries},\n                    \\Product{Errand of Mercy}, \\Product{An Opportunity for Profit},\n                    \\Product{Conspiracy}, \\Product{Uneasy Alliances}. All available at your local\n                    bookstore."
+}
+title: "Easy Betrayals"
+author {
+  name: "Baker, Richard L. III"
+}
+cover {
+  name: "LeMay, Heather"
+}
+date {
+  year: 1998
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0871"
+  check: 8
+}
+isbn13 {
+}
+pages: 90
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Part 8"
+series: "Double Diamond Triangle Saga"
+price {
+  currency: "$ "
+  number: 199
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

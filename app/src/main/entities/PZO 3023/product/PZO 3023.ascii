@@ -1,0 +1,38 @@
+template {
+  name: "PZO 3023"
+  synonym: "Deck, Buff"
+  world: "Generic"
+  description: "Track your hero\'s most important status effects with the Pathfinder RPG \\Product{Buff Deck}! Speed up play and cut down on rulebook consultation by stacking bonuses one on top of another, displaying the effects for each with this easy-to-add format. From spells like \\Spell{bless}, \\Spell{haste}, and \\Spell{prayer} to class features like inspire courage, the 54-card Buff Deck puts all the details at your fingertips, leaving you to concentrate on smiting your enemies!"
+  short_description: "Cards for various buffs for characters."
+}
+title: "Buff Deck"
+subtitle: "54 Full-Color Cards"
+date {
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "428"
+  check: 3
+}
+pages: 54
+system: DND_3_5
+audience: ALL
+type: CARDS_TYPE
+style: SMALL_BOX
+producer: "Paizo"
+series: "GameMastery"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: CARD
+  description: "buff"
+  number: 54
+}
+layout: FULL_COLOR

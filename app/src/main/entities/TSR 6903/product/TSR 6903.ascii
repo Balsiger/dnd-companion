@@ -1,0 +1,25 @@
+template {
+  name: "TSR 6903"
+  synonym: "MU7"
+  reference {
+    name: "catalog91W"
+  }
+  world: "Generic"
+  description: "latest info on heroes and villains"
+}
+title: "Gamer\'s Handbook of the MARVEL UNIVERSE"
+date {
+  year: 1991
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+system: MARVEL_SUPER_HEROES
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1595
+  precision: 100
+}

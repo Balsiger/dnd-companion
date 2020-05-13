@@ -1,0 +1,177 @@
+template {
+  name: "WTC 39805"
+  world: "Generic"
+  description: "Dungeon Command is a head-to-head miniatures skirmish game for 2 or more players. Assemble your warband, choose your battlefield, and crush your enemy!\n\nThe Dungeon Command -- \\Product{Heart of Cormyr} Faction Pack contains a complete warband of heroic adventurers, ready to play right out of the box! You can also create your own warbands using multiple Faction Packs and challenge other players."
+  short_description: "Dungeon Command Faction Pack"
+}
+title: "Heart of Cormyr"
+subtitle: "Victory and Honor"
+author {
+  name: "Tatroe, Kevin"
+}
+author {
+  name: "Lee, Peter"
+}
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "Dupuis, Chris"
+  job: "development"
+}
+author {
+  name: "Lee, Peter"
+  job: "development"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "development"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+cover {
+  name: "Daarken"
+}
+cartographer {
+  name: "Engle, Jason"
+  job: "game board illustration"
+}
+illustrator {
+  name: "Beyit, Kerem"
+  job: "interior art"
+}
+illustrator {
+  name: "Wootten, Ben"
+  job: "interior art"
+}
+illustrator {
+  name: "Scott, Dan"
+  job: "interior art"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative director"
+}
+illustrator {
+  name: "Adelsperger, Matt"
+  job: "art director"
+}
+illustrator {
+  name: "Adelsperger, Matt"
+  job: "graphic design"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic design"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "graphic design"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic design"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D R&D senior group manager"
+}
+manager {
+  name: "Thompson, Rodney"
+  job: "D&D tabletop games manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Gutierre, Godot"
+  job: "D&D brand team"
+}
+date {
+  year: 2012
+  month: 7
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6023"
+  check: 1
+}
+pages: 16
+system: NONE
+audience: ALL
+type: MINIATURE
+style: BOX
+producer: "WTC"
+series: "Dungeon Command"
+price {
+  currency: "$"
+  number: 3999
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Rulebook"
+  number: 1
+}
+content {
+  part: MAP
+  description: "interlocking, die-cut, battlefield tiles"
+  number: 4
+}
+content {
+  part: CARD
+  description: "monster"
+  number: 12
+}
+content {
+  part: MINIATURE
+  description: "nonrandom, prepainted plastic, large"
+  number: 1
+}
+content {
+  part: MINIATURE
+  description: "nonrandom, prepainted plastic, medium"
+  number: 10
+}
+content {
+  part: MINIATURE
+  description: "nonrandom, prepainted plastic, small"
+  number: 1
+}
+layout: FULL_COLOR

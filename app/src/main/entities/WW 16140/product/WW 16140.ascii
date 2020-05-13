@@ -1,0 +1,67 @@
+template {
+  name: "WW 16140"
+  world: "Generic"
+  description: "The 3rd Edition of the world\'s most popular roleplaying game has trhilled\n  hundreds of thousands. But surely there\'s more to fantasy that the\n  traditional \\Monster{elves}, \\Monster{dwarves}, fighters, and wizards. What\n  if there were a whole new player\'s handbook, presented just like the\n  original, but with different character classes, races, skill, feats, and\n  spells?\n\n  \\large{You\'ve Got It!}\n\n  This variant player\'s handbook from 3rd Edition codesigner Monte Cook\n  features:\n\n  \\list\n  {9 new PC races, like \\Monster{giants} and the lionlike \\Monster{litorians},\n   plus \\Monster{humans}}\n  {11 new classes, such as witches, mage blades, and the unfettered;}\n  {Hundreds of skills, feats, and spells;}\n  {And variant rules for handling magic and combat}\n\n  \\bold{\'No question about it, \\Product{Monte Cook\'s Arcana Unearthed} is a\n  knockout}\n\n  \\right{---Gary Gygax}\n\n  \\bold{Monte Cook\'s Arcana Unearthed} is the new roleplaying game that you\n  already know how to play! The alternatives here, created to be compatible\n  with the 3rd Edition and Revised 3rd Edition rules under the Open Game\n  License, give you new ways to handle spellcasting, combat, and other game\n  functions while remaining true to the core game. Use this book to supplement\n  an existing game or as a complete rules system unto itself.\n\n  Malhavoc Press is game designer Monte Cook\'s game imprint devoted to\n  publishing unusual magic, monsters, and evocative elements that go beyond\n  traditional fantasy. Malhavoc Press products exhibit the mastery of the 3rd\n  Edition rules that only one of the game\'s original designers can offer."
+}
+title: "Arcana Unearthed"
+subtitle: "A Variant Player\'s Handbook"
+author {
+  name: "Cook, Monte J."
+}
+author {
+}
+editor {
+  name: "Cook, Sue Weinlein"
+}
+cover {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Atkinson, Toren \'MacBin\'"
+}
+illustrator {
+  name: "Hendee, David"
+}
+illustrator {
+  name: "Meyer, Jennifer"
+}
+illustrator {
+  name: "Shepherd, Stephen"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+typographer {
+  name: "Whitley, Peter"
+  job: "cover and interior page design"
+}
+manager {
+  name: "Ashton, Mark"
+  job: "proofreading"
+}
+date {
+  year: 2003
+}
+isbn {
+  group: "1"
+  publisher: "58846"
+  title: "065"
+  check: 7
+}
+isbn13 {
+}
+pages: 256
+system: SWORD_AND_SORCERY
+audience: ALL
+type: RULEBOOK
+style: HARDCOVER
+producer: "Malhavoc Press"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

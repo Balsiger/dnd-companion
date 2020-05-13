@@ -1,0 +1,58 @@
+template {
+  name: "WTC 9699272"
+  world: "Dragonlance"
+  description: "The world of \\Place{Krynn} is ever changing, and even the gods can be taken\n  by surprise. And if that\'s true of the gods, what chance can a mere mortal\n  have? Caught up in forces none of them could hope to face alone, a small but\n  determined band of adventurers come together in a desperate attempt to stop\n  an invasion.\n\n  \\NPC{Mina}, as enigmatic as ever, escapes imprisonment to set off on a quest\n  that will test even her considerable will. All the while, evil spreads across\n  the land, gaining ground with each new day. With so much at stake, with the\n  very soul of \\Place{Krynn} on the line, champions must be found even in the\n  darkest places.\n\n  A thrilling new novel by international best-selling author Margaret Weis,\n  co-creator of the world of \\Place{Dragonlance}."
+}
+title: "Amber and Iron"
+author {
+  name: "Weis, Margaret"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2006
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3796"
+  check: 3
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume 2"
+series: "The Dark Disciple"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

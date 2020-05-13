@@ -1,0 +1,94 @@
+template {
+  name: "Dungeon 44"
+  world: "Generic"
+  description: "This is issue 44 of the dungeon magazine."
+}
+title: "Dungeon 44"
+author {
+  name: "James, Ted"
+}
+author {
+  name: "Zuvich, Thomas"
+}
+author {
+  name: "Smith, Stephen"
+}
+author {
+  name: "Maxwell, Randy"
+}
+author {
+  name: "Ide, Timothy"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "assistant editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Burdick, Scott"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Ide, Timothy"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1993
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "VIII 2"
+number: "44"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

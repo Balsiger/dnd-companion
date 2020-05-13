@@ -1,0 +1,46 @@
+template {
+  name: "TSR 9122"
+  synonym: "H1"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "a combination of role-playing and miniatures campaigning"
+}
+title: "Bloodstone Pass"
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Dobson, Michael"
+}
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+pages: 56
+system: ADND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1225
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: COUNTER
+  description: "die-cut"
+  number: 102
+}
+content {
+  part: SHEET
+  description: "cardboard fold-up buildings and characters"
+  number: 12
+}

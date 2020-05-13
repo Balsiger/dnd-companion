@@ -1,0 +1,174 @@
+template {
+  name: "Dragon 223"
+  world: "Generic"
+}
+title: "Dragon 223"
+author {
+  name: "McComb, Colin"
+}
+author {
+  name: "Lett, Rob"
+}
+author {
+  name: "Haskett, Wayne A."
+}
+author {
+  name: "Detwiler, Gregory W."
+}
+author {
+  name: "Anthony, Mark"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Bunnell, John C."
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Dow, Tom"
+}
+author {
+  name: "Baichtal, John W."
+}
+author {
+  name: "Smith, Lester"
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Douglas, Scott"
+}
+author {
+  name: "Ashley, Belinda G."
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Weinlein, Sue"
+}
+author {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Watters, Pierce B."
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bryant, Anthony J."
+  job: "editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "Parker, Roy"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Smith, Larry"
+}
+illustrator {
+  name: "Adams, Chris"
+}
+illustrator {
+  name: "Scott, Michael"
+}
+illustrator {
+  name: "Kohl, Charles"
+  job: "photography"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Lessl, Bob"
+}
+illustrator {
+  name: "Pilsbury, Joe"
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "Hrenchuk, Bill"
+}
+illustrator {
+  name: "Galen, Akin"
+}
+illustrator {
+  name: "Cavalier, Bill"
+}
+illustrator {
+  name: "Manui, Barbara"
+}
+illustrator {
+  name: "Adams, Chris"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1995
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XX 6"
+number: "223"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

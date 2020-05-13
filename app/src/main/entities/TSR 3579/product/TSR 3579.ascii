@@ -1,0 +1,39 @@
+template {
+  name: "TSR 3579"
+  synonym: "22CR5"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Buck Rogers"
+  description: "the asteroid belt, Bottles, and the trans-Saturnian asteroid, Chiron"
+}
+title: "Belt"
+leader: "The"
+date {
+  year: 1991
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "096"
+  check: 6
+}
+isbn13 {
+}
+system: XXVC
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

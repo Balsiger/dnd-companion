@@ -1,0 +1,48 @@
+template {
+  name: "pzo 4045"
+  category: "map"
+  synonym: "Pathfinder Map Pack: Evil Ruins"
+  world: "Generic"
+  description: "Dark deeds and foul sacrifices once led to the destruction of this den of evil, but the powers of darkness refuse to be defeated so easily! Whether your heroes are exploring strange ruins or seeking to put an end to an undying foe, no Game Master wants to spend time drawing crumbling walls and piles of bones. Fortunately, with Paizo Publishing\342\200\231s latest Pathfinder Map Pack, you don\342\200\231t have to! This line of gaming accessories provides simple and elegant tools for the busy Game Master. Inside, you\342\200\231ll find 18 captivating 5\" \303\227 8\" map tiles that can be combined into a variety of ominous ruins, including:\n\n\\list{Blasphemous Altar}\n{Bone Pile}\n{Mass Grave}\n{Shattered Walls}\n{Unholy Idol}\n{Webbed Rubble}\n\nGame Masters shouldn\342\200\231t waste their time sketching maps every time characters enter the dark places of the world. With Pathfinder Map Pack: Evil Ruins, you\342\200\231ll always be ready whenever adventurers seek to stamp out ancient evil!"
+  short_description: "18 Full color map tiles."
+}
+title: "Evil Ruins"
+subtitle: "No Rest for the Wicked"
+illustrator {
+  name: "Engle, Jason"
+}
+date {
+  year: 2014
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "556"
+  check: 3
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Paizo"
+series: "Map Pack"
+series: "Pathfinder Map Pack"
+price {
+  currency: "$1"
+  number: 399
+  precision: 100
+}
+content {
+  part: BOX
+  description: "packaging"
+  number: 1
+}
+content {
+  part: SCREEN
+  description: "map"
+  number: 18
+}
+layout: FULL_COLOR

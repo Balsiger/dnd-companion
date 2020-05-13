@@ -1,0 +1,34 @@
+template {
+  name: "TSR 1037"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Dawn of the Emperors"
+  description: "Describes Thyatis and Alphatia"
+}
+title: "Dawn of the Emperors: Thyatis and Alphatia"
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "736"
+  check: 10
+}
+isbn13 {
+}
+system: DND_1ST
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}

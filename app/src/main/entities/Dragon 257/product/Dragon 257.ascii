@@ -1,0 +1,170 @@
+template {
+  name: "Dragon 257"
+  world: "Generic"
+}
+title: "Dragon 257"
+author {
+  name: "Winninger, Ray"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Malcomson, Ian"
+}
+author {
+  name: "Hawvermale, Lance"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Bova, Ben"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Eckelberry, David"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Bishop, Jim"
+}
+author {
+  name: "Wiker, J.D."
+}
+author {
+  name: "Kenson, Stephen"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistand editor"
+}
+editor {
+  name: "Carlson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photos"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Activision Inc."
+}
+illustrator {
+  name: "Delgado Jr., Peter"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Pillsbury, Joe"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+illustrator {
+  name: "Ricker, Scott"
+  job: "designer"
+}
+illustrator {
+  name: "Whitley, Peter"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "advertising traffifc manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Blaskowsky, Barbara"
+  job: "circulation manager"
+}
+date {
+  year: 1999
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXIII 10"
+number: "257"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

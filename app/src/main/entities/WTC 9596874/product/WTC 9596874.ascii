@@ -1,0 +1,58 @@
+template {
+  name: "WTC 9596874"
+  world: "Forgotten Realms"
+  description: "Shadows crawl west to consume everything in their path, including a nation of merchants.\n                    \\emph{The \\Monster{archdevil} cocked his head with curiosity and the unholy storm of dark energy gathering about him subsided to a simmer.\n                    \'Enough, father,\' \\NPC{PMagadon} said.}\n                    In the midst of a war that will change the face of \\Place{Faer\\hat{u}n}, the eyes of the world will seek out light in the darkest of shadows.}"
+}
+title: "Shadowstorm"
+subtitle: "Make the Book Whole. The Storm will Follow."
+author {
+  name: "Kemp, Paul S."
+}
+editor {
+}
+cover {
+  name: "Swanland, Raymond"
+}
+cartographer {
+  name: "Gamble, Todd Alan"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4304"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4304"
+  check: 3
+}
+pages: 345
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "The Twilight War"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

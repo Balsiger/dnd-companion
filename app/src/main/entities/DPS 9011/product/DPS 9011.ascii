@@ -1,0 +1,34 @@
+template {
+  name: "DPS 9011"
+  description: "\\emph{Your mini\'s deserve someplace cool to play!}\n                    \\produyct{Dungeon Life: Bendy Dungeon Walls} offers an excellent solution to the age-old problem of the 3D dungeon. Durable interlocking wall segments quickly snap together to form \'chains\' of dungeon walls. Simple place a length of walls onto the game mat, and \'bend\' it into the shape of your dungeon room. Snap it apart to add freestanding doors, and just like that, you\'re done! It\'s easy, convenient, adds a cool factor of 3D to your game, and most important... it\'s fast!\n                    Build just the dungeon areas you need... as you need them. During play! No need for the gamemaster to spend hours of extra prep time setting up the dungeon, and the players don\'t get the peek ahead. It\'s easy to recycle, too... just pick up the pieces of the rooms your party are done with, and use them to build the next room! \\bold{The adventure never ends with \\Product{Bendy Dungeon Walls}... It\'s a Dungeon Life!}\n                    \\list\n                    {Durable Plastic}\n                    {Fully painted and ready for play!}\n                    {Snap together wall - Then place \'em on the map, and bend to any shape you need!}\n                    {Build the Dungeon while you play!}\n                    {Works great with an 1\'\' game mat!}"
+}
+title: "Bendy Dungeon Walls"
+subtitle: "3D Dungeon Terrain has just gotten Fast, Fun and Flexible!!!"
+date {
+  year: 2007
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: SMALL_BOX
+producer: "Dark Platypus Studio"
+price {
+  currency: "$"
+  number: 2499
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "wall piece"
+  number: 50
+}
+content {
+  part: MINIATURE
+  description: "door"
+  number: 5
+}
+layout: FULL_COLOR

@@ -1,0 +1,25 @@
+template {
+  name: "TSR 6909"
+  synonym: "MU8"
+  reference {
+    name: "catalog92"
+  }
+  world: "Generic"
+  description: "details of favorite characters"
+}
+title: "Gamer\'s Handbook of the Marvel Universe"
+date {
+  year: 1992
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+system: MARVEL_SUPER_HEROES
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1595
+  precision: 100
+}

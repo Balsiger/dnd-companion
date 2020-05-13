@@ -1,0 +1,42 @@
+template {
+  name: "TSR 8255"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 228"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "None"
+  description: "sequel to F.R.E.E.Lancers"
+}
+title: "F.R.E.E.Fall"
+author {
+  name: "Mel Odom"
+}
+date {
+  year: 1996
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0493"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

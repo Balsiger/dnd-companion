@@ -1,0 +1,46 @@
+template {
+  name: "WTC 9555374"
+  world: "Forgotten Realms"
+  description: "\\emph{\\NPC{Kaanyr Vhok}\'s ears popped again, and the whole universe turned upside down.}\n                    The \\Monster{half-demon} master of the \\Group{Scoured Legion} still stings from his defeat in \\Place{Menzoberranzan}, and he\'s turned that anger on the human city of \\Place{Sundabar}, and onward into the \\Place{Plane of Fire}.\n                    \\emph{\\NPC{Aliisza}\'s head swam. She could remain alive, so long as she was a good girl. But it seemed too easy, too simple. The \\Monster{alu-fiend} knew there was a catch.}\n                    She\'s been consort, spy, and soldier, all in support of \\NPC{Kaanyr Vhok}, but when he sends her on a mission she only thinks the understands, \\NPC{Aliisza} finds a secret inside herself, and the unlikeliest allies a \\Monster{demon} could possibly imagine.\n                    Delve into the endless expanse of the Forgotten Realms multiverse in an epic adventure across the planes of existence!"
+}
+title: "Gossamer Plain"
+leader: "The"
+author {
+  name: "Reid, Thomas M."
+}
+cover {
+  name: "Nentrup, Jeff"
+}
+date {
+  year: 2007
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4024"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4024"
+}
+pages: 308
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "The Empyrean Odyssey"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

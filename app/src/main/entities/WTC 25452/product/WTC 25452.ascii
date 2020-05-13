@@ -1,0 +1,53 @@
+template {
+  name: "WTC 25452"
+  synonym: ""
+  world: "Eberron"
+  description: "\\Place{Darguun}. A nation forged out of the fires of war. Brought together under the wisdom of \\NPC{Lhesh Haruuc}, now bound by the charisma of \\NPC{Lhesh Tariic}.\n\nBut \\NPC{Lhesh Tariic} is bound by the powers of the Emperors of \\Place{Dhakaan}, manifest in the influential artifact, the \\Item{Rod of Kings}. With the dominance of the rod in hand, \\NPC{Tariic} plans to lead his fledgling kingdom into battle and gain more land, more glory, more power --- whatever the cost.\n\nBut the Empire of \\Place{Dhakaan} has left behind one more artifact, a force to bring doom to the \\Monster{goblin} king... if only the heroes of \\Place{Darguun} can find it."
+  short_description: "Legacy of Dhakaan, Book 3"
+}
+title: "Tyranny of Ghosts"
+leader: "The"
+subtitle: "The Rod of Kings has Spoken."
+author {
+  name: "Bassingthwaite, Don"
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2010
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5506"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5506"
+}
+pages: 309
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "3"
+series: "Legacy of Dhakaan"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

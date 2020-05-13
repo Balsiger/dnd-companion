@@ -1,0 +1,150 @@
+template {
+  name: "Dragon 297"
+  world: "Generic"
+  description: "Issue 297 of the magazine. Epic Adventures issue."
+}
+title: "Dragon 297"
+author {
+  name: "Broadhurst, Creighton"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Kemp, Paul S."
+}
+author {
+  name: "McDermott, Will"
+}
+author {
+  name: "Selinker, Mike"
+}
+author {
+  name: "Stout, Travis"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assistant editor"
+}
+cover {
+  name: "Staples, Greg"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Calero, Dennis"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Garcia, Steve"
+}
+illustrator {
+  name: "Harris, Todd"
+}
+illustrator {
+  name: "Lukacs, Chuch"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Staples, Greg"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2002
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 2"
+number: "297"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "battle mat"
+  number: 1073741824
+}

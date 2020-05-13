@@ -1,0 +1,55 @@
+template {
+  name: "TSR 8639"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "Forgotten Realms"
+  description: "As the search continues in the \\Place{Utter East} for the kidnapped bride of\n                    \\Place{Waterdeep}, the forces of the \\Class{paladins} and mercenaries\n                    converge. Now, for the first time, the dark secret behind the abduction is\n                    revealed, and the searchers realize their quest is only half begun.\n                    \\Product{Conspiracy} is the sixth part in a nine-book serial novel published\n                    by TSR and set in the exciting world of the \\Place{Forgotten Realms}. Be sure\n                    to look for the earlier five parts, (listed inside). Continue the adventure\n                    with Parts 7, \\Product{Uneasy Alliances}; 9, \\Product{Easy Betrayals} and 9,\n                    \\Product{The Diamond} at your local bookstore."
+}
+title: "Conspiracy"
+author {
+  name: "King, Robert J."
+}
+cover {
+  name: "LeMay, Heather"
+}
+date {
+  year: 1998
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0869"
+  check: 6
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Part 6"
+series: "Double Diamond Triangle Saga"
+price {
+  currency: "$ "
+  number: 299
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

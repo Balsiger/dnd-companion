@@ -1,0 +1,91 @@
+template {
+  name: "Polyhedron 121"
+  world: "Generic"
+  description: "Issue 121 of Polyhedron."
+}
+title: "Polyhedron 121"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Wellson Clark"
+}
+author {
+  name: "Roger E. Moore"
+}
+author {
+  name: "Fred Faber"
+}
+author {
+  name: "Hesperin, Clio"
+}
+author {
+  name: "Jacinth Moonspring"
+}
+author {
+  name: "Scott Douglas"
+}
+cover {
+  name: "Phillip Robb"
+}
+manager {
+  name: "TSR, Inc."
+  job: "valcano god"
+}
+manager {
+  name: "Scott Douglas"
+  job: "big chief"
+}
+manager {
+  name: "Robert Wiese"
+  job: "hunter"
+}
+manager {
+  name: "Conant, Dave"
+  job: "shaman"
+}
+manager {
+  name: "Terry Craig"
+  job: "shaman"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "artisan"
+}
+manager {
+  name: "Lokotz, Angelika"
+  job: "artisan"
+}
+manager {
+  name: "Judy Mueller"
+  job: "drummer"
+}
+manager {
+  name: "Hoeke, Dave"
+  job: "intertribe envoy"
+}
+manager {
+  name: "Jeff Quick"
+  job: "garuda bait"
+}
+date {
+  year: 1996
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "16"
+number: "6"
+series: "Polyhedron"
+price {
+}

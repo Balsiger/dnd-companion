@@ -1,0 +1,35 @@
+template {
+  name: "WTC 96705"
+  world: "None"
+  description: "When \\NPC{Bella DeLuca} gets a starring role in the school production of A\n                    Midsummer Night\'s Dream, it\'s truly a dream come true. Yet soon \\NPC{Bella}\'s\n                    dream turns to a nightmare. As a fairy, \\NPC{Bella} will have to fly above\n                    the audience, attached to a cable. But \\NPC{Bella}\'s afraid of heights, a\n                    fact she hasn\'t revealed to anyone, not even her best friend. Will the\n                    mystery message help \\NPC{Bella} overcome her fear before she soars across\n                    the stage?"
+}
+title: "Bright Lights for Bella"
+subtitle: "Fess up! Tell a friend your secret fear. Would you dare?"
+author {
+  name: "Perez, Lana"
+}
+date {
+  year: 2005
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3746"
+  check: 7
+}
+isbn13 {
+}
+pages: 144
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 3"
+series: "Star Sisterz"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

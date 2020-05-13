@@ -1,0 +1,32 @@
+template {
+  name: "TSR 11328"
+  reference {
+    name: "net"
+  }
+  world: "Star*Drive"
+  description: "an alternity adventure on the planet of Lison"
+}
+title: "Planet of Darkness"
+author {
+  name: "Perkins, Christopher"
+}
+date {
+  year: 1999
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1328"
+  check: 2
+}
+isbn13 {
+}
+pages: 64
+system: ALTERNITY
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}

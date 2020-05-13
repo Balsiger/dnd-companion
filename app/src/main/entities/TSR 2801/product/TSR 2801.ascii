@@ -1,0 +1,44 @@
+template {
+  name: "TSR 2801"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  world: "Generic"
+  description: "DM rules for the alternity game"
+}
+title: "Gamemaster Guide"
+author {
+  name: "Richard Baker"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 256
+system: ALTERNITY
+type: RULEBOOK
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}

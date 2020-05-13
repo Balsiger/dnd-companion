@@ -1,0 +1,26 @@
+template {
+  name: "TSR 2013C"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+}
+title: "Legends and Lore"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

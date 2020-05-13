@@ -1,0 +1,24 @@
+template {
+  name: "TSR 8201-XX"
+  reference {
+    name: "catalog96"
+  }
+  description: "1997 issues of Dungeon magazine (number of 2nd month added to TSR number)"
+}
+title: "Dungeon Magazine \'97"
+date {
+  year: 1997
+}
+isbn {
+}
+isbn13 {
+}
+type: MAGAZINE
+style: BOOKLET
+number: "1997"
+series: "Dungeon"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

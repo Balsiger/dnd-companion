@@ -1,0 +1,71 @@
+template {
+  name: "Polyhedron 127"
+  world: "Generic"
+  description: "Issue 127 of Polyhedron."
+}
+title: "Polyhedron 127"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Steven Brown"
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Robert Wiese"
+}
+author {
+  name: "Shaun Horner"
+}
+author {
+  name: "Miranda Horner"
+}
+author {
+  name: "Monte Cook"
+}
+author {
+  name: "Roger E. Moore"
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "Mother Nature"
+}
+manager {
+  name: "Lisa Stevens"
+  job: "Heat Miser"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Snow Miser"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "Jingle & Jangle"
+}
+manager {
+  name: "Paul Alan Timm"
+  job: "Jingle & Jangle"
+}
+date {
+  year: 1997
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "17"
+number: "2"
+series: "Polyhedron"
+price {
+}

@@ -1,0 +1,179 @@
+template {
+  name: "WTC 2164974"
+  world: "Generic"
+  description: "This lavishly illustrated book gives roleplaying game fans a unique, behind-the-curtain glimpse into the making of the 4th Edition rules of the Dungeons & Dragons Roleplaying Game.\n                    Through words and images, it explores the ecology and evolution of the 4th Edition monsters, as well as the exciting new cosmology in which they live. This book features essays and insights from the game\'s designers, developers, and editors."
+  short_description: "A glimpse into 4th edition worlds and monsters."
+}
+title: "Worlds and Monsters"
+subtitle: "The Making of D&D 4th Edition"
+author {
+  name: "Baker, Richard"
+}
+author {
+  name: "Bonner, Logan"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Kestrel, Gewndolyn F.M."
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Radney-MacFarland, Stephan"
+}
+author {
+  name: "Schubert, Stephen"
+}
+author {
+  name: "Sims, Chris"
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Mohan, Kim"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+editor {
+  name: "Clarke Wilkes, Jennifer"
+}
+cover {
+  name: "Mimura, Raven"
+}
+cartographer {
+}
+illustrator {
+  name: "Alexander, Rob"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Burdett, Christopher"
+}
+illustrator {
+  name: "Gillespie, Adam"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Overbay, Shari"
+  job: "production manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4802"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4802"
+  check: 4
+}
+pages: 96
+system: DND_4
+audience: ALL
+type: SPECIAL_BOOK
+style: SOFT_COVER
+number: "2"
+series: "Wizards Presents"
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

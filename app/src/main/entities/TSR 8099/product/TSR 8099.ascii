@@ -1,0 +1,36 @@
+template {
+  name: "TSR 8099"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 221"
+  }
+  world: "Greyhawk"
+}
+title: "Bigby\'s Curse"
+author {
+  name: "Sargent, Carl"
+}
+date {
+  year: 1995
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 192
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Ten"
+series: "New Series"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

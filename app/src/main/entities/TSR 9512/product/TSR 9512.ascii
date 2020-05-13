@@ -1,0 +1,59 @@
+template {
+  name: "TSR 9512"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Generic"
+  description: "\\emph{Centuries ago, a magical plaque swept across the island of\n                    \\Place{Jakandor} and struck down the majestic \\Group{Charonti}\n                    civilization. A Golde Age of learning, art, and magic was lost in a period of\n                    days as the magically based culture that the wise and gentle \\Group{Charonti}\n                    people had developed collapsed around them.}\n                    The few \\Group{Charonti} who survived learned to adapt to the new world; the\n                    wizards mastered necromantic arts that allowed the fallen victims of the\n                    plague to continue to serve the new \\Group{Charonti} culture as manual labor\n                    force. After a period of vicious civil war, the nation has now united under a\n                    fair and benevolent queen. The \\Group{Charonti} people seek to regain their\n                    lost magic and their lost empire---but as they explore the island seeking\n                    ancient cities that have been swallowed by the wilderness, they find that\n                    their ancestral home has been invaded.\n                    In this, the second of the three-part \\Product{Jakandor} series of products,\n                    the history, culture, politics, religion, cities, attitudes, and magic of the\n                    \\Group{Charonti} people---a nation of wizards---is fully detailed for the\n                    first time. Included in this package is all the information needed to run\n                    \\Group{Charonti} PCs in a full-fledged \\Place{Jakandor} campaign, including a\n                    color map of \\Place{Jakandor}. The \\Group{Charonti}\'s unique magic system is\n                    also detailed with new kits and new spells for \\Group{Charonti} PC\n                    wizards."
+}
+title: "Jakandor: Isle of Destiny"
+date {
+  year: 1998
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1245"
+  check: 6
+}
+isbn13 {
+}
+pages: 144
+system: ADND_REVISED
+type: RULEBOOK
+style: SOFT_COVER
+producer: "TSR"
+number: "2"
+series: "Jakandor Odyssey Trilogy"
+price {
+  currency: "$"
+  number: 2195
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "DM\'s lorebook"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

@@ -1,0 +1,26 @@
+template {
+  name: "TSR 5612"
+  reference {
+    name: "complete product listing"
+  }
+  description: "A \\Monster{Rust Monster} and a \\Monster{Rakshasa} miniature."
+}
+title: "Rust Monster & Rakshasa"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+price {
+}
+content {
+  part: MINIATURE
+  description: "figures"
+  number: 2
+}

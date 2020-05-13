@@ -1,0 +1,42 @@
+template {
+  name: "WTC 9553674"
+  world: "Eberron"
+  description: "\\NPC{Diran} was once one of the most feared assassins in the land. But he\n  has turned his back on murder, seeking the life of a wandering priest. But in\n  a rough port town on the edge of the world, his past is about to catch up on\n  him.\n\n  When raiders hit the town, capturing \\NPC{Diran}\'s former lover, he must risk\n  everything to save her. And he\'s running out of time---for these are not\n  ordinary pirates bent on plunder, but minions of \\NPC{Erdas Cai}, a warlord\n  and servant of the Blood of Vol."
+}
+title: "Thieves of Blood"
+subtitle: "One Man Searching for Peace in a Land that Knows Only Blood"
+author {
+  name: "Waggoner, Tim"
+}
+cover {
+  name: "Swandland, Raymond"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2006
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 342
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 1"
+series: "Blade of Flame"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

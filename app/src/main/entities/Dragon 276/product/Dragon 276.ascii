@@ -1,0 +1,185 @@
+template {
+  name: "Dragon 276"
+  world: "Generic"
+  description: "Issue 276 of the magazine. The main theme is mystery and suspense."
+}
+title: "Dragon 276"
+author {
+  name: "Gary Gygax"
+}
+author {
+  name: "Ryan, Michael, G."
+}
+author {
+  name: "Ernest, James"
+}
+author {
+  name: "Miller, Andy"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Perrin, Don"
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Winninger, Ray"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Haddock, Eric"
+}
+editor {
+  name: "Matthew Sernett"
+}
+cover {
+  name: "Cirtchlow, Carl"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Miracola, Jeff"
+}
+illustrator {
+  name: "Riche, Darrell"
+}
+illustrator {
+  name: "Wood, Ashley"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Snoddy, Brian"
+}
+illustrator {
+  name: "Mosely, Tony"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photos"
+}
+illustrator {
+  name: "Baker, Gregory L."
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+manager {
+  name: "Johnny Wilson"
+  job: "group publisher"
+}
+manager {
+  name: "Wendy Noritake"
+  job: "publisher"
+}
+manager {
+  name: "Peter Whitley"
+  job: "art director"
+}
+manager {
+  name: "Travers W. Dow"
+  job: "graphic designer"
+}
+manager {
+  name: "Scott Ricker"
+  job: "graphic designer"
+}
+manager {
+  name: "Kyle Stanley Hunter"
+  job: "graphic designer"
+}
+manager {
+  name: "Nick Isaac"
+  job: "additional illustrator"
+}
+manager {
+  name: "Barion, Barbara"
+  job: "additional illustrator"
+}
+manager {
+  name: "Pierce Watters"
+  job: "circulation director"
+}
+manager {
+  name: "Bob Henning"
+  job: "advertising sales director"
+}
+manager {
+  name: "John Dunn"
+  job: "production director"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "assistant production manager"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Chung, Alice"
+  job: "advertising intern"
+}
+date {
+  year: 2000
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXV 5"
+number: "276"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

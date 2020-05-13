@@ -1,0 +1,48 @@
+template {
+  name: "WTC 9544174"
+  world: "Forgotten Realms"
+  description: "\\NPC{Vell} was content to be a mere warrior in the \\Group{Thunderbeast}\n                    tribe, staying behind on the hunt to guard the camp.\n                    But then something alien awakened deep within him, the spirit of a behemoth\n                    that he could not control. With it came attacks from the sky, visitors from\n                    far lands, and a mysterious command from their ancestral totem: Find the\n                    living. And this time, no one was going to let him just stay behind."
+}
+title: "Son of Thunder"
+subtitle: "It was the best thing that ever happened to him. It was his god\'s blessing. It was hell."
+author {
+  name: "Leeder, Murray J.D."
+}
+cover {
+  name: "Swanland, Raymond"
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2006
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3960"
+  check: 5
+}
+isbn13 {
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "The Fighters"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 2
+}
+layout: BLACK_AND_WHITE

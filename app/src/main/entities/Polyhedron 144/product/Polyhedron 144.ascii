@@ -1,0 +1,93 @@
+template {
+  name: "Polyhedron 144"
+  world: "Generic"
+  description: "Issue 144 of Polyhedron. This is the first global, color issue."
+}
+title: "Polyhedron 144"
+author {
+  name: "Richard Baker"
+}
+author {
+  name: "Jum Butler"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Mark H. Waldron"
+}
+author {
+  name: "Gregory Detwiler"
+}
+author {
+  name: "Matthew Hancock"
+}
+author {
+  name: "Geoff Skellams"
+}
+author {
+  name: "Keith Hoffman"
+}
+author {
+  name: "Wes Nicholson"
+}
+author {
+  name: "Tom Ko"
+}
+author {
+  name: "van Dam, Ann"
+}
+author {
+  name: "Ian Richards"
+}
+author {
+  name: "Simon Taylor"
+}
+author {
+  name: "Tom Harrison"
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "Gibson, Ed"
+}
+author {
+  name: "Sean Connor"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Matt Wilson"
+}
+illustrator {
+  name: "Vince Locke"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Ted Beargeon"
+}
+illustrator {
+  name: "Michael Kaluta"
+}
+date {
+  year: 2000
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "20"
+number: "5"
+series: "Polyhedron"
+price {
+}

@@ -1,0 +1,60 @@
+template {
+  name: "TSR 3125"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Birthright"
+  description: "collection of more than a dozen adventures for any region and levels"
+}
+title: "Legends of the Hero-Kings"
+author {
+  name: "Stark, Ed"
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0419"
+  check: 4
+}
+isbn13 {
+}
+pages: 160
+system: ADND_REVISED
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "looseleaf handouts"
+  number: 6
+}
+content {
+  part: CARD
+  description: "war"
+  number: 110
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

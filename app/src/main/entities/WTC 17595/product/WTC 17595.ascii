@@ -1,0 +1,35 @@
+template {
+  name: "WTC 17595"
+  world: "None"
+  description: "\\NPC{Naseru}, known as \'The Anvil\', will stop at nothing to sit upon the\n                    Throne of \\Place{Rokugan}. When dark forces rise in the \\Place{City of\n                    Night}, he must act swiftly. To save his beloved \\Place{Empire},\n                    \\Product{Naseru} must learn to wield the most unlikely weapon of all\n                    --- justice."
+}
+title: "Wind of Justice"
+subtitle: "Darkness Grows in the Empire..."
+author {
+  name: "Wulf, Rich"
+}
+date {
+  year: 2003
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3073"
+  check: 10
+}
+isbn13 {
+}
+pages: 288
+system: LEGEND_OF_THE_FIVE_RINGS
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Third Scroll"
+series: "The Four Winds Saga"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

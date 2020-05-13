@@ -1,0 +1,44 @@
+template {
+  name: "GF9 11201"
+}
+title: "Wall of Fire"
+subtitle: "Game Accessories Pack #10"
+author {
+}
+editor {
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+system: D20
+type: MINIATURE
+style: PACK
+producer: "Gale Force Nine"
+number: "10"
+series: "Game Accessories Pack"
+price {
+  currency: "$"
+  number: 989
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "Wall of Fire"
+  number: 2
+}
+layout: FULL_COLOR

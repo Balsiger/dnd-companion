@@ -1,0 +1,57 @@
+template {
+  name: "TSR 2606"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 211"
+  }
+  world: "Planescape"
+  description: "\\large{A barroom brawl? No big deal? Except when it starts on the\n                    abyss---and the brawlers are a \\Monster{deva} and a \\Monster{bebilith}!}\n                    The \\Monster{deva}: a celestial champion who serves the cause of ultimate\n                    Good.\n                    The \\Monster{bebilith}: a nightmarish monster whose every deed reeks of\n                    ultimate Evil.\n                    Two eternal enemies locked in a bizarre struggle for the ultimate prize.\n                    What terrible secret connects these two beings? And what does it all have to\n                    do with the legendary deva spark? Only a group of brave cutters can get to\n                    the dark of this peel, and they\'d better hurry...because time is running\n                    out!\n                    \\Product{The Deva Spark} is a \\Product{Planescape} adventure for a party of\n                    four to six characters of 5th to 9th levels. From the blasted pits of the\n                    \\Place{Abyss} to the peaceful forests of \\Place{Elysium}, the heroes track a\n                    barmy \\Monster{bebilith} who holds the key to saving the life of a dying\n                    deva. Can your characters handle the fire of the deva spark?"
+}
+title: "Deva Spark"
+leader: "The"
+date {
+  year: 1994
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "916"
+  check: 5
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: FOLDER
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  description: "DM"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "separate cover"
+  number: 1073741824
+}

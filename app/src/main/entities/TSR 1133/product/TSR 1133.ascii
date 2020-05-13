@@ -1,0 +1,84 @@
+template {
+  name: "TSR 1133"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+  description: "Reference guide for the card game."
+}
+title: "Spellfire Reference Guide, Volume One"
+author {
+  name: "Time Beach"
+}
+author {
+  name: "Nesmith, Bruce"
+}
+date {
+  year: 1995
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0304"
+  check: 10
+}
+isbn13 {
+}
+pages: 384
+system: SPELLFIRE
+audience: ALL
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: CD
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  number: 3
+}
+content {
+  part: MINIATURE
+  description: "plastic"
+  number: 6
+}
+content {
+  part: CARD
+  description: "hero"
+  number: 6
+}
+content {
+  part: CARD
+  description: "player character sheet"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "town map"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "dungeon"
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  description: "DM"
+  number: 1073741824
+}
+content {
+  part: DICE
+  number: 7
+}

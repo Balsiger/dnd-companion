@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9051"
+  synonym: "X2"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Castle Amber"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

@@ -1,0 +1,185 @@
+template {
+  name: "Dragon 229"
+  world: "Generic"
+}
+title: "Dragon 229"
+author {
+  name: "Collier, James R."
+}
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Cadenhead, Rogers"
+}
+author {
+  name: "Rice, Ed"
+}
+author {
+  name: "Selinker, Michael"
+}
+author {
+  name: "Perry, Chris"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Mielecki, Jeanine N."
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Bunnell, John C."
+}
+author {
+  name: "Brown, Lloyd III"
+}
+author {
+  name: "Byler, Christopher"
+}
+author {
+  name: "Wise, David"
+}
+author {
+  name: "Strohm, Keith"
+}
+author {
+  name: "Douglas, Scott"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Varney, Allen"
+}
+author {
+  name: "Dillinger, Barry A. A."
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bryant, Anthony J."
+  job: "editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "associate assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "Frazier, Dan"
+}
+illustrator {
+  name: "Horne, David"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Lessl, Robert"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+illustrator {
+  name: "Fields, Fred"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Wald, Christina"
+}
+illustrator {
+  name: "Smith, Larry"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Steamy"
+}
+illustrator {
+  name: "Haas, Jeff"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Dorney, Mark"
+}
+illustrator {
+  name: "Hrenchuk, Bill"
+}
+illustrator {
+  name: "Fuchs, Jerry"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1996
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XX 12"
+number: "229"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

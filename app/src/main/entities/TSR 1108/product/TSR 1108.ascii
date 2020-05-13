@@ -1,0 +1,112 @@
+template {
+  name: "TSR 1108"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+  description: "\\large{Terror in the \\Place{Land of Mists}}\n                    In the year 351 of the \\Place{Barovian} calendar, \\NPC{Strahd von Zarovich}\n                    made a pact with \\God{Death}---a pact that sealed his fate and created a land\n                    of nightmares known as \\Place{Ravenloft}. Other lords of darkness have\n                    embraced the \\Place{Demiplane of Dread} as their own, and woe to heroes who\n                    wander there. Creatures of the night prey freely upon the living in this\n                    land, and day is but a prelude to another night of horror.\n                    This new edition of the \\Product{Ravenloft} game combines the original\n                    \\Product{Realm of Terror} boxed set with elements from \\Product{Forbidden\n                    Lore} and updated rules from other accessories. Domains destroyed in the\n                    famous \\Event{Grand Conjunction} have been deleted, new domains added, and\n                    key personalities detailed. This boxed set includes:\n                    \\list\n                    {\\bold{Realm of Terror}---a 160-page book of rules concerning the\n                    reshaping of character classes; fear, horror, madness, and power\n                    checks; curses; spells and magical items, both new and old; psionics;\n                    techniques of terror; and more.}\n                    {\\bold{Domains and Denizens}---a 128-page book describing the dark\n                    lands of the \\Place{Core}, the \\Place{islands of terror}, and many\n                    nefarious personages.}\n                    {Two maps depicting the reshaped \\Place{Core} domains and the\n                    \\Place{islands of terror}.}\n                    {A post featuring a painting by artist Robh Ruppel.}\n                    {A tarokka deck of beautifully illustrated cards for role-playing\n                    fortunetelling.}\n                    {A DM screen specifically designed to be used with a\n                    \\Product{Ravenloft} campaign.}"
+}
+title: "Ravenloft Campaign Setting"
+author {
+  name: "Neshmith, Bruce"
+}
+author {
+  name: "Hayday, Andria"
+}
+author {
+  name: "Connors, William W."
+}
+editor {
+  name: "Wise, David"
+}
+editor {
+  name: "Reid, Thomas M."
+}
+cover {
+  name: "Ruppel, Robh"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Hein, Dori Jean"
+  job: "project coordination"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphics coordination"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Coumbe, Tim"
+  job: "electronic press coordination"
+}
+date {
+  year: 1994
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "942"
+  check: 4
+}
+isbn13 {
+}
+pages: 288
+system: ADND_2ND
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Realm of Terror"
+  number: 1073741824
+}
+content {
+  part: BOOK
+  description: "Domains and Denizens"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "tarokka"
+  number: 54
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 2
+}
+content {
+  part: SCREEN
+  description: "DM"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color"
+  number: 1073741824
+}

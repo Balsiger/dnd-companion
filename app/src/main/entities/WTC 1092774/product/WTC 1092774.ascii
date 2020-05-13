@@ -1,0 +1,111 @@
+template {
+  name: "WTC 1092774"
+  world: "Generic"
+  description: "Evil \\Monster{yuan-ti} conspire to destroy a kingdom using dark rituals and the bones of a long-dead king. To win the day, heroes must storm the \\Monster{yuan-ti} fortress and wrest the bones from the culists\' clutches before they complete their rituals and unleash a far greater menace upon the world.\n                    This Dungeons & Dragons adventure is designed for 6th-level characters. It can be played as a stand-alone adventure or as the concluding adventure in a three-part series. Each encounter contains special tactical information for the Dungeon Master and expanded map features for ease of play."
+}
+title: "Fortress of the Yuan-ti"
+subtitle: "Storm the Nest of Vipers"
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Gray, Scott Fitzgerald"
+  job: "development"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Prescott, Steve"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Schinkle, Allison"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "freelance manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Fischer, Josch"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4360"
+  check: 2
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4360"
+  check: 9
+}
+pages: 64
+system: DND_3_5
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "adventure"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+optional_requirements: "WTC 96582"
+layout: COLOR_COVER

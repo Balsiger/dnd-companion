@@ -1,0 +1,79 @@
+template {
+  name: "TSR 2616"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 225"
+  }
+  world: "Planescape"
+  description: "\\NPC{Aeraes} knew nothing about the \\Place{planes} and the evil denizens\n  that dwelt there...until his uncle was abducted by a pair of\n  \\Monster{gargoyles} in the employ of an eight-armed god.\n\n  Hot on the trail of these other-worldy kidnappers, \\NPC{Aereas} and his\n  cousin, \\NPC{Nina}, enter bizarre and twisted worlds beyond\n  imagining. \\NPC{Aereas} finds that his uncle\'s abduction is part of a much\n  larger plot to turn the tide of the fiendish \\Event{Blood War} and loose an\n  unspeakable evil throughout the \\Place{planes}.\n\n  Though the \\Place{planes} hold unspeakable evil, they also hold unimaginable\n  good---the two in a delicate balance. The only question is: Which way will\n  \\NPC{Aereas} and \\NPC{Nina} tip the scales?"
+}
+title: "Blood Hostages"
+author {
+  name: "Robert J. King"
+}
+editor {
+  name: "Larson, Bill"
+}
+editor {
+  name: "Jim Lowder"
+}
+editor {
+  name: "Severson, Eric"
+}
+editor {
+  name: "Patrick McGilligan"
+}
+editor {
+  name: "Young, Barbara"
+}
+editor {
+  name: "Thomson, Brian"
+}
+editor {
+  name: "Marlys Heeszel"
+}
+editor {
+  name: "Lisa Neuberger"
+}
+editor {
+  name: "Sue Weinlein"
+}
+cover {
+  name: "Pollack, Alan"
+}
+illustrator {
+  name: "Diesel"
+}
+date {
+  year: 1996
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0473"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book One"
+series: "Blood Wars Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,205 @@
+template {
+  name: "WTC 2178872"
+  world: "Generic"
+  description: "The evil and greedy chromatic dragons lurk in dim dungeons and remote lairs guarding fabulous hoards of stolen treasure. From the savage \\Monster{white dragon} to the mighty \\Monster{red dragon}, the breath of a chromatic dragon brings nothing but death and destruction to those adventurers who seek to claim their gold. But still, heroes dream and scheme of the day when they battle a chromatic dragon.\n                    This Dungeons & Dragons supplement covers the \\Monster{red}, \\Monster{blue}, \\Monster{green}, \\Monster{black}, and \\Monster{white dragons} described in the \\Product{Monster Manual} as well as three new chromatic dragons appears in this book. \\Product{Draconomicon} details each dragon\'s power, tactics, lairs, and servitors. In addition, this book provides new information about how chromatic dragons fit into the D&D game. Wide-ranging story and campaign elements give DMs ready-to-play material, including adventure hooks, quests, and pregenerated treasure hoards."
+  short_description: "Chromatic Dragons"
+}
+title: "Draconomicon"
+subtitle: "Dragons Cruel and Cunning"
+author {
+  name: "Cordell, Bruce R."
+  job: "lead designer"
+}
+author {
+  name: "Bonner, Logan"
+}
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Mearls, Mike"
+  job: "lead developer"
+}
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "developer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "developer"
+}
+editor {
+  name: "Carter, Michele"
+  job: "lead editor"
+}
+editor {
+  name: "Clarke Wilkes, Jennifer"
+}
+editor {
+  name: "Kristine, Jessica"
+}
+editor {
+  name: "Martin, Julia"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Caddy-Lee, Devon"
+}
+illustrator {
+  name: "Ciombra, Miguel"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Dutrait, Vincent"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Moyer, Lee"
+}
+illustrator {
+  name: "Murray, Andrew"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Rams, Vinod"
+}
+illustrator {
+  name: "Rueping, Tara"
+}
+illustrator {
+  name: "Sardinha, Rick"
+}
+illustrator {
+  name: "Spears, Ron"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "art director"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Miller, Breanne"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Reeve, Daniel"
+  job: "D&D script design"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "d&d story design and development manager"
+}
+manager {
+  name: "Collins, Andy"
+  job: "d&d system design and development manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2008
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4980"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4980"
+  check: 9
+}
+pages: 256
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

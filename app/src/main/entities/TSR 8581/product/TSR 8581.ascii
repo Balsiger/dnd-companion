@@ -1,0 +1,49 @@
+template {
+  name: "TSR 8581"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  world: "Forgotten Realms"
+  description: "\\bold{\\large{The perfect gift.}}\n                    Is it the one given or the one received?\n                    \\NPC{The Simbul}, Storm-queen of \\Place{Aglarond}, is unhappy. Though she has\n                    triumphed over her enemies, she lacks an heir to her throne---a child to love\n                    and nurture. But now she\'s found the perfect father for her child:\n                    \\Place{Elminster}, the old mage of \\Place{Shadowdale}. All she has to do is\n                    win his consent.\n                    And she has the perfect gift with which to accomplish this: a mysterious colt\n                    called \\Item{Zandialr\'s Dancer}.\n                    Unfortunately, the colt belongs to \\NPC{Ebroin} of the\n                    \\Group{Cha\'Tel\'Quessir}. And getting it away from him won\'t be easy, even for\n                    \\NPC{the Simbul}."
+}
+title: "Simbul\'s Gift"
+leader: "The"
+author {
+  name: "Abbey, Lynn"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+date {
+  year: 1997
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 313
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Six"
+series: "Nobles"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,25 @@
+template {
+  name: "DMA 000005"
+  description: "Catalog of the 1983 winter stock of TSR."
+}
+title: "Winter 1993"
+date {
+  year: 1993
+}
+isbn {
+}
+isbn13 {
+}
+pages: 12
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

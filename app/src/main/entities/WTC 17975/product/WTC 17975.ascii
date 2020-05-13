@@ -1,0 +1,70 @@
+template {
+  name: "WTC 17975"
+  world: "None"
+  description: "\\Product{The Monsters of Magic} is a collection of short stories exploring\n                    the strengths and weaknesses of the creatures that inhabit the Magic: The\n                    Gathering world. The monsters highlighted are drawn not only from Magic card\n                    sets, but from the novels as well, giving any reader broader exposure to the\n                    entire Magic world."
+}
+title: "Monster of Magic"
+leader: "The"
+author {
+  name: "McGough, Scott"
+}
+author {
+  name: "McDermott, Will"
+}
+author {
+  name: "Ryan, Tim"
+}
+author {
+  name: "Thomsen, Briam M."
+}
+author {
+  name: "Lassieur, A.L."
+}
+author {
+  name: "Graham, Denise R."
+}
+author {
+  name: "Moore, Vance"
+}
+author {
+  name: "Schend, Steven E."
+}
+author {
+  name: "Lebow, Jess"
+}
+author {
+  name: "Dupree, Tom"
+}
+author {
+  name: "Sullivan, Stephen D."
+}
+author {
+  name: "Thompson, Paul B."
+}
+editor {
+  name: "King, Robert J."
+}
+date {
+  year: 2003
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2983"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

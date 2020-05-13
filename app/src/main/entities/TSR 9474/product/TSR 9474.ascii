@@ -1,0 +1,90 @@
+template {
+  name: "TSR 9474"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "Its waters are the deep purple of the most precious\n                    \\Item[Amethyst]{amethyst}; its shores hold some of the most dangerous\n                    locations in \\Place{Faer\\hat{u}n}. It is the \\Place{Moonsea}, home to Zhentil\n                    Keep, the \\Place{Citadel of the Raven}, and thousands of ordinary folk who\n                    merely want to make an honest living.\n                    Hark the words of \\NPC{Melandryll Belarod}, the bard who writings from the\n                    bulk of this material. He has experienced firsthand the horrors of ruined\n                    \\Place{Hulburg}, the desolation of \\Place{Sulasspryn}, and the stench of\n                    \\Place{Mulmaster}. His travels aboard the \\Item{Devawing} have produced this\n                    chronicle of the towns and people of the \\Place{Moonsea}, including both\n                    havens and dangers. \\NPC[Melandryll Belarod]{Belarod} knows of the\n                    \\Place{Citadel of the Raven}, a ten-mile-long series of fortresses and\n                    barracks, site of a terrifying betrayal. He also has evaded the\n                    \\Group{Zhentilar}, the crack forces garrisoned at \\Place{Zhentil Keep}.\n                    In this product are a 64-page \\emph{Reference Guide} for the Dungeon Master,\n                    a 32-page \\emph{Player\'s Guide}, and a four-color poster map of the\n                    \\Place{Moonsea} region."
+}
+title: "Moonsea"
+leader: "The"
+author {
+  name: "Terra, John"
+}
+editor {
+  name: "Lassieur, Allison"
+}
+cover {
+  name: "Gonzalez, Danilo"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+manager {
+  name: "Boomgarden, Karen S."
+  job: "project coordination"
+}
+date {
+  year: 1996
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0092"
+  check: 10
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: FOLDER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Reference Guide"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Player\'s Guide"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

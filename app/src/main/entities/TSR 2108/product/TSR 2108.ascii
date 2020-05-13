@@ -1,0 +1,113 @@
+template {
+  name: "TSR 2108"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Add the grandeur of epic adventure to your AD&D game! \\Product{Legends &\n                    Lore} has now been revised for use with the AD&D 2nd Edition rules and\n                    expanded to 192 pages! It describes dozens of dieties, heroes, and monsters\n                    from 11 different cultures. Special attention has been paid to the priests\n                    who worship the deities in this book. Each entry outlines the powers and\n                    spells granted to followers of a specific faith. In addition, you\'ll learn\n                    about the cultures that worship the deities within and be provided with new\n                    spells, magic items, and character classes. The revised \\Product{Legends &\n                    Lore} is a vital reference work for every serious AD&D game player!"
+}
+title: "Legends and Lore"
+author {
+  name: "Ward, James M."
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Brown, Timothy B."
+}
+author {
+  name: "Connors, William W."
+}
+editor {
+  name: "Connors, William W."
+}
+cartographer {
+  name: "Sutherland, David"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Barr, George"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Otis, Erol"
+}
+illustrator {
+  name: "Olson, Erik"
+}
+illustrator {
+  name: "Martin, Jean Elizabeth"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Heyer, Carol"
+}
+illustrator {
+  name: "Loveless, Roger"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+illustrator {
+  name: "Sullivan, Steven"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "graphic design"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "keylining"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "keylining"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "844"
+  check: 7
+}
+isbn13 {
+}
+pages: 192
+system: ADND_2ND
+type: ACCESSORY
+style: HARDCOVER
+producer: "TSR"
+series: "Core"
+price {
+  currency: "$"
+  number: 1350
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

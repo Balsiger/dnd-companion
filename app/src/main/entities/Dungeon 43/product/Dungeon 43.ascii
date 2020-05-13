@@ -1,0 +1,97 @@
+template {
+  name: "Dungeon 43"
+  world: "Generic"
+  description: "This is issue 43 of the dungeon magazine."
+}
+title: "Dungeon 43"
+author {
+  name: "Maxwell, Randy"
+}
+author {
+  name: "Baker, Roger"
+}
+author {
+  name: "Stratton, Trae"
+}
+author {
+  name: "Sheppard, Lee"
+}
+author {
+  name: "Kurtz, Steve"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "assistant editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Burdick, Scott"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Pavlet, Terry"
+}
+illustrator {
+  name: "Jaquays, Paul"
+}
+illustrator {
+  name: "Crabtree, James"
+}
+illustrator {
+  name: "Frazier, Dan"
+}
+illustrator {
+  name: "Miller, David O."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1993
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "VIII 1"
+number: "43"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

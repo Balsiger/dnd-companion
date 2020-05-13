@@ -1,0 +1,44 @@
+template {
+  name: "TSR 1080"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  world: "Generic"
+  description: "Includes all the rare and normal numbered cards in the 1992 series\n                    \\list\n                    {every card counterfeit proof}\n                    {the only official AD&D 2nd edition collector cards}"
+}
+title: "1992 Collector Card Factory Set"
+date {
+  year: 1992
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "432"
+  check: 5
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: ALL
+type: CARDS_TYPE
+style: MEDIUM_BOX
+producer: "TSR"
+series: "Trading Cards"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: CARD
+  number: 720
+}
+content {
+  part: CARD
+  description: "promotional"
+  number: 30
+}

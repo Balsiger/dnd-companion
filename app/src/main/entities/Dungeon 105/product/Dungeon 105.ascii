@@ -1,0 +1,124 @@
+template {
+  name: "Dungeon 105"
+  world: "Generic"
+  description: "This is issue 105 of the dungeon magazine, together with the\n   \\Product{Polyhedron 164} issue."
+}
+title: "Dungeon 105"
+author {
+  name: "Simcoe, John"
+}
+author {
+  name: "Lin, Monte"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Tsang, Arnold"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Udon Entertainement"
+}
+illustrator {
+  name: "Mosely, Tony"
+}
+illustrator {
+  name: "Reynold, Wayne"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "chief executive officer"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Franklin, Mary"
+  job: "director of marketing"
+}
+manager {
+  name: "Wertz, Vic"
+  job: "technical director"
+}
+manager {
+  name: "Head, Robert"
+  job: "webmaster"
+}
+date {
+  year: 2003
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XVII 9"
+number: "105"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,50 @@
+template {
+  name: "TSR 9560"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  world: "Generic"
+  description: "\\large{\'Every Land to Drown in the Avenging Sea of Blood\'}\n                    \\right{---Prophecy of the \\God{Deep Mother}}\n                    The deep sea holds may perils---some known, some secret, some merely\n                    hungry...and some \\emph{evil}. Those who live on dry land speak in whispers\n                    of the dreadful \\Place{City of Abiding Hunger}, where \\Monster{sea devils}\n                    cavort in the court of their king, awful rites pay homage to a brutal\n                    \\Monster{shark} god, and desperate refugees from above the waves dream of the\n                    sun they will never see again...\n                    In \\Product{Sea of Blood}, adventurers attempt to overcome the mortal threats\n                    contained in the \\Place{City of Abiding Hunger} and the \\Place{Throne of\n                    Teeth} before finally coming face to face with their true eneme---the\n                    \\NPC{Deep Mother}. \\Product{Sea of Blood} can be played as a stand-alone\n                    adventure, or it can serve as the finale of the \\Monster{sahuagin} adventure\n                    trilogy that started with \\Product{Evil Tide} and continued in \\Product{Night\n                    of the Shark}."
+}
+title: "Sea of Blood"
+date {
+  year: 1997
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0772"
+  check: 10
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Monstrous Arcana"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

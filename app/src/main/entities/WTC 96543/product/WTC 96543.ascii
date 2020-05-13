@@ -1,0 +1,34 @@
+template {
+  name: "WTC 96543"
+  world: "Dragonlance"
+  description: "This attractive new re-release of \\Product{Weasel\'s Luck} showcases a new\n  look for the \\Product{Heroes} series.\n\n  The Sign of the Weasel is tunnel on tunnel,\n\n  enchantment on enchantment.\n\n  He digs beneath himself, and in digging\n\n  discovers all roads into nothing.\n\n  \\right{-- \\NPC{The Calantina}, IX:IX}\n\n  Weasel\'s luck was not always good.\n\n  \\NPC{Galen Pathwarden}, known unaffectionately as \'the Weasel\', would give\n  anything to stay clear of adventure, danger, or heroism.\n\n  But that is before young \\NPC{Galen} is pitch-forked into the center of a\n  centuries-old curse, one family blood-feud too many, and a knightly\n  tournament unto death.\n\n  Together, \\NPC{Galen}, the great \\Group{Solamnic Knight}, \\NPC{Sir Bayard\n  Brightblade}, and a non-too-bright \\Monster{centaur} \\NPC{Agion} must\n  overcome the schemes and traps of a sinister illusionist known only as the\n  \\NPC{Scorpion}."
+}
+title: "Weasel\'s Luck"
+author {
+  name: "Williams. Michael"
+}
+date {
+  year: 2004
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3181"
+  check: 7
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume 3"
+series: "Heroes"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

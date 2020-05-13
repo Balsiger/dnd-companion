@@ -1,0 +1,129 @@
+template {
+  name: "WTC 9579874"
+  world: "Generic"
+  description: "Centuries ago, forces of good and evil collided in a titanic battle at the\n                    mountain fortress of \\Place{Slaughtergarde}. Armies of mortals and\n                    \\Monster{angels} fought and defeated a rampaging \\Monster{demon} horde,\n                    banished its demon prince, and tore \\Place{Slaughtergarde} apart, hurling it\n                    back into the \\Place{Abyss}. However, the destruction of\n                    \\Place{Slaughtergarde} was incomplete. Parts of the fortress were embedded\n                    underneath the \\Place{Valley of Obelisks}, buried for all time. Now, malign\n                    forces have found \\Place{Slaughtergarde}\'s dark chambers, and they toil\n                    ceaselessly to restore the magic gates that will reconnect\n                    \\Place{Slaughtergarde} to the \\Place{Abyss}. If they aren\'t stopped, a new\n                    \\Monster{demon} horde may emerge from the shattered fortress to rampage\n                    across the world.\n                    This adventure takes characters from 1st level to 6th level, and it includes\n                    material that can be used to expand the story to an entire campaign. Inside\n                    the folder are a 64-page \\emph{Adventure Site} book, a 64-page \\emph{Campaign\n                    Guide}. a 16-page \\emph{Player\'s Guide}, 9 pages of illustrations to enhance\n                    the adventuring experience, and a double-sided battle map designed for use\n                    with D&D Miniatures."
+  short_description: "An Adventure for Characters of Levels 1-6"
+}
+title: "Shattered Gates of Slaughtergarde"
+leader: "The"
+subtitle: "Explore a Shattered Dungeon with a Dark Secret"
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Mearls, Mike"
+  job: "developer"
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Horsley, Ralph"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director d&d"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Colavito, Dan"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Isaac, Nick"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 152
+system: DND_3_5
+type: ADVENTURE
+style: FOLDER
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Adventure Sites"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Player\'s Guide"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Campaign Guide"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "full color handouts"
+  number: 4
+}
+content {
+  part: POSTER
+  description: "full color map"
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

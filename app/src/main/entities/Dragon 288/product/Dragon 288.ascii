@@ -1,0 +1,173 @@
+template {
+  name: "Dragon 288"
+  world: "Generic"
+  description: "Issue 288 of the magazine. Issue about Fear."
+}
+title: "Dragon 288"
+author {
+  name: "Gary Gygax"
+}
+author {
+  name: "Steven A. Townshend"
+}
+author {
+  name: "Fagan, Bryan"
+}
+author {
+  name: "Ruby Thauberger"
+}
+author {
+  name: "Robin D. Laws"
+}
+author {
+  name: "Morton, E.W."
+}
+author {
+  name: "Monte Cook"
+}
+author {
+  name: "Kenneth Hite"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Joseph R. Terrazzino"
+}
+author {
+  name: "Rob Heinsoo"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Gaider, Dave"
+}
+author {
+  name: "James Ohlen"
+}
+author {
+  name: "Ray Winninger"
+}
+author {
+  name: "Johnn Four"
+}
+editor {
+  name: "Jesse Decker"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Matthew Sernett"
+}
+editor {
+  name: "Stacie Fiorito"
+}
+cover {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Sam Wood"
+}
+illustrator {
+  name: "John Kovalic"
+}
+illustrator {
+  name: "Chuck Lukacs"
+}
+illustrator {
+  name: "Jeff Laubenstein"
+}
+illustrator {
+  name: "Gregory, Doug Alexander"
+}
+illustrator {
+  name: "Val Mayerik"
+}
+illustrator {
+  name: "Wayne Reynolds"
+}
+illustrator {
+  name: "D\'Anda, Carlos"
+}
+illustrator {
+  name: "Strain, D.T."
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Arnie Swekel"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Mike Vilardi"
+}
+illustrator {
+  name: "Phil Foglio"
+}
+manager {
+  name: "John Wilson"
+  job: "group publishing"
+}
+manager {
+  name: "Pierce Watters"
+  job: "circulation direction"
+}
+manager {
+  name: "Bob Henning"
+  job: "advertising sales direction"
+}
+manager {
+  name: "John Dunn"
+  job: "production direction"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistance"
+}
+manager {
+  name: "Jen Gilbert"
+  job: "design"
+}
+manager {
+  name: "Peter Whitley"
+  job: "art & stuff"
+}
+date {
+  year: 2001
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII"
+number: "288"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "part 2 of the Forgotten Realms map"
+  number: 1073741824
+}

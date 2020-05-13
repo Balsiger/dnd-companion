@@ -1,0 +1,58 @@
+template {
+  name: "TSR 1134"
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Generic"
+  description: "Introduction to AD&D."
+}
+title: "Introduction to the Advanced Dungeons and Dragons"
+leader: "The"
+date {
+  year: 1995
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0332"
+  check: 5
+}
+isbn13 {
+}
+system: ADND_REVISED
+audience: ALL
+type: RULEBOOK
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: CD
+  description: "audio"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "game booklets"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "plastic"
+  number: 1073741824
+}
+content {
+  part: DICE
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "more"
+  number: 1073741824
+}

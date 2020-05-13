@@ -1,0 +1,149 @@
+template {
+  name: "WTC 17868"
+  world: "Eberron"
+  description: "Secure your traveling papers and jump aboard the lightning rail as it\n  hurtles across the \\Place{Five Nations}. Once united as the kingdom of\n  \\Place{Galifar} then sundered by the \\Event{Last War}, \\Place{Aundair},\n  \\Place{Breland}, the \\Place{Mournland}, \\Place{Karrnath}, and \\Place{Thrane}\n  now enjoy a tenuous peace. Regardless of your destination, ready your weapons\n  as well as your wits---intrigue, opportunity, risk, and reward await at every\n  stop.\n\n  Inside this book, you\'ll find everything you need to adventure in the mighty\n  kingdoms that form the heart of \\Place{Khorvaire}:\n\n  \\list\n  {Comprehensive overview of each kingdom, including its postwar status,\n   government, and economy, as well as important locations, communities,\n   organizations, and NPCs}\n  {Detailed, full-color maps of each nation and its capital city}\n  {Spells and magic items developed during the \\Event{Last War}}\n  {Descriptions of battlefields, ruins, cities, and other notable places}\n  {Information for creating characters who hail from each of the\n   \\Place{Five Nations}}\n  {New monsters and monster templates}\n\n  A geographical sourcebook for play in the \\Place{Five Nations} of the\n  \\Place{Eberron} world.\n\n  \\Product{Five Nations} offers players a rich source of information about\n  playing and dealing with characters from the \\Place{Five Nations} of the\n  \\Place{Eberron} world. As any play in the \\Place{Eberron} world is likely to\n  involve the \\Place{Five Nations} or characters from them, the book is useful\n  to anyone involved in an \\Place{Eberron} campaign. The individual nation\n  chapters include information on culture, geography (including maps), guilds\n  and factions and, new prestige classes, equipment, creatures, spells, magic\n  items, and adventure sites."
+}
+title: "Five Nations"
+subtitle: "Danger Knows No Borders"
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Campbell, Brian \'Chainsaw\'"
+  job: "additional material"
+}
+author {
+  name: "Gearin, Scott"
+  job: "additional material"
+}
+author {
+  name: "Liquette, Kolja Raven"
+  job: "additional material"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "game development and editing"
+}
+editor {
+  name: "Wyatt, James"
+  job: "game development and editing"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+editor {
+  name: "Raper, Robert"
+  job: "art director"
+}
+editor {
+  name: "Sansaver, Ryan"
+  job: "art director"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cover {
+  name: "Hawkins, Daniel"
+  job: "sculpted cover design"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Fischer, Scott"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Lim, Michael Frederick"
+}
+illustrator {
+  name: "Marchesi, Roberto"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Sook, Ryan"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Zhang, Xi James"
+}
+illustrator {
+  name: "Wiley, Jason"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3690"
+  check: 8
+}
+isbn13 {
+}
+pages: 160
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 86400"

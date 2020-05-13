@@ -1,0 +1,31 @@
+template {
+  name: "TSR 8443"
+  reference {
+    name: "complete product listing"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+}
+title: "Art of the D&D Game"
+leader: "The"
+date {
+  year: 1985
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "605"
+  check: 3
+}
+isbn13 {
+}
+system: DND_1ST
+audience: ALL
+type: SPECIAL_BOOK
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}

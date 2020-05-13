@@ -1,0 +1,42 @@
+template {
+  name: "TS 051"
+  synonym: ""
+  description: "Markers for Weather effects. Fog, rain, snow, heat, wind."
+  short_description: "Markers for Weather effects."
+}
+title: "Weather Effect Markers"
+subtitle: "Weather"
+author {
+}
+editor {
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: PACK
+producer: "Litko"
+price {
+}
+content {
+  part: MINIATURE
+  description: "weather effect marker"
+  number: 5
+}
+layout: BLACK_AND_WHITE

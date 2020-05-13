@@ -1,0 +1,138 @@
+template {
+  name: "WTC 17869"
+  world: "Eberron"
+  description: "The world of the \\Place{Eberron} settings holds many wonders beyond the\n  soaring spires of \\Place{Sharn}. Explorers who chase distant horizons might\n  find themselves infiltrating the \\Monster{demon}-haunted city of\n  \\Place{Ashtakala}, prowling the jungles of \\Place{Xen\'drik}, snatching relics\n  from the \\Place{City of the Dead}, or invading a \\Monster{dragon} observatory\n  in the mountains of \\Place{Argonnessen}. The secrets of an entire world are\n  within your reach, but be warned: Glory and peril walk hand in hand, and a\n  journey\'s end can come sooner than you think!\n\n  This book gives players everything they need to explore a variety of sites\n  across \\Place{Eberron}, including modes of travel, exploring tips, and rules\n  for joining organizations such as the prestigious \\Group{Wayfinder\n  Foundation}. For Dms, the book describes several likely \'launching pads\' and\n  destinations, complete with maps, ready-to-play encounters, and pregenerated\n  NPCs. \\Product{Explorer\'s Handbook} also provides rules and maps for various\n  modes of transport, including \\Item{lightning trail coaches} and\n  \\Item{elemental-bound vessels}.\n\n  The ultimate sourcebook for players wishing to explore the world of\n  \\Place{Eberron}.\n\n  The \\Product{Explorer\'s Handbook} showcases the multi-continental aspect of\n  the \\Place{Eberron} setting. The chapter on travel discusses instantaneous\n  and played-out travel and provides deck plans for \\Item{airships}, the\n  \\Item{lightning rail}, and \\Item{galleons}, plus other methods of\n  conveyance. A chapter on Explorer\'s Essentials offers information\n  on travel papers, preassembled equipment kits, how to join the\n  \\Group{Wayfarers\' Foundation}, and more. This handbook will encourage you\n  to explore the entire world rather than remain fixed in one region."
+}
+title: "Explorer\'s Handbook"
+subtitle: "Fortune Favors the Bold"
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Brunner, Frank"
+}
+author {
+  name: "Burlew, Rich"
+}
+author {
+  name: "Decker, Jesse"
+  job: "development"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "development"
+}
+editor {
+  name: "Lyons, Michelle"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Draxhall Jump Entertainment"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Chevalier, Igor-Alban"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "art director"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Cheung, Carmen"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Joshua C.J."
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3691"
+  check: 6
+}
+isbn13 {
+}
+pages: 160
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 86400"

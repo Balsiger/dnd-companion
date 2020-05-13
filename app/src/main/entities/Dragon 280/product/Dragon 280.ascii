@@ -1,0 +1,188 @@
+template {
+  name: "Dragon 280"
+  world: "Generic"
+  description: "Issue 280 of the magazine. An issue about sorcery."
+}
+title: "Dragon 280"
+author {
+  name: "Robin D. Laws"
+}
+author {
+  name: "Jonathan Richards"
+}
+author {
+  name: "Goeffrey McVey"
+}
+author {
+  name: "Jesse Decker"
+}
+author {
+  name: "Stephen Kenson"
+}
+author {
+  name: "Jonathan Tweet"
+}
+author {
+  name: "Haddock, Eric"
+}
+author {
+  name: "Matthew Sernett"
+}
+author {
+  name: "Herndon, Cory J."
+}
+author {
+  name: "Rich Redman"
+}
+author {
+  name: "Jeff Grubb"
+}
+author {
+  name: "J. Gregory Keyes"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Mike Selinker"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Ray Winninger"
+}
+author {
+  name: "Michael G. Ryan"
+}
+author {
+  name: "Gary Gygax"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Haddock, Eric"
+}
+editor {
+  name: "Matthew Sernett"
+}
+cover {
+  name: "Rebecca Guay"
+}
+illustrator {
+  name: "John Kovalic"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Riche, Darrell"
+}
+illustrator {
+  name: "Francisco, Anthony"
+}
+illustrator {
+  name: "Snoddy, Brian"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Justin Sweet"
+}
+illustrator {
+  name: "Ron Spencer"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Delgado Jr., Peter"
+}
+illustrator {
+  name: "Tony Moseley"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Jeff Laubenstein"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+}
+illustrator {
+  name: "Phil Foglio"
+}
+manager {
+  name: "John Wilson"
+  job: "group publishing"
+}
+manager {
+  name: "Wendy Noritake"
+  job: "publishing"
+}
+manager {
+  name: "Peter Whitley"
+  job: "art direction"
+}
+manager {
+  name: "Ole Sorensen"
+  job: "design"
+}
+manager {
+  name: "Pierce Watters"
+  job: "circulation direction"
+}
+manager {
+  name: "Bob Henning"
+  job: "advertising sales direction"
+}
+manager {
+  name: "John Dunn"
+  job: "production management"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistance"
+}
+manager {
+  name: "Chung, Alice"
+  job: "advertising intern"
+}
+date {
+  year: 2001
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXV"
+number: "280"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

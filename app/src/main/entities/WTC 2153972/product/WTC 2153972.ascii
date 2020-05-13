@@ -1,0 +1,231 @@
+template {
+  name: "WTC 2153972"
+  world: "Generic"
+  description: "Tired of hauling all your D&D rules supplements to the gaming table? Having trouble finding the rule you need? This supplement takes all the roleplaying game\'s most important rules and presents them in a single comprehensive, easy-to-reference volume for players and Dungeon Masters.\n                    In addition to presenting the rules of the game, this supplement incorporates official errata as well as behind-the-scenes designer and developer commentary explaining how the rules system has evolved and why certain rules work the way they do."
+}
+title: "Rules Compendium"
+subtitle: "All the Rules of the Game... In One Awsome Book"
+author {
+  name: "Sims, Chris"
+  job: "compiler"
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Mahy, Warren"
+}
+cartographer {
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Cavotta, Matthew &#39Matt&#39"
+}
+illustrator {
+  name: "Cotie, Mitch"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Du Lac, Chad"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Guay, Rebecca"
+}
+illustrator {
+  name: "Hawkes, Chris"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Hudnut, David"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Martin, David E."
+}
+illustrator {
+  name: "Nordstrand, Torstein"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Philippi, Michael"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Riche, Darrell"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Sackda, Noi"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "UDON"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Walker, Kevin"
+}
+illustrator {
+  name: "Walstrom, David"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Wooten, Ben"
+}
+illustrator {
+  name: "Zubkavich, Jim"
+}
+illustrator {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Murayama, Soe"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+  name: "Walker, Kris"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4725"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4725"
+  check: 6
+}
+pages: 160
+system: DND_3_5
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2695
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+optional_requirements: "WTC 17752"
+optional_requirements: "WTC 17755"
+layout: FULL_COLOR

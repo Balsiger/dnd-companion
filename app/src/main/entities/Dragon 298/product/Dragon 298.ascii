@@ -1,0 +1,136 @@
+template {
+  name: "Dragon 298"
+  world: "Generic"
+  description: "Issue 298 of the magazine. Drow issue."
+}
+title: "Dragon 298"
+author {
+  name: "Bishop, Jim"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Four, Johnn"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Nudson, Wade"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Wiening, Frederick"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assistant editor"
+}
+cover {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2002
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 3"
+number: "298"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

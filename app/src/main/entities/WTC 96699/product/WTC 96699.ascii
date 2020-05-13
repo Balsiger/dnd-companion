@@ -1,0 +1,30 @@
+template {
+  name: "WTC 96699"
+  synonym: "WTC 96665"
+  world: "Generic"
+  description: "Themed around the ultimate battle between \\Monster{angels} and\n                    \\Monster{devils}, the \\Product{Angelfire Booster Pack} contains a randomized\n                    selection of figures designed to expand any collection of D&D miniatures.\n                    The figures in this set are chosen directly from key D&D titles, including\n                    \\Product{Complete Divine}, \\Product{Monster Manual III}, \\Product{Complete\n                    Adventurer}, the \\Product{Book of Exalted Deeds}, and more.\n                    Booster pack contents\n                    \\list\n                    {Eight randomized, pre-painted, plastic miniatures}\n                    {Stat cards for each miniature}\n                    {Angelfire set checklist}"
+}
+title: "Angelfire Booster Pack"
+date {
+  year: 2005
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3521"
+  check: 9
+}
+isbn13 {
+}
+system: DND_3RD
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+number: "7"
+series: "D&D Miniatures"
+price {
+  currency: "$ "
+  number: 1299
+  precision: 100
+}

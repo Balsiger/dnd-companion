@@ -1,0 +1,57 @@
+template {
+  name: "WTC 33510"
+  world: "Forgotten Realms"
+  description: "Overwhelmed by inner turmoil, the child \\NPC{Hweilan} struggled to master her fear in the forests of the \\Place{Feywild}. There, she embraced her destiny --- The Hand of Nendawen, the spirit of the Hunt.\n\n\\large{Now She\'s a Warrior, with one Mission --- Kill \\NPC{Jagen Ghen}.\n\nArmed with her father\'s bow, her mother\'s wisdom, and her own burning desire for justice, the woman \\NPC{Hweilan Inle Merah} will avenge her family\'s brutal murder, or die trying.\n\nBut there\'s something about her, something even Nendawen doesn\'t realize... And what will become of her when the battle is done?"
+  short_description: "Last book of the Chosen of Nendawen trilogy."
+}
+title: "Cry of the Ghost Wolf"
+subtitle: "The True Warrior Fights not because She Hates What is in Front of Her, but because She Loves What She\'s Left Behind"
+author {
+  name: "Sehestedt, Mark"
+}
+editor {
+  name: "Mills, Elizabeth"
+}
+cover {
+  name: "Jones, Jamie"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2010
+  month: 12
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5847"
+  check: 4
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "Chosen of Nendawen"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

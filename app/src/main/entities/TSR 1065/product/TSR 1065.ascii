@@ -1,0 +1,109 @@
+template {
+  name: "TSR 1065"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "Feared by some, hunted by others, the awesome vessel \\Item{Spelljammer}\n  glides through the vastness of space on \\Monster{manta} wings. For the first\n  time ever, the myths surrounding the \\Item{Great Ship} are unveiled, allowing\n  you to expand your \\Place{Spelljammer} game campaign.\n\n  Is the \\Item{Spelljammer} a legend from the past or a mystery of the present?\n  Is it truly a ship or a living being? Who commands it? What secrets hide in\n  its massive hull and dark towers? The true story of the \\Item{Spelljammer} is\n  revealed in this box.\n\n  This accessory is an epic adventure setting for use with the original\n  \\Product{Spelljammer Adventures in Space} boxed set. Within this box you will\n  discover new monsters and races, exciting new ships and characters, plus the\n  fantastic \\Item{Spelljammer} itself.\n\n  \\bold{The \\Product{Legend of Spelljammer} accessory contains:}\n\n  \\list\n  {A 32-page book of legends and statistics about the \\Item{Great Ship};}\n  {A 64-page guided tour of the citadels, towers, and communities that\n   crowd the back of the \\Item{Spelljammer}}\n  {A 96-page book of new ships and nonplayer characters, plus adventures\n   aboard the \\Item{Spelljammer}}\n  {Two maps revealing the ship\'s citadels; and}\n  {Full-color cards showing new ships and their deck plans.}"
+}
+title: "Legend of Spelljammer"
+leader: "The"
+author {
+  name: "Grubb, Jeff"
+}
+editor {
+  name: "Winter, Steve \'Old Man\'"
+}
+editor {
+  name: "Watry, Dori \'the Barbarian\'"
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Dorscheid, Les"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Ward, James M."
+  job: "spiritual guidance"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "graphic design"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+date {
+  year: 1991
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "083"
+  check: 4
+}
+isbn13 {
+}
+pages: 192
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Captains and Ships"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Grand Tour"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Legends and More"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 2
+}
+content {
+  part: CARD
+  description: "ships"
+  number: 10
+}
+content {
+  part: CARD
+  description: "cards"
+  number: 2
+}

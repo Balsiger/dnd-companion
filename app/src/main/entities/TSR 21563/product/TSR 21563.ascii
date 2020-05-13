@@ -1,0 +1,39 @@
+template {
+  name: "TSR 21563"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Star*Drive"
+}
+title: "Nightfall at Algemron"
+author {
+  name: "Duane, Diane"
+}
+date {
+  year: 2000
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1563"
+  check: 3
+}
+isbn13 {
+}
+system: ALTERNITY
+audience: ALL
+type: NOVEL
+number: "Book Three"
+series: "Harbringer Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

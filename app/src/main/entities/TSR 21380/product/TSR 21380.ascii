@@ -1,0 +1,34 @@
+template {
+  name: "TSR 21380"
+  synonym: "WTC 866526"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "Time is getting short as \\Place{Tolaria} races to find the one who will\n                    wield the power of the Legacy. Deep in the inner circle, the dark lord\n                    \\NPC{Yawgmoth} sends out an edict: Kill \\NPC{Urza Planeswalker}.\n                    From the bloodlines of the \\Place{Benalish plains}, a hero is born."
+}
+title: "Bloodlines"
+subtitle: "Blood has been spilled. Battle lines have been drawn."
+author {
+  name: "Coleman, Loren L."
+}
+date {
+  year: 1999
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book IV"
+series: "Artifacts Cycle"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

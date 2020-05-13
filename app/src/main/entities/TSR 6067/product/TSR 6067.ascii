@@ -1,0 +1,22 @@
+template {
+  name: "TSR 6067"
+  synonym: "RPGA4"
+  reference {
+    name: "net price list"
+  }
+}
+title: "Elixir of Life"
+leader: "The"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 500
+  precision: 100
+}

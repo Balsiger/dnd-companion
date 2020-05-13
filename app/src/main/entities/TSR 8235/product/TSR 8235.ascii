@@ -1,0 +1,38 @@
+template {
+  name: "TSR 8235"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+  description: "portrays the conventions of traditional fantasy in humorous light"
+}
+title: "Go Quest, Young Man"
+date {
+  year: 1994
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "898"
+  check: 3
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

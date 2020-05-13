@@ -1,0 +1,46 @@
+template {
+  name: "TSR 2168"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  world: "Generic"
+  description: "A lot of spells from \\Spell{Eagle Form} to \\Spell{Mnemonic Enhancer,\n                    Rary\'s}"
+}
+title: "Wizard\'s Spell Compendium, Volume Two"
+date {
+  year: 1997
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0664"
+  check: 2
+}
+isbn13 {
+}
+pages: 288
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+number: "Volume Two"
+series: "Wizard\'s Spell Compendium"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9193"
+  synonym: "GAZ1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Grand Duchy of Karameikos"
+leader: "The"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

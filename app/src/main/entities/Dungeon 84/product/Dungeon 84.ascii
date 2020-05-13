@@ -1,0 +1,159 @@
+template {
+  name: "Dungeon 84"
+  world: "Generic"
+  description: "This is issue 84 of the dungeon magazine."
+}
+title: "Dungeon 84"
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Hopkins, Peter R."
+}
+author {
+  name: "Doyle, Chris"
+}
+author {
+  name: "Twee, Jonathan"
+}
+author {
+  name: "Vinogradov, Peter"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Haddock, Eric"
+  job: "assistant editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editorial consultant"
+}
+cover {
+  name: "Daniele, Stephen A."
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Black, Theodor"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Morasch, Todd"
+}
+illustrator {
+  name: "Pollack, Alan"
+}
+illustrator {
+  name: "Weaver, Michael"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "art director"
+}
+illustrator {
+  name: "Whitley, Peter"
+  job: "consulting art director"
+}
+illustrator {
+  name: "JIE-23"
+  job: "designer"
+}
+illustrator {
+  name: "Jackson, Mark"
+  job: "designer"
+}
+illustrator {
+  name: "Francisco, Kim"
+  job: "designer"
+}
+illustrator {
+  name: "Dalton, Rob"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "senior production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "assistant production manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Chung, Alice"
+  job: "advertis intern"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 2001
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 144
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XIV 6"
+number: "84"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

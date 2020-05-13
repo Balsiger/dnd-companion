@@ -1,0 +1,74 @@
+template {
+  name: "TSR 9484"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "\\Item{The Sword of the Dales}, an icon of the \\Place[Dales]{Dalelands}\n                    symbolizing the unity and strength of the people, has reappeared!  Created by\n                    \\NPC{Shraevyn} the weapons-mage hundreds of years ago, the lost \\Item[The\n                    Sword of the Dales]{Sword} had become nothing more than a fantastic\n                    children\'s tale---until now.\n                    A group of warriors led by \\NPC{Randal Morn}, rightful rule of\n                    \\Place{Daggerdale}, rushed to the \\Item{Sword}\'s resting place to recover it,\n                    but dark forces awaited them, and \\NPC[Randal Morn]{Randal} and his men fell\n                    to an ambush. Only one man escaped, yet he brought with him the hope that\n                    \\NPC{Randal Morn} yet lives. Resolved to rescue his leader, that lone\n                    survivor turned to the great \\NPC{Elminster} of \\Place{Shadowdale} for aid.\n                    But \\NPC{Elminster} is gone, off plane-hopping while the fate of\n                    \\Place{Daggerdale} hangs in the balance. Hence, it is up to \\NPC{Lhaeo},\n                    scribe of the old mage, to find a group of heroes who have mettle enough to\n                    face down the menace which claimed \\NPC{Randal Morn} and his hearty\n                    followers...\n                    This is the first of three adventures that grant player characters the\n                    opportunity to determine the fate of \\Place{Daggerdale}. The saga continues\n                    with \\Product[TSR 9485]{The Secret of Spiderhaunt} and concludes with\n                    \\Product[TSR 9488]{The Return of Randal Morn}."
+}
+title: "Sword of the Dales"
+leader: "The"
+author {
+  name: "Butler, James"
+}
+editor {
+  name: "Lassieur, Allison"
+}
+cover {
+  name: "Eagle, Bruce"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Danforth, Elizabeth T."
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Barnett, Dee"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0126"
+  check: 8
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+number: "1"
+series: "Daggerdale"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

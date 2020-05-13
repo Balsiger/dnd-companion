@@ -1,0 +1,21 @@
+template {
+  name: "TSR 6060"
+  synonym: "R1"
+  reference {
+    name: "net price list"
+  }
+}
+title: "To the Aid of Falx"
+date {
+  year: 1982
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 500
+  precision: 100
+}

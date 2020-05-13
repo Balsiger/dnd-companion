@@ -1,0 +1,243 @@
+template {
+  name: "Dragon 273"
+  world: "Generic"
+}
+title: "Dragon 273"
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Kuciak, Michael T."
+}
+author {
+  name: "Haymes, Malcolm"
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Detwiler, Gregory W."
+}
+author {
+  name: "Byers, Richard Lee"
+}
+author {
+  name: "Ernest, James"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Byers, Richard Lee"
+}
+author {
+  name: "Kemp, Paul S."
+}
+author {
+  name: "Whitney-Robinson, Voronica"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Emery, Clayton"
+}
+author {
+  name: "Pozas, Claudio"
+}
+author {
+  name: "Wilson, Alexander"
+}
+author {
+  name: "Paulette, Justin"
+}
+author {
+  name: "Lundock, Margaret S."
+}
+author {
+  name: "Lundock, Ramsey"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Wiker, JD"
+}
+author {
+  name: "Quick, Jeff \'Zippy\'"
+}
+author {
+  name: "Winninger, Ray"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Wilson, Johnny L."
+}
+editor {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Haddock, Eric"
+  job: "assistant editor"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Dorman, Dave"
+}
+illustrator {
+  name: "Tiritilli, Terri"
+}
+illustrator {
+  name: "Alexander, Rob"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Fischer, Scott"
+}
+illustrator {
+  name: "Sharp, Shawn"
+}
+illustrator {
+  name: "Fischer, Teresa"
+}
+illustrator {
+  name: "Baergeon, Ted"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photos"
+}
+illustrator {
+  name: "Soles, Jason"
+  job: "miniatures painting"
+}
+illustrator {
+  name: "Graham, Kim"
+  job: "dioramas"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Wolf-Narciso, Shauna"
+  job: "senior art director"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+illustrator {
+  name: "Garfield, Susan"
+  job: "designer"
+}
+illustrator {
+  name: "Gough, Dan"
+  job: "designer"
+}
+illustrator {
+  name: "Ricker, Scott"
+  job: "designer"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulaton manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "advertising traffifc manager"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2000
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 130
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXV 2"
+number: "273"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

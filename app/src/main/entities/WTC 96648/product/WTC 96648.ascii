@@ -1,0 +1,28 @@
+template {
+  name: "WTC 96648"
+  world: "Generic"
+  description: "Version 3.5 editions of the \\Product{Player\'s Handbook}, \\Product{Monster\n                    Manual}, and \\Product{Dungeon Master\'s Guide} are now offered in one\n                    slip-covered gift set.\n                    In the 30-year history of the Dungeons & Dragons game, this type of boxed set\n                    has never been available -- until now. Enjoy the foundation of the Dungeons &\n                    Dragons roleplaying game in one product that is a great gift for someone you\n                    want to introduce to the hobby or as a gift to yourself.\n                    With these three books in one case, the entire world of Dungeons & Dragons is\n                    yours to explore and share with others."
+}
+title: "Core Rulebook Gift Set"
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3410"
+  check: 7
+}
+isbn13 {
+}
+pages: 960
+system: DND_3_5
+audience: ALL
+type: RULEBOOK
+style: BOX
+price {
+  currency: "$ "
+  number: 8995
+  precision: 100
+}

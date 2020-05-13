@@ -1,0 +1,121 @@
+template {
+  name: "Dungeon 103"
+  world: "Generic"
+  description: "This is issue 103 of the dungeon magazine, together with the\n   \\Product{Polyhedron 162} issue."
+}
+title: "Dungeon 103"
+author {
+  name: "Ertman, Kent"
+}
+author {
+  name: "Larwood, Philip"
+}
+author {
+  name: "Upchurch, Wil"
+}
+editor {
+  name: "Mona, Erik"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+cover {
+  name: "Hou, Andrew"
+}
+cover {
+  name: "Tsang, Arnold"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Tsang, Arnold"
+}
+illustrator {
+  name: "St. Goddard, Aaron"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Janssen, Niklas"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffice manager"
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 65
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XVII 6"
+number: "103"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

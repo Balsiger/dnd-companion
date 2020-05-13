@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9072"
+  synonym: "EX1"
+  reference {
+    name: "net price list"
+  }
+  world: "Greyhawk"
+}
+title: "Dungeonland"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

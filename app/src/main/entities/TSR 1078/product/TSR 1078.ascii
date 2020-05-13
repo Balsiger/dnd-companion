@@ -1,0 +1,30 @@
+template {
+  name: "TSR 1078"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  world: "Generic"
+  description: "A pack of 12 collector cards."
+}
+title: "TSR Collector Cards 1992, Part 2"
+date {
+  year: 1992
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: CARDS_TYPE
+producer: "TSR"
+series: "Trading Cards"
+price {
+  currency: "$ "
+  number: 80
+  precision: 100
+}

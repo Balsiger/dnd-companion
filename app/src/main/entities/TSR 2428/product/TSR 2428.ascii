@@ -1,0 +1,35 @@
+template {
+  name: "TSR 2428"
+  synonym: "DSE2"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Dark Sun"
+  description: "culmination of Black Flames"
+}
+title: "Black Spine"
+date {
+  year: 1994
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "824"
+  check: 10
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}

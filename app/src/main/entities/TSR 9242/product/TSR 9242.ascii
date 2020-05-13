@@ -1,0 +1,66 @@
+template {
+  name: "TSR 9242"
+  synonym: "OA5"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The followers of the many gods of \\Place{Kara-Tur} have always fought, to\n                    prove the superiority of their martial discipline and the greater wisdom of\n                    their deities. The strict hierarchy of the gods is now threatened by the\n                    sudden prominence of the followers of the \\Group{Dragon Claw}, a new and\n                    dealdy school or martial arts that threatens to destroy all other\n                    schools. The players, recruited by a mysterious old monk with a bizarre\n                    fighting style, must find out what\'s behind the emergence of the\n                    \\Group{Dragon Claw} and put a stop to it.\n                    \\Product[TSR 9242]{Mad Monkey vs. The Dragon Claw} will take players across\n                    the entire country of \\Place{T\'u Lung}, from the mouth of the great river\n                    \\Place{Fengshintu} to its headwaters, where they must deal with the legendary\n                    Cult of the \\Group{Black Leopard}---all in the name of the \\NPC{Mad Monkey}.\n                    \\Product[TSR 9242]{Mad Monkey vs. The Dragon Claw} is a scenario for the\n                    \\Product[TSR 2018]{Oriental Adventures} supplement to the AD&D game. It is\n                    set in \\Place{Kara-Tur}, the oriental world in the \\Place{Forgotten\n                    Realms}. \\Product[TSR 9242]{Mad Monkey vs. The Dragon Claw} is designed for\n                    five to eight characters of Levels 6--9."
+}
+title: "Mad Monkey vs. the Dragon Claws"
+author {
+  name: "Grubb, Jeff"
+}
+editor {
+  name: "Winter, Steve"
+}
+cover {
+  name: "Holloway, Jim"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+typographer {
+  name: "Elmore, Betty"
+}
+manager {
+  name: "O\'Malley, Colleen"
+  job: "graphic design"
+}
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "624"
+  check: 10
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Oriental Adventures"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,33 @@
+template {
+  name: "WTC 11964"
+  synonym: "WTC 88241"
+  world: "Forgotten Realms"
+  description: "\\large{Discover the Power and Master the Art}\n                    Magic pervades \\Place{Faer\\hat{u}n}. This guide explores the hidden lore and\n                    secrets of magic in the \\Place{Forgotten Realms} \\Product[WTC 11836]{game\n                    setting}. From the history of magic to magical variants (including gem magic,\n                    spellfire, and the mageduel), magical creatures, locations of power, and\n                    advanced options for creating magic items, this book covers what a Dungeon\n                    Master or the player of a spellcaster in the \\Place{Forgotten Realms}\n                    \\Product[WTC 11836]{setting needs} to know.\n                    \\list\n                    {More than 200 new spells}\n                    {Almost 200 new magic items}\n                    {11 new prestige classes}\n                    To use this accessory, you also need the \\Product[TSR 11550]{Player\'s\n                    Handbook}, the \\Product[TSR 11551]{Dungeon Master\'s Guide}, the \\Product[TSR\n                    11552]{Monster Manual}, and the \\Product[WTC 11836]{Forgotten Realms Campaign\n                    Setting}."
+}
+title: "Magic of Faer\\hat{u}n"
+date {
+  year: 2001
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1964"
+  check: 7
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+type: ACCESSORY
+style: SOFT_COVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 4195
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

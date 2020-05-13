@@ -1,0 +1,50 @@
+template {
+  name: "TSR 1507"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  world: "Generic"
+  description: "dices for the game"
+}
+title: "Dragon Dice Kicker Pack 6: Frostwings"
+author {
+  name: "Olmesdahl, Bill"
+}
+date {
+  year: 1997
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0663"
+  check: 4
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: DICE
+  description: "randomly assorted"
+  number: 8
+}

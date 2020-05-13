@@ -1,0 +1,55 @@
+template {
+  name: "TSR 9556"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  world: "Generic"
+  description: "Your are probably wondering: Is this guidebook for me? In a word---yes!\n                    \\Product{Dungeon Builder\'s Guidebook} assembles tried-and-true dungeon\n                    building advice, approaches, and tactics gathered over many years. The\n                    suggestions and samples in this book are an invaluable resource for\n                    initiating and fleshing out the ruins, mines, caverns, and tombs of your\n                    imagination.\n                    What if you already design all your own dungeons? Though the advice and tips\n                    in here may be old news to you, even the most experienced Dungeon Master is\n                    sometimes strapped for time or inspiration. \\Product{Dungeon Builder\'s\n                    Guidebook} is perfect for generating the dungeon hook you need at a moment\'s\n                    notice, the \\Monster{goblin} warren the PCs accidentally stumble upon, or the\n                    pocket dimension you did not get a chance to detail.\n                    \\Product{Dungeon Builder\'s Guidebook} contains the following features:\n                    \\list\n                    {Basic pointers and advice on building dunbeons.}\n                    {Permutations that provide ways to \'twist\' your dungeon in exciting\n                    ways.}\n                    {Six distinct dungeon types, each accompanied by property and encounter\n                    tables to help you flesh out your dungeon.}\n                    {A collection of 78 geomorphs that you can photocopy, trace, or freehand\n                    onto your own maps.}\n                    {The Trap Architect, a detailed process for generating lethal traps.}\n                    {The Autodungeon Engine, a series of tables that allow your to create a\n                    dungeon by attaching random geomorphs together, forming a unique\n                    dungeon each time.}\n                    \\Product{Dungeon Builder\'s Guidebook} follows and complements \\Product{World\n                    Builder\'s Guidebook}, focusing on specific sites rather than global design.\n                    \\large{The tools are now yours. What are you going to build?}"
+}
+title: "Dungeon Builder\'s Guidebook"
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1207"
+  check: 3
+}
+isbn13 {
+}
+pages: 144
+system: ADND_REVISED
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+series: "Builder\'s Guidebook"
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

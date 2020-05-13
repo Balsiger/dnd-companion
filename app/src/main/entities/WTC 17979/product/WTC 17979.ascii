@@ -1,0 +1,32 @@
+template {
+  name: "WTC 17979"
+  world: "None"
+  description: "Where forests of metal claw the sky.\n                    Where razor-sharp metallic grasses stretch across the plains.\n                    Where vast oceans of quicksilver conceal predators awaiting the unwary.\n                    Across this harsh landscape, an orphaned \\Monster{elf} must make her way,\n                    seeking the secrets of her past, daring the perils of her present. And she\n                    must tear aside the veil that hides the face of a hidden enemy whose power\n                    extends across all \\Place{Mirrodin}."
+}
+title: "Moons of Mirrodin"
+leader: "The"
+subtitle: "A World Beyond Imagination"
+author {
+  name: "McDermott, Wil"
+}
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book I"
+series: "Mirrodin Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9157"
+  synonym: "XSolo2"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Thunderdelve Mountain"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

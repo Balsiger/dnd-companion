@@ -1,0 +1,61 @@
+template {
+  name: "TSR 8486"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\NPC{Arilyn Moonblade} is one of the two best assassins in the\n                    \\Place{Realms}. Maybe both.\n                    From \\Place{Cormyr} to \\Place{Waterdeep}, \\Group{Harpers} are being\n                    murdered. The trail leads to the \\Monster{half-elven} adventurer, \\NPC{Arilyn\n                    Moonblade}. Is she guilty, or is she the next target?\n                    Tormented by strange dreams and stalked by shadows, \\NPC{Arilyn} must uncover\n                    the ancient secret of her sword\'s power in order to find and face the\n                    \\Group{Harper} Assassin.\n                    \\Product{Elfshadow} is the second in an open-ended series of novels focusing\n                    on the \\Group{Harpers}, the secret organization for Good in the\n                    \\Product{Forgotten Realms} fantasy world."
+}
+title: "Elfshadow"
+author {
+  name: "Cunningham, Elaine"
+}
+cover {
+  name: "Fields, Fred"
+}
+date {
+  year: 1991
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "117"
+  check: 2
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Two"
+series: "Harpers Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

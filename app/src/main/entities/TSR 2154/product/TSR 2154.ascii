@@ -1,0 +1,104 @@
+template {
+  name: "TSR 2154"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "These pages hold the keys to \\Monster{humans} who spot secret doors as\n                    easily as do \\Monster{elves}, thieves who sense illusions,\n                    \\Monster{half-ogre} sword masters, and a multitude of other unique\n                    characters. Player\'s Option Rulebooks present an alternative approach to AD&D\n                    characters. Custom-craft your next PC, selecting the profession, skills, and\n                    abilities you want! Characters can even have additional ability scores such\n                    as Stamina, Muscle, Balance, and others. New proficiencies, talents, and\n                    updated psionics round out the Player\'s Option character. Be ready for\n                    anything with \\Product{Skills & Powers}."
+}
+title: "Player\'s Option: Skills & Powers"
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Slavicsek, Bill"
+}
+editor {
+  name: "Rabe, Jean"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Chaffee, Douglas"
+}
+illustrator {
+  name: "Dorscheid, Les"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Frank, Ken"
+}
+illustrator {
+  name: "Hotz, Eric"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Baker, Richard L. III"
+  job: "design contributions"
+}
+manager {
+  name: "Williams, Skip"
+  job: "design contributions"
+}
+manager {
+  name: "Hein, Dori"
+  job: "editing contribution"
+}
+manager {
+  name: "Winter, Steve"
+  job: "project coordinator"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0149"
+  check: 7
+}
+isbn13 {
+}
+pages: 192
+system: ADND_REVISED
+audience: ALL
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+number: "Skills & Powers"
+series: "Player\'s Option"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

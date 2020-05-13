@@ -1,0 +1,84 @@
+template {
+  name: "Polyhedron 153"
+  world: "Generic"
+  description: "September 2002 issue of polyhedron (together with Dungeon 94)."
+}
+title: "Polyhedron 153"
+subtitle: "Omega World"
+author {
+  name: "Stan!"
+}
+author {
+  name: "Thompson, Hunter S."
+}
+author {
+  name: "Wiese, Robert"
+}
+author {
+  name: "Redman, Rich"
+}
+author {
+  name: "Tweet, Jonathan"
+}
+editor {
+  name: "Mona, Erik"
+}
+cover {
+  name: "Puddnhead"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Buckley, Leanne"
+}
+illustrator {
+  name: "Barrum, Joachim"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Noguchi, Mikael"
+}
+illustrator {
+  name: "Perez, Ramon"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "logo design"
+}
+illustrator {
+  name: "Hunter, Kyle"
+  job: "art direction"
+}
+date {
+  year: 2002
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 61
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "153"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+layout: FULL_COLOR

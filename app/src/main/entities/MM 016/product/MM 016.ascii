@@ -1,0 +1,133 @@
+template {
+  name: "MM 016"
+  description: "Treasure and magical items for the dungeon crawl."
+}
+title: "Treasures & Magic Item Set"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+producer: "Dwarven Forge"
+price {
+}
+content {
+  part: MINIATURE
+  description: "big pile of coppers"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "big pile of silvers"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "big pile of golds"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "medium pile of coppers"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "medium pile of silvers"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "medium pile of golds"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "small pile of coppers"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "small pile of silvers"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "small pile of golds"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "axe"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "sword"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "chest"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "chest lid"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "big vase"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "pile of vases"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "monster head"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "armor"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "small chest"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "quiver"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "shield"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "scroll"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "book"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "scroll heap"
+  number: 1073741824
+}

@@ -1,0 +1,128 @@
+template {
+  name: "WTC 95366"
+  world: "Forgotten Realms"
+  description: "You\'ve survived countless death traps, slain hordes of monsters, and\n                    overthrown your fair share of petty warlords and would-be tyrants. Ever\n                    wonder what it would be like to hold sway as an influential member of the\n                    royal court, a mighty general, a powerful religious figure, or a successful\n                    merchant prince? The \\Product{Power of Faer\\hat{u}n} campaign supplement\n                    shows players and Dungeon Masters how to play high-level characters and run\n                    high-level campaigns in the \\Place{Realms}. It presents worthy challenges and\n                    opportunities for heroes who have had their fill of crawling through caverns\n                    and plundering forsaken tombs.\n                    A new guidebook for high-level play in the \\Place{Forgotten Realms} campaign\n                    setting.\n                    \\Product{Power of Fae\\hat{u}n} is a comprehensive guidebook to playing\n                    high-level heroes and running high-level campaigns in the \\Place{Forgotten\n                    Realms}. This supplement introduces new options to players and Dungeon\n                    Masters as well as guidelines for starting a temple, running a guild, leading\n                    an army, serving the crown, and participating in political intrigues."
+}
+title: "Power of Faer\\hat{u}n"
+subtitle: "Rule the Realms"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Mearls, Mike"
+  job: "developer"
+}
+editor {
+  name: "Sarli, Gary"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Parrillo, Lucio"
+}
+cartographer {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Drennan, Rick"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG R&D"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "forgotten realms art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "forgotten realms art director"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic design"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director RPG R&D"
+}
+date {
+  year: 2006
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3910"
+  check: 9
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Forgotten Realms Campaign Setting"
+layout: FULL_COLOR

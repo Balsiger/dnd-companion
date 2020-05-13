@@ -1,0 +1,20 @@
+template {
+  name: "TSR 8421"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Dragonlance"
+  description: "solo quest"
+}
+title: "Gnomes, Dragons"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+audience: ALL
+type: NOVEL
+price {
+}

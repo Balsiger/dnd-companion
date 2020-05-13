@@ -1,0 +1,156 @@
+template {
+  name: "Dragon 311"
+  world: "Generic"
+  description: "Issue 311 of the magazine. Special Update Series 2/3 issue."
+}
+title: "Dragon 311"
+author {
+  name: "Bova, Ben"
+}
+author {
+  name: "Carter, Scott"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Johnn, Four"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Quick, Jeff"
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Tweet, Jonathan"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Younts, Patrick"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+editor {
+  name: "Williams, Penny"
+  job: "editorial assistance"
+}
+cover {
+  name: "McClellan, David"
+}
+illustrator {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "McClellan, David"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Philippi, Michael"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Wahlstrum, David"
+}
+illustrator {
+  name: "West, Chris"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "art director"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "senior production designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVIII 4"
+number: "311"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

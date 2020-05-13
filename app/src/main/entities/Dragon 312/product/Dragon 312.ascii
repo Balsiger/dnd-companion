@@ -1,0 +1,157 @@
+template {
+  name: "Dragon 312"
+  world: "Generic"
+  description: "Issue 312 of the magazine. Special Update Series 3/3 issue."
+}
+title: "Dragon 312"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Blake, Michael"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Leach, Paul"
+}
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Upchurch, Will"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+editor {
+  name: "Clarke Wilkes, Jennifer"
+  job: "editorial assistance"
+}
+editor {
+  name: "Ryan, Tammie"
+  job: "editorial assistance"
+}
+editor {
+  name: "Wilkes, Chris"
+  job: "editorial assistance"
+}
+editor {
+  name: "Williams, Penny"
+  job: "editorial assistance"
+}
+cover {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Philippi, Michael"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Wahlstrum, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVIII 5"
+number: "312"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

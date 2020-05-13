@@ -1,0 +1,41 @@
+template {
+  name: "WTC 88608"
+  world: "Forgotten Realms"
+  description: "\\large{Be Careful of What You Wish For}\n                    Spellfire is the most powerful magic in the land.\n                    It\'s a dangerous weapon in anyone\'s hands.\n                    In the wrong hands, it can destroy the world.\n                    \\NPC{Shandril Shessair} wanted a taste of adventure. She got spellfire, and\n                    now she\'s fleeing for her life across \\Place{Faer\\hat{u}n}, searching for\n                    somewhere to hide. More evil wizards, warriors, and priests than she can\n                    count are trying to get it from her, and they\'ll kill or enslave her without\n                    hesitation. Her last, desperate hope is to take refuge in the sheltered city\n                    of \\Place{Silverymoon}.\n                    If she makes it that far."
+}
+title: "Hand of Fire"
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Sullivan, Jon"
+}
+date {
+  year: 2002
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2760"
+  check: 7
+}
+isbn13 {
+}
+pages: 377
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 3"
+series: "Shandril\'s Saga"
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "the text"
+  number: 1073741824
+}

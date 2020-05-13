@@ -1,0 +1,143 @@
+template {
+  name: "WTC 88566"
+  world: "Generic"
+  description: "\\large{Adventure in the Afterlife}\n                    The city of \\Place{Manifest} rests atop ruins from ancient times and far\n                    above the entrance to the land of the dead. Here, the world of the living is\n                    shared equally with the deceased, who linger in physical form before finally\n                    passing through the \\Place{Veil}. Whether currently living or dead, residents\n                    and visitors are assured of an eternity of action and intrigue.\n                    \\Product{Ghostwalk} contains everything needed to run a stand-alone campaign\n                    in and around the city of \\Place{Manifest}, or to integrate it into an\n                    exsting world, including:\n                    \\list\n                    {Complete rules for playing ghost characters and advancing in the new eidolon\n                    and eiloloncer classes}\n                    {New prestive classes, such as the bone collecter and the ghost slayer}\n                    {Over 70 new feats and 65 new spells, includikng \\Feat{Ghost Hand},\n                    \\Feat{Incorporeal Target Fighting}, \\Spell{death armor}, and\n                    \\Spell{ectoplasmic decay}.\n                    {Three complete adventures, four highly detailed encounter sites, and\n                    fourteen new monsters and templates}\n                    To use this accessory, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}. A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Ghostwalk"
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Stan!"
+  job: "developer"
+}
+editor {
+  name: "Reid, Thomas M."
+}
+editor {
+  name: "Laugel, Del"
+  job: "editorial assitant"
+}
+editor {
+  name: "McQuillan, Bill"
+  job: "editorial assistant"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+  job: "editorial assitant"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Dutton, Michael \'Mike\'"
+}
+illustrator {
+  name: "Fliegenschuh, Emily"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Puddnhead"
+}
+illustrator {
+  name: "Rams, Vinod"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Baker, Richard L. III"
+  job: "creative director"
+}
+manager {
+  name: "Valterra, Anthony"
+  job: "RPG category manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&R"
+}
+manager {
+  name: "Kirchoff, Mary"
+  job: "vice president of publishing"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphic designer"
+}
+manager {
+  name: "Glenn, Sean"
+  job: "graphic designer"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production manager"
+}
+manager {
+  name: "Durham, Martin"
+  job: "project manager"
+}
+date {
+  year: 2003
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2834"
+  check: 4
+}
+isbn13 {
+}
+pages: 224
+system: DND_3RD
+type: CAMPAIGN_SETTING
+style: HARDCOVER
+series: "Campaign Option"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

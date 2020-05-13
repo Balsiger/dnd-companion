@@ -1,0 +1,34 @@
+template {
+  name: "TSR 1131"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "None"
+  description: "Sigil leaders, legions, and secret societies."
+}
+title: "Blood Wars Escalation Pack 2: Factols and Factions"
+date {
+  year: 1995
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+system: BLOOD_WARS
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  description: "random"
+  number: 15
+}

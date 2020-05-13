@@ -1,0 +1,42 @@
+template {
+  name: "TSR 2436"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dark Sun"
+  description: "Chronicles of Athas Series, book three"
+}
+title: "Broken Blade"
+leader: "The"
+author {
+  name: "Simon Hawke"
+}
+date {
+  year: 1995
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0137"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Three"
+series: "Chronicles of Athas"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

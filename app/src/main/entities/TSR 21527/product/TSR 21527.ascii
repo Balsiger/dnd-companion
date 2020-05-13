@@ -1,0 +1,52 @@
+template {
+  name: "TSR 21527"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Planescape"
+  description: "The endless \\Event{Blood War} rages, a never-ending battle between the\n  \\Monster{fiends} of the \\Place{planes}. Amid this horrific conflict, a single\n  hero with no memory of his past seeks to discover his true identity.\n\n  Of course, this being the \\Place{planes}, his companions on his quest\n  are...unusual. But if you can\'t trust a floating skull, an eccentric\n  inventor, and a \\Monster{succubus}, who can you trust?\n\n  Practically no one.\n\n  Base on the best-selling computer game from Interplay."
+}
+title: "Torment"
+subtitle: "An eternal war"
+author {
+  name: "Ray Vallese"
+}
+author {
+  name: "Valerie Vallese"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+date {
+  year: 1999
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1527"
+  check: 7
+}
+isbn13 {
+}
+pages: 247
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

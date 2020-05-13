@@ -1,0 +1,32 @@
+template {
+  name: "TSR 21637"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+}
+title: "Death of the Dragon"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Denning, Troy"
+}
+date {
+  year: 2000
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+series: "Cormyr Saga"
+price {
+  currency: "$"
+  number: 2195
+  precision: 100
+}

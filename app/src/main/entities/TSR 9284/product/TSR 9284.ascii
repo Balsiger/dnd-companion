@@ -1,0 +1,28 @@
+template {
+  name: "TSR 9284"
+  synonym: "DDA1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dawn of the Emperors"
+  description: "foil an attempt to kill the emperor, introductory"
+}
+title: "Arena of Thyatis"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$\302\254\342\200\240"
+  number: 595
+  precision: 100
+}

@@ -1,0 +1,85 @@
+template {
+  name: "SJG 3401"
+  world: "Generic"
+  description: "\\emph{Munchkin} is the Origins Award-winning card game of dungeon\n  delving. Now the great characters, monsters, and loot have flown off the\n  cards... and right into your d20 game!\n\n  The \\Product{Munchkin d20 Player\'s Handbook} is the ultimate guide to\n  roleplaying that is fast, dirty, and hellaciously \\emph{fun}! Fully\n  compatible with other d20 games, \\Product{Munchkin d20} will jazz up your\n  sessions as your characters rocket up in power! This book includes munchkin\n  classes, races, skills, feats, and spells designed to go through a dungeon\n  like a rock through a window. (But DMs don\'t worry... your book is coming\n  soon...)\n\n  Watch for more \\Product{Munchkin d20} books, coming soon from Steve Jackson\n  Games."
+}
+title: "Munchkin Player\'s Handbook"
+subtitle: "D20... The Way It Should Be Played!"
+author {
+  name: "Hackard, Andrew"
+}
+author {
+  name: "Jackson, Steve"
+}
+author {
+  name: "Ganger, David L."
+  job: "additional material"
+}
+author {
+  name: "Haring, Scott"
+  job: "additional material"
+}
+author {
+  name: "Mangrum, John W."
+  job: "additional material"
+}
+editor {
+  name: "Hackard, Andrew"
+  job: "managing editor"
+}
+cover {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+manager {
+  name: "Chapman, Monique"
+  job: "project administration"
+}
+manager {
+  name: "Sherman, Mia"
+  job: "production manager"
+}
+manager {
+  name: "Fernandez, Alex"
+  job: "page design"
+}
+manager {
+  name: "Reed, Philip"
+  job: "production artist"
+}
+manager {
+  name: "Stephens, Monica"
+  job: "print buyer"
+}
+manager {
+  name: "Jepson, Ross"
+  job: "sales management"
+}
+manager {
+  name: "Nicewarner, Steve"
+  job: "marketing director"
+}
+manager {
+  name: "Vetromile, Andy"
+  job: "errata coordination"
+}
+date {
+  year: 2003
+}
+isbn {
+}
+isbn13 {
+}
+pages: 48
+system: D20
+type: RULEBOOK
+style: HARDCOVER
+series: "Munchkin"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

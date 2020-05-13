@@ -1,0 +1,45 @@
+template {
+  name: "TSR 9575"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Forgotten Realms"
+  description: "A dozen years in the making, this sourcebook contains everything you need to\n                    know about \\Place{Ravens Bluff}, home of the Living City campaign:\n                    \\list\n                    {The movers and shakers of the city are described in detail, from the\n                    deans of the \\Group{Wizards Guild} to the prelates of the\n                    \\Group{Clerical Circle}, from the Lady Mayor to the heads of the\n                    the nobles houses.}\n                    {The laws of the city are revealed, along with the officials responsible\n                    for enforcing them and the punishments for breaking them.}\n                    {Read the history of the city and discover the secrets of \\Place{Lost\n                    Sabreen}, the \\Monster[Dwarf]{dwarven} city buried beneath its foundations.}\n                    {New monsters and new magics, hidden cults and secret societies,\n                    and a description of the entire \\Place{Vast} surrounding the city\n                    are all included within these pages.}\n                    {As if this were not enough, this sourcebook also includes the most\n                    detailed map of the city ever published and an extensive Walking\n                    Tour visiting hundreds of locations throughout \\Place{Ravens Bluff}.}\n                    Come and join one of the largest and oldest RPG campaigns in the world! Find\n                    out why it has attacted some of the best players in the game today. Accept\n                    the challenge. The \\Place[Ravens Bluff]{Living City} awaits...\n                    Suitable for use with characters of all levels."
+}
+title: "City of Ravens Bluff"
+leader: "The"
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1195"
+  check: 6
+}
+isbn13 {
+}
+pages: 160
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "RPGA"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

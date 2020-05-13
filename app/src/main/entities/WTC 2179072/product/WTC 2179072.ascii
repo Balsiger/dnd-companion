@@ -1,0 +1,73 @@
+template {
+  name: "WTC 2179072"
+  world: "Generic"
+  description: "In a land ravaged by monsters and tyrants, you stand as a champion of the faith, a beacon of light in a dark world. With weapons and spells, you battle evil and chaos. With unmatched conviction, you strike a blow that echoes throughout the heavens.\n                    This Dungeons & Dragons supplement presents never-before-seen options for divine characters, including new powers, feats, paragon paths, and epic destinies designed for the avenger, cleric, invoker, and paladin classes. \\Product{Divine Power} also provides rules for divine domains, as well as builds and class features that allow you to play new versions of your favorite divine class."
+  short_description: "Options for Avengers, Clerics, Invokers, and Paladins"
+}
+title: "Divine Power"
+subtitle: "Unleash the Fury of the Gods"
+cover {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior art director"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+date {
+  year: 2009
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4982"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4982"
+  check: 3
+}
+pages: 160
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

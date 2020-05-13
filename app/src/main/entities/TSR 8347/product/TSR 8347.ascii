@@ -1,0 +1,96 @@
+template {
+  name: "TSR 8347"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "The Kingpriest\'s arrogance brings the wrath of the gods upon\n  \\Place{Krynn}. The result is the \\Event{Cataclysm} -- chaos and anarchy,\n  despair and villainy... and inspiring heroism.\n\n  Mark Anthony, Nancy Varian Berberick, Todd Fahnestock, Richard A. Knaak,\n  Roger E. Moore, Douglas Niles, Nick O\'Donohoe, Dan Parkinson, Paul\n  B. Thompson and Tonya C. Cook, and Michael and Teri Williams contribute\n  untold stories to this indispensable collection. Margaret Weis and Tracy\n  Hickman enhance this lineup with an original novella and verse dedicated to\n  the accursed \\NPC{Lord Soth}."
+  short_description: "Volume V of the Dragonlance Tales."
+}
+title: "Cataclysm"
+leader: "The"
+subtitle: "A continent is sundered..."
+author {
+  name: "Williams, Michael"
+}
+author {
+  name: "Williams, Teri"
+}
+author {
+  name: "Anthony, Mark"
+}
+author {
+  name: "Fahnestock, Todd"
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Knaak, RIchard A."
+}
+author {
+  name: "Parkinson, Dan"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Cook, Tonya Carter"
+}
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 1992
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "430"
+  check: 9
+}
+isbn13 {
+}
+pages: 343
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume Five"
+series: "Tales Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

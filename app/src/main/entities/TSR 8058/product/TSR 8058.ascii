@@ -1,0 +1,56 @@
+template {
+  name: "TSR 8058"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Ravenloft"
+  description: "\\NPC{Larissa Snowmane} is a dancer aboard a magical riverboat. For years the craft has traveled in \\Place{Ravenloft}, unopposed by the sinister beings that rule over the \\Place{Dark Domains}.\n\nThen the boat arrives at the \\Monster{zombie}-plagued island of \\Place{Souragne}, however, the crew finds itself dancing the chilling music indeed. After discovering the captain\'s sinister secret, \\NPC{Larissa} must rely upon the creatures of the swamp and her mastery of the magical Dance of the Dead to save her own soul.\n\n\\Product{Dance of the Dead} is the third in an open-ended series of Gothic horror tales dealing with the masters and monsters of the Ravenloft dark fantasy setting."
+}
+title: "Dance of the Dead"
+author {
+  name: "Golden, Christie"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+date {
+  year: 1992
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "352"
+  check: 3
+}
+isbn13 {
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book Three"
+series: "Ravenloft Books"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+layout: COLOR_COVER

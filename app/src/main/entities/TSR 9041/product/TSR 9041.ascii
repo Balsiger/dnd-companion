@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9041"
+  synonym: "A3"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Assault on the Aerie of the Slave Lords"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 400
+  precision: 100
+}

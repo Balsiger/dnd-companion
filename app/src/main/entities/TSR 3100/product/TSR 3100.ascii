@@ -1,0 +1,74 @@
+template {
+  name: "TSR 3100"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  reference {
+    name: "Dragon 218"
+  }
+  world: "Birthright"
+  description: "the base campaign setting"
+}
+title: "Birthright: Lagacy of Kings"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "McComb, Colin"
+}
+date {
+  year: 1995
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0143"
+  check: 8
+}
+isbn13 {
+}
+pages: 192
+system: ADND_2ND
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 3
+}
+content {
+  part: CARD
+  description: "reference"
+  number: 12
+}
+content {
+  part: CARD
+  description: "war"
+  number: 112
+}
+content {
+  part: MISC
+  description: "cardboard treasure chest"
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  description: "four-panel referee"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 3
+}

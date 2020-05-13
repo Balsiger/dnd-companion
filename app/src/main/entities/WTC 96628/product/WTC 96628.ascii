@@ -1,0 +1,45 @@
+template {
+  name: "WTC 96628"
+  world: "Generic"
+  description: "\\large{Collect}\n                    Gather \\Class{fighters}, \\Class{wizards}, \\Monster{dragons}, and all your\n                    favorite Dungeons & Dragons heroes and monsters!\n                    \\large{Battle}\n                    Challenge your friends to fast, head-to-head combat between the forces of\n                    good and evil!\n                    \\large{Roleplay}\n                    Create new adventures and exiting campaigns using the Dungeons & Dragons\n                    roleplaying game!\n                    Each \\Product{Deathknell} Booster Pack Contains:\n                    \\list\n                    {8 randomized, prepainted, durable plastic miniatures}\n                    {Full-color game stat cards}\n                    Rules not included\n                    Pick up the \\Product{Dungeons & Dragons Miniatures Starter Set} for\n                    collectable miniatures game rules, additional miniatures, and more.\n                    The \\Product{Deathknell Expansion Pack} contains a randomized selection of\n                    figures designed to expand any collection of Dungeon & Dragons\n                    miniatures. The figures in this set will be chosen directly from key D&D\n                    titles, including \\Product{Libris Mortis: The Book of Undead},\n                    \\Product{Monster Manual III}, \\Product{Complete Adventurer}, the\n                    \\Product{Eberron Campaign Setting}, and the classic D&D adventure,\n                    \\Product{The Temple of Elemental Evil}."
+}
+title: "Deathknell Expansion Pack"
+subtitle: "The Dead Have Risen"
+date {
+  year: 2005
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3514"
+  check: 6
+}
+isbn13 {
+}
+system: DND_3RD
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+number: "6"
+series: "D&D Miniatures"
+price {
+  currency: "$ "
+  number: 1299
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "randomized, prepainted"
+  number: 8
+}
+content {
+  part: CARD
+  description: "color statistics"
+  number: 8
+}
+content {
+  part: SHEET
+  description: "aberration check list"
+  number: 1073741824
+}

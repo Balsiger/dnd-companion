@@ -1,0 +1,63 @@
+template {
+  name: "TSR 1105"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+  description: "Introductory audio CD game system."
+}
+title: "First Quest"
+date {
+  year: 1994
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "844"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_2ND
+type: RULEBOOK
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: CD
+  description: "audio"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "plastic figures"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "maps"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "posters"
+  number: 1073741824
+}
+content {
+  part: DICE
+  description: "dice"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "adventures"
+  number: 1073741824
+}

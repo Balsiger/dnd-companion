@@ -1,0 +1,45 @@
+template {
+  name: "TSR 8006"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "official dices"
+}
+title: "Official AD&D Adventure Gaming Dice"
+date {
+  year: 1986
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "505"
+  check: 7
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: ALL
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: DICE
+  description: "(4-6-8-10-12-20)"
+  number: 6
+}

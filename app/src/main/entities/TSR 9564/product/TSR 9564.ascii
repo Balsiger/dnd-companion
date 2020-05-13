@@ -1,0 +1,40 @@
+template {
+  name: "TSR 9564"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Dragonlance"
+  description: "master guide to beasts kind and cruel"
+}
+title: "Bestiary"
+leader: "The"
+author {
+  name: "Brown, Steve"
+}
+author {
+  name: "slade"
+}
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0795"
+  check: 9
+}
+isbn13 {
+}
+pages: 240
+system: SAGA
+type: ACCESSORY
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}

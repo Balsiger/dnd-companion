@@ -1,0 +1,206 @@
+template {
+  name: "Dragon 270"
+  world: "Generic"
+}
+title: "Dragon 270"
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Wright, Samuel"
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Fraser, Paul"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Williams, Aaron"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Wiker, JD"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Quick, Jeff \'Zippy\'"
+}
+author {
+  name: "Winninger, Ray"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Perkins, Chris"
+}
+author {
+  name: "Wilson, Johnny L."
+}
+editor {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistant editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Millet, Jason"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "Staples, Greg"
+}
+illustrator {
+  name: "Williams, L.A."
+}
+illustrator {
+  name: "Sharp, Shawn"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Miracola, Jeff"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photos"
+}
+illustrator {
+  name: "Soles, Jason"
+  job: "miniatures painting"
+}
+illustrator {
+  name: "Tracey, Ben"
+  job: "miniatures painting"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Wolf-Narciso, Shauna"
+  job: "senior art director"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+illustrator {
+  name: "Garfield, Susan"
+  job: "designer"
+}
+illustrator {
+  name: "Gough, Dan"
+  job: "designer"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulaton manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "advertising traffifc manager"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2000
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 130
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXIV 11"
+number: "270"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

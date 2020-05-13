@@ -1,0 +1,57 @@
+template {
+  name: "WTC 21808"
+  world: "Forgotten Realms"
+  description: "All is not well in the \\Place{City of Splendors}. A new \\Group{Zhentarim}\n                    threat lurks in the shadows of \\Place{Waterdeep}.\n                    Roguish \\Group{Harper} \\NPC{Bronwyn} is sent by \\Class{Archmage} \\NPC{Khelben\n                    Arunsun} on a mission to meet her long-lost father and reclaim her\n                    bloodline\'s dangerous heritage. She uncovers a family secret that threatens\n                    to destroy not only \\NPC{Bronwyn}, but the Harpers themselves!"
+}
+title: "Thornhold"
+author {
+  name: "Cunningham, Elaine"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1808"
+  check: 10
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book IV"
+series: "Songs & Swords"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

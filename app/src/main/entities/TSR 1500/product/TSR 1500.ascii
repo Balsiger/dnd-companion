@@ -1,0 +1,50 @@
+template {
+  name: "TSR 1500"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 225"
+  }
+  world: "Generic"
+  description: "The base set of the game."
+}
+title: "Dragon Dice Expandible Dice Game"
+author {
+  name: "Lester Smith"
+}
+date {
+  year: 1995
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+  currency: "\302\254\302\243 "
+  number: 999
+  precision: 100
+}
+content {
+  part: DICE
+  description: "randomly assorted"
+  number: 18
+}
+content {
+  part: FOLDER
+  description: "rules"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "play aides"
+  number: 1073741824
+}

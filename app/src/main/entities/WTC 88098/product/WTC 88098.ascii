@@ -1,0 +1,58 @@
+template {
+  name: "WTC 88098"
+  world: "Dragonlance"
+  description: "In the barren borderland between the kingdom of the \\Monster[elf]{elves} and\n  the land of the \\Monster[dwarf]{dwarves}, outlaws seize an\n  \\Monster[elf]{elven} princess. Sustained by faith in her husband and her god,\n  she waits patiently for the rescue that is sure to come.\n\n  But waiting is a dangerous game---one that can cause a princess and an outlaw\n  to look beyond themselves. To dare to trust the enemy.\n\n  In a place where suspicions run high and bloody battles are the order of the\n  day, trust can be the most dangerous game of all."
+}
+title: "Inheritance"
+leader: "The"
+author {
+  name: "Berberick, Nancy Varian"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1861"
+  check: 6
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Dragonlance Classics"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

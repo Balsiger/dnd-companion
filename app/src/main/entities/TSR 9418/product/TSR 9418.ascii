@@ -1,0 +1,46 @@
+template {
+  name: "TSR 9418"
+  synonym: "RM4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Ravenloft"
+  description: "new version of the 1982 release, levels 9-12"
+}
+title: "House of Strahd"
+author {
+  name: "Hickman, Tracy"
+}
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1993
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "671"
+  check: 9
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

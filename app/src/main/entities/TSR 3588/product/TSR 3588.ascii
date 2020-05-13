@@ -1,0 +1,55 @@
+template {
+  name: "TSR 3588"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Buck Rogers"
+  description: "join Buck Rogers in exciting battles"
+}
+title: "War Against the Han"
+author {
+  name: "Steven Schend"
+}
+date {
+  year: 1993
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 80
+system: XXVC
+type: RULES_SUPPLEMENT
+style: BOX
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: SHEET
+  description: "maps"
+  number: 2
+}
+content {
+  part: SHEET
+  description: "die-cut stand-ups"
+  number: 2
+}

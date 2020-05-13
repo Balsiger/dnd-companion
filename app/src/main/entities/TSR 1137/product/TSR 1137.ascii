@@ -1,0 +1,46 @@
+template {
+  name: "TSR 1137"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 225"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "None"
+  description: "New art, strategies and cards."
+}
+title: "Blood Wars Escalation Pack 4: Insurgents of the Inner Planes"
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+  year: 1996
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0365"
+  check: 1
+}
+isbn13 {
+}
+system: BLOOD_WARS
+audience: ALL
+type: BOOSTER_PACK
+style: PACK
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  number: 12
+}

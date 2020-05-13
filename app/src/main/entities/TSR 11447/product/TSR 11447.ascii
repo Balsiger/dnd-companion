@@ -1,0 +1,36 @@
+template {
+  name: "TSR 11447"
+  reference {
+    name: "net"
+  }
+  world: "Ravenloft"
+  description: "Few creatures strike more terror into the hears of AD&D game characters and\n                    their players than these vile beings. They grip one\'s heart in a fist of fear\n                    from which no escape is possible.\n                    This compilation contains the complete texts of \\Product{Van Richten\'s Guide\n                    to Vampires}, \\Product{Van Richten\'s Guide to Werebeasts}, and \\Product{Van\n                    Richten\'s Guide to the Created}, updated and usable in any AD&D campaign."
+}
+title: "Van Richten\'s Monster Hunter\'s Compendium, Volume One"
+date {
+  year: 1999
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1447"
+  check: 5
+}
+isbn13 {
+}
+pages: 288
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+number: "Volume One"
+series: "Van Richten\'s Monster Hunter\'s Compendium"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

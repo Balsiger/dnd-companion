@@ -1,0 +1,57 @@
+template {
+  name: "WTC 17878"
+  world: "Dragonlance"
+  description: "The latest title in a series based on characters from the bestselling\n  \\Product{War of Souls} trilogy.\n\n  This title is next in the series that explores the lives of key characters\n  from Margaret Weis & Tracy Hickman\'s current \\Product{Dragonlance}\n  trilogy. \\Product{Dark Thane} describes events that directly overlap the\n  \\Product{War of Souls} timeline. Author Jeff Crook also wrote the kickoff\n  title for this series, \\Product{Conundrum}."
+}
+title: "Dark Thane"
+author {
+  name: "Crook, Jeff"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2941"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Age of Mortals"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

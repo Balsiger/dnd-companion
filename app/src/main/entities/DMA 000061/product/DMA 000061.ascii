@@ -1,0 +1,187 @@
+template {
+  name: "DMA 000061"
+  world: "Generic"
+  description: "Dreaming of Dungeons & Dragons, but afraid it takes years to master the\n                    game? Meet your personal wizard! This book conjures up the basics to get you\n                    started --- essential rules, pregenerated characters, tips and tricks to\n                    improve your play, even a foldout dungeon map and battle grid. Read it today,\n                    and play tomorrow!\n                    Bill Slavicsek has been a game designer since 1986 and leads the creative\n                    effor for Wizards of the Coast. Richard Baker is a game developer and author\n                    of five \\Place{Forgotten Realms} novels.\n                    \\bold{The Dummies Way}\n                    \\list\n                    {Explanations in plain English}\n                    {\'Get in, get out\' information}\n                    {Icons and other navigational aids}\n                    {Tear-out cheat sheet}\n                    {Top ten lists}\n                    {A dash of humor and fun}\n                    Discover how to:\n                    \\list\n                    {Create a character}\n                    {Choose skills, spells, weapons, gear}\n                    {Find a game or start your own}\n                    {Follow D&D game ettiquette}\n                    {Become a Dungeon Master}\n                    {Enhance your game skills}"
+}
+title: "Dungeon & Dragons for Dummies"
+subtitle: "Understand the game, choose a character, and pick up the language of D&D"
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Baker, Richard L. III"
+}
+editor {
+  name: "Morris, Christopher"
+  job: "project editor"
+}
+editor {
+  name: "Layne, Melody"
+  job: "acquisitions editor"
+}
+editor {
+  name: "Rogers, Jean"
+  job: "copy editor"
+}
+editor {
+  name: "Wizards of the Coast"
+  job: "technical editor"
+}
+editor {
+  name: "Kirschner, Kevin"
+  job: "editorial manager"
+}
+editor {
+  name: "Foxworth, Amanda"
+  job: "editorial assitant"
+}
+illustrator {
+  name: "Hanley, Des"
+}
+illustrator {
+  name: "Jamieson, Hugh"
+}
+illustrator {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Tappin, Steve"
+}
+illustrator {
+  name: "Grant West, Lars"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Tennant, Rich"
+  job: "cartoons"
+}
+illustrator {
+  name: "Haughey, Joyce"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Hosier, LeAndra"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Osborn, Lysney"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Prendergast, Melanee"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Ryna, Heather"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Gillot Virgin, Mary"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Haughey, Joyce"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Haughey, Joyce"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Haughey, Joyce"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Haughey, Joyce"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Haughey, Joyce"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Haughey, Joyce"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Haughey, Joyce"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Haughey, Joyce"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Haughey, Joyce"
+  job: "layout and graphics"
+}
+illustrator {
+  name: "Haughey, Joyce"
+  job: "layout and graphics"
+}
+typographer {
+  name: "Niese, Joe"
+  job: "proofreader"
+}
+typographer {
+  name: "Todd, Tammy"
+  job: "proofreader"
+}
+manager {
+  name: "Graves, Richard"
+  job: "media development supervisor"
+}
+manager {
+  name: "Martinez, Adrienne"
+  job: "project coordinator"
+}
+manager {
+  name: "Plunkett, Rebecca R."
+  job: "indexer"
+}
+date {
+  year: 2005
+}
+isbn {
+  group: "0"
+  publisher: "7645"
+  title: "8459"
+  check: 6
+}
+isbn13 {
+}
+pages: 412
+system: NONE
+audience: ALL
+type: RULEBOOK
+style: PAPERBACK
+producer: "Wiley"
+series: "For Dummies"
+price {
+  currency: "$ "
+  number: 1999
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "dungeon"
+  number: 1073741824
+}

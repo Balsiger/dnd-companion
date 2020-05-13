@@ -1,0 +1,30 @@
+template {
+  name: "WTC 9698874"
+  world: "None"
+  description: "This is the first title in an exciting trilogy dealing with the new Magic:\n                    The Gathering expansion sets. It will give players a sneak peek at the\n                    upcoming card releases."
+}
+title: "Ravnica"
+author {
+  name: "Herndon, Cory J."
+}
+date {
+  year: 2005
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book I"
+series: "Ravnica Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,26 @@
+template {
+  name: "DMA 000045"
+  world: "None"
+  description: "The programe of the 1999 Gen Con Benelux in Antwerpen."
+}
+title: "Gen Con Benelux, Antwerpen 1999"
+date {
+  year: 1999
+}
+isbn {
+}
+isbn13 {
+}
+pages: 26
+system: NONE
+audience: ALL
+type: PROMOTION
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

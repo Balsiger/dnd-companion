@@ -1,0 +1,44 @@
+template {
+  name: "WTC 96709"
+  world: "Forgotten Realms"
+  description: "I sat alone because of thy hand, for thou hast filled me with\n                    indignation. Why is my pain perpetual, and my wound incurable, which refuseth\n                    to be healed? Wilt thou be altogether unto me as a liar, and as waters that\n                    fail?\n                    The spiritual heart of \\Place{Faer\\hat{u}n} beats in time with a hundred\n                    gods, and for each, a thousand servants. \\Product{The Priests} is a series\n                    that tells the tales of but a few."
+}
+title: "Maiden of Pain"
+subtitle: "The Priests"
+author {
+  name: "Franklin, Kameron M."
+}
+cover {
+  name: "Fishman, Marc"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2005
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3764"
+  check: 5
+}
+isbn13 {
+}
+pages: 307
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "3"
+series: "The Priests"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

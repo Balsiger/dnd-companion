@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5613"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "White Dragon, Sleet"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

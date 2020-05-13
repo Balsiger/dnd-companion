@@ -1,0 +1,52 @@
+template {
+  name: "TSR 6925"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "None"
+  description: "dices for the game"
+}
+title: "Spider-Man"
+author {
+  name: "Olmesdahl, Bill"
+}
+author {
+  name: "Steven Brown"
+}
+author {
+  name: "Steve Miller"
+}
+date {
+  year: 1998
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0779"
+  check: 7
+}
+isbn13 {
+}
+system: MARVEL_SUPER_DICE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: DICE
+  description: "random"
+  number: 8
+}
+content {
+  part: BOOKLET
+  description: "expanded rules"
+  number: 1073741824
+}

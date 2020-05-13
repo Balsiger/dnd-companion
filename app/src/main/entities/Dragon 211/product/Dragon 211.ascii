@@ -1,0 +1,179 @@
+template {
+  name: "Dragon 211"
+  world: "Generic"
+}
+title: "Dragon 211"
+author {
+  name: "Holmes, Buck Deason"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Perry, Chris"
+}
+author {
+  name: "Cummings, Darren C."
+}
+author {
+  name: "Dee"
+}
+author {
+  name: "Jay"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Bunnell, John C."
+}
+author {
+  name: "Bigelow, Robert \'Bob\'"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Schend, Steven E."
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Kurtz, Steve"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Bigelow, Robert \'Bob\'"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "associate editor"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "editorial assistant"
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "Scott, Michael"
+}
+illustrator {
+  name: "Pilsbury, Joseph"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Kohl, Charles"
+  job: "photographby"
+}
+illustrator {
+  name: "Kurtz, Karen"
+  job: "photography"
+}
+illustrator {
+  name: "Kurtz, Steve"
+  job: "photography"
+}
+illustrator {
+  name: "Parker, Charlie"
+}
+illustrator {
+  name: "Burr, Dan"
+}
+illustrator {
+  name: "Lessl, Bob"
+}
+illustrator {
+  name: "Linkert, Lo"
+}
+illustrator {
+  name: "Akin, Galan"
+}
+illustrator {
+  name: "Wagner, Ed"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Slavicsek, Bill"
+}
+illustrator {
+  name: "Latham, John"
+}
+illustrator {
+  name: "Manui, Barbara"
+}
+illustrator {
+  name: "Adams, Chris"
+}
+illustrator {
+  name: "Bethke, Mike"
+  job: "photography"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1994
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XIX 6"
+number: "211"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

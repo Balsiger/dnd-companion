@@ -1,0 +1,44 @@
+template {
+  name: "TSR 3103"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Birthright"
+  description: "new lands and war cards"
+}
+title: "Cities of the Sun"
+author {
+  name: "Baker, Richard L. III"
+}
+date {
+  year: 1995
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0194"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}

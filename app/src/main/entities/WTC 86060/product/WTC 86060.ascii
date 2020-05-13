@@ -1,0 +1,63 @@
+template {
+  name: "WTC 86060"
+  world: "Dragonlance"
+  description: "An all-new young reader adaptation of the third \\Place{Dragonlance} novel.\n\n  The third \\Place{Dragonlance} novel in the trilogy that launched the entire\n  \\Place{Dragonlance} novel line, \\Product{Dragons of Spring Dawning}, has been\n  adapted to a format for young readers and finishes up the release of young\n  reader adaptations of the entire \\Product{Chronicles} series. The novel has\n  been divided into two volumes, \\Product{Hope\'s Flame} and \\Product{A Dawn of\n  Dragons}."
+}
+title: "Dawn of Dragons"
+leader: "A"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3102"
+  check: 7
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Part Six"
+series: "Dragonlance Chronicles"
+series: "Dragons of Spring Dawning"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

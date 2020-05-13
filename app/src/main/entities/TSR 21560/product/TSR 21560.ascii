@@ -1,0 +1,65 @@
+template {
+  name: "TSR 21560"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "\\Product{The Halls of Stormweather}, a novel in seven parts, is the first\n                    book in a series that explores the mean streets of a city where everything\n                    has its price and even the wealthiest families will do anything to survive!\n                    \\bold{Ed Greenwood}\n                    The creator of the \\Place{Forgotten Realms} begins the tale with the capable\n                    but embattled patriarch of the \\Group{Uskevren} family.\n                    \\bold{Clayton Emery}\n                    The heir to the family fortune is brought to life by the author of\n                    \\Product{Star of Cursrah} and the \\Product{Netheril Trilogy}.\n                    \\bold{Lisa Smedan}\n                    A veteran science fiction and fantasy author shows us a young woman who\'s\n                    more than just a maid.\n                    \\bold{Dave Gross}\n                    The author of \\Product{An Opportunity for Profit} tells the story of the\n                    youngest son who carries a horrifying curse.\n                    \\bold{Voronica Whitney-Robinson}\n                    The story of the willful daughter \\NPC{Thazienne} is told by the co-author of\n                    \\Product{Spectre of the Black Rose}.\n                    \\bold{Richard Lee Byers}\n                    The author of \\Product{Dark Kingdoms} tells a tale of a wife with a past as\n                    long as it is dark.\n                    \\bold{Paul Kemp}\n                    A talented newcomer creates a servant with more secrets than his master could\n                    ever guess."
+}
+title: "Halls of Stormweather: A Novel in Seven Parts"
+leader: "The"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Emery, Clayton"
+}
+author {
+  name: "Smedman, Lisa"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Whitney-Robinson, Voronica"
+}
+author {
+  name: "Byers, Richard Lee"
+}
+author {
+  name: "Kemp, Paul S."
+}
+cover {
+  name: "Nielsen, Terese"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+date {
+  year: 2000
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1560"
+  check: 9
+}
+isbn13 {
+}
+pages: 342
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book One"
+series: "Sembia"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

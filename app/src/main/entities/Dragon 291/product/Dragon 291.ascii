@@ -1,0 +1,224 @@
+template {
+  name: "Dragon 291"
+  world: "Generic"
+  description: "Issue 290 of the magazine. Gnomes issue."
+}
+title: "Dragon 291"
+author {
+  name: "Ryan, Michael, G."
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Redman, Rich"
+}
+author {
+  name: "Richards, Jonathan"
+}
+author {
+  name: "Dunnell, Brian"
+}
+author {
+  name: "Wulf, Rich"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Barrett, Neal Jr."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Holian, Gary"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Four, Johnny"
+}
+author {
+  name: "Wilson, Johnny L."
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assistant editor"
+}
+editor {
+  name: "Foglio, Phil"
+  job: "contributing editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Kovalic, John"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robing D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Aaron"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+cover {
+  name: "Staples, Greg"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Gianni, Tom"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Laubenstein, Jeff"
+}
+illustrator {
+  name: "Mitchell, Matthew"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Rex, Adam"
+}
+illustrator {
+  name: "Ricker, Scott"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Staples, Greg"
+}
+illustrator {
+  name: "Vilardi, Mike"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2002
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 8"
+number: "291"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

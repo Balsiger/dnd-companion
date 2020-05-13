@@ -1,0 +1,28 @@
+template {
+  name: "TSR 11409"
+  reference {
+    name: "net"
+  }
+  world: "Marvel Super Heroes"
+  description: "collection of heroes and villans"
+}
+title: "Team-Up Roster Book"
+author {
+  name: "Harold Johnson"
+}
+date {
+  year: 1999
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 144
+system: SAGA
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

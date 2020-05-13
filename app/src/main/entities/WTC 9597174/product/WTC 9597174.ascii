@@ -1,0 +1,58 @@
+template {
+  name: "WTC 9597174"
+  world: "Eberron"
+  description: "\\NPC{Diran}, once a feared assassin, has turned his back on murder, seeking the life of a wandering \\Class{priest}. His travels have taken him north, into lands caught between warring political factions and plagued by lawless pirates. But \\NPC{Diran} refuses to take sides.\n\nBut when he stumbles upon a plot to restore an ancient relic and use its powers to create an army of assassins, remaining neutral is no longer an option. It\342\200\232\303\204\303\264s kill or be killed, take the fight to the enemy... even if it means embracing the \\Class{assassin}\342\200\232\303\204\303\264s nature within his soul."
+}
+title: "Forge of the Mind Slayers"
+subtitle: "One man searching for peace in a land that knows only blood."
+author {
+  name: "Waggoner, Tim"
+}
+editor {
+}
+cover {
+  name: "Swanland, Raymond"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4313"
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4313"
+  check: 5
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 2"
+series: "Blade of the Flame"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

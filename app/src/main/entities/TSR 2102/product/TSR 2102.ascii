@@ -1,0 +1,39 @@
+template {
+  name: "TSR 2102"
+  synonym: "MC1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+  description: "A lot of monsters"
+}
+title: "Monstrous Compendium: Volume I"
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+pages: 144
+system: ADND_2ND
+type: RULEBOOK
+style: SHEETS
+producer: "TSR"
+number: "Volume I"
+series: "Monster Manual"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: FOLDER
+  number: 1073741824
+}

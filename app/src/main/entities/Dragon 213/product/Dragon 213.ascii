@@ -1,0 +1,153 @@
+template {
+  name: "Dragon 213"
+  world: "Generic"
+}
+title: "Dragon 213"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Bonny, Edward"
+}
+author {
+  name: "Carter, Michele"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Granato, Larry"
+}
+author {
+  name: "Bunnell, John C."
+}
+author {
+  name: "Jay"
+}
+author {
+  name: "Dee"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Bigelow, Robert \'Bob\'"
+}
+author {
+  name: "Smith, Lester"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Schend, Steven"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Nesmith, Bruce"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "associate editor"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "editorial assistant"
+}
+cover {
+  name: "Ruppel, Robh"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Dow, Tom"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Kohl, Charles"
+  job: "photographby"
+}
+illustrator {
+  name: "Pillsbury, Joseph"
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "Lam, Brian"
+}
+illustrator {
+  name: "Doney, Mark"
+}
+illustrator {
+  name: "Manui, Barbara"
+}
+illustrator {
+  name: "Adams, Chris"
+}
+illustrator {
+  name: "Methke, Mike"
+  job: "photography"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1995
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XIX 8"
+number: "213"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

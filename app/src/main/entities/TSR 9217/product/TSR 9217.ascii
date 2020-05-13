@@ -1,0 +1,67 @@
+template {
+  name: "TSR 9217"
+  synonym: "FR2"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Forgotten Realms"
+  description: "Amid the storm-tossed vastness of the \\Place{Trackless Sea} west of the\n                    mainland, a group of rocky islands lies exposed to the full brunt of winter\n                    gales. These isles---the \\Place[Moonshea Isles]{Moonshaes}---are home to some\n                    of the hardiest folk of the \\Place{Forgotten Realms}.\n                    Now the \\Place[Moonshea Isles]{Moonshaes}---the setting of the first\n                    \\Place{Forgotten Realms} novel, \\Product[TSR 8410]{Darkwalker on\n                    Moonshae}---are detailed for your role-playing campaign. The cultures,\n                    deities, and locales of the isles are described in AD&D game terms. This\n                    source book includes full-color maps displaying the \\Place[Moonshea\n                    Isles]{Moonshaes} and surrounding islands, many close-up maps depicting\n                    particular regions of the \\Place[Moonshea Isles]{Moonsheas}, and all the\n                    information you need to establish a campaign on these misty lands with\n                    \\Place{Celtic} roots."
+}
+title: "Moonshae"
+author {
+  name: "Niles, Douglas"
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Hildebrandt, Tim"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Barr, George"
+}
+typographer {
+  name: "Janke, Kim N."
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+date {
+  year: 1987
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "494"
+  check: 8
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

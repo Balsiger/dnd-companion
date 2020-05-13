@@ -1,0 +1,90 @@
+template {
+  name: "PZO 1110"
+  world: "Generic"
+  description: "The Pathfinder Roleplaying Game puts you in the role of a brave adventurer fighting to survive in a world beset by magic and evil. Will you cut your way through monster-filled ruins and cities rife with political intrigue to emerge as a famous hero laden with fabulous treasure, or will you fall victim to treacherous traps and fiendish monsters in a forgotten dungeon? Your fate is yours to decide with this giant Core Rulebook that provides everything a player needs to set out on a life of adventure and excitement!\n                    This imaginative tabletop game builds upon more than 10 years of system development and an open playtest involving more than 50,000 gamers to create a cutting-edge RPG experience that brings the all-time best-selling set of fantasy rules into the new millennium.\n                    \\list\n                    {The Pathfinder Roleplaying Game Core Rulebook includes: All player and Game Master rules in a single volume}\n                    {Complete rules for fantastic player races like elves, dwarves, gnomes, halflings, and half-orcs}\n                    {Exciting new options for character classes like fighters, wizards, rogues, clerics, and more}\n                    {Streamlined and updated rules for feats and skills that increase options for your hero}\n                    {A simple combat system with easy rules for grapples, bull rushes, and other special attacks}\n                    {Spellcaster options for magic domains, familiars, bonded items, specialty schools, and more}\n                    {Hundreds of revised, new, and updated spells and magical treasures}\n                    {Quick-generation guidelines for nonplayer characters}\n                    {Expanded rules for curses, diseases, and poisons}\n                    {A completely overhauled experience system with options for slow, medium, and fast advancement}\n                    {...and much, much more!}\n                    "
+  short_description: "The pathfinder roleplaying game for 3.5"
+}
+title: "Pathfinder Roleplaying Game"
+subtitle: "Enter a Fantastic World of Adventure"
+author {
+  name: "Oppedisano, Greg"
+  job: "additional contributions"
+}
+author {
+  name: "Woon, Hank"
+  job: "additional contributions"
+}
+editor {
+  name: "Sutter, James Lafond"
+  job: "editing and development"
+}
+editor {
+  name: "Wertz, Victor K."
+  job: "editing and development"
+}
+editor {
+  name: "Alvarez, Jeffrey"
+  job: "editing assistance"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "editing assistance"
+}
+editor {
+  name: "Eitelbach, David A."
+  job: "editorial intern"
+}
+editor {
+  name: "Woon, Hank"
+  job: "editorial intern"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Yildiz, Serdar"
+}
+illustrator {
+  name: "Robinson, Sarah E."
+  job: "art director"
+}
+illustrator {
+  name: "Davis, James"
+  job: "senior art director"
+}
+date {
+  year: 2009
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "150"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "150"
+  check: 3
+}
+pages: 576
+system: DND_3_5
+audience: ALL
+type: RULEBOOK
+style: HARDCOVER
+producer: "Paizo"
+price {
+  currency: "$"
+  number: 4999
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

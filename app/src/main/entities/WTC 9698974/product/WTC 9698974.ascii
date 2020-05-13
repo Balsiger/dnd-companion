@@ -1,0 +1,34 @@
+template {
+  name: "WTC 9698974"
+  world: "Dragonlance"
+  description: "\\Product{Wizard\'s Curse} continues a new series of \\Place{Dragonlance}\n  fantasy adventures written specifically for readers ages 10 and up. The\n  series features a group of young companions who band together for friendship,\n  adventure, and excitement during the golden age of the \\Place{Dragonlance}\n  world."
+}
+title: "Wizard\'s Curse"
+author {
+  name: "Woods, Christina"
+}
+date {
+  year: 2005
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3794"
+  check: 7
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume I"
+series: "Trinistyr Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

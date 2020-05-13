@@ -1,0 +1,36 @@
+template {
+  name: "TSR 11451"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{The world is at your fingertips.}\n                    The entire planet of \\Place{Abeir-Toril} has been laid out before you with\n                    this completely interactive atlas.\n                    Explore never-before-seen realms, sprawling cities, treacherous overland\n                    routes, perilous dungeons---or more than 500 maps from \\Product{Forgotten\n                    Realms} adventures.\n                    Examine the maps of entire continents, or zoom in for local details. Players\n                    and DMs alike can print out every square foot, mile, and quadrant to\n                    accentuate their roleplaying adventures.\n                    Everything is customizable. DMs can modify existing maps and add new levels\n                    of detail using the \\Product{AD&D Core Rules Version 2.0 CD-ROM} or\n                    ProFantasy\'s \\Product{Campaign Cartographer 2}. The more than 500 new map\n                    symbols are available to use in your own maps as well.\n                    Put the power of the \\Product{Forgotten Realms Interactive Atlas} at your\n                    disposal and see a new level of detail in your adventures."
+}
+title: "Interactive Atlas"
+author {
+  name: "ProFantasy"
+}
+date {
+  year: 1999
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1451"
+  check: 3
+}
+isbn13 {
+}
+system: ADND_REVISED
+type: ELECTRONIC_ACCESSORY
+style: MEDIUM_BOX
+series: "CD-ROM"
+price {
+}

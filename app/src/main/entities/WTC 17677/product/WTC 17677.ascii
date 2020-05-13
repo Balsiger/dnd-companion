@@ -1,0 +1,58 @@
+template {
+  name: "WTC 17677"
+  world: "Forgotten Realms"
+  description: "This new release of the classic R.A. Salvatore novel continues the classic\n                    tale of Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt\n                    Do\'Urden}. Although this was the first title actually published about\n                    \\NPC{Drizzt}, it has now been placed in its proper chronological order as\n                    fourth in the series. Each title in \\Product{The Legend of Drizzt} series\n                    showcases the classic \\Monster{dark elf} novels in new, deluxe hardcover\n                    editions. Each title will feature all new cover art and new introductions\n                    written by those who have become familiar with Salvatore and \\NPC{Drizzt}\n                    over the years."
+}
+title: "Crystal Shard"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3613"
+  check: 4
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book IV"
+series: "Legend of Drizzt"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

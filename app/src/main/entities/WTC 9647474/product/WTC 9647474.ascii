@@ -1,0 +1,35 @@
+template {
+  name: "WTC 9647474"
+  world: "None"
+  description: "\\NPC{Yumi Suzuki}\'s mom is acting really weird. When \\NPC{Yumi} brings home\n                    a stray kitten, her animal-loving mom is furious. \\NPC{Mrs. Suzuki} normally\n                    hates pizza but has been eating it every night. What\'s the deal? Has\n                    \\NPC{Yumi}\'s real mom been kidnapped by aliens? Has a robot taken over her\n                    brain? \\NPC{Nova}, \\NPC{Yumi}\'s best friend, tells her that the mysterious\n                    dare might help her find answers. So \\NPC{Yumi} gives it a try, and what she\n                    discovers is a big surprise."
+}
+title: "Yumi Talks the Talk"
+subtitle: "Talk to an animal in its own language. Would you dare?"
+author {
+  name: "Emesse, Tea"
+}
+date {
+  year: 2006
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3992"
+  check: 3
+}
+isbn13 {
+}
+pages: 144
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 6"
+series: "Star Sisterz"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

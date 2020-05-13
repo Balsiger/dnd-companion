@@ -1,0 +1,34 @@
+template {
+  name: "WTC 11835"
+  world: "Generic"
+  description: "\\bold{Masters of the Mind}\n                    Adventurers speak of a rare breed of heroes who can bend the laws of nature\n                    to their bidding through sheer force of will. This mental manipulation is not\n                    magical, nor is it the stuff of superstitious gossip. It is the art of\n                    psionics.\n                    This supplement for the D&D game provides psionic character classes and\n                    prestige classes, psionic skills and feats, a psionic combat system, and a\n                    plethora of psionic powers, items, and monsters---everything you need to\n                    include psionics in your campaign.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}. A player only needs the \\Product{Player\'s Handbook}."
+}
+title: "Psionics Handbook"
+date {
+  year: 2001
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1835"
+  check: 7
+}
+isbn13 {
+}
+pages: 160
+system: DND_3RD
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "TSR"
+series: "Player Guide"
+price {
+  currency: "$ "
+  number: 2695
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

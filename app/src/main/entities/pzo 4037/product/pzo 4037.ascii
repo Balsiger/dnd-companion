@@ -1,0 +1,47 @@
+template {
+  name: "pzo 4037"
+  world: "Generic"
+  description: "Fraught with mysterious idols, hidden pirate treasures, and ravenous cannibals, unexplored islands hold the promise of danger and adventure! Whether your heroes are searching for castaways or becoming them, no Game Master wants to spend time drawing palm trees and dangerous shoals. Fortunately, with Paizo Publishing\'s latest GameMastery Map Pack, you don\'t have to! This line of gaming accessories provides simple and elegant tools for the busy Game Master. Inside, you\'ll find 18 captivating 5\'\' x 8\'\' map tiles that can be combined into a variety of jungle trails, white water rapids, and more, including:\n\n\\list\n{Castaway\'s Lean-to}\n{Idols}\n{Jungle Paths}\n{Pirate Cove}\n{Rapids}\n{Shipwreck}\n{Treasure Trove}\n{Waterfall}\n\nGame Masters shouldn\'t waste their time sketching maps every time their players get shipwrecked. With GameMastery Map Pack: Lost Island, you\'ll always be ready whenever adventurers discover new lands to explore!\n\nWet, dry, and permanent markers erase from the tiles!\n"
+  short_description: "Map tiles showing a lost island."
+}
+title: "Lost Island"
+subtitle: "Land Ho!"
+cover {
+  name: "Engle, Jason"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+date {
+  year: 2013
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "414"
+  check: 6
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Map Pack"
+series: "GameMastery"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "map tile"
+  number: 18
+}
+layout: FULL_COLOR

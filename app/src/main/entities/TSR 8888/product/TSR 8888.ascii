@@ -1,0 +1,20 @@
+template {
+  name: "TSR 8888"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Dragonlance"
+}
+title: "Dragonlance calendar"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: CALENDAR
+price {
+}

@@ -1,0 +1,188 @@
+template {
+  name: "Dragon 296"
+  world: "Generic"
+  description: "Issue 295 of the magazine. 26th Anniversary issue."
+}
+title: "Dragon 296"
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Strohm, Keith"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Harlan, Thomas"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "McDermott, Will"
+}
+author {
+  name: "Zavoda, Jason"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Four, Johnny"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assistant editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "contributing editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robing D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+cover {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Appel, Chris"
+}
+illustrator {
+  name: "Bader, Daren"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Gianni, Tom"
+}
+illustrator {
+  name: "Koefoed, Lori"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Mitchell, Tony"
+}
+illustrator {
+  name: "Moore, Monte"
+}
+illustrator {
+  name: "Riche, Darrell"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2002
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 1"
+number: "296"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

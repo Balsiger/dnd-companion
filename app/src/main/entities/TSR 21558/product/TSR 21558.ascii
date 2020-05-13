@@ -1,0 +1,33 @@
+template {
+  name: "TSR 21558"
+  reference {
+    name: "net"
+  }
+  world: "Star*Drive"
+  description: "life in a street gane in the underground hellf of Oberon"
+}
+title: "Two of Minds"
+author {
+  name: "William H. Jr. Keith"
+}
+date {
+  year: 2000
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1558"
+  check: 7
+}
+isbn13 {
+}
+system: ALTERNITY
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

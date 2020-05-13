@@ -1,0 +1,184 @@
+template {
+  name: "Dragon 216"
+  world: "Generic"
+}
+title: "Dragon 216"
+author {
+  name: "Miller, Steven"
+}
+author {
+  name: "Jones, Spike Y."
+}
+author {
+  name: "Beach, Tim"
+}
+author {
+  name: "Young, Roy V."
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Carpenter, Ken"
+}
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Kurtz, Steve"
+}
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Collins, Arthur"
+}
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "associate editor"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "editorial assistant"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "Hinds, Gareth"
+}
+illustrator {
+  name: "The Fillib\\umlaut{a}ch Brothers"
+}
+illustrator {
+  name: "Kohl, Charles"
+  job: "photography"
+}
+illustrator {
+  name: "Beach, Tim"
+}
+illustrator {
+  name: "Smith, Larry"
+}
+illustrator {
+  name: "Mott, Michael"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Zenz, Dave"
+}
+illustrator {
+  name: "Kooharian, Dave"
+}
+illustrator {
+  name: "Williams, Gary"
+}
+illustrator {
+  name: "May, Rex F."
+}
+illustrator {
+  name: "Mayer, Dwain"
+}
+illustrator {
+  name: "Cavalier, Bill"
+}
+illustrator {
+  name: "Pillsbury, Bill"
+}
+illustrator {
+  name: "Manui, Barbara"
+}
+illustrator {
+  name: "Adams, Chris"
+}
+illustrator {
+  name: "Witmer, Don"
+  job: "photography"
+}
+illustrator {
+  name: "Carpenter, Ken"
+  job: "painting"
+}
+illustrator {
+  name: "Bond, Alexander"
+  job: "painting"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Ciske, Renee"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1995
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XIX 11"
+number: "216"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

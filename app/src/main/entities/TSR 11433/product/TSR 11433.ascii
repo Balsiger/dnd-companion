@@ -1,0 +1,42 @@
+template {
+  name: "TSR 11433"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Dark.Matter"
+  description: "introducing a near-future world"
+}
+title: "Dark.Matter"
+author {
+  name: "Wolfgang Baur"
+}
+author {
+  name: "Monte Cook"
+}
+date {
+  year: 1999
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1433"
+  check: 5
+}
+isbn13 {
+}
+pages: 256
+system: ALTERNITY
+type: CAMPAIGN_SETTING
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}

@@ -1,0 +1,34 @@
+template {
+  name: "TSR 3563"
+  synonym: "25CA1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Buck Rogers"
+  description: "Buck Rogers takes you from adventure to adventure"
+}
+title: "Buck Roger in the 25th Century"
+date {
+  year: 1994
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "854"
+  check: 4
+}
+isbn13 {
+}
+system: XXVC
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

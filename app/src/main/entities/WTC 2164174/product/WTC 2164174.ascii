@@ -1,0 +1,49 @@
+template {
+  name: "WTC 2164174"
+  world: "Eberron"
+  description: "A swollen summer sun beats down mercilessly on the \\Place{City of Towers} as a savage series of senseless slaughters spreads throughout the city. Shimmering in the stifling heat, \\Place{Sharn} trembles on the brink of an explosion.\n\n\\NPC{Ulther Whitsun} is just trying to do his job of fixing problems. But when he finds himself teamed up with a young and ambitious chronicler, events thrust him into the center of the city\'s agony. And he finds that treachery can touch everything around him."
+  short_description: "Book 2 of the Landernlight Files"
+}
+title: "When Night Falls"
+subtitle: "\\NPC{Ulther Whitsun} Is A Fixer."
+author {
+  name: "DeWolf Parker"
+}
+cover {
+  name: "Van Der Haegen, Cyril"
+}
+date {
+  year: 2008
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4792"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4792"
+  check: 8
+}
+pages: 274
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 2"
+series: "The Lanternlight Files"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

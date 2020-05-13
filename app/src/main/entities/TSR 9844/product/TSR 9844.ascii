@@ -1,0 +1,26 @@
+template {
+  name: "TSR 9844"
+  synonym: "L3"
+  world: "Generic"
+  description: "This module has lain unseen and forgotten in the TSR design vault for twenty\n                    years. Written as the concluding adventure in the \'L\' series, the manuscript\n                    was completed in 1979. As a part of the celebration of the Silver Anniversary\n                    of the Dungeon & Dragons game, we\'ve unearthed this classic adventure and\n                    presented it here for the first time---\\bold{the last 1st Edition AD&D\n                    adventure ever to be published!}\n                    Your party of stalwart heroes must venture into a lost \\Monster{dwarven}\n                    mining complex, fighting terrible monsters, bypassing deadly traps, and\n                    exploring chambers heavy with the dust of ages. Somewhere deep below the\n                    surface lies the heart of darkness---a corrupting evil that must be stopped\n                    before its influence can spread."
+}
+title: "Dee Dwarven Delve"
+date {
+  year: 1999
+}
+isbn {
+}
+isbn13 {
+}
+pages: 24
+system: DND_1ST
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "silver anniversary"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

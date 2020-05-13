@@ -1,0 +1,116 @@
+template {
+  name: "Dungeon 53"
+  world: "Generic"
+  description: "This is issue 53 of the dungeon magazine."
+}
+title: "Dungeon 53"
+author {
+  name: "Cunningham, J. Lee"
+}
+author {
+  name: "Walsh, Willie"
+}
+author {
+  name: "Veen, Andrew"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Culotta, Paul F."
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "O\'Connor, William"
+}
+cartographer {
+  name: "Ciske, Ren\\grave{e}e"
+}
+cartographer {
+  name: "Sutherland III, David C."
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Anderson, Eric"
+}
+illustrator {
+  name: "Parker, Charlie"
+}
+illustrator {
+  name: "Scott, Michael"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+typographer {
+  name: "Isler, Tracy"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1995
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "IX 5"
+number: "53"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

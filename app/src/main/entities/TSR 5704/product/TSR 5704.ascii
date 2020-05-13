@@ -1,0 +1,36 @@
+template {
+  name: "TSR 5704"
+  reference {
+    name: "complete product listing"
+  }
+  description: "Three miniatures of \\Monster{dwarves}."
+}
+title: "Dwarves"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+price {
+}
+content {
+  part: MINIATURE
+  description: "dwarf"
+  number: 3
+}
+content {
+  part: MINIATURE
+  description: "shields"
+  number: 3
+}
+content {
+  part: MINIATURE
+  description: "weapons"
+  number: 3
+}

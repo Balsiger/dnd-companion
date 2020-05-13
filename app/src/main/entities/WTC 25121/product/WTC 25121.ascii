@@ -1,0 +1,41 @@
+template {
+  name: "WTC 25121"
+  synonym: ""
+  world: "Generic"
+  description: "No realm in the D&D world stirs the imagination like the \\Place{Underdark}. This vast subterranean domain holds thousands of adventure possibilities and myriad threats, including \\Monster{drow}, \\Monster{mind flayers}, \\Monster{dragons}, and worse! Entire campaigns can unfold in its depths, and its rewards are boundless.\n                    This Dungeons & Dragons game supplement contains everything a Dungeon Master needs to run adventures or campaigns set in the vast underworld of his or her D&D campaign, including new monsters and hazards, ready-to-play encounters, monster lairs, and detailed information on various dark-dwelling \'movers and shakers\'."
+  short_description: "A detailed view into the underdark."
+}
+title: "Underdark"
+subtitle: "Descend inot the Depths"
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5387"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5387"
+  check: 5
+}
+pages: 160
+system: NONE
+type: ACCESSORY
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

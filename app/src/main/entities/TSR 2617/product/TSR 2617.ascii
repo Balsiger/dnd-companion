@@ -1,0 +1,52 @@
+template {
+  name: "TSR 2617"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "Planescape"
+  description: "Lost... Lost...\n\n  Though \\NPC{Areas} rescued his uncle from the clutches of \\Monster{fiends},\n  he lost his love, \\NPC{Nina}, to a conniving \\Monster{tiefling}...and to the\n  very pits of the \\Place{Abyss}. Now he descends to the \\Place{underworld} to\n  find her but discovers that, in the \\Place{planes}, a person can be lost in\n  more than body.\n\n  \\NPC{Nina} has gone mad. With powers she only now is discovering, she draws\n  to herself a hellish army bent on capturing a beachhead on the\n  \\Place{Beastlands}. What \\NPC{Areas} and the forces of good do not realize is\n  that this toehold provides her monstrous horde a doorway to all the\n  \\Place{planes}."
+}
+title: "Abyssal Warriors"
+author {
+  name: "Robert J. King"
+}
+cover {
+  name: "Pollack, Alan"
+}
+illustrator {
+  name: "Diesel"
+}
+date {
+  year: 1996
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0501"
+  check: 8
+}
+isbn13 {
+}
+pages: 314
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Two"
+series: "Blood Wars Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

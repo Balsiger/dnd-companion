@@ -1,0 +1,59 @@
+template {
+  name: "TSR 8496"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "Restored to his throne, King \\NPC{Tristan Kendrick} must confront the\n                    fearful costs of his rescue from the \\Place{Coral Kingdom}. One of his\n                    daughters suffers tragically from the curse of an evil god, while the other\n                    must face a decision that will chart the destiny of the kingdom.\n                    At the same time, near the heart of \\Place{Gwynneth}, a new peril stirs...\n                    Douglas Niles is the author of the immensely popular \\Product{Maztica} and\n                    \\Product{Moonshae} Trilogies. The \\Product{Druidhome Trilogy} is the\n                    much-anticipated sequel to the \\Product{Moonshae Trilogy}."
+}
+title: "Druid Queen"
+leader: "The"
+author {
+  name: "Niles, Douglas"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+date {
+  year: 1993
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "568"
+  check: 2
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Three"
+series: "Druidhome Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

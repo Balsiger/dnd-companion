@@ -1,0 +1,47 @@
+template {
+  name: "WTC 2190974"
+  world: "Forgotten Realms"
+  description: "The formerly green fields lie in war-torn ruins. The formerly living populace is undead. And the formerly brilliant necromancer, the mastermind behind the civil war that drove the ruling council into exile, appears to have gone insane. But rumor spreads of a reason behind his randomness --- a reason all survivors of \\NPC{Thay} must rally against."
+  short_description: "The Haunted Lands, Book III"
+}
+title: "Unholy"
+subtitle: "I saw something fould than I\'ve ever seen before. Something truly unholy. I understand now what drove \\NPC{Fastrin} mad. Why he was willing to slaughter us all."
+author {
+  name: "Byers, Richard Lee"
+}
+cover {
+  name: "Ruth, Greg"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2009
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5021"
+  check: 8
+}
+isbn13 {
+}
+pages: 342
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "Haunted Lands"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

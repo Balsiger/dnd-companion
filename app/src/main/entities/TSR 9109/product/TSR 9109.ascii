@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9109"
+  synonym: "C5"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Bane of Llywelyn"
+leader: "The"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

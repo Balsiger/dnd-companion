@@ -1,0 +1,216 @@
+template {
+  name: "Dragon 277"
+  world: "Generic"
+  description: "Issue 277 of the magazine. The main theme is future fantasy"
+}
+title: "Dragon 277"
+author {
+  name: "Ryan, Michael, G."
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Athans, Philip"
+}
+author {
+  name: "Barron, T. A."
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Hickman, Tracey Raye"
+}
+author {
+  name: "Kemp, Paul S."
+}
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Krashos, George"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Tweet, Jonathan"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Wilson, Johnny"
+}
+author {
+  name: "Winninger, Ray"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Haddock, Eric"
+  job: "assistant editor"
+}
+editor {
+  name: "Matthew Sernett"
+  job: "assistant editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robin D."
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+editor {
+  name: "Fiorito, Stacie A."
+  job: "editorial intern"
+}
+cover {
+  name: "Walker, Kev"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Parente, Paolo"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Mayeirk, Val"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Riche, Darrel"
+}
+illustrator {
+  name: "Laubenstein, Jeff"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Mosely, Tom"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Francisco, Anthony"
+}
+illustrator {
+  name: "Ramirez, Juan"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Peter Whitley"
+  job: "art director"
+}
+illustrator {
+  name: "Travers W. Dow"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Scott Ricker"
+  job: "staff illustrator"
+}
+illustrator {
+  name: "Wood, Sam"
+  job: "staff illustrator"
+}
+manager {
+  name: "Johnny Wilson"
+  job: "group publisher"
+}
+manager {
+  name: "Wendy Noritake"
+  job: "publisher"
+}
+manager {
+  name: "Pierce Watters"
+  job: "circulation director"
+}
+manager {
+  name: "Bob Henning"
+  job: "advertising sales director"
+}
+manager {
+  name: "John Dunn"
+  job: "production director"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "assistant production manager"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Chung, Alice"
+  job: "advertising intern"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 132
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXV 6"
+number: "277"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

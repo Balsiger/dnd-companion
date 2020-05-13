@@ -1,0 +1,67 @@
+template {
+  name: "TSR 1076"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Three mini-adventures about goblins, orcs, bugbears, ogres and more."
+}
+title: "Goblin\'s Lair"
+leader: "The"
+author {
+  name: "Davis, Graeme"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "382"
+  check: 5
+}
+isbn13 {
+}
+pages: 48
+system: DND_1ST
+type: ADVENTURE
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "3-D game props"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "booklets"
+  number: 3
+}
+content {
+  part: MAP
+  description: "maps"
+  number: 3
+}
+content {
+  part: COUNTER
+  description: "counters"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "stand-ups"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "tiles"
+  number: 1073741824
+}

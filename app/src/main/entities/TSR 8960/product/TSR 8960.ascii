@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8960"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Lords of Doom"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Ten"
+price {
+}

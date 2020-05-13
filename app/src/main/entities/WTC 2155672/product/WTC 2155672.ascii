@@ -1,0 +1,170 @@
+template {
+  name: "WTC 2155672"
+  world: "Generic"
+  description: "Your player characters stand on a precipice, the corpses of slain enemies all around them. Across a great expanse awaits the final threat---their ancient nemesis. What terror will you unleash upon them?\n                    This supplement provides Dungeon Masters with truly wicked threats to challenge high-level adventurers. Each \'elder evil\' features in this tome comes with a detailed description, statistics blocks for the elder evil and its minions, tips for how to incorporate the elder evil into any D&D campaign, adventure seeds, and maps of the elder evil\'s lair (complete with encounters and room descriptions). This book also provides guidelines to help DMs create their own unique elder evils as worthy campaign villains and endgame encounters."
+}
+title: "Elder Evils"
+subtitle: "High-Level Threats for Your Campaign"
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Bulmahn, Jason"
+  job: "designer"
+}
+author {
+  name: "Gorden, Greg"
+  job: "designer"
+}
+author {
+  name: "Jacobs, James"
+  job: "designer"
+}
+author {
+  name: "Louve, Rhiannon"
+  job: "designer"
+}
+author {
+  name: "McArtor, Michael"
+  job: "designer"
+}
+author {
+  name: "Pryor, Anthony"
+  job: "designer"
+}
+editor {
+  name: "Bonner, Logan"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Coimbra, Miguel"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Izzy"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Srisuwan, Skan"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Martin, Michael"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Murayama, Soe"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "freelance coordinator"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Collins, Andy"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Walker, Kris"
+  job: "production manager"
+}
+manager {
+  name: "Overbay, Shari"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4733"
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4733"
+  check: 1
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+layout: FULL_COLOR

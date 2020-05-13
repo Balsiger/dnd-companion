@@ -1,0 +1,45 @@
+template {
+  name: "TSR 21609"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  world: "Dragonlance"
+  description: "Now the people know that the \\Monster{dragon} minions of \\God{Takhisis},\n  \\God{Queen of Dragons}, have returned. The people of all nations prepare to\n  fight to save their homes, their lives, and their freedom. But the races have\n  long been divided by hatred and prejudice. \\Monster[elf]{Elven}\n  \\Class{warriors} and \\Monster{human} \\Class{knights} fight among\n  themselves. It seems the battle has been lost before it begins.\n\n  The companions are separated, torn apart by war. A full season will pass\n  before they meet again--if they meet again. As the darkness deepens, a\n  disgraced \\Class{knight}, a pampered \\Monster[elf]{elfmaiden}, and a\n  rattle-brained \\Monster{kender} stand alone in the pale winter sunlight.\n\n  Not much in the way of heroes."
+}
+title: "Dragons of Winter Night"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+date {
+  year: 2000
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1609"
+  check: 5
+}
+isbn13 {
+}
+pages: 400
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Book Two"
+series: "Chronicles Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

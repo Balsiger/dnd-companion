@@ -1,0 +1,32 @@
+template {
+  name: "WTC 88578"
+  world: "Forgotten Realms"
+  description: "\\large{Discover the diverse denizens of the \\Place{Realms}}\n                    Encounter reclusive \\Monster{avariel}, arrogant \\Monster{Calishites}, noble\n                    \\Monster{centaurs}, and bold \\Monster{Rashemi}. From the steppes of\n                    \\Place{Thay} to the shores of \\Place{Evermeet}, the inhabitants of the\n                    \\Place{Realms} are as distinct as the regions from which they hail, whether\n                    hero, henchman, villain, or villager. With complete information about the\n                    noteworthy races, subraces, and ethnicities scattered throughout\n                    \\Place{Toril}, \\Product{Races of Faer\\hat{u}n} offers a detailed look at the\n                    many and varied peoples who inhabit the \\Product{Forgotten Realms game\n                    setting}.\n                    \\list{80 new feats}\n                    {26 new magic items}\n                    {New spells and prestige classes}\n                    To use this accessory, you also need the \\Product{Forgotten Realms Campaign\n                    Setting}, the \\Product{Player\'s Handbook}, the \\Product{Dungeon Master\'s\n                    Guide}, and the \\Product{Monster Manual}."
+}
+title: "Races of Faer\\hat{u}n"
+date {
+  year: 2003
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2875"
+  check: 1
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

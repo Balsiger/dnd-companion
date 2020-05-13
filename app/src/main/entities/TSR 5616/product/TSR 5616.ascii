@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5616"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Hill Giants"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

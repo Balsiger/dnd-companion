@@ -1,0 +1,39 @@
+template {
+  name: "WTC 9560274"
+  world: "Forgotten Realms"
+  description: "This scar on my arm is the mark of the thin man\'s sword.\n                    These on my chest, the barbarian\'s gyrspike.\n                    This, on my shoulder, the woodman\'s axe.\n                    And this rasping whisper, all that is left of my voice, is the scar of the\n                    \\NPC{Lord Singer}\'s jealousy.\n                    They took my voice and my life and left my body for the crows. But not all\n                    who die rest in peace."
+}
+title: "Ghostwalker"
+author {
+  name: "Scott de Bie, Erik"
+}
+cover {
+  name: "Swanland, Raymond"
+}
+date {
+  year: 2005
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3962"
+  check: 1
+}
+isbn13 {
+}
+pages: 313
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "The Fighters 3"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

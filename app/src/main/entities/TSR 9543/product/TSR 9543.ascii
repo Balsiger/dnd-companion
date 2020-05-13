@@ -1,0 +1,41 @@
+template {
+  name: "TSR 9543"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "new rules for sorcery"
+}
+title: "Heroes of Sorcery"
+author {
+  name: "Brown, Steven"
+}
+date {
+  year: 1997
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0680"
+  check: 4
+}
+isbn13 {
+}
+pages: 144
+system: ADND_REVISED
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 1073741824
+}

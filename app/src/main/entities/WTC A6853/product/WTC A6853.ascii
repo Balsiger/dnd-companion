@@ -1,0 +1,49 @@
+template {
+  name: "WTC A6853"
+  world: "Forgotten Realms"
+  description: "In the fourth book of the multi-author Sundering series launched by New York Times best-selling author R.A. Salvatore, Richard Lee Byers introduces \\NPC{Anton Marivalid} - a renowned reaver with an insatiable thirs for bounty who, when it comes to a choice between two evils, always chooses the one he\'s never tried.\n\nEndles storms wrack the \\Place{Sea of Fallen Stars} and the coastal regions surrounding it. In panic and despair, many have turned to the goddess \\God{Umberlee}, \\God{Queen of the Deeps}, offerhing her sacrifices with hope that they will be spared the inevitable reckoning of her perpetual tempest.\n\n\\NPC{Evendur Highcastle}, undead pirate capatain, raised from the depths to assume the mantle of \\God{Umberlee}\'s Chosen, takes advantage of the people\'s desperation to strike for both spiritual and temporal power in her name.\n\nVying with \\NPC{Highcastle} for the hearts and minds of the people is \\NPC{Stedd Whitehorn}, a little boy and the chosen of a god thought lost to time: \\God{Lathander}, the \\God{Morninglord}. In a time of such upheaval, \\NPC{Stedd}\'s message of renewal and hope runs in stark contrast to the savage ethos of \\NPC{Highcastle} and his waveservants.\n\nWhen \\NPC{Anton} captures the boy in order to collect \\NPC{Highcastle}\'s considerable bounty, the reaver is quickly caught in the riptide cause by the sundering of worlds."
+  short_description: "The fourth book in the Sundering series"
+}
+title: "Reaver"
+leader: "The"
+subtitle: "The Sundering"
+author {
+  name: "Byers, Richard Lee"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+date {
+  year: 2014
+  month: 2
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6458"
+  check: 1
+}
+pages: 341
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book IV"
+series: "The Sundering"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

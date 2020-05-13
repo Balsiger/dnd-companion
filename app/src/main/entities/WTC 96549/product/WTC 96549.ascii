@@ -1,0 +1,43 @@
+template {
+  name: "WTC 96549"
+  world: "Forgotten Realms"
+  description: "The shadows recede from a lost temple in a forgotten wilderness.\n                    The sun rises on a new calling for a man as loyal as he is mysterious.\n                    The day\'s beginning finds \\NPC{Erevis Cale} holding in his steady hands more\n                    power than he dared hope for---and more responsibility than he ever\n                    imagined.\n                    For now, he will have to put his trust in a god served by thieves and born of\n                    chaos."
+}
+title: "Dawn of Night"
+author {
+  name: "Kemp, Paul S."
+}
+cover {
+  name: "Nielsen, Terese"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2004
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3225"
+  check: 2
+}
+isbn13 {
+}
+pages: 302
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "Erevis Cale Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

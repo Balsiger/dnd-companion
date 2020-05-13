@@ -1,0 +1,41 @@
+template {
+  name: "WTC 2421"
+  world: "Generic"
+  description: "\\emph{Unlike their chromatic kin, metallic dragons are ... complicated ... their loyalties and motives difficult to ascertain. They can be gracious and just, scrective and conniving. Above all, one must never forget that they are \\Monster{dragons} --- clever, covetous, dominating, proud, and devstatingly powerful. Be wary in your dealings with them.}\n                    \\right{--- NPC{Nimozaran}, wizard of \\Place{Fallcrest}\n                    This Dungeons & Dragons supplement covers the \\Monster{adamantine}, \\Monster{copper}, \\Monster{gold}, \\Monster{iron}, and Monster{silver} dragons described in the \\Product{Monster Manual 2} as well as several new metallic dragons, including \\Monster{cobalt}, \\Monster{mercury}, \\Monster{mithral}, \\Monster{orium}, and \\Monster{steel}. Herein you\'ll find new dragon powers, tactics, lairs, and servitors. In addition, this book provides information about how metallic dragons fit into the D&D game and how to play them as villains, along with ready-to-play material such as adventure hooks, quests, and traps."
+  short_description: "Information about \\Monster{metallic dragons}."
+}
+title: "Draconomicon - Metallic Dragons"
+subtitle: "You Can\'t Judge a \\Monster{Dragon} By Its Scales"
+date {
+  year: 2009
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5248"
+  check: 2
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5248"
+  check: 9
+}
+pages: 224
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Draconomicon"
+price {
+  currency: "$"
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

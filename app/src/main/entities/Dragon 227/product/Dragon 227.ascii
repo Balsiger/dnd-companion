@@ -1,0 +1,158 @@
+template {
+  name: "Dragon 227"
+  world: "Generic"
+}
+title: "Dragon 227"
+author {
+  name: "Guss, Mathew"
+}
+author {
+  name: "Schend, Steven"
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Baichtal, John W."
+}
+author {
+  name: "Hueber, Dale A."
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Williamson, Daniel R."
+}
+author {
+  name: "Bruton, J. Paul III"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bryant, Anthony J."
+  job: "editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "associate assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Post, Randy"
+}
+illustrator {
+  name: "Scott, Michael L."
+}
+illustrator {
+  name: "Shipman, R. Ward"
+}
+illustrator {
+  name: "Holloway, James"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "May, Rex"
+}
+illustrator {
+  name: "Cavalier, Bill"
+}
+illustrator {
+  name: "Coleman, Jason R."
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Gunter, Frank"
+}
+illustrator {
+  name: "Pilsbury, Joe"
+}
+illustrator {
+  name: "Hrenchuk, Bill"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1996
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XX 10"
+number: "227"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

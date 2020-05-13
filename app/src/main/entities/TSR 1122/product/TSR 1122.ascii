@@ -1,0 +1,34 @@
+template {
+  name: "TSR 1122"
+  reference {
+    name: "catalog95"
+  }
+  world: "None"
+  description: "AD&D artifacts for the spellfire game."
+}
+title: "Spellfire AD&D Artifacts Booster Pack, Set 5"
+date {
+  year: 1995
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0207"
+  check: 8
+}
+isbn13 {
+}
+system: SPELLFIRE
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  description: "random"
+  number: 15
+}

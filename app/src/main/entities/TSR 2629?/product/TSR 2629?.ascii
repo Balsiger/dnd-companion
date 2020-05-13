@@ -1,0 +1,46 @@
+template {
+  name: "TSR 2629?"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Planescape"
+  description: "dives into the dark realities of life in Sigil"
+}
+title: "City of Doors"
+leader: "The"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+date {
+  year: 1997
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0670"
+  check: 7
+}
+isbn13 {
+}
+pages: 192
+system: ADND_REVISED
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 1073741824
+}

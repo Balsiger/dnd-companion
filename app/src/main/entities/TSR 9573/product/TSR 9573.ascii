@@ -1,0 +1,40 @@
+template {
+  name: "TSR 9573"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Generic"
+  description: "Long ago, the \\Group{Lords of Chaos} strove with the forces of Law and were\n                    defeated. Their great temple destroyed and their minions scattered to the\n                    four winds, the \\Group{Chaos Lords} withdrew, and a new balance held sway in\n                    the land. But prophecy said that one day the fallen temple would rise again,\n                    heralding the \\Group{Lords}\' return to spread Chaos across the world once\n                    more.\n                    And now comes a cry for help from the \\Monster{dwarves} of \\Place{Isar},\n                    saying that the \\Place{Lost Shrine} has risen from beneath the dark waters of\n                    the lake that kept it hidden for thirteen centuries. Already forces are\n                    gathering---some eager to plunder the temple\'s legendary treasures, some\n                    wishing to join under the \\Group{Chaos Lords}\' banner, some desperate to\n                    destroy the shrine before the world they know is swept away.\n                    \'Find the \\Item{Chaos Key}\', says the prophecy. \'The hand that holds the\n                    \\Item{Key} may shape the future\'. But will you be in time to be the one."
+}
+title: "Lost Shrine of Bundushatur"
+leader: "The"
+date {
+  year: 1998
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1194"
+  check: 8
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Dungeon Crawl"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

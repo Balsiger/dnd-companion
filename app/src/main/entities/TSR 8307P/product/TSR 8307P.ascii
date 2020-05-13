@@ -1,0 +1,58 @@
+template {
+  name: "TSR 8307P"
+  synonym: "TSR 8307"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "The \\Event{War of the Lance} has ended. The darkness has passed. Or has it?\n\nOne man, the powerful archmage \\NPC{Raistlin}, intends that the darkness return.\n\nTwo people alone can stop him. One is \\NPC{Crysania}, a beautiful cleric of good, who is drawn to \\NPC{Raistlin} as a moth is drawn to flame. The other is his twin, \\NPC{Caramon}, who must come to an understanding of himself before he can redeem his brother.\n\nTogether with the irrepressible \\Monster{kender}, \\NPC{Tasslehoff}, these three take a perilous journey back in time to the days just before the \\Event{Cataclysm}.\n\nIn the doomed city of \\Place{Istar}, poised on the brink of disaster, dark magic and darker ambition battle love and self-sacrifice in a quest to save not only the world but more importantly --- a soul."
+}
+title: "Time of the Twins"
+subtitle: "The New York Times Best-Selling Series"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+date {
+  year: 1986
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "78690"
+  title: "262"
+}
+isbn13 {
+}
+pages: 398
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume One"
+series: "Legends Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

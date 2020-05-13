@@ -1,0 +1,67 @@
+template {
+  name: "TSR 8539"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{Schemes of a Mad God}\n                    For all his power as \\God{God of Strife} and \\God{Lord of the Dead},\n                    \\God{Cyric} cannot achieve that which he desired most---revenge on the\n                    \\God{Goddess of Magic}. To this end, he searches in vain for the soul of\n                    \\God{Kelemvor Lyonsbane}. Once \\God{Cyric}\'s friend and the goddess\n                    \\God{Midnight}s lover, in the time when all three roamed the world as\n                    mortals, \\God{Kelemvor} remains hidden from \\God{Cyric} by those who would\n                    see the mad god overthrown. But \\God{Cyric} will risk all to find his quiet\n                    nemesis, even the destruction of the \\Place{Realm of the Dead}."
+}
+title: "Prince of Lies"
+author {
+  name: "Lowder, James"
+}
+editor {
+  name: "King, J. Robert"
+}
+cover {
+  name: "Brom"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+date {
+  year: 1993
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "626"
+  check: 3
+}
+isbn13 {
+}
+pages: 376
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book IV"
+series: "Avatar Series"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

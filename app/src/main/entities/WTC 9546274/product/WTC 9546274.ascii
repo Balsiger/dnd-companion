@@ -1,0 +1,63 @@
+template {
+  name: "WTC 9546274"
+  world: "Forgotten Realms"
+  description: "The story of the \\Monster[elf]{elves} of \\Place{Faer\\hat{u}n} stretches from\n                    the dawn of history to the battle for the future of a world in constant\n                    upheaval."
+}
+title: "Realms of the Elves"
+subtitle: "The History of Faer\\hat{u}n is written in the flowing script of the \\Monster{tel\'quessir}"
+author {
+  name: "Byers, Richard Lee"
+}
+author {
+  name: "Athans, Philip"
+}
+author {
+  name: "Smedman, Lisa"
+}
+author {
+  name: "de Bie, Erik Scott"
+}
+author {
+  name: "Salvatore, R.A."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Baker, Richard L. III"
+}
+editor {
+  name: "Athans, Philip"
+}
+cover {
+  name: "Rex, Adam"
+}
+date {
+  year: 2006
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3980"
+  check: 10
+}
+isbn13 {
+}
+pages: 340
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Anthology"
+series: "The Last Mythal"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: BLACK_AND_WHITE

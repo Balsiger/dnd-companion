@@ -1,0 +1,44 @@
+template {
+  name: "TSR 8366"
+  synonym: "WTC 86634"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dragonlance"
+  description: "The \\Group{Knights of Solamnia} were the greatest order of chivalry in the\n  history of \\Place{Krynn}.\n\n  All those who wish to become \\Class{Solamnic Knights} must first enter as\n  \\Class{squires} of the \\Group{Knights of the Crown}, with whom they begin\n  their training in the virtue of loyalty.\n\n  This is the story of \\NPC{Sir Pirvan the Wayward}, whose reluctant and\n  inauspicious beginnings as \\NPC{Pirvan the Spell Thief} bore few clues to his\n  potential as a \\Group{Knight of the Crown}.\n\n  Roland J. Green is the author of the \\Product{Starcruiser Shennandoa} and\n  \\Product{Wandor} series and numerous \\Product{Conan} novels, and is coauthor\n  (with Jerry Pournelle) of the \\Product{Jannisaries} series.\n\n  \\Product{The Warriors} series details the exploits of the heroes and villains\n  of the \\Event{War of the Lance}."
+}
+title: "Knights of the Crown"
+author {
+  name: "Green, Roland J."
+}
+date {
+  year: 1995
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0108"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume I"
+series: "Warriors Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

@@ -1,0 +1,30 @@
+template {
+  name: "TSR 1128B"
+  reference {
+    name: "catalogue96"
+  }
+  world: "None"
+  description: "Base set for the Blood Wars game."
+}
+title: "Blood Wars Card Game"
+date {
+  year: 1995
+}
+isbn {
+}
+isbn13 {
+}
+system: BLOOD_WARS
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+  currency: "\302\254\302\243 "
+  number: 699
+  precision: 100
+}
+content {
+  part: MISC
+  description: "deck of 50 cards"
+  number: 2
+}

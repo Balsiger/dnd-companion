@@ -1,0 +1,33 @@
+template {
+  name: "TSR 11364"
+  reference {
+    name: "net"
+  }
+  world: "Star*Drive"
+  description: "an alternity adventure"
+}
+title: "Klick Clack"
+author {
+  name: "Steve Winter"
+}
+date {
+  year: 1999
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1364"
+  check: 9
+}
+isbn13 {
+}
+pages: 32
+system: ALTERNITY
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

@@ -1,0 +1,43 @@
+template {
+  name: "TSR 8224"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+}
+title: "Kingslayer"
+date {
+  year: 1993
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "398"
+  check: 1
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+series: "Sorcerer\'s Stone Trilogy"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

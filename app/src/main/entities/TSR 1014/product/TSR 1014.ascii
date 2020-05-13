@@ -1,0 +1,19 @@
+template {
+  name: "TSR 1014"
+  reference {
+    name: "complete product listing"
+  }
+  description: "Unknown"
+}
+title: "Fantasy Forest Game"
+date {
+  year: 1982
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+producer: "TSR"
+price {
+}

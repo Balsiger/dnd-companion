@@ -1,0 +1,57 @@
+template {
+  name: "WTC 88695"
+  world: "Greyhawk"
+  description: "Revisiting classic adventures has been extremely successful. \\Product{Queen\n  of the Demonweb Pits} was one of the most popular adventures ever created for\n  the Dungeons & Dragons game. This novelization appeals to those who have\n  played through the adventure, as well as to those who have an interest in\n  \\Monster{drow elves}--one of the most popular races in the game."
+}
+title: "Queen of the Demonweb Pits"
+author {
+  name: "Kidd, Paul"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1903"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Greyhawk Classics"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

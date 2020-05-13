@@ -1,0 +1,37 @@
+template {
+  name: "TSR 8091"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Gamma World"
+  description: "300 years after the destruction of civilization"
+}
+title: "American Knights"
+author {
+  name: "Nick Pollotta"
+}
+date {
+  year: 1995
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "899"
+  check: 1
+}
+isbn13 {
+}
+pages: 192
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+series: "Gamma World"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

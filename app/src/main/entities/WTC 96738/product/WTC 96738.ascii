@@ -1,0 +1,29 @@
+template {
+  name: "WTC 96738"
+  world: "Generic"
+  description: "The source for the latest D&D miniatures release, the \\Place{Underdark} is a\n                    vast underground region replete with many iconic D&D monsters, including the\n                    infamous---and popular---\\Monster{drow elves}. Per previous releases, the\n                    figures in this set are chosen from key D&D titles such as the\n                    \\Product{Monster Manual}, \\Product{Book of Exalted Deeds}, and\n                    \\Product{Complete Adventurer}. The set also features a wealth of characters\n                    from \\Place{Forgotten Realms} products such as \\Product{Underdark},\n                    \\Product{Unapproachable East}, \\Product{City of the Spider Queen}, and the\n                    \\Product{Forgotten Realms Campaign Setting}. \\Place{Forgotten Realms} novel\n                    readers will also recognize a range of familiar characters from best-selling\n                    titles. As an added bonus, eight miniatures will also have a second stat card\n                    that features epic-level stats specifically for high-level versions of those\n                    figures.\n                    Booster pack contents\n                    \\list\n                    {Eight randomized, pre-painted, plastic miniatures}\n                    {Stat cards for each miniature, plus eight additional epic-level stat cards.}\n                    {Underdark set checklist}"
+}
+title: "Underdark Booster Pack"
+date {
+  year: 2005
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3522"
+  check: 7
+}
+isbn13 {
+}
+system: DND_3RD
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+number: "7"
+series: "D&D Miniatures"
+price {
+  currency: "$ "
+  number: 1299
+  precision: 100
+}

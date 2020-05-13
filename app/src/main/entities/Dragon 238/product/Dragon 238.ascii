@@ -1,0 +1,160 @@
+template {
+  name: "Dragon 238"
+  world: "Generic"
+}
+title: "Dragon 238"
+author {
+  name: "Wenzel, Lawrence R."
+}
+author {
+  name: "Brown, Lloyd III"
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Strohm, Keith Francis"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Baichtal, John W."
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Pengelly, Richard"
+}
+author {
+  name: "Walton, Brian"
+}
+author {
+  name: "Kuhl, Jason"
+}
+author {
+  name: "Miller, Steve"
+}
+author {
+  name: "Cook, Sue Weinlein"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "associate editor"
+}
+editor {
+  name: "Baldwin, Lizz"
+  job: "editorial assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Valusek, Valerie A."
+}
+illustrator {
+  name: "Ward, Kevin"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Filibach, Brothers"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Gielecki, Kristen S."
+}
+illustrator {
+  name: "Pillsbury, Joseph"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Gunter, Frank"
+}
+illustrator {
+  name: "Geraci, Jeff"
+}
+illustrator {
+  name: "Steamy"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Baerbock, Linda"
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXI 9"
+number: "238"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

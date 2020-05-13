@@ -1,0 +1,34 @@
+template {
+  name: "WTC 88196"
+  world: "Dominaria"
+  description: "The end is near!\n                    \\Place{Phyrexian} plagues and shock troops have taken their toll. The final\n                    stage of the invasion has begun, and the dark lord \\NPC{Yawgmoth} himself\n                    plans to cross over into \\Place{Dominaria} to claim his prize. With time\n                    running out, the battered heroes\' last hope to save their home lies in an\n                    ancient, untested weapon, a jumble of artifacts known as the \\Item{Legacy}.\n                    Bear witness to the apocalypse."
+}
+title: "Apocalypse"
+author {
+  name: "King, Robert J."
+}
+date {
+  year: 2001
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1880"
+  check: 2
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "Invasion Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,57 @@
+template {
+  name: "WTC 88625"
+  world: "Forgotten Realms"
+  description: "The forces aligned against \\Place{Menzoberranzan} begin to take shape, and\n                    the threat to \\Monster{drow} civilization is more terrifying than anyone has\n                    yet imagined. From the impenetrable shadows of the \\Place{Underdark} to the\n                    remote corners of the no less unforgiving \\Place{World Above}, the path\n                    toward the secrets of \\God{Lolth}\'s silence is as unpredictable as it is\n                    deadly.\n                    Joined by two \\Monster{drow} who might be the last survivors of \\Place{Ched\n                    Nasad}, the explorers from \\Place{Menzoberranzan} have learned much, but for\n                    every answer they find, a thousand new questions arise. They must seek out a\n                    rival priest, in hopes that he can speed them on their way to the goddess\n                    herself, but can one dark elf ever trust another?\n                    The third novel in an epic six-part series from the fertile imaginations of\n                    R.A. Salvatore, and a select group of the newest, most exciting authors in\n                    the genre. Join them as they shine a light into the blackest recesses of the\n                    \\Place{Forgotten Realms} world, only to deepen the shadows within."
+}
+title: "Condemnation"
+author {
+  name: "Baker, Richard L. III"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2824"
+  check: 7
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book 3"
+series: "RA Salvatore\'s War of the Spider Queen"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}

@@ -1,0 +1,86 @@
+template {
+  name: "TSR 1090"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "\\large{Your next adventure is just a card turn away!}\n                    Deal a dungeon? Deal a castle? Deal rooms with magical items, monsters, and\n                    danger lurking behind every table, box, and bookcase? The \\Product[TSR\n                    1090]{AD&D Cardmaster Adventure Design Deck} is an exciting new tool for DMs,\n                    and a thrilling new game for players. DMs will use the Adventure Design Deck\n                    to create dramatic settings for their adventures. Players can use Cardmaster\n                    to go a-questing without a DM. Even solo adventures are possible, just by\n                    shuffling the cards.\n                    108 Location Cards depict unique and mysterious rooms and corridors on three\n                    dungeon levels. And on all levels are treasures to be found and monsters to\n                    be conquered. The Treasure Deck contains 54 cards full of loot and magical\n                    items. Explore each room for treasure, but beware the traps! And beware the\n                    54 different monsters with their own traps and snares, nesting in their own\n                    Deck. They are waiting for you...and some of them are hungry."
+}
+title: "Cardmaster Adventure Design Deck"
+author {
+  name: "Borg, Richard"
+}
+editor {
+  name: "Stewart, Douglas"
+}
+editor {
+  name: "Winter, Steve"
+}
+cover {
+  name: "Kohl, Charles"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+date {
+  year: 1993
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "612"
+  check: 3
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: BOARD_GAME
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Cardmaster"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "Fastplay Adventures"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "room"
+  number: 2
+}
+content {
+  part: CARD
+  description: "several item"
+  number: 1073741824
+}
+content {
+  part: CARD
+  number: 216
+}

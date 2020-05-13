@@ -1,0 +1,61 @@
+template {
+  name: "TSR 8491"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The entire city of \\Place{Phlan} has vanished, ripped from the surface of\n                    \\Place{Toril} by dire creatures and magical forces. While the minions of the\n                    evil god \\God{Bane} bicker over the spoils, the brave citizens of\n                    \\Place{Phlan} mount a stubborn defense.\n                    A ranger-thief named \\NPC{Ren} seeks his missing friends, \\NPC{Shal} and\n                    \\NPC{Tarl}, spellcasters nonpareil. \\NPC{Ren} must band together with a\n                    mysterious sorceress, \\NPC{Evaine}, and her interpid shapeshifter cat, as\n                    well as a couple of droll druids and a fearful knight who is absolutely,\n                    positively dead.\n                    \\Product{Pools of Darkness}, based on the computer game of the same name,\n                    revisits the heroes of \\Place{Phlan} ten years after the city was saved in\n                    the best-selling novel and computer game \\Product{Pool of Radiance}."
+}
+title: "Pools of Darkness"
+author {
+  name: "Ward, James M."
+}
+author {
+  name: "Brown, Anne K."
+}
+cover {
+  name: "Fields, Fred"
+}
+date {
+  year: 1992
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "318"
+  check: 3
+}
+isbn13 {
+}
+pages: 313
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Two"
+series: "Pool Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,226 @@
+template {
+  name: "Dragon 290"
+  world: "Generic"
+  description: "Issue 289 of the magazine. Scoundrels issue."
+}
+title: "Dragon 290"
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Leach, Paul"
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "McVey, Geoffrey"
+}
+author {
+  name: "Hite, Kenneth"
+}
+author {
+  name: "Kidd, Paul"
+}
+author {
+  name: "Bolme, Edward"
+}
+author {
+  name: "Martin, Julia"
+}
+author {
+  name: "Haddock Eric W."
+}
+author {
+  name: "Holian, Gary"
+}
+author {
+  name: "Redman, Rich"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "McVey, Mike"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Wilson, Johnny"
+}
+author {
+  name: "Four, Johnny"
+}
+author {
+  name: "Ray Winninger"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assistant editor"
+}
+editor {
+  name: "Foglio, Phil"
+  job: "contributing editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Kovalic, John"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robing D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Aaron"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+cover {
+  name: "Whitley, Pete"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Watters, Anthony"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Miracola, Jeff"
+}
+illustrator {
+  name: "Strain, D.T."
+}
+illustrator {
+  name: "Staples, Greg"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Dutton, Michael \'Mike\'"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Sardhina, Richard"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Beargeon, Ted"
+}
+illustrator {
+  name: "Harris, Todd"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Mayerik, Val"
+}
+illustrator {
+  name: "Whitley, Peter"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+illustrator {
+  name: "Stassus, Mike"
+  job: "designer"
+}
+illustrator {
+  name: "James, Andy"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2001
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 130
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 7"
+number: "290"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

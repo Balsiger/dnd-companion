@@ -1,0 +1,35 @@
+template {
+  name: "PZO 1100"
+  world: "Generic"
+  description: "For three decades, \\Product{Dragon} magazine has been the official monthly\n                    resource for Dungeons & Dragons players. Many monsters, classes, and even\n                    campaign settings have gone on to define the modern game first appeared in\n                    \\Product{Dragon}\'s pages, and a history of the magazine is a history of the\n                    game itself.\n                    The \\Product{Dragon Compendium} collects the most popular classic articles\n                    from throughout \\Product{Dragon} magazine\'s proud history, all updated to the\n                    current edition of the D&D rules. Selected with the input of current and\n                    former editors and D&D fans across the world, the articles in this 256-page\n                    volume are proven favorites---material you will want to reference again and\n                    again."
+}
+title: "Dragon Compendium Volume I"
+subtitle: "30 Years in the Making!"
+date {
+  year: 2005
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "9770071"
+  title: "4"
+  check: 6
+}
+isbn13 {
+}
+pages: 260
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+number: "Volume I"
+series: "Dragon Compendium"
+price {
+  currency: "$ "
+  number: 5495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

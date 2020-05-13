@@ -1,0 +1,46 @@
+template {
+  name: "WTC 17857"
+  world: "Forgotten Realms"
+  description: "\\large{\\NPC{Thamalon Uskevren II}}\n                    The heir to the \\Group{Uskevren} fortune never expected to inherit so much so\n                    soon.\n                    After a sorcerous attack on \\Place{Stormweather Towers} cuts the family in\n                    half, \\NPC{Tamlin} must learn to lead the survivors before a deadly assassin\n                    finishes the job. Too bad nobody seems willing to follow his lead. Worse\n                    still, some of them want him dead."
+}
+title: "Lord of Stormweather"
+author {
+  name: "Gross, Dave"
+}
+cover {
+  name: "Nielsen, Terese"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+date {
+  year: 2003
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2932"
+  check: 4
+}
+isbn13 {
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "book 7"
+series: "Sembia"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

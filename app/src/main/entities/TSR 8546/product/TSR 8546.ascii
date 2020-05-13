@@ -1,0 +1,53 @@
+template {
+  name: "TSR 8546"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{The Betrayal of a Sacred Trust...}\n                    For a millenium, \\Monster{men} and \\Monster{giants} have abided together in\n                    the snowy wilderness of the \\Place{Ice Spires}, all paying fealty to a single\n                    dynasty of \\Monster{human} kings.\n                    A thousand years of peace is about to shatter.\n                    When an \\Monster{ogre} horde kidnaps \\NPC{Brianna of Hartwick}---the fiery\n                    heir to \\Place{Hartsvale}\'s throne---\\NPC{King Camden} must choose between\n                    love of his daughter and duty to his kingdom. Only \\NPC{Tavis Burdun}, a\n                    brash \\Monster{firbolg} scout who covets \\NPC{Brianna}\'s hand, has the\n                    courage to go after her. Before he saves the princess, though, he must\n                    uncover the kingdom\'s most jealously guarded secret...\n                    \\Product{The Ogre\'s Pact}\n                    Book One of the \\Product{Twilight Giants Trilogy}."
+}
+title: "Ogre\'s Pact"
+leader: "The"
+author {
+  name: "Denning, Troy"
+}
+cover {
+  name: "Brom"
+}
+date {
+  year: 1994
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "891"
+  check: 6
+}
+isbn13 {
+}
+pages: 314
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book One"
+series: "Twilight Giants"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

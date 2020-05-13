@@ -1,0 +1,38 @@
+template {
+  name: "WTC 9506076"
+  world: "Forgotten Realms"
+  description: "These three titles chronicle the rise of the \\Monster{elven} people, and the\n                    schism between the two nations. The books were originally published in 1991,\n                    and they have been unavailable for several years. Last year the three books\n                    were brought out again in mass-market format to the delight of the fans. Now\n                    they have been collected into one easy-to-purchase gift set."
+}
+title: "The Elven Nations Trilogy Gift Set"
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Cook, Tonya Carter"
+}
+author {
+  name: "Niles, Douglas"
+}
+date {
+  year: 2005
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3957"
+  check: 5
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: BOX
+producer: "WTC"
+series: "The Elven Nations"
+price {
+  currency: "$ "
+  number: 2097
+  precision: 100
+}

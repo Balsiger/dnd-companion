@@ -1,0 +1,59 @@
+template {
+  name: "WTC 2173474"
+  world: "Forgotten Realms"
+  description: "Over two thousand years ago, mighty \\Place{Shandaular} fell, its people slaughtered or scattered, its fabled Shield overwhelmed with unnatural ice. Only the witches of the \\Group{Rashemi} hold the Shield now, and they know better than to venture out into the cold night.\n                    Yet even the \\Group{Rashemi}, a people of powerful magic and long memories, aren\'t prepared for the secrets angry \\Place{Shandaular} has been hiding all these years.\n                    \\emph{The citadel and its ghosts haven\'t forgotten or forgiven.}\n                    "
+  short_description: "Book 3 in the Citadels series."
+}
+title: "Shield of Weeping Ghosts"
+leader: "The"
+author {
+  name: "Davis, James P."
+}
+editor {
+}
+cover {
+  name: "Seidman, David"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2008
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4877"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4877"
+  check: 2
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "3"
+series: "The Citadels"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

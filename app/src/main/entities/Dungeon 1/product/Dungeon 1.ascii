@@ -1,0 +1,149 @@
+template {
+  name: "Dungeon 1"
+  world: "Generic"
+  description: "This is issue 1 of the dungeon magazine."
+}
+title: "Dungeon 1"
+author {
+  name: "Ashton, Michael"
+}
+author {
+  name: "Sperry, Lee"
+}
+author {
+  name: "Elrod, Patricia Nead"
+}
+author {
+  name: "Nephew, John"
+}
+author {
+  name: "McCready, Anne Gray"
+}
+author {
+  name: "Boucher, Grant"
+}
+author {
+  name: "Boucher, David"
+}
+author {
+  name: "Smith, Carl"
+}
+editor {
+  name: "Moore, Roger E."
+}
+editor {
+  name: "Lucas, Eileen"
+  job: "editorial assistant"
+}
+editor {
+  name: "Martin, Karen"
+  job: "editorial assistant"
+}
+editor {
+  name: "Moore, Georgia"
+  job: "editorial assistant"
+}
+editor {
+  name: "Poutsch, Debbie"
+  job: "editorial assistant"
+}
+editor {
+  name: "Price, Patrick Lucien"
+  job: "editorial assistant"
+}
+cover {
+  name: "Parkinson, Keith"
+}
+cartographer {
+}
+illustrator {
+  name: "Holloway, James"
+}
+illustrator {
+  name: "LaForce, Dave"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "Roslof, Jim"
+}
+illustrator {
+  name: "Sutherland, Dave"
+}
+illustrator {
+  name: "Truman, Tim"
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+illustrator {
+  name: "Raupp, Roger"
+  job: "art director"
+}
+illustrator {
+  name: "Hoyer, Ruth"
+  job: "graphic designer"
+}
+manager {
+  name: "Cook, Mike"
+  job: "publisher"
+}
+manager {
+  name: "Bakk, Linda"
+  job: "production staff"
+}
+manager {
+  name: "Lindau, Kim"
+  job: "production staff"
+}
+manager {
+  name: "O\'Malley, Colleen"
+  job: "production staff"
+}
+manager {
+  name: "Szopinski, Gloria"
+  job: "production staff"
+}
+manager {
+  name: "Vanderbilt, Carolyn"
+  job: "production staff"
+}
+manager {
+  name: "Parkinson, Mary"
+  job: "advertising"
+}
+manager {
+  name: "Meacham, Harriet"
+  job: "subscriptions"
+}
+manager {
+  name: "Schulz, Pat"
+  job: "subscriptions"
+}
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+number: "1"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

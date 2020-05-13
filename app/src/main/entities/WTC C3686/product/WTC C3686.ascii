@@ -1,0 +1,49 @@
+template {
+  name: "WTC C3686"
+  category: "Accessory"
+  world: "Generic"
+  description: "Inside the pockets of this lavishly illustrated protective folder, you\'ll find a set of fifth edition Dungeons & Dragons characters sheets for use in any D&D campaign. Each character sheet provides plenty of room to keep track of everything that makes YOUR characters unique.\n\nIncludes:\n\\list\n{An introductory character sheet designed specifically for new players.}\n{Three additional styles of double-sided character sheets giving experiences players options based on their individual play preference.}\n{Spell sheets for keeping track of your magical repertoire in the game.}\n\nEvery character sheet and spell sheet is easy to photocopy, so you\'ll always have a fresh sheet on hand when you need one."
+  short_description: "Character sheets for fifth edition."
+}
+title: "Character Sheets"
+subtitle: "Let the Game Begin"
+date {
+  year: 2017
+  month: 6
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6618"
+  check: 9
+}
+pages: 24
+system: DND_NEXT
+audience: PLAYER
+type: ACCESSORY
+style: FOLDER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 995
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1
+}
+content {
+  part: FOLDER
+  description: "folder"
+  number: 1
+}
+content {
+  part: SHEET
+  description: "character sheet"
+  number: 24
+}
+layout: COLOR_COVER

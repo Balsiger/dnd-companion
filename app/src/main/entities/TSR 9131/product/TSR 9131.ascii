@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9131"
+  synonym: "DL3"
+  reference {
+    name: "net price list"
+  }
+  world: "Dragonlance"
+}
+title: "Dragons of Hope"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

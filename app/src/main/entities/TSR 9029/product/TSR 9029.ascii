@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9029"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Permanent PC Folder & Adventure Record"
+date {
+  year: 1979
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

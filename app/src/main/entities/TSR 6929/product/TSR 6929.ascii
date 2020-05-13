@@ -1,0 +1,36 @@
+template {
+  name: "TSR 6929"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Generic"
+  description: "details of home and equipments of the heroes"
+}
+title: "Guide to Marvel Earth"
+leader: "A"
+author {
+  name: "Olmesdahl, Bill"
+}
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1230"
+  check: 8
+}
+isbn13 {
+}
+pages: 192
+system: MARVEL_SUPER_HEROES
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}

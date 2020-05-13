@@ -1,0 +1,36 @@
+template {
+  name: "WTC 21798"
+  world: "Rokugan"
+  description: "Magic is power for the \\Group{Phoenix} clan. During the depths of the\n                    \\Event{Clan War}, the \\Group{Elemental Masters} seek ultimate power in the\n                    form of a magic that will permanently destroy the \\Place{Shadowlands}\n                    armies. Without it, the enemy will reduce the clan to ahses from which even\n                    the \\Group{Phoenix} cannot rise. All hope rests in the mysteries of a dark\n                    and dreaded source: \\Item{The Black Scrolls}."
+}
+title: "Phoenix"
+leader: "The"
+subtitle: "Ashes of the Phoenix"
+author {
+  name: "Sullivan, Stephen D."
+}
+date {
+  year: 2001
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1798"
+  check: 9
+}
+isbn13 {
+}
+pages: 271
+system: LEGEND_OF_THE_FIVE_RINGS
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Fourth Scroll"
+series: "Clan War"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

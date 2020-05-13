@@ -1,0 +1,156 @@
+template {
+  name: "WTC 9537872"
+  world: "Generic"
+  description: "Nine are the discipline of the Sublime Way --- the path of martial supremacy\n                    in which the perfect combination of devotion, lore, and practice allows a\n                    warrior to achieve feats of superhuman prowess. The Desert Wind master\n                    strikes with the speed and fury of a raging fire. The Tiger Claw master tears\n                    his foes apart with the primal fury of a beast. The Diamond Mind master acts\n                    in slivers of time so small that others cannot even perceive them. Each\n                    discipline unlocks exciting new options for a combat-oriented character.\n                    This supplement for the D&D game describes a new system for combat maneuvers\n                    that blend fantastic weapon techniques with pious devotion and mystical blade\n                    magic. Within the nine disciplines of the Sublime Way are more than 120\n                    daring martial maneuvers. In addition, this book presents threw new standard\n                    classes that perform martial maneuvers, as well as new feats and prestige\n                    classes.\n                    \\Product{Tome of Battle: The Book of Nine Swords} introduces new rules for\n                    players who want interesting combat options for their characters. The nine\n                    martial disciplines presented within allow a character with the proper\n                    knowledge and focus to perform special combat maneuvers and nearly magical\n                    effects. Three new martial classes allow a character to develop his or her\n                    discipline even further. Also included are new feats and prestige classes\n                    that build on the disciplines, new magic items and spells, and new monsters\n                    and organizations."
+  short_description: "New combat options for any D&D campaign."
+}
+title: "Book of Nine Swords"
+leader: "The"
+subtitle: "Master the Secret Magic of Steel"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Brunner, Frank"
+}
+author {
+  name: "Carriker, Joseph Jr."
+  job: "additional design"
+}
+author {
+  name: "Mearls, Mike"
+  job: "lead developer"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "developer"
+}
+author {
+  name: "Decker, Jesse"
+  job: "developer"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Polak, Eric"
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Nentrup, Jeff"
+}
+illustrator {
+  name: "Nordstrand, Torstein"
+}
+illustrator {
+  name: "Phillipi, Michael"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3922"
+  check: 2
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Tome of Battle"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

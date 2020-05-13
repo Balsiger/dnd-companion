@@ -1,0 +1,168 @@
+template {
+  name: "Dragon 331"
+  world: "Generic"
+  description: "Issue 331 of the magazine. "
+}
+title: "Dragon 331"
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Brunner, Frank"
+}
+author {
+  name: "Christensen, William L."
+}
+author {
+  name: "Cole, Joshua"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Diaz, Oliver"
+}
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Farrese, Richard"
+}
+author {
+  name: "Fehlauer, Mike"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Halkins, Jerry \'Tycho\'"
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Murphy, Timothy T."
+}
+author {
+  name: "Pavlotsky, Yury"
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Sutter, James"
+}
+author {
+  name: "Taylor, Troy E."
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "associate editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Adorjany, Attila"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Gallagher, John"
+}
+illustrator {
+  name: "Jansson, Niklas"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "P\\acute{e}rez, Ram\\grave{o}n"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Trevas, Chris"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+date {
+  year: 2005
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIX 12"
+number: "331"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

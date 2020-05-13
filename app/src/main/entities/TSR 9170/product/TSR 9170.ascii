@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9170"
+  synonym: "CA2"
+  reference {
+    name: "net price list"
+  }
+  world: "Lankhmar"
+}
+title: "Swords of Deceit"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}

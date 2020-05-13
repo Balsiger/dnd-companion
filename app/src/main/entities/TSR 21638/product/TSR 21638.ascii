@@ -1,0 +1,60 @@
+template {
+  name: "TSR 21638"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Forgotten Realms"
+  description: "\\NPC{Iakhovas} has caused more destruction than any force sing the\n                    \\Event{Time of Troubles}, but his true objective has been a mystery...until\n                    now.\n                    Whena young sailor\'s journey is complete, an aging \\Class{bard}\'s final song\n                    is sung, and a \\Monster{malenti} priestess faces her most challenging test,\n                    the \\Product{Threat from the Sea} concludes in an explosive climax that will\n                    set all \\Place{Faer\\hat{u}n} reeling."
+}
+title: "Sea Devil\'s Eye"
+leader: "The"
+author {
+  name: "Odom, Mel"
+}
+editor {
+}
+cover {
+  name: "Maitz, Don"
+}
+cartographer {
+  name: "Lazaretti, Rob"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2000
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1638"
+  check: 9
+}
+isbn13 {
+}
+pages: 341
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book III"
+series: "Threat from the Sea"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

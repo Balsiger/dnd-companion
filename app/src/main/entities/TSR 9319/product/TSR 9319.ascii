@@ -1,0 +1,28 @@
+template {
+  name: "TSR 9319"
+  synonym: "DLS2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  world: "Dragonlance"
+  description: "the mysterious life and culture of the Silvanesti High Elves"
+}
+title: "Tree Lords"
+date {
+  year: 1991
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$\303\224\303\270\316\251"
+  number: 695
+  precision: 100
+}

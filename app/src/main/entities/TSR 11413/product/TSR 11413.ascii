@@ -1,0 +1,28 @@
+template {
+  name: "TSR 11413"
+  reference {
+    name: "net"
+  }
+  world: "Greyhawk"
+  description: "revision of the classic Gygax adventure"
+}
+title: "Against the Giants: The Liberation of Geoff"
+author {
+  name: "Reynolds, Sean"
+}
+date {
+  year: 1999
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1795
+  precision: 100
+}

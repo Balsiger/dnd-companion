@@ -1,0 +1,174 @@
+template {
+  name: "Dragon 330"
+  world: "Generic"
+  description: "Issue 330 of the magazine. "
+}
+title: "Dragon 330"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Cole, Joshua"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Diaz, Oliver"
+}
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Fehlauer, Mike"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Forbeck, Matt"
+}
+author {
+  name: "Hahn, Robert J."
+}
+author {
+  name: "Hart, Mike A."
+}
+author {
+  name: "Ling, John E."
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Pett, Richard"
+}
+author {
+  name: "Ragonstaff, Ted"
+}
+author {
+  name: "Rampson, Eric"
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Steinmann, Jacob"
+}
+author {
+  name: "Turley, Kieran"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "associate editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Jansson, Niklas"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "P\\acute{e}rez, Ram\\grave{o}n"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Wahlstrom, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIX 11"
+number: "330"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

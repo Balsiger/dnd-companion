@@ -1,0 +1,55 @@
+template {
+  name: "TSR 3587"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Buck Rogers"
+  description: "introductory game with comic strip-style thrills"
+}
+title: "High Adventure Cliffhangers"
+author {
+  name: "Jeff Grubb"
+}
+date {
+  year: 1993
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 112
+system: XXVC
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 3
+}
+content {
+  part: DICE
+  description: "pack of 10 six-sided"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "die-cut stand-ups"
+  number: 1073741824
+}

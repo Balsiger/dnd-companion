@@ -1,0 +1,82 @@
+template {
+  name: "TSR 9464"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "Come to the city and take a look around!\n                    \\Product{City Sites}, the first in a series of AD&D game floorplans, includes\n                    extensive details on urban settings that player characters are likely to\n                    visit in any campaign. For instance, there\'s:\n                    \\list\n                    {A smithy run by \\Monster{gnomes}}\n                    {A temple that\'s home to an orphaned dragon}\n                    {A tavern that patrons can\'t enter until they give the password}\n                    This book also describes two inns, a singing fountain, a jail, and much more!\n                    Each site\'s entry tells the Dungeon Master what the place looks like at first\n                    glance and offers a detailed floorplan of the interior as well as a picture\n                    of the exterior. Readers also find fascinating notes about the characters who\n                    live and work in each site, and one or two ideas for personalizing the spot\n                    to suite any adventure.\n                    From now on, make a trip to the city easy---and exciting!\n                    Also in this series of accessories: \\Product{Castle Sites} and\n                    \\Product{Country Sites}."
+}
+title: "City Sites"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Carter, Michele"
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Pickens, Jon"
+}
+author {
+  name: "Stewart, Doug"
+}
+editor {
+  name: "Weinlein, Sue"
+}
+cover {
+  name: "Jaquays, Paul"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Miller, David O."
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "923"
+  check: 8
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+series: "Sites"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

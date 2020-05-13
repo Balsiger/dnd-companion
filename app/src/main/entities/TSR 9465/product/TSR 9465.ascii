@@ -1,0 +1,73 @@
+template {
+  name: "TSR 9465"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{\'So, thee say there be beasts out there thee\'ve ne\'er heard of nor\n                    encountered? \'Tis easily enough repaired---provided thee\'ve the stomach for\n                    it!\'}\n                    \\right{\\NPC{Elminster}, the Sage of \\Place{Shadowdale}}\n                    TSR\'s most popular world just became even better! Here are over 30 exciting\n                    adventures that can be played in the \\Place{Forgotten Realms}\n                    \\Product[TSR 1085]{setting} in an single session.\n                    Danger, puzzle-solving, humor, and excitement: All lie in wait for intrepid\n                    adventurers of every level. All scenarios are ready to play, with little or\n                    not preparation of the DM!\n                    Enjoy making the acquaintance of beasties from all parts of the\n                    \\Place[Forgotten Realms]{Realms}, from \\Monster[Alguduirs]{alguduirs} to\n                    \\Monster[Dimensional Warper]{dimensional warpers},\n                    \\Monster[Inquisitor]{inquisitors} to \\Monster[Revenant]{revenants},\n                    \\Monster[Ring-Worm]{ring-worms} to \\Monster[Wemic]{wemics}. The good, the\n                    bad\\, and the ugly (and the not-so-ugly)---they\'re all here, ready to\n                    encounter your party.\n                    The \\Place{Forgotten Realms} \\Product[TSR 1085]{Campaign Setting} and the\n                    \\Product[TSR 2125]{Forgotten Realms Monstrous Compendium Appendices} are\n                    necessary to fully enjoy this product.\n                    Oh, and one more thing: DMs and players should be aware of this famous\n                    corollary to \\NPC{Elminster}\'s Rule of the \\Monster{Rabbit}:\n                    \\emph{Sometimes the \\Monster[Rabbit]{rabbit} is just a\n                    \\Monster[Rabbit]{rabbit}.}\n                    And sometimes, it\'s much, much more..."
+}
+title: "Book of Lairs"
+author {
+  name: "Rea, Nicky"
+}
+author {
+  name: "Witt, Sam"
+}
+editor {
+  name: "McCready, Anne Gray"
+}
+cover {
+  name: "Elmore, Larry"
+}
+cartographer {
+  name: "Knecht, John"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "924"
+  check: 6
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Lairs"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

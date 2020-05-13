@@ -1,0 +1,79 @@
+template {
+  name: "Polyhedron 110"
+  world: "Generic"
+  description: "Issue 110 of Polyhedron."
+}
+title: "Polyhedron 110"
+author {
+  name: "Willi Burger"
+}
+author {
+  name: "Rabe, Bruce"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Roger Moore"
+}
+author {
+  name: "Robert Weise"
+}
+editor {
+  name: "Maxwell, Duane"
+}
+editor {
+  name: "Julia Martin"
+}
+cartographer {
+  name: "O\'Brien, David"
+}
+manager {
+  name: "Rick Behling"
+  job: "publishing"
+}
+manager {
+  name: "Scott Douglas"
+  job: "RPGA network coordination"
+}
+manager {
+  name: "Larry Smith"
+  job: "graphic direction"
+}
+manager {
+  name: "Conant, Dave"
+  job: "production"
+}
+manager {
+  name: "Paul Hanchette"
+  job: "production"
+}
+manager {
+  name: "Shirley Surek"
+  job: "production"
+}
+manager {
+  name: "Judy Mueller"
+  job: "subscriptions"
+}
+date {
+  year: 1995
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "15"
+number: "8"
+series: "Polyhedron"
+price {
+}

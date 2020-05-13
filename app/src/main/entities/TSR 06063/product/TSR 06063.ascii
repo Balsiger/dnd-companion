@@ -1,0 +1,28 @@
+template {
+  name: "TSR 06063"
+  reference {
+    name: "net"
+  }
+  description: "the exciting jungle expansion with 48 new cards"
+}
+title: "Jungle Booster"
+date {
+  year: 1999
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "57530"
+  title: "819"
+  check: 3
+}
+isbn13 {
+}
+system: POKEMON
+audience: ALL
+type: BOOSTER_PACK
+price {
+  currency: "$ "
+  number: 329
+  precision: 100
+}

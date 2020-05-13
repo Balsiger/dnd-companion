@@ -1,0 +1,53 @@
+template {
+  name: "WTC 96362"
+  world: "Forgotten Realms"
+  description: "The third in a series of premiere hardcover editions of Salvatore\'s classic\n                    \\Monster{dark elf} tales. This new release ofw the classic R.A. Salvatore\n                    novel continues the tale of the origins of Salvatore\'s signature\n                    \\Monster{dark elf} character \\NPC{Drizzt Do\'Urden} and is the first-ever\n                    release of this \\Place{Forgotten Realms} novel title in hardcover. Each title\n                    in \\Product{The Legend of Drizzt} series showcases the classic \\Monster{dark\n                    elf} novels in new, deluxe hardcover editions. Each title features all new\n                    cover art, in addition to excerpts from an exclusive author interview in\n                    which R.A. Salvatore answers questions posed by readers."
+}
+title: "Sojourn"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book III"
+series: "Legend of Drizzt"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

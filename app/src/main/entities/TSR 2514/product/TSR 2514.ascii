@@ -1,0 +1,41 @@
+template {
+  name: "TSR 2514"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Mystara"
+  description: "Dragonlord Chronicles, book two"
+}
+title: "Dragonking of Mystara"
+author {
+  name: "Thorarinn Gunnarsson"
+}
+date {
+  year: 1995
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0153"
+  check: 5
+}
+isbn13 {
+}
+pages: 400
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Two"
+series: "Dragonlord Chronicles"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}

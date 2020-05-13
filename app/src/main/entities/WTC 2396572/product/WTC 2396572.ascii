@@ -1,0 +1,91 @@
+template {
+  name: "WTC 2396572"
+  world: "Eberron"
+  description: "The \\Event{Last War} has ended, but the adventure is just beginning! Explore a world of action and intrigue, a world in which glory and peril walk hand in hand, a world in dire need of heroes whose names strike fear into the very heart of evil.\n\nThe \\Product{Eberron Player\'s Guide} presents everything a Dungeons & Dragons player needs to create and run a character in the 4th Edition \\Place{Eberron} campaign setting. This supplement gives players rules, advice, and options about the world of \\Place{Eberron} and character backgrounds associated with the various regions and dragonmarked houses. The book includes the articier class, three new races (changelings, kalashtar, and warforged), and rules for dragonmarks, as well as new feats, powers, paragon paths, epic destinies, and more."
+  short_description: "A player\'s guide to the Eberron campaign world."
+}
+title: "Eberron Player\'s Guide"
+subtitle: "Give Your Hero an Edge"
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+author {
+  name: "Collins, Andy"
+  job: "additional development"
+}
+author {
+  name: "Baker, Keith"
+  job: "consultation and review"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Moyer, Lee"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "additional graphic designer"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "additional graphic designer"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+date {
+  year: 2009
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5100"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5100"
+}
+pages: 160
+system: DND_4
+audience: PLAYER
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,34 @@
+template {
+  name: "WTC 88698"
+  world: "None"
+  description: "Revealing the previously untold story of one of the Magic: The Gathering\n                    game\'s most popular characters, this book will give fans a glimpse into the\n                    history of the Magic universe and provide an alternative storyline to the\n                    current stories being told in the \\Product{Invasion trilogy} and the\n                    \\Product{Odyssey Cycle series}."
+}
+title: "Jedit"
+author {
+  name: "Emery, Clayton"
+}
+date {
+  year: 2001
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1907"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book II"
+series: "Legends Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

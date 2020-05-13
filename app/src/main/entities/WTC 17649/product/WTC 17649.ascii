@@ -1,0 +1,57 @@
+template {
+  name: "WTC 17649"
+  world: "Dragonlance"
+  description: "On a dark spring night, nine weeks behind schedule, the \\Item{MNS\n  Indestructible}, a \\Item{Class C Submersible Deepswimmer}, departs\n  \\Place{Sancrist Isle} with a crew of twenty and a callous disregard for the\n  inevitable.\n\n  Armed with top-secret devices, a band of intrepid \\Monster{gnome} explorers\n  sets out on a legendary journey to sub-navigate the continent of\n  \\Place{Ansalon} and determine why very large rocks float. Though the fate of\n  the world does not hang in the balance, theirs certainly does.\n\n  This is their story---and the story of a single member of that ignoble crew:\n  \\NPC{Conundrum}, the heroic \\Monster{gnome} featured in Margaret Weis and\n  Tracy Hickman\'s best-selling \\Product{War of Souls} trilogy."
+}
+title: "Conundrum"
+author {
+  name: "Crook, Jeff"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1949"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Age of Mortals"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

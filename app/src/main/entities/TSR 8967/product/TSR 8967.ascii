@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8967"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Spawn of Dragonspear"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Seventeen"
+price {
+}

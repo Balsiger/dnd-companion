@@ -1,0 +1,75 @@
+template {
+  name: "TSR 11647"
+  synonym: "WTC 86896"
+  world: "Generic"
+  description: "When you sit down to create a character, let your mind do the work---don\'t\n                    just leave it to the dice. The \\Product[TSR 11647]{Hero Builder\'s Guidebook}\n                    puts at your fingertips everything you need to know before your character\'s\n                    first adventure.\n                    With this book, you will:\n                    \\list\n                    {Maximize your character\'s potential with step-by-step character\n                    advancement guides.}\n                    {Create a compelling backstory for your character, including family,\n                    friends, and enemies.}\n                    {Pick from more than 70 variants to the class descriptions in the\n                    \\Product{Player\'s Handbook}.}\n                    {Choose personality traits to bring your character to life at the\n                    gaming table.}\n                    Both players and Dungeon Masters benefit from the detailed character\n                    backgrounds in this book."
+}
+title: "Hero Builder\'s Guidebook"
+subtitle: "Give your character every advantage"
+author {
+  name: "Dancey, Ryan S."
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Rateliff, John D."
+}
+editor {
+  name: "Noonan, David"
+}
+cover {
+  name: "Brom"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+typographer {
+  name: "Ausland, Victoria L."
+}
+manager {
+  name: "Stark, Ed"
+}
+manager {
+  name: "Murin, Dawn"
+}
+manager {
+  name: "Floyd, Sherry"
+}
+manager {
+  name: "Glenn, Sean"
+}
+manager {
+  name: "Fisher, Josh"
+}
+manager {
+  name: "DeLong, Chas"
+}
+date {
+  year: 2000
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1647"
+  check: 8
+}
+isbn13 {
+}
+pages: 64
+system: DND_3RD
+audience: ALL
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "DM Guidebook"
+price {
+  currency: "$ "
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

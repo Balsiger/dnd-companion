@@ -1,0 +1,31 @@
+template {
+  name: "TSR 11795"
+  reference {
+    name: "net"
+  }
+  world: "Episode I"
+  description: "character sheets for the Star Wars game"
+}
+title: "Star Wars Character Record Sheets"
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1795"
+  check: 4
+}
+isbn13 {
+}
+pages: 32
+system: STAR_WARS
+audience: ALL
+type: ACCESSORY
+style: SOFT_COVER
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

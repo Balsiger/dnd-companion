@@ -1,0 +1,28 @@
+template {
+  name: "DMA 000069"
+  world: "None"
+  description: "This is the member handbook for the European RPGA Network."
+}
+title: "European RPGA Member Handbook"
+author {
+  name: "RPGA"
+}
+date {
+}
+isbn {
+}
+isbn13 {
+}
+pages: 28
+system: NONE
+audience: ALL
+type: PROMOTION
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

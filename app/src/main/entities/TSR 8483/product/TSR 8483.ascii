@@ -1,0 +1,67 @@
+template {
+  name: "TSR 8483"
+  synonym: "WTC 86653"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "Far above the merciless \\Place{Underdark}, \\NPC{Drizzt Do\'Urden} fights to\n                    survive the elements of \\Place{Toril\'s} harsh surface. The young\n                    \\Monster{drow} begins a sojourn through a world entirely unlike his\n                    own---even as he evades the \\Monster{dark elves} of his past. He begins to\n                    understand his new home and its inhabitants, but acceptance among the\n                    surface-dwellers doesn\'t come easily.\n                    \'\\Product{Sojourn} is the best book published by TSR in quite some time.\'\n                    \\Product{Games Master International}."
+}
+title: "Sojourn"
+author {
+  name: "Salvatore, R. A."
+}
+cover {
+  name: "Easley, Jeff"
+}
+date {
+  year: 1991
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "047"
+  check: 8
+}
+isbn13 {
+}
+pages: 309
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book Three"
+series: "Legend of Drizzt"
+series: "Dark Elf Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

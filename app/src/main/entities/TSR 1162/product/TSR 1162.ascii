@@ -1,0 +1,67 @@
+template {
+  name: "TSR 1162"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Generic"
+  description: "\\large{The nightmare of \\NPC{Acererak}\'s tomb once again hungers for life!}\n                    Imagine a place of unspeakable evil. It was built upon hopelessness and\n                    filled with unending terror and pain. This loathsome place shattered the life\n                    of everyone who venture near. But through tremendous sacrifice and heroism,\n                    over the course of many years, it was finally gutted and its foul creator\n                    destroyed.\n                    Now imagine that the horror is beginning all over again.\n                    The sinister wizard \\NPC{Acererak} took great pains to safeguard his tomb. It\n                    took many years, and many more lives, before his evil was finally laid to\n                    rest. But though the \\Monster{demilich} is gone, he is not forgotten. Others\n                    would become as he was have traveled to the site of \\NPC{Acererak}\'s tomb\n                    seeking the secrets of mastery over death. Slowly these pilgrims gathered,\n                    eventually building in the shadow of the tomb itself a cummunity dedicated to\n                    the dark arts: \\Place{Skull City}.\n                    But even these twisted necromancers have no inkling to the true evil that\n                    swells and crackles beneath their feet.\n                    This boxed adventure contains:\n                    \\list\n                    {a 160-page adventure book;}\n                    {a 32-page book of illustrations to be shown to players;}\n                    {player handouts, including an adventurer\'s diary filled with clues;}\n                    {a 16-page book of maps and monsters;}\n                    {and a reprint facsimile of the original \\Product{Tomb of Horrors}\n                    adventure module as first published in 1987.}\n                    \\Product{Return to the Tomb of Horrors} is an epic adventure for characters\n                    of levels 13-16."
+}
+title: "Return to the Tomb of Horrors"
+date {
+  year: 1998
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 240
+system: ADND_REVISED
+type: ADVENTURE
+style: BOX
+producer: "TSR"
+series: "Tomes"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Return to the Tomb of Horrors"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Illustration Book"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Original Tomb of Horrors adventure"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Maps & Monsters"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "card"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "journal"
+  number: 1073741824
+}

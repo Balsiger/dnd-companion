@@ -1,0 +1,20 @@
+template {
+  name: "TSR 91539"
+  reference {
+    name: "net"
+  }
+  description: "display of 6"
+}
+title: "Wrath of the Minotaur"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 2970
+  precision: 100
+}

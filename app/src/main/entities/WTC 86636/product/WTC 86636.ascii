@@ -1,0 +1,57 @@
+template {
+  name: "WTC 86636"
+  world: "Dragonlance"
+  description: "The greatest order of chivalry in the history of \\Place{Krynn}.\n\n  After a \\Class{knight} has achieved the \\Group{Order of the Crown}, he must\n  then begin his training in the virtues of courage and heroism in order to\n  achieve the \\Group{Order of the Sword}.\n\n  This is the second tale of \\NPC{Sir Pirvan the Wayward}, whose reluctant and\n  inauspicious beginnings bore few clues to his potential as a \\Group{Knight of\n  the Sword} or as a \\Group{Knight of the Crown}, nor as a mentor for another\n  similarly dubious prospect for \\Place{Krynn}\'s greatest order of chivalry.\n\n  Roland J. Green is the author of the Starcruiser Shenandoah and Wandor series\n  and numerous Conan novels, and is coauthor (with Jerry Pournelle) of the\n  Jannisaries series.\n\n  \\Product{The Warriors} series details the exploits of the heroes and villains\n  of the \\Product{War of the Lance}."
+}
+title: "Knights of the Sword"
+author {
+  name: "Green, Ronald J."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 1999
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0202"
+  check: 7
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume III"
+series: "The Warrior Series"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

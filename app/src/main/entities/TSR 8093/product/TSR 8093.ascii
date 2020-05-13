@@ -1,0 +1,36 @@
+template {
+  name: "TSR 8093"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 211"
+  }
+  world: "None"
+}
+title: "Forest of Darkness"
+author {
+  name: "Michael Andrews"
+}
+date {
+  year: 1994
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Six"
+series: "New Series"
+series: "Dragon Strike"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

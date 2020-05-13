@@ -1,0 +1,129 @@
+template {
+  name: "WTC 9538172"
+  world: "Eberron"
+  description: "In the world of \\Place{Eberron}, the reality of the gods depends on the\n  belief of the followers. Contradictory truths might both be correct. Vague\n  legend might be fact, and accepted fact only dogma. But to every worshiper,\n  the divine presence manifests in miraculous magic, boons for the faithful,\n  and undeniable holy power. In short, faith shapes reality.\n\n  This supplement presents detailed descriptions of the major religions of\n  \\Place{Eberron}, including the rival pantheons of the \\God{Sovereign Host}\n  and the \\God{Dark Six}, the young faith of the \\God{Silver Flame}, and the\n  shadowed \\God{Blood of Vol}. You\'ll also find intriguing details of lesser\n  religions, such as the beliefs of the laconic warforged, the mad cults of the\n  \\Group{Dragon Below}, and the various druid sects of the \\Place{Eldeen\n  Reaches}. The \\Product{Faiths of Eberron} supplement also includes new feats,\n  spells, prestige classes, and equipment to give more options to devout\n  worshipers and sometime followers alike."
+}
+title: "Faiths of Eberron"
+subtitle: "Many Faiths, Many Truths"
+author {
+  name: "Wilkes, Jennifer Clarke"
+}
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Suleiman, C.A."
+}
+author {
+  name: "Baker, Keith"
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+editor {
+  name: "Trombley, Bernard C."
+  job: "editing assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Cotie, Mitch"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Martin, Michael"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "art director"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3934"
+  check: 6
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Eberron Campaign Setting"
+layout: FULL_COLOR

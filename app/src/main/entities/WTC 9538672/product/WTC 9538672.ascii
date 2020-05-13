@@ -1,0 +1,150 @@
+template {
+  name: "WTC 9538672"
+  world: "Generic"
+  description: "There\'s more to adventuring than crawling around in dungeons. The city\n                    holds many avenues of peril and intrigue. It teems with adventure and offers\n                    unsurpassed opportunities and challenges. Dark alleys, busy guildhalls, rowdy\n                    taverns, fetid sewers, and palatial manors hold secrets to be discovered and\n                    mysteries to be explored.\n                    This supplement for the DUNGEONS & DRAGONS game reveals the city in all its\n                    grandeur and grimness. It makes the \'urban dungeon\' feel alive with politics\n                    and power, especially through influential guilds. This tome also describes\n                    new feats, spells, urban terrain, hazards, and monsters guaranteed to make\n                    the party\'s next visit to the city a vibrant and exhilarating event."
+  short_description: "An Essential Guide to Urban Adventuring"
+}
+title: "Cityscape"
+subtitle: "As Deadly as Any Dungeon"
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Suleiman, C.A."
+}
+author {
+  name: "Noonan, David"
+  job: "additional design"
+}
+editor {
+  name: "Thompson, John"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Vaux, Rob"
+}
+editor {
+  name: "Lee, Tony"
+}
+editor {
+  name: "Nagler, Daniel"
+  job: "editorial assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Nentrup, Jeff"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Komarck, Michael"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Lonstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Dunnet, Yasuyo"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3939"
+  check: 7
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

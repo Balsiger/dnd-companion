@@ -1,0 +1,156 @@
+template {
+  name: "Dragon 321"
+  world: "Generic"
+  description: "Issue 321 of the magazine. Planar Adventure issue."
+}
+title: "Dragon 321"
+author {
+  name: "Bonny, Edward"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+}
+author {
+  name: "Frour, Johnn"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Marks, Bennet"
+}
+author {
+  name: "Poisso, Dean"
+}
+author {
+  name: "Shortt, Michael"
+}
+author {
+  name: "Tanner, Chris"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Phillips, Michael"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Wahlstrom, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Schley, Mike"
+  job: "graphic designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "group publishing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "circulation manager"
+}
+date {
+  year: 2004
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIX 2"
+number: "321"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

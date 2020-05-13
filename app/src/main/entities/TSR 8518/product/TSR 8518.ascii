@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8518"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "King\'s Quest"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Eighteen"
+price {
+}

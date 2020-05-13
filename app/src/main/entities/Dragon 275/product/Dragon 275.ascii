@@ -1,0 +1,202 @@
+template {
+  name: "Dragon 275"
+  world: "Generic"
+  description: "Issue 275 of the magazine. The main theme is fight, fight, fight."
+}
+title: "Dragon 275"
+author {
+  name: "Gary Gygax"
+}
+author {
+  name: "James Wyatt"
+}
+author {
+  name: "Jonathan Tweet"
+}
+author {
+  name: "Sean K Reynolds"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Ibach, Dawn"
+}
+author {
+  name: "McLachlan, Brian"
+}
+author {
+  name: "Wischtadt, Bryon"
+}
+author {
+  name: "Robin D. Laws"
+}
+author {
+  name: "Mike Selinker"
+}
+author {
+  name: "Kristine Kathryn Rusch"
+}
+author {
+  name: "Owen K.C. Stephens"
+}
+author {
+  name: "Johnathan M. Richards"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Monte Cook"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Ray Winniger"
+}
+author {
+  name: "Johnny Wilson"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Haddock, Eric"
+}
+editor {
+  name: "Matthew Sernett"
+}
+cover {
+  name: "Mark Zug"
+}
+illustrator {
+  name: "Ron Spencer"
+}
+illustrator {
+  name: "Stephen F. Schwartz"
+}
+illustrator {
+  name: "Kennon James"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "McLachlan, Brian"
+}
+illustrator {
+  name: "Barion, Barbara"
+}
+illustrator {
+  name: "R. Ward Shipman"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Arnie Swekel"
+}
+illustrator {
+  name: "Greg Baker"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+}
+illustrator {
+  name: "Jason Soles"
+}
+manager {
+  name: "Johnny Wilson"
+  job: "group publisher"
+}
+manager {
+  name: "Wendy Noritake"
+  job: "publisher"
+}
+manager {
+  name: "Peter Whitley"
+  job: "art director"
+}
+manager {
+  name: "Travers W. Dow"
+  job: "graphic designer"
+}
+manager {
+  name: "Scott Ricker"
+  job: "graphic designer"
+}
+manager {
+  name: "Kyle Stanley Hunter"
+  job: "graphic designer"
+}
+manager {
+  name: "Nick Isaac"
+  job: "additional illustrator"
+}
+manager {
+  name: "Barion, Barbara"
+  job: "additional illustrator"
+}
+manager {
+  name: "Pierce Watters"
+  job: "circulation director"
+}
+manager {
+  name: "Bob Henning"
+  job: "advertising sales director"
+}
+manager {
+  name: "John Dunn"
+  job: "production director"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "assistant production manager"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Chung, Alice"
+  job: "advertising intern"
+}
+date {
+  year: 2000
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXV 2"
+number: "275"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

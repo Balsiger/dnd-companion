@@ -1,0 +1,121 @@
+template {
+  name: "Dungeon 149"
+  world: "Generic"
+  description: "Enemies of my enemy - War of the wielder - Twisted Night"
+}
+title: "Dungeon 149"
+subtitle: "Issue #149"
+author {
+  name: "Baase, Kevin"
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Brown, Russell"
+}
+author {
+  name: "Jansing, Eric"
+}
+author {
+  name: "Kortes, Michael"
+}
+author {
+  name: "Happ, Stefan"
+}
+editor {
+  name: "Jacobs, James"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Walker, Jeremy"
+  job: "assisstant editor"
+}
+editor {
+  name: "Sutter, James Lafond"
+  job: "assisstant editor"
+}
+cover {
+  name: "Ryman, James"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Dillon, Julie"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "UDON"
+}
+illustrator {
+  name: "Vehige, Adam"
+}
+illustrator {
+  name: "Wooten, Ben"
+}
+illustrator {
+  name: "Pocza, Drew"
+  job: "art director"
+}
+typographer {
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising & marketing director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "production director"
+}
+manager {
+  name: "Davis, James"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+date {
+  year: 2007
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+type: MAGAZINE
+style: SOFT_COVER
+producer: "Paizo"
+volume: "21"
+number: "8"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

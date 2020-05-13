@@ -1,0 +1,28 @@
+template {
+  name: "Reaper 02156"
+  description: "A mummy with outstreched hand."
+}
+title: "Mummy of Hakir"
+author {
+  name: "Ridolfi, B."
+}
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: DARK_HEAVEN
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+series: "Apocalypse"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}

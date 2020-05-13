@@ -1,0 +1,101 @@
+template {
+  name: "TSR 1159"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Forgotten Realms"
+  description: "Greetings, kind travelers! The roads south to the \\Place{Lands of Intrigue}\n                    are long and dusty indeed, but they are roads to greatness and glory for\n                    merchants, adventurers, and scholars all. Folk with mettle enough to brave\n                    these lands will be challenged and astounded by forms of power, magic, and\n                    culture that are found nowhere else in \\Place{Faer\\hat{u}n}.\n                    Developed from out-of-print material originally found in \\Product[TSR\n                    9224]{FR3 Empires of the Sands}, this expansion provides more than 150 pages\n                    of new information. What\'s inside:\n                    \\list\n                    {\\emph{Book One: \\Place{Tethyr}} (96 pages) presents the many facets\n                    of \\Place{Tethyr}, from its origin as an \\Monster[Elf]{elven} homeland\n                    through its rise and falls as a \\Monster[Human]{human} nation and up to its\n                    recent restoration from anarchy. While this growin realm is now the\n                    safest of the \\Place{Lands of Intrigue}, it was once the seat of the\n                    malevolent \\Place[Shoon Empire]{Empire of Shoon}---whose influence still\n                    haunts the golden plains in the form of roving monsters, wandering ghosts,\n                    and the terrors of times past.}\n                    {\\emph{Book Two: \\Place{Amn}} (64 pages) collates all that is\n                    \\Place{Amn}---or, as some call it, the \\Place[Amn]{Coinland}. Money is\n                    this country\'s lifeblood, whether gleaned from the trade along the\n                    \\Place{Sword Coast} or the far-off colonies of \\Place{New\n                    Amn}. However, a dark dawn has risen on those whose eyes see no\n                    further than their ledgers or coin stacks...}\n                    {\\emph{Book Three: Erlkazar & Folk of Intrigue} (32 pages) reveals the\n                    formerly undocumented domain of \\Place{Erlkazar}, east of\n                    \\Place{Tethyr}---an area ready to be fleshed out by DMs to suit their\n                    individual campaigns. \\emph{Book Three} also holds the secrets of the\n                    hidden powers of the South, such as the \\Group{Cowled Wizards}, the\n                    \\Group{Knights of the Shield}, the \\Group{Shadow Thieves}, and the\n                    undead sorcerers of the \\Group{Twisted Rune}.}\n                    {Two poster maps detail the \\Place{Lands of Intrigue}, the\n                    \\Place{Pirate Isles of the Nelanther}, and the center of the\n                    long-dead \\Place{Shoon Empire}, the monster-riddled ruins of\n                    \\Place{Shoonach}.}\n                    {More than a dozen additional maps depict all the cities of\n                    \\Place{Amn} and \\Place{Tethyr}, as well as the distant\n                    \\Place[Maztica]{Maztican} colonies.}"
+}
+title: "Lands of Intrigue"
+author {
+  name: "Schend, Steven E."
+}
+editor {
+  name: "Moore, Roger E."
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Hotz, Eric"
+}
+illustrator {
+  name: "Phillips, Paul"
+}
+illustrator {
+  name: "White, Shane"
+}
+typographer {
+  name: "Isler, Tracey L."
+}
+manager {
+  name: "LeMay, Heather"
+  job: "graphic design"
+}
+manager {
+  name: "LeMay, Heather"
+  job: "production"
+}
+manager {
+  name: "Reid, Thomas M."
+  job: "project coordination"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphic coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "graphic coordination"
+}
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0697"
+  check: 9
+}
+isbn13 {
+}
+pages: 160
+system: ADND_REVISED
+type: CAMPAIGN_EXPANSION
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Book One: Tethyr"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book Two: Amn"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book Three: Erlkazar & Folk of Intrigue"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 2
+}

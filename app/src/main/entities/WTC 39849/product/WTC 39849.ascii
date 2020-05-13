@@ -1,0 +1,45 @@
+template {
+  name: "WTC 39849"
+  world: "Forgotten Realms"
+  description: "I am \\NPC{Drizzt Do\'Urden}, hardened by the whips of the \\Monster{drow} matrons and softened by the honest love of friends. The \\Group{Companions of the Hall} are no more, and at long last I have a sense of finality. My journey takes me from \\Place{Gountlgrym}, as it once took me from \\Place{Mithral Hall}, but I doubt I shall return. It is time to let go of that which is past and seek new roads.\n\nI am \\NPC{Sylora Salm}, sworn enemy of \\NPC{Dahlia Sin\'felle} and loyal disciple of the archi-lich \\NPC{Szass Tam}. I will feed the \\Item{Dread Ring} with the souls of \\Place{Neverwinter}, and no one can stop me. Not even \\NPC{Dahlia} and her newfound ally, the drow.\n\nI am \\Place{Neverwinter}, a city once known as the \\Place{Jewel of the North}, burnt to ashes and fighting to survive. As \\NPC{Herzgo Alegni} vies for control of my people and \\NPC{Sylora Salm} plots to bring about a cataclysm that will destroy me once and for all, I struggle to stand strong. After centuries of life behind my once-glorious walls, can this truly be my end?"
+  short_description: "The second book in the Neverwinter Saga."
+}
+title: "Neverwinter"
+subtitle: "I Am Alone Now. I Am Free"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Lockwood, Todd"
+}
+date {
+  year: 2011
+  month: 10
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6027"
+  check: 9
+}
+pages: 363
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book II"
+series: "The Neverwinter Saga"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

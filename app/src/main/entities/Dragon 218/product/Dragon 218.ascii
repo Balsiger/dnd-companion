@@ -1,0 +1,183 @@
+template {
+  name: "Dragon 218"
+  world: "Generic"
+}
+title: "Dragon 218"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Detwiler, Gregory W."
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Collins, Ron"
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Murphy, Paul"
+}
+author {
+  name: "Carpenter, Ken"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Kane, Thomas"
+}
+author {
+  name: "Schend, Steven"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Kuciak, Michael T."
+}
+author {
+  name: "Vuckovich, Michelle"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "King, Stephen"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Schwartz, Steve"
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+illustrator {
+  name: "Mondok, Wayne"
+}
+illustrator {
+  name: "Luck, John C."
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Kohl, Charles"
+  job: "photography"
+}
+illustrator {
+  name: "Kooharian, Dave"
+}
+illustrator {
+  name: "Lessl, Bob"
+}
+illustrator {
+  name: "Hrenchuk, Bill"
+}
+illustrator {
+  name: "Hanson, David"
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "McCabe, Mark"
+}
+illustrator {
+  name: "Pilsbury, Joe"
+}
+illustrator {
+  name: "Munden, Barry"
+}
+illustrator {
+  name: "Manui, Barbara"
+}
+illustrator {
+  name: "Adams, Chris"
+}
+illustrator {
+  name: "Witmer, Don"
+  job: "photography"
+}
+illustrator {
+  name: "Carpenter, Ken"
+  job: "painting"
+}
+illustrator {
+  name: "Bond, Alexander"
+  job: "painting"
+}
+illustrator {
+  name: "Leach, Mickey"
+  job: "painting"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1995
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XX 1"
+number: "218"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

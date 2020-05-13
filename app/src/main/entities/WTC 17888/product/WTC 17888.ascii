@@ -1,0 +1,29 @@
+template {
+  name: "WTC 17888"
+  world: "Star Wars"
+  description: "The power of the dark side is growing. Now you must choose your alliances\n  carefully from the likes of \\NPC{Mace Windu} or \\NPC{Darth Maul}, and enlist\n  an army in your command.\n\n  With \\Product{Sith Rising}, the new expansion for the \\Product{Star Wars\n  trading card game}, you can engage in the climactic battle of Attack of the\n  Clones and other epic contests of your choosing. Is it time for the\n  \\Group{Sith} to have revenge? Or will the \\Group{Jedi} overcome\n  insurmountable odds?\n\n  Select from the random cards in booster packs to build your own deck or add\n  reinforcements to your deck or collection.\n\n  \\bold{Go ahead. Be Seduced.}"
+}
+title: "Sith Rising"
+subtitle: "Time To Take Sides"
+date {
+  year: 2002
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7430"
+  title: "0595"
+  check: 3
+}
+isbn13 {
+}
+system: STAR_WARS_TCG
+audience: ALL
+type: CARDS_TYPE
+style: PACK
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 329
+  precision: 100
+}

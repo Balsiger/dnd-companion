@@ -1,0 +1,54 @@
+template {
+  name: "TSR 3104"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  reference {
+    name: "Dragon 218"
+  }
+  world: "Birthright"
+  description: "information on this domain"
+}
+title: "Roesone"
+author {
+  name: "Baker, Richard L. III"
+}
+date {
+  year: 1995
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0284"
+  check: 1
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 700
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  description: "four-panel"
+  number: 1073741824
+}

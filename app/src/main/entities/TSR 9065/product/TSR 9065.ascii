@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9065"
+  synonym: "WG4"
+  reference {
+    name: "net price list"
+  }
+  world: "Greyhawk"
+}
+title: "Forgotten Temple of Tharzidun"
+leader: "The"
+date {
+  year: 1982
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

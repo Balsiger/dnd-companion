@@ -1,0 +1,47 @@
+template {
+  name: "WTC 9553574"
+  world: "Forgotten Realms"
+  description: "In the streets of \\Place{Waterdeep}, conspiracies run like water through the\n                    gutters, bubbling beneath the seeming calm of the city\'s life. As a band\n                    of young, foppish lords discovers there is a dark side to the city they all\n                    love, a sinister mage and his son seek to create perverted creatures to\n                    further their twisted ends.\n                    And across it all sprawls the great city itself: brawling, drinking,\n                    laughing, living life to the fullest.\n                    Even in the face of death.\n                    \\Product{City of Splendors} is set in the most important city of the\n                    \\Place{Forgotten Realms} setting: \\Place{Waterdeep}, city of intrigue and\n                    secrets. Its authors are considered to be among the most authoritative\n                    figures writing in the \\Product{Forgotten Realms} setting. This novel is\n                    their first collaboration.\n                    The Cities\n                    A series of stand-alone novels, each set in one of the mighty cities of\n                    Faer\\hat{u}n."
+}
+title: "City of Splendors"
+leader: "The"
+subtitle: "Waterdeep"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Cunningham, Elaine"
+}
+cover {
+  name: "Targete, J.P."
+}
+cover {
+}
+date {
+  year: 2006
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4004"
+  check: 2
+}
+isbn13 {
+}
+pages: 512
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "The Cities"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

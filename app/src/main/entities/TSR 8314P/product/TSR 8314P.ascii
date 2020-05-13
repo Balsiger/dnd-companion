@@ -1,0 +1,91 @@
+template {
+  name: "TSR 8314P"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "Is \\NPC{Raistlin} truly dead?\n\n  The answer lies in the \\Place{Dragonlance} novella by Margaret Weis and Tracy\n  Hickman, which gazes into the future of \\NPC{Caramon} and his\n  \\Class{mage}-son, and into the dark nether-past of \\NPC{Raistlin}.\n\n  Untold tales of \\Place{Krynn}.\n\n  Tales of sea monsters, \\Monster{dark elves}, \\Monster{ice bears}, hideous\n  \\Monster{hydra-headed serpents}, and loathsome \\Monster{draconian} troops.\n\n  Further adventures of the \\Monster{kender} \\NPC{Tas}; the innkeepr \\NPC{Otik}\n  and young \\NPC{Tika}; the \\Monster{dwarf} \\NPC{Flint} and \\NPC{Tanis}, leader\n  of the companions; \\NPC{Caramon} and \\NPC{Raistlin}, twin brothers, one, a\n  genial \\Class{warrior}, the other, a sickly \\Class{magician} and\n  \\Class{scholar}.\n\n  Nine short stories by superlative writers, plus an exciting novella by\n  Margaret Weis and Tracy Hickman."
+}
+title: "Magic of Krynn"
+leader: "The"
+author {
+  name: "Williams, Michael"
+}
+author {
+  name: "Siegel, Barbara"
+}
+author {
+  name: "Siegel, Scott"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Smith, Warren B."
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "Kirchoff, Mary"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 1987
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "454"
+  check: 9
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume I"
+series: "Tales Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

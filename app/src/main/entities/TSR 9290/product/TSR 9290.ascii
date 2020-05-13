@@ -1,0 +1,83 @@
+template {
+  name: "TSR 9290"
+  synonym: "FRA2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The \\Monster{Purple Dragon} is caged.\n                    But \\Place{Ra-Khati} isn\'t out of danger. The evil Raja \\NPC{Ambuchar\n                    Devayam} is holding the \\NPC{Dalai Lama} to his promise. If the\n                    player-characters don\'t deliver Princess \\NPC{Bhrokiti} and the \\NPC{Black\n                    Courser} to him---and even if they do---the \\NPC[Raja of Solon]{Raja}\'s foul\n                    army will once again march on the \\Place{Hidden Kingdom}. What is it that\n                    \\NPC[Ambuchar Devayam]{Devayam} really wants with \\Place{Ra-Khati}?\n                    Only your player-characters can discover the awful truth. When they do, their\n                    journey will take them to the farthest reaches of \\Place{Shou\n                    Lung}. Providing they can escape the diabolic assassin sent to stop them,\n                    they will find the lost city of \\Place{Kuo Meilan}. There, they must\n                    penetrate to the lost city\'s wicked heart and find the \\Item{Stone Sceptre of\n                    Shih}. Only armed with this artifact, and the secret connecting it to\n                    \\NPC{Ambuchar Devayam}, can they hope to save \\Place{Ra-Khati}---or\n                    themselves!\n                    \\Product[TSR 9290]{The Black Courser} is the second adventure in the\n                    \\Product{Empires Adventures Trilogy}, taking place in the new\n                    \\Place{Forgotten Realms} campaign world described in \\Product[TSR 1055]{The\n                    Horde} campaign set. The \\Product{Empires Adventures Trilogy} is also set\n                    amidst the turbulent events protrayed in the \\Product{Empires Novel\n                    Trilogy}. This adventure is designed for four to eight player characters of\n                    levels 6--9, and can be played as a separate, stand-alone module or as a\n                    follow-up to FRA1, \\Product[TSR 9281]{Storm Riders}.\n                    Look for the other \\Product[Empires Adventures Trilogy]{Empires Adventures}:\n                    \\Product[TSR 9281]{Storm Riders} (available now) and \\Product[TSR 9304]{Blood\n                    Charge} (coming soon!)."
+}
+title: "Black Courser"
+author {
+  name: "Denning, Troy"
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Abrams, Paul"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Parker, Ray E."
+  job: "graphic design"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "graphic design"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "858"
+  check: 7
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+number: "Module Two"
+series: "Empires Adventures Trilogy"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,23 @@
+template {
+  name: "TSR 1015"
+  reference {
+    name: "net price list"
+  }
+  world: "Greyhawk"
+  description: "Unknown"
+}
+title: "World of Greyhawk Campaign Setting"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

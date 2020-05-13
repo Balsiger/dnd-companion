@@ -1,0 +1,16 @@
+template {
+  name: "TSR 6056"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "RPGA Dice Bag"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

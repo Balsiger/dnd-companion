@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9169"
+  synonym: "I8"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Ravager of Time"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}

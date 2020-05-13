@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8533"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Knight of Illusion"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Thirty-three"
+price {
+}

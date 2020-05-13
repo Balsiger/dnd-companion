@@ -1,0 +1,54 @@
+template {
+  name: "TSR 9355"
+  synonym: "RR5"
+  world: "Ravenloft"
+  description: "Beware the darkness, for it is alive with the dead! Now, the nights of\n                    \\Place{Ravenloft} are more horrifying than ever. You\'ll find out why in the\n                    pages within.\n                    Follow \\NPC{Dr. Rudolph Van Richten}, \\Place{Ravenloft}\'s leading authority\n                    on the supernatural, as he reveals how to hunt the ghosts that lurk in the\n                    blackest shadows of midnight. For countless years, \\NPC{Van Richten} has\n                    traveled the misty roads of \\Place{Ravenloft} on a mission to destroy the\n                    undead wherever they might be. Now, your characters can join him on his\n                    courageous quest.\n                    \\NPC{Dr. Van Richten} tells all that he has discovered about the incorporeal\n                    undead. He explains their origins, the passions that draw them back from\n                    beyond the grave, and the horrible powers bestowed upon them in unlife. In\n                    addition, he offers his wise counsel on the ways in which these fiends can be\n                    stalked, confronted, and destroyed.\n                    Be careful, for these ghosts are not simple, moaning spirits of darkest\n                    night. These are the ghosts of \\Place{Ravenloft}"
+}
+title: "Van Richten\'s Guide to Ghosts"
+author {
+  name: "Connors, William W."
+}
+editor {
+  name: "Watry, Dori \'the Barbarian\'"
+}
+cover {
+  name: "Wood, Robin"
+}
+illustrator {
+  name: "Klasnich, Robert"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Feggestaed, Sarah"
+  job: "production"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "351"
+  check: 5
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+series: "Van Richten\'s Guide"
+price {
+  currency: "$ "
+  number: 1095
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

@@ -1,0 +1,120 @@
+template {
+  name: "TSR 9297"
+  synonym: "FOR1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The creatures of lore and legend---of myth and mystery---only the\n                    \\Monster[Dragon]{dragons} know the answers to the secrets and ciphers that\n                    surround them. But brave adventuring souls who have gone before have left\n                    behind clues and epistles with valuable information for anyone in pursuit of\n                    \\Monster[Dragon]{dragons}. This tome is a compilation of the lifetime efforts\n                    of numerous \\Monster[Dragon]{dragon}-hunting adventurers, presented to those\n                    who crave hints and leads for \\Monster[Dragon]{dragon}-questing."
+}
+title: "Draconomicon"
+author {
+  name: "Findley, Nigel"
+}
+author {
+  name: "Kubasik, Christopher"
+}
+author {
+  name: "Sargent, Carl"
+}
+author {
+  name: "Terra, John"
+}
+author {
+  name: "Tracy, William"
+}
+editor {
+  name: "Breault, Mike"
+}
+cartographer {
+  name: "Beck, Steve"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Dorman, David"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Fields, Fred"
+}
+illustrator {
+  name: "Raab, Robin"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+illustrator {
+  name: "Waller, Kark"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Brown, Anne K."
+  job: "project coordination"
+}
+manager {
+  name: "Heard, Bruce"
+  job: "project coordination"
+}
+manager {
+  name: "Brown, Anne K."
+  job: "proofreading"
+}
+manager {
+  name: "Connors, Bill"
+  job: "proofreading"
+}
+manager {
+  name: "Parker, Roy"
+  job: "graphic design"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "graphic design"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "keylining"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "876"
+  check: 5
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

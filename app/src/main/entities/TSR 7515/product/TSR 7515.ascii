@@ -1,0 +1,37 @@
+template {
+  name: "TSR 7515"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "fearless adventurers with the ultimate weapon of the ancients"
+}
+title: "Gamma Knights"
+date {
+  year: 1992
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "402"
+  check: 3
+}
+isbn13 {
+}
+system: GAMMA_WORLD
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

@@ -1,0 +1,48 @@
+template {
+  name: "TSR 8033"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "\\NPC{Teldin Moore} is looking for the great ship \\Item{Spelljammer}. A\n  \\Monste{radiant dragon} holds the key to commanding the great ship but needs\n  \\NPC{Teldin}\'s help to take control. Meanwhile, the \\Monster[elf]{elves} seek\n  his assistance in the second \\Event{Unhuman War}, where a group of\n  \\Monster{elf}-hating monsters trades with \\Monster[goblin]{goblinoids} for a\n  secret weapon against the \\Monster[elf]{elven} \\Group{Imperial Fleet}. But\n  someone in \\NPC{Teldin}\'s inner circle is pulling all parties toward\n  battle.\n\n  \\Product{The Radiant Dragon}, set in the \\Place{Spelljammer} fantasy\n  universe, is the fourth book in the \\Product{Cloakmaster Cycle} of\n  \\Place{Spelljammer} space fantasy novels from TSR, Inc."
+}
+title: "Radiant Dragon"
+leader: "The"
+author {
+  name: "Cunningham, Elaine"
+}
+cover {
+  name: "Freas, Kelly"
+}
+date {
+  year: 1992
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "346"
+  check: 9
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Four"
+series: "Cloakmaster Cycle"
+price {
+  currency: "$ "
+  number: 399
+  precision: 100
+}

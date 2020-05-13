@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5022"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Carrion Crawler (bendable)"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

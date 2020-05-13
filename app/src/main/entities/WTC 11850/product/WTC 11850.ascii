@@ -1,0 +1,30 @@
+template {
+  name: "WTC 11850"
+  synonym: "WTC 88242"
+  world: "Generic"
+  description: "\\large{Visit New Dimensions}\n                    The most powerful adventurers know that great rewards---and great\n                    perils---await them beyond the world they call home. From the depth of\n                    \\Place{Hell} to the heights of \\Place{Mount Celestia}, from the clockworld\n                    world of \\Place{Mechanus} to the swirling chaos of \\Place{Limbo}, these\n                    strange and terrifying dimensions provide new challenges to adventurers who\n                    travel there. \\Product{Manual of the Planes} is your guidebook on a tour of\n                    the \\Place{multiverse}.\n                    This supplement for the D&D game provides everything you need to know before\n                    you visit other planes of existence. Included are new prestige classes,\n                    spells, monsters, and magic items. Along with descriptions of dozens of new\n                    dimensions, \\Product{Manual of the Planes} includes rules for creating your\n                    own planes.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide} and the \\Product{Monster\n                    Manual}. A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Manual of the Planes"
+date {
+  year: 2001
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 224
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "TSR"
+series: "DM Guide"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

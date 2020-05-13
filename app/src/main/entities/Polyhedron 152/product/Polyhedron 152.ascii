@@ -1,0 +1,80 @@
+template {
+  name: "Polyhedron 152"
+  world: "Generic"
+  description: "July 2002 issue of polyhedron (together with Dungeon 93)."
+}
+title: "Polyhedron 152"
+subtitle: "Thunder Ball Rally"
+author {
+  name: "Stan!"
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "Richards, Ian"
+}
+author {
+  name: "Upchurch, Wil"
+}
+author {
+  name: "Redman, Rich"
+}
+editor {
+  name: "Mona, Erik"
+}
+cover {
+  name: "Hampton, Justin"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Rams, Vinod"
+}
+illustrator {
+  name: "Schomburg, Scott"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Perez, Ramon"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Trevas, Chris"
+}
+illustrator {
+  name: "Hunter, Kyle"
+  job: "art direction"
+}
+date {
+  year: 2002
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 69
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "152"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+layout: FULL_COLOR

@@ -1,0 +1,57 @@
+template {
+  name: "WTC 88851"
+  world: "Forgotten Realms"
+  description: "The first in a series of premiere hardcover editions of Salvatore\'s classic\n                    \\Monster{dark elf} tales.\n                    This stunning new release of the classic R.A. Salvatore novel recounts the\n                    origins of Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt\n                    Do\'Urden} and is the first-ever release of this \\Place{Forgotten Realms}\n                    novel title in hardcover. This title kicks off \\Product{The Legend of Drizzt}\n                    series, which will showcase the classic \\Monster{dark elf} novels in new,\n                    deluxe hardcover editions. Each title features annotations by the author,\n                    all-new cover art, and forewords written by those who have become familiar\n                    with Salvatore and \\NPC{Drizzt} over the years."
+}
+title: "Homeland"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3123"
+  check: 10
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book I"
+series: "Legend of Drizzt"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

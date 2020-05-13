@@ -1,0 +1,45 @@
+template {
+  name: "TSR 8631"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 221"
+  }
+  world: "Generic"
+  description: "an audio interactive CD adventure"
+}
+title: "Track of the Creature"
+author {
+  name: "Flint Dille"
+}
+date {
+  year: 1995
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: TERROR_TRAX
+audience: ALL
+type: ADVENTURE
+style: BOX
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "pamphlet"
+  number: 1073741824
+}
+content {
+  part: CD
+  description: "audio"
+  number: 1073741824
+}

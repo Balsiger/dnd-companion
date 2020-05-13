@@ -1,0 +1,79 @@
+template {
+  name: "TSR 9325"
+  synonym: "SJA4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "Few creatures inhabiting the realms of \\Place{Greyspace},\n  \\Place{Krynnspace}, and \\Place{Realmspace} know (or even dream) of each\n  others\' existence. Fewer still understand the celestial bonds they secretly\n  share.\n\n  As the worlds of \\Monster{men} and \\Monster{elves}, \\Monster{dwarves} and\n  \\Monster{dragons} are about to discover, no less than \\bold{twelve} unknown\n  spheres stand poised for war...a war as unexpected as it will be\n  devastating!\n\n  Twelve spheres against three---hardly fair ods. But then again, \\NPC{Emperor\n  Vulkaran the Dark}, \\NPC{Master of the Twelve Spheres} and \\NPC{Ruler of All\n  Known Space}, doesn\'t like a fair fight. He\'s never fought one yet!\n\n  \\Product{Under the Dark Fist}, a 64-page adventure for the\n  \\Product{Spelljammer setting}, provides enough material to wage an\n  intergalactic war across 15 sphere! It can be used as an epic stand-alone\n  adventure or easily incorporated into an existing campaign. This challenging\n  adventure is recommended for experienced players and referees.\n\n  This adventure is designed for a party of four to eight characters, levels 10\n  to 14."
+}
+title: "Under the Dark Fist"
+author {
+  name: "Boucher, Grant"
+}
+editor {
+  name: "Pickens, Jon"
+}
+cover {
+  name: "Brom, Gerald"
+}
+cartographer {
+  name: "LaForce, David S."
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "keylining"
+}
+date {
+  year: 1991
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "131"
+  check: 8
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

@@ -1,0 +1,109 @@
+template {
+  name: "Dungeon 102"
+  world: "Generic"
+  description: "This is issue 102 of the dungeon magazine, together with the\n   \\Product{Polyhedron 161} issue."
+}
+title: "Dungeon 102"
+author {
+  name: "Logue, Nicolas"
+}
+author {
+  name: "Noonan, David"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+cover {
+  name: "Nelson, Mark"
+}
+cartographer {
+  name: "West, Christopher"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Janssen, Niklas"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "advertising sales director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffice manager"
+}
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 61
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XVII 6"
+number: "102"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,34 @@
+template {
+  name: "WTC 96601"
+  world: "Dragonlance"
+  description: "This attractive new re-release of \\Product{Galen Beknighted} showcases the\n  new look commissioned for the \\Product{Heroes} series. This title is a sequel\n  to another recently recovered title in this series, \\Product{Weasel\'s Luck},\n  and is by the same author, Michael Williams."
+}
+title: "Galen Beknighted"
+author {
+  name: "Williams, Michael"
+}
+date {
+  year: 2004
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3400"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Six"
+series: "Heroes"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

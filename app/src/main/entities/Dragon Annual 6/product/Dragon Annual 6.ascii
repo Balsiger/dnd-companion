@@ -1,0 +1,162 @@
+template {
+  name: "Dragon Annual 6"
+  world: "Generic"
+  description: "Annual issue 6. "
+}
+title: "Dragon Annual 6"
+author {
+  name: "Upton, Daniel"
+}
+author {
+  name: "Dancey, Ryan S."
+}
+author {
+  name: "Selinker, Mike"
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Jordan, Robert"
+}
+author {
+  name: "Benage, Greg"
+}
+author {
+  name: "Lopez, Henry"
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Bishop, Jim"
+}
+editor {
+  name: "Mona, Erik"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robin D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+editor {
+  name: "Fiorito, Stacie A."
+  job: "editorial intern"
+}
+cover {
+  name: "Sweet, Darrell K."
+}
+cartographer {
+  name: "Lee, Rob"
+}
+illustrator {
+  name: "Sweet, Darrel K."
+}
+illustrator {
+  name: "Detwiler, Dennis"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Schomburg, Scott"
+}
+illustrator {
+  name: "Schomburg, Brian"
+}
+illustrator {
+  name: "Ejsing, Jesper"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Lee, Rob"
+}
+illustrator {
+  name: "Hunt, Jonathan"
+}
+illustrator {
+  name: "James, Andy"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Dunn, John."
+  job: "production manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2000
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+number: "Annual 5"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

@@ -1,0 +1,34 @@
+template {
+  name: "WTC 96708"
+  world: "Dragonlance"
+  description: "The paperback edition of the opening title in a new trilogy from\n  \\Place{Dragonlance} setting co-creator Margaret Weis takes up where the\n  \\Product{War of Souls} series left off with the central character\n  \\NPC{Mina}. While following her story, this new trilogy also explores the\n  chaos that is post-war \\Place{Krynn}. This is Weis\'s first solo trilogy in\n  the \\Place{Dragonlance} world."
+}
+title: "Amber and Ashes"
+author {
+  name: "Weis, Margaret"
+}
+date {
+  year: 2005
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3742"
+  check: 4
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume One"
+series: "The Dark Disciple"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

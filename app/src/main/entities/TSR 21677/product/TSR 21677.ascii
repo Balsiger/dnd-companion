@@ -1,0 +1,47 @@
+template {
+  name: "TSR 21677"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "The loyal servant of the \\Group{Uskevren} family, has a  terrible secret.\n                    Now, when a ruthless evil is unleashed on \\Place{Selgaunt}, the butler\'s ties\n                    to the underworld may have put the \\Group{Uskevren} in jeopardy. \\NPC{Erevis}\n                    must finally prove his loyalty---to the city and to the \\Group{Uskevren}.\n                    He won\'t get a second chance."
+}
+title: "Shadow\'s Witness"
+subtitle: "\\NPC{Erevis Cale}"
+author {
+  name: "Kemp, Paul S."
+}
+cover {
+  name: "Nielsen, Terese"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1677"
+  check: 10
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 2"
+series: "Sembia"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,66 @@
+template {
+  name: "PZO 3018"
+  description: "Whether you\'re on the run or in hot pursuit, \\Product{Chase Cards} make hectic sprints about more than just movement speeds. This beautifully illustrated deck of 51 full-color cards gives you a new way to run chases and races in your Pathfinder Roleplaying Game adventures. Each card represents an obstacle in one of three classic adventure settings --- a bustling city, a tangled forest, or a deadly dungeon --- challenging heroes to overcome or fall behind. Get in the race with \\Product{Chase Cards} and don\'t get left in the dust."
+}
+title: "Chase Cards"
+author {
+  name: "Jacobs, James"
+  job: "concept & design"
+}
+author {
+  name: "Radney-MacFarlan, Stephen"
+  job: "development"
+}
+cover {
+  name: "Dixon, Matt"
+  job: "box design"
+}
+illustrator {
+  name: "Dixon, Matt"
+  job: "card design"
+}
+illustrator {
+  name: "Robinson, Sarah E."
+  job: "art direction"
+}
+illustrator {
+  name: "Robinson, Sarah E."
+  job: "graphic design"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2011
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "325"
+  check: 5
+}
+system: DND_3_5
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Paizo"
+series: "GameMastery"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: CARD
+  description: "chase"
+  number: 51
+}
+content {
+  part: BOX
+  description: "container"
+  number: 1
+}
+layout: FULL_COLOR

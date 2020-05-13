@@ -1,0 +1,52 @@
+template {
+  name: "WTC 2502674"
+  world: "Eberron"
+  description: "\\NPC{Darguun}. Heir to an empire long fallen. Forged anew in the fires of the \\Event{Last War} and held together by the iron will of \\NPC{Lhesh Haruuc}.\n\nBut \\NPC{Lhesh Haruuc} is dead, assassinated by a warrior sworn to serve him. His trusted inner circle suspects more than treachery. Something darker is at work. As \\NPC{Dharguun}\'s ancient enemies stoke the flames of a new war and the \\Group{Five Nations} vie for power and influence, the fate of an entire nation rests in the hands of a few desperate heroes.\n\nA thrilling tale of empire, betrayal, and power by the author of the acclaimed Dragon Below trilogy!\n"
+  short_description: "Book 2 of the Legacy of Dhakaan."
+}
+title: "Word of Traitors"
+subtitle: "Legacy of \\Place{Dhakaan}"
+author {
+  name: "Bassingthwaite, Don"
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2009
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5196"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5196"
+  check: 3
+}
+pages: 374
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 2"
+series: "Legacy of Dhakaan"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,74 @@
+template {
+  name: "TSR 9411"
+  synonym: "SRJ8"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "\'Avast, me hearties, and listen to me tales o\' monsters that lair in the\n  vastness of \\Place{wildspace} and the fiery streams o\' the\n  \\Place{phlogiston}. Great and terrible beasties they be, just waitin\' for a\n  daring band o\' adventurers to stumble upon \'em---or seek \'em out! Here\'s a\n  toast to those brave enough to face the challenge!\'\n\n  \\Place{Wildspace} and the \\Place{phlogiston} are vast. Even when ships travel\n  at spelljamming speed, a journey can take months to complete. Now a Dungeon\n  Master can inject the unexpected into those days when \'nothing happens\' with\n  the exciting encounters found in \\Product{Space Lairs}.\n\n  Like the original Advanced Dungeons & Dragons \\Product{Book of Lairs}, this\n  collection contains 14 intriguing and innovative mini-adventures that can be\n  inserted into any \\Product{Spelljammer} campaign with little or no\n  preparation by the Dungeon Master. Featuring \\Product{Spelljammer} monsters\n  from the \\Product{Monstrous Compendium}, these adventures provide challenges\n  suitable for players of all levels.\n\n  From puzzle-solving to action from humor to high adventure, it\'s all here in\n  this 64-page accessory for the \\Product{Spelljammer campaign setting}. The\n  \\Product{Spelljammer Adventurers in Space boxed set} is needed to use this\n  book. So, come aboard, take the \\Item{helm}, and prepare to meet\n  \\NPC{Blackleg Bart} and lots of other fantastic adversaries! "
+}
+title: "Space Lairs"
+author {
+  name: "Rea, Nicky"
+}
+author {
+  name: "Nicholson, Wes"
+}
+editor {
+  name: "Weinlein, Sue"
+}
+cover {
+  name: "Miller, David O."
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Miller, David O."
+}
+illustrator {
+  name: "Miller, Andrew"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Watry, Dori Jean"
+  job: "project coordination"
+}
+date {
+  year: 1993
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "609"
+  check: 3
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

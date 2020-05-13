@@ -1,0 +1,62 @@
+template {
+  name: "TSR 8388"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Dragonlance"
+  description: "\\NPC{Vinas Solamnus}.\n\n\\Class{Soldier}, \\Class{Nobleman}, \\Class{Priest}.\n\n\\NPC{Vinas Solamnus}.\n\nRebel, Commander, Conqueror.\n\n\\NPC{Vinas Solamnus}.\n\nAuthor of \\Item{The Oath and the Measure} and founder of the \\Group{Solamnic Knights}.\n\nNo \\Class{knight} was ever nobler, more spiritual, more idealistic than \\NPC{Vinas Solamnus}... but he wasn\'t always that way. The story of his early years, his education, and his crucible is truly one of the most famous...\n"
+  short_description: "First Volume in the Lost Legends Series"
+}
+title: "Vinas Solamnus"
+subtitle: "Lost Legends of Krynn"
+author {
+  name: "King, Robert J."
+}
+cover {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Adelsperger, Matt"
+}
+date {
+  year: 1997
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0787"
+  check: 8
+}
+isbn13 {
+}
+pages: 302
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book One"
+series: "Lost Legends Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

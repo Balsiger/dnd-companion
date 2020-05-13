@@ -1,0 +1,218 @@
+template {
+  name: "Dragon 292"
+  world: "Generic"
+  description: "Issue 292 of the magazine. Wilderness issue."
+}
+title: "Dragon 292"
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "McKay, Thomas"
+}
+author {
+  name: "McVey, Geoffrey"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Hite, Kenneth"
+}
+author {
+  name: "Harris, Robert"
+}
+author {
+  name: "Ibach, Dawn"
+}
+author {
+  name: "Bonny, Ed"
+}
+author {
+  name: "Winter, Steve"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Moscatello, Rick"
+}
+author {
+  name: "Four, Johnny"
+}
+author {
+  name: "Winninger, Ray"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assistant editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robing D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Appel, Chris"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Dutton, Michael \'Mike\'"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Ricker, Scott"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Sasso, Mark"
+}
+illustrator {
+  name: "Strain, D.T."
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Turrell, Blue"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2002
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 9"
+number: "292"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

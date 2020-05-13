@@ -1,0 +1,35 @@
+template {
+  name: "WTC 17524"
+  world: "Generic"
+  description: "\\large{Endless adventure and untold excitement await}\n                    \\bold{by Jonathan Tweet, Monte Cook, and Skip Williams}\n                    Prepare to venture forth with your bold companions into a world of heroic\n                    fantasy. Within these pages, you\'ll discover all the tools and options you\n                    need to create characters worthy of song and legend for the Dungeons &\n                    Dragons roleplaying game."
+}
+title: "Player\'s Handbook"
+date {
+  year: 2003
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2886"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: DND_3_5
+audience: ALL
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+number: "Book I"
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

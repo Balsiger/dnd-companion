@@ -1,0 +1,80 @@
+template {
+  name: "TSR 9528"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Forgotten Realms"
+  description: "\'Ye want this ol\' moneylender\'s advice on entering \\NPC[Halaster\n                    Blackcloak]{Halaster}\'s \\Place[Halaster\'s Hall]{Hall} yet again? My advice\n                    is this: Don\'t. There\'s precious few treasures worth the death and agony and\n                    fear you\'ll face. Your problems are twofold: First, ye\'ve walked its halls\n                    before, and \\NPC[Halaster Blackcloak]{Halaster} pays attention to those who\n                    visit him frequently (and he\'s the one you don\'t want to have watching\n                    you!). Second, you\'re looking for the lair of that lunatic wizard-murderer\n                    from \\Place{Trades Ward}. He\'s a dangerous lot, that \\NPC{Maddgoth}, and many\n                    others met their ends by underestimating that pasty-faced little\n                    scarecrow. If you\'re looking to lay siege to \\Place{Maddgoth\'s Castle},\n                    you\'re on your own---I\'ve not visited it, and I\'m not likely to,\n                    either. Truth be told, no adventurer I\'ve heard of looked for\n                    \\NPC{Maddgoth}\'s lair and returned to tell of it.\n                    \'Not that this scares bold heroes such as ye be, right? Well, the path to\n                    fame allows fools and champions alike, though fools often listen better than\n                    heroes. Until out coins are shared again, good fortune.\'\n                    \\right{---\\NPC[Mirt]{Mirt the Moneylender}}\n                    This \\Product[TSR 9528]{Dungeon Crawl} adventure returns once again to the\n                    hallowed halls of \\Place{Undermountain} and into an adventure like those AD&D\n                    game archetypes of years past. This is a stand-alone module and does not\n                    require extra support materials. It can be placed into a campaign on any AD&D\n                    world, but best fits a \\Place{Forgotten Realms} \\Product[TSR 1085]{campaign}\n                    set in \\Place{Undermountain} or \\Place{Waterdeep}."
+}
+title: "Undermountain Trilogy II: Maddgoth\'s Castle"
+author {
+  name: "Schend, Steven E."
+}
+editor {
+  name: "Olmesdahl, Bill"
+}
+cover {
+  name: "Pollack, Alan"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Geier, Earl"
+}
+typographer {
+  name: "Isler, Tracey L."
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "production"
+}
+manager {
+  name: "Galica, Robert J."
+  job: "graphic coordination"
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0423"
+  check: 2
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Dungeon Crawl"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,125 @@
+template {
+  name: "WTC 9537172"
+  world: "Forgotten Realms"
+  description: "The \\Place{Moonsea}---a perilous frontier ruled by tyrants and threatened by\n                    monsters. Here, cities consumed by decadence and war rise and fall like the\n                    sun, and conspiracies abound. Great adventure awaits those who oppose evil,\n                    for the \\Place{Moonsea} is rife with it.\n                    The \\Product{Mysteries of the Moonsea} accessory contains 37 loosely\n                    connected adventures that can be run individually or linked to form the basis\n                    of an entire Forgotten Realms camapaign. In addition to the adventure, this\n                    book presents maps and descriptions of the major \\Place{Moonsea} cities of\n                    \\Place{Melvaunt}, \\Place{Hillsfar}, \\Place{Mulmaster}, and \\Place{Zhentil\n                    Keep}, as well as statistics and descriptions for 15 important campaign\n                    villains.\n                    The first in-depth look at this classic Forgotten Realms region in many\n                    years.\n                    Mysteries of the Moonsea offers an in-depth look at one of the most important\n                    regions of the Forgotten Realms. The Moonsea region is full of wealth and\n                    peril. It is home to the nefarious Zhentil Keep, the merchant city of\n                    Melvaunt, and the mysterious Irongfang Keep. Mysteries of the Moonsea\n                    includes a history of the region, detailed information on the major towns and\n                    adventure locations, the important figures and groups that operate in and\n                    around the Moonsea, new spells and monsters specific to the area, and tips\n                    for Dungeon Masters on running a campaign set in the region."
+}
+title: "Mysteries of the Moonsea"
+subtitle: "A Campaign Arc for Characters of Levels 1-18"
+author {
+  name: "Reid, Thomas M."
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Drader, Darrin"
+}
+author {
+  name: "Upchurch, Wil"
+}
+editor {
+  name: "Thompson, John"
+}
+editor {
+  name: "Sarli, Gary"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "O\'Connor, William"
+}
+cartographer {
+  name: "Hunter, Kyle"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Christina"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christoper"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3915"
+  check: 10
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Forgotten Realms Campaign Setting"
+layout: FULL_COLOR

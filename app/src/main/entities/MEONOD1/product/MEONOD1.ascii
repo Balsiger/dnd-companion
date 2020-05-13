@@ -1,0 +1,36 @@
+template {
+  name: "MEONOD1"
+  description: "Magnificient Egos produces high quality figures of unique character and appearance to stimulate customers\' imaginations and provide alternative choices to the more generic lines produced for RPGs and Wargames.\n                    We accomplish this by combining highly-experienced miniatures hobbyist\'s with artists at the top of their field and some of the industry\'s most respected sculptors."
+  short_description: "Nodwick hauling treasure."
+}
+title: "Nodwick"
+subtitle: "Nodwick hauling treasure."
+author {
+  name: "Van Horne, Gene"
+  job: "sculptor"
+}
+date {
+  year: 2007
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "Magnificient Egos"
+series: "Uncommon Character"
+price {
+  currency: "$"
+  number: 499
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "Nodwick"
+  number: 1
+}
+layout: FULL_COLOR

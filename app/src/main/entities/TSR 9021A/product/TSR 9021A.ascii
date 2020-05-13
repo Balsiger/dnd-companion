@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9021A"
+  synonym: "D3"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Vault of the Drow"
+date {
+  year: 1978
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

@@ -1,0 +1,83 @@
+template {
+  name: "WTC 25383"
+  synonym: ""
+  world: "Generic"
+  description: "\\Monster{Tieflings} survived brutal wars and fiendish pacts to become what they are today: sinister scions of a shattered empire living on the fringes of civilization, fighting for everything. Only the best of their kind would dare to call themselves heroes, and fewer still have the wherewithal to conquer the evil that haunts them. If you want to play the ultimate tiefling hero, this book is for you.\n                    This Dungeons & Dragons expansion of the \\Product{Player\'s Handbook} core rulebook explores the mysteries of the \\Monster{tieflings}. It presents players with exciting new options for their \\Monster{tiefling} characters, including unique racial feats, paragon paths, and an epic destiny. This book also includes ways to flesh out your \\Monster{tiefling} character\'s background and personality."
+  short_description: "New options and character hooks for tiefling characters."
+}
+title: "Tieflings"
+subtitle: "It\'s Good to be Bad"
+author {
+  name: "Sernett, Matthew"
+  job: "designer"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+editor {
+}
+cover {
+  name: "Prescott, Steve"
+  job: "front"
+}
+cover {
+  name: "O&#39Conner, William"
+  job: "back"
+}
+illustrator {
+  name: "Simenov, Georgi \'Calader\'"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior art director"
+}
+illustrator {
+  name: "Dunnet, Yasuyo"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2010
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5489"
+  check: 2
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5489"
+  check: 6
+}
+pages: 32
+system: DND_4
+type: RULES_SUPPLEMENT
+style: BOOKLET
+producer: "WTC"
+series: "Player\'s Handbook Races"
+price {
+  currency: "$"
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

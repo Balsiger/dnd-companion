@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8966"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Dragonlance"
+}
+title: "Shadow Over Nordmaar"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: SUPER_ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Sixteen"
+price {
+}

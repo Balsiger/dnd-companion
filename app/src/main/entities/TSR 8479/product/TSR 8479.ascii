@@ -1,0 +1,52 @@
+template {
+  name: "TSR 8479"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The barbarian horde has breached the ancient \\Place{Dragonwall} and now\n                    threatens the oriental land of \\Place{Shou Lung}. Powerful as they are, the\n                    \\Group{Shou army}\'s only hope lies with \\NPC{Batu Min Ho}, a young general\n                    who is himself a third generation descendant of \\Group{Tuigan}\n                    barbarians. But \\NPC{Batu}\'s wife must fight her own battle in the\n                    treacherous political terrain of the imperial court, as a spy attempts to\n                    undermine the emperor\'s confidence in her husband. And if \\NPC{Batu} is to\n                    retain his command and save \\Place{Shou Lung}, it is a battle she must not\n                    lose.\n                    \\Product{Dragonwall} is the second novel in the \\Product{Empires Trilogy},\n                    TSR\'s newest saga set in the \\Product{Forgotten Realms} fantasy world."
+}
+title: "Dragonwall"
+author {
+  name: "Denning, Troy"
+}
+cover {
+  name: "Elmore, Larry"
+}
+date {
+  year: 1990
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "919"
+  check: 2
+}
+isbn13 {
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Two"
+series: "Empires Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

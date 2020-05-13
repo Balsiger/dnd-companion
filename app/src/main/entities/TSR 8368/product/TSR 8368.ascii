@@ -1,0 +1,40 @@
+template {
+  name: "TSR 8368"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dragonlance"
+}
+title: "Knights of the Sword"
+author {
+  name: "Green, Roland J."
+}
+date {
+  year: 1995
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0202"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume Three"
+series: "Warriors Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

@@ -1,0 +1,45 @@
+template {
+  name: "PZO 4016"
+  world: "Generic"
+  description: "Be it a relaxing visit to a legendary forest city or a peril-filled journey to a monster-inhabited ruin, the distinctively graceful style of elven architecture adds a magic of its own to any adventure. Paizo Publishing\'s GameMastery line of gaming accessories continues to provide simple and elegant tools for the busy Game Master with the newest GameMaster Map Pack release: \\Product{Elvent City}. Inside, you\'ll find 18 beautiful 5\'\'x8\'\' map tiles that can be combined to form several locations in any elven city. These cards present several different locales, including:\n\n\\list\n{Elven Garden}\n{Elven Library}\n{Forest Platform}\n{Elf King\'s Hall}\n{Roads and Residences}\n\nGame Masters shouldn\'t waste their time trying to draw out complex elven buildings when the PCs stop for an unexpected visit., With \\Product{GameMastery Map \\Pack: Elven City}, that idle visit can become one your PCs won\'t soon forget!"
+  short_description: "Map tiles of an elven city."
+}
+title: "Elven City"
+subtitle: "Explore the Elven Realm"
+cartographer {
+  name: "Macourek, Corey"
+}
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "132"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "132"
+  check: 9
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Map Pack"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "map tile"
+  number: 18
+}
+layout: FULL_COLOR

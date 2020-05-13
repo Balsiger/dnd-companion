@@ -1,0 +1,75 @@
+template {
+  name: "TSR 2112"
+  synonym: "DMGR1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Whether you\'re a novice DM getting ready to referee your first AD&D game or\n                    an old pro who\'s running an established campaign, there is something for you\n                    in the \\Product{Campaign Sourcebook and Catacomb Guide}. We\'ve included\n                    dozens of helpful tips to help you better organize your games, design\n                    adventures, and make your NPCs come to life. In addition, we\'ve included a\n                    number of settings for unusual dungeons. In short, there\'s something for\n                    everybody in this exciting addition to the AD&D game system."
+}
+title: "Campaign Sourcebook and Catacombs Guide"
+author {
+  name: "Jacquays, Paul"
+}
+author {
+  name: "Connors, William W."
+}
+editor {
+  name: "Connors, William W."
+}
+editor {
+  name: "Spector, Warren"
+}
+cartographer {
+  name: "Sutherland, Dave"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+illustrator {
+  name: "Barr, George"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Bakk, Linda"
+  job: "graphic design"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "817"
+  check: 10
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "1"
+series: "Dungeon Master Guide"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,40 @@
+template {
+  name: "TSR 2406"
+  synonym: "DSQ1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dark Sun"
+  description: "players part of a great army to conquer nearby city-state, levels 4-7"
+}
+title: "Road to Urik"
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "248"
+  check: 9
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}

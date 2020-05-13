@@ -1,0 +1,39 @@
+template {
+  name: "TSR 9582"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Ravenloft"
+  description: "Vecna is trapped in the Demiplane of Dread"
+}
+title: "Vecna Reborn"
+author {
+  name: "Cook, Monte J."
+}
+date {
+  year: 1998
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1201"
+  check: 4
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}

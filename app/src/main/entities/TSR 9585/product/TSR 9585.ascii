@@ -1,0 +1,39 @@
+template {
+  name: "TSR 9585"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Forgotten Realms"
+  description: "This essential supplement is a companion volume to \\Product[TSR 9516]{Faiths\n                    & Avatars} and \\Product[TSR 9563]{Powers & Pantheons}, which detailed the\n                    rules by which deities function in the \\Place[Forgotten\n                    Realms]{Realms}. \\Product[TSR 9585]{Demihuman Deities} describes the\n                    demihuman religions and powers of the \\Place[Forgotten Realms]{Realms}: those\n                    of the \\Monster[Elf]{elves} (including the \\Monster[Drow]{drow}), the\n                    \\Monster[Dwarf]{dwarves}, the \\Monster[Gnome]{gnomes} and the\n                    \\Monster[Halfling]{halflings}. Each entry includes information about a\n                    deity\'s appearance, personality, worshipers, portfolio, aliases, domain name,\n                    superior, allies, foes, symbol, worshipers\' alignments, avatar,\n                    manifestations, church, and specialty priests. The information on these\n                    faiths includes their core dogma, day-to-day activities of priests, holy days\n                    and important ceremonies, major centers of worship, affiliated orders, and\n                    the priestly vestments and adventuring garb of member of the clergy. Finally,\n                    each entry contains spells specific to each of the faiths.\n                    \\bold{\\Product[TSR 9585]{Demihuman Deities} includes:}\n                    \\list\n                    {The powers of the \\Monster[Drow]{drow} and \\Monster[Elf]{elven} pantheos,\n                    including \\God[Lloth]{Lolth}, \\Monster{Ghaunadaur}, \\God{Vhaeraun},\n                    \\God{Ellistraee}, \\God{Corellon Larethian}, \\God{Hanali Celanil},\n                    \\God{Rillifane Rallathil}, \\God{Labelas Enoreth}, and others.}\n                    {The mysterious \\God{Triune Goddess}, \\God{Anharradh}, who is a\n                    combined form of \\God{Sehanine Moonbow}, \\God{Hanali Celanil}, and\n                    \\God{Aerdrie Faenya}.}\n                    {The powers of the \\Monster[Dwarf]{dwarf}, \\Monster[Gnome]{gnome}, and\n                    \\Monster[Halfling]{halfling} pantheons, including \\God{Moradin},\n                    \\God{Clangeddin Silverbeard}, \\God{Hael Brightaxe}, \\God{Garl\n                    Glittergold}, \\God{Baervan Wildwanderer}, \\God{Flandal Steelskin},\n                    \\God{Yondalla}, \\God{Arvoreen}, \\God{Cyrrollalee}, and others.}\n                    {Expanded and clarified specialty priest classes for all religions\n                    with priesthoods.}\n                    {Religion-specific spells for all faiths with priesthoods.}\n                    {Color illustrations of priests from nearly every faith in ceremonial\n                    dress.}\n                    \\bold{Suitable for all levels of play}\n                    To use this product, ownership of \\Product[TSR 9516]{Faiths & Avatars} is\n                    recommended but not required."
+}
+title: "Demihuman Deities"
+date {
+  year: 1998
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1239"
+  check: 1
+}
+isbn13 {
+}
+pages: 192
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Deities"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

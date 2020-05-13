@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5617"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Stone Giants"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

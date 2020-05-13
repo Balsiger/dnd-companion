@@ -1,0 +1,43 @@
+template {
+  name: "TSR 21526"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Dragonlance"
+  description: "some novels, along with comments and notes"
+}
+title: "Annotated Dragonlance Chronicles"
+leader: "The"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+date {
+  year: 1999
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1526"
+  check: 9
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 3499
+  precision: 100
+}

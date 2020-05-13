@@ -1,0 +1,32 @@
+template {
+  name: "TS 273"
+  synonym: "Dungeon Door Markers, Large"
+  world: "Generic"
+  description: "Markers for brown warhorse mounts."
+  short_description: "Markers for brown warhorse mounts."
+}
+title: "Large Dungeon Door Markers"
+subtitle: "Markers"
+date {
+  year: 2013
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "Litko"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "large dungeon door"
+  number: 2
+}
+layout: FULL_COLOR

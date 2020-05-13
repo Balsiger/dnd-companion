@@ -1,0 +1,22 @@
+template {
+  name: "TSR 8242"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Greyhawk"
+}
+title: "Master Wolf"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Three"
+series: "Greyhawk"
+price {
+}

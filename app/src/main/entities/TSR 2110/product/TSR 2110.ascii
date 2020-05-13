@@ -1,0 +1,74 @@
+template {
+  name: "TSR 2110"
+  synonym: "PHBR1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Who says \\Class{fighters} are the poor cousins of the AD&D game? No one will\n                    say it aloud after reading the \\Product{Complete \\Class{Fighter}\'s Handbook};\n                    128 -pages of mind-expanding advice on how to make your fighter the leanest,\n                    meanest threshing machine for leagues around. New weapons, new proficiencies,\n                    new fighting styles, and \'Fighter Kits\' make this optional AD&D accessory a\n                    useful item for players and DMs."
+}
+title: "Complete Figher\'s Handbook"
+leader: "The"
+author {
+  name: "Allston, Aaron"
+}
+editor {
+  name: "Winter, Steve"
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Chaffee, Douglas"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+pages: 124
+system: ADND_2ND
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "1"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

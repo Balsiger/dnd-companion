@@ -1,0 +1,86 @@
+template {
+  name: "TSR 9213"
+  synonym: "FR1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "The \\Place{North}...rugged mountains and dense forests, which hide many\n                    beings hostile to \\Monster[Human]{man} (who has settled here but\n                    lightly). Many dungeons and ruins also lie hidden in the \\Place[The\n                    North]{Northern wastes}, relics of the former splendor of the\n                    \\Monster[Dwarf]{dwarven} kingdoms, now lost and abandoned, and of earlier,\n                    fallen kingdoms of \\Monster[Human]{men}.\n                    \\Place{Waterdeep}...crossroads of the world, \\Place[Waterdeep]{City of\n                    Splendors}. Here are wealth and goods from every corner of the\n                    \\Place[Forgotten Realms]{Realms}, intrigue and feuds and important personages\n                    of rank and influence. From the many-spired towers of \\Place{Piergeiron\'s\n                    Palace} to the littered allyes of \'\\Place[The Docks]{the Docks}\', this book\n                    introduces you to the living, ever-changing city of \\Place{Waterdeep}, and\n                    suggests many adventures therein.\n                    Partake of the sights, the bustle, and the intrigue---rub shoulders with the\n                    powerful and famous---feast your eyes on fabled treasures. Hear tales in the\n                    taverns such as can be heard nowhere else in all the world---but keep your\n                    weapons ready and your wits sharp. Oh, and above all...enjoy your stay."
+}
+title: "Waterdeep & the North"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Martin, Karen S."
+}
+cover {
+  name: "Parkinson, Keith"
+}
+cartographer {
+  name: "Graphics, Frey"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Miller, Chris"
+}
+illustrator {
+  name: "Martin, David E."
+}
+typographer {
+  name: "Janke, Kim N."
+}
+manager {
+  name: "Grubb, Jeff"
+  job: "product coordination"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+date {
+  year: 1987
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "490"
+  check: 5
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,62 @@
+template {
+  name: "WTC 96621"
+  world: "Generic"
+  description: "\\large{Collect}\n                    Encounter \\Class{fighters}, \\Class{wizards}, \\Monster{dragons}, and all your\n                    favorite Dungeons & Dragons heroes and monsters!\n                    \\large{Battle}\n                    Challenge your friends to fast, head-to-head combat between the forces of\n                    good and evil!\n                    \\large{Roleplay}\n                    Create new adventures and exciting campaigns using the Dungeons & Dragons\n                    roleplaying game!\n                    \\bold{This Starter Set Contains:}\n                    \\list\n                    {12 randomized, prepainted, durable plastic miniatures}\n                    {Full-color game stat cards}\n                    {Rulebook form miniatures combat}\n                    {Battle grid}\n                    {8 all-new terrain tiles}\n                    {Damage counter}\n                    {20-sided die}\n                    {Checklist for all 60 figures in the \\Product{Aberrations} set}\n                    Pick up Dungeon & Dragons Miniatures Booster Packs to add more miniatures to\n                    your collection.\n                    The Starter Set provides all the starting materials a player needs to become\n                    familiar with Dungeon & Dragons miniatures. This Starter Set replaces the\n                    version released in 2003. It contains 8 new terrain tiles, and as the rules\n                    have been revamped to better facilitate multi-player games, it also contains\n                    an updated rulebook. Like the figures in the corresponding\n                    \\Product{Aberrations Booster Pack}, the figures in the Starter Set will be\n                    chosen directly from key D&D titles, including \\Product{Complete Divine},\n                    \\Product{Monster Manual III}, \\Product{Serpent Kingdoms}, the new\n                    \\Product{Eberron Campaign Setting}, and the first Eberron adventure,\n                    \\Product{Shadows of the Last War}."
+}
+title: "D&D Miniatures Starter Set"
+subtitle: "Dungeons & Dragons Miniatures"
+date {
+  year: 2004
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3500"
+  check: 6
+}
+isbn13 {
+}
+pages: 40
+system: DND_3RD
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+series: "D&D Miniatures"
+price {
+}
+content {
+  part: MINIATURE
+  description: "randomized, prepainted plastic"
+  number: 12
+}
+content {
+  part: BOOKLET
+  description: "complete, basic rulebook"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "checklist"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "battle grid map sheet"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "terrain tile"
+  number: 8
+}
+content {
+  part: COUNTER
+  description: "damage counters"
+  number: 20
+}
+content {
+  part: DICE
+  description: "20-sided"
+  number: 1073741824
+}

@@ -1,0 +1,100 @@
+template {
+  name: "TSR 9365"
+  synonym: "GR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Dungeon building has just become easier!\n                    This box contains 24 sheets of fold-up dungeon rooms, compatible with any\n                    role-playing game or miniatures scenario. More than 40 predesigned rooms and\n                    many cardboard and paper decorations for adding a personalized touch to the\n                    rooms are inside this box. Assembly is simple because the pieces are diecut\n                    and prescored; only glue is needed. Also included are three two-sided color\n                    maphseets with dungeon layouts and underground terrains to situate the\n                    dungeon layouts and unterground terrains to situate the dungeon rooms.\n                    In addition, a 64-page booklet contains instructions for building and using\n                    the fold-ups, plus numerous tips on dungeon design. \\Product{Dungeons of\n                    Mystery} describes how to create realistic and exciting dungeons and provides\n                    the tools to make the dungeon come alive. The booklet also holds sample\n                    adventures, new magic, and new monsters.\n                    \\Product{Dungeons of Mystery} is fully compatible with \\Product{Cities of\n                    Mystery}, \\Product{Castles}, \\Product{Strongholds}, and other TSR,\n                    Inc. three-dimensional products."
+}
+title: "Dungeons of Mystery"
+author {
+  name: "Beach, Tim"
+}
+author {
+  name: "Kauth, Dennis"
+}
+author {
+  name: "Woodruff, Teeuwynn"
+}
+author {
+  name: "III, David C. Sutherland"
+}
+editor {
+  name: "Watry, Dori"
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Beck, Steve"
+}
+cartographer {
+  name: "Design, Deno"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Design, Deno"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "graphic design"
+}
+date {
+  year: 1992
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "368"
+  check: 10
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+audience: ALL
+type: ACCESSORY
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Dungeons of Mystery"
+  number: 1073741824
+}
+content {
+  part: PAGE
+  description: "fold-ups"
+  number: 24
+}
+content {
+  part: MAP
+  description: "double-sided, color"
+  number: 3
+}

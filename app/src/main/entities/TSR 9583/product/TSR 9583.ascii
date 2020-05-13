@@ -1,0 +1,36 @@
+template {
+  name: "TSR 9583"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Ravenloft"
+  description: "anthology of short adventures"
+}
+title: "Children of the Night: Werebeasts"
+author {
+  name: "Connors, William W."
+}
+date {
+  year: 1998
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1202"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}

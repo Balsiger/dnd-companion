@@ -1,0 +1,45 @@
+template {
+  name: "TSR 2413"
+  synonym: "DSR4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dark Sun"
+  description: "most powerful dragon of Dark Sun revealed"
+}
+title: "Valley of Dust and Fire"
+date {
+  year: 1992
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "313"
+  check: 2
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

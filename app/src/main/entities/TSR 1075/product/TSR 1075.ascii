@@ -1,0 +1,27 @@
+template {
+  name: "TSR 1075"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+  description: "A pack of 12 collector cards."
+}
+title: "TSR Fantasy Collector Cards 1992, Part I"
+date {
+  year: 1992
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: ALL
+type: CARDS_TYPE
+style: BOX
+producer: "TSR"
+series: "Trading Cards"
+price {
+  currency: "$ "
+  number: 80
+  precision: 100
+}

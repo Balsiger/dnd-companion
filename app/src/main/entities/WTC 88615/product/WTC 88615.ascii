@@ -1,0 +1,35 @@
+template {
+  name: "WTC 88615"
+  world: "Dominaria"
+  description: "The denizens of the desert live in the shadow of the sacred, where battles\n  are won or lost at the whims of the gods. Now the outcome of one desert war\n  could change the history of \\Place{Dominaria} forever.\n\n  The prophecy of None, One, and Two will finally be fulfilled."
+}
+title: "Hazezon"
+subtitle: "Who dares speak of the prophecy?"
+author {
+  name: "Emery, Clayton"
+}
+date {
+  year: 2002
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2792"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "Legends Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

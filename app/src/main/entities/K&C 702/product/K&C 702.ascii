@@ -1,0 +1,46 @@
+template {
+  name: "K&C 702"
+  description: "96 pages of classic KODT including a brand new story!!\n\n  The moment I leafed through the first few issues that Jolly produced prior to\n  teaming up with us, I knew they were something special. When he became a\n  partner in Kenzer and Company, we really believed in the power of the strips\n  but were uncertain whether or not the rest of the gaming community would\n  catch on. At this point I think we can safely say that our faith in those\n  early Kenzer and Company produced issues [#4-#6] has paid off.\n\n  We really put a lot of thought into those first few issues as we felt we had\n  something to prove as a new team. While Jolly had the bulk of the issue #4\n  done before joining us, many of the stories in issues #5 and #6 involved some\n  synergistic collaboration by the newly formed development team. There are\n  definitely some classic strips among issues four through six. Of course\n  there\'s the famous \'Agent of Evil\' but looking back over them I can\'t help\n  feeling like \'Wherever you go - There you are\' is the one nearest to my\n  heart. I was often the mapper of the group.\n\n  As you read this, I\'m sure you\'ll find your own favorite stories based on one\n  of your personal experiences. That\'s what KODT is all about; bringing back\n  the memories of good times past and making new ones. Here\'s to making new\n  ones.\n\n  \\right{Brian Jelke}"
+}
+title: "Bundle of Trouble: Volume Two"
+subtitle: "Issues four through six of Knights of the Dinner Table crammed between two covers!"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+}
+author {
+  name: "Johansson, Steve"
+}
+author {
+  name: "Kenzer, David S."
+}
+cover {
+  name: "Vrbanic, Gorge"
+}
+date {
+  year: 1999
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: COMICS
+style: BOOKLET
+producer: "K&C"
+number: "Volume Two"
+series: "Knights of the Dinner Table"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

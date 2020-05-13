@@ -1,0 +1,18 @@
+template {
+  name: "TSR 5404"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Dragonlance"
+}
+title: "Dragonlance Set 1"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

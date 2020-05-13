@@ -1,0 +1,41 @@
+template {
+  name: "TSR 1069"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Tests the player\'s knowledge of the details of the game."
+}
+title: "AD&D Trivia Boardgame"
+leader: "The"
+date {
+  year: 1991
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "058"
+  check: 3
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: ALL
+type: BOARD_GAME
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}

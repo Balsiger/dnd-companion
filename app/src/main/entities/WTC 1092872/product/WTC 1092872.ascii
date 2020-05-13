@@ -1,0 +1,162 @@
+template {
+  name: "WTC 1092872"
+  world: "Generic"
+  description: "\\large{Villains For Your Campaign}\n                    Every memorable adventure needs a great villain. You know the type: corrupt, reviled, and rotten to the core. The villains features in this tome are the best of the worst, sure to test the heroes\' mettle. The canny pirate lord, the sinister \\Monster{lich}, the tyrannical \\Monster{fire giant} queen... your characters won\'t know what hit them!\n                    This supplement shows you how to build memorable villains for your Dungeons & Dragons campaign and presents eight ready-to-play villainous groups of various levels. Each villain comes with complete statistics, as well as adventure seeds, campaign hooks, statistics for minions, and a fully detailed lair."
+}
+title: "Exemplars of Evil"
+subtitle: "Deadly Foes to Vex Your Heroes"
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Bernstein, Eytan"
+  job: "additional design"
+}
+author {
+  name: "Broadhurst, Creighton"
+  job: "additional design"
+}
+author {
+  name: "Kenson, Stephen"
+  job: "additional design"
+}
+author {
+  name: "Liquette, Kolja Raven"
+  job: "additional design"
+}
+author {
+  name: "Rausch, Allen"
+  job: "additional design"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Nagler, Daniel"
+  job: "editorial assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Spears, Ron"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Chan, Jason"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Philippi, Michael"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Martin, Michael"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Jordan, Robert"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "freelance manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+  name: "Walker, Kris"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4361"
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4361"
+  check: 6
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+optional_requirements: "WTC 96582"
+layout: FULL_COLOR

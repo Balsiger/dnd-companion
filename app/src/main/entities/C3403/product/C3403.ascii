@@ -1,0 +1,48 @@
+template {
+  name: "C3403"
+  world: "Forgotten Realms"
+  description: "\\bold{Do you know what happens when the divine spark is stolen from a god?}\n\nI am the linchpin, the core. My vassals may scheme --- that is their very nature, so they must. They may try to pull themselves up into my throne, but I have been ready for that since the beginning of time.\n\n\\bold{The god is killed. Destroyed.}\n\nThey pull and their plans, theyr greed, their ambition break with their weight and fall upon them, so that the one beneath my climb upon their failure to a seat of triumph. Everything is carefully balanced, carefully ordered.\n\n\\bold{Do you know what happens when the king is stolen out of the \\Place{Nine Hells}?}\n\nIf you were to steal the divine spark from me, I would die and all that order would be lost. All that greed and ambition and carefully leashed wickedness would burst out --- the \\Place{Hells} could not contain it, oh no --- and so you would damn your entire world by doing what  you thought was good and right."
+}
+title: "Devil you Know"
+leader: "The"
+subtitle: "A Brimstone Novel and Companion to Ashes of the Tyrant"
+author {
+  name: "Evans, Erin M."
+}
+cover {
+  name: "Yum, Min"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+date {
+  year: 2017
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6617"
+  check: 2
+}
+pages: 594
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "6"
+series: "Brimstone Angels"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

@@ -1,0 +1,46 @@
+template {
+  name: "TSR 1153"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "None"
+  description: "Cards for the game."
+}
+title: "Spellfire Night Stalkers Booster Pack, Set 11"
+author {
+  name: "Olmesdahl, Bill"
+}
+date {
+  year: 1996
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0611"
+  check: 1
+}
+isbn13 {
+}
+system: SPELLFIRE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  number: 12
+}

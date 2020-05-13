@@ -1,0 +1,46 @@
+template {
+  name: "TSR 8350"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dragonlance"
+}
+title: "Hammer and Axe"
+author {
+  name: "Parkinson, Dan"
+}
+date {
+  year: 1993
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "627"
+  check: 1
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume Two"
+series: "Dwarven Nations Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

@@ -1,0 +1,262 @@
+template {
+  name: "WW 16114"
+  world: "Ptolus"
+  description: "Imagine the most deluxe roleplaying product ever. It would have fabulous color art and maps---and lots of both. It would offer an in-depth treatment of hundreds of locales and characters, with new rules elegantly integrated with the d20 core rules. Such a book would be designed to offer optimum content and usability, with bound-in bookmarks and extensive cross-referencing to help you navigate its pages with ease. It would be a big book, with reinforced binding to stand up to years of play. It would include a double-sided poster map, two dozen handouts, and maybe even a CD-ROM full of all the cool stuff that wouldn\'t fit in the book.\n\nBut why just imagine? \\Product{Ptolus} is here! This high-quality book offers almost 700 pages of source and adventure material from one of the industry\'s gratest designers. A fantasy city built above extensive dungeons beside the \\Place{Spire} of an ancient foe, \\Product{Ptolus} is a self-contained campaign---or insert it into your home setting, if you prefer. Its unique design makes it the most DM-friendly book on your shelf. And the CD-ROM inside contains 400+ pages of bonus material, including \\Product{The Night of Dissolution}, an all-new 96-page adventure. \\Product{Ptolus} was created by one of the architects of 3rd Edition for the gaming professionals in his group.\n\nNow you can make it yours!"
+}
+title: "Ptolus"
+subtitle: "City by the Spire"
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Reynolds, Sean K"
+  job: "Ptolus Resident"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "Ptolus Resident"
+}
+author {
+  name: "Mona, Erik"
+  job: "Ptolus Resident"
+}
+author {
+  name: "Decker, Jesse"
+  job: "Ptolus Resident"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "Ptolus Resident"
+}
+author {
+  name: "Cook, Sue Weinlein"
+  job: "Ptolus Resident"
+}
+author {
+  name: "Collins, Andy"
+  job: "Ptolus Resident"
+}
+author {
+  name: "Carter, Michele"
+  job: "Ptolus Resident"
+}
+author {
+  name: "Mona, Erik"
+  job: "Midtown Partisan"
+}
+author {
+  name: "Ryan, Charles"
+  job: "Visitor to the City"
+}
+author {
+  name: "Reynolds, Keri"
+  job: "Visitor to the City"
+}
+author {
+  name: "Quick, Jeff"
+  job: "Visitor to the City"
+}
+author {
+  name: "Brown, Steven \'Stan!\'"
+  job: "Visitor to the City"
+}
+author {
+  name: "Strohm, Keith"
+  job: "Ptolus Resident"
+}
+author {
+  name: "Stark, Ed"
+  job: "Visitor to the City"
+}
+author {
+  name: "Reynolds, Sean K"
+  job: "Hero of Ancient Praemal"
+}
+author {
+  name: "Reid, Teresa"
+  job: "Hero of Ancient Praemal"
+}
+author {
+  name: "Rateliff, John"
+  job: "Hero of Ancient Praemal"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "Hero of Ancient Praemal"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "Hero of Ancient Praemal"
+}
+author {
+  name: "Carter, Michele"
+  job: "Hero of Ancient Praemal"
+}
+author {
+  name: "Wyatt, James"
+  job: "Visitor to the City"
+}
+editor {
+  name: "Cook, Sue Weinlein"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Bourelle, Ed"
+}
+illustrator {
+  name: "Lockwood, Todd"
+  job: "logo"
+}
+illustrator {
+  name: "Engle, Jason"
+  job: "featured artist"
+}
+illustrator {
+  name: "Zagorski, Maciej"
+  job: "featured artist"
+}
+illustrator {
+  name: "Dobosz, Pawel"
+  job: "featured artist"
+}
+illustrator {
+  name: "Komarck, Michael"
+  job: "featured artist"
+}
+illustrator {
+  name: "Lofgren, Eric"
+  job: "featured artist"
+}
+illustrator {
+  name: "Lyon, Howard"
+  job: "featured artist"
+}
+illustrator {
+  name: "Philippi, Michael"
+  job: "featured artist"
+}
+illustrator {
+  name: "Atkinson, Toren \'MacBin\'"
+  job: "contributing artist"
+}
+illustrator {
+  name: "Dunning, Talon"
+  job: "contributing artist"
+}
+illustrator {
+  name: "Crossley, Kev"
+  job: "contributing artist"
+}
+illustrator {
+  name: "Schlough, Peter"
+  job: "contributing artist"
+}
+illustrator {
+  name: "post, rk"
+  job: "contributing artist"
+}
+illustrator {
+  name: "Pollack, Alan"
+  job: "contributing artist"
+}
+illustrator {
+  name: "LeBlanc, Brian"
+  job: "contributing artist"
+}
+illustrator {
+  name: "Yanner, Kieran"
+  job: "contributing artist"
+}
+illustrator {
+  name: "Wood, Sam"
+  job: "contributing artist"
+}
+illustrator {
+  name: "Swekel, Arnie"
+  job: "contributing artist"
+}
+illustrator {
+  name: "Sparks, J.D."
+  job: "contributing artist"
+}
+illustrator {
+  name: "Rasmussen, Brian"
+  job: "graphic design"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "graphic design"
+}
+typographer {
+  name: "Chido, Lisa"
+}
+typographer {
+  name: "Horner, Miranda"
+  job: "proofreader"
+}
+typographer {
+  name: "Gute, Brian"
+  job: "proofreader"
+}
+typographer {
+  name: "Curley, Lori Ann"
+  job: "Indexing"
+}
+manager {
+  name: "Cook, Sue Weinlein"
+  job: "production"
+}
+date {
+  year: 2006
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "58846"
+  title: "789"
+  check: 9
+}
+isbn13 {
+}
+pages: 672
+system: D20
+type: CAMPAIGN_SETTING
+style: HARDCOVER
+producer: "Malhavoc Press"
+price {
+  currency: "$"
+  number: 11999
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: CD
+  description: "Bonus Materials"
+  number: 1
+}
+content {
+  part: MAP
+  description: "double sided color poster"
+  number: 1
+}
+content {
+  part: SHEET
+  description: "Character Sheet"
+  number: 1
+}
+content {
+  part: SHEET
+  description: "various sheets (handouts, random encounters, etc.)"
+  number: 24
+}
+content {
+  part: MISC
+  description: "bookmarks"
+  number: 4
+}
+layout: FULL_COLOR

@@ -1,0 +1,45 @@
+template {
+  name: "WTC 95050"
+  world: "Generic"
+  description: "Monsters and heroes face off on the miniatures battlefield!\n                    True to the head-to-head nature of the \\Product{D&D Miniatures Game}, the\n                    latest expansion set highlights miniatures against the backdrop of war. Per\n                    previous releases, the figures in the set are selected from key D&D\n                    roleplaying game titles such as \\Product{Monster Manual}, \\Product{Monster\n                    Manual III}, \\Product{Miniatures Handbook}, and the \\Product{Eberron} and\n                    \\Product{Forgotten Realms campaign} settings. The set also includes an elite\n                    group of figures that come with a second, epic-level stat card, allowing\n                    players to assemble higher-value armies with which to do battle."
+}
+title: "War Drums Booster Pack"
+date {
+  year: 2006
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3885"
+  check: 4
+}
+isbn13 {
+}
+system: DND_3_5
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+number: "8"
+series: "D&D Miniatures"
+price {
+  currency: "$ "
+  number: 1299
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "randomized, pre-painted plastic"
+  number: 8
+}
+content {
+  part: CARD
+  description: "stat"
+  number: 8
+}
+content {
+  part: SHEET
+  description: "checklist"
+  number: 1
+}
+layout: FULL_COLOR

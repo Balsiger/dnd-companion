@@ -1,0 +1,32 @@
+template {
+  name: "TSR 3129"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Birthright"
+  description: "new lands to conquer and rule, the renaissance culture of Brecht"
+}
+title: "Havens of the Great Bay"
+author {
+  name: "Stark, Ed"
+}
+date {
+  year: 1996
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

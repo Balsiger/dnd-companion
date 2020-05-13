@@ -1,0 +1,106 @@
+template {
+  name: "WTC 8844674"
+  world: "Forgotten Realms"
+  description: "Trouble brews in \\Place{Thar} as \\Monster{orc} tribes converge on the ruined\n                    fortress of \\Place{X\\hat{u}l-Jarak}, flocking to the banner of a charismatic\n                    warlord. What are their wicked intentions, and what connection do they have\n                    to six missing nobles from \\Place{Melvaunt}?\n                    This stand-alone Dungeons & Dragons adventure is designed for 4th-level\n                    characters. Although set in the world of \\Place{Faer\\hat{u}n}, it can easily\n                    be placed in any D&D campaign.\n                    The adventure can be played using D&D Minatures."
+  short_description: "A 4th level adventure revolving around \\Monster{orcs}."
+}
+title: "Sons of Gruumsh"
+subtitle: "No One Escapes the Wrath of God{Gruumsh}"
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Littrell, Will"
+  job: "additional design"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "additional design"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Dubisch, Mike"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG R&D"
+}
+illustrator {
+  name: "Kolkowsky, Mary"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3698"
+  check: 3
+}
+isbn13 {
+}
+pages: 32
+system: DND_3RD
+type: ADVENTURE
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+required_requirements: "WTC 177524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 11836"
+layout: BLACK_AND_WHITE

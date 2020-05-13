@@ -1,0 +1,281 @@
+template {
+  name: "WTC A9216"
+  category: "starter"
+  category: "Rulebook"
+  world: "Generic"
+  description: "The Dungeons & Dragons \\Product{Starter Set} is your gateway to action-packed stories of the imagination. This box contains the essential rules of the game plus everything you need to play heroic characters on perilous adventures in worlds of fantasy."
+  short_description: "Everything you need to start playing the world\'s greatest roleplaying game."
+}
+title: "Starter Set"
+subtitle: "Explore subterranean labyriths! Plunder hoards of treasure! Battle legendary monsters!"
+author {
+  name: "Mearls, Mike"
+  job: "lead designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "lead designer"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+author {
+  name: "Wyatt, James"
+  job: "designer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "designer"
+}
+author {
+  name: "Schwalb, Robert J."
+  job: "designer"
+}
+author {
+  name: "Lee, Peter"
+  job: "designer"
+}
+author {
+  name: "Townshend, Steve"
+  job: "designer"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "designer"
+}
+author {
+  name: "Baker Richard"
+  job: "adventure designer"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "adventure designer"
+}
+author {
+  name: "Mohan, Kim"
+  job: "additional contributions"
+}
+author {
+  name: "Sernett, Matt"
+  job: "additional contributions"
+}
+author {
+  name: "Dupuis, Chris"
+  job: "additional contributions"
+}
+author {
+  name: "LaPille, Tom"
+  job: "additional contributions"
+}
+author {
+  name: "Baker, Richard"
+  job: "additional contributions"
+}
+author {
+  name: "Horner, Miranda"
+  job: "additional contributions"
+}
+author {
+  name: "Wilkes, Jennifer Clarke"
+  job: "additional contributions"
+}
+author {
+  name: "Winter, Steve"
+  job: "additional contributions"
+}
+author {
+  name: "Hess, Nina"
+  job: "additional contributions"
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+cover {
+  name: "Jones, Jamie"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Stawicki, Matt"
+}
+illustrator {
+  name: "Yanner, Kiernan"
+}
+illustrator {
+  name: "Bader, Daren"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Riley, Aaron J."
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Kovacs, Vance"
+}
+illustrator {
+  name: "Landerman, Daniel"
+}
+illustrator {
+  name: "L\303\274bke, Raphael"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Rogers, Ned"
+}
+illustrator {
+  name: "Sinek, Carmen"
+}
+illustrator {
+  name: "Shkipin, Ilya"
+}
+illustrator {
+  name: "Vargo, David"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "producer"
+}
+manager {
+  name: "Shinkle, Neil"
+  job: "project management"
+}
+manager {
+  name: "Graham, Kim"
+  job: "project management"
+}
+manager {
+  name: "Hay, John"
+  job: "project management"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production services"
+}
+manager {
+  name: "Dumas, Brian"
+  job: "production services"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production services"
+}
+manager {
+  name: "Williams, Anita"
+  job: "production services"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "brand and marketing"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "brand and marketing"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand and marketing"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "brand and marketing"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lundstrom, Kim"
+  job: "brand and marketing"
+}
+date {
+  year: 2014
+  month: 7
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6559"
+  check: 5
+}
+pages: 96
+system: DND_NEXT
+audience: ALL
+type: RULEBOOK
+style: BOX
+producer: "WTC"
+number: "0"
+series: "D&D Next Core"
+price {
+  currency: "$1"
+  number: 999
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "64-page adventure"
+  number: 1
+}
+content {
+  part: BOOKLET
+  description: "32-page rules"
+  number: 1
+}
+content {
+  part: SHEET
+  description: "pregenerated characters"
+  number: 5
+}
+content {
+  part: DICE
+  description: "game"
+  number: 6
+}
+layout: FULL_COLOR

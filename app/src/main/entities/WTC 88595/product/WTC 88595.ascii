@@ -1,0 +1,42 @@
+template {
+  name: "WTC 88595"
+  world: "Generic"
+  description: "Inside the pockets of this protective folder, you\'ll find a full set of\n                    Dungeons & Dragons character sheets---and more. Formatted in a new\n                    folio-style layout, each record has plenty of room to keep track of\n                    everything that makes each of your characters unique, including extra space\n                    for adding new class features and abilities for your multiclass characters.\n                    INCLUDE:\n                    \\list\n                    {Eleven four-page character sheets, one for each of the character\n                    classes in the \\Product{Player\'s Handbook}.}\n                    {A four-page generic D&D character sheet.}\n                    {Quick-reference spell lists for all spellcasting classes in the\n                    \\Product{Player\'s Handbook} and the spellcasting prestige classes in the\n                    \\Product{Dungeon Master\'s Guide}.}\n                    {A bonus, four-page d20 MODERN character sheet.}\n                    Every character sheet and spell list is designed to be easy to photocopy, so\n                    you\'ll always have a fresh sheet on hand when you need one."
+}
+title: "Deluxe Character Sheets"
+subtitle: "Keep up with All of Your Characters"
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Stark, Ed"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+date {
+  year: 2004
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3421"
+  check: 2
+}
+isbn13 {
+}
+pages: 64
+system: DND_3_5
+audience: ALL
+type: ACCESSORY
+style: FOLDER
+price {
+  currency: "$ "
+  number: 1495
+  precision: 100
+}
+content {
+  part: SHEET
+  number: 12
+}

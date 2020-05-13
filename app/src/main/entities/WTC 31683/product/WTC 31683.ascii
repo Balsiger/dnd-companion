@@ -1,0 +1,49 @@
+template {
+  name: "WTC 31683"
+  synonym: ""
+  world: "Forgotten Realms"
+  description: "For centuries \\NPC{Elminster Aumar} served his goddess with the powers she granted him, battling tirelessly against the criminal forces of the \\Group{Zhentarim}, the \\Group{shadow princes of \\Place{Netheril}}, and the ruthless \\Group{Red Wizards of \\Place{Thay}}, making enemies he never had time to take care of, because the fate of the world always hung on his next move. But now\n                    \\large{\\center{His Goddess is Dead.}}\n                    His protector --- his lover, his goddess, his meaning and his means --- is gone forever. And now the mere touch of magic renders him mad. His enemies scent weakness. They are closing in, saying with one voice:\n                    \\large{\\ecnter{\\NPC{Elminster} Must Die}}\n                    "
+  short_description: "Continuation of the Elminster saga."
+}
+title: "Elminster Must Die"
+subtitle: "The Goddess Is Dead"
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Kotaki, Kekai"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2011
+  month: 6
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5799"
+  check: 6
+}
+pages: 387
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "8"
+series: "Sage of Shadowdale"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

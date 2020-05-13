@@ -1,0 +1,37 @@
+template {
+  name: "TSR 8100"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Gamma World"
+  description: "teenage dogcatcher returns to 24th Century to destroy hated foes"
+}
+title: "24-Hour War"
+leader: "The"
+author {
+  name: "Nick Pollotta"
+}
+date {
+  year: 1995
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0198"
+  check: 5
+}
+isbn13 {
+}
+pages: 192
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

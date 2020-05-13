@@ -1,0 +1,40 @@
+template {
+  name: "TSR 3114"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "Birthright"
+  description: "legendary pirate King Ulrich"
+}
+title: "Hag\'s Contract"
+leader: "The"
+author {
+  name: "John Betancourt"
+}
+date {
+  year: 1996
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0496"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

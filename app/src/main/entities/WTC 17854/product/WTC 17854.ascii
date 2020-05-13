@@ -1,0 +1,62 @@
+template {
+  name: "WTC 17854"
+  world: "Dragonlance"
+  description: "The \\Group{Companions} have gone their separate ways, each vowing to return\n  with news of the growing darkness in \\Place{Ansalon}. \\NPC{Sturm\n  Brightblade}, a warrior whose honor is his life, and \\NPC{Kitiara}, a\n  passionate woman of uncertain loyalties, travel north in search of\n  \\NPC{Sturm}\'s long-lost father.\n\n  Before they reach their destination, a band of \\Monster{gnomes} begs for\n  their help. But nothing with \\Monster{gnomes} ever goes as planned. The two\n  adventurers are soon thrown into a perilous adventure that will take them\n  beyond the realms of \\Place{Ansalon}, through love and hate, to darkness and\n  light."
+}
+title: "Darkness & Light"
+subtitle: "Before the War of the Lance."
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Cook, Tonya Carter"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2923"
+  check: 5
+}
+isbn13 {
+}
+pages: 368
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume One"
+series: "Preludes"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

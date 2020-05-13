@@ -1,0 +1,143 @@
+template {
+  name: "TSR 1111"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "An Excerpt from \\emph{An Investigation into the Natural Systems of Organisms\n                    and Their Surroundings} by \\NPC[Elminster]{Elminster of Shadowdale}\n                    \\emph{The world is vast and varies, comprising towering mountains, dense\n                    jungles, and sprawling seas. There are regions so cold that their snow never\n                    melts, other so hot that their rain turns to steam as it touches the\n                    ground.\n                    It is this variety of environments that accounts for the variety of life. In\n                    my travels I have noted 73 distinct types of pine trees...I estimate the\n                    number of fishes at well over five thousand. The number of insect species\n                    likely exceeds the number of grains of sand on the shores of \\Place{Dragon\n                    Reach}.\n                    Every environment, no matter how hostile to humankind, is compatible with\n                    some form of life. The diversity and adaptability of organisms are\n                    staggering....}\n                    Within this box are nine booklets. Eight of them, each written by an expert\n                    in the area, describe various ecological niches on the continent of\n                    \\Place{Faer\\hat{u}n}. Begin by reading the \\emph{Explorer\'s Manual}, which:\n                    \\list\n                    {introduces the read to the organization of the eight area-specific\n                    bookelts,}\n                    {contains the whole of the above excerpt of \\NPC{Elminster}\'s\n                    work-in-progress about Realmsian biodiversity, and}\n                    {provides color-coded encounter tables for the eight other booklet\n                    along with instructions for their use.}\n                    Would-be travelers are advised to read well the information presented by the\n                    \\NPC[Elminster]{Sage of Shadowdale} and his eight compatriots, and to\n                    memorize the Rules of the \\Monster{Rabbit}. There are only three: \\emph{A\n                    \\Monster[Rabbit]{rabbit} isn\'t always a \\Monster[Rabbit]{rabbit}. A\n                    \\Monster[Rabbit]{rabbit} doesn\'t want to be rich. A \\Monster[Rabbit]{rabbit}\n                    doesn\'t always stay put}. An explanation?  You\'ll find it in the\n                    \\emph{Explorer\'s Manual}. Read on, thou hearty adventurer!"
+}
+title: "Elminster\'s Ecologies"
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Haddock, Eric"
+}
+author {
+  name: "Pryor, Anthony"
+}
+editor {
+  name: "Caspian, Jonatha Ariadne"
+}
+editor {
+  name: "Butler, James"
+}
+editor {
+  name: "Danforth, Elizabeth T."
+}
+editor {
+  name: "Rabe, Jean"
+}
+cover {
+  name: "Fields, Fred"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Frazier, Daniel"
+}
+illustrator {
+  name: "Chaffee, Douglas"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+manager {
+  name: "Conant, Dave"
+  job: "production"
+}
+manager {
+  name: "Boomgarden, Karen S."
+  job: "proofreading"
+}
+manager {
+  name: "Wells, Janis"
+  job: "proofreading"
+}
+date {
+  year: 1994
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "917"
+  check: 3
+}
+isbn13 {
+}
+pages: 288
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Anauroch"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Cormanthor"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Great Gray Land of Thar"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Coastal Aquatic Lands: The Sea of Fallen Stars"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Explorer\'s Manual"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Thunder Peaks and the Storm Horns"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Cormyrean Marshes"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Stonelands and the Goblin Marches"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Settled Land"
+  number: 1073741824
+}

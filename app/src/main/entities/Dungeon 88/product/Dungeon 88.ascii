@@ -1,0 +1,118 @@
+template {
+  name: "Dungeon 88"
+  world: "Generic"
+  description: "This is issue 88 of the dungeon magazine."
+}
+title: "Dungeon 88"
+author {
+  name: "Leati, Tito"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Quick, Jeff"
+}
+author {
+  name: "Scott, Graham Robert"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assisstant editor"
+}
+cover {
+  name: "Daniele, Stephen A."
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Kennon, James"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "art director"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "senior production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "assistant production manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Chung, Alice"
+  job: "advertis intern"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 2001
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XV 4"
+number: "88"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

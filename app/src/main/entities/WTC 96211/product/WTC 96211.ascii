@@ -1,0 +1,24 @@
+template {
+  name: "WTC 96211"
+  world: "Star Wars"
+  description: "The Star Wars trading card game (TCG) has arrived at \\Place{Tatooine} and\n  other familiar Episode IV battle arenas. The \\Product{A New Hope} card set,\n  the latest set for the Star Wars TCG, pairs you with such beloved heroes as\n  \\NPC{Luke}, \\NPC{Leia}, and \\NPC{Obi-Wan} . . . or the saga\'s most\n  infamous villain, \\NPC{Darth Vader}.\n\n  Engage in classic conflicts on the ground and in space across the\n  galaxy. Will you defend the \\Group{Rebels}\' cause? Or will you join forces\n  with the evil \\Group{Empire}? Combine \\Product{A New Hope} cards with earlier\n  Star Wars TCG cards to create an epic showdown of light side versus dark\n  side.\n\n  \\Product{A New Hope} cards feature three all-new mechanics: Intercept,\n  Accuracy, and Piloting. Select from the additional cards in booster packs to\n  build your own deck or add reinforcements to your deck or collection. Booster\n  packs are recommended for expert-level players. Dice and rules not included.\n\n  Each player must have a deck of \\Product{Star Wars TCG} cards to play. New\n  players should begin with a \\Product{Star Wars: Attack of the Clones\n  Two-Player Trading Card Game} or \\Product{Dark Side} or \\Product{Light Side\n  Game Pack}."
+}
+title: "New Hope"
+leader: "A"
+subtitle: "Prepare your ships."
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: STAR_WARS_TCG
+audience: ALL
+type: BOOSTER_PACK
+style: CARDS_STYLE
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 329
+  precision: 100
+}

@@ -1,0 +1,28 @@
+template {
+  name: "TSR 9254"
+  synonym: "PC1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+  description: "players play dryades, pixies, sprites"
+}
+title: "Tall Tales of the Wee Folk"
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+producer: "TSR"
+series: "Creature Crucible"
+price {
+  currency: "$\302\254\342\200\240"
+  number: 995
+  precision: 100
+}

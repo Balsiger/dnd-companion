@@ -1,0 +1,50 @@
+template {
+  name: "TSR 8587"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Forgotten Realms"
+  description: "Accosted by bullies on a forest trail, \\NPC{Aeron} had no way of knowing\n                    that the confrontation would change his life forever. Accused of a crime for\n                    which he bears no blame, he is pursued deep into the forests of the\n                    \\Place{Maerchwood}. First rescued, and then tutored, by the mysterious\n                    \\NPC{Storm Walker}, he discovers a previously undreamed-of talent for magic,\n                    and his life is swept up in the study of the arcane arts...\n                    ...until the very principles of magic, and indeed the future of\n                    \\Place{Faer\\hat{u}n}, come under attack from the unspeakably evil influences\n                    of...\n                    \\bold{\\large{\\Product{The Shadow Stone}}}"
+}
+title: "Shadow Stone"
+leader: "The"
+author {
+  name: "Baker, Richard L. III"
+}
+cover {
+  name: "Adwards, Les"
+}
+cover {
+  name: "Barnett, Dee"
+}
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1186"
+  check: 7
+}
+isbn13 {
+}
+pages: 308
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book one"
+series: "Adventures"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

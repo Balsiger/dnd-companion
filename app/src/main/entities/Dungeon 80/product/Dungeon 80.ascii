@@ -1,0 +1,145 @@
+template {
+  name: "Dungeon 80"
+  world: "Generic"
+  description: "This is issue 80 of the dungeon magazine."
+}
+title: "Dungeon 80"
+author {
+  name: "Hawvermale, Lance"
+}
+author {
+  name: "Van Buskirk, Robert A."
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Douglas, Felix"
+}
+author {
+  name: "Wiker, JD"
+}
+author {
+  name: "Hopkins, Peter R."
+}
+author {
+  name: "Winninger, Ray"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistant editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "assistant editor"
+}
+cover {
+  name: "Zug, Mark"
+}
+cartographer {
+  name: "Delfino"
+}
+cartographer {
+  name: "Zispe, Craig"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Wood, Sam"
+}
+cartographer {
+  name: "Perkins, Chris"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Rawles, Fred"
+}
+illustrator {
+  name: "Despain, Brian"
+}
+illustrator {
+  name: "Foster, Jon"
+}
+illustrator {
+  name: "McDevitt, Brad"
+}
+illustrator {
+  name: "Bordell, Chuck"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "assistant production manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 2000
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XIV 2"
+number: "80"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

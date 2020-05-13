@@ -1,0 +1,99 @@
+template {
+  name: "TSR 2142"
+  synonym: "PG2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Forgotten Realms"
+  description: "There are many parallel worlds, and in times past, travel was easy between\n                    them. But those ways are now lost. Those worlds are forgotten.1\n                    Or are they?\n                    Welcome to the \\Place{Forgotten Realms}.\n                    This volume, brimming with newly rediscovered facts and original fiction,\n                    introduces you to the best-selling world of \\Place{Faer\\hat{u}n}, where\n                    \\Monster[Elf]{elves} are mysteriously disappearing, and magic is an art\n                    gifted by a goddess. No difficult game jargon obscures the wonders before\n                    you. Come and explore.\n                    Open this book, and discover a forgotten world!"
+}
+title: "Player\'s Guide to the Forgotten Realms Campaign"
+leader: "The"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Herring, Anthony"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Boomgarden, Karen S."
+}
+author {
+  name: "Martin, Julia E."
+}
+author {
+  name: "Schend, Steven E."
+}
+author {
+  name: "King, J. Robert"
+}
+author {
+  name: "Beach, Tim"
+}
+editor {
+  name: "Caspian, Jonatha Ariadne"
+}
+cover {
+  name: "Elmore, Larry"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Boomgarden, Karen S."
+  job: "product group management"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1993
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "695"
+  check: 6
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+number: "2"
+series: "Player\'s Guide"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

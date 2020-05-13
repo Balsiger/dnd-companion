@@ -1,0 +1,34 @@
+template {
+  name: "WTC 88166"
+  world: "Generic"
+  description: "\\large{Defenses Wrought of Mortar and Magic}\n                    Heroes need impregnable fortresses to assault, wondrous towers to explore,\n                    and majestic castles to protect. This book is stocked with everything needed\n                    to design any fortified structure imaginable, including:\n                    \\list\n                    {Over 150 new magic items}\n                    {More than two dozen magical augmentations for stronghold walls.}\n                    {Rules for magic portals, mobile strongholds, and trap creation.}\n                    {Five complete strongholds, including maps, ready for immediate use.}\n                    Players and Dungeon Masters who want to create customized strongholds will\n                    find all the construction materials they need within these pages.\n                    To use this accessory, a player or Dungeon Master also needs the\n                    \\Product{Players Handbook}."
+}
+title: "Stronghold Builder\'s Guidebook"
+date {
+  year: 2002
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2655"
+  check: 4
+}
+isbn13 {
+}
+pages: 128
+system: DND_3RD
+audience: ALL
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "DM Guidebook"
+price {
+  currency: "$ "
+  number: 2195
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

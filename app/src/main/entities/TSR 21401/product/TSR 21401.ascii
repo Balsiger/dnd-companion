@@ -1,0 +1,45 @@
+template {
+  name: "TSR 21401"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "For the first time, \\NPC{Jack ERavenwild}\'s designs exceed his talents. His\n                    ambitions plunge him into the middle of a plot to destroy the city, a noble\n                    quest to find a lost hoard, and a conspiracy to seize the reins of power\n                    through the nobility\'s \\Event{Game of Masks}. Worse yet, \\NPC{Jack} must\n                    choose between a life of freedom and saving the city he doesn\'t even know he\n                    loves.\n                    \\large{The Cities}\n                    A new series of stand-alone novels, each set in one of the mighty cities of\n                    \\Place{Faer\\hat{u}n}."
+}
+title: "City of Ravens"
+leader: "The"
+subtitle: "The City of Ravens"
+author {
+  name: "Baker, Richard L. III"
+}
+cover {
+  name: "O\'Connor, William"
+}
+date {
+  year: 2000
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1401"
+  check: 7
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book One"
+series: "The Cities"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

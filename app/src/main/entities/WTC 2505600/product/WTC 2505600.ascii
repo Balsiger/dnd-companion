@@ -1,0 +1,42 @@
+template {
+  name: "WTC 2505600"
+  world: "Generic"
+  description: "This new Monster Manual - themed booster pack features 40 D&D monsters from multiple sources --- just what every Dungeon Master or D&D enthusiast needs to create riveting adventures and exciting encounters at all levels of play."
+  short_description: "Monsterl Manual Miniatures"
+}
+title: "Dangerous Delves"
+subtitle: "All Monsters, All the Time"
+date {
+  year: 2009
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5299"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5299"
+  check: 1
+}
+pages: 9
+system: DND_4
+audience: ALL
+type: BOOSTER_PACK
+style: SMALL_BOX
+producer: "WTC"
+series: "Minatures"
+price {
+  currency: "$"
+  number: 1499
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,45 @@
+template {
+  name: "WTC 96569"
+  world: "Generic"
+  description: "Explore labyrinthine tunnels, a mysterious observatory, an imposing temple,\n                    and other intriguing locations with the aid of these thirty-two full-color\n                    maps. Whether used as inspiration for creating new adventures, as a handy\n                    reference during your game, or as a detailed handout to capture your players\'\n                    imagination, each map offers the promise of adventure, the threat of danger,\n                    and the allure of reward.\n                    When combined, the maps in this folio create an exotic walled city built\n                    centuries ago by a mighty civilization. Whether still populated by a thriving\n                    society, overrun with monsters, or hauntingly vacant, this colossal city\n                    holds countless secrets waiting to be uncovered.\n                    These all-new maps are the second in a new series of materials created to\n                    help you add flavor and functionality to your D&D game.\n                    Visit our website at www.wizards.com/dnd"
+}
+title: "Map Folio II"
+subtitle: "Discover Ancient Site and New Adventures"
+author {
+  name: "Gamble, Todd"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic design"
+}
+date {
+  year: 2004
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3280"
+  check: 5
+}
+isbn13 {
+}
+pages: 32
+system: DND_3_5
+type: ACCESSORY
+style: FOLDER
+number: "II"
+series: "Map Folio"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "Map"
+  number: 32
+}

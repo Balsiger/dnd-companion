@@ -1,0 +1,141 @@
+template {
+  name: "TSR 9282"
+  synonym: "LC2"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "Continue your tour of the \\Place{Ravens Bluff} campaign setting, the\n                    brightest spot on the \\Place{Dragon Reach}. Meet \\NPC{Jack Mooney},\n                    proprietor, manager, and ringmaster of the \\Place[Forgotten Realms]{Realms}\'\n                    largest traveling circus. Lucky visitors receive invitations to our\n                    \\emph{Party on \\Place{Embassy Row}}, where intrigue and high society\n                    collide. Visit Lord Mayor Charles \\NPC{Oliver O\'Kane}\'s study for a quick\n                    peek at \\NPC{Elminster}\'s notes on \\Place{Ravens Bluff} and\n                    environs. Discover more new businesses, personalities, and\n                    officials---including the \\NPC[The Vulture]{Vulture}, the city\'s infamous tax\n                    collector. All stops on your tour will add adventure to your travels in the\n                    \\Place{Forgotten Realms} campaign setting."
+}
+title: "Inside Ravens Bluff, The Living City"
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Mooney, Jack"
+}
+author {
+  name: "Lockwood, Todd"
+}
+author {
+  name: "Moonay, Edan"
+}
+author {
+  name: "Elkwood, Silva"
+}
+author {
+  name: "Macabee, Larry \'Mac\'"
+}
+author {
+  name: "Lowder, Jim"
+}
+author {
+  name: "Argall, David Carl"
+}
+author {
+  name: "Anderson, Roger"
+}
+author {
+  name: "Nicholls, Rob"
+}
+author {
+  name: "Beach, Tim"
+}
+author {
+  name: "Nicholson, Wes"
+}
+author {
+  name: "Tracey, Michael"
+}
+author {
+  name: "Littrel, Joe"
+}
+author {
+  name: "Riggenbach, Holly"
+}
+author {
+  name: "Schwartz, Thayathas"
+}
+author {
+  name: "Pierce, Ben"
+}
+author {
+  name: "Kroech, John"
+}
+author {
+  name: "Scott, Sean"
+}
+author {
+  name: "Manson, Ralph"
+}
+author {
+  name: "Tummelson, Jay"
+}
+author {
+  name: "Johnson, Harold"
+}
+author {
+  name: "Bigalow, Robert \'Bob\'"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Block, Allen J."
+}
+editor {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Rabe, Jean"
+}
+cover {
+  name: "Ward, Kevin"
+}
+cartographer {
+  name: "Conant, Dave"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+manager {
+  name: "Rabe, Jean"
+  job: "compilation"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "keylining"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "048"
+  check: 6
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

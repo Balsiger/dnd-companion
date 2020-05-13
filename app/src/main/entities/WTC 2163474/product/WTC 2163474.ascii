@@ -1,0 +1,60 @@
+template {
+  name: "WTC 2163474"
+  world: "Eberron"
+  description: "The \\Monster{lich} \\NPC{Nathifa} has stolen the mystic \\Item{dragonwand} and intends to use it to summon an army of \\Monster{weresharks} to ravage the \\Place{Lhazaar Principalities} in the name of the \\NPC{Lich Queen Vol}. To stop her, assassin-turned-priest \\NPC{Diran Bastiaan} must defeat a \\Monster{demon} that holds a city in its thrall, contend with a \\Monster{werewolf} whose only wish is to die, and survive deadly peril on the fabled isle of \\Place{Trebaz Sinara}. \\NPC{Diran} will need all his faith, a brace of well-honed \\Item{daggers}, and more than a little luck to succeed. For if he fails, the \\Placa{Principalities} will be swept away in a sea of death."
+  short_description: "Blade of the Flame, Book 3"
+}
+title: "Sea of Death"
+subtitle: "One man searching for peace in a land that knows only blood."
+author {
+  name: "Waggoner, Tim"
+}
+editor {
+}
+cover {
+  name: "Swandland, Raymond"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2008
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4791"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4791"
+  check: 1
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 3"
+series: "Blade of the Flame"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

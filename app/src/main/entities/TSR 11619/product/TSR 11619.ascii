@@ -1,0 +1,39 @@
+template {
+  name: "TSR 11619"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  world: "Generic"
+  description: "a fresh new look at the rules for FX or paranormal abilities"
+}
+title: "Beyond Science: Guide to FX"
+author {
+  name: "Sean Reynolds"
+}
+date {
+  year: 2000
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1619"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: ALTERNITY
+type: ACCESSORY
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

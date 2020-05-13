@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9292"
+  synonym: "WGR1"
+  reference {
+    name: "catalogue93"
+  }
+  world: "Greyhawk"
+  description: "the ruins of Castle Greyhawk"
+}
+title: "Greyhawk Ruins"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

@@ -1,0 +1,51 @@
+template {
+  name: "WTC 2502274"
+  world: "Forgotten Realms"
+  description: "Sailors of the \\Place{Inner Sea} know better than to take what lies beneath its rushing waves for granted. Their luck and the gods above are all that keep them safe from horrifying behemoths, bloodthirsty \\Monster{sahuagin}, nigthmarish \\Monster{kraken} patrolling their masters\' territory...\n                    ... and the otherwordly fey that sailors call the \\NPC{Blue Lady}.\n                    No one knows where she came from. No one knows what she wants. But the blue depths of the \\Place{Sea of Fallen Stars} are her prison --- one she\'s ready to escape.\n                    \\Large{The Lucky Ones Drown.}"
+  short_description: "The Wilds, 4th book."
+}
+title: "Wrath of the Blue Lady"
+subtitle: "The \\Place{Sea of Fallen Stars}"
+author {
+  name: "Odom, Mel"
+}
+cover {
+  name: "Gist, Erik M."
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2009
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5192"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5192"
+  check: 5
+}
+pages: 310
+system: NONE
+audience: PLAYER
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "The Wilds"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,47 @@
+template {
+  name: "WTC 88622"
+  world: "Forgotten Realms"
+  description: "\\large{\\NPC{Thazienne Uskevren}}\n                    The only legitimate daughter of the wealthy \\Group{Uskevren} family,\n                    \\NPC{Tazi} suffered blow after shattering blow to her body and her spirit,\n                    some at the hands of her most trusted allies.\n                    Even as she struggles to mend her fractured soul, \\NPC{Tazi} finds herself on\n                    a journey that will take her from the safety of \\Place{Stormweather} to the\n                    darkest alleys of \\Place{Selgaunt} and the shining heart of the \\Place{Calim\n                    Desert}. There, the ever-shifting sands hide an old foe who holds the key to\n                    \\NPC{Tazi}\'s salvation---or her doom."
+}
+title: "Sands of the Soul"
+author {
+  name: "Whitney-Robinson, Voronica"
+}
+cover {
+  name: "Nielsen, Terese"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+date {
+  year: 2002
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2813"
+  check: 1
+}
+isbn13 {
+}
+pages: 309
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 6"
+series: "Sembia"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "the story"
+  number: 1073741824
+}

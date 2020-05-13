@@ -1,0 +1,25 @@
+template {
+  name: "DMA 000010"
+  description: "Catalog of the 1992 stock of TSR."
+}
+title: "1992 TSR"
+date {
+  year: 1992
+}
+isbn {
+}
+isbn13 {
+}
+pages: 104
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

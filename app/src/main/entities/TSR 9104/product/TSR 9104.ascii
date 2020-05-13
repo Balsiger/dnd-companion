@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9104"
+  synonym: "MV1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Midnight on Dagger Alley"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 500
+  precision: 100
+}

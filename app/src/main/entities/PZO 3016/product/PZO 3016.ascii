@@ -1,0 +1,37 @@
+template {
+  name: "PZO 3016"
+  world: "Generic"
+  description: "Never miss a modifier again!\n\nWith \\Product{Condition Cards}, it\342\200\231s easy for players and GMs to keep track of the Pathfinder RPG\342\200\231s most common conditions. Did the bard fascinate your party? Is your wizard invisible? Is the fighter bleeding out? Simply hand out the appropriate condition cards to have all the rules for each condition at your fingertips. This set of 52 hilariously illustrated, full-color cards allows you to play faster and more easily than ever before.\n\nThere are 4 copies each of 13 different cards, with different (but related) conditions on each side:\n\n\\list\n{blinded/deafened}\n{dazed/stunned}\n{exhausted/fatigued}\n{grappled/pinned}\n{shaken/frightened}\n{sickened/nauseated}\n{staggered/paralyzed}\n{helpless/flat-footed}\n{dazzled/fascinated}\n{confused/entangled}\n{bleed/dying}\n{prone/unconscious}\n{incorporeal/invisible}\n\nAlso included is a new spell, soothing word."
+  short_description: "Condition cards for all possible conditions for characters."
+}
+title: "Condition Cards"
+subtitle: "52 Condition Cards for the Pathfinder Roleplaying Game."
+date {
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "285"
+  check: 2
+}
+pages: 52
+system: DND_3_5
+audience: ALL
+type: CARDS_TYPE
+style: SMALL_BOX
+producer: "Paizo"
+series: "GameMastery"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: CARD
+  description: "condition"
+  number: 52
+}
+layout: FULL_COLOR

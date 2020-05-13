@@ -1,0 +1,38 @@
+template {
+  name: "WTC 21743"
+  world: "Generic"
+  description: "Gather your dice, grab your D&D \\Product{Player\'s Handbook} core rulebook, and embark on the adventure of a lifetime. This accessory for the Dungeons & Dragons roleplaying game will help you decide your fate as you battle fearsome monsters, explore ancient dungeons and claim magnificent treasure."
+  short_description: "A new set of dice, including pouch."
+}
+title: "Premium Dice"
+subtitle: "Got Dice?"
+cover {
+  name: "O\'Connor, William"
+}
+date {
+  year: 2008
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4874"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4874"
+  check: 1
+}
+system: DND_4
+audience: ALL
+type: DICE
+style: SMALL_BOX
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+layout: FULL_COLOR

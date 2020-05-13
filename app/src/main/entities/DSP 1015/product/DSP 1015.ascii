@@ -1,0 +1,45 @@
+template {
+  name: "DSP 1015"
+  description: "Epic quests are usually the stuff of heroes... once or twice. For\n  \\NPC{Nodwick} and his adventurer employers, it\'s a way of life! Join them as\n  they seek out mystic weapons, restore the \'bits\' of the world, and hide\n  behind fake moustaches, all while fighting evil at the same time! Thrill to\n  the first appearance of \'Orville\', their semi-trained war \\Monster{dragon}!\n  Discover the history of the legendary \'Clue-by-Four\'! And gasp in awe at the\n  somewhat prophetic \'Clergy in Black\'! This, the fifth volume of the\n  \\NPC{Nodwick} Chronicles sees the continuation of the legendary \'Baphuma\'al\'\n  tale, with plenty of laughs along the way. So re-enlist with Henchman\'s Local\n  #246 and come along for the tour of several lifetimes!"
+}
+title: "Tour of Doodle"
+subtitle: "Nodwick\'s Taking His Show on the Road, and You\'re Invited to Come Along"
+author {
+  name: "Williams, Aaron"
+}
+cover {
+  name: "Williams, Aaron"
+}
+cover {
+  name: "Keith, Jason"
+  job: "colors"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+date {
+  year: 2006
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "933288"
+  title: "11"
+  check: 6
+}
+isbn13 {
+}
+pages: 160
+system: NONE
+audience: ALL
+type: COMICS
+style: PAPERBACK
+producer: "Henchman Publishing"
+number: "Book V"
+series: "The Nodwick Chronicles"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,72 @@
+template {
+  name: "TSR 21346"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "A \\Item{submarine} trip to an island of ghosts. A band of fugitive actors. A\n  deadly \\Monster{draconian} who has had too much holiday punch. And veritable\n  onslaught of \\Monster{dryads}, \\Monster{shadow wights}, and that rarest of\n  all monsters, the dread \\Monster{forest boojum}.\n\n  Also, from the team of Margaret Weis and Don Perrin, the latest adventure of\n  \\NPC{Kang} and his wayward troop of \\Monster{draconians}.\n\n  In the proud tradition of the best-selling \\Place{Dragonlance} anthologies,\n  \\Product{Heroes and Fools} promises a sometimes heroic -- sometimes foolish\n  -- visit to the world of \\Place{Krynn}."
+}
+title: "Heroes and Fools"
+subtitle: "Tales of the Fifth Age"
+author {
+  name: "Pack, Janet"
+}
+author {
+  name: "Horner, Miranda"
+}
+author {
+  name: "Custer, Giles"
+}
+author {
+  name: "Fahnestock, Todd"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Kage, Kevin"
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Baker, Linda P."
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Rabe, Jean"
+}
+editor {
+  name: "Margaret Weis"
+}
+editor {
+  name: "Tracy Hickman"
+}
+date {
+  year: 1999
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 338
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

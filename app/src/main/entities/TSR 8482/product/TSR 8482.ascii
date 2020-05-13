@@ -1,0 +1,61 @@
+template {
+  name: "TSR 8482"
+  synonym: "WTC 86654"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "Hostile in ways that a surface-dweller could never know, the tunnel mazes of\n                    the \\Place{Underdark} challenge all who tread there. Among these souls are\n                    \\NPC{Drizzt Do\'Urden} and his magical cat, \\NPC{Guenhwyvar}. Exiled from his\n                    \\Monster{drow} homeland, \\NPC{Drizzt} must fight for a new home in the\n                    boundless labyrinth. Meanwhile, he must watch for signs of pursuit---for the\n                    \\Monster{dark elves} are not a forgiving race.\n                    \'Salvatore...is both upholding the best traditions of the genre and setting\n                    standards that could well become traditions of its next generation.\'\n                    \\Product{Dragon} Magazine."
+}
+title: "Exile"
+author {
+  name: "Salvatore, R. A."
+}
+cover {
+  name: "Easley, Jeff"
+}
+date {
+  year: 1990
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "920"
+  check: 6
+}
+isbn13 {
+}
+pages: 306
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book Two"
+series: "Legend of Drizzt"
+series: "Dark Elf Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

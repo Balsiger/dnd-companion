@@ -1,0 +1,50 @@
+template {
+  name: "TSR 9457"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "screen for fighters"
+}
+title: "Fighter\'s Screen"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+date {
+  year: 1994
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 4
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+style: SCREEN
+producer: "TSR"
+series: "Screen"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: SCREEN
+  number: 1073741824
+}
+content {
+  part: PAGE
+  description: "valuable material"
+  number: 4
+}

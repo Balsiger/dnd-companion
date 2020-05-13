@@ -1,0 +1,80 @@
+template {
+  name: "WTC 2398772"
+  world: "Generic"
+  description: "If you\'re a Dungeon Master looking for some quick one-shot adventures, or you\'re searching for fun encounters to weave into your home D&D campaign, look no farther!\n                    This Dungeons & Dragons supplement provides Dungeon Masters with thirty short, easy-to-run mini-dungeons, or \'delves\', each designed to last a single game session. The book includes delves for characters from 1st to 30th level and features maps built using \\Product{D&D Dungeon Tiles}. Each adventure presents unique and challenging encounters to keep your players on the edge of their seats."
+  short_description: "Ropleplaying game supplement with short adventures."
+}
+title: "Dungeon Delve"
+subtitle: "Deadly Dungeons for All Levels"
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Dunnet, Yasuyo"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+date {
+  year: 2009
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5139"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5139"
+}
+pages: 192
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

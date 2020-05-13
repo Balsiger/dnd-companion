@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9036"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Dungeon Master Adventure Log"
+date {
+  year: 1980
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

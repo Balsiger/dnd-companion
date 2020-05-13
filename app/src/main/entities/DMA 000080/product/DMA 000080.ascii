@@ -1,0 +1,36 @@
+template {
+  name: "DMA 000080"
+  world: "None"
+  description: "Overwhelmed? Just want to play? Learn the ins and outs of D&D and start\n                    playing right away with Dungeons & Dragons For Dummies. Book produced in\n                    partnership with Wizards of the Coast and written by D&D game designers!\n                    Topics include:\n                    \\list\n                    {Finding a game}\n                    {Learning the rules}\n                    {Choosing a character}\n                    {Creating a character}\n                    {D&D etiquette}\n                    {Becoming a Dungeon Master...}\n                    {and much more!}\n                    Special 4-page fold-out color cheat sheet will include a scale dungeon that\n                    players can use as a game board as well as many other valuable tips, tricks,\n                    short-cuts and quick reference tools for gameplay convenience."
+}
+title: "Dungeon & Dragons for Dummies"
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Baker, Richard W."
+}
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7645"
+  title: "8459"
+  check: 6
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "For Dummies"
+price {
+  currency: "$ "
+  number: 1999
+  precision: 100
+}

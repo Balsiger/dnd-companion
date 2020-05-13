@@ -1,0 +1,52 @@
+template {
+  name: "WTC 2154272"
+  world: "Generic"
+  description: "\\large{Explore}\n                    Fantastic dungeons, from the perilous \\Place{Tomb of Horrors} to the \\Place{Lost Caverns of Tsojcanth}.\n                    \\large{Survive}\n                    Fierce monsters and fiendish traps.\n                    \\large{Uncoder}\n                    Legendary treasures and arcane secrets of a forgotten age."
+}
+title: "Dungeon Survival Guide"
+subtitle: "Treasure and terror await you in the darkest dungeons of the D&D world"
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Perkins, Christopher"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "art director"
+}
+date {
+  year: 2007
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4730"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4730"
+}
+pages: 64
+system: NONE
+audience: ALL
+type: SPECIAL_BOOK
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

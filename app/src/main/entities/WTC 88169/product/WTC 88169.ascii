@@ -1,0 +1,167 @@
+template {
+  name: "WTC 88169"
+  world: "Generic"
+  description: "Songs are sung and tales are told of heroes who have advanced beyond most\n                    adventuring careers. They confront mightier enemies and face deadlier\n                    challenges, using powers and abilities that rival even the gods.\n                    This supplement for the D&D game provides everything you need to transcend\n                    the first twenty levels of experience and advance characters to virtually\n                    unlimited levels of play. Along with epic magic items, epic monsters, and\n                    advice on running an epic campaign, the \\Product{Epic Level Handbook} also\n                    features epic NPCs from the \\Place{Forgotten Realms} and \\Place{Greyhawk}\n                    campaign settings.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}. A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Epic Level Handbook"
+subtitle: "Legends Begin Here"
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Rateliff, John D."
+  job: "additional design"
+}
+author {
+  name: "Reid, Thomas M."
+  job: "additional design"
+}
+author {
+  name: "Wyatt, James"
+  job: "additional design"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+}
+editor {
+  name: "Noonan, David"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Swekel, Arnie"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Bader, Daren"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Despain, Brian"
+}
+illustrator {
+  name: "Dixon, Larry"
+}
+illustrator {
+  name: "Dutton, Michael \'Mike\'"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Guay, Rebecca"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lawson, Alton"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Mitchell, Matthew"
+}
+illustrator {
+  name: "Rams, Vinod"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Riche, Darrell"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Marc Sasso"
+}
+illustrator {
+  name: "Smylie, Mark"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+typographer {
+  name: "Dorries, Erin"
+}
+manager {
+  name: "Stark, Ed"
+  job: "creative director"
+}
+manager {
+  name: "Valterra, Anthony"
+  job: "business manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "vice president of RPG R&D"
+}
+manager {
+  name: "Kirchoff, Mary"
+  job: "vice president of publishing"
+}
+manager {
+  name: "Durham, Martin"
+  job: "project manager"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production manager"
+}
+date {
+  year: 2002
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2658"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Player Guide"
+price {
+  currency: "$ "
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

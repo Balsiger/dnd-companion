@@ -1,0 +1,27 @@
+template {
+  name: "WTC 96748"
+  description: "Neopets are magically appearing on cards that you can collect and play\n  with. You\'ll also discover all sorts of Petpets, Potions, Neggs, Books,\n  Faerie tokens, Weapons, and Food from all over \\Place{Neopia}. So gather your\n  favourite Neopets and challenge your friends to some real fun!\n\n  The \\Product{Neopets trading card game} allows you and a friend to enjoy the\n  experience of playing with your Neopets and collecting items for them to use\n  in a challenging game you can play anywhere!\n\n  The Two-Player Starter Set has everything you need to start collecting your\n  favourite Neopets and challenging your friends to exciting games:"
+}
+title: "Neopets TCG Base Set"
+subtitle: "Something is Happening!"
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3427"
+  check: 1
+}
+isbn13 {
+}
+system: NEOPETS
+audience: ALL
+type: CARDS_TYPE
+style: BOX
+price {
+  currency: "$ "
+  number: 999
+  precision: 100
+}

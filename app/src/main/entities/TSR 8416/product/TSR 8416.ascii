@@ -1,0 +1,66 @@
+template {
+  name: "TSR 8416"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The ultimate struggle of good and evil...At stake, the survival of the\n                    \\Place{Moonshae Isles}.\n                    \\NPC{Tristan Kendrick}, newly crowned High King of the \\Group{Ffolk}, must\n                    forge a lasting alliance between the divergent peoples of the\n                    \\Place{Isles}. The \\Class{druid} \\NPC{Robyn} must confront an evil that has\n                    infested the land itself. And together, they must decide if they will face\n                    the future as king and queen---or as enemies, forever separated by failure\n                    and mistrust.\n                    Filled with bizarre creatures and cast against a landscape such as the\n                    \\Place{Isles} have never seen, \\Product{Darkwell} is the tumultuous\n                    conclusion to the epic begun in Doubles Nile\'s best-selling\n                    \\Product{Darkwalker on Moonshae} and \\Product{Black Wizards}. The\n                    \\Place{Moonshae} Trilogy is part of the \\Place{Forgotten Realms} adventures,\n                    TSR\'s most extensive fantasy campaign."
+}
+title: "Darkwell"
+author {
+  name: "Niles, Douglas"
+}
+editor {
+  name: "McGilligan, Pat"
+}
+editor {
+  name: "Kirchoff, Mary"
+}
+editor {
+  name: "Larson, Bill"
+}
+cover {
+  name: "Easley, Jeff"
+}
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "717"
+  check: 3
+}
+isbn13 {
+}
+pages: 341
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Three"
+series: "Moonshae Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

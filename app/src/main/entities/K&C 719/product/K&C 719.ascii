@@ -1,0 +1,49 @@
+template {
+  name: "K&C 719"
+  description: "Issues sixty-one through sixty-four of Knights of the Dinner Table\n  crammed between two covers!"
+}
+title: "Bundle of Trouble: Volume Nineteen"
+subtitle: "A Compilation of Knights of the Dinner Table: Issues 51 Thru 64"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+}
+author {
+  name: "Johansson, Steve"
+}
+author {
+  name: "Kenzer, David S."
+}
+cover {
+  name: "Fraim, Brendon"
+}
+cover {
+  name: "Fraim, Brian"
+}
+date {
+  year: 2007
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: COMICS
+style: BOOKLET
+producer: "K&C"
+number: "Volume Seventeen"
+series: "Knights of the Dinner Table"
+price {
+  currency: "$ "
+  number: 1199
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

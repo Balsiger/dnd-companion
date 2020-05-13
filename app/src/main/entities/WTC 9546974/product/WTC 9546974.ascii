@@ -1,0 +1,46 @@
+template {
+  name: "WTC 9546974"
+  world: "Eberron"
+  description: "After hundreds of years, it has returned to \\Place{Eberron}, and the forces\n  of good and evil want to control it. But one man only wants to get his\n  daughter back alive. To save her, he must walk a perilous path...\n\n  \\large{The Road to Death.}"
+}
+title: "Road to Death"
+subtitle: "The Mark of Death"
+author {
+  name: "Forbeck, Matt"
+}
+cover {
+  name: "Rex, Adam"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2006
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3987"
+  check: 7
+}
+isbn13 {
+}
+pages: 375
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 2"
+series: "The Lost Mark"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: BLACK_AND_WHITE

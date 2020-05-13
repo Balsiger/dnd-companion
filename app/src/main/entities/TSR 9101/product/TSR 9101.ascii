@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9101"
+  synonym: "UK2"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Sentinel"
+leader: "The"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

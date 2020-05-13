@@ -1,0 +1,74 @@
+template {
+  name: "TSR 11549"
+  world: "Generic"
+  description: "A box full of TSR memorabilia."
+}
+title: "AD&D Silver Anniversary Collector\'s Box"
+date {
+  year: 1999
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1549"
+  check: 8
+}
+isbn13 {
+}
+pages: 208
+system: ADND_REVISED
+type: COLLECTION
+style: BOX
+series: "Silver Anniversary"
+price {
+}
+content {
+  part: BOOKLET
+  description: "The Story of TSR"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Deep Dwarven Delve module"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Ravenloft module"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "White Plume Mountain module"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Steading of the Hill Giant Chief module"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Glacial Rift of the Frost Giant Jarl module"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Hall of the Fire Giant King module"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Keep on the Borderlands module"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Dungeon & Dragon rulebook"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "Jeff Easley collectors print"
+  number: 1073741824
+}

@@ -1,0 +1,25 @@
+template {
+  name: "DMA 000070"
+  world: "None"
+  description: "The promotion flyer for the 2001 Gen Con Game Fair"
+}
+title: "2001 Gen Con Game Fair"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+pages: 8
+system: NONE
+audience: ALL
+type: PROMOTION
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

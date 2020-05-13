@@ -1,0 +1,111 @@
+template {
+  name: "TSR 8348"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "The world of \\Place{Krynn} is caught in the grips of a terrible war between\n  the minions of \\God{Takhisis}, \\God{Queen of Darkness}, and the followers of\n  \\God{Paladine} and the gods of good. \\Monster{Dragons}, both foul and fair,\n  clash in the skies, and a small band of friends who will one day be known as\n  the \\Group{Heroes of the Lance}, strive for freedom and honor.\n\n  The story of this mighty conflict was revealed in the internationally\n  acclaimed \\Product{Dragonlance Chronicles} trilogy, and now many of the most\n  famous scribes of the series return to tell other tales of \\Place{Krynn}\'s\n  \\Event{War Years}."
+  short_description: "Book VI of the Dragonlance Tales"
+}
+title: "War of the Lance"
+leader: "The"
+subtitle: "The War Years"
+author {
+  name: "Williams, Michael"
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Parkinson, Dan"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "Anthony, Mark"
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Niles, Douglas"
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+editor {
+  name: "Williams, Michael"
+}
+editor {
+  name: "Knaak, Richard A."
+}
+cover {
+  name: "Elmore, Larry"
+}
+date {
+  year: 1992
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "431"
+  check: 7
+}
+isbn13 {
+}
+pages: 343
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume Six"
+series: "Tales Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

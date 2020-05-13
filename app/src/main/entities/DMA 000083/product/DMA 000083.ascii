@@ -1,0 +1,31 @@
+template {
+  name: "DMA 000083"
+  description: "Paizo Catalog of Summer 2008."
+  short_description: "Paizo Catalog of Summer 2008."
+}
+title: "Paizo Summer Catalog 2008"
+subtitle: "Summer Catalog 2008"
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+producer: "Paizo"
+price {
+  currency: "$"
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Catalog"
+  number: 1
+}
+layout: FULL_COLOR

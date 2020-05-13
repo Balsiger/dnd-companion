@@ -1,0 +1,48 @@
+template {
+  name: "TSR 1140"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  world: "None"
+  description: "Reference guide for the Blood Wars card game."
+}
+title: "Warlord\'s Tactical Manual"
+author {
+  name: "Kevin Melka"
+}
+date {
+  year: 1996
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0433"
+  check: 10
+}
+isbn13 {
+}
+pages: 160
+system: BLOOD_WARS
+audience: ALL
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 3
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

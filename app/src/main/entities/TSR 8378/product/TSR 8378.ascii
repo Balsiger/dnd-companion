@@ -1,0 +1,97 @@
+template {
+  name: "TSR 8378"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 228"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "\\Monster{Dragons}, the true children of \\Place{Krynn}, are power incarnate,\n  and they know it. They come in all guises and forms. Their personalities are\n  a varied as their colors. Their magical abilities are virtually\n  unlimited. And nothing is so terrifying as \\Monster{dragons} on the wing.\n\n  In this collection, a follow-up to the popular \\Product{The Dragons of Krynn}\n  anthology, the \\Place{Dragonlance} saga\'s best-known authors serve up a\n  fantastical array of \\Monster{dragon} tales featuring the motley races of\n  \\Place{Krynn} and the deadliest creatures of the \\Place{Dragonlance} saga.\n\n  Here are exciting new stories in the series that has enthralled over 12\n  million readers worldwide, written by wonderful authors and edited by\n  \\Place{Dragonlance} creators Margaret Weis and Tracy Hickman."
+}
+title: "Dragons at War"
+leader: "The"
+author {
+  name: "Williams, Michael"
+}
+author {
+  name: "Anthony, Mark"
+}
+author {
+  name: "Lesh, Adam"
+}
+author {
+  name: "Pierson, Chris"
+}
+author {
+  name: "Baker, Linda P."
+}
+author {
+  name: "Pack, Janet"
+}
+author {
+  name: "Stein, Kevin T."
+}
+author {
+  name: "McLaren, Teri"
+}
+author {
+  name: "King, Robert J."
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Perrin, Don"
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Moore, Roger, E."
+}
+author {
+  name: "Niles, Douglas"
+}
+editor {
+  name: "Weis, Marga"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 1996
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0491"
+  check: 7
+}
+isbn13 {
+}
+pages: 356
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Volume 2 producer TSR"
+series: "Dragonlance Draongs"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

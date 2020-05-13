@@ -1,0 +1,182 @@
+template {
+  name: "Dragon 274"
+  world: "Generic"
+}
+title: "Dragon 274"
+author {
+  name: "Jonathan Tweet"
+}
+author {
+  name: "Kim Mohan"
+}
+author {
+  name: "Monte Cook"
+}
+author {
+  name: "Herndon, Cory J."
+}
+author {
+  name: "Ian Malcomson"
+}
+author {
+  name: "Robin D. Laws"
+}
+author {
+  name: "JD Wiker"
+}
+author {
+  name: "William J. White"
+}
+author {
+  name: "Bova, Ben"
+}
+author {
+  name: "Gary Gygax"
+}
+author {
+  name: "James Jacobs"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Todd Lockwood"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Ray Winninger"
+}
+author {
+  name: "Johnny Wilson"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Haddock, Eric"
+}
+editor {
+  name: "Matthew Sernett"
+}
+cover {
+  name: "Marc Sasso"
+}
+cartographer {
+  name: "Stephen Daniele"
+}
+illustrator {
+  name: "Jeff Laubenstein"
+}
+illustrator {
+  name: "Stephen Daniele"
+}
+illustrator {
+  name: "John Hermanowski"
+}
+illustrator {
+  name: "Larry McDougal"
+}
+illustrator {
+  name: "Ron Spencer"
+}
+illustrator {
+  name: "George Vrbanic"
+}
+illustrator {
+  name: "Scott Fischer"
+}
+illustrator {
+  name: "Dorman, Dave"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Ron Spencer"
+}
+illustrator {
+  name: "Todd Lockwood"
+}
+illustrator {
+  name: "Sam Wood"
+}
+manager {
+  name: "Johnny Wilson"
+}
+manager {
+  name: "Wendy Noritake"
+}
+manager {
+  name: "Peter Whitley"
+}
+manager {
+  name: "Rob Dalton"
+}
+manager {
+  name: "Kim Francisco"
+}
+manager {
+  name: "Skip Williams"
+}
+manager {
+  name: "Ray Winninger"
+}
+manager {
+  name: "Kyle Stanley Hunter"
+}
+manager {
+  name: "Scott Ricker"
+}
+manager {
+  name: "Sam Wood"
+}
+manager {
+  name: "Pierce Watters"
+}
+manager {
+  name: "Bob Henning"
+}
+manager {
+  name: "John Dunn"
+}
+manager {
+  name: "Maas, Bobbi"
+}
+manager {
+  name: "Miesner, Dawnelle"
+}
+date {
+  year: 2000
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 132
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXV 2"
+number: "274"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "sherwood campaign, color"
+  number: 1073741824
+}

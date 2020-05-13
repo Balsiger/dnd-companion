@@ -1,0 +1,19 @@
+template {
+  name: "WTC 2394572"
+  world: "Generic"
+}
+title: "Open Grave"
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5069"
+  check: 2
+}
+isbn13 {
+}
+system: DND_4
+audience: UNKNOWN
+price {
+}

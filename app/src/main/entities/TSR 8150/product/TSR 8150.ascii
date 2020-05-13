@@ -1,0 +1,37 @@
+template {
+  name: "TSR 8150"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "None"
+}
+title: "Rogues to Riches"
+author {
+  name: "Robert J. King"
+}
+date {
+  year: 1995
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "825"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: FIRST_QUEST
+audience: ALL
+type: NOVEL
+number: "Book One"
+series: "First Quest"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

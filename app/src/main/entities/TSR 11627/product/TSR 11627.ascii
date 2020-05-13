@@ -1,0 +1,38 @@
+template {
+  name: "TSR 11627"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Forgotten Realms"
+  description: "More than just powerful wizards, divine temples, and wise kings comprise the\n                    \\Place[Forgotten Realms]{Realms}. For every beacon of light there exists a\n                    shadow, and shadows conceal much. Those who work in secret wield much power\n                    in \\Place{Faer\\hat{u}n}: Groups as diverse as the \\Group{Harpers} and the\n                    \\Group{Zhentarim} all live and work in the shadows of the \\Place[Forgotten\n                    Realms]{Realms}.\n                    Here, for the first time, is detailed information on these groups\' areas of\n                    influence, leaders, chains of command, methods, agents, and their recent\n                    activities and plots. Read about:\n                    \\list\n                    {The schism that tears apart the \\Group{Harpers}}\n                    {The bizarre details of the \'\\Event{Manshoon Wars}\'}\n                    {The rise of \\NPC{Fzoul Chembryl}, grand tyrant of\n                    \\God[Iyachtu Xvim]{Xvim the Baneson}}\n                    This book also gives information on the \\Group{Night Masks}, the\n                    \\Group{Knights of the Shield}, the \\Group{Iron Throne}, the \\Group{Shadow\n                    Thieves}, and many more secret societies. Finally, \\Place{Westgate}---the\n                    nexus of many power groups\' interests on the \\Place{Sea of Fallen Stars}---is\n                    detailed as never before.\n                    Learn what goes on in the shadows of the \\Place[Forgotten Realms]{Realms};\n                    learn the secrets \\emph{they} don\'t want you to know!"
+}
+title: "Cloak & Dagger"
+date {
+  year: 2000
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1627"
+  check: 3
+}
+isbn13 {
+}
+pages: 160
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2695
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

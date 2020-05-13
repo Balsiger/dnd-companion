@@ -1,0 +1,77 @@
+template {
+  name: "TSR 9455"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 211"
+  }
+  world: "Forgotten Realms"
+  description: "\\Product[TSR 9455]{Marco Volo---Arrival} is the third and last volume of the\n                    \\Product[Marco Volo Trilogy]{Marco Volo} trilogy, designed for four to eight\n                    player characters of 6th--8th level. When the characters first set off on an\n                    intrigue-laden journey to \\Place{Shadowdale}, they did not suspect how much\n                    trouble they would get into. Joined by \\NPC{Marcus Wands} (also known as\n                    \'\\NPC{Marco Volo}\'), they found him just a bothersome but likebale little\n                    rogue. No one suspected he was on the run from the crazy wizard\n                    \\NPC{Sabbar}. The troublesome \\NPC[Marcus Wands]{Marcus} had previously\n                    stolen from him a rare artifact called the \\Item{Dragonking\'s Eye}, and hid\n                    it in the \\Place{Spiderhaunt Woods}.\n                    Now the party approaches the \\Place[Spiderhaunt Woods]{Spiderhaunts}, and\n                    \\NPC[Marcus Wands]{Marcus} insists on diverting the group to retrieve the\n                    \\Item{Eye}. But strange things have been happening there. There are rumors:\n                    of an oddly constructed keep of bone (or is it crystal?); of a warlord out\n                    for conquest (or is it a \\Monster[Lich]{lich}?); of \\Monster[Goblin]{goblin}\n                    tribes strangely clad, and extra-planar beings banding with the\n                    \\Monster[Giant Spider]{giant spiders} of the aptly named \\Place{Spiderhaunt\n                    Woods}. Something evil has denned at the heart of the forest. It has a mind\n                    of its own... and it has plans for \\Place{Faer\\hat{u}n}.\n                    The last volume of the \\Product[Marco Volo Trilogy]{Marco Volo} trilogy gives\n                    a DM the tools to run this free-wheeling, fast-paced adventure, and the\n                    secrets of the powers at work behind the scenes. The player characters must\n                    face---and deal with---the mad wizard \\NPC{Sabbar}, the annoyed\n                    \\NPC{Volothamp Geddarm} (who wants to have \'a little chat\' with \\NPC[Marcus\n                    Wands]{Marcus}!), and ultimately the \\Item{Dragonking\'s Eye} itself. Even the\n                    gods themselves step in to have their say. In a dramatic denouement, this\n                    epic adventure draws to a close, but the memory of what transpired will live\n                    on!"
+}
+title: "Marco Volo: Arrival"
+author {
+  name: "Pryor, Anthony"
+}
+editor {
+  name: "Danforth, Elizabeth T."
+}
+cover {
+  name: "Lakey, John"
+}
+cover {
+  name: "Lakey, Laura"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Danforth, Elizabeth T."
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1994
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "890"
+  check: 8
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+number: "Part Three"
+series: "Volo Adventures"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

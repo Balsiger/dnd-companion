@@ -1,0 +1,52 @@
+template {
+  name: "TSR 11621"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Greyhawk"
+  description: "uncover the slavers secret contacts and destroy hidden bases"
+}
+title: "Slavers"
+author {
+  name: "Reynolds, Sean K."
+}
+author {
+  name: "Pramas, Chris"
+}
+date {
+  year: 2000
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1621"
+  check: 4
+}
+isbn13 {
+}
+pages: 128
+system: ADND_1ST
+type: ADVENTURE
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}
+content {
+  part: MAP
+  description: "black-and-white"
+  number: 6
+}
+content {
+  part: MISC
+  description: "black-and-white illustrations"
+  number: 13
+}

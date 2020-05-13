@@ -1,0 +1,43 @@
+template {
+  name: "TSR 11550"
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "\\large{The Key to Endless Adventure!}\n                    \\bold{by Jonathan Tweet, Monte Cook, and Skip Williams}\n                    Here is the indispensable manual of fantasy roleplaying. The\n                    \\Product{Player\'s Handbook} includes everything you need to create and play\n                    your ideal Dungeons & Dragons character.\n                    Pick up this book and join the millions of other players who have made the\n                    D&D game the world\'s most popular fantasy roleplaying game!"
+}
+title: "Player\'s Handbook"
+date {
+  year: 2000
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1550"
+  check: 1
+}
+isbn13 {
+}
+pages: 304
+system: DND_3RD
+audience: ALL
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+number: "Book I"
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: CD
+  description: "Master Tools Demo"
+  number: 1073741824
+}

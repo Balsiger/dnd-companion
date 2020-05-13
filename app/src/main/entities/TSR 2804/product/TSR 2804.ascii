@@ -1,0 +1,37 @@
+template {
+  name: "TSR 2804"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Star*Drive"
+  description: "description central location of the campaign to get supplies and be home"
+}
+title: "Lighthouse"
+leader: "The"
+author {
+  name: "Eckelberry, David"
+}
+date {
+  year: 1998
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1216"
+  check: 2
+}
+isbn13 {
+}
+pages: 64
+system: ALTERNITY
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}

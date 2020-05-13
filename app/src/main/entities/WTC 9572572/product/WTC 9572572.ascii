@@ -1,0 +1,152 @@
+template {
+  name: "WTC 9572572"
+  world: "Generic"
+  description: "In a world filled with monsters and villains, a little deception and\n                    boldness goes a long way. You know how to take advantage of every situation,\n                    and you don\'t mind getting your hands dirty. Take the gloves off? \\emph{Ha!}\n                    You never put them on. You infuriate your foes and amaze your allies with\n                    your ingenuity, resourcefulness, and style. For you, every new predicament is\n                    an opportunity in disguise, and with each sweet victory your notoriety\n                    grows. That is how legends are made.\n                    This D&D supplement gives you everything you need to get the drop on your\n                    foes and escape sticky situations. In addition to new feats, spells, items,\n                    and prestige classes, \\Product{Complete Scoundrel} presents new mechanics\n                    that put luck on your side and a special system of skill tricks that allow\n                    any character to play the part of a scoundrel. Tricky tactics aren\'t just for\n                    rogues anymore. "
+  short_description: "A Player\'s Guide to Trickery and Ingenuity"
+}
+title: "Complete Scoundrel"
+subtitle: "Fair Fights are for Suckers"
+author {
+  name: "McArtor, Mike"
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Schwalb, Robert J."
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Griese, Beth"
+}
+editor {
+  name: "Thompson, John"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "O\'Connor, William"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Coimbra, Miguel"
+}
+illustrator {
+  name: "Cod, Ed"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Kieran, Yanner"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Christina"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4152"
+  check: 9
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Player\'s Guide"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

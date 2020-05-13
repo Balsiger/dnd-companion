@@ -1,0 +1,50 @@
+template {
+  name: "TSR 8030"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+}
+title: "Beyond the Moons"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+cover {
+  name: "Easley, Jeff"
+}
+date {
+  year: 1991
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "153"
+  check: 9
+}
+isbn13 {
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+number: "One"
+series: "Cloakmaster Cycle"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

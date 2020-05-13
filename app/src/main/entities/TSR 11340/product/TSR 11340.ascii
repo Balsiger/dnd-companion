@@ -1,0 +1,33 @@
+template {
+  name: "TSR 11340"
+  reference {
+    name: "net"
+  }
+  world: "Marvel Super Heroes"
+  description: "a lot of infos and optional rules"
+}
+title: "Reed Richards Guide to Everything"
+leader: "The"
+author {
+  name: "Mike Selinker"
+}
+date {
+  year: 1999
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1340"
+  check: 1
+}
+isbn13 {
+}
+pages: 128
+system: SAGA
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}

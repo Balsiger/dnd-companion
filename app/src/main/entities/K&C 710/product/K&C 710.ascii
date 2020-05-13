@@ -1,0 +1,54 @@
+template {
+  name: "K&C 710"
+  description: "Issues twenty-eight through thirty of Knights of the Dinner Table\n  crammed between two covers!\n\n  Hey, that ain\'t all! This tome contains a total of 96 page of classic KODT"
+}
+title: "Bundle of Trouble: Volume Ten"
+subtitle: "A Compilation of Knights of the Dinner Table: Issues 28 Thru 30"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+}
+author {
+  name: "Johansson, Steve"
+}
+author {
+  name: "Kenzer, David S."
+}
+cover {
+  name: "Haley, Matt"
+}
+illustrator {
+  name: "Hahn, David"
+  job: "inks"
+}
+manager {
+  name: "Burke, Jennifer \'Jiffy\'"
+  job: "compiler"
+}
+date {
+  year: 2002
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: COMICS
+style: BOOKLET
+producer: "K&C"
+number: "Volume Ten"
+series: "Knights of the Dinner Table"
+price {
+  currency: "$ "
+  number: 1199
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

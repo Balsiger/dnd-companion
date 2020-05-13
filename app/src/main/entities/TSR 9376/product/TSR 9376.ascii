@@ -1,0 +1,76 @@
+template {
+  name: "TSR 9376"
+  synonym: "HR3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\emph{Celts}---from these powerful barbarians who rule \\Place{Europe} for\n                    ecnturies and challenged the might of \\Place{Rome} came the Druids, bards,\n                    and even the original legend of King \\NPC{Arthur}. They ranged from\n                    \\Place{Scotland} to \\Place{Greece} and from \\Place{Spain} to \\Place{Asia\n                    Minor}, trading, raiding, and establishing a culture that is still alive\n                    today. Join mighty heroes like the legendary \\NPC{Cu Chulainn} or the\n                    woman-warrior \\NPC{Boudicca} in wars against the \\Group{Romans} or the giant\n                    \\Group{Fomorians}, compete in feats of skill like chariot-jumping and\n                    spear-catching, or wander the half-world of the elflike \\Monster{sidhe}. The\n                    battle frenzy is strong and the call to war rings clear!"
+}
+title: "Celts"
+author {
+  name: "Davis, Graeme"
+}
+editor {
+  name: "Reid, Thomas M."
+}
+cartographer {
+  name: "Sullivan, Steve"
+}
+illustrator {
+  name: "Raup, Roger"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+date {
+  year: 1992
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "374"
+  check: 4
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: SOURCEBOOK
+style: SOFT_COVER
+producer: "TSR"
+number: "3"
+series: "Historical Reference"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

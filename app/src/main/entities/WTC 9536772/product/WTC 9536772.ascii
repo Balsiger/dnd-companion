@@ -1,0 +1,138 @@
+template {
+  name: "WTC 9536772"
+  world: "Generic"
+  description: "In ages past, those who wielded psionic power were ignored. Then, as folk\n                    witnessed firsthand their strange abilities, they were scorned and treated\n                    like outcasts. Over time, they have carved niches for themselves in\n                    society. Now you can rub shoulders with them at the local inn, trade with\n                    them in the bustling streets, and follow them on some great\n                    adventure. Psionic characters are everywhere, and your world is all the\n                    better for it.\n                    This companion to \\Product{Expanded Psionics Handbook} builds on the existing\n                    psionics rules and presents exciting new options for psionic characters and\n                    psionic \'dabblers\'. In addition to clarifying concepts introduced\n                    in\\Product{Expanded Psionics Handbook}, it presents three new standard\n                    classes---the \\Class{ardent}, the \\Class{erudite}, and the\n                    \\Class{lurk}---plus a host of new prestige classes, feats, spells, magic\n                    items, astral constructs, and organizations.\n                    The essential sourcebook for expanding the use of psionic power by any\n                    character.\n                    \\Product{Complete Psionic} provides new options for creating and playing rich\n                    psionic characters. Whether you\'re playing a devoted \\Class{psion} or\n                    \\Class{psionic warrior}, or a member of a psionic race, or are just looking\n                    to expand your character\'s options, this sourcebook has something for\n                    you. Players and Dungeon Masters gain access to new combat options, powers,\n                    equipment, and prestige classes, as well as exciting new character\n                    classes. \\Product{Complete Psionic} also provides new information on psionic\n                    organizations, and Dungeon Masters will find material for incorporating\n                    psionics into their campaign worlds."
+}
+title: "Complete Psionics"
+subtitle: "This You Know Everythin about Psionics? Think Again."
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Lindsay, Christopher"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "development team"
+}
+author {
+  name: "Thomasson, Chris"
+  job: "development team"
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+}
+editor {
+  name: "Lyons, Michelle"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Mimura, Raven"
+}
+cartographer {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Pendergraft, Ted"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+}
+illustrator {
+  name: "Jaques, Karin"
+}
+illustrator {
+  name: "Barnett, Dee"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director or RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3911"
+  check: 7
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Player\'s Guide"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handboo"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Expanded Psionics Handbook"
+layout: FULL_COLOR

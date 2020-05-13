@@ -1,0 +1,68 @@
+template {
+  name: "WTC 11830"
+  synonym: "WTC 88062"
+  world: "Generic"
+  description: "The town of \\NPC{Brindinford} is in the midst of its annual streetfair. Joy\n                    and merryment abound---until calamity disrupts the celebration. Are rival\n                    gangs responsible? Is the government sliding into tyranny? Or is a\n                    nightmarish plot about to come to fruition?\n                    \\Product[WTC 11830]{The Speaker in Dreams} is a stand-alone adventure for the\n                    Dungeon & Dragons game. Player characters are in for a wild ride in this\n                    river town. Leave the dungeon behind---the terrors lurking in\n                    \\Place{Brindinford} are more challenging by far!"
+}
+title: "Speaker in Dreams"
+leader: "The"
+subtitle: "Sinister forces terrorize a town"
+author {
+  name: "Wyatt, James"
+}
+editor {
+  name: "Moore, Roger E."
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+typographer {
+  name: "Dorries, Erin"
+}
+manager {
+  name: "Stark, Ed"
+}
+manager {
+  name: "Murin, Dawn"
+}
+manager {
+  name: "DeLong, Chas"
+}
+manager {
+  name: "Fischer, Josh"
+}
+manager {
+  name: "Floyd, Sherry"
+}
+date {
+  year: 2001
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1830"
+  check: 6
+}
+isbn13 {
+}
+pages: 32
+system: DND_3RD
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

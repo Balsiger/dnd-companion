@@ -1,0 +1,46 @@
+template {
+  name: "TSR 2159"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "Base rules for players."
+}
+title: "Player\'s Handbook"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+date {
+  year: 1995
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0329"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: ADND_REVISED
+audience: PLAYER
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+number: "I"
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}

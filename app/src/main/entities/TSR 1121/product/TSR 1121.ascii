@@ -1,0 +1,128 @@
+template {
+  name: "TSR 1121"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 218"
+  }
+  world: "Forgotten Realms"
+  description: "The Unapproachable East. Legendary region of unrivaled magic and profound\n                    mystery, the lands on the border of the \\Place{Endless Waste} have tantalized\n                    and captivated adventurers in the \\Place{Forgotten Realms} since word of\n                    their existence reached the west. Few have returned from travels in those\n                    lands, and those who did reveal tales too peculiar for truth---or so it was\n                    thought until now.\n                    Here at last are the secrets of three of the most mysterious---and\n                    dangerous---nations in all \\Place{Faer\\hat{u}n}: \\Place{Thay}, land of the\n                    treacherous \\Group{Red Wizards}; \\Place{Aglarond}, home to the unimaginably\n                    powerful \\NPC[The Simbul]{Simbul}; and \\Place{Rashemen}, realm of enigmatic\n                    Witches and wild berserkers. Adventurers beware: The treasures and excitement\n                    of the Unapproachable East invite the couragoues, yet strangers are never\n                    welcomed!\n                    The Spellbound Campaign Expansion boxed set contains:\n                    \\list\n                    {A 128-page \\emph{Campaign Guide} to the three countries, including\n                    city maps and unique sites, new character kits, spells, magical\n                    items, and major NPCs.}\n                    {Two 32-page adventures that immerse the PCs in the often-deadly power\n                    politics of the region. In \\emph{Throne of Deceit} the characters\n                    must defend \\Place{Rashemen} from a deadly invasion by \\Place[Thay]{Thayan}\n                    wizardry. \\emph{The Runes of Chaos} sends adventurers into the heart\n                    of \\Place{Thay} itself to foil the mad schemes of the would-be\n                    \\Place[Thay]{Thayan} conqueror \\NPC{Szass Tam}.}\n                    {A 16-page Monstrous Compendium booklet featuring twisted\n                    \\Place[Thay]{Thayan} creations, the unpredictable nature spirits of\n                    \\Place{Rashemen}, and faerie creatures from the depths of\n                    \\Place{Aglarond}\'s magical \\Place{Yuirwood}.}\n                    {Eight full-sized card sheets providing adventure hooks and encounter\n                    charts for three realms, useful DM information, and player aids for\n                    the adventures.}\n                    {Three full-color maps---two of the region, displaying greater detail\n                    than ever seen before, and one of \\Place{Eltabbar}, the capital city\n                    of \\Place{Thay}}"
+}
+title: "Spellbound: Thay, Rashemen, and Aglarond"
+author {
+  name: "Pryor, Anthony"
+}
+editor {
+  name: "Stewart, Douglas"
+}
+editor {
+  name: "Carter, Michele"
+}
+cover {
+  name: "Elmore, Larry"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+cover {
+  name: "Fields, Fred"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+typographer {
+  name: "Isler, Tracey L."
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Jacquays, Paul"
+  job: "graphic coordination"
+}
+manager {
+  name: "Ciske, Renee"
+  job: "cover design"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "production"
+}
+manager {
+  name: "Carter, Michele"
+  job: "proofreading"
+}
+manager {
+  name: "Wise, David"
+  job: "proofreading"
+}
+manager {
+  name: "Stewart, Douglas"
+  job: "proofreading"
+}
+date {
+  year: 1995
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0139"
+  check: 10
+}
+isbn13 {
+}
+pages: 208
+system: ADND_REVISED
+type: CAMPAIGN_EXPANSION
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Throne of Deceit"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Runes of Chaos"
+  number: 1073741824
+}
+content {
+  part: BOOK
+  description: "Campaign Guide"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Monstrous Compendium"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "card"
+  number: 8
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 3
+}

@@ -1,0 +1,18 @@
+template {
+  name: "DMA 000038"
+  synonym: "TSRGN01"
+  reference {
+    name: "complete product listing"
+  }
+  description: "Unknown"
+}
+title: "Counter Tray and Lid"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

@@ -1,0 +1,50 @@
+template {
+  name: "PZO 4052"
+  category: "map pack"
+  category: "map"
+  synonym: "Pathfinder Map Pack: Starship Corridors"
+  synonym: "Map Pack: Starship Corridors"
+  world: "Generic"
+  description: "What extraterrestrial dangers lurk just around the corners in this maze of high-tech passageways? This Pathfinder Map Pack provides stunningly crafted 5\" \303\227 8\" map tiles that can be positioned to form a variety of modular, customizable spaceship corridors, or combined with tiles from Pathfinder Map Pack: Starship Chambers to create an enormous starship interior. Inside, you\342\200\231ll find 18 richly crafted map tiles, including:\n\n\\list\n{Escape Pod}\n{Maintenance Alcove}\n{Sliding Doors}\n{Suspension Tubes}\n{Outer Airlock}\n[Containment Anteroom}\n{Disposal Hatch}\n{Utility Corridor}\n{Emergency Access}\n\nGame Masters shouldn\342\200\231t waste their time sketching maps every time adventurers confront the otherworldly. With Pathfinder Map Pack: Starship Corridors, you\342\200\231ll be ready whenever strangers come visiting from beyond!\n"
+  short_description: "Map tiles depicting starship corridors."
+}
+title: "Starship Corridors"
+subtitle: "Open the Pod Bay Doors!"
+cartographer {
+  name: "Engle, Jason"
+}
+date {
+  year: 2015
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "690"
+  check: 4
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Paizo"
+series: "Pathfinder Map Pack"
+series: "Map Pack"
+price {
+  currency: "$"
+  number: 1399
+  precision: 100
+}
+content {
+  part: BOX
+  description: "packaging"
+  number: 1
+}
+content {
+  part: MAP
+  description: "tile"
+  number: 18
+}
+layout: FULL_COLOR

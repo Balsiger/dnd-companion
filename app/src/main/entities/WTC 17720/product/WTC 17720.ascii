@@ -1,0 +1,57 @@
+template {
+  name: "WTC 17720"
+  world: "Dragonlance"
+  description: "\\Product{Dragon Day} continues a new series of \\Place{Dragonlance}\n  adventures written specifically for readers ages 10 and up. Sized to fit the\n  young reader market, the series features a new group of young companions who\n  band together for friendship and excitement during the golden age of the\n  \\Place{Dragonlance} world."
+}
+title: "Dragon Day"
+author {
+  name: "Brown, Stan"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3622"
+  check: 3
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Dragonlance The New Adventures"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

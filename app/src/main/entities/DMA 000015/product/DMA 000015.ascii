@@ -1,0 +1,22 @@
+template {
+  name: "DMA 000015"
+  reference {
+    name: "net price list"
+  }
+  description: "A comic strip collection."
+}
+title: "Finous Treasury"
+leader: "The"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 300
+  precision: 100
+}

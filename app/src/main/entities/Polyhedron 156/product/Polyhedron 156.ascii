@@ -1,0 +1,68 @@
+template {
+  name: "Polyhedron 156"
+  world: "Generic"
+  description: "March 2003 issue of polyhedron (together with Dungeon 97)."
+}
+title: "Polyhedron 156"
+subtitle: "V for Victory"
+author {
+  name: "Stan!"
+}
+author {
+  name: "Wilson, Johnny L."
+}
+author {
+  name: "Richards, Ian"
+}
+author {
+  name: "Redman, Rich"
+}
+author {
+  name: "Pramas, Chris"
+}
+editor {
+  name: "Mona, Erik"
+}
+cover {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Detwiler, Dennis"
+}
+illustrator {
+  name: "Hunter, Kyle"
+  job: "art direction"
+}
+date {
+  year: 2003
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 65
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "156"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+layout: FULL_COLOR

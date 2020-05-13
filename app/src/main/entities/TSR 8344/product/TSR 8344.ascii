@@ -1,0 +1,59 @@
+template {
+  name: "TSR 8344"
+  synonym: "WTC 86074"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "The tempestuous affair of \\NPC{Kitiara Uth Matar} and \\NPC{Tanis Half-Elven}\n  begins with the sword.\n\n  Life isn\'t simple for the hotheaded pair. They must contend with a\n  carnivorous, two-headed \\Monster{troll}; a deposed leader who believes\n  \\NPC{Kitiara} is the cause of the ruler\'s troubles; a vindictive \\Class{mage}\n  who seeks peculiar vengeance; and \\NPC{Kit}\'s hulking former lover. They also\n  meet a beautiful \\Class{magic}-user hiding a painful secret, and a\n  \\Monster{giant owl} with a sardonic sense of humor.\n\n  Here is the long-awaited story of the meeting of \\NPC{Tanis} and\n  \\NPC{Kitiara}, a tale of love, lust, betrayal, and revenge that takes the\n  reader through \\Place{Krynn} and south to the glacial \\Place{Icereach}.\n\n  Ellen Porath, co-author of \\Product{Kindred Spirits}, tells this exciting new\n  tale, the fifth in the \\Product{Dragonlance Saga Meetings Sextet}."
+}
+title: "Steel and Stone"
+subtitle: "Hate at First Sight"
+author {
+  name: "Porath, Ellen"
+}
+date {
+  year: 1992
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "339"
+  check: 6
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume V"
+series: "The Meetings Sextet"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

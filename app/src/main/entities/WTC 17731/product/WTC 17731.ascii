@@ -1,0 +1,32 @@
+template {
+  name: "WTC 17731"
+  world: "Real"
+  description: "The \\Product{MLB Showdown} sports card game is your ticket to the Major\n  Leagues, where you can be the manager of your own baseball team. First,\n  assemble and field your own all-star lineup. Then use real stats and\n  strategies to lead your squad to one nine-inning gem after another.\n\n  The \\Product{MLB Showdown 2002} booster packs come with 9 MLB Showdown\n  cards."
+}
+title: "MLB Showdown 2002 Booster Pack"
+date {
+  year: 2002
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7430"
+  title: "0551"
+  check: 1
+}
+isbn13 {
+}
+system: MLB_SHOWDOWN_2002
+audience: ALL
+type: BOOSTER_PACK
+style: PACK
+price {
+  currency: "$ "
+  number: 299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "MLB Showdown"
+  number: 9
+}

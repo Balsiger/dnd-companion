@@ -1,0 +1,78 @@
+template {
+  name: "TSR 9485"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "The infamous \\Item[The Sword of the Dales]{Sword of the Dales} has always\n                    held a certain fascination in the eyes and hearts of the citizens of the\n                    \\Place[Dales]{Dalelands}. Thus, it was not surprise when \\NPC{Randal Morn},\n                    revel leader of \\Place{Daggerdale}, led an expedition into the crypt of a\n                    long-dead wizard to recover the weapon.\n                    \\NPC{Shraevyn} the weapons-mage had created the \\Item[The Sword of the\n                    Dales]{Sword} long ago, and it stood to reason that the blade would be\n                    waiting within his tomb. Perhaps the \\Item[The Sword of the Dales]{Sword of\n                    the Dales} would allow \\NPC{Randal Morn} to rule \\Place{Daggerdale} once\n                    again. But \\NPC{Randal Morn} never returned from that fated party. Only tales\n                    of terror told by a lone survivor held any clues as to \\NPC[Randal\n                    Morn]{Randal}\'s fate. A brave band of heroes accomplished what \\NPC{Randal\n                    Morn}\'s group failed to do in part one of this trilogy, \\Product[TSR\n                    8484]{The Sword of the Dales}.\n                    Battling through the tomb\'s undead inhabitants, those heroes reached the\n                    burial crypt of \\NPC{Shraevyn}. There, resting in the center of the coffin,\n                    was the \\Item[The Sword of the Dales]{Sword of the Dales}, its azure glow\n                    filling the chamber. However, there was no sign of \\NPC{Randal Morn}.\n                    Only a note signed by his hand held any clue as to his fate. \'Seek me in\n                    \\Place[Spiderhaunt Woods]{Spiderhaunt}\', it proclaimed. \'The fate of\n                    \\Place{Daggerdale} is in your hands\'.\n                    This is the second of a trilogy of modules that began with \\Product[TSR\n                    9484]{The Sword of the Dales}. The saga concludes with \\Product[TSR\n                    9488]{The Return of Randal Morn}."
+}
+title: "Secret of Spiderhaunt"
+leader: "The"
+author {
+  name: "Butler, James"
+}
+editor {
+  name: "Lassieur, Allison"
+}
+cover {
+  name: "Eagle, Bruce"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Day, David"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Wise, David"
+  job: "project coordination"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Ciske, Renee"
+  job: "graphic design"
+}
+date {
+  year: 1995
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+number: "2"
+series: "Daggerdale"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,23 @@
+template {
+  name: "DMA 000063"
+  description: "3 miniatures and a portal mirror, one miniature just crossing it."
+}
+title: "Spiegel der Portale"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "Fenryll"
+price {
+}
+content {
+  part: MINIATURE
+  description: "plastic"
+  number: 3
+}

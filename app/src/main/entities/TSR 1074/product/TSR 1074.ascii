@@ -1,0 +1,40 @@
+template {
+  name: "TSR 1074"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "Create Dragonlance saga."
+}
+title: "Tales of the Lance"
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "338"
+  check: 8
+}
+isbn13 {
+}
+system: DND_1ST
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

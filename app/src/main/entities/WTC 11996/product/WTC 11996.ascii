@@ -1,0 +1,52 @@
+template {
+  name: "WTC 11996"
+  synonym: "WTC 88780"
+  world: "Wheel of Time"
+  description: "THE WHEEL TURNS AND NEW LEGENDS ARE BORN\n\nAs the Third Age unfolds, the tales of many heroes will be Woven\ninto the Great Pattern. While those stories have yet to be written,\nyour part in them is unmistakable. Whether a Maiden of the Spear\nor a Hunter for the Horn, Aes Sedai or Asha\'man, you are destined\nto join the struggle against Trollocs, Darkfriends, the Forsaken,\nand countless other evils revealed by the turning of the Wheel.\n\nFrom the Aryth Ocean to the Aiel Waste, the entire Wheel of Time series\nis covered in this complete, self-contained d20 System roleplaying game\napproved by Robert Jordan. This single volume contains statistics for all\nthe major characters, a unique system for channeling the One Power, feats,\nprestige classes, and everything else you\'ll need to make your visions\nbecome reality in Robert Jordan\'s world of epic fantasy.\n\nTake your place in the legends that have yet to be told."
+}
+title: "Wheel of Time Roleplaying Game"
+leader: "The"
+author {
+  name: "Ryan, Charles"
+}
+author {
+  name: "Steven Long"
+}
+author {
+  name: "Moore, Christian"
+}
+author {
+  name: "Owen K.C. Stephens"
+}
+cover {
+  name: "Robert Raper"
+}
+cover {
+  name: "Sweet, Darrell K."
+}
+cartographer {
+  name: "Mitchell, Ellisa"
+}
+date {
+  year: 2001
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1996"
+  check: 5
+}
+isbn13 {
+}
+pages: 317
+system: D20
+audience: ALL
+type: RULEBOOK
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 3395
+  precision: 100
+}

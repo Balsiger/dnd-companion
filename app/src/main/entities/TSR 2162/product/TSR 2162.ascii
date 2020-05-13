@@ -1,0 +1,45 @@
+template {
+  name: "TSR 2162"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 228"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "Ravenloft"
+  description: "\\bold{They lurk in the shadows.}\n                    \\bold{They linger in your dreams.}\n                    \\bold{They strike in the darkness.}\n                    They are the foul and horrible creatures that dwell in \\Place{Ravenloft}, the\n                    \\Place{Demiplane of Dread}, and they are waiting for you. From the\n                    dream-stalking \\Monster{bastellus} to the body-snatching\n                    \\Monster{doppleganger plant}, this horrific tome contains a great assortment\n                    of creatures that will haunt the nightmares of player characters for years to\n                    come. In addition, this book presents over 20 unique creatures, including the\n                    living brain of \\NPC{Rudolph Von Aubrecker} and the dreaded \\Monster{night\n                    hat} \\NPC{Styrx}, all of whom are perfect for use as master villans and\n                    NPCs.\n                    TSR is proud to present this compilation of diabolical beings fomr the first\n                    two Monstrous Compendium appendices dedicated to the \\Place{Ravenloft}\n                    campaign setting. First released in 1991 and 1993, these collections have\n                    been unavailable for some time, but always in demand. Now they\'re back---at a\n                    price that\'s lower than the combined price of the two earlier products. No\n                    \\Place{Ravenloft} campaign is complete without this book.\n                    \\bold{The time has come to return to your nightmares.}"
+}
+title: "Monstrous Compendium: Appendices I & II"
+date {
+  year: 1996
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0392"
+  check: 9
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+number: "Appendix I & II"
+series: "Monster Compendium"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

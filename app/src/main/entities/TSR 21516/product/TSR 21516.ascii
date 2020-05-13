@@ -1,0 +1,40 @@
+template {
+  name: "TSR 21516"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Dragonlance"
+  description: "sequel to Leaves from the Inn of the Last Hope"
+}
+title: "Leaves from the Inn of the Last Home"
+leader: "Volume Two"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+date {
+  year: 1999
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1516"
+  check: 1
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1999
+  precision: 100
+}

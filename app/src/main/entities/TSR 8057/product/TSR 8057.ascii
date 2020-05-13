@@ -1,0 +1,61 @@
+template {
+  name: "TSR 8057"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Ravenloft"
+  description: "On the fabled world of \\Place{Krynn}, \\NPC{Lord Soth} finally learns that there is a price to pay for his long history of evil deeds, a price even an \\Monster{undead} \\Class{warrior} might find horrifying.\n\nDark powers transport \\NPC{Soth} to \\Place{Barovia}, and there the death knight must face the dread minions of \\NPC{Count Strahn Von Zarovich}, the \\Monster{vampire} lord of the \\Place{nightmare land}. But with only a captive \\Monster{Vistani} woman and an untrustworthy \\Monster{ghost} for allies, \\NPC{Lord Soth} soon discovers that he may have to join forces with the powerful \\Monster{vampire} if he is ever to escape the realm of terror.\001\\Product{Knight of the Black Rose} is the second in an open-ended series of Gothic horror tales dealing with the masters and monsters of the \\Place{Ravenloft} dark fantasy setting."
+}
+title: "Knight of the Black Rose"
+author {
+  name: "Lowder, James"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+date {
+  year: 1991
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "156"
+  check: 3
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book Two"
+series: "Ravenloft Books"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+layout: BLACK_AND_WHITE

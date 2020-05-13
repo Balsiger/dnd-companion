@@ -1,0 +1,27 @@
+template {
+  name: "WTC 96266"
+  world: "None"
+  description: "Take the field with your own team of real MLB stars. You\'re the manager. You\n  name your starting lineup. You call the shots.\n\n  This MLB Showdown 2003 sports card game Starter Game is ready to play with 2\n  teams, so grab a friend and throw out the first pitch!"
+}
+title: "MLB Showdown 2003 Starter Game"
+date {
+  year: 2003
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7430"
+  title: "0670"
+  check: 4
+}
+isbn13 {
+}
+system: MLB_SHOWDOWN_2003
+audience: ALL
+type: CARDS_TYPE
+style: BOX
+price {
+  currency: "$ "
+  number: 999
+  precision: 100
+}

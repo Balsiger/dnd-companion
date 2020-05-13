@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9225"
+  synonym: "OP1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Tales of the Outer Planes"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

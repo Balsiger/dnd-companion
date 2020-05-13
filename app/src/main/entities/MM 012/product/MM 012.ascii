@@ -1,0 +1,68 @@
+template {
+  name: "MM 012"
+  description: "General dungeon accessories."
+}
+title: "Dungeon Accessories Set"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+producer: "Dwarven Forge"
+price {
+}
+content {
+  part: MINIATURE
+  description: "sleeping places"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "batch of pots"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "small bags"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "bags"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "bag pile"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "large crate"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "barrel"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "broken barrel"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "large bag pile"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "stack of crates"
+  number: 1073741824
+}

@@ -1,0 +1,45 @@
+template {
+  name: "TSR 2802"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Star*Drive"
+  description: "a 26th century campaign setting for the alternity game"
+}
+title: "Star*Drive"
+author {
+  name: "Eckelberry, David"
+}
+author {
+  name: "Richard Baker"
+}
+date {
+  year: 1998
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0738"
+  check: 10
+}
+isbn13 {
+}
+pages: 256
+system: ALTERNITY
+type: CAMPAIGN_SETTING
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}

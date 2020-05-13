@@ -1,0 +1,75 @@
+template {
+  name: "TSR 9369"
+  synonym: "FRQ2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\Place{Dragonspear Castle}. All who live within several hundred miles heard\n                    the name and know its import. Once home to the proud and brave, it stands now\n                    a ruin, cloaked behind a history of murder and diabolic plots. Few go there,\n                    for the only reward to be found is death.\n                    Rumors abound that \\Place{Dragonspear} holds a portal to the sinister planes,\n                    but until now those have been unfounded. Following a great battle against\n                    \\Monster{ords} and \\Place{trolls} from the \\Place{High Moor} who had taken\n                    possession of the castle, a temple to ward against further evil was\n                    established. However, by the \\Event{Time of Troubles}, that temple and its\n                    clergy had disappeared. Now, a horde of \\Monster{fiends} and monsters has\n                    amassed at \\Place{Dragonspear Castle}, and is terrorizing the surrounding\n                    countryside.\n                    The portal is active, that is for certain. The army of \\Place{Daggerford}\n                    needs reinforcements! Is your party made of the stuff of heroes?\n                    \\Product{Hordes of Dragonspear} can be played using either the\n                    \\Product{Battlesystem} miniatures rules, or the quick combat resolution\n                    system found in DMGR2, \\Place{The Castle Guide}. Alternatively, a few simple\n                    changes render the entire module playable without any special rules."
+}
+title: "Hordes of Dragonspear"
+author {
+  name: "Connors, William W."
+}
+editor {
+  name: "Phillips, C. Terry"
+}
+cover {
+  name: "Chaffee, Douglas"
+}
+cartographer {
+  name: "Beck, Steve"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1992
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "333"
+  check: 7
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

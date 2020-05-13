@@ -1,0 +1,133 @@
+template {
+  name: "WTC 9572972"
+  world: "Eberron"
+  description: "This supplement delves into the mysterious draconic Prophecy and various dragon-themed organizations. It explores the continent of \\Place{Argonnessen}, homeland of hte \\Monster{dragons}, and describes various new adventure sites. The book also investigates \\Monster{dragons}, on the continents of \\Place{Khorvaire}, \\Place{Sarlona}, and \\Place{Xen\'drik} and provides several ready-to-play \\Monster{dragons} for your campaign.\n\nInside this book, you\'ll find:\n\n\\list\n{A detailed exploration of \\Place{Argonnessen}, the great continent of the \\Monster{dragons}\n{Secrets of the draconic Prophecy, and guidelines on how to use it in your campaign}\n{Ready-to-play \\Monster{dragons}, complete with statistics, lairs, and adventure hooks}\n    "
+}
+title: "Dragons of Eberron"
+subtitle: "Like the Wings of a Great Dragon, The Prophecy Unfolds..."
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Gray, Scott Fitzgerald"
+}
+author {
+  name: "Logue, Nicolas"
+}
+author {
+  name: "Scott, Amber E."
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+editor {
+  name: "Noonan, David"
+  job: "editorial assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Prescott, Steve"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Riche, Darrell"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Shinkle, Allison"
+  job: "image technician"
+}
+typographer {
+  name: "Dorir"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "freelance manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Walker, Kris"
+  job: "production manager"
+}
+manager {
+  name: "Overbay, Shari"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4154"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4154"
+  check: 4
+}
+pages: 160
+system: DND_3_5
+type: CAMPAIGN_EXPANSION
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 86400"
+required_requirements: "WTC 17755"
+layout: FULL_COLOR

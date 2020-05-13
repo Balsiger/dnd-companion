@@ -1,0 +1,112 @@
+template {
+  name: "DMA 000081"
+  world: "Generic"
+  description: "Introduce extra depth to your role-playing experience with \\Product[DMA 000081]{Campaign Coins} --- the universal RPG and LARP money system.\n\nCampaign Coins provides you with high quality, \'real feel\' game money using actual metal coins to represent the various denominations commonly found in popular gaming systems. With numerous coins representing larger amounts, its easy to replicate even the grandest loot such as a dragons hoard!\n\nSo much more immersive than conventional \'pen & paper\' recording of your hard earned loot, Campaign Coins creates more opportunities for immersive role-playing as you actually hand over coin at a tavern, when bribing a town\'s guard to look the other way or paying passage to the next exotic port!\n\n\\bold{Game Masters}, reward your players with cold hard coin after an epic battle or the plundering of a long lost tomb!\n\n\\bold{Players}, equip yourself with a belt pouch and guard your precious gold!"
+  short_description: "\'Real Feel\' game money using actual metal coins."
+}
+title: "Campaign Coins"
+subtitle: "Treasure Worthy of Your Greatest Adventure!"
+date {
+  year: 2007
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: ACCESSORY
+style: MEDIUM_BOX
+producer: "King of the Castle"
+price {
+  currency: "$"
+  number: 6500
+  precision: 100
+}
+content {
+  part: COUNTER
+  description: "1 gp piece"
+  number: 10
+}
+content {
+  part: COUNTER
+  description: "10 gp piece"
+  number: 10
+}
+content {
+  part: COUNTER
+  description: "100 gp piece"
+  number: 5
+}
+content {
+  part: COUNTER
+  description: "1000 gp piece"
+  number: 5
+}
+content {
+  part: COUNTER
+  description: "1 pp piece"
+  number: 10
+}
+content {
+  part: COUNTER
+  description: "10 pp piece"
+  number: 10
+}
+content {
+  part: COUNTER
+  description: "100 pp piece"
+  number: 5
+}
+content {
+  part: COUNTER
+  description: "1000 pp piece"
+  number: 5
+}
+content {
+  part: COUNTER
+  description: "1 sp piece"
+  number: 10
+}
+content {
+  part: COUNTER
+  description: "10 sp piece"
+  number: 10
+}
+content {
+  part: COUNTER
+  description: "100 sp piece"
+  number: 5
+}
+content {
+  part: COUNTER
+  description: "1000 sp piece"
+  number: 5
+}
+content {
+  part: COUNTER
+  description: "1 cp piece"
+  number: 10
+}
+content {
+  part: COUNTER
+  description: "10 cp piece"
+  number: 10
+}
+content {
+  part: COUNTER
+  description: "100 cp piece"
+  number: 5
+}
+content {
+  part: COUNTER
+  description: "1000 cp piece"
+  number: 5
+}
+content {
+  part: COUNTER
+  description: "random 500 piece"
+  number: 1
+}
+layout: FULL_COLOR

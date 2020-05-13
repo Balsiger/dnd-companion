@@ -1,0 +1,45 @@
+template {
+  name: "PZO IMP"
+  world: "Generic"
+  description: "Each monster is a silhouette design in thin clear acrylic (25mm/1-inch scale). These are perfect for showing when your monsters are invisible on the map?no more reminders of \'That monster is still invisible!\' With ten different monster types represented there is sure to be one to use as a proxy for whatever you are throwing at the adventurers.\n\nSet of 10 different monster types:\n\n\\list\n{\\Monster{Fey} (small)}\n{\\Monstesr{Fiend} (small)}\n[Quadruped (medium)}\n{\\Monster{Wraith} (medium)}\n{\\Monster{Genie} (medium)}\n{Wispy-humanoid (medium)}\n{Serpentine (medium)}\n{Monster-humanoid (medium)}\n{\\Monster{Spider} (medium)}\n{Mist (large)}\n\nAssembly required."
+  short_description: "A set of 10 different monster stand-ins for invisibility."
+}
+title: "Invisible Monster Pack"
+subtitle: "You Won\'t See Me Coming!"
+author {
+}
+editor {
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2011
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: SMALL_BOX
+producer: "Paizo"
+series: "GameMastery"
+price {
+  currency: "$ "
+  number: 999
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "invisible stand-in"
+  number: 10
+}
+layout: FULL_COLOR

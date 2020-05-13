@@ -1,0 +1,38 @@
+template {
+  name: "TSR 9147"
+  synonym: "T1-4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Greyhawk"
+  description: "from the little village of Hommlet to the dephs of the Temple, levels 1-8"
+}
+title: "Temple of Elemental Evil"
+author {
+  name: "Gygax, E. Gary"
+}
+author {
+  name: "Mentzer, Frank"
+}
+date {
+  year: 1985
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "018"
+  check: 7
+}
+isbn13 {
+}
+pages: 144
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

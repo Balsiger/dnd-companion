@@ -1,0 +1,123 @@
+template {
+  name: "TSR 2140"
+  synonym: "MCC1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Generic"
+  description: "Need a monster? Look inside, where more than 300 new pieces of full color\n                    art show that the monsters really look like!\n                    This book contains more than 600 monsters including all the creatures from\n                    the \\Product{Monstrous Compendium Volumes 1} and \\Product{2}! In addition,\n                    there are monsters from the other Monstrous Compendium Volumes, and some\n                    creatures never seen in the second edition AD&D Game before.\n                    Entries have be reorganized, corrected, updated, and full cross-referenced,\n                    to make this most valuable monster reference ever!"
+}
+title: "Monstrous Manual"
+author {
+  name: "Beach, Tim"
+}
+author {
+  name: "Stewart, Doug"
+}
+author {
+  name: "Henson, Slade"
+}
+author {
+  name: "Reid, Thomas"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Pickens, John"
+}
+author {
+  name: "Rateliff, John"
+}
+editor {
+  name: "Stewart, Doug"
+}
+editor {
+  name: "O\'Keefe, Gaye"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Butler, Jeff"
+}
+illustrator {
+  name: "Simons, Dave"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Dorscheid, Les"
+}
+illustrator {
+  name: "Beach, Tim"
+}
+illustrator {
+  name: "Stewart, Doug"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Beach, Tim"
+  job: "art coordination"
+}
+date {
+  year: 1993
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 384
+system: ADND_2ND
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+number: "3"
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

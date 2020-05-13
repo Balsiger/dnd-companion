@@ -1,0 +1,50 @@
+template {
+  name: "TSR 8367"
+  synonym: "WTC 86635"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "At eighteen, \\NPC{Maquesta Kar-Thon} has just volunteered to captain the\n  \\Item{Perechon} for a quest with a high stake -- her father\'s life.\n\n  The \\Monster{minotaur} lord \\NPC{Attat} has giver her father a slow-acting\n  poison, and is withholding the antidote until \\NPC{Maq} captures the deadly\n  sea monster \\Monster{Morkoth} for his private zoo. To accompany her on this\n  voyage, \\NPC{Attat} sends along the renegade \\Monster{minotaur} \\NPC{Bas\n  Ohn-Koraf} and a \\Monster{shadowperson} \\Class{warrior}, \\NPC{Ilyatha}.\n\n  As the \\Item{Perechon} races to complete its quest, it is beset by pirates,\n  attacked by \\Monster{Blood Sea imps}, and tangles with\n  \\Monster{kuo-toa}. \\NPC{Maq} must not only fight these enemies but prove\n  herself to the \\Item{Perechon} crew.\n\n  Through it all, the image of her dying father bears down on her.\n\n  \\Product{The Warriors} series details the exploits of the heroes and villains\n  of the \\Event{War of the Lance}."
+}
+title: "Maquesta Kar-Thon"
+author {
+  name: "Daniell, Tina"
+}
+author {
+  name: "Rabe, Jean"
+}
+date {
+  year: 1995
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0134"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume 2"
+series: "Warriors Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

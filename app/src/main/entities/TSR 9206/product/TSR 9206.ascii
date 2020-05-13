@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9206"
+  synonym: "C6"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Official RPGA Tournament Handbook"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

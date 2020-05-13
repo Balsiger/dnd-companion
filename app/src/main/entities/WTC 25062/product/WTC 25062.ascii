@@ -1,0 +1,47 @@
+template {
+  name: "WTC 25062"
+  world: "Generic"
+  description: "Select the exact figure that best matches your player character with Player\'s Handbook Heroes. This package includes 3 player character figures and 3 unique power cards featuring brand-new class powers."
+  short_description: "Player\'s Handbook Heroes, Divine Characters 3"
+}
+title: "Divine Characters 3"
+subtitle: "Only Your Character Can Become a Hero"
+date {
+  year: 2009
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5296"
+  check: 2
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5296"
+}
+system: DND_4
+audience: PLAYER
+type: MINIATURE
+style: SMALL_BOX
+producer: "WTC"
+number: "Divine Characters 3"
+series: "Player\'s Handbook Heroes"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "player character"
+  number: 3
+}
+content {
+  part: CARD
+  description: "class power"
+  number: 3
+}
+layout: FULL_COLOR

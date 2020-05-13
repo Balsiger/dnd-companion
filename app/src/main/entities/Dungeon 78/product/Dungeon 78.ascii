@@ -1,0 +1,144 @@
+template {
+  name: "Dungeon 78"
+  world: "Generic"
+  description: "This is issue 78 of the dungeon magazine."
+}
+title: "Dungeon 78"
+author {
+  name: "Selinker, Mike"
+}
+author {
+  name: "Hopkins, Peter R."
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Carpenter, Jeffrey P."
+}
+author {
+  name: "Leati, Tito"
+}
+author {
+  name: "Klauk, Stephen C."
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistant editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "Despain, Brian"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Perkins, Christopher"
+}
+cartographer {
+  name: "Ciske, Renee"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "McConnel, Sean"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Collins, Michael"
+}
+illustrator {
+  name: "Rawles, Fred"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Heft, Rebecca"
+  job: "circulation assistant"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "ad traffic manager"
+}
+date {
+  year: 2000
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 104
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XIII 6"
+number: "78"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

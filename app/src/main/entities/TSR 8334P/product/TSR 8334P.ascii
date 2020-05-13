@@ -1,0 +1,46 @@
+template {
+  name: "TSR 8334P"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "\\emph{But, the beast-man, scorned and hunted, knows,\n\n  Without honor there is nothing, not even death.\n\n  So, driven by the only \\Monster{ghosts} that matter, \\NPC{Huma} and himself,\n  \\NPC{Kaz} alone faces the scourge.}\n\n  After the defeat of the \\God{Dark Queen} and the death of \\NPC{Huma\n  Dragonbane}, the most famous of the \\Group{Knights of Solamnia}, \\NPC{Kaz},\n  the renegade \\Monster{minotaur}, wanders throught \\Place{Krynn}, telling the\n  true tale of the land\'s most legendary hero, stalked by his enemies -- a\n  haunted soul, an outcast, a hero. But when \\NPC{Kaz} hears rumors of evil\n  incidents, he returns to warn the \\Group{Knights of Solamnia} -- and is\n  plunged into a dark nightmare of magic, danger and deja-vu."
+}
+title: "Kaz the Minotaur"
+author {
+  name: "Knaak, Richard A."
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "910"
+  check: 9
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Volume IV"
+series: "Heroes Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

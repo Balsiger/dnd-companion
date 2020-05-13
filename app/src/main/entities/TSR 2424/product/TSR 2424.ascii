@@ -1,0 +1,57 @@
+template {
+  name: "TSR 2424"
+  synonym: "DSM3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Dark Sun"
+  description: "two cities engaged im a never-ending war, levels 5-8"
+}
+title: "Marauders of Nibenay"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1993
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "677"
+  check: 8
+}
+isbn13 {
+}
+pages: 112
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "spiral-bound filp-books"
+  number: 2
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

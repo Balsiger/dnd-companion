@@ -1,0 +1,18 @@
+template {
+  name: "DMA 000041"
+  synonym: "TSRGN13"
+  reference {
+    name: "complete product listing"
+  }
+  description: "Unknown"
+}
+title: "Numbered Hex Grid Paper"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

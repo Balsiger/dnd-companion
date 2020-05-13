@@ -1,0 +1,38 @@
+template {
+  name: "WTC 11836"
+  synonym: "WTC 88236"
+  world: "Forgotten Realms"
+  description: "\\large{Dark perils and great deeds await}\n                    Welcome to \\Place{Faer\\hat{u}n}, a land of high magic, terrifying monsters,\n                    ancient ruins, and hidden wonders. From the forbidding forests of the\n                    \\Place{Silver Marches} to the teeming cities of the \\Place{Inner Sea},\n                    \\Place{Faer\\hat{u}n} encompasses shining kingdoms, monster-infested wastes,\n                    endless caverns, and sinister citadels. The \\Place{Forgotten Realms}\n                    \\Product[WTC 11836]{Campaign Setting} presents the most comprehensive fantasy\n                    world ever described!\n                    This book contains all the details you need to play Dungeon & Dragons\n                    adventures in the \\Place{Forgotten Realms} \\Product[WTC 11836]{setting}:\n                    \\list\n                    {A new full-color poster map of \\Place{Faer\\hat{u}n}.}\n                    {Dozens of new races, feats, and prestige classes for your characters.}\n                    {The \\Place[Faer\\hat{u}n]{Faer\\hat{u}nian} pantheon, including over 100\n                    deities and powers.}\n                    {Highly detailed regions, new monsters, mysterious sites, and two short\n                    adventures to begin your campaign.}\n                    The \\Place{Forgotten Realms} \\Product[WTC 11836]{Campaign Setting} is fully\n                    updated and redesigned for the new edition of the D&D game. To make full use\n                    of this book, you also need the D&D \\Product[TSR 11550]{Player\'s Handbook},\n                    \\Product[TSR 11551]{Dungeon Master\'s Guide}, and \\Product[TSR 11552]{Monster\n                    Manual}."
+}
+title: "Forgotten Realms Campaign Setting"
+date {
+  year: 2001
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1836"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: DND_3RD
+type: CAMPAIGN_SETTING
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 5595
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

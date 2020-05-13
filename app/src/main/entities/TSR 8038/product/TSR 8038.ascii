@@ -1,0 +1,45 @@
+template {
+  name: "TSR 8038"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "\\NPC{Teldin Moore} has gone from \'dirtkicker\' to spacefarer, from farmer to\n  soul searcher, from muleskinner to captain in an \\Monster[elf]{elven}\n  \\Group{Imperial Fleet}, from outcast to political magnet. Now, in\n  \\Product{The Ultimate Helm}, \\NPC{Teldin Moore} discovers the key to his\n  destiny, the great ship \\Item{Spelljammer} itself. He battles to control the\n  vessel amid the myriad plots of its inhabitants. Political intrigue mixes\n  with colossal forces for an explosive ending to the \\Product{Cloakmaster\n  Cycle}. \\NPC{Teldin} grapples with the choice of taking the ship\'s helm, and\n  his decision could rend the bonds of fantasy space forever.\n\n  \\Product{The Ultimate Helm}, set in the \\Place{Spelljammer} fantasy universe,\n  is the sixth and final book in the \\Product{Cloakmaster Cycle} of\n  \\Place{Spelljammer} space fantasy novels from TSR, Inc."
+}
+title: "Ultimate Helm"
+leader: "The"
+author {
+  name: "Howard, Russ T."
+}
+cover {
+  name: "Scott, Michael"
+}
+date {
+  year: 1993
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "651"
+  check: 4
+}
+isbn13 {
+}
+pages: 307
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Six"
+series: "Cloakmaster Cycle"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

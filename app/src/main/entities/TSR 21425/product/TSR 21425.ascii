@@ -1,0 +1,33 @@
+template {
+  name: "TSR 21425"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "M:TG Strategy Guide"
+}
+title: "Official Starter Game Guide"
+author {
+  name: "Herndon, Cory J."
+}
+date {
+  year: 1999
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1425"
+  check: 4
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1199
+  precision: 100
+}

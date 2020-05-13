@@ -1,0 +1,105 @@
+template {
+  name: "WTC 9539474"
+  world: "Forgotten Realms"
+  description: "Shadows in the forest deepen as an oracle among the \\Place{Yuirwood}\'s\n                    \\Monster{half-elf} inhabitants foretells the reemergence of the\n                    \\NPC{Duskwalker}, an ancient and corrupt star \\Monster{elf}\n                    \\Class{wizard}. Missing travelers and lost goods all point to a circle of\n                    standing stones within the forest. Perhaps, like its counterparts elsewhere\n                    in the \\Place{Yuirwood}, this stone henge allows for travel to another\n                    place---but where? And what growing darkness awaits those bold enough\n                    to find out?\n                    \\Product{The Twilight Tomb} is a stand-alone DUNGEONS & DRAGONS adventure\n                    designed to take four 3rd-level characters from the sun-dappled paths of the\n                    \\Place{Yuirwood} into a realm created by a bygone betrayal. Although the\n                    adventure is set in the \\Place{Aglarond} region of \\Place{Faer\\hat{u}n}, it\n                    can easily be placed in any D&D campaign."
+}
+title: "Twilight Tomb"
+leader: "The"
+subtitle: "Stand Against the Coming Night"
+author {
+  name: "Vaugha, Greg A."
+}
+author {
+  name: "Perkins, Christopher"
+  job: "developer"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Sims, Chris"
+  job: "editorial assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Foster, Jon"
+}
+cartographer {
+  name: "Hill, Johnathan"
+}
+illustrator {
+  name: "Mariano, Marvin"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3947"
+  check: 8
+}
+isbn13 {
+}
+pages: 32
+system: DND_3_5
+type: ADVENTURE
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Forgotten Realms Campaign Setting"
+layout: COLOR_COVER

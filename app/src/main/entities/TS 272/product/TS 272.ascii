@@ -1,0 +1,32 @@
+template {
+  name: "TS 272"
+  synonym: "Dungeon Door Markers, Medium"
+  world: "Generic"
+  description: "Markers for brown warhorse mounts."
+  short_description: "Markers for brown warhorse mounts."
+}
+title: "Medium Dungeon Door Markers"
+subtitle: "Markers"
+date {
+  year: 2013
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "Litko"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "medium dungeon door"
+  number: 5
+}
+layout: FULL_COLOR

@@ -1,0 +1,97 @@
+template {
+  name: "WTC 88157"
+  world: "Generic"
+  description: "Check your target and open fire. Inside, you\'ll find a fully illustrated\n  arsenal ranging from pistols and submachine guns to grenade launchers and\n  antimateriel rifles. The \\Product{d20 Modern Weapons Locker} provides\n  detailed descriptions and statistics for each firearm to make sure the\n  characters of any d20 Modern roleplaying game are packing the right gun for\n  the job.\n\n  To use this product, you also need the \\Product{d20 Modern Roleplaying Game}\n  core rulebook. For players and Gamemasters, this product is compatible with\n  other d20 System roleplaying games."
+}
+title: "Weapons Locker"
+subtitle: "Lock and Load, then Rock and Roll"
+author {
+  name: "Potter, Keith"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "additional design"
+}
+author {
+  name: "Redman, Rich"
+  job: "additional design"
+}
+author {
+  name: "Rosenberg, Ross"
+  job: "additional design"
+}
+author {
+  name: "Vortisch, Hans-Christian"
+  job: "additional design"
+}
+editor {
+  name: "Nagasawa, Katsuyo"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+editor {
+  name: "Ryan, Charles"
+  job: "managing editor"
+}
+cover {
+  name: "Wight, Joe"
+}
+illustrator {
+  name: "Chatterjee, Eric"
+}
+illustrator {
+  name: "Martin, N. David"
+}
+illustrator {
+  name: "Potter, Keith"
+}
+illustrator {
+  name: "Stewart, Richard"
+}
+illustrator {
+  name: "Wight, Joe"
+}
+typographer {
+  name: "Raper, Robert"
+  job: "graphic design"
+}
+typographer {
+  name: "Cheung, Carmen"
+  job: "digital production specialist"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director RPG R&D"
+}
+manager {
+  name: "Fischer, Joshua CJ"
+  job: "Production Manager"
+}
+date {
+  year: 2004
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3132"
+  check: 9
+}
+isbn13 {
+}
+pages: 192
+system: D20_MODERN
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

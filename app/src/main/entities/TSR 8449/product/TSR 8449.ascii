@@ -1,0 +1,35 @@
+template {
+  name: "TSR 8449"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "a collection of the best cover art from AD&D and D&D products"
+}
+title: "Art of the D&D Fantasy Game"
+leader: "The"
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "161"
+  check: 2
+}
+isbn13 {
+}
+system: DND_1ST
+audience: ALL
+type: SPECIAL_BOOK
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}

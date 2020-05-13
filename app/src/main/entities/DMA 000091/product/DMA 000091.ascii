@@ -1,0 +1,129 @@
+template {
+  name: "DMA 000091"
+  world: "Forgotten Realms"
+  description: "You awaken in an underground cell, stripped of your armour and your sword. Your fellow prisoners inform you that you\'re trapped in the \\Place{Underdark}, soon to be taken to the great \\Monster{drow} city of \\Place{Mezoberranzan} and sold off as a slave! But word is that \\Monster{demon}s are stirring in the underworld\'s depth, and maybe you can use that to break free..."
+  short_description: "Choose the path of the story."
+}
+title: "Escape the Underdark"
+subtitle: "Prisoner of the Drow!"
+author {
+  name: "Forbeck, Matt"
+}
+author {
+  name: "Crazy Monkey Creative"
+  job: "design"
+}
+author {
+  name: "Bellwood, Rosie"
+  job: "design"
+}
+editor {
+  name: "Walters, Kirsty"
+}
+cover {
+  name: "Belisle, Eric"
+}
+cover {
+  name: "Henriquez, Ilich"
+}
+cover {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Briclot, Aleksi"
+}
+illustrator {
+  name: "Syme, Bryan"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Sheppard, Cynthia"
+}
+illustrator {
+  name: "Hueso, David"
+}
+illustrator {
+  name: "Hekaton, E.W."
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Ortiz, Hector"
+}
+illustrator {
+  name: "Henriquez, Ilich"
+}
+illustrator {
+  name: "Blando, Jared"
+}
+illustrator {
+  name: "Sandner, Jasper"
+}
+illustrator {
+  name: "Chevrier, Jedd"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Burley, Sam"
+}
+illustrator {
+  name: "Fischer, Scott M."
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+date {
+  year: 2018
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "78741"
+  title: "051"
+}
+pages: 124
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+series: "Endless Quest"
+price {
+  currency: "$"
+  number: 1699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

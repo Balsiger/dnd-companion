@@ -1,0 +1,47 @@
+template {
+  name: "WTC A9605"
+  category: "screen"
+  category: "aid"
+  synonym: "DM Screen"
+  world: "Generic"
+  description: "This durable, four-panel Dungeon Master\'s screen lavishly adorned with illustrations inside and out, will enchant and inspire players and Dungeon Masters alike.\n\nThe screen\'s landscape orientation allows the Dungeon Master to easily see beyond the screen and reach over it, even as it keeps die rolls and notes hidden from players. Tables on the inside provide essential support for the three pillars of play - combat, exploration, and social interaction - to Dungeon Masters of all skill levels.\n\n\\em{The outside of the screen features an epic scene illustrated by Craig Spearing, depicting the \\Monster{red dragon} \\NPC{Thraxata the Flamefiend} and her \\Monster{kobold} minions confronting a party of intrepid adventurers. The group\'s ranger tries to finish the fight with a legendary \\Item{arrow of dragon slaying} meant specificially for this \\Monster{wyrm}.}"
+  short_description: "Dungeon Master\'s screen for 5th edition."
+}
+title: "Dungeon Master\'s Screen"
+subtitle: "Rise to the Challenge"
+cover {
+  name: "Spearing, Craig"
+}
+date {
+  year: 2015
+  month: 1
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6464"
+  check: 2
+}
+system: DND_NEXT
+type: ACCESSORY
+style: FOLDER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "packaging"
+  number: 1
+}
+content {
+  part: GATEFOLD
+  description: "screen"
+  number: 1
+}
+layout: FULL_COLOR

@@ -1,0 +1,49 @@
+template {
+  name: "DSP 203"
+  world: "None"
+  description: "Release your inner nerd with \\Product{Dork Covenant}, the first collection\n  of the hilarious, critically acclaimed fan-favorite Dork Tower comic book!\n  From dragon-filled dungeons to star treks, from comic book conventions to\n  internet naughtiness, Dork Tower is the comic that put the \'cult\' back into\n  sub-culture! So join Matt, Igor, Ken, Gilly the Perky Goth and Carson the\n  Muskrat in their uproariously dorky adventures!"
+}
+title: "Dork covenant"
+subtitle: "It\'s All Geek to Me!"
+author {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Reed, Phil"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Williams, Aaron"
+  job: "interior design and layout"
+}
+date {
+  year: 2002
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "930964"
+  title: "40"
+  check: 4
+}
+isbn13 {
+}
+pages: 160
+system: SPECIAL
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "Dork Storm Press"
+number: "Volume I"
+series: "The Collected Dork Tower"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

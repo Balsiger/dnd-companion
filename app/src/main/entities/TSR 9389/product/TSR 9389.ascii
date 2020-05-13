@@ -1,0 +1,73 @@
+template {
+  name: "TSR 9389"
+  synonym: "FRM1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "Come, all ye seekers after treasure beyond your ken and adventure greater\n                    than any you can dream!\n                    Come, all ye mighty warriors, seekers after prey worthy of your peerless\n                    skills, and stalk the \\Group{Children of Ubtao}. Walk the streets of\n                    the city of \\Place{Mezro}, of the \\Place[Mezro]{Maze of Life}. Meet the\n                    \\Group[Barae]{barae}, the holy warriors of \\God{Ubtao}, those men and women\n                    who will live forever sustained by their wisdom and their faith.\n                    Wizards, be prepared for new magical spells and new methods of magic use\n                    based on gemstones.\n                    Search the jungles of \\Place{Chult} for the fabled emerald mines, for the\n                    \\Item{Heart of the Jungle}, a single gem as large as a man\'s heart.\n                    Also within these pages are new monsters and new character kits: Mage\n                    hunters, specialty priests of \\God{Ubtao}, and spiritlords.\n                    This adventure is designed for 6 to 8 characters of levels 5 to 8."
+}
+title: "Jungles of Chult"
+leader: "The"
+author {
+  name: "Lowder, James"
+}
+author {
+  name: "Rabe, Jean"
+}
+editor {
+  name: "Haring, Scott"
+}
+cover {
+  name: "Ruppel, Robh"
+}
+cartographer {
+  name: "Beck, Steve"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+date {
+  year: 1993
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9201"
+  synonym: "I12"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Egg of the Phoenix"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

@@ -1,0 +1,35 @@
+template {
+  name: "WTC 17763"
+  world: "None"
+  description: "\\NPC{Carmen Bernstein} feels like she\'s become invisible. Her dad recently\n                    got re-married, and now he\'s very involved with his \'new and improved\'\n                    family: stepdaughter Riley, an ultra popular cheerleader, and stepson\n                    Sam. Then one day, while snooping on her Dad\'s PocketPC, Carmen sees a\n                    message telling her to make up a crazy cheer. HUH?! Carmen doesn\'t know\n                    anything about cheerleading. In fact, she hates Riley and her cheerleading\n                    friends. But in a moment of desperation, Carmen gives the silly cheer a\n                    try... and discovers something she never expected."
+}
+title: "Carmen Dives In"
+subtitle: "Make up a cheer using the words dive, goat, and processed cheese. Would you dare?"
+author {
+  name: "Johns, Linda"
+}
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3714"
+  check: 9
+}
+isbn13 {
+}
+pages: 144
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 2"
+series: "Star Sisterz"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

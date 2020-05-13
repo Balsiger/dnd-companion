@@ -1,0 +1,45 @@
+template {
+  name: "WTC 17991"
+  world: "Forgotten Realms"
+  description: "When family turns on family, it\'s business as usual in \\Place{Arrabar}, but\n                    when family turns on itself, an entire nation may be torn asunder.\n                    The Scions of Arrabar\n                    Heirs to a legacy of blood and steel struggle for control of a nation of\n                    mercenaries at odds with its neighbors and at war with itself."
+}
+title: "Sapphire Crescent"
+leader: "The"
+subtitle: "A mercenary order sworn to defend a god, but bent to the will of mortals."
+author {
+  name: "Reid, Thomas M."
+}
+cover {
+  name: "Myers, Duane O."
+}
+illustrator {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2003
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3027"
+  check: 6
+}
+isbn13 {
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "Scions of Arrabar Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

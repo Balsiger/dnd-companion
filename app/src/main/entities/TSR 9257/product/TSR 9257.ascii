@@ -1,0 +1,82 @@
+template {
+  name: "TSR 9257"
+  synonym: "OA6"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "It begins as a simple martial arts tournament. Sure, your skills are tested\n                    and you might even win a trophy---or learn a lesson or two. But it\'s still\n                    just a tournament...\n                    Until someone starts playing for keeps.\n                    When a traitor to the empire is revealed, His Excellency calls loyal and\n                    heroic citizens to follow the trail of deception. The scale of the treachery\n                    is grand---it seems that an entire army has turned its back on its rightful\n                    liege!\n                    The trail leads through trackless (or seemingly trackless) mountains, into\n                    peaceful (or seemingly peaceful) valleys. The emperor has promised great\n                    rewards to heroes who can solve his mystery, but as the journey progresses\n                    the heroes find their own reasons for continuing.\n                    As a sinister suspicion grows in the minds, the adventure reaches its climax\n                    in the ruins of an ancient civilization. Finally, our heroes are faced with\n                    an ultimate choice---between success and failure, loyalty and betrayal, even\n                    good and evil.\n                    On their choice rests the future of nations."
+}
+title: "Ronin Challenge"
+author {
+  name: "Smith, Curtis"
+}
+author {
+  name: "Swan, Rick"
+}
+editor {
+  name: "Pickens, Jon"
+}
+editor {
+  name: "Winter, Steve"
+}
+cover {
+  name: "Holloway, Jim"
+}
+cartographer {
+  name: "Sullivan, Steve"
+}
+cartographer {
+  name: "Smith, Curtis"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "749"
+  check: 1
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Oriental Adventures"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

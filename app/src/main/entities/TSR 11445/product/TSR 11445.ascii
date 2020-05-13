@@ -1,0 +1,39 @@
+template {
+  name: "TSR 11445"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Generic"
+  description: "\\large{Three Game Systems\n                    Seven Adventures on Seven Worlds\n                    A plethora of challenges for the boldest heroes of them all}\n                    This compilation of adventures from TSR\'s popular Adventurers Guild program\n                    brings together adventures from the \\Product{Forgotten Realms},\n                    \\Product{Greyhawk}, \\Product{Planescape}, and \\Product{Ravenloft} campaign\n                    settings, the \\Product{Dragonlance: Fifth Age} campaign setting (using the\n                    SAGA game rules), \\Product{The Illithiad} \\Product{Monstrous Arcana}\n                    sourcebook, and the \\Product{Alternity} science fiction roleplaying game.\n                    \\list\n                    {Take on the \\Group{Cult of the \\Monster{Dragon}} and their undead\n                    \\Monster{dragon} servitors!}\n                    {Join a band of \\Monster{githzerai}\'s pursuit of their mortal foes,\n                    the \\Monster{mind flayers} of \\Place{Kawarlenaa}!}\n                    {Help a rogue \\Monster{tanar\'ri} hunt the \\NPC{Jabberwock} with a\n                    \\Item{vorpal sword}!}\n                    {Struggle with a master \\Monster{vampire} and \\NPC{The Whistling Fiend}\n                    for the \\Item{Key to the \\Place{Abyss}}!}\n                    {Defy the great \\Monster{sea dragon} \\NPC{Brine} in an undersea quest\n                    for the good folk of \\Place{Port Balifor}!}\n                    {Engage in a game of \'capture the flag\' with bizarre aliens, while the\n                    fate of an entire world hinge on the outcome!}\n                    \\large{Are you up to the challenge?}"
+}
+title: "RPGA TSR Jam 1999"
+date {
+  year: 1999
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1445"
+  check: 9
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: SOFT_COVER
+producer: "TSR"
+series: "RPGA"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

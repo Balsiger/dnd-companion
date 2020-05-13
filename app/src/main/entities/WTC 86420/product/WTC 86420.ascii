@@ -1,0 +1,136 @@
+template {
+  name: "WTC 86420"
+  world: "Eberron"
+  description: "Hop aboard a \\Item{skycoach} and hurl yourself into adventure amid the\n  soaring towers of \\Place{Khorvaire}\'s most spectacular city. Plunge into\n  perilous aerial battles miles above the earth. Embark on deadly expeditions\n  through the bowels of the city. Arrange clandestine meetings in shadowy\n  taverns and undertake daring quests to faraway lands. For those bold enough\n  to seek it, the \\Place{City of Towers} promises limitless excitement, danger,\n  fame, and fortune.\n\n  Inside this book, you\'ll find all the details you\'ll need to explore the\n  awe-inspiring city of \\Place{Sharn} -- a cornerstone of the \\Place{Eberron}\n  campaign setting:\n\n  \\list\n  {Descriptions of over 100 city districts}\n  {More than a dozen new guilds and organizations to help or hinder characters,\n   including the \\Group{Deathsgate Guild}, the \\Group{Circle of Song}, and the\n   \\Group{Boromar Clan}}\n  {More than three dozen fully developed NPCs ranging from specific individuals\n   to generic citizens}\n  {New feats, spells, prestige classes, magic items, and monsters}\n  {Detailed maps of \\Place{Sharn} and various locations around the city}\n  {Free CD soundtrack -- nine tracks of original cinema-quality music to evoke\n   the mood of \\Place{Eberron} on an audio CD bundled with the book}"
+}
+title: "Sharn: City of Towers"
+subtitle: "Discover a City Filled with Endless Adventure"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "developer"
+}
+editor {
+  name: "Slavicsek, Bill"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cover {
+  name: "Hawkins, Daniel"
+  job: "sculpted cover design"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Alexander, Jason"
+}
+illustrator {
+  name: "Coker, Tomm"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Morrow, Charles P."
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic design"
+}
+illustrator {
+  name: "Baker, Candice"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3434"
+  check: 4
+}
+isbn13 {
+}
+pages: 193
+system: DND_3_5
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: CD
+  description: "soundtrack"
+  number: 1073741824
+}

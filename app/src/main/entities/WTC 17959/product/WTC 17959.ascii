@@ -1,0 +1,57 @@
+template {
+  name: "WTC 17959"
+  world: "Dragonlance"
+  description: "Armed with new weapons and a newfound confidence, \\NPC{Nearra} and her\n  friends plan to confront the wizard \\NPC{Maddoc}. But before they can reach\n  \\Place{Cairngorn Keep}, a \\Monster{skeletal griffin} kidnaps \\NPC{Nearra} and\n  delivers her directly into the wizard\'s hands.\n\n  As \\NPC{Maddoc} prepares the final spell to unleash the \\Monster{Emergence},\n  \\NPC{Davyn} and the others struggle to rescue \\NPC{Nearra}. But in the\n  confines of \\NPC{Maddoc}\'s keep, appearances deceive. Friends become\n  enemies. Dark dreams become reality. And naive \\NPC{Nearra} may not be as\n  innocent as she seems.\n\n  \\Product{Return of the Sorceress} continues a new series of\n  \\Place{Dragonlance} adventures written specifically for readers ages 10 and\n  up. Sized to fit young readers, the series features a new group of young\n  companions who band together for friendship and excitement during the\n  \\Event{golden age} of the \\Place{Dragonlance} world. Author Tim Waggoner, who\n  wrote the first title in this series, \\Product{Temple of the Dragonslayer},\n  has written frequently for young readers, and his novels and short stories\n  have been nominated for numerous writing awards."
+}
+title: "Return of the Sorceress"
+author {
+  name: "Waggoner, Tim"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3385"
+  check: 2
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Dragonlance The New Adventures"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

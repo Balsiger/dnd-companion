@@ -1,0 +1,43 @@
+template {
+  name: "WTC 88686"
+  world: "Forgotten Realms"
+  description: "\\large{Become the mightiest force in Faer\\hat{u}n}\n                    From behind this four-panel screen, you control all that takes place in your\n                    \\Place{Forgotten Realms} \\Product[WTC 11836]{campaign}. Featuring stunning\n                    new art, this invaluable game aid contains key tables from the \\Product[TSR\n                    11550]{Player\'s Handbook}, \\Product[TSR 11551]{Dungeon Master\'s Guide}, and\n                    \\Product[WTC 11836]{Forgotten Realms Campaign Setting}---and helps you guard\n                    your notes, die rolls, and other surprises from your player\'s eyes. Also\n                    included is a useful 32-page booklet filled with random encounter tables for\n                    dungeon levels 1 to 20, and wilderness encounters for over 30 climate and\n                    terrain combinations.\n                    To use this accessory, you also need the \\Product[WTC 11836]{Forgotten Realms\n                    Campaign Setting}, the \\Product[TSR 11550]{Player\'s Handbook}, the\n                    \\Product[TSR 11551]{Dungeon Master\'s Guide}, and the \\Product[TSR\n                    11552]{Monster Manual}."
+}
+title: "Dungeon Master\'s Screen"
+date {
+  year: 2002
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2783"
+  check: 6
+}
+isbn13 {
+}
+pages: 32
+system: DND_3RD
+type: ACCESSORY
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 1295
+  precision: 100
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "DM screen"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Encounters in Faerun"
+  number: 1073741824
+}

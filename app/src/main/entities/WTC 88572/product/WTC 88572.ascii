@@ -1,0 +1,47 @@
+template {
+  name: "WTC 88572"
+  world: "Star Wars"
+  description: "Watch your step -- inside this book, you\'ll encounter a fully\n  illustrated menagerie of foes to pit against the heroes of the\n  galaxy. Discover nefarious characters, fearsome creatures, lethal droids, and\n  diabolical organizations, any of which could become a true nemesis in your\n  campaign.\n\n  This sourcebook features:\n\n  \\list\n  {Over 30 pregenerated villains, both new and noteworthy, including\n   \\NPC{Bossk} the \\Place{Trandoshan} bounty hunter and \\NPC{C-3PX} the\n   assassin droid}\n  {More than 75 alien creatures, many of which first appeared in the\n   \\Product{Ultimate Alien Anthology} but have been updated for the revised\n   rules}\n  {New creature templates, including templates for creating\n   \\Monster{Yuuzhan Vong-shaped} creatures and \\Monster{Sithspawned} creatures\n  {11 types of droids, including droids from Episode II: Attack of the\n   Clones}"
+}
+title: "Ultimate Adversaries"
+subtitle: "You will never find a more wretched hive of scum and villainy."
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Lyons, Michelle"
+}
+author {
+  name: "Mikaelian, Michael"
+}
+author {
+  name: "Miller, Steve"
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Upchurch, Wil"
+}
+date {
+  year: 2004
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3054"
+  check: 3
+}
+isbn13 {
+}
+pages: 160
+system: D20
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}

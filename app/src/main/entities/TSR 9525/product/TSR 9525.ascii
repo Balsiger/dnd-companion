@@ -1,0 +1,47 @@
+template {
+  name: "TSR 9525"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  world: "Forgotten Realms"
+  description: "They are the stuff legends are made of. In fact, they \\emph{are} the\n                    legends.\n                    The major characters who have fought---and in some cases died---for the sake\n                    of goodness and justice in all parts of the \\Place{Forgotten Realms}\n                    \\Product[TSR 1085]{campaign world} are chronicled for posterity in\n                    \\Product[TSR 9525]{Heroes\' Lorebook}, a 160-page compendium of the heroes\n                    whose exploits have filled dozens of novels over the past decade.\n                    Inside you\'ll find updated game statistics and descriptions for\n                    \\NPC{Elminster}, \\NPC{Drizzt Do\'Urden}, \\NPC{Alias}, and many other\n                    characters who appeared in the \\Product[TSR 9525]{Hall of Heroes} collection\n                    published in 1989, as well as a host of brand-new biographies for heroes such\n                    as \\NPC{Brianna} and \\NPC{Travis Burdun}, \\NPC{Alicia Kendrick},\n                    \\NPC{Cadderly}, and \\NPC{Danica}, who have never been featured in a game\n                    product until now.\n                    No collection of \\Place{Forgotten Realms} gaming literature is complete\n                    without this \'Who\'s Who\' of the people---and creatures---who have prevented\n                    the forces of evil from having their way."
+}
+title: "Heroes\' Lorebook"
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0412"
+  check: 7
+}
+isbn13 {
+}
+pages: 160
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

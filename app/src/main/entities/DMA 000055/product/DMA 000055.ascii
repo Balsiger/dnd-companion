@@ -1,0 +1,53 @@
+template {
+  name: "DMA 000055"
+  world: "Generic"
+  description: "Powerful forces of magic are at work as you try to solve the Wizard\'s\n  mysterious puzzles. Prove how logical you are by termining how many anti-ogre\n  potions he has to hand out, which disguises each of five squires is wearing,\n  and what emblems adorn the shields of the finest knights of\n  \\Place{Camelot}. The Wizard challenges you to come up with these answers and\n  more."
+}
+title: "Wizard\'s Book of Puzzles"
+leader: "The"
+author {
+  name: "Margaret C. Edmiston"
+}
+author {
+  name: "Muriel Mandell"
+}
+editor {
+  name: "Claire Bazinet"
+}
+cover {
+  name: "Lucy Corvino"
+}
+illustrator {
+  name: "Chanowitz, Elise"
+}
+illustrator {
+  name: "Jack Williams"
+}
+illustrator {
+  name: "Jim Sharpe"
+}
+date {
+  year: 2002
+}
+isbn {
+  group: "0"
+  publisher: "8069"
+  title: "0026"
+  check: 1
+}
+isbn13 {
+}
+pages: 128
+system: NONE
+type: SOURCEBOOK
+style: PAPERBACK
+producer: "Sterling\' Publishing"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

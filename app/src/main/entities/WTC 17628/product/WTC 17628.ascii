@@ -1,0 +1,56 @@
+template {
+  name: "WTC 17628"
+  world: "Forgotten Realms"
+  description: "A mass market edition of Ed Greenwood\'s novel featuring some of the most\n                    popular characters in the \\Place{Forgotten Realms} setting.\n                    \\bold{Rise, and be not afraid.}\n                    Widespread and many-tentacled is the evil that threatens\n                    \\Place{Faer\\hat{u}n}. Before its heart can be found, all of the \\Group{Seven\n                    Sisters} will play a part, and all too much blood will be\n                    spilled... \\Monster{drow} blood.\n                    Seven linked novellas tell seven stories of \\Group{seven sisters} by the\n                    creator of the \\Place{Forgotten Realms} world!"
+}
+title: "Silverfall"
+subtitle: "Stories of the \\Group{Seven Sisters}"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3572"
+  check: 3
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

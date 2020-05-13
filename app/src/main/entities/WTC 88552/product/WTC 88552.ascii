@@ -1,0 +1,61 @@
+template {
+  name: "WTC 88552"
+  world: "None"
+  description: "Ancient troves of artifacts await discovery. The origins of potent spells\n                    rest lost between the pages of archaic tomes. The evolution of monstrous\n                    beasts lies outside of a researcher\'s grasp---until now. At last,\n                    long-forgotten and expertly hidden secrets will be revealed."
+}
+title: "Secrets of Magic"
+leader: "The"
+subtitle: "The world is a mystery"
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Athans, Philip"
+}
+author {
+  name: "Levin, Nate"
+}
+author {
+  name: "Bishop, Jim"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Herndon, Cory J."
+}
+author {
+  name: "King, Robert J."
+}
+author {
+  name: "McDermott, Will"
+}
+author {
+  name: "Moore, Vance"
+}
+author {
+  name: "McGough, Scott"
+}
+editor {
+  name: "Lebow, Jess"
+}
+date {
+  year: 2002
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,28 @@
+template {
+  name: "TSR 1116PC"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "Starter deck, 3rd edition."
+}
+title: "Spellfire: Master the Magic Card Game, 3rd Edition, POP Display"
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0230"
+  check: 2
+}
+isbn13 {
+}
+system: SPELLFIRE
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+  currency: "$"
+  number: 5370
+  precision: 100
+}

@@ -1,0 +1,146 @@
+template {
+  name: "WTC 2178372"
+  world: "Generic"
+  description: "This dungeons & dragons game supplement offers hundreds of magic items, weapons, armor, alchemical items, and other useful equipment for your D&D character. Whether you\'re a player looking for a new piece of equipment or a Dungeon Master stocking a \\Monster{dragon}\'s hoard, this book has exactly what you need.\n                    The book features a mix of classic items updated to 4th Edition D&D rules and brand-new items."
+  short_description: "Arms and Equipment for All Character Classes"
+}
+title: "Adventurer\'s Vault"
+subtitle: "More Magic Items than you can Fit in a Bag of Holding"
+author {
+  name: "Stephens, Owen K.C."
+  job: "additional designer"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "development lead"
+}
+author {
+  name: "Collins, Andy"
+  job: "development"
+}
+author {
+  name: "Schaefer, Peter"
+  job: "development"
+}
+cover {
+  name: "Griffith, David"
+  job: "front"
+}
+cover {
+  name: "O&#39Conner, William"
+  job: "back"
+}
+cartographer {
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Moyer, Lee"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+illustrator {
+  name: "Riche, Darrell"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Vohwinkel, Frank"
+}
+illustrator {
+  name: "Zhang, Xi James"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "art director"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Kevin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Reeve, Daniel"
+  job: "script design"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technician"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Tardiff, Christopher"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2008
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4978"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4978"
+  check: 6
+}
+pages: 224
+system: DND_4
+audience: ALL
+type: ACCESSORY
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 2173672"
+required_requirements: "WTC 2175072"
+required_requirements: "WTC 2172072"
+layout: FULL_COLOR

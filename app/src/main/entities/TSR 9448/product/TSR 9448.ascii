@@ -1,0 +1,32 @@
+template {
+  name: "TSR 9448"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Generic"
+  description: "three dungeon adventures"
+}
+title: "Temple, Tower and Tomb"
+date {
+  year: 1994
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "859"
+  check: 2
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

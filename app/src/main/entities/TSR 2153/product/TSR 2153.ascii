@@ -1,0 +1,97 @@
+template {
+  name: "TSR 2153"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+  description: "\\large{Something moves in the darkness. Your heart pounds. Death is upon you\n                    before you know it.}\n                    Inside this book are dozens of sinister beings waiting to strike terror into\n                    the hearts of role-players everywhere. From the dreaded \\Monster{scarab\n                    beetles of Har\'Akir} to the \\Monster{archer skeletons of Darkon} and the\n                    \\Monster{drow vampires of Arak}, these \\Product{Creatures of Darkness} will\n                    provide hours of diabolical adventure. But be warned---if you buy this\n                    accessory, your AD&D game players may never forgive you."
+}
+title: "Monstrous Compendium Ravenloft Appendix, Volume III: Creatures of Darkness"
+author {
+  name: "Botula, Kirk"
+}
+author {
+  name: "Hensley, Shane"
+}
+author {
+  name: "Rea, Nicky"
+}
+author {
+  name: "Woodruff, Teeuwynn"
+}
+author {
+  name: "Brown, Anne K."
+}
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Hayday, Andria"
+}
+author {
+  name: "McComb, Colin"
+}
+author {
+  name: "Nesmith, Bruce"
+}
+author {
+  name: "Wise, David"
+}
+editor {
+  name: "Connors, William W."
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+date {
+  year: 1994
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "914"
+  check: 9
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+number: "Appendix III"
+series: "Monster Compendium"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

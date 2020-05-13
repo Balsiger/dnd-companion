@@ -1,0 +1,35 @@
+template {
+  name: "TSR 11372"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Dragonlance"
+  description: "ancient enemies must cooperate or all hope will be lost"
+}
+title: "Chaos Spawn: A Chaos War Adventure"
+author {
+  name: "Niles, Douglas"
+}
+date {
+  year: 1999
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1372"
+  check: 10
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}

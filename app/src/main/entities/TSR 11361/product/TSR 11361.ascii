@@ -1,0 +1,64 @@
+template {
+  name: "TSR 11361"
+  world: "Generic"
+  description: "This book sheds new light on the powerful and majestic celestials, guardians\n                    of the Upper Planes and empyreal enemies of evil. Players can design their\n                    own celestial characters and take the fight to those denizens of darkness,\n                    the fiends!\n                    This accessory includes:\n                    \\list\n                    {\\bold{Celestial Races.} All of the information you need to design and\n                    play celestial characters: \\Monster{aasimon}, \\Monster{aasimar},\n                    \\Monster{archons}, \\Monster{asuras}, \\Monster{eladrins}, and\n                    \\Monster{guardinals}.}\n                    {\\bold{Celestial Beings and Places.} Detailed information on various\n                    key players and sites throughout the Upper Planes.}\n                    {\\bold{Celestial Magic.} New spells and magical items for celestial\n                    characters.}\n                    {\\bold{Celestial Campaign Tips.} Techniques for running campaigns with\n                    celestial characters on the Upper Planes and the Prime Material Plane.}"
+}
+title: "Warriors of Heaven"
+author {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Williams, Penny"
+}
+cover {
+  name: "Brom"
+}
+illustrator {
+  name: "King, Hannibal"
+}
+typographer {
+  name: "Haddock, Eric"
+}
+manager {
+  name: "Stark, Ed"
+}
+manager {
+  name: "Murin, Dawn"
+}
+manager {
+  name: "Adelsperger, Matt"
+}
+manager {
+  name: "Weiner, Larry"
+}
+date {
+  year: 1999
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1361"
+  check: 4
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+audience: ALL
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Expansion"
+price {
+  currency: "$ "
+  number: 1895
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

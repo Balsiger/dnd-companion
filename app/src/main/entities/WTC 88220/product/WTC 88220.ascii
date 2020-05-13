@@ -1,0 +1,41 @@
+template {
+  name: "WTC 88220"
+  world: "Generic"
+  description: "Between the mountains of the \\Place{Merciless Rage} and the tall boughs of\n  the \\Place{Hellwood} lurks a foul presence. Those who approach it,\n  perish. Those who flee it are slain. These are dark times for the citizens of\n  \\Place{Fairbye}, but there is still hope. Four heroes rise to the challenge,\n  determined to save the small hamlet from the clutches of evil.\n\n  But will the heroes survive the depths of the savage caves?"
+}
+title: "Savage Caves"
+leader: "The"
+author {
+  name: "T.H. Lain"
+}
+cover {
+  name: "Todd Lockwood"
+}
+date {
+  year: 2002
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2845"
+  check: 10
+}
+isbn13 {
+}
+pages: 182
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 1"
+series: "D&D 3rd Edition Introduction Series"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

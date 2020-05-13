@@ -1,0 +1,77 @@
+template {
+  name: "TSR 9349"
+  synonym: "FMQ1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Forgotten Realms"
+  description: "Somewhere in the \\Place{True World}, to the north of the lands you know,\n                    lies the \\Place[Michaca]{City of Gold}: \\Place{Michaca}. It is a city of\n                    legend, of fable, and of wonder. The journey is hard, and the perils are\n                    many; you know, however, that the rewards will far outshine any treasure you\n                    have ever seen.\n                    This supplement for the \\Place{Maztica} Campaign Setting is a new type of\n                    product: a combination adventure and accessory. In this booklet you will find\n                    information on a new character race, the \\Monster{Azuposi}; on new character\n                    classes for rogues, including the clown (or \\emph{koyemshis}); on new priest\n                    classes, including the \'bent priest\'; and a new magic unique to\n                    \\Place{Maztica}, fetishism.\n                    The adventure itself leads your party from the known areas of the \\Place{True\n                    World} into the northlands, through the lands of the \\Monster[Desert\n                    Dwarf]{desert dwarves}, the \\Monster[Poscada Elf]{Poscada elves}, the\n                    \\Group{Dog People}, and others. Your characters will also confront spirits\n                    they\'ve never heard of: the spirits that have caused the downfall of\n                    \\Place{Michaca}, the \\Place[Michaca]{City of Gold}.\n                    And do not forget the words of a poet of another place, and another time:\n                    \'Nor all that tempts your wand\'ring eyes / And headless hearts, is lawful\n                    price; / Nor all, that glisters, gold.\'"
+}
+title: "City of Gold"
+author {
+  name: "Nephew, John"
+}
+author {
+  name: "Tweet, Jonathan"
+}
+editor {
+  name: "Stewart, Douglas"
+}
+cover {
+  name: "Ruppel, Robh"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+illustrator {
+  name: "Frank, Ken"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "322"
+  check: 1
+}
+isbn13 {
+}
+pages: 80
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Maztica"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,80 @@
+template {
+  name: "TSR 11760"
+  world: "Diablo II"
+  description: "\\bold{Forget courtly intrigue---this is about stabbing straight into the\n                    heart of Evil!}\n                    Based on the popular computer game by Blizzard Entertainment, Diablo II:\n                    Diablerie recreates the world of DIABLO using the Dungeons & Dragons\n                    roleplaying game system.\n                    Between Diablo II: Diablerie and the Dungeons & Dragons \\Product{Player\'s\n                    Handbook}, you have all the information you need to play your favorite\n                    computer game world:\n                    \\list\n                    {A step-by-step guide to creating Amazons, Barbarians, Paladins,\n                    Necromancers, and Sorceresses!}\n                    {A complete list of weapons and gear!}\n                    {Loads of DIABLO II spells and magic items!}\n                    {Enough monsters for adventure after thrilling adventure}\n                    {A ready-to-run adventure with thee different lists of monsters}\n                    \\emph{Why are you still looking at the back cover?}\n                    You can\'t free the land from the clutches of an ancient evil by\n                    \\emph{browsing}! Get in there and grab some gold and glory."
+}
+title: "Diablo II: Diablerie"
+author {
+  name: "Wiker, JD"
+}
+editor {
+  name: "Pickens, Jon"
+}
+cover {
+  name: "post, rk"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "post, rk"
+}
+illustrator {
+  name: "Roach, David"
+}
+illustrator {
+  name: "Venters, Pete"
+}
+typographer {
+  name: "Ausland, Victoria L."
+}
+typographer {
+  name: "Dorries, Erin"
+}
+manager {
+  name: "Cordell, Bruce R."
+}
+manager {
+  name: "Grubb, Jeff"
+}
+manager {
+  name: "Reid, Thomas"
+}
+manager {
+  name: "Selinker, Mike"
+}
+manager {
+  name: "Slavicsek, Bill"
+}
+manager {
+  name: "Barnett, Dee"
+}
+manager {
+  name: "Murin, Dawn"
+}
+date {
+  year: 2000
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1760"
+  check: 1
+}
+isbn13 {
+}
+pages: 96
+system: DND_3RD
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

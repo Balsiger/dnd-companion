@@ -1,0 +1,32 @@
+template {
+  name: "TSR 21517"
+  reference {
+    name: "net"
+  }
+  world: "None"
+}
+title: "Official Turnament Players\' Guide"
+author {
+  name: "DCI Staff"
+}
+date {
+  year: 1999
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1517"
+  check: 10
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 999
+  precision: 100
+}

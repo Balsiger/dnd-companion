@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5618"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Baku"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

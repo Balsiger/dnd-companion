@@ -1,0 +1,104 @@
+template {
+  name: "TSR 2631"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "Planescape"
+  description: "\\large{Think killing a God\'s tough, berk? Try bringing one back.}\n                    \\emph{Silently, ponderously, they float through the \\Place{Astral Plane},\n                    mammoth isles of rock adrift in an endless sea of silver. Once they were\n                    gods. Now they\'re little more than debris, petrified husks of fading belief\n                    and forgotten prayer. Yet for many, their memories linger, their dreams live\n                    on---and for some, those dreams are terrifying nightmares of vengeance, and\n                    conquest, and death.}\n                    \\Product{Dead Gods} is a 176-page adventure book featuring two scenarios that\n                    can be played separately or linked together. In the first, the heroes are\n                    drawn into an epic quest to uncover the secrets behind the return of an\n                    infamous AD&D villain long thought dead. In the second, the city of\n                    \\Place{Sigil} threatens to explode in a faction war for control of an old\n                    church and a mysterious force lurking within it. \\Product{Dead Gods} also\n                    features a \\Product{Monstrous Compendium} entry for a brand-new\n                    \\Monster{fiend}, full-color illustrations to bring scenes alive for players,\n                    and a poster sheet of maps for the Dungeon Master.\n                    \\Product{Dead Gods} builds on story elements first explored in the\n                    \\Product{Planescape} adventure anthology \\Product{The Great Modron March},\n                    though that product is not required to use this one."
+}
+title: "Dead Gods"
+author {
+  name: "Cook, Monte J."
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Carter, Michele"
+}
+cover {
+  name: "post, rk"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "post, rk"
+}
+illustrator {
+  name: "Rex, Adam"
+}
+illustrator {
+  name: "Timbrook, Josh"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Boomgarden, Karen S."
+  job: "project management"
+}
+manager {
+  name: "Winter, Steve"
+  job: "project management"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphics coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "graphics coordination"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+manager {
+  name: "Adelsperger, Matt"
+  job: "graphic design"
+}
+manager {
+  name: "Conant, Dave"
+  job: "electronic prepress coordination"
+}
+date {
+  year: 1997
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0711"
+  check: 8
+}
+isbn13 {
+}
+pages: 176
+system: ADND_REVISED
+type: ADVENTURE
+style: SOFT_COVER
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

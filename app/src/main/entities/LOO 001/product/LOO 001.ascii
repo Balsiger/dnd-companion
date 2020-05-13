@@ -1,0 +1,29 @@
+template {
+  name: "LOO 001"
+  world: "None"
+  description: "\\list\n{2-6 players}\n{Ages 8-108}\n{2-30 minutes}\n{84 cards + instructions}"
+}
+title: "Fluxx 3.1"
+subtitle: "The card game with ever-changing rules!"
+date {
+  year: 2005
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: CARD_GAME
+style: SMALL_BOX
+producer: "Looney Labs"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "TSR 1094"
+optional_requirements: "TSR 1094"
+layout: FULL_COLOR

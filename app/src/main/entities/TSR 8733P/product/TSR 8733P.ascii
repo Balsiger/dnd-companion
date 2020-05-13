@@ -1,0 +1,34 @@
+template {
+  name: "TSR 8733P"
+  reference {
+    name: "net"
+  }
+  world: "None"
+}
+title: "Mercadian Masques"
+author {
+  name: "Francis Lebaron"
+}
+date {
+  year: 1999
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1188"
+  check: 3
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "Weatherlight Cycle"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

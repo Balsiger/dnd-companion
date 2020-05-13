@@ -1,0 +1,60 @@
+template {
+  name: "WTC 9547574"
+  world: "Dragonlance"
+  description: "An antique map reveals yet another family secret: Nearra must relive the\n  suffering of two more of the wizards betrayed by her ancestor, or her\n  family\'s magic and the healing power of the Trinistyr will never be\n  restored.\n\n  Undeterred, Nearra, Jirah, and their friends continue their mission, arriving\n  at the once great city of Tarsis. But they do not journey alone. Two elf\n  mages watch them from afar, while a dark cleric follows their every\n  move. Betrayals come to light. New powers arise. And a startling revelation\n  threatens to destroy Nearra, once and for all."
+}
+title: "Wizard\'s Betrayal"
+subtitle: "The Trinistyr Ancient holy relic Cursed symbol of power Key to Nearra;s future... or her destruction"
+author {
+}
+author {
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2006
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3993"
+  check: 1
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume 2"
+series: "Trinistyr Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

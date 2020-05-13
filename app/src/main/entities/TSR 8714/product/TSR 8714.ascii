@@ -1,0 +1,22 @@
+template {
+  name: "TSR 8714"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Maze and the Magic Dragon"
+leader: "The"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+audience: ALL
+type: NOVEL
+number: "4"
+series: "Cartoon Show"
+price {
+}

@@ -1,0 +1,238 @@
+template {
+  name: "WTC 82438"
+  category: "Campaign Expansion"
+  world: "Forgotten Realms"
+  description: "A region of \\Place{Faer\303\273n} that comprises shining paragons of civilization and culture, perilous locales fraught with dread and evil, and encompassing them all, a wilderness that offers every explorer vast opportunity and simultaneously promises great danger.\n\nWhile the \\Product{Sword Coast Adventurer\342\200\231s Guide} is a valuable resource for Dungeon Masters, it was crafted with players and their characters foremost in mind. There is a plethora of new character options to intrigue and inspire every member of the adventuring party.\n\nFor use with the fifth edition Player\342\200\231s Handbook, Monster Manual, and Dungeon Master\342\200\231s Guide, the Sword Coast Adventurer\342\200\231s Guide provides the setting, story, and character options needed to participate in a game anywhere along the \\Place{Sword Coast} of \\Place{Faer\303\273n}."
+  short_description: "Explore the \\Place{Sword Coast} in this campaign sourcebook for the world\'s greatest roleplaying game."
+}
+title: "Sword Coast Adventurer\'s Guide"
+subtitle: "Welcome to the \\Product{Sword Coast}"
+author {
+  name: "Kenson, Steve"
+  job: "lead designer"
+}
+author {
+  name: "Carriker, Joseph D."
+  job: "designer"
+}
+author {
+  name: "Cortijo, Brian"
+  job: "designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "designer"
+}
+author {
+  name: "Lee, Peter"
+  job: "designer"
+}
+author {
+  name: "Leitheusser, Jon"
+  job: "designer"
+}
+author {
+  name: "Mearls, Mike"
+  job: "designer"
+}
+author {
+  name: "Norris, Jack"
+  job: "designer"
+}
+author {
+  name: "Reynolds, Sean K."
+  job: "designer"
+}
+author {
+  name: "Sernett, Matt"
+  job: "designer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "designer"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Sims, Chris"
+  job: "editorial assistance"
+}
+editor {
+  name: "Sernett, Matt"
+  job: "editorial assistance"
+}
+editor {
+  name: "Helmick, Daniel"
+  job: "editorial assistance"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Blando, Jared"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Henriquez, Ilich"
+}
+illustrator {
+  name: "Heuso, David"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Kendree, Mclean"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Syme, Bryan"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Mangold, Hal"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna Wolf"
+  job: "art director"
+}
+illustrator {
+  name: "Reeve, Daniel"
+  job: "font designer"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D lead designer"
+}
+manager {
+  name: "Crawford, Jeremy"
+  job: "D&D lead designer"
+}
+manager {
+  name: "Schinkle, Neil"
+  job: "project management"
+}
+manager {
+  name: "Hay, John"
+  job: "project management"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production services"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production services"
+}
+manager {
+  name: "Gershman, David"
+  job: "production services"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "brand and marketing"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "brand and marketing"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand and marketing"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "brand and marketing"
+}
+manager {
+  name: "Feil, John"
+  job: "brand and marketing"
+}
+manager {
+  name: "Tito, Greg"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lundstrom, Kim"
+  job: "brand and marketing"
+}
+manager {
+  name: "Kidd, Trevor"
+  job: "brand and marketing"
+}
+date {
+  year: 2015
+  month: 11
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6580"
+  check: 9
+}
+pages: 160
+system: DND_NEXT
+audience: PLAYER
+type: CAMPAIGN_EXPANSION
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "book"
+  number: 1
+}
+layout: FULL_COLOR

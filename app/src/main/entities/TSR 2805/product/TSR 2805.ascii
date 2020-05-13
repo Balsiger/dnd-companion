@@ -1,0 +1,45 @@
+template {
+  name: "TSR 2805"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Star*Drive"
+  description: "monstrous compendium for the alternity game"
+}
+title: "Alien Compendium: Creatures of the Verge"
+author {
+  name: "Richard Baker"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+  year: 1998
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0778"
+  check: 9
+}
+isbn13 {
+}
+pages: 128
+system: ALTERNITY
+type: ACCESSORY
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2195
+  precision: 100
+}

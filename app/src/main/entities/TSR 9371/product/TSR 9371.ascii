@@ -1,0 +1,44 @@
+template {
+  name: "TSR 9371"
+  synonym: "LNQ1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Lankhmar"
+  description: "slayers guild"
+}
+title: "Slayers of Lankhmar"
+date {
+  year: 1992
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "373"
+  check: 6
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

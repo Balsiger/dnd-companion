@@ -1,0 +1,34 @@
+template {
+  name: "WTC 96478"
+  world: "Dragonlance"
+  description: "This attractive new rerelease of \\Product{Stormblade} showcases a new look\n  for the \\Product{Heroes} series. Each title in the series reflects the new\n  series design and features entirely new cover art."
+}
+title: "Stormblade"
+author {
+  name: "Berberick, Nancy Varian"
+}
+date {
+  year: 2004
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3149"
+  check: 3
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Two"
+series: "Heroes"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

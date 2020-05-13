@@ -1,0 +1,31 @@
+template {
+  name: "TSR 9271"
+  synonym: "DDA3"
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+}
+title: "Eye of Traldar"
+date {
+  year: 1991
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

@@ -1,0 +1,40 @@
+template {
+  name: "TSR 1138"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+  description: "New Kismet and support cards."
+}
+title: "Blood Wars Escalation Pack 5: Weapons & Warmongers"
+author {
+  name: "Steven Schend"
+}
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0463"
+  check: 1
+}
+isbn13 {
+}
+system: BLOOD_WARS
+audience: ALL
+type: BOOSTER_PACK
+style: PACK
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  number: 12
+}

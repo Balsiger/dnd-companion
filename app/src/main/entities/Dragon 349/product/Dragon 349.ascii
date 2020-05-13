@@ -1,0 +1,169 @@
+template {
+  name: "Dragon 349"
+  world: "Generic"
+  description: "Issue 349 of the magazine. "
+}
+title: "Dragon 349"
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Bonny, Edward"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Christensen, William L."
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Cort\\grave{i}jo, Brian"
+}
+author {
+  name: "Drain, Jonathan"
+}
+author {
+  name: "Farrese, Richard"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Koller, Laszlo"
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Sutter, James"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "managing editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Perez, Ramon"
+}
+illustrator {
+  name: "Swal, Christophe"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Pozca, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXXI 6"
+number: "349"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

@@ -1,0 +1,50 @@
+template {
+  name: "WTC 95052"
+  synonym: "War of the Dragon Queen Booster Pack"
+  world: "Generic"
+  description: "The world trembles when \\God{Tiamat}, the evil queen of dragons, unleashes\n                    her horde. Against wing and claw, only the strongest warbands can stand---and\n                    only the best can win!\n                    \\large{The Battle Rages On}\n                    The stakes have never been greater! Collect all 60 figures in the\n                    \\Product{War of the Dragon Queen} set---including 12 Huge figures---to create\n                    warbands and compete against your friends in fast, head-to-head combat. With\n                    a mix of \\Monster[dragon]{dragons}, draconic creatures, and the new spawn of\n                    \\God{Tiamat}, as well as other powerful monsters, you warband has never had\n                    more options."
+  short_description: "Another set of D&D Miniatures, this time with huge minis."
+}
+title: "War of the Dragon Queen Huge Pack"
+subtitle: "Loose the Dragons of War"
+date {
+  year: 2006
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_3_5
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+number: "9"
+series: "D&D Miniatures"
+price {
+  currency: "$ "
+  number: 1999
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "randomized, pre-painted plastic"
+  number: 7
+}
+content {
+  part: MINIATURE
+  description: "randomized, pre-painted huge plastic"
+  number: 1
+}
+content {
+  part: CARD
+  description: "stat"
+  number: 8
+}
+content {
+  part: SHEET
+  description: "checklist"
+  number: 1
+}
+required_requirements: "Miniatures Game"
+layout: FULL_COLOR

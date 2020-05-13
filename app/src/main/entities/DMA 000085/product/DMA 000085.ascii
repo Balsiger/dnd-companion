@@ -1,0 +1,65 @@
+template {
+  name: "DMA 000085"
+  category: "coloring book"
+  world: "Forgotten Realms"
+  description: "Dungeons & Dragons has entertained fans from around the world with adventures and stories for over forty years. In that time, some of the most amazing fantasy artists on the planet have graced the pages of those books with their stunning illustrations.\n\nThis book is packed with black-and-white versions of many of those pieces. Additionally, it features 16 pages of full-color originals to inspire.\n\nEnter the realms of Dungeons & Dragons and make them your own."
+  short_description: "A coloring book with Forgotten Realms art."
+}
+title: "Monsters and Heroes of the Realms"
+subtitle: "Colouring Book"
+author {
+  name: "Forbeck, Matt"
+}
+author {
+  name: "Walters, Christie"
+}
+author {
+  name: "Butterworth, Gareth"
+  job: "designer"
+}
+author {
+  name: "Golden, Mark"
+  job: "designer"
+}
+author {
+  name: "Upstone, Ian"
+  job: "designer"
+}
+cover {
+  name: "Bader, Daren"
+}
+cover {
+  name: "Lunter, Titus"
+}
+cartographer {
+  name: "Dyson Logos"
+}
+illustrator {
+  name: "Valdrighi, Alessandro"
+  job: "copy illustrations"
+}
+date {
+  year: 2016
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "78370"
+  title: "656"
+  check: 3
+}
+pages: 96
+system: NONE
+audience: ALL
+type: SPECIAL_BOOK
+style: SOFT_COVER
+producer: "WTC"
+price {
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

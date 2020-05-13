@@ -1,0 +1,230 @@
+template {
+  name: "WTC 2154372"
+  world: "Forgotten Realms"
+  description: "From the dawn of recorded history through the ancient days of \\Place{Netheril} and the \\Place{Fallen Kingdoms}, to the \\Event{Time of Troubles} and the upheavals of the present day, this powerful tome presents the definitive history of the \\Place{Forgotten Realms} world. Accompanied by anecdotes, diary entries, letters, and historical texts created by famous \\Place{Far\\hat{u}n} personalities, and extensive and comprehensive timeline leads you through the eras of the world---including a sneak peek into upcoming events."
+}
+title: "Grand History of the Realms"
+leader: "The"
+subtitle: "Explore the Past, Glimpse the Future"
+author {
+  name: "James, Brian R."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Krashos, George"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Backer, Richard"
+  job: "additional design"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "additional design"
+}
+author {
+  name: "Schend, Steven E."
+  job: "additional design"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Gillespie, Adam"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Anderson, Kyle J."
+}
+illustrator {
+  name: "Angus, Glen Michael"
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Cavotta, Matthew &#39Matt&#39"
+}
+illustrator {
+  name: "Garres Cervantes, Rafael"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Hudnut, David"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+illustrator {
+  name: "Kubic, Ginger"
+}
+illustrator {
+  name: "Law, Stephanie Pui-Mun"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Martin, David E."
+}
+illustrator {
+  name: "Crabapple-McClain, Dennis"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Philippi, Michael"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Tappin, Stephen"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Thompson, Derek"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+  name: "Walker, Kris"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4731"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4731"
+  check: 7
+}
+pages: 160
+system: DND_3_5
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "TSR 1094"
+optional_requirements: "TSR 1094"
+layout: FULL_COLOR

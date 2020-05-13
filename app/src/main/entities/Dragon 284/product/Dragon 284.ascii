@@ -1,0 +1,243 @@
+template {
+  name: "Dragon 284"
+  world: "Generic"
+  description: "Issue 281 of the magazine. The 25th anniversary issue."
+}
+title: "Dragon 284"
+author {
+  name: "Ryan, Michael G."
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Stephens, Owen K. C."
+}
+author {
+  name: "Key, Adam"
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Rogers, Brian"
+}
+author {
+  name: "Harlan, Thomas"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Bonny, Ed"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Martin, Julia"
+}
+author {
+  name: "Haddock, Eric"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Hite, Kenneth"
+}
+author {
+  name: "Harlan, Thomas"
+}
+author {
+  name: "Lawrence, Katherine"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Ibach, Dawn"
+}
+author {
+  name: "Harris, Robert"
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "McVey, Mike"
+}
+author {
+  name: "Four, Johnn"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Moscatello, Rick"
+}
+author {
+  name: "Winninger, Ray"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Foglio, Phil"
+  job: "contributing editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Kovalic, John"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robin D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Aaron"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+cover {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "John Kovalic"
+}
+illustrator {
+  name: "DeCesare, Keith"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Laubenstein, Jeff"
+}
+illustrator {
+  name: "Gregory, D. Alexander"
+}
+illustrator {
+  name: "Brown, Damon"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Beargeon, Ted"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Kurtz, Scott"
+}
+illustrator {
+  name: "Delgado Jr., Peter"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Whitley, Peter"
+  job: "art direction"
+}
+illustrator {
+  name: "Stevens, Matthew"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2001
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 132
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVI 1"
+number: "284"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

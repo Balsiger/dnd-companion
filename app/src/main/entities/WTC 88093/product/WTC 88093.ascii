@@ -1,0 +1,35 @@
+template {
+  name: "WTC 88093"
+  world: "Dominaria"
+  description: "The city of \\Place{Bryce} is being watched by unfriendly eyes. A mysterious\n                    prophesy, a desperate \\Class{wizard}, and an extraordinary \\Monster{tiger\n                    man} are somehow caught up in the city\'s destiny. One man must race against\n                    time to understand how -- and why -- or risk the enslavement of his people."
+}
+title: "Johan"
+subtitle: "The battle for Bryce has begun."
+author {
+  name: "Emery, Clayton"
+}
+date {
+  year: 2001
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1803"
+  check: 9
+}
+isbn13 {
+}
+pages: 311
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 1"
+series: "Legends Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

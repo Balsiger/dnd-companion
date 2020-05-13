@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8504"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Return to Brookmere"
+date {
+  year: 1982
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Four"
+price {
+}

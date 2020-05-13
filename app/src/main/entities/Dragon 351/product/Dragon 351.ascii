@@ -1,0 +1,189 @@
+template {
+  name: "Dragon 351"
+  world: "Generic"
+  description: "Issue 351 of the magazine. "
+}
+title: "Dragon 351"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Banks, Cam"
+}
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Bonny, Edward"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Cort\\grave{i}jo, Brian"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Flipse, Chris"
+}
+author {
+  name: "Frazier, Jacob"
+}
+author {
+  name: "Frost, Josh"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Hart, Mark A."
+}
+author {
+  name: "Holian, Gary"
+}
+author {
+  name: "Leach, Paul"
+}
+author {
+  name: "Lowder, James"
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Stewart, Todd"
+}
+author {
+  name: "Tetreault, Denis"
+}
+author {
+  name: "Vergamini, Stephanie"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "managing editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Gravato, John"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Macdonald, Sean"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wooten, Ben"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "art director"
+}
+illustrator {
+  name: "Pozca, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2007
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXXI 8"
+number: "351"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "The Isle of Dread"
+  number: 1073741824
+}

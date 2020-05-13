@@ -1,0 +1,36 @@
+template {
+  name: "TSR 2503"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Mystara"
+  description: "Dragonlord Chronicles, book one"
+}
+title: "Dragonlord of Mystara"
+date {
+  year: 1994
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book One"
+series: "Dragonlord Chronicles"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}

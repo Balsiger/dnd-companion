@@ -1,0 +1,43 @@
+template {
+  name: "TSR 9589"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Forgotten Realms"
+  description: "\\bold{The City of Glory Revealed at Last!}\n                    \\emph{\'\\Place{Calimport}? I\'d sooner dive headfirst into\n                    \\Place{Undermountain} than risk my ship going to that gods-forsaken city!\'\n                    \'Ah-the fabled \\Place[Calimport]{City of Glory}. Its wonders remain unmatched\n                    by any other city across \\Place{Faer\\hat{u}n}, e\'en \\Place{Waterdeep}, for\n                    \\Place{Calimport} does not impede anyone\'s business due to some overbearing\n                    morality.\'\n                    \'Walking through \\Place{Calimport}, either among the alleys or atop the\n                    sabban walls with the nobility, immerses you in danger and corruption, as if\n                    you swam through eels and asps rather than walked its dusty, ill-kept\n                    roads.\'}\n                    What can one truly know about a place until he or she has experienced it\n                    firsthand? \\Place{Calimport} is a place of many truths, each more disturbing\n                    than the last. It is also the most influential trade city in southern\n                    \\Place{Faer\\hat{u}n}, whether its detractors admit it or not. Building on\n                    material from \\Product[TSR 9561]{Empires of the Shining Sea}, this supplement\n                    expands tremendously on what we know about the city that has been the seat of\n                    \\Place[Calimshan]{Calishite} power since the arrival of the\n                    \\Monster[Djinni]{djinni} lord \\NPC{Calim} eight millennia ago. What can be\n                    found inside?\n                    \\list\n                    {The history of \\Place{Calimport} on a broad scale, showing the ebb\n                    and flow of power surrounding the city across time.}\n                    {A sweeping look at the city itself, including all of its landmarks,\n                    wards, and sabbans (districts), providing for the first time the key\n                    to finding ways through a city of more than two million people.}\n                    {A close-up view of the \\Place{Erar\\acute{e} Sabban} and its\n                    \\Place{Taorahl Drudach}, a waterfront district and neighborhood\n                    designed to be a central base for your own \\Place{Calimport}\n                    campaigns.}\n                    {Numerous magical items and artifacts, many of which hide amon\n                    \\Place{Calimport}s shadows, from the \\Item{Battlecloak of\n                    Vycaena} and the \\Item{Codex Thealnakkar} to the \\Item{Staff of\n                    Shoon} and the \\Item{Tome of Secrets}.}\n                    Everything you need to know about the peril-riddled alleys, palaces, and\n                    underworld of the most dangerous city on \\Place{Faer\\hat{u}n} is contained\n                    within this 96-page book. Walk the dark paths among the sabbans or fly among\n                    the gilded minarets, but know that a thousand eyes and a thousand intrigues\n                    swirl about you at any moment! Come explore one of the oldest cities of\n                    \\Place{Faer\\hat{u}n}. The trip may change your life..."
+}
+title: "Calimport"
+date {
+  year: 1998
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1238"
+  check: 3
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: CAMPAIGN_EXPANSION
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

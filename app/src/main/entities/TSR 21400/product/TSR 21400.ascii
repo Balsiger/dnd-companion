@@ -1,0 +1,33 @@
+template {
+  name: "TSR 21400"
+  reference {
+    name: "net"
+  }
+  world: "Dominaria"
+  description: "a comprehensive guide to the newest card expansion"
+}
+title: "Official Urza\'s Destiny Game Guide"
+author {
+  name: "Will McDermott"
+}
+date {
+  year: 1999
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1400"
+  check: 9
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1199
+  precision: 100
+}

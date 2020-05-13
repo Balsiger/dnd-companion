@@ -1,0 +1,201 @@
+template {
+  name: "Dragon 220"
+  world: "Generic"
+}
+title: "Dragon 220"
+author {
+  name: "Detwiler, Gregory W."
+}
+author {
+  name: "McComb, Collin"
+}
+author {
+  name: "Bebris, Carrie A."
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Thauberger, Rudy"
+}
+author {
+  name: "Smith, Lester"
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Murphy, Paul"
+}
+author {
+  name: "Rolston, Ken"
+}
+author {
+  name: "Karpenter, Ken"
+}
+author {
+  name: "MacQuarrie, Lachlan"
+}
+author {
+  name: "Smedman, Lisa"
+}
+author {
+  name: "Christian, Deborah"
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "White, William"
+}
+author {
+  name: "Whitman, Ken"
+}
+author {
+  name: "Vuckovich, Michelle"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "Horne, David"
+}
+illustrator {
+  name: "Pollack, Allan"
+}
+illustrator {
+  name: "Szczudlo, Tony"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Smith, Larry"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Kohl, Charles"
+  job: "photography"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+illustrator {
+  name: "Arnst, Brent"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Lessl, Bob"
+}
+illustrator {
+  name: "Mayer, Dwain"
+}
+illustrator {
+  name: "Pilsbury, Joseph"
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Hanson, David"
+}
+illustrator {
+  name: "Manui, Barbara"
+}
+illustrator {
+  name: "Adams, Chris"
+}
+illustrator {
+  name: "Witmer, Don"
+  job: "photography"
+}
+illustrator {
+  name: "Carpenter, Ken"
+  job: "painting"
+}
+illustrator {
+  name: "Bond, Alexander"
+  job: "painting"
+}
+illustrator {
+  name: "Knox, John"
+  job: "painting"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1995
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 148
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XX 3"
+number: "220"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

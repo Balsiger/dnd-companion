@@ -1,0 +1,58 @@
+template {
+  name: "WTC 9546074"
+  world: "Dragonlance"
+  description: "The \\Event{War of Souls} has ended, but \\Place{Krynn} is still rife with\n  conflict. The \\Monster{elven} land of \\Place{Silvanesti} is no more, replaced\n  by the \\Monster{minotaur} colony of \\Place{Ambeon}. A new emperor sits on the\n  throne in \\Place{Nethosak}, his dark Protectors backed by the magic of the\n  \\Group{Forerunners}. Resistance to the empire is all but crushed.\n\n  The rebellion\'s last hope, \\NPC{Faros}, struggles with personal demons. But,\n  unexpectedly bolstered by the very gods he has renounced, the legitimate heir\n  rises up against obstacles all too real as well as others fantastical. A\n  plague of abominations descends upon \\NPC{Faros}\'s forces as they storm the\n  capital...forcing a memorable showdown with the evil usurpers.\n\n  Richard A. Knaak is the New York Times best-selling author of the\n  \\Product{Legend of Huma} and other fantastical fiction set in the wondrous\n  world of \\Place{Dragonlance}. The trilogy that began with dire events of\n  \\Product{Night of Blood} and continued with the epic struggles in\n  \\Product{Tides of Blood} now arrives at this thrilling conclusion."
+}
+title: "Empire of Blood"
+author {
+  name: "Knaak, Richard A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2006
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3978"
+  check: 8
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Three"
+series: "The Minotaur Wars"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

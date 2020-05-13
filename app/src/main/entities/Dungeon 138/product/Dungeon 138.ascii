@@ -1,0 +1,160 @@
+template {
+  name: "Dungeon 138"
+  world: "Generic"
+  description: "This is issue 138 of the dungeon magazine."
+}
+title: "Dungeon 138"
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "Hunter, Kyle"
+}
+author {
+  name: "MacLean, Hal"
+}
+author {
+  name: "Pett, Richard"
+}
+author {
+  name: "Richards, Johnathan"
+}
+author {
+  name: "Scott, Amber"
+}
+author {
+  name: "Shel, Mike"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Jacobs, James"
+  job: "managing editor"
+}
+editor {
+  name: "Walker, Jeremy"
+  job: "assistant editor"
+}
+editor {
+  name: "Sutter, James Lafond"
+  job: "assistant editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Belanger, Andy"
+}
+illustrator {
+  name: "Engle, Steve"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Laubenstein, Jeff"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Mosley, Tony"
+}
+illustrator {
+  name: "P\\acute{e}rez, Ram\\acute{o}n"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Scully, Ryan"
+}
+illustrator {
+  name: "UDON"
+}
+illustrator {
+  name: "Franchina, Mike"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Pocza, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising & sales director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 130
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "20 9"
+number: "138"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 899
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

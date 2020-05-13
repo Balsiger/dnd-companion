@@ -1,0 +1,216 @@
+template {
+  name: "Dragon 285"
+  world: "Generic"
+  description: "Issue 281 of the magazine. An issue about halflings."
+}
+title: "Dragon 285"
+author {
+  name: "Ryan, Michael G."
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Bova, Ben"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Bonny, Edward"
+}
+author {
+  name: "Hite, Kenneth"
+}
+author {
+  name: "Martin, Julia"
+}
+author {
+  name: "Haddock, Eric"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Moscatello, Rick"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Winninger, Ray"
+}
+author {
+  name: "McVey, Mike"
+}
+author {
+  name: "Four, Johnn"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Foglio, Phil"
+  job: "contributing editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Kovalic, John"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robin D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Aaron"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+cover {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "John Kovalic"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Dutton, Michael \'Mike\'"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Beargeon, Ted"
+}
+illustrator {
+  name: "Wilson, Matt"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Kurtz, Scott"
+}
+illustrator {
+  name: "McLachlan, Brian"
+}
+illustrator {
+  name: "Seltzer, Jerry"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Whitley, Peter"
+  job: "art direction"
+}
+illustrator {
+  name: "Stevens, Matthew"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2001
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 120
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVI 2"
+number: "285"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

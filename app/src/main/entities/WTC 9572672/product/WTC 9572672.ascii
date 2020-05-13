@@ -1,0 +1,169 @@
+template {
+  name: "WTC 9572672"
+  world: "Generic"
+  description: "Deep below the surface realm, in the perpetual gloom of the \\Place{Underdark}, the \\Monster{drow} conspire to subjugate the world in the name of their dread \\God{spider goddess}. No other race can match their malice and cruelty. No other race holds a \\Item{candle} to their ruthless depravity and thirst for power. Their cities are dark and twisted cradles of treachery and corruption, their myriad schemes a tangled web that snares all who defy the will of \\God{Lolth}.\n                    This Dungeons & Dragons supplement presents the definitive treaties on the \\Monster[drow]{dark elves}. Within these pages, you\'ll find insights into \\Monster{drow} culture and society, rules and options for \\Monster{drow} characters, new equipment, prestige classes, feats, magic items, and monsters, as well as detailed exploration of the fabled \\Monster{dow} city of \\Place{Erelhei-Cinlu}."
+}
+title: "Drow of the Underdark"
+subtitle: "Elegant, Dark, and Deadly"
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Pryor, Anthony"
+}
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Vaughan, Greg A."
+}
+author {
+  name: "Collins, Andy"
+  job: "development"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "editing manager"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Griese, Beth"
+}
+editor {
+  name: "Carter, Michele"
+  job: "editorial assistance"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+  job: "editorial assistance"
+}
+editor {
+  name: "Nagler, Daniel"
+  job: "editorial assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Tsai, Francis"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Jackoilrain"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohlwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Christina"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "freelance manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4151"
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4151"
+  check: 3
+}
+pages: 224
+system: DND_3_5
+audience: ALL
+type: ACCESSORY
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "TSR 11551"
+required_requirements: "WTC 17755"
+layout: FULL_COLOR

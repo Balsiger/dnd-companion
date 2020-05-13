@@ -1,0 +1,67 @@
+template {
+  name: "TSR 9177"
+  synonym: "REF3"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+  description: "DMs, how many times have you told your players, \'Well, you walked for five\n                    days, saw some trees and a few animals, and now you are at the dungeon? You\n                    would like to create more challenging encounters, but who has the time to\n                    develop all those mini-adventures that make journeys so exciting?\n                    With \\Product{The Book of Lairs}, TSR Inc. proudly presents the first in a\n                    series of ground-breaking AD&D accessories. This book contains over 60 fully\n                    developed adventures that can be easily inserted into any DM\'s\n                    campaign. These intriguing and innovative encounters are ready to play and\n                    will challenge player characters of all levels. No longer do you have to\n                    spend endless hours devising clever lairs and traps for monsters to spring on\n                    your PCs. Why make your players wait while you thumb through books and roll\n                    dice trying to scare up a random encounter? Here are ready-made adventures\n                    available instantly for almost any terrain and party level.\n                    These adventures can be inserted into your campaign at any time and are\n                    adaptable to almost any situation. Rather than introduce new monsters,\n                    \\Product{The Book of Lairs} presents a number of familiar monsters in unique\n                    settings to provide your players with many unexpected dangers and\n                    thrills. Unusual beings are also spotlighted to bring variety and mystery\n                    back to your campaign. DMs are sure to find \\Product{The Book of Lairs}\n                    convenient, innovative, and ultimately valuable!"
+}
+title: "Book of Lairs"
+leader: "The"
+author {
+  name: "Ward, James M."
+}
+author {
+  name: "Breault, Mike"
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Day, Larry"
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+typographer {
+  name: "Elmore, Betty"
+}
+typographer {
+  name: "Lindau, Kim"
+}
+manager {
+  name: "O\'Malley, Colleen"
+  job: "keylining"
+}
+date {
+  year: 1986
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "319"
+  check: 4
+}
+isbn13 {
+}
+pages: 96
+system: ADND_1ST
+type: ADVENTURE
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1200
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,49 @@
+template {
+  name: "TSR 8041"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "None"
+  description: "\\large{It falls one night onto the village of \\Place{Aston Point}.}\n                    When the valiant \\Group{Rael} emerge from their crashed starship, the people\n                    of \\Place{Ashton Point} are drawn into a deadly struggle against the\n                    mechanical constructs of the \\NPC{Overseer}---and before their adventures are\n                    done, they will travel to the stars to match spells against computers and\n                    battle-axes against tanks, to save a dozen worlds as innocent as their own."
+}
+title: "Tale of the Comet"
+author {
+  name: "Roland Green"
+}
+cover {
+  name: "Martin, David"
+}
+cartographer {
+  name: "Roy Boholst"
+}
+date {
+  year: 1997
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0654"
+  check: 5
+}
+isbn13 {
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

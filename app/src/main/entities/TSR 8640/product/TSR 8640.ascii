@@ -1,0 +1,54 @@
+template {
+  name: "TSR 8640"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  world: "Forgotten Realms"
+  description: "The paladins and mercenaries have joined forces to defeat an attacking army\n                    of fiends. Now a powerful new weapon, the \\Item{Bloodforge}, comes into their\n                    hands. But some suspect that their leader\'s plans for the weapon are somewhat\n                    less than honorable. Can they undermine his hidden motives, while holding off\n                    the fiendish army.\n                    \\Product{Unseasy Alliance} is the seventh part in a nine-book serial novel\n                    published by TSR and set in the exciting world of the \\Place{Forgotten\n                    Realms}. Be sure to look for the earlier six parts, (listed inside). Continue\n                    the adventure with Parts 8, \\Product{Easy Betrayals} and 9, \\Product{The\n                    Diamond} at your local bookstore."
+}
+title: "Uneasy Alliances"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Archer, Peter"
+}
+cover {
+  name: "LeMay, Heather"
+}
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0870"
+  check: 10
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Part 7"
+series: "Double Diamond Triangle Saga"
+price {
+  currency: "$ "
+  number: 199
+  precision: 100
+}

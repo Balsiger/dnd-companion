@@ -1,0 +1,84 @@
+template {
+  name: "WTC 38847"
+  world: "Generic"
+  description: "Dungeon Masters need awesome maps to create memorable encounters. This pack contains 3 full-color, double-sided, 21-by-30 inch battle maps with 1-inch grids. One map features two exciting, never before-seen encounter locations: a crumbling cathedral and a haunted chapel with adjoining cemetery. The other two battle maps are picked from out-of-print sources. All three maps provide attactive, reusable terrain suitable for any D&D campaign.\n\nMap Pack products are compatible with all editions of the Dungeon & Dragons Roleplaying Game and are designed for use with D&D miniatures."
+  short_description: "A map pack around a haunted temple theme."
+}
+title: "Haunted Temples"
+subtitle: "Foldout Battle Maps for your D&D Campaign"
+author {
+  name: "Perkins, Christopher"
+  job: "new map design"
+}
+editor {
+}
+cover {
+  name: "Engle, Jason A."
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Irvin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "senior creative art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+typographer {
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D senior producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "RPG group manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "product engineer"
+}
+date {
+  year: 2012
+  month: 1
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5987"
+  check: 7
+}
+pages: 3
+system: NONE
+type: ACCESSORY
+style: FOLDER
+producer: "WTC"
+series: "Map Pack"
+price {
+  currency: "$"
+  number: 1195
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "double-sided, full-color poster map"
+  number: 3
+}
+layout: FULL_COLOR

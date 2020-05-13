@@ -1,0 +1,40 @@
+template {
+  name: "TSR 8068"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+}
+title: "Death of a Darklord"
+author {
+  name: "Laurell K. Hamilton"
+}
+date {
+  year: 1995
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0112"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Eleven"
+series: "Ravenloft Books"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

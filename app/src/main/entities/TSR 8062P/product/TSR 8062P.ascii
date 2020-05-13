@@ -1,0 +1,47 @@
+template {
+  name: "TSR 8062P"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 221"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Ravenloft"
+  description: "...Some of the parchment pages were the color of cream, thick and\n  substantial, made to last many, many lifetimes. Other pages were thin and\n  desiccated, positively yellow from age, and crackled alarmingly as \\NPC{Van\n  Richten} turned them over. There were no ornate illuminations, no fussy\n  borders, only lines of plain text in hard black ink. The flowing handwriting\n  was a bit difficult to follow at first; the writer\'s style of calligraphy had\n  not been in common use for three hundred years. No table of contents, but\n  from the dates it looked to be some kind of history.\n\n  He turned to the first page and read:\n\n  \\emph{I, \\NPC{Strahd}, \\NPC{Lord of \\Place{Barovia}}, well aware certain\n  events of my reign have been desperately misunderstood by those who are\n  better at garbling history than recording it, hereby set down an exact record\n  of those events, that the truth may at last be known....}\n\n  He caught his breath. By all the good gods, \\emph{a personal journal?}"
+}
+title: "I, Strahd"
+author {
+  name: "Elrod, Patricia Nead"
+}
+date {
+  year: 1995
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0175"
+  check: 6
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

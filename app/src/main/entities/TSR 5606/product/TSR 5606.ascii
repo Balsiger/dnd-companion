@@ -1,0 +1,26 @@
+template {
+  name: "TSR 5606"
+  reference {
+    name: "complete product listing"
+  }
+  description: "A \\Monster{Vilstrak} and a \\Monster{Rock Reptile} miniature."
+}
+title: "Vilstrak & Rock Reptile"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+price {
+}
+content {
+  part: MINIATURE
+  description: "figures"
+  number: 2
+}

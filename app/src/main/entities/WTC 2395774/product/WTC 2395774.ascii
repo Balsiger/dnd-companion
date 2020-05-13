@@ -1,0 +1,48 @@
+template {
+  name: "WTC 2395774"
+  world: "Forgotten Realms"
+  description: "Isolated for a hundred years, wild vines knotting over the slopes of ancient volcanoes, the island of \\Place{Chult} allows only the fiercest to survive.\n                    The colonists of \\Place{Tethyr} came to conquer the island.\n                    And vanished.\n                    Now the only chance of recovering the colony lies in the hands of the crew of a small tradeship and its broken-down camptain.\n                    All they have to do is survive.\n                    \\large{Welcome to the Jungle}"
+  short_description: "The Wilds, Book 1"
+}
+title: "Fanged Crown"
+leader: "The"
+subtitle: "Chult"
+author {
+  name: "Helland, Jenna"
+}
+cover {
+  name: "Gist, Erik M."
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2009
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5093"
+  check: 5
+}
+isbn13 {
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 1"
+series: "The WIlds"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

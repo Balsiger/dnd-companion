@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9067"
+  synonym: "M1 solo"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Blizzard Pass"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}

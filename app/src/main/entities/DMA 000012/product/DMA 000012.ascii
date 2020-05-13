@@ -1,0 +1,25 @@
+template {
+  name: "DMA 000012"
+  description: "Catalog of the 1998 \\Place{Dragonlance} books of TSR."
+}
+title: "1998 Dragonlance Book Catalog"
+date {
+  year: 1998
+}
+isbn {
+}
+isbn13 {
+}
+pages: 4
+system: NONE
+audience: ALL
+type: CATALOG
+style: FLYER
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: FLYER
+  number: 1073741824
+}

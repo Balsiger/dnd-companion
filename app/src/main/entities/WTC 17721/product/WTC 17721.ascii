@@ -1,0 +1,35 @@
+template {
+  name: "WTC 17721"
+  world: "None"
+  description: "When \\NPC{Nova Darling} sees the weird message on the mall ATM, she can\'t\n                    believe her eyes. True, Nova loves to play the electric guitar. But that\'s\n                    one secret she\'s never told anyone, especially her mom. Nova\'s mom is\n                    convinced that Nova is destined to be a ballet star. But Nova\'s more\n                    interested in practicing riffs on her ax, and gazing at the oh-so-cute\n                    \\NPC{Joe Tsai}. Will the mystery message help Nova follow her dreams without\n                    breaking her mom\'s heart?"
+}
+title: "Nova Rocks!"
+subtitle: "Act like a rock star in front of a group of strangers. Would you dare?"
+author {
+  name: "Emesse, Tea"
+}
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3625"
+  check: 8
+}
+isbn13 {
+}
+pages: 144
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 1"
+series: "Star Sisterz"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

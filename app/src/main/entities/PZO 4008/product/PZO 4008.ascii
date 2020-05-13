@@ -1,0 +1,42 @@
+template {
+  name: "PZO 4008"
+  world: "Generic"
+  description: "Why go to the trouble of using miniatures only to push them around an empty table? Paizo\'s \\Product{Game Mastery Map Packs} contain full-color gridded maps for use with RPGs and miniatures games. The map cards in this set depict key encounter areas in a foul underground sewer, allowing game masters to build their own custom sewer system!\n\n\\Product{Game Mastery Map Packs} provide everything you need to stay a step ahead of your players. Use this product to build sewer encounters that perfectly fit your campaign. Additional map packs explore other locales of interest to fantasy games.\n\nThis \\Product{Map Pack} contains 18 full-color 8\'\'x5\'\' map cards suitable for use with \\Product{Game Mastery Compleat Encounters} or any standard gaming miniatures. "
+}
+title: "Map Pack: Sewers"
+subtitle: "There\'s Something Alive Down Here!"
+cartographer {
+  name: "Macourek, Corey"
+}
+date {
+  year: 2007
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "032"
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "032"
+  check: 2
+}
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "Game Mastery Map Packs"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "Map"
+  number: 18
+}
+layout: FULL_COLOR

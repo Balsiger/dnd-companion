@@ -1,0 +1,141 @@
+template {
+  name: "Dragon 309"
+  world: "Generic"
+  description: "Issue 309 of the magazine. Incursion issue."
+}
+title: "Dragon 309"
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Edwards, Terry"
+}
+author {
+  name: "Harker, Carla"
+}
+author {
+  name: "Mintner, Brian"
+}
+author {
+  name: "Poisso, Dean"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Wyatt, James"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+editor {
+  name: "Williams, Penny"
+  job: "editorial assistance"
+}
+cover {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Laubenstein, Jeff"
+}
+illustrator {
+  name: "Lee, Rob"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Vilardi, Mike"
+}
+illustrator {
+  name: "Wahlstrom, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "senior production designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2003
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVIII 2"
+number: "309"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

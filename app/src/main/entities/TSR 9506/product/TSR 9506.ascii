@@ -1,0 +1,111 @@
+template {
+  name: "TSR 9506"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 221"
+  }
+  reference {
+    name: "Dragon 228"
+  }
+  world: "Generic"
+  description: "\\large{You have all the time in the world---and now you don\'t.}\n                    The final and most dangerous fantasy frontier lies not in space, but in\n                    \\emph{time}! At last, the dimension of \\Place{Time} is open to those few\n                    wizards who would risk everything---even their very existence---to visit\n                    ancient and forgotten lands, or see the unbelievable wonders and horrors of\n                    the future. These few wizards are \\Product{Chronomancers}, and this optional\n                    96-page AD&D game accessory reveals the secrets of their lives. New spells,\n                    new powers, new realms---as well as terrifying monsters---are brought to\n                    light in this stunning work. Take time to study the mysteries of\n                    chronomancy---before someone else takes that time from you."
+}
+title: "Chronomancer"
+author {
+  name: "Coleman, Loren L."
+}
+editor {
+  name: "Forbeck, Matt"
+}
+editor {
+  name: "Butler, Jim"
+}
+editor {
+  name: "Hayday, Andria"
+}
+editor {
+  name: "Heard, Bruce"
+}
+editor {
+  name: "Miller, Steve"
+}
+editor {
+  name: "Moore, Roger"
+}
+editor {
+  name: "Pickens, Jon"
+}
+editor {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Wise, David"
+}
+cover {
+  name: "Pollack, Alan"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Bourne, Adrian"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Daniele, Stephen A."
+  job: "graphic design"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "graphic design"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0325"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+series: "Options"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

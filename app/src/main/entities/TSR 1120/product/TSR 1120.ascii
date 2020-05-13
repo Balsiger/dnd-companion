@@ -1,0 +1,111 @@
+template {
+  name: "TSR 1120"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{Visit the Heart of the \\Group[Zhentarim]{Black Network}}\n                    Known throughout the \\Place[Forgotten Realms]{Realms} as the headquarters of\n                    the \\Group{Zhentarim}, \\Place{Zhentil Keep} has long been a trade hub, a set\n                    of power, and a nest of curroption at the edge of the \\Place{Moonsea}. This\n                    boxed set details \\Place{Zhentil Keep} in the days of \\God[Bane]{Bane} the\n                    \\God[Bane]{Black Lord}, before the \\Event{Time of Troubles}. It also present\n                    the new \\Place{Zhentil Keep}, a city nearly destroyed by the insane\n                    \\God{Cyric}, \\God[Cyric]{Prince of Lies}.\n                    This campaign expansion contains:\n                    \\list\n                    {A 128-page sourcebook detailing the old and new \\Place{Zhentil Keep},\n                    the history of the city, the sinister \\Group{Black Network}, and\n                    important villains.}\n                    {A 64-page adventure book with three new perilous adventures that take\n                    heroes into \\Place{Zhentil Keep}, under it, and to nearby communities.}\n                    {A Monstrous Compendium Appendix booklet containing 16 new creatures.}\n                    {Three poster maps depicting the old \\Place{Zhentil Keep}, the new\n                    \\Place{Zhentil Keep}, and the activities of the malevolent\n                    \\Group{Zhentarim}.}\n                    {Eight cards describing areas containing some of the most nefarious\n                    NPCs and monsters ever to be associated with \\Place{Zhentil Keep}.}\n                    \\large{Enter and beware!}"
+}
+title: "Ruins of Zhentil Keep"
+author {
+  name: "Melka, Kevin"
+}
+author {
+  name: "Terra, John"
+}
+editor {
+  name: "Martin, Julia E."
+}
+editor {
+  name: "Wise, David"
+}
+cover {
+  name: "Fields, Fred"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+illustrator {
+  name: "Butler, Jim"
+}
+illustrator {
+  name: "Hotz, Eric"
+}
+illustrator {
+  name: "Johnson, Scott"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Cook, David \'Zeb\'"
+  job: "additional design"
+}
+manager {
+  name: "Greenwood, Ed"
+  job: "additional design"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0109"
+  check: 8
+}
+isbn13 {
+}
+pages: 192
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Campaing Book"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "cardsheets"
+  number: 8
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 3
+}
+content {
+  part: PAGE
+  description: "monstrous compendium"
+  number: 16
+}

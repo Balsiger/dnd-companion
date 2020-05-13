@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5615"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Young Brass Dragon, Blaize"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

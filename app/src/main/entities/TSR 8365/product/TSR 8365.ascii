@@ -1,0 +1,49 @@
+template {
+  name: "TSR 8365"
+  synonym: "WTC 86629"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dragonlance"
+  description: "In a time of war, a princess of \\Place{Qualinost} and an elite band of\n  \\Class{warriors} sail forth to rescue their countrymen from the collapsing\n  \\Place{Ergoth Empire}. Their journey goes awry when a strange mist engulfs\n  \\NPC{Princess Vixa}\'s ship and transports them to a \\Place{phantom island}.\n\n  Who are the mysterious masters who imprison them in their undersea city?\n\n  No soul has encountered the fabled \\Monster{Dargonesti} or visited the\n  \\Place{city of pearl marble} that rises from the sea floor -- and lived to\n  tell the tale. \\NPC{Princess Vixa} and her companions meet the race of\n  \\Monster{sea elves}, experience a fantastical underwater world, face a foe\n  counted among the legends of \\Place{Krynn}, and accept an impossible mission\n  that will bring them back to the land they call home.\n\n  \\bold{The \\Monster{Dargonesti}}\n\n  The \\Product{Lost Histories Series} probes the historical roots and epic\n  struggles of the heretofore little-known peoples of \\Place{Krynn}."
+}
+title: "Dargonesti"
+leader: "The"
+subtitle: "A Captive Elven Princess..."
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Cook, Tonya Carter"
+}
+date {
+  year: 1995
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0182"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume III"
+series: "Lost Histories Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

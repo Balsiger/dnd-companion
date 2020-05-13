@@ -1,0 +1,20 @@
+template {
+  name: "DMA 000023"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "unknown"
+}
+title: "Chainmail, with Fantasy Supplement (\'Guidon Games\')"
+date {
+  year: 1972
+}
+isbn {
+}
+isbn13 {
+}
+system: CHAINMAIL
+audience: UNKNOWN
+price {
+}

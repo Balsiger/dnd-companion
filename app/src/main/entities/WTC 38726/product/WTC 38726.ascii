@@ -1,0 +1,56 @@
+template {
+  name: "WTC 38726"
+  world: "Generic"
+  description: "Tormented by his near transformation at the hands of the plague demon prince \\NPC{Vestapalk}, \\NPC{Albanon} has retreateed to \\NPC{Moorin}\'s tower, seeking answers --- and solace. He is the last member of the \\Group{Order of Vigilance}, touched by both the \\Item{Voidharrow} and \\God{Tharizdun}. He stood on the precipice of madness and saw into the heart of the \\Place{Abyss}.\n\nThe \\Place{Nentir Vale} is rampant with \\Monster{plague demons} while heroes \\NPC{Shara}, \\NPC{Uldane}, \\NPC{Roghar}, and \\NPC{Tempest} scout for the source of the pestilence. With \\NPC{Vestapalk} growing ever stronger, they know they have to act soon. The world cannot affort to wait any longer. \n\nAs the journey toward the greatest concentration of \\Monster{demons}, they learn they are on the right path, and they gain an unlikely ally. From beyond the reaches of the universe, \\God{Tharizdun} looks on."
+  short_description: "The third book in the Abyssal Plague Trilogy"
+}
+title: "Eye of the Chained God"
+leader: "The"
+subtitle: "From the Dark of a Ruined Universe, the Eye of the Chained God Sees All..."
+author {
+  name: "Bassingthwaite, Don"
+}
+editor {
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 1970
+  month: 4
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5983"
+  check: 9
+}
+pages: 373
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 3"
+series: "The Abyssal Plague"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

@@ -1,0 +1,25 @@
+template {
+  name: "TSR 2709"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  description: "biotechnology and genetic engineering gone amok"
+}
+title: "Kromosome"
+date {
+  year: 1994
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+system: AMAZING_ENGINE
+price {
+  currency: "\302\254\302\243 "
+  number: 499
+  precision: 100
+}

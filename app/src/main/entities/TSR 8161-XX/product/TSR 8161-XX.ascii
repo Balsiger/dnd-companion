@@ -1,0 +1,28 @@
+template {
+  name: "TSR 8161-XX"
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+  description: "the world\'s first science fiction magazine"
+}
+title: "Amazing Stories \'94"
+date {
+  year: 1994
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+number: "94"
+series: "Amazing Stories"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

@@ -1,0 +1,174 @@
+template {
+  name: "WTC 2165072"
+  world: "Eberron"
+  description: "Explore the most important frontier city of \\Place{Xen\'drik}, where opportunity and peril walk hand in hand. Whether you\'re looking for shadowy ruins, sinister organizations, or a treasure-laden dungeon, \\Place{Stormreach} is the place to start.\n\nThis Dungeons & Dragons supplements brings \\Place{Stormreach} to life:\n\n\\list{Information on the movers and shakers, both in front of and behind the scenes}\n{Ready-to-use adversaries to challenge your characters}\n{Adventure hooks to spice up your game}"
+  short_description: "Description of \\Place{Stormreach} on \\Place{Xen\'drik}."
+}
+title: "City of Stormreach"
+subtitle: "Welcome to \\Place{Stormreach}, Gateway to Adventure!"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Logue, Nicolas"
+}
+author {
+  name: "Desborough, James &#39Grim&#39"
+}
+author {
+  name: "Suleiman, C.A."
+}
+author {
+  name: "MacDonald, Glenn"
+  job: "additional design"
+}
+author {
+  name: "Hahn, August"
+  job: "additional design"
+}
+author {
+  name: "Mackey, Brian"
+  job: "additional design"
+}
+author {
+  name: "Marks, Greg"
+  job: "additional design"
+}
+author {
+  name: "Merwin, Shawn"
+  job: "additional design"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "development"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Crawford, Jeremy"
+}
+editor {
+  name: "Martin, Julia"
+  job: "editorial assistance"
+}
+editor {
+  name: "Bilsland, Greg"
+  job: "editorial assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Prescott, Steve"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Esbri, David"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Jordan, Robert"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Collins, Andy"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Overbay, Shari"
+  job: "production manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2008
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4803"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4803"
+  check: 1
+}
+pages: 160
+system: DND_3_5
+type: CAMPAIGN_EXPANSION
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 86400"
+layout: FULL_COLOR

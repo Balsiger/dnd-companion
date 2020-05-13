@@ -1,0 +1,50 @@
+template {
+  name: "WTC 9558974"
+  world: "Eberron"
+  description: "The daughter of a noble family has gone missing. A proud and ancient house\n  has fallen to ruin. Even the dead are disappearing.\n\n  And a disgraced exile may be the only one who can save them.\n\n  Returning home from the \\Event{Last War}, a bitter soldier discovers a\n  criminal operation trafficking in slaves. When members of his own family turn\n  up missing, his attempt to get them back embroil him in a plot involving\n  illegal necromantic activities that run from the lowliest criminals to the\n  highest reaches of government."
+}
+title: "Blood and Honor"
+subtitle: "Karrnath, Born in War..."
+author {
+  name: "Davis, Graeme"
+}
+editor {
+}
+editor {
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2006
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4069"
+  check: 7
+}
+isbn13 {
+}
+pages: 308
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 4"
+series: "The War-Torn"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

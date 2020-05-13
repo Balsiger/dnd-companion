@@ -1,0 +1,22 @@
+template {
+  name: "TSR 8716"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Star Snatchers"
+leader: "The"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+audience: ALL
+type: NOVEL
+number: "6"
+series: "Cartoon Show"
+price {
+}

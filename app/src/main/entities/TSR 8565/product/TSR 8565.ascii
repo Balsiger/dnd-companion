@@ -1,0 +1,50 @@
+template {
+  name: "TSR 8565"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "Forgotten Realms"
+  description: "The \\Group{Bedine} witch \\NPC{Ruha} has left the \\Place{parched sea} of\n                    \\Place{Anauroch} on her quest to become a \\Group{Harper}. That quest takes\n                    her to \\Place{Elversult}, where she must prove herself by discovering who has\n                    poisoned \\NPC{Lady Yanseldara}. Simple enough. Find the poison and track the\n                    poisoner.\n                    Simple...until the \\Group{Cult of the Dragon}, a \\NPC{Shou Prince}, and\n                    oriental merchant, and an ancient \\Monster{dracolich} get involved.\n                    As \\NPC{Ruha} soon discovers, life is never simple for a \\Group{Harper}, and\n                    poisoners\' plots hold more treacherous twists than the tail of a\n                    \\Monster{Shou dragon}."
+}
+title: "Veiled Dragon"
+leader: "The"
+author {
+  name: "Denning, Troy"
+}
+cover {
+  name: "Jainschigg, Nick"
+}
+date {
+  year: 1996
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0482"
+  check: 8
+}
+isbn13 {
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Twelve"
+series: "Harpers Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

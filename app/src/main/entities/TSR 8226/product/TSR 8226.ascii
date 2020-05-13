@@ -1,0 +1,44 @@
+template {
+  name: "TSR 8226"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+  description: "a travel to a wtilight plane called Half-Light"
+}
+title: "Half-Light"
+author {
+  name: "Vitola, Denise"
+}
+date {
+  year: 1992
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "400"
+  check: 7
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 450
+  precision: 100
+}

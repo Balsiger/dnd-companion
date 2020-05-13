@@ -1,0 +1,19 @@
+template {
+  name: "TSR 8434"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Dragonlance"
+}
+title: "Dragonlance Saga graphic novel 4"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: NOVEL
+price {
+}

@@ -1,0 +1,32 @@
+template {
+  name: "TSR 9580"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Greyhawk"
+  description: "the second adventure in the Lost Tombs series"
+}
+title: "Crypt of Lyzandred"
+author {
+  name: "Moore, Roger"
+}
+date {
+  year: 1998
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 48
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

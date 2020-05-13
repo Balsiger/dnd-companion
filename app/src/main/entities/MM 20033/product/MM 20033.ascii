@@ -1,0 +1,31 @@
+template {
+  name: "MM 20033"
+  description: "Assortment of weapons."
+  short_description: "Assortment of weapons."
+}
+title: "Weapons Assortment"
+subtitle: "Dungeon Decor"
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: SMALL_BOX
+producer: "Mega Miniatures"
+series: "Dungeon Decor"
+price {
+  currency: "$"
+  number: 999
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "random weapon"
+  number: 20
+}
+layout: FULL_COLOR

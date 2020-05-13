@@ -1,0 +1,56 @@
+template {
+  name: "TSR 8436P"
+  synonym: "WTC 084360520"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "Life is good for \\NPC{Drizzt Do\'Urden}, better than it ever has been for the\n                    beleaguered \\Monster{dark elf}. His dearest friend, the \\Monster{dwarf}\n                    \\NPC{Bruenor}, has reclaimed his throne, and his adventuring companions,\n                    \\NPC{Wulfgar} and \\NPC{Catti-brie}, are to be wed in the spring. Even the\n                    \\Monster{halfling} \\NPC{Regis} has returned. All the friends are united in\n                    the safety and prosperity of \\Place{Mithril Hall}, where streams of silver\n                    mithril run deep and \\Monster{dwarven} hammers bang out the solemn rhythms of\n                    ancient and unending songs.\n                    But \\NPC{Drizzt} did not achieve this state of peace without leaving powerful\n                    enemies in his wake. \\God{Lloth}, the dreaded \\God{Spider Queen} deity of the\n                    evil \\Monster{dark elves}, counts herself among them an has vowed to end the\n                    drow\'s days of pleasant security."
+}
+title: "Legacy"
+leader: "The"
+author {
+  name: "Salvatore, R. A."
+}
+cover {
+  name: "Easley, Jeff"
+}
+date {
+  year: 1993
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "640"
+  check: 9
+}
+isbn13 {
+}
+pages: 332
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book 1"
+series: "Legend of Drizzt"
+series: "Dark Elf Trilogy"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,82 @@
+template {
+  name: "Polyhedron 150"
+  world: "Generic"
+  description: "March 2002 issue of polyhedron (together with Dungeon 91)."
+}
+title: "Polyhedron 150"
+subtitle: "Shadow Chasers"
+author {
+  name: "Stan!"
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "Richards, Ian"
+}
+author {
+  name: "Gibson, Ed"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+editor {
+  name: "Mona, Erik"
+}
+cover {
+  name: "Mahfood, Jim"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Buckley, Leanne"
+}
+illustrator {
+  name: "Mahfood, Jim"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "logo design"
+}
+illustrator {
+  name: "Detwiler, Dennis"
+}
+illustrator {
+  name: "James, Andy"
+  job: "graphic design"
+}
+illustrator {
+  name: "Mona, Erik"
+  job: "art direction"
+}
+date {
+  year: 2002
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 62
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "150"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+layout: FULL_COLOR

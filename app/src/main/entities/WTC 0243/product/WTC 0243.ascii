@@ -1,0 +1,322 @@
+template {
+  name: "WTC 0243"
+  world: "Generic"
+  description: "\\large{Fearsome and formidable foes lurk within}\n\nEncounter a horde of monsters armed and ready to battle the boldest heroes or\nfight alongside them. The fully illustrated pages of this book are overrun\nwith all the creatures, statistics, spells, and strategies you need to\nchallenge the heroic characters of any Dungeon & Dragons roleplaying game."
+  short_description: "The monster manual, updated."
+}
+title: "Monster Manual"
+author {
+  name: "Williams, Skip"
+  job: "design"
+}
+author {
+  name: "Baker, Richard"
+  job: "revision"
+}
+author {
+  name: "Tweet, Jonathan"
+  job: "revision"
+}
+author {
+  name: "Williams, Skip"
+  job: "revision"
+}
+author {
+  name: "Baker, Richard"
+  job: "D&D 3rd edition revision team"
+}
+author {
+  name: "Collins, Andy"
+  job: "D&D 3rd edition revision team"
+}
+author {
+  name: "Noonan, David"
+  job: "D&D 3rd edition revision team"
+}
+author {
+  name: "Redman, Rich"
+  job: "D&D 3rd edition revision team"
+}
+author {
+  name: "Williams, Skip"
+  job: "D&D 3rd edition revision team"
+}
+author {
+  name: "Adkison, Peter"
+  job: "additional design"
+}
+author {
+  name: "Baker, Richard"
+  job: "additional design"
+}
+author {
+  name: "Carl, Jason"
+  job: "additional design"
+}
+author {
+  name: "Connors, William W."
+  job: "additional design"
+}
+author {
+  name: "Reynolds, Sean K"
+  job: "additional design"
+}
+author {
+  name: "Wilkes, Jennifer Clarke"
+  job: "development"
+}
+author {
+  name: "Echeklberry, David"
+  job: "development"
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "development"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "development"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Pickens, Jon"
+}
+editor {
+  name: "Martin, Julia"
+  job: "editorial assistance"
+}
+editor {
+  name: "Heinsoo, Rob"
+  job: "editorial assistance"
+}
+editor {
+  name: "Noonan, David"
+  job: "editorial assistance"
+}
+editor {
+  name: "Quick, Jeff"
+  job: "editorial assistance"
+}
+editor {
+  name: "Williams, Penny"
+  job: "editorial assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Higgenbotham, Henry"
+}
+illustrator {
+  name: "Angus, Glen"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Bader, Daren"
+}
+illustrator {
+  name: "Baxa, Tom"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Despain, Brian"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Fischer, Scott"
+}
+illustrator {
+  name: "Guay-Mitchell, Rebecca"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Jaquays, Paul"
+}
+illustrator {
+  name: "Kaluta, Michael"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Mitchell, Matthew"
+}
+illustrator {
+  name: "Moore, Monte"
+}
+illustrator {
+  name: "Post, rk"
+}
+illustrator {
+  name: "Rex, Adam"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Snoddy, Brian"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "visual creative director"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "additional art director"
+}
+illustrator {
+  name: "Lockwood, Todd"
+  job: "D&D conceptual artist"
+}
+illustrator {
+  name: "Wood, Sam"
+  job: "D&D conceptual artist"
+}
+illustrator {
+  name: "Adelsperger, Matt"
+  job: "D&D logo design"
+}
+illustrator {
+  name: "Floyd, Sherry"
+  job: "D&D logo design"
+}
+illustrator {
+  name: "Floyd, Sherry"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Hebron, Paul"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photographer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Walker, Nancy"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "Production Manager"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "R&D group manager"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "D&D brand team"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+date {
+  year: 2012
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6244"
+}
+pages: 320
+system: DND_3_5
+type: RULEBOOK
+style: HARDCOVER
+producer: "WTC"
+number: "Book III"
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

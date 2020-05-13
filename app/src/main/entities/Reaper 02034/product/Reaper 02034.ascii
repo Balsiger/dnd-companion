@@ -1,0 +1,28 @@
+template {
+  name: "Reaper 02034"
+  description: "Kurff, the Swift. A human rogue with rope and hook."
+}
+title: "Kurff, the Swift"
+author {
+  name: "S. Garrity"
+}
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: DARK_HEAVEN
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+series: "Apocalypse"
+price {
+  currency: "$ "
+  number: 225
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}

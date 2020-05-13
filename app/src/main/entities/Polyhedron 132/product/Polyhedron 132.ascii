@@ -1,0 +1,83 @@
+template {
+  name: "Polyhedron 132"
+  world: "Generic"
+  description: "Issue 132 of Polyhedron."
+}
+title: "Polyhedron 132"
+author {
+  name: "Stephen H. Jay"
+}
+author {
+  name: "Robert Wiese"
+}
+author {
+  name: "Robert J. Kinney"
+}
+author {
+  name: "Wes Nicholson"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "James C. Alpeter Jr."
+}
+author {
+  name: "Tom Prusa"
+}
+author {
+  name: "Ruester, Chris"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Gibson, Ed"
+}
+author {
+  name: "Laura Moody Harvey"
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "The Thieves\' Guild"
+}
+manager {
+  name: "Lisa Stevens"
+  job: "Master Thief"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Sharper"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "Cutpurses"
+}
+manager {
+  name: "Paul Alan Timm"
+  job: "Cutpurses"
+}
+date {
+  year: 1998
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 48
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "18"
+number: "5"
+series: "Polyhedron"
+price {
+}

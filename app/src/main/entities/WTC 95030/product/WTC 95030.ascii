@@ -1,0 +1,35 @@
+template {
+  name: "WTC 95030"
+  world: "Star Wars"
+  description: "Third in a series of titles that accompany each \\Place{Star Wars} miniatures\n  expansion, \\Product{Ultimate Missions: Revenge of the Sith} provides extended\n  information and gameplay suggestions for anyone looking to maximize their\n  \\Product{Star Wars Miniatures} experience. In addition to game-related\n  content, this full-color product also contains a foldout poster map and new\n  color terrain tiles to diversify gameplay."
+}
+title: "Ultimate Missions: Revenge of the Sith"
+author {
+  name: "Wiker, JD"
+}
+author {
+}
+date {
+  year: 2005
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3666"
+  check: 5
+}
+isbn13 {
+}
+pages: 96
+system: D20
+audience: ALL
+type: RULES_SUPPLEMENT
+style: PAPERBACK
+producer: "WTC"
+series: "Star Wars Miniatures"
+price {
+  currency: "$ "
+  number: 2999
+  precision: 100
+}

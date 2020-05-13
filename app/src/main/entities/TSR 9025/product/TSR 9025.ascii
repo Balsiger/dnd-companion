@@ -1,0 +1,22 @@
+template {
+  name: "TSR 9025"
+  reference {
+    name: "net price list"
+  }
+  world: "Greyhawk"
+}
+title: "World of Greyhawk Folio"
+date {
+  year: 1980
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$"
+  number: 1200
+  precision: 100
+}

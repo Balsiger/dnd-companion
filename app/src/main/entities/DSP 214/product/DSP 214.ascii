@@ -1,0 +1,45 @@
+template {
+  name: "DSP 214"
+  world: "None"
+  description: "Go all the way with the Dork Tower gang once again, as the critically\n  acclaimed Web Comic returns in a volume packed with still more geeky good\n  humor. More than 40\'000 people a day check out the DorkTower.com web\n  site. Pick up John Kovalic\'s eight Dork Tower collection, and find out why!"
+}
+title: "Go, Dork. Go!"
+author {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Hal Mangold"
+  job: "interior design and layout"
+}
+date {
+  year: 2005
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "930964"
+  title: "47"
+  check: 1
+}
+isbn13 {
+}
+pages: 160
+system: NONE
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "Dork Storm Press"
+number: "Volume VIII"
+series: "The Collected Dork Tower"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

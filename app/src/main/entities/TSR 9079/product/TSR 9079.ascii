@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9079"
+  synonym: "X7"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "War Rafts of Kron"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

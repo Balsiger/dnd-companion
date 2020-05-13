@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9050"
+  synonym: "O1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Gem and the Staff"
+leader: "The"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

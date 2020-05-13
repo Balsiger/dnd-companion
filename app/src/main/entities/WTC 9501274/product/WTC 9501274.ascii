@@ -1,0 +1,58 @@
+template {
+  name: "WTC 9501274"
+  world: "Dragonlance"
+  description: "This collection of tales is edited by the creators of the\n  \\Place{Dragonlance} mythology. \\Product{The Cataclysm} contains a number of\n  short stories by popular \\Place{Dragonlance} authors as well as a novella by\n  Weis and Hickman."
+}
+title: "Cataclysm"
+leader: "The"
+author {
+}
+author {
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 368
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Five"
+series: "Tales"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

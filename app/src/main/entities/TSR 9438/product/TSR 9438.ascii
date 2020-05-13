@@ -1,0 +1,40 @@
+template {
+  name: "TSR 9438"
+  synonym: "DM2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "updates the monster of AC9"
+}
+title: "Creature Catalog"
+author {
+  name: "Nephew, John"
+}
+date {
+  year: 1993
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "593"
+  check: 3
+}
+isbn13 {
+}
+pages: 128
+system: DND_1ST
+type: RULES_SUPPLEMENT
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

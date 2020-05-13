@@ -1,0 +1,39 @@
+template {
+  name: "WTC 21653"
+  world: "Generic"
+  description: "From out of the halls of the \\Monster{titan} lords, the giants strike! Led by titans of flame, earth, and death, hordes of fire giants and storm giants lay waste to the realms of \\Monster{human}s, \\Monster[Elf]{elves}, and \\Monster[Dwarf]{dwarves}. Such a bold invasion has drawn other threats out of the darkness, including undead creatures, foul devils, and mighty \\Monster{dragons}. Can any adventurers stand against such enemies?\n                    Create classic battles and spectacular adventures when you collect all 60 miniatures in the \\Product{Against the Giants} set. Build your warband and challenge your friends with the \\Product{D&D Miniatures Game}, or set out to conquer countless dungeons with the \\Product{Dungeons & Dragons Roleplaying Game} and these fantastic miniatures."
+  short_description: "The Against the Giants set of miniatures."
+}
+title: "Against the Giants Booster Pack"
+subtitle: "The Bigger they are, the Harder they Hit!"
+date {
+  year: 2008
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4817"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4817"
+  check: 8
+}
+system: DND_4
+type: MINIATURE
+style: MEDIUM_BOX
+series: "Miniatures"
+price {
+  currency: "$"
+  number: 2199
+  precision: 100
+}
+required_requirements: "WTC 2155100"
+required_requirements: "WTC 2175072"
+required_requirements: "WTC 2172072"
+required_requirements: "WTC 2173672"
+layout: FULL_COLOR

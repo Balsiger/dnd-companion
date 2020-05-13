@@ -1,0 +1,68 @@
+template {
+  name: "TSR 1040"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "It is called the \\Place[Waterdeep]{City of Splendors}: \\Place{Waterdeep},\n                    most populous and powerful of the cities of the \\Place{North}. It is a city\n                    of wealth, adventure, and danger. More men have died in its taprooms and\n                    bards than in all the sieges of \\Place{Dragonspear Castle}. Success and death\n                    lurk in its shadowed entranceways and dimly-lit streets.\n                    Come explore the greatest city of the \\Place[Forgotten Realms]{Realms} in\n                    this incredible new boxed set dealing with urban fantasy\n                    adventures. \\Place{Waterdeep} is detailed in no less than 10 expanded maps,\n                    embellished with typical building interiors suitable for use in any campaign\n                    setting. In addition, a full-size poster of \\Place{Waterdeep} is provided,\n                    along with a grand-scale three-dimensional map of \\Place{Castle Waterdeep},\n                    hub of the city\'s government.\n                    In addition to all these maps, a 32-page City System booklet provides\n                    encounters and street scenes, special features and details of\n                    \\Place{Waterdeep}, and methods for creating types of buildings in moments and\n                    filling the pockets of those unfortunate enough to get in a player\n                    character\'s way. Designed for use with \\Place{Waterdeep}, these new features\n                    are suitable for use anywhere in the \\Place{Forgotten Realms}!\n                    It\'s all here---all you add is your imagination."
+}
+title: "City System"
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Elmore, Larry"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Graphics, Frey"
+}
+typographer {
+  name: "Elmore, Betty"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "600"
+  check: 2
+}
+isbn13 {
+}
+pages: 32
+system: ADND_1ST
+type: CAMPAIGN_EXPANSION
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "City System"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color maps"
+  number: 12
+}

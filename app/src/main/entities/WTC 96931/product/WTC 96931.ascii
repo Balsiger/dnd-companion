@@ -1,0 +1,35 @@
+template {
+  name: "WTC 96931"
+  world: "Dragonlance"
+  description: "This anthology showcases 20 years of storytelling in the \\Place{Dragonlance}\n  world by gathering into a single volume the most popular stories written by\n  the New York Times best-selling authors Margaret Weis and Tracy\n  Hickman. Their tales have defined the entire \\Place{Dragonlance} saga from\n  inception to the present day, from the \\Product{Chronicles} to the\n  \\Product{War of Souls} and beyond. Drawn from various \\Place{Dragonlance}\n  anthologies published over the last two decades, each classic story now\n  features an introduction from a \\Place{Dragonlance} author. Each introduction\n  is different and shares that author\'s perspective on the past 20 years of\n  \\Place{Dragonlance} tales."
+}
+title: "Dragons in the Archives: The Best of Weis & Hickman"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 2004
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3669"
+  check: 10
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

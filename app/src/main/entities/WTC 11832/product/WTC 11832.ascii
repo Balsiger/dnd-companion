@@ -1,0 +1,119 @@
+template {
+  name: "WTC 11832"
+  synonym: "WTC 88099"
+  world: "Forgotten Realms"
+  description: "\\Monster[Demon]{Demons} and \\Monster[Half-Demon]{half-demons},\n                    \\Monster[Dragon]{dragons} and \\Monster[Dragonkin]{dragonkin}, animated\n                    corpses and restless spirits, wielders of magic and eaters of spells: These\n                    are the creatures of \\Place{Faer\\hat{u}n}, the monsters of the\n                    \\Place{Forgotten Realms} \\Product[WTC 11836]{campaign setting}.\n                    \\Product[WTC 11832]{Monster Compendium: Monsters of Faer\\hat{u}n} contains\n                    scores of new monsters for use in the Dungeons & Dragons adventures. From the\n                    \\Monster[Aarakocra]{aarakocra} to the \\Monster[Tyrantfog Zombie]{Tyrantfog\n                    zombie}, these monsters present a whole new range of challenges.\n                    Although usable in any campaign, these monsters are especially suited for the\n                    \\Place{Forgotten Realms} \\Product[WTC 11836]{setting}---a world of great\n                    magic, terrible villains, and high adventure."
+}
+title: "Monsters of Faer\\hat{u}n"
+subtitle: "Mighty heroes deserve wicked foes"
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+editor {
+  name: "Maxwell, Duane"
+}
+cover {
+  name: "Brom"
+}
+cover {
+  name: "Higginbotham, Henry"
+}
+illustrator {
+  name: "Bader, Daren"
+}
+illustrator {
+  name: "Beard, Ed"
+}
+illustrator {
+  name: "Black, Theodor"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Despain, Brian"
+}
+illustrator {
+  name: "Fischer, Scott"
+}
+illustrator {
+  name: "Kaluta, Michael"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Martin, David E."
+}
+illustrator {
+  name: "Moore, Monte"
+}
+illustrator {
+  name: "Pollack, Alan"
+}
+illustrator {
+  name: "Rex, Adam"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Snoddy, Brian"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+typographer {
+  name: "Dorries, Erin"
+}
+manager {
+  name: "Baker, Richard L. III"
+}
+manager {
+  name: "Floyd, Sherry"
+}
+manager {
+  name: "Glenn, Sean"
+}
+manager {
+  name: "Murin, Dawn"
+}
+manager {
+  name: "Ziran, Justin"
+}
+manager {
+  name: "DeLong, Chas"
+}
+date {
+  year: 2001
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1832"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "WTC"
+series: "Monster Manual"
+price {
+  currency: "$ "
+  number: 2195
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

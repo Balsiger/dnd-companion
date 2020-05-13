@@ -1,0 +1,30 @@
+template {
+  name: "WTC 88603"
+  world: "None"
+  description: "The time has come.\n                    Every powerful wizard and fighter on the continent of \\Place{Otaria} wants\n                    one thing: power. One artifact can give them---undeniably---that which they\n                    seek, and nothing will stop any of them from possessing it.\n                    But in the end, only one can have it, and his actions will determine the fate\n                    of the world.\n                    The day of judgment has arrived."
+}
+title: "Judgment"
+author {
+  name: "McDermott, Will"
+}
+date {
+  year: 2002
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "Odyssey Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

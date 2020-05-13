@@ -1,0 +1,161 @@
+template {
+  name: "Dragon 357"
+  world: "Generic"
+  description: "Wilderness Demonomicon: \\God{Demogorgon} Defiled Monsters Feathers\n   and Fur \\NPC{Sememmon} Ecology of the \\Monster{Titan}"
+}
+title: "Dragon 357"
+subtitle: "Dragons"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Christensen, William L."
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Gable, Scott L."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "Jacob, James"
+}
+author {
+  name: "Krashos, George"
+}
+author {
+  name: "Logue, Nicolas"
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "Miller, Rick"
+}
+author {
+  name: "Noel, Scott"
+}
+author {
+  name: "Quimby, Nicolas"
+}
+author {
+  name: "Scott, Amber E."
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "managing editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "associate editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "associate editor"
+}
+cover {
+  name: "Hou, Andrew"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Dechamps, Eric"
+}
+illustrator {
+  name: "Dillon, Julie"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "art director"
+}
+typographer {
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising & marketing director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Davis, James"
+  job: "prepress"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+date {
+  year: 2007
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "Paizo"
+volume: "XXXII"
+number: "2"
+series: "Dragon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

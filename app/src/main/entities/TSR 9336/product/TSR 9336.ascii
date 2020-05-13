@@ -1,0 +1,41 @@
+template {
+  name: "TSR 9336"
+  synonym: "RR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Ravenloft"
+  description: "crypts filled with great wealth and powerful creatures"
+}
+title: "Book of Crypts"
+date {
+  year: 1991
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "142"
+  check: 3
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

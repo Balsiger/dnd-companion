@@ -1,0 +1,59 @@
+template {
+  name: "WTC 17971"
+  world: "Dragonlance"
+  description: "Darkness and unrest are growing. People disappear in the night, and there\n  are rumors of foul forces at work. To this land caught in the grips of a\n  nameless terror come \\NPC{Raistlin} and \\NPC{Caramon Majere}, two\n  brothers---one a wizard, one a warrior---who are trying to eke out a living\n  on the backroads of \\Place{Ansalon}. Desperate for money, they agree to take\n  on a job in the backwater village of \\Place{Mereklar}. But they soon discover\n  they may be in over their heads. A beautiful noblewoman, a savage beast, the\n  \\NPC{Queen of Darkness}, and a spellbound \\Monster{kender} will decide the\n  fates of the brothers Majere."
+}
+title: "Brothers Majere"
+subtitle: "Before the War of the Lance..."
+author {
+  name: "Stein, Kevin"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2971"
+  check: 5
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Three"
+series: "Preludes"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

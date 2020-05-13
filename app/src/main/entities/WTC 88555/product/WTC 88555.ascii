@@ -1,0 +1,76 @@
+template {
+  name: "WTC 88555"
+  world: "Forgotten Realms"
+  description: "When the \\Place{Shade Enclave} returns from thousands of years of exile in\n                    the \\Place{Plane of Shadow}, all of \\Place{Faer\\hat{u}n} is open to its dark\n                    designs.\n                    When a tribe of \\Monster{kenku} confront the archwizard who gave them magic\n                    but kept them as slaves, the skies rain death.\n                    When a knight of \\Place{Cormyr} journeys to the ruins of \\Place{Tilverton},\n                    he begins to understand the terrifying power of the archwizards.\n                    When \\Monster{phaerimm} roam the world, enslaving \\Monster{orc} and\n                    \\Monster{human} alike, the great powers of the world must depend on an ally\n                    as deadly as their enemy.\n                    Featuring new stories by best-selling \\Product{Forgotten Realms} authors,\n                    including R.A. Salvatore, Troy Denning, Ed Greenwood, and Elain Cunningham."
+}
+title: "Realms of Shadow"
+author {
+  name: "Smedman, Lisa"
+}
+author {
+  name: "Lebow, Jess"
+}
+author {
+  name: "Kemp, Paul S."
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Beaven, Jessica"
+}
+author {
+  name: "Salvatore, R.A."
+}
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Athans, Philip"
+}
+author {
+  name: "Leeder, Murray J.D."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Byers, Richard Lee"
+}
+author {
+  name: "Archer, Peter"
+}
+editor {
+  name: "Baldwin, Lizz"
+}
+cover {
+  name: "Sullivan, Jon"
+}
+date {
+  year: 2002
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2716"
+  check: 10
+}
+isbn13 {
+}
+pages: 340
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Anthology"
+series: "Return of the Archwizards"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

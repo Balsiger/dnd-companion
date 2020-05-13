@@ -1,0 +1,25 @@
+template {
+  name: "TSR 2708"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  description: "explore origins of Gamma World in Amazing Engine"
+}
+title: "Metamorphosis Alpha to Omega"
+date {
+  year: 1994
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+system: AMAZING_ENGINE
+price {
+  currency: "\302\254\302\243 "
+  number: 499
+  precision: 100
+}

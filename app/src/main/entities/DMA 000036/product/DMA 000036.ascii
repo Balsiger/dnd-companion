@@ -1,0 +1,19 @@
+template {
+  name: "DMA 000036"
+  synonym: "RP3"
+  reference {
+    name: "complete product listing"
+  }
+  description: "Unknown."
+}
+title: "Fighting Wheel Game Aid"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

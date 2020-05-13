@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5026"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Minotaur of the Maze & Crown"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

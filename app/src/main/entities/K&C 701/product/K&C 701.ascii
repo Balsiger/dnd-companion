@@ -1,0 +1,41 @@
+template {
+  name: "K&C 701"
+  description: "96 pages of classic KODT including a brand new storiy!!\n\n  Eight years ago the first \\bold{Knights of the Dinner Table} strip was\n  created as an afterthought - filler to take up space on the last page of the\n  small press games publication I was putting out in my spare time.\n\n  Since that time, \\bold{KODT} has appeared in numerous magazines and is now a\n  monthly comic book. It\'s been a strange and wonderful journey.\n\n  When it came time to start pulling the first three issues together for a\n  second printing, I found myself thinking back over that journey - from that\n  first strip to the current issue of the comic book.\n\n  KODT is a celebration, not a gaming, but of games themselves. For me the word\n  \'gamers\' is synonymous with the word \'friends\'. Perhaps that\'s why all those\n  letters to the KODT mailbox start out with that same familiar phrase, \'These\n  guys remind me of my friends\'.\n\n  Although J.R.R. Tolkien warned us not to \'ask to see the bones boiled to make\n  the soup\', I really don\'t think there would be any harm in asking that\n  question regarding the soup that\'s come to be known as \\Product{Knights of\n  the Dinner Table}.\n\n  The \'bones\' here are obviously friends and all those things that forge\n  lasting friendships; laughing, fighting, sharing, caring, etc..."
+}
+title: "Bundle of Trouble: Volume One"
+subtitle: "The First Three Issues of Knights of the Dinner Table Crammed Between Two Covers"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+  job: "reconstructive Assitance"
+}
+cover {
+  name: "Vrbanic, Gorge"
+}
+date {
+  year: 1999
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: COMICS
+style: BOOKLET
+producer: "K&C"
+number: "Volume One"
+series: "Knights of the Dinner Table"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

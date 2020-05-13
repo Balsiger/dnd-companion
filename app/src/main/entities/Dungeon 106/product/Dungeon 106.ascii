@@ -1,0 +1,119 @@
+template {
+  name: "Dungeon 106"
+  world: "Generic"
+  description: "This is issue 106 of the dungeon magazine, together with the\n   \\Product{Polyhedron 165} issue."
+}
+title: "Dungeon 106"
+author {
+  name: "Vaughan, Greg A."
+}
+author {
+  name: "Montano, Steven"
+}
+author {
+  name: "Wilber, James"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+cover {
+  name: "UDON"
+}
+cover {
+  name: "Campus, Roberto"
+}
+cover {
+  name: "Zubkavich, Jim"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Tsang, Arnold"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Janssen, Niklas"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "publisher"
+}
+manager {
+  name: "Beals, Matt"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "circulation director"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "chief executive officer"
+}
+manager {
+  name: "Franklin, Mary"
+  job: "director of marketing"
+}
+manager {
+  name: "Wertz, Vic"
+  job: "technical director"
+}
+manager {
+  name: "Head, Robert"
+  job: "webmaster"
+}
+date {
+  year: 2004
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 82
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "18 1"
+number: "106"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,38 @@
+template {
+  name: "MM 013"
+  description: "Some medieval furniture."
+}
+title: "Medieval Furniture Set"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+producer: "Dwarven Forge"
+price {
+}
+content {
+  part: MINIATURE
+  description: "torches"
+  number: 4
+}
+content {
+  part: MINIATURE
+  description: "table"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "bench"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "chair"
+  number: 6
+}

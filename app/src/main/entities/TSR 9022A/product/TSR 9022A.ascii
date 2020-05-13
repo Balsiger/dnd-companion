@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9022A"
+  synonym: "S1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Tomb of Horrors"
+date {
+  year: 1978
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 550
+  precision: 100
+}

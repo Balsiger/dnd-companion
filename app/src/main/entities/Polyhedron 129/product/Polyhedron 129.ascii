@@ -1,0 +1,86 @@
+template {
+  name: "Polyhedron 129"
+  world: "Generic"
+  description: "Issue 129 of Polyhedron."
+}
+title: "Polyhedron 129"
+author {
+  name: "John Brown"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Wayne Melnick"
+}
+author {
+  name: "John Richardson"
+}
+author {
+  name: "John A. Harnes"
+}
+author {
+  name: "Stephen H. Jay"
+}
+author {
+  name: "Stephen Kenson"
+}
+author {
+  name: "John Rateliff"
+}
+author {
+  name: "Gregory W. Detwiler"
+}
+author {
+  name: "Tom Prusa"
+}
+author {
+  name: "Morrow, David \'Pasha\'"
+}
+author {
+  name: "Gary S. Watkins"
+}
+author {
+  name: "Boyd, Eric L."
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "The Dark Continent"
+}
+manager {
+  name: "Lisa Stevens"
+  job: "Sabor"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Tantor"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "Bara & Horta"
+}
+manager {
+  name: "Paul Alan Timm"
+  job: "Bara & Horta"
+}
+date {
+  year: 1998
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 48
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "18"
+number: "2"
+series: "Polyhedron"
+price {
+}

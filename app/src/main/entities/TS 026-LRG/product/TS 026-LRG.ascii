@@ -1,0 +1,28 @@
+template {
+  name: "TS 026-LRG"
+  synonym: ""
+  description: "Large set of flames."
+  short_description: "Large set of flames."
+}
+title: "Flaming Wreckage - Large Set"
+subtitle: "Flaming Wreckage"
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: PACK
+producer: "Litko"
+price {
+}
+content {
+  part: MINIATURE
+  description: "Large Flaming Wreckage"
+  number: 3
+}
+layout: BLACK_AND_WHITE

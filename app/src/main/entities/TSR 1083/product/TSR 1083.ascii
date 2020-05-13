@@ -1,0 +1,124 @@
+template {
+  name: "TSR 1083"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{Home of \\NPC{Drizzt Do\'Urden} and famed city of the\n                    \\Monster[Drow]{drow} of the \\Place{Underdark}...}\n                    Ruled by the feared and respected Houses and their Matron Mothers,\n                    \\Place{Menzoberranzan} is a place of great nobility and great treachery. The\n                    priestesses of \\God{Lloth}, the \\God[Lloth]{Spider Queen}, demand (and\n                    receive) complete respect from the citizens of this mighty city. But what of\n                    the common folk---the drow of non-noble birth, the \\Monster[Human]{humans},\n                    and others?  What is their lot in life, in this magnificient den of intrigue?\n                    Three books in this boxed set explain the ways \\Place{Menzoberranzan} in\n                    detail. \\bold{Book One: The City} gives the reader a tour of the streets and\n                    districts, a wealth of information on various practices and customs, and an\n                    overview of daily life for each class of citizen (an non-citizen). \\bold{Book\n                    Two: The Houses} presents all eighteen major and minor Houses of the city,\n                    including the Matron Mothers and their immediate families, as well as any\n                    important advisers and accociates. \\bold{Book Three: The Adventure} gives\n                    players a chance to take their characters into the web of deceit and intrigue\n                    woven by the denizens of this famed city.\n                    Additionally, this boxed set includes:\n                    \\list\n                    {four connecting poster-size maps of the city proper;}\n                    {one poster map of the House \\Group{Baenre} compound;}\n                    {a poster showing the rivalries and alliances among all eighteen major\n                    and minor houses;}\n                    {a 16-page House \\Group{Do\'Urden} retrospective and the collected\n                    essays of \\NPC[Drizzt Do\'Urden]{Drizzt}}\n                    {twelve cardsheets containing in-depth statistics on main characters\n                    from Houses \\Group{Nurbonnis} and \\Group{Millithor}, and small maps\n                    for use in the adventure; and}\n                    {a full-color poster of the stunning box cover art by Jeff Easley.}\n                    \\emph{This boxed set is suitable for all levels of play.}"
+}
+title: "Menzoberranzan"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Salvatore, Robert A."
+}
+author {
+  name: "Leger, Michael"
+}
+author {
+  name: "Niles, Douglas"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Lombardo, Jame"
+}
+illustrator {
+  name: "Hill, Ron"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "production"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "graphic design"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+date {
+  year: 1992
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 240
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Book One: The City"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book Two: The House"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book Three: The Adventure"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The House Do\'Urden Retrospective"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "color card"
+  number: 12
+}
+content {
+  part: POSTER
+  description: "color"
+  number: 1073741824
+}

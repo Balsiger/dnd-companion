@@ -1,0 +1,33 @@
+template {
+  name: "WTC 96595"
+  world: "Dragonlance"
+  description: "\\NPC{Nearra} does not know who she is or where she lives, but she does know\n  one thing: someone wants her dead. Her only hope lies leagues away, in an\n  ancient temple, where healing clerics may be able to restore her memory.\n\n  A helpful young ranger, a failed warrior, a sneaky \\Monster{elf}, and a\n  \\Monster{kender} wizard offer to accompany \\NPC{Nearra} on her journey. She\n  soon learns her newfound friends have secrets of their own. As\n  \\Monster{goblins}, an angry \\Monster{minotaur}, and a vicious \\Monster{green\n  dragon} attempt to stop them at every turn, friendships are tested and all of\n  it may come to ruin from the one \\NPC{Nearra} trusts the most.\n\n  \\Product{Temple of the Dragonslayer} launches a new series of\n  \\Place{Dragonlance} adventures written specifically for readers ages 10 and\n  up. The series features a new group of young companions who band together for\n  friendship and excitement during the \\Event{golden age} of the\n  \\Place{Dragonlance} world. Author Tim Waggoner has written frequently for\n  young readers, and his novels and short stories have been nominated for\n  numerous writing awards."
+}
+title: "Temple of the Dragonslayer"
+author {
+  name: "Waggoner, Tim"
+}
+date {
+  year: 2004
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3321"
+  check: 6
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "The New Adventures"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

@@ -1,0 +1,45 @@
+template {
+  name: "WTC 96704"
+  world: "Forgotten Realms"
+  description: "\\emph{From out of the deepest forests comes the most unlikely ally in a war\n                    for a city\'s heart.}\n                    Sides have been chosen, traitors have been revealed, and masks have come off\n                    the most secretive of \\Place{Arrabar}\'s elite---friends and foes alike. All\n                    that\'s left is to fight it out.\n                    \\large{The scions of \\Place{Arrabar}}\n                    Heirs to a legacy of blood and steel struggle for control of a nation of\n                    mercenaries ad odds with its neighbors and at war with itself.\n                    This is the concluding novel in a trilogy exploring the political intrigue\n                    of a mercenary society in the \\Place{Forgotten Realms} world. Author Thomas\n                    M. Reid has written the entire trilogy, which takes place in an area of the\n                    world little before explored in novels."
+}
+title: "Emerald Sceptre"
+leader: "The"
+subtitle: "The Scions of Arrabar"
+author {
+  name: "Reid, Thomas M."
+}
+cover {
+  name: "Meyers, Duane O."
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2005
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3754"
+  check: 8
+}
+isbn13 {
+}
+pages: 309
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "Scions of Arrabar"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

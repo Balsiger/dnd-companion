@@ -1,0 +1,40 @@
+template {
+  name: "TSR 9496"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+  description: "the greatest foe of evil revealed"
+}
+title: "Van Richten\'s Guide to the Vistani"
+author {
+  name: "Wise, David"
+}
+date {
+  year: 1995
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0155"
+  check: 1
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+series: "Van Richten\'s Guide"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}

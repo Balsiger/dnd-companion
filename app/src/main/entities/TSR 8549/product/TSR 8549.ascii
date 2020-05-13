@@ -1,0 +1,49 @@
+template {
+  name: "TSR 8549"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{Torn Between Love of Country and Love of Queen...}\n                    The rise of a new queen has shattered the ancient peace of the \\Place{Ice\n                    Spires}. For more than a year, the \\Monster{giant} tribes standing ready to\n                    invade \\Place{Hartsvale} have been held at bay by a lone scout armed with a\n                    single golden arrow.\n                    But time has now run out for the lonely realm.\n                    When \\Monster{giants} trap \\NPC{Queen Brianna} in a remote citadel,\n                    \\NPC{Tavis Burdun} must undertake a harrowing journey to summon\n                    help---entrusting \\NPC{Brianna}\'s safety to a rival for her love. The scout\n                    soon learns that the greatest danger to his beloved is posed not by the horde\n                    of \\Monster{giants} gathering to storm the citadel, but by a spy lurking\n                    within. To save his beloved, \\NPC{Tavis} must unmask the traitor..."
+}
+title: "Giant Among Us"
+leader: "The"
+author {
+  name: "Denning, Troy"
+}
+cover {
+  name: "Lakey, John"
+}
+cover {
+  name: "Lakey, Laura"
+}
+date {
+  year: 1995
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 314
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Two"
+series: "Twilight Giants"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

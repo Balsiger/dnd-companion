@@ -1,0 +1,25 @@
+template {
+  name: "DMA 000002"
+  description: "Catalog of the 1991 spring/summer stock of TSR."
+}
+title: "1991 Spring/Summer Catalog"
+date {
+  year: 1991
+}
+isbn {
+}
+isbn13 {
+}
+pages: 8
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

@@ -1,0 +1,111 @@
+template {
+  name: "Dungeon 85"
+  world: "Generic"
+  description: "This is issue 85 of the dungeon magazine."
+}
+title: "Dungeon 85"
+author {
+  name: "Peter Zollers"
+}
+author {
+  name: "James Jacobs"
+}
+author {
+  name: "Talanay, Anthony"
+}
+author {
+  name: "Matthew G. Adkins"
+}
+author {
+  name: "Perkins, Chris"
+}
+editor {
+  name: "Perkins, Chris"
+}
+editor {
+  name: "Stacie A. Fiorito"
+}
+editor {
+  name: "Haddock, Eric"
+}
+editor {
+  name: "Matthew Sernett"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+cover {
+  name: "Marc Sasso"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Wayne Reynolds"
+}
+illustrator {
+  name: "Marc Sasso"
+}
+illustrator {
+  name: "Tony DiTerlizzi"
+}
+manager {
+  name: "Perkins, Christopher"
+}
+manager {
+  name: "John Dunn"
+}
+manager {
+  name: "Maas, Bobbi"
+}
+manager {
+  name: "Pierce Watters"
+}
+manager {
+  name: "Bob Henning"
+}
+manager {
+  name: "Miesner, Dawnelle"
+}
+manager {
+  name: "Chung, Alice"
+}
+manager {
+  name: "Wendy Noritake"
+}
+manager {
+  name: "Johnny Wilson"
+}
+date {
+  year: 2001
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XV 1"
+number: "85"
+series: "Dungeon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "monster tokes (set 1)"
+  number: 1073741824
+}

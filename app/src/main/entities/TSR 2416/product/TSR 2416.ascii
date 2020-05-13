@@ -1,0 +1,65 @@
+template {
+  name: "TSR 2416"
+  synonym: "DSE1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dark Sun"
+  description: "epic adventure all over Dark Sun, level 11+"
+}
+title: "Dragon\'s Crown"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1993
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "567"
+  check: 4
+}
+isbn13 {
+}
+pages: 304
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "maps"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "card"
+  number: 6
+}

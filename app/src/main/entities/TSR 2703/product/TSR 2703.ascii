@@ -1,0 +1,53 @@
+template {
+  name: "TSR 2703"
+  synonym: "AM4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "rules for Magitech items"
+}
+title: "Magitech"
+author {
+  name: "Tim Beach"
+}
+date {
+  year: 1993
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "661"
+  check: 1
+}
+isbn13 {
+}
+pages: 128
+system: AMAZING_ENGINE
+type: RULES_SUPPLEMENT
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "sheet"
+  number: 1073741824
+}

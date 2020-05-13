@@ -1,0 +1,46 @@
+template {
+  name: "TSR 9584"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "Al-Qadim"
+  description: "Once, the \\Group{Tribe of Altair} roamed the sands, free as the great eagle\n                    on the wind. Now, caged by an evil mage, these desert riders yearn for their\n                    lots freedom. But Fate takes a hand as a noble \\Monster{djinn} seeks to\n                    fulfill an ancient wish...\n                    In this unusual three-part scenario, players first take the roles of the men\n                    of the tribe, who stage a revolt after being enslaved in the \\Place{Pit of\n                    the Laughing \\Monster{Efreeti}} and then try to battle their way to\n                    freedom. In the second part, the PCs are the women of the tribe, who must\n                    escape the evil flame mage\'s harem and use all their wits to win free of a\n                    strange city. Finally, the children of the tribe have to slip away from an\n                    evil temple before they can be scrificed, which calls for them to embark on a\n                    magic carpet ride that promises to be the adventure of their lifetimes.\n                    \\emph{An \\Product{Al-Qadim} adventure for up to six characters.}"
+}
+title: "Reunion"
+date {
+  year: 1998
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1196"
+  check: 4
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

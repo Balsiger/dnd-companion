@@ -1,0 +1,37 @@
+template {
+  name: "TSR 9385"
+  synonym: "WGQ1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Greyhawk"
+  description: "stop the orc invasion"
+}
+title: "Patriots of Ulek"
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "449"
+  check: 10
+}
+isbn13 {
+}
+system: ADND_1ST
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

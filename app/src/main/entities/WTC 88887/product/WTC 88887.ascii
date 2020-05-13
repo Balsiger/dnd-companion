@@ -1,0 +1,44 @@
+template {
+  name: "WTC 88887"
+  world: "Star Wars"
+  description: "Countless inhabitable worlds are scattered throughout the farthest reaches\n  of the galaxy, each one home to its own secrets and surprises. From the droid\n  factory on \\Place{Geonosis} and the cloning facilities on \\Place{Kamino} to\n  the floating rock garden of \\Place{Ryloth} and the spice mines of\n  \\Place{Kessel}, an endless variety of adventures, opportunities, and other\n  entanglements await in the \\Place{Outer Rim}.\n\n  Other features\n\n  \\list\n  {Detailed descriptions of 26 planets in the \\Place{Outer Rim} region of the\n   galaxy}\n  {Historical information that spans all three major eras, descriptions of\n   indigenous populations, and key locations for each planet}\n  {Special emphasis on \\Place{Geonosis} and \\Place{Kamino}, including\n   characters and locations introduced in Episode II: Attack of the Clones}\n  {Gamemaster-only sections for each planet with supporting characters,\n   adventure hooks, new creatures, aliens, vehicles, and gear}\n\n  To use this sourcebook, you also need the \\Place{Star Wars Roleplaying Game\n  Revised} Core Rulebook."
+}
+title: "Geonosis and the Outer Rim Worlds"
+subtitle: "Adventure lies at the edge of the galaxy"
+author {
+  name: "Carey, Craig R."
+}
+author {
+  name: "Fly, Jason"
+}
+author {
+  name: "Quick, Jeff"
+}
+author {
+  name: "Quinn, Jeffrey"
+}
+author {
+  name: "Wallace, Daniel"
+}
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3133"
+  check: 7
+}
+isbn13 {
+}
+pages: 160
+system: D20
+type: SOURCEBOOK
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

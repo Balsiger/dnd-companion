@@ -1,0 +1,57 @@
+template {
+  name: "WTC 96540"
+  world: "Forgotten Realms"
+  description: "This brand-new hardcover from popular \\Place{Forgotten Realms} author Ed\n                    Greenwood chronicles the latest events in the life of the wizard\n                    \\NPC{Elminster}, Greenwood\'s signature character. \\Product{Elminster\'s\n                    Daughter} is the first new title from Greenwood in nearly two years."
+}
+title: "Elminter\'s Daughter"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3199"
+  check: 10
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "5"
+series: "Elminster Series"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

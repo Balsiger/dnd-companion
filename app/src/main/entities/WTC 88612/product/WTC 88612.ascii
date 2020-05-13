@@ -1,0 +1,40 @@
+template {
+  name: "WTC 88612"
+  world: "Forgotten Realms"
+  description: "\\large{It is good to be home.\n                    It is good to hear the wind of \\Place{Icewind Dale}, to feel its invigorating\n                    bite, like some reminder that I am alive.}\n                    \\NPC{Drizzt Do\'Urden} and his companions take to the road and sea in search\n                    for their missing friend \\NPC{Wulfgar}. Their only clue in this\n                    life-and-death hunt is the mark of the barbarian\'s lost \\Item{warhammer}\n                    \\Item{Aegis-fang}, found branded on the back of a vicious outlaw. As they\n                    travel along the reaches of the \\Place{Sword Coast}, the companions grapple\n                    with the puzzle \\NPC{Wulfgar}\'s life has become, and they slowly uncover the\n                    terrible pain that lies at its center."
+}
+title: "Sea of Swords"
+author {
+  name: "Salvatore, Robert A."
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+date {
+  year: 2002
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 410
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "4"
+series: "Paths of Darkness"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "the text"
+  number: 1073741824
+}

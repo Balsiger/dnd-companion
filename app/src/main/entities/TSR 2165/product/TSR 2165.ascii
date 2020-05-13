@@ -1,0 +1,50 @@
+template {
+  name: "TSR 2165"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  world: "Generic"
+  description: "A lot of spells from \\Spell{A Summons One Dares Not Deny} to\n                    \\Spell{Dweomderdoom, Khelben\'s}"
+}
+title: "Wizard\'s Spell Compendium, Volume One"
+date {
+  year: 1996
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0436"
+  check: 4
+}
+isbn13 {
+}
+pages: 288
+system: ADND_REVISED
+audience: ALL
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+number: "Volume One"
+series: "Wizard\'s Spell Compendium"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

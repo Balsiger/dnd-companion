@@ -1,0 +1,23 @@
+template {
+  name: "TSR 2019S"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Dungeoneer\'s Survival Guide / Dark & Hidden Ways set"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

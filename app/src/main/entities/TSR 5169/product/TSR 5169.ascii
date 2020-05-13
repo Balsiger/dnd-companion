@@ -1,0 +1,23 @@
+template {
+  name: "TSR 5169"
+  reference {
+    name: "catalog95"
+  }
+  description: "monthly assortment of all new TSR products"
+}
+title: "TSR 1995 New Product Monthly Assortment Program, May"
+date {
+  year: 1995
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0347"
+  check: 3
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

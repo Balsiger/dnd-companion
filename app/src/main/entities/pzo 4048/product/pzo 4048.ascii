@@ -1,0 +1,42 @@
+template {
+  name: "pzo 4048"
+  category: "map"
+  synonym: "Pathfinder Map Pack: Dungeon Rooms"
+  world: "Generic"
+  description: "Ancient halls whisper of the lost past, and only the bravest dare to seek their buried secrets! Paizo Publishing\'s latest Pathfinder Map Pack provides simple and elegant tools for the busy Game Master. These 5\" \303\227 8\" map tiles can be positioned to form a variety of ominous dungeon rooms, or combined with tiles from Pathfinder Map Pack: Dungeon Corridors and Pathfinder Map Pack: Dungeon Dangers to create an enormous megadungeon. Inside, you\'ll find 18 richly illustrated map tiles, including:\n\n\\list{Battle-Scarred Hall}\n{Columned Corner}\n{Columned Vault}\n{Crumbling Corner}\n{Ruined Chamber}\n{Side Gallery}\n\nGame Masters shouldn\342\200\231t waste their time sketching maps every time characters step into a dusty subterranean hall. With Pathfinder Map Pack: Dungeon Rooms, you\342\200\231ll always be ready no matter which way your adventurers turn!"
+  short_description: "A set of dungeon room maps."
+}
+title: "Dungeon Rooms"
+subtitle: "Chambers of Mystery"
+cartographer {
+  name: "Engle, Jason"
+}
+date {
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "621"
+  check: 8
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: SHEETS
+producer: "Paizo"
+series: "Map Pack"
+series: "Pathfinder Map Pack"
+price {
+  currency: "$1"
+  number: 399
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 18
+}
+layout: FULL_COLOR

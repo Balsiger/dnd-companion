@@ -1,0 +1,40 @@
+template {
+  name: "TSR 2401"
+  synonym: "DS1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dark Sun"
+  description: "slave revolt, beginning-level"
+}
+title: "Freedom"
+date {
+  year: 1992
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}

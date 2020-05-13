@@ -1,0 +1,46 @@
+template {
+  name: "TSR 8390"
+  synonym: "WTC 86665"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Dragonlance"
+  description: "A year has passed since the \\Event{Chaos War} threatened \\Place{Krynn}. In\n  the east, on the \\Place{Dairly Plains}, the hard-won peace is shattered by a\n  new threat: the \\Monster{red dragon} \\NPC{Malystryx}.\n\n  The \\Monster{kender} \\NPC{Kronn-alin Thistleknot} travels to\n  \\Place{Abanasinia} with his older sister \\NPC{Catt}. Together they seek\n  heroes to stop the \\Monster{dragon} from destroying \\Place{Kendermore}.\n\n  \\NPC{Riverwind}, aging chieftain of the \\Group{Que-Shu}, answers the call.\n\n  Accompanied by his beloved daughter \\NPC{Brightdawn}, \\NPC{Riverwind} sets\n  out in his final quest to save the \\Monster{kender} from \\NPC{Malys}\'s\n  wrath... and to find sense in a world abandoned by the gods.\n\n  Chris Pierson\'s novel tells the stirring tale of the final quest of\n  \\NPC{Riverwind}, one of the original companions of the best-selling\n  \\Place{Dragonlance} series."
+}
+title: "Spirit of the Wind"
+author {
+  name: "Pierson, Chris"
+}
+date {
+  year: 1998
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1174"
+  check: 3
+}
+isbn13 {
+}
+pages: 346
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Volume One"
+series: "Bridges of Time"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

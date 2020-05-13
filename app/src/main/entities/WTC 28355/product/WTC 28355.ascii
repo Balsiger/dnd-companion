@@ -1,0 +1,56 @@
+template {
+  name: "WTC 28355"
+  world: "Generic"
+  description: "The mysterious \\Class{cleric} \\NPC{Kri Redhal} has come to the \\Place{Nentir Vale} on a mission. He claims allegiance to the \\Group{Order of Vigilance}, custodians of the \\Item{Voidharrow} --- a malefic crystalline liquid taken from the heart of the dead \\Place{Abyss}.\n\n\\NPC{Hakken Raid} was given a key to the mysteries of an ancient \\Monster{rakshasa} temple and the treasures it contains. What it unlocks has the power to change not only his life, but the entire world.\n\n\\NPC{Albanon}, heir to the last keeper of the \\Item{Voidharrow}, finds himself at the center of a centuries-old struggle to contain an otherwordly evil. It is his fault the substance is lost.\n\nAs the evidence of the transformative power of the \\Item{Voidharrow} spreads like a plague throughout the land, our heroes rush to uncover the extent of its infection. What they find is a new kind of evil."
+  short_description: "An abyssal plague story set in \\Place{Grayhawk}."
+}
+title: "Temple of Yellow Skulls"
+leader: "The"
+subtitle: "Born of the Liquid \\Place{Abyss}, the World Knows a New Affliction..."
+author {
+  name: "Bassingthwaite, Don"
+}
+editor {
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Bob"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2011
+  month: 3
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5749"
+  check: 1
+}
+pages: 372
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "The Abyssal Plague"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

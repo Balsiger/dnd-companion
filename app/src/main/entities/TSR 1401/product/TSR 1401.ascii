@@ -1,0 +1,25 @@
+template {
+  name: "TSR 1401"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+  description: "Game system with video support."
+}
+title: "Wildspace"
+date {
+  year: 1994
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+system: WILD_SPACE
+type: CAMPAIGN_SETTING
+producer: "TSR"
+price {
+  currency: "$"
+  number: 3995
+  precision: 100
+}

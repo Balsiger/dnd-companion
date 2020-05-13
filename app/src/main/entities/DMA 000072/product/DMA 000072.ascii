@@ -1,0 +1,24 @@
+template {
+  name: "DMA 000072"
+  world: "Generic"
+  description: "The Dungeon Master Screen for D&D 3.5"
+}
+title: "Dungeon Master Screen 3.5"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+pages: 1
+system: DND_3_5
+type: ACCESSORY
+style: SCREEN
+series: "Screen"
+price {
+}
+content {
+  part: SCREEN
+  number: 1073741824
+}
+layout: FULL_COLOR

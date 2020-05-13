@@ -1,0 +1,57 @@
+template {
+  name: "WTC 21099"
+  description: "War is coming. \nBut do not be afraid. \nI hear your prayers. \nWith me to lead you, \nYou will butcher them to the last man.\n\n. . . and you will worship me as such.\n\n\\NPC{Aoth} and the \\Group{Brotherhood of the Griffon} succeeded in rescuing \\NPC{Tchazzar}, the lost king of \\Place{Chessenta} and a formidable \\Monster{red dragon}. Upon his return \\NPC{Tchazzar} rewards them greatly, sends them back to the frontlines--and names himself a god. Increasingly erratic in the war against the powerful \\Monster{dracolich}, \\NPC{Tchazzar} begins to move in ways that make \\NPC{Aoth} suspicious that the \\Group{Brotherhood} may be just a pawn in a cutthroat draconic game that puts whole kingdoms at risk--a game played for a stakes of gold and blood.\n\n\\Place{Whisper of Venom} features the return of popular character \\NPC{Aoth} and his mercenary band, the \\Group{Brotherhood of the Griffin}, introduced in Richard Lee Byers\'s trilogy \\Product{The Haunted Lands}. Incredible art and Byers\'s signature twisted plots make this a must-have for all true \\Place{Forgotten Realms} fans."
+  short_description: "Book II of the Brotherhood of the Griffon trilogy."
+}
+title: "Whisper of Venom"
+subtitle: "I am a god . . ."
+author {
+  name: "Byers, Richard Lee"
+}
+editor {
+}
+cover {
+  name: "Kotaki, Kekai"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2010
+  month: 11
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5561"
+  check: 9
+}
+pages: 340
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book II"
+series: "Brotherhood of the Griffon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Book"
+  number: 1
+}
+required_requirements: "WTC 25153"
+required_requirements: "WTC 31682"
+layout: COLOR_COVER

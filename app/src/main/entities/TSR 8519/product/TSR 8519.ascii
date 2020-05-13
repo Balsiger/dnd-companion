@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8519"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Duel of the Masters"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Twenty-one"
+price {
+}

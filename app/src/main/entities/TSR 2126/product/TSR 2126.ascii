@@ -1,0 +1,89 @@
+template {
+  name: "TSR 2126"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Al-Qadim"
+  description: "\\Item{Magic carpets}, ghoulish \\Monster{vixens}, \\Monster{genies} rising\n                    from the sand in a whirlwind of smoke and fire---such wonders, spun into\n                    tales by the fable \\NPC{Scheherazade}, enchanted a king for a thousand and\n                    one nights.\n                    The \\Place{Al-Qadim} campaign will enchant role-players for a thousand and\n                    one more.\n                    You are about to discover an exotic realm inspired by the tales of\n                    \\NPC{Sindbad}, \\NPC{Ali Baba}, and other classics from the \\emph{Arabian\n                    Nights}. The first in a series of products, this volume features everything\n                    DMs and players need to launch the \\Place{Al-Qadim}\\footnote{pronounced\n                    \'ahl-kah-DEEM\', meaning \'the ancient\'} campaign:\n                    \\list\n                    {New rules for adventure, including desert survival, turning the hand\n                    of Fate, and averting the mysterious power of the evil eye}\n                    {New roles to play: bold desert raiders, swashbuckling corsairs,\n                    clandestine slayers, mystic clerics, wizards of fire, sorcerers who\n                    command the genies, and more---over 20 roles in all!}\n                    {New proficiencies, from camel-riding to haggling at the bazaar}\n                    {New spells and a unique realm of magic, featuring the provinces of\n                    flame, wind, sea, and sand}\n                    {An introduction to \\Place{Zakhara}, the \\Place{Land of Fate}, a new\n                    setting for the \\Place{Al-Qadim} campaign.}\n                    \\large{Your flying carped awaits: step aboard and let the magical journey\n                    begin}"
+}
+title: "Arabian Adventures"
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Hayday, Andria"
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Bober, Richard"
+}
+illustrator {
+  name: "Fields, Fred"
+}
+illustrator {
+  name: "Mayo, Henry"
+}
+illustrator {
+  name: "Barnard, Bryn"
+}
+illustrator {
+  name: "Heyer, Carol"
+}
+typographer {
+  name: "Hayday, Andria"
+}
+typographer {
+  name: "Tabat, Stephanie"
+}
+typographer {
+  name: "Barnett, Dee"
+}
+typographer {
+  name: "Feggestad, Sarah"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordinator"
+}
+manager {
+  name: "Knecht, John"
+  job: "production"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "358"
+  check: 2
+}
+isbn13 {
+}
+pages: 160
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

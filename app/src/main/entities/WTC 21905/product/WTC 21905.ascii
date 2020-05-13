@@ -1,0 +1,45 @@
+template {
+  name: "WTC 21905"
+  synonym: "WTC 88697"
+  world: "Forgotten Realms"
+  description: "For \\Place{Evereska}, the last \\Monster{elven} refuge on\n                    \\Place{Faer\\hat{u}n}, it\'s a battle for survival.\n                    For the \\NPC{Chosen of \\God{Mystra}}, it\'s a potent rival for their goddess\'s\n                    dominion over magic.\n                    For the human realms of \\Place{Faer\\hat{u}n}, it\'s a permanent shift in the\n                    balance of power.\n                    For a lost race of powerful archwizards, it\'s a flying mountain they call\n                    home.\n                    From the author of \\Product{The Summoning}, \\Product{Beyond the High Road},\n                    and \\Product{Death of the Dragon} (with Ed Greenwood), the Realms-shaking\n                    \\Product{Return of the Archwizards} series continues!"
+}
+title: "Siege"
+leader: "The"
+author {
+  name: "Denning, Troy"
+}
+cover {
+  name: "Sullivan, Jon"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2001
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1905"
+  check: 1
+}
+isbn13 {
+}
+pages: 343
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "Return of the Archwizards"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

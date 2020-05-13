@@ -1,0 +1,46 @@
+template {
+  name: "TSR 9356"
+  synonym: "CR1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "cards with wizard spells"
+}
+title: "Wizard Spell Cards"
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "364"
+  check: 7
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

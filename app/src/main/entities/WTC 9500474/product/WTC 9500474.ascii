@@ -1,0 +1,127 @@
+template {
+  name: "WTC 9500474"
+  world: "Generic"
+  description: "\\emph{The tyranny of the \\NPC{Iron Regent} ended the night \\Place{Castle\n                    Ferrule} sank into the earth, but the regent\'s former minions continue to\n                    kidnap villagers from their homesteads, and an even greater threat stirs\n                    below the despot\'s crumbled fortress. In the magma-filled caverns beneath the\n                    ruins, a sinister obelisk called the \\Item{Hellspike} holds the secret to one\n                    \\Monster{fiend}\'s power over the realm. Can you thwart the \\Monster{fiend}\'s\n                    wicked plans in time?}\n                    \\Product{Hellspike Prison} is the second in the \\Product{Fantastic Locations}\n                    series of products. It contains two beautifully illustrated, double-sided\n                    battle maps scaled for Dungeons & Dragons play, as well as an encounter\n                    booklet. The battle maps feature fantastic terrain designed to create large,\n                    fluid encounters, key scenes and exciting game sessions. Rather than simple\n                    dungeon encounters, these maps generate the epic struggles that campaign\n                    memories are made of.\n                    Three of the maps also make ideal battlegrounds for D&D \\Product{Miniatures\n                    Game} play. Build your warband and fight for control of the \\Place{Mushroom\n                    Cavern}, the \\Place{Magma Ruins}, or the dreaded \\Place{Hellspike\n                    Prison}. The encounter booklet includes both roleplaying game encounters and\n                    miniatures game options for use with the four battle maps.\n                    \\Product{Fantastic Locations: Hellspike Prison} features two double-sided\n                    poster maps designed for roleplaying and miniatures skirmish play, plus an\n                    accompanying 16-page adventure that can be dropped into any campaign. Enemies\n                    include creatures from the recent Underdark miniatures expansion. Miniatures\n                    skirmish scenarios are included for additional play options. The two poster\n                    maps can be put together to form the fiery underdark cavern known as\n                    \\Product{Hellspike Prison}, while the reverse sides feature other fantastic\n                    underdark locations players can explore."
+}
+title: "Hellspike Prison"
+subtitle: "Vanquish Evil in the Fiery Pits"
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "additional design"
+}
+author {
+  name: "Heinsoo, Rob"
+  job: "additional design"
+}
+author {
+  name: "Decker, Jesse"
+  job: "development team"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "development team"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "development team"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Tsai, Francis"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+illustrator {
+  name: "Longstreet Tracy"
+  job: "senior art director RPG"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director or RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3848"
+  check: 10
+}
+isbn13 {
+}
+pages: 16
+system: DND_3RD
+type: ACCESSORY
+style: PAPERBACK
+series: "Fanstastic Locations"
+price {
+  currency: "$ "
+  number: 1495
+  precision: 100
+}
+content {
+  part: COVER
+  description: "color"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "encounter"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "color poster"
+  number: 2
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 96582"

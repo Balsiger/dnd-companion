@@ -1,0 +1,39 @@
+template {
+  name: "TSR 21751"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "\\bold{Now, learn the behind-the-scenes story of this long-awaited fantasy\n  epic in \\Product{The Making of Dungeons & Dragons The Movie}}.\n\n  \\list\n  {Read interviews with the people who finally brought the world\'s\n   greatest role-playing game to the big screen.}\n  {Discover the origins of the film\'s masterfully evil villain and bold\n   heroes.}\n  {Follow the film\'s special-effects masters as they bring\n   fire-breathing dragons to life.}\n  {Learn the trials and triumphs of the film shoot in the ancient city\n   of \\Place{Prague}}\n\n  \\Product{The Making of Dungeons & Dragons: The Movie} is a magical carpet\n  ride that will thrill and entertain everyone from master players who have\n  love the D&D game for two decades to strangers in these fantastic\n  worlds. Bring your imagination and enjoy the show!"
+}
+title: "Making of Dungeons & Dragons: The Movie"
+leader: "The"
+author {
+  name: "John Baxter"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1751"
+  check: 2
+}
+isbn13 {
+}
+pages: 128
+system: NONE
+audience: ALL
+type: SPECIAL_BOOK
+style: SOFT_COVER
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

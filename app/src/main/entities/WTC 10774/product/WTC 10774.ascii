@@ -1,0 +1,50 @@
+template {
+  name: "WTC 10774"
+  description: "Ancient ruins buried beneath the desert wastes are infested by deadly monsters. Deep within the sandy tombs, \\Monster{mummies} and swarms of \\Monster{scarab beetles} guard priceless treasure, \\Monster{yuan-ti} cultists scheme, \\Monster{umber hulks} delve, and \\Monster{drow} \\Monster{elves} plan their next invasion.\n                    \\large[Ancient Evil Never Dies}\n                    Create classic battles when you collect all 60 miniatures in the \\Product{Desort of Desolation} set. Use a mix of adventuring heroes, dungeon denizes, and other archetypal monsters to compete against your friends in fast, head-to-head combat, or to create thrilling D&D adventures."
+}
+title: "Desert of Desolation"
+subtitle: "Denizens of the Dungeon Surge Forth!"
+date {
+  year: 2007
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4351"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4351"
+  check: 7
+}
+system: DND_3_5
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+series: "D&D Miniatures"
+price {
+  currency: "$"
+  number: 1499
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "randomized, fully painted, plastic"
+  number: 8
+}
+content {
+  part: CARD
+  description: "full color, game stats"
+  number: 8
+}
+content {
+  part: SHEET
+  description: "Miniatures list"
+  number: 1
+}
+optional_requirements: "WTC 96582"
+layout: FULL_COLOR

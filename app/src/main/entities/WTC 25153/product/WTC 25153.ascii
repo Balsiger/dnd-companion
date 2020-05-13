@@ -1,0 +1,50 @@
+template {
+  name: "WTC 25153"
+  world: "Forgotten Realms"
+  description: "He saves his people.\n                    He rose from the dead.\n                    Now that we need him, He will com again.\n                    We only have to believe.\n                    \\large{...when the \\Monster{Red Dragon} was king.} "
+  short_description: "Brotherhood fo the Griffon, Book I"
+}
+title: "Captive Flame"
+leader: "The"
+subtitle: "Nobody dared to Cross \\NPC{Chessenta}..."
+author {
+  name: "Byers, Richard Lee"
+}
+cover {
+  name: "Kotaki, Kekai"
+}
+date {
+  year: 2010
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5396"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5396"
+  check: 7
+}
+pages: 374
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book I"
+series: "Brotherhood of the Griffon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

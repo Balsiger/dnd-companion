@@ -1,0 +1,31 @@
+template {
+  name: "WTC 88778"
+  world: "Dragonlance"
+  description: "This annotated version of \\Product{Dragons of Autumn Twilight},\n  \\Product{Dragons of Winter Night}, and \\Product{Dragons of Spring Dawning}\n  contains extensive notes by New York Times bestselling authors Margaret Weis\n  and Tracy Hickman, as well as commentary from the original members of the\n  \\Place{Dragonlance} conceptual team."
+}
+title: "Annotate Chronicles"
+leader: "The"
+date {
+  year: 2002
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1870"
+  check: 5
+}
+isbn13 {
+}
+pages: 1312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Dragonlance Chronicles"
+price {
+  currency: "$ "
+  number: 2795
+  precision: 100
+}

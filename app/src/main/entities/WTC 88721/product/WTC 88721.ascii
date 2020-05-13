@@ -1,0 +1,34 @@
+template {
+  name: "WTC 88721"
+  world: "Dragonlance"
+  description: "This third title in \\Product{The Minotaur Wars} trilogy concludes the tale\n  of the fallout from the end of the New York Times best-selling \\Product{War\n  of Souls} series."
+}
+title: "Empire of Blood"
+author {
+  name: "Knaak, Richard A."
+}
+date {
+  year: 2005
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3733"
+  check: 5
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume Three"
+series: "The Minotaur Wars"
+price {
+  currency: "$ "
+  number: 2795
+  precision: 100
+}

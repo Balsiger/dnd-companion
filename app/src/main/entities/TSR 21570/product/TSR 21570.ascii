@@ -1,0 +1,34 @@
+template {
+  name: "TSR 21570"
+  reference {
+    name: "net"
+  }
+  world: "None"
+}
+title: "Prophecy"
+author {
+  name: "Vance Moore"
+}
+date {
+  year: 2000
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1570"
+  check: 6
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "Masquerade Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

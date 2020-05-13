@@ -1,0 +1,53 @@
+template {
+  name: "TSR 8335P"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "Deep beneath the mountain fortress of \\Place{Skullcap}, legend has it, are\n  the remains of the dark \\Class{wizard} \\NPC{Fistandantilus} and the path to\n  the gates of the \\Monster{dwarven} kingdom of \\Place{Thorbardin}. Buried\n  somewhere along that perilous path is the magical \\Item{helm of\n  \\NPC{Grallen}}, son of \\NPC{King Duncan}, tragic hero of the \\Event{Dwarfgate\n  War}. The finder of \\Item{\\NPC{Grallen}\'s helm}, it is prophesized, will be\n  rewarded and honored by a united \\Place{Thorbardin} -- but he will also open\n  the gates of the realm to fresh horror and chaos.\n\n  In \\Product{The Gates of Thorbardin}, Dan Parkinson, author of\n  \\Product{Starsong}, continues the history of the \\Monster{dwarves} of\n  \\Place{Krynn} in the tradition of Nancy Varian Berberick\'s best-selling\n  \\Place{Dragonlance} novel, \\Product{Stormblade}."
+}
+title: "Gates of Thorbadin"
+leader: "The"
+subtitle: "Magic and Peril Under the Earth"
+author {
+  name: "Parkinson, Dan"
+}
+date {
+  year: 1990
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "912"
+  check: 5
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume Five"
+series: "Heroes Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

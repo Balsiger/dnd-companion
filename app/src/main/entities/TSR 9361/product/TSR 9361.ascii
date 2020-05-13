@@ -1,0 +1,71 @@
+template {
+  name: "TSR 9361"
+  synonym: "SRJ5"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "Welcome to the \\Place{city of twilight}, the \\Place{city of thieves}, the\n  \\Place{city among the stars}. Founded by pirates, \\Place{Bral} is now a\n  prosperious city of rogues and merchants, adrift in the vast realms of\n  \\Place{Wildspace}. Its docks are crowded with graceful ships, its streets are\n  teeming with intrigue and adventure, and its population includes shining\n  heroes and dark villains. \\Place{The Rock of Bral} is a haven for any\n  adventurer with a quick wit and a dash of greed---opportunity only awaits the\n  hand bold enough to seize it!\n\n  \\Product{Rock of Bral} is an accessory to the \\Place{Spelljammer} campaign\n  setting and is intended to provide a ready guide to this most fascinating of\n  cities. Your character will find the \\Place{Rock} to be the perfect base from\n  which to explore the magical reaches of \\Place{Wildspace}."
+}
+title: "Rock of Bral"
+author {
+  name: "Baker, Richard L. III"
+}
+editor {
+  name: "Stewart, Doug"
+}
+cover {
+  name: "Olson, Erik"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Miller, David O."
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Brown, Timothy B."
+  job: "project coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1992
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

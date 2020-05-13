@@ -1,0 +1,61 @@
+template {
+  name: "WTC 21804"
+  world: "Dragonlance"
+  description: "Sequestered in the blackness of the dreaded \\Place{Tower of High Sorcery} in\n  \\Place{Palanthas}, surrounded by nameless creatures of evil, \\NPC{Raistlin\n  Majere} weaves a plan to conquer the darkness---to bring it under his\n  control.\n\n  \\NPC{Crysania}, a beautiful and devoted \\Class{cleric} of \\God{Paladine},\n  tries to use her faith to lead \\NPC{Raistlin} from the darkness. She is blind\n  to his shadowed designs, and he draws her slowly into his neatly woven trap.\n\n  Made aware of \\NPC{Raistlin}\'s plan, a distraught \\NPC{Caramon} travels back\n  in time to the doomed city of \\Place{Istar} in the days before the\n  \\Event{Cataclysm}. There, together with the ever-present \\Monster{kender}\n  \\NPC{Tasslehoff}, \\NPC{Caramon} will make his stand to save\n  \\NPC{Raistlin}\'s soul.\n\n  Or so he believes."
+}
+title: "Time of the Twins"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1804"
+  check: 7
+}
+isbn13 {
+}
+pages: 432
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume 1"
+series: "Legends Trilogy"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

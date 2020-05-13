@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5009"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Elves of the Woodlands"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

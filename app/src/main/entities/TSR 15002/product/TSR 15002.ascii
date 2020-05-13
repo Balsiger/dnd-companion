@@ -1,0 +1,38 @@
+template {
+  name: "TSR 15002"
+  reference {
+    name: "net"
+  }
+  description: "Fire & Shadow theme deck for the Legend of the Five Rings"
+}
+title: "Fire & Shadow Theme Deck"
+date {
+  year: 2000
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "57530"
+  title: "937"
+  check: 8
+}
+isbn13 {
+}
+system: LEGEND_OF_THE_FIVE_RINGS
+audience: ALL
+type: BOARD_GAME
+price {
+  currency: "$ "
+  number: 899
+  precision: 100
+}
+content {
+  part: CARD
+  description: "deck with 60"
+  number: 1073741824
+}
+content {
+  part: BOOK
+  description: "rulebook"
+  number: 1073741824
+}

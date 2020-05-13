@@ -1,0 +1,46 @@
+template {
+  name: "TSR 8572"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  world: "Forgotten Realms"
+}
+title: "Cormyr: a Novel"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Grubb, Jeff"
+}
+date {
+  year: 1996
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0503"
+  check: 4
+}
+isbn13 {
+}
+pages: 464
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2399
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

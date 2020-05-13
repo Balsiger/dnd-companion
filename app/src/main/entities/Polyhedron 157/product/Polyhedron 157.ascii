@@ -1,0 +1,98 @@
+template {
+  name: "Polyhedron 157"
+  world: "Generic"
+  description: "May 2003 issue of polyhedron (together with Dungeon 98)."
+}
+title: "Polyhedron 157"
+subtitle: "Gun-Fu Fighting"
+author {
+  name: "Stan!"
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "Weaver, Derrel"
+}
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "Wiker, J.D."
+}
+author {
+  name: "Broadhurst, Creighton"
+}
+author {
+  name: "Radney-MacFarland, Stephan"
+}
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Christ, David"
+}
+editor {
+  name: "Mona, Erik"
+}
+cover {
+  name: "Parker, Jake"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Adorjany, Attila"
+}
+illustrator {
+  name: "P\\acute{e}rez, Ram\\grave{o}n}"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Hendee, David"
+}
+illustrator {
+  name: "Hilliker, Phil"
+}
+illustrator {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "Hunter, Kyle S."
+  job: "art direction"
+}
+date {
+  year: 2003
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 41
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "157"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+layout: FULL_COLOR

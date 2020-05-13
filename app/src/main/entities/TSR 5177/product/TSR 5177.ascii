@@ -1,0 +1,25 @@
+template {
+  name: "TSR 5177"
+  reference {
+    name: "catalog95"
+  }
+  world: "Generic"
+  description: "yearly assortment of the TSR core products"
+}
+title: "TSR 1995 Core Product Assortment"
+date {
+  year: 1995
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0356"
+  check: 2
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+price {
+}

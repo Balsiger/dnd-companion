@@ -1,0 +1,175 @@
+template {
+  name: "WTC 2164874"
+  world: "Generic"
+  description: "This lavishly illustrated book gives roleplaying game fans a unique, behind-the-curtain glimpse into the making of the 4th Edition rules of the Dungeons & Dragons Roleplaying Game.\n                    Through words and images, it previews some of the iconic races and classes of the new edition. This book also features essays and insights from the game\'s designers, developers, and editors."
+  short_description: "Preview of races and classes in D&D 4th edition."
+}
+title: "Races and Classes"
+subtitle: "The Making of D&D 4th Edition"
+author {
+  name: "Carter, Michele"
+  job: "compiler"
+}
+author {
+  name: "Backer, Richard"
+  job: "contributor"
+}
+author {
+  name: "Bonner, Logan"
+  job: "contributor"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "contributor"
+}
+author {
+  name: "Heinsoo, Rob"
+  job: "contributor"
+}
+author {
+  name: "Kestrel, Gewndolyn F.M."
+  job: "contributor"
+}
+author {
+  name: "Mearls, Mike"
+  job: "contributor"
+}
+author {
+  name: "Noonan, David W."
+  job: "contributor"
+}
+author {
+  name: "Radney-MacFarland, Stephan"
+  job: "contributor"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "contributor"
+}
+author {
+  name: "Sims, Chris"
+  job: "contributor"
+}
+author {
+  name: "Sernett, Matthew"
+  job: "contributor"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "contributor"
+}
+author {
+  name: "Wyatt, James"
+  job: "contributor"
+}
+author {
+  name: "Collins, Andy"
+  job: "contributor"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "contributor"
+}
+editor {
+  name: "Carter, Michele"
+}
+cover {
+  name: "O&#39Connor, William"
+}
+cartographer {
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Griffith, David"
+  job: "concept artist"
+}
+illustrator {
+  name: "Lockwood, Todd"
+  job: "concept artist"
+}
+illustrator {
+  name: "Moyer, Lee"
+  job: "concept artist"
+}
+illustrator {
+  name: "Swekel, Arnie"
+  job: "concept artist"
+}
+illustrator {
+  name: "Reeve, Daniel"
+  job: "alphabet design"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director"
+}
+illustrator {
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "R&D director"
+}
+manager {
+  name: "Overbay, Shari"
+  job: "production manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4801"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4801"
+  check: 7
+}
+pages: 96
+system: DND_4
+audience: ALL
+type: PROMOTION
+style: SOFT_COVER
+number: "1"
+series: "Wizards Presents"
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

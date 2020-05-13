@@ -1,0 +1,47 @@
+template {
+  name: "TSR 9508"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "Generic"
+  description: "Between the settled \\Monster{human} lands and the \\Monster{orc}-filled\n                    mountains rests the barony of \\Place{Honshar}. The residents have grown used\n                    to occasiional \\Monster{orc} raids, but now they find themselves facing a\n                    full-scale war. As if that wasn\'t bad enough, the \\Monster{orcs} have\n                    kidnapped an important political figure from \\Place{Honshar}, along with a\n                    crucial magical item---\\Item{the Silver Key}. Unless the \\Item{key} is\n                    recovered, it could be \\Place{Honshar}\'s undoing. Both the \\Item{key} and the\n                    hostage are being held in the \\Monster{orc} city of \\Place{Krimba-Hai}, so\n                    getting them back will be tricky. However, there is a plan..."
+}
+title: "Silver Key"
+leader: "The"
+date {
+  year: 1996
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0366"
+  check: 10
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,59 @@
+template {
+  name: "WTC 17662"
+  world: "Dragonlance"
+  description: "In a tiny mountain village, \\NPC{Nearra} and her friends meet a mysterious\n  clairvoyant who\'s had a vision of \\NPC{Nearra}\'s destiny -- and a vision that\n  could destroy them all.\n\n  The seer predicts the friends will defeat the bandit king terrorizing her\n  village home. When they return victorious, she will reveal how \\NPC{Nearra}\n  can recover her identity, once and for all. Desperate to help \\NPC{Nearra},\n  the group strides into battle. But soon the mission turns to\n  disaster. Ancient powers rise before them. Secrets long buried come to\n  light. And none of them will ever be the same.\n\n  \\Product{The Dragon Well} continues a new series of \\Place{Dragonlance}\n  adventures written specifically for readers ages 10 and up. Sized to fit\n  young readers, the series features a new group of young companions who band\n  together for friendship and excitement during the golden age of the\n  \\Place{Dragonlance} world."
+}
+title: "Dragon Well"
+leader: "The"
+subtitle: "Dragonlance: The New Adventures"
+author {
+  name: "Willis, Dan"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3354"
+  check: 2
+}
+isbn13 {
+}
+pages: 256
+system: DND_3RD
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Dragonlance The New Adventures"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

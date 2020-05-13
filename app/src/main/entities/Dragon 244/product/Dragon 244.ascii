@@ -1,0 +1,161 @@
+template {
+  name: "Dragon 244"
+  world: "Generic"
+}
+title: "Dragon 244"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Adkison, Peter D."
+}
+author {
+  name: "Lambert, Michael"
+}
+author {
+  name: "Raupp, Roger"
+}
+author {
+  name: "Perkins, Chris"
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Pendleton, Michaelene"
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Richards, Jonathan M."
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Smith, Lester"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "publisher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Schwartz, Steve"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Doney, Mark"
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+illustrator {
+  name: "Carter, Jon"
+}
+illustrator {
+  name: "Hrenchuk, Bill"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Cavalier, Bill"
+}
+illustrator {
+  name: "Hanson, David"
+}
+illustrator {
+  name: "Pillsbury, Joseph"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+manager {
+  name: "Mangelson, Roger"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 1998
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXII 7"
+number: "244"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

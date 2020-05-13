@@ -1,0 +1,57 @@
+template {
+  name: "WTC 17580"
+  world: "Dragonlance"
+  description: "This title is the next in a series that explores the lives of key characters\n  from Margaret Weis & Tracy Hickman\'s New York Times best-selling \\Product{War\n  of Souls} trilogy. \\Product{The Lake of Death} describes events that directly\n  overlap events during the \\Event{War of Souls} and is an unofficial sequel to\n  Rabe\'s \\Product{Dhamon Saga} trilogy."
+}
+title: "Lake of Death"
+leader: "The"
+author {
+  name: "Rabe, Jean"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3364"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: DND_3RD
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

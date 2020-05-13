@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8536"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Song of the Dark Druid"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Thirty-six"
+price {
+}

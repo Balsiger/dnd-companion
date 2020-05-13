@@ -1,0 +1,227 @@
+template {
+  name: "Dragon 272"
+  world: "Generic"
+}
+title: "Dragon 272"
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Bonny, Ed"
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Bartman, Dan"
+}
+author {
+  name: "Miller, Steve"
+}
+author {
+  name: "Keyes, J. Gregory"
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Jukes, Glen"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Richards, Johnathan"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Wiker, JD"
+}
+author {
+  name: "Herndon, Cory J."
+}
+author {
+  name: "Quick, Jeff \'Zippy\'"
+}
+author {
+  name: "Winninger, Ray"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Wilson, Johnny L."
+}
+editor {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Haddock, Eric"
+  job: "assistant editor"
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Mioracola, Jeff"
+}
+illustrator {
+  name: "Dorman, Dave"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Matson, John"
+}
+illustrator {
+  name: "Sharp, Shawn"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photos"
+}
+illustrator {
+  name: "Soles, Jason"
+  job: "miniatures painting"
+}
+illustrator {
+  name: "Graham, Kim"
+  job: "dioramas"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Wolf-Narciso, Shauna"
+  job: "senior art director"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+illustrator {
+  name: "Garfield, Susan"
+  job: "designer"
+}
+illustrator {
+  name: "Gough, Dan"
+  job: "designer"
+}
+illustrator {
+  name: "Ricker, Scott"
+  job: "designer"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulaton manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "advertising traffifc manager"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2000
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 130
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXV 1"
+number: "272"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

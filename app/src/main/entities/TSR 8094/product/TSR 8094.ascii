@@ -1,0 +1,30 @@
+template {
+  name: "TSR 8094"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Greyhawk"
+}
+title: "Siege of the Tower"
+leader: "The"
+date {
+  year: 1994
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Four"
+series: "New Series"
+price {
+  currency: "\303\224\303\270\316\251 "
+  number: 399
+  precision: 100
+}

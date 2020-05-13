@@ -1,0 +1,28 @@
+template {
+  name: "TSR 9296"
+  synonym: "DDA2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Dawn of the Emperors"
+  description: "foil furhter political plans against the empire"
+}
+title: "Legions of Thyatis"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$\302\254\342\200\240"
+  number: 595
+  precision: 100
+}

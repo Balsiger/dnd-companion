@@ -1,0 +1,32 @@
+template {
+  name: "WTC 96580"
+  world: "Generic"
+  description: "Prepare yourself for a random encounter with heroes, villains, and monsters\n                    for your Dungeons & Dragons roleplaying game. Taken straight from the D&D\n                    rulebooks, these characters are ready for battle -- right out of the box.\n                    Each \\Product{Harbinger expansion pack} contains 8 randomly selected, fully\n                    assembled, prepainted collectible miniatures with double-sided statistic\n                    cards for use with the D&D roleplaying game or for fast, head-to-head\n                    miniatures combat.\n                    Three separate \\Product{Harbinger packs} are pictured at left. Each one\n                    contains a random selection of miniatures. "
+}
+title: "Harbinger Expansion Pack"
+subtitle: "Roll for Initiative!"
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3315"
+  check: 1
+}
+isbn13 {
+}
+system: DND_3RD
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+number: "1"
+series: "D&D Miniatures"
+price {
+}
+content {
+  part: MINIATURE
+  description: "randomized, prepainted, plastic"
+  number: 8
+}

@@ -1,0 +1,44 @@
+template {
+  name: "TSR 2701"
+  synonym: "AM2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "rules for survival in Faerie"
+}
+title: "For Faerie, Queen and Country"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+date {
+  year: 1993
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "591"
+  check: 7
+}
+isbn13 {
+}
+pages: 128
+system: AMAZING_ENGINE
+type: RULES_SUPPLEMENT
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}

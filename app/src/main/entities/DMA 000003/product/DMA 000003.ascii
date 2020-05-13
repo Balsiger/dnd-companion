@@ -1,0 +1,29 @@
+template {
+  name: "DMA 000003"
+  description: "Catalog of the 1992 fall/winter stock of TSR."
+}
+title: "1992 Fall/Winter Catalog"
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "696"
+  check: 4
+}
+isbn13 {
+}
+pages: 12
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

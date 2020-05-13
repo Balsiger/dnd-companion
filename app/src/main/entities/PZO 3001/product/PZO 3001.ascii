@@ -1,0 +1,74 @@
+template {
+  name: "PZO 3001"
+  world: "Generic"
+  description: "Wouldn\'t you rather chop off your opponent\'s head in one clean swing or put an arrow in his heart? Rolled a critical hit? Draw a card and apply the result. Each card has four different results based on weapon type, all of which are compatible with the world\'s most popular roleplaying game. Crushing your enemy\'s skull has never been this much fun."
+}
+title: "Critical Hit Deck"
+subtitle: "Tired of the same old double damage?"
+author {
+  name: "Bulmahn, Jason"
+  job: "designer"
+}
+author {
+  name: "McArtor, Mike"
+  job: "developer"
+}
+author {
+  name: "Walker, Jeremy"
+  job: "developer"
+}
+cover {
+  name: "Deschamps, Eric"
+  job: "box illustration"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "graphic designer"
+}
+manager {
+  name: "Bulmahn, Jason"
+  job: "product concept"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2007
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "026"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "026"
+  check: 1
+}
+pages: 52
+system: DND_3_5
+audience: ALL
+type: ACCESSORY
+style: PACK
+producer: "Paizo"
+series: "GameMastery"
+price {
+  currency: "$"
+  number: 999
+  precision: 100
+}
+content {
+  part: CARD
+  description: "Critical Hit"
+  number: 52
+}
+layout: FULL_COLOR

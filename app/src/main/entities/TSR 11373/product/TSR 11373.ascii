@@ -1,0 +1,32 @@
+template {
+  name: "TSR 11373"
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "second part of the DM start kit"
+}
+title: "Eye of the Wyvern"
+author {
+  name: "Grubb, Jeff"
+}
+date {
+  year: 1999
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1373"
+  check: 8
+}
+isbn13 {
+}
+pages: 48
+system: DND_3RD
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

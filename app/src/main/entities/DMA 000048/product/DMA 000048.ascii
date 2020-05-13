@@ -1,0 +1,61 @@
+template {
+  name: "DMA 000048"
+  world: "Birthright"
+  description: "A stand-alone comic book set in the Birthright setting."
+}
+title: "Serpent\'s Eye"
+leader: "The"
+author {
+  name: "Stark, Ed"
+}
+cover {
+  name: "Szezudlo"
+}
+illustrator {
+  name: "Gross, Dave"
+}
+illustrator {
+  name: "Sergesketter, Chad"
+}
+illustrator {
+  name: "Becker, Barbara"
+}
+illustrator {
+  name: "Ken Lopez"
+}
+manager {
+  name: "Karen Boomgarden"
+  job: "special thanks"
+}
+manager {
+  name: "Wise, David"
+  job: "special thanks"
+}
+manager {
+  name: "Jim Ward"
+  job: "special thanks"
+}
+manager {
+  name: "Robert Galica"
+  job: "special thanks"
+}
+date {
+  year: 1996
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+audience: ALL
+type: COMICS
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

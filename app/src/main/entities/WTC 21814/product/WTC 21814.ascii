@@ -1,0 +1,59 @@
+template {
+  name: "WTC 21814"
+  world: "Dragonlance"
+  description: "\\NPC{Dhamon Grimwulf}, once a \\Group{Hero of the Heart}, has sunk into a\n  bitter life of crime and squalor. Now, as the great \\Monster{dragon}\n  overlords of the \\Event{Fifth Age} coldly plot to strengthen their rule and\n  to destroy their enemies, he must somehow find the will to redeem\n  himself. But perhaps it is too late.\n\n  Downfall marks the return of \\NPC{Dhamon} and other characters from author\n  Jean Rabe\'s bestselling \\Product{Dragons of a New Age} trilogy."
+}
+title: "Downfall"
+subtitle: "How far can a hero fall? Far enough to lose his soul?"
+author {
+  name: "Rabe, Jean"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1814"
+  check: 4
+}
+isbn13 {
+}
+pages: 416
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 1"
+series: "The Dhamon Saga"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

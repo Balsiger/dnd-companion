@@ -1,0 +1,174 @@
+template {
+  name: "Dragon 306"
+  world: "Generic"
+  description: "Issue 306 of the magazine. Humor & Hellspawn issue."
+}
+title: "Dragon 306"
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Holian, Gary"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Mearls, Michael"
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Thomasson, Chris"
+}
+author {
+  name: "Upchurch, Wil"
+}
+author {
+  name: "Wiker, JD"
+}
+author {
+  name: "Williams, Penny"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+editor {
+  name: "Williams, Penny"
+  job: "editorial assistance"
+}
+cover {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Harris, Todd"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Mitten, Cara"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Parker, Jake"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Shaw, Stanley"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Wahlstrom, David"
+}
+illustrator {
+  name: "Wald, Christina"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "senior production designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2003
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 11"
+number: "306"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

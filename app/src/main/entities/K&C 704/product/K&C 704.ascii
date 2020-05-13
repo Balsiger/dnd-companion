@@ -1,0 +1,49 @@
+template {
+  name: "K&C 704"
+  description: "Issues ten through twelve one of Knights of the Dinner Table crammed\n  between two covers!\n\n  96 pages of classic KODT including three brand new stories!!"
+}
+title: "Bundle of Trouble: Volume Four"
+subtitle: "A Compilation of Knights of the Dinner Table: Issues 10 Thru 12"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+}
+author {
+  name: "Johansson, Steve"
+}
+author {
+  name: "Kenzer, David S."
+}
+cover {
+  name: "Vrbanic, Gorge"
+}
+cover {
+  name: "Vrbanic, Jackie"
+}
+date {
+  year: 1999
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: COMICS
+style: BOOKLET
+producer: "K&C"
+number: "Volume Four"
+series: "Knights of the Dinner Table"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

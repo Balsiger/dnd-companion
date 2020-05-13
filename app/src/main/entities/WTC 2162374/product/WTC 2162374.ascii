@@ -1,0 +1,47 @@
+template {
+  name: "WTC 2162374"
+  world: "Forgotten Realms"
+  description: "\\Place{Faerun} is a land scarred by war, and peopled by the battle-tested and the war-weary.\n                    "
+}
+title: "Realms of War"
+subtitle: "The War Will Be Lost. All My Sacrifices Will Be For Nothing."
+editor {
+  name: "Athans, Philip"
+}
+cover {
+  name: "Swandland, Raymond"
+}
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4934"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4934"
+  check: 2
+}
+pages: 337
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Anthology"
+series: "The Twilight War"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

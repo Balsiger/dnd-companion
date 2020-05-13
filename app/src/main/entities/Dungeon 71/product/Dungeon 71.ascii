@@ -1,0 +1,125 @@
+template {
+  name: "Dungeon 71"
+  world: "Generic"
+  description: "This is issue 71 of the dungeon magazine."
+}
+title: "Dungeon 71"
+author {
+  name: "Peck, Jason"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Brown, Steven \'Stan!\'"
+}
+author {
+  name: "Johnson, Steve"
+}
+author {
+  name: "Richards, Randy"
+}
+author {
+  name: "Grubb, Jeff"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "DiTerlizzi, Tony"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Daniele, Stephen A."
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+illustrator {
+  name: "Bryant, Steve"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Klasnich, Robert"
+}
+illustrator {
+  name: "McDevitt, Bradley"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+manager {
+  name: "Blaskowsky, Barbara"
+  job: "circulation manager"
+}
+date {
+  year: 1997
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 80
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XII 5"
+number: "71"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 499
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

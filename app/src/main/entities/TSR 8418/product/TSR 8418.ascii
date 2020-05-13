@@ -1,0 +1,62 @@
+template {
+  name: "TSR 8418"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "More than a hunk of junk, the \\Item{Wyvern\'s Spur} has moldered in a crypt\n                    for fifteen generations...until now. The \\Group{Wyvernspur} family\'s powerful\n                    heirloom has been stolen, and grand wizard and patriarch \\NPC{Drone\n                    Wyvernspur} is the first to fall to the ancient item\'s curse. The family\n                    fool, \\NPC{Giogi}, is left to find it, but even recovering the \\Item{spur}\n                    cannot guarantee his clan\'s safety.\n                    Fortunately, the famous halfling bard \\NPC{Olive Ruskettle} and a mysterious\n                    and talented mage named \\NPC{Cat} are determined to help. But when betrayal\n                    and echantment threaten \\NPC{Giogi}\'s progress, he must invoke the spur\'s\n                    awesome might...or become its next victim!\n                    \\Product{The Wyvern\'s Spur} is Kate Novak and Jeff Grubb\'s second novel in\n                    the \\Product{Finder\'s Stone Trilogy}, set in the \\Product{Forgotten Realms}\n                    fantasy world from TSR, Inc."
+}
+title: "Wyvern\'s Spur"
+leader: "The"
+author {
+  name: "Novak, Kate"
+}
+author {
+  name: "Grubb, Jeff"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+date {
+  year: 1990
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "902"
+  check: 8
+}
+isbn13 {
+}
+pages: 313
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Two"
+series: "Finder\'s Stone Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

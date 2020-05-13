@@ -1,0 +1,25 @@
+template {
+  name: "DMA 000046"
+  description: "The 1992 spring and summer catalog of TSR."
+}
+title: "1992 Spring/Summer Catalog"
+date {
+  year: 1992
+}
+isbn {
+}
+isbn13 {
+}
+pages: 12
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

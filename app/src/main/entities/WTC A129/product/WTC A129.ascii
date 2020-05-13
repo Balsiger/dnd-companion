@@ -1,0 +1,152 @@
+template {
+  name: "WTC A129"
+  world: "Generic"
+  description: "\\Product{Dungeon!} is an exciting fantasy board game that provides hours of fun. Play a Fighter, a Rogue, a Cleric, or a Wizard searching for lost treasure in a dungeon filled with monsters. Only your magic, your weapons, and your wits can protect you!"
+  short_description: "A dungeon as a board game."
+}
+title: "Dungeon!"
+subtitle: "A Fanstastic Game Adventure for the Whole Family!"
+author {
+  name: "Megarry, David R."
+}
+author {
+  name: "Dupuis, Chris"
+  job: "development"
+}
+author {
+  name: "Grubb, Jeff"
+  job: "development"
+}
+author {
+  name: "Winter, Jeff"
+  job: "development"
+}
+author {
+  name: "Gray, Michael"
+  job: "development"
+}
+author {
+  name: "Gygax, Gary"
+  job: "development"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "senior creative art director"
+}
+illustrator {
+  name: "Gelon, Dan"
+  job: "art director"
+}
+illustrator {
+  name: "Gelon, Daniel"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Labak, Jamie"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D R&D senior group manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+date {
+  year: 2012
+  month: 10
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6298"
+  check: 3
+}
+pages: 6
+system: NONE
+audience: ALL
+type: BOARD_GAME
+style: BOX
+producer: "WTC"
+price {
+  currency: "$"
+  number: 1999
+  precision: 100
+}
+content {
+  part: BOARD
+  description: "game board"
+  number: 1
+}
+content {
+  part: BOOKLET
+  description: "rulebook"
+  number: 1
+}
+content {
+  part: DICE
+  number: 2
+}
+content {
+  part: CARD
+  number: 165
+}
+content {
+  part: MINIATURE
+  description: "hero standees"
+  number: 8
+}
+content {
+  part: PLAYING_PIECE
+  description: "die-cut tokens"
+  number: 139
+}
+layout: FULL_COLOR

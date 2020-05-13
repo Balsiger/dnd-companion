@@ -1,0 +1,29 @@
+template {
+  name: "WTC 17551"
+  world: "Star Wars"
+  description: "And now you must take a side - the light side or the dark side. The all-new\n  \\Place{Star Wars} trading card game lets you and a friend engage in\n  full-scale battles.\n\n  This expansion is based on Star Wars: Episode II Attack of the Clones and\n  features your favorite characters, ships, and vehicles from the\n  movie. Recreate the famous battles between \\NPC{Obi-Wan} and \\NPC{Jango\n  Fett}, \\NPC{Yoda} and \\NPC{Darth Tyrannus}, as well as legions of\n  \\Monster{clones} versus an entire \\Monster{droid} army!\n\n  The \\Product{Attack of the Clones} expansion is available in a two-player\n  starter level game, advanced 40 card theme decks, as well as expert level 11\n  and 5 card booster packs.\n\n  Will you align yourself with the light side and bring justice and order to a\n  troubled galaxy? Or, will you choose to embrace the power of the dark side?"
+}
+title: "Attack of the Clones"
+subtitle: "An Epic struggle between good and evil continues"
+date {
+  year: 2002
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7430"
+  title: "0488"
+  check: 4
+}
+isbn13 {
+}
+system: STAR_WARS_TCG
+audience: ALL
+type: BOOSTER_PACK
+style: PACK
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 329
+  precision: 100
+}

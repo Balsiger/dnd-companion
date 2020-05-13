@@ -1,0 +1,184 @@
+template {
+  name: "Dragon 259"
+  world: "Generic"
+}
+title: "Dragon 259"
+author {
+  name: "Winninger, Ray"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Hart, Mark A."
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Ibach, Dawn"
+}
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Richards, Jonathan M."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Karpyshyn, Drew"
+}
+author {
+  name: "Notaro, Raff"
+}
+author {
+  name: "Wiker, J.D."
+}
+author {
+  name: "Bishop, Jim"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Boylan, Gary R."
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistand editor"
+}
+editor {
+  name: "Carlson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Walks, Russel"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "McDevitt, Brad"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Mittchell, Matt"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+}
+illustrator {
+  name: "Black Isle Studios"
+}
+illustrator {
+  name: "Lazarretti, Rob"
+}
+illustrator {
+  name: "Wagner, Edward B."
+}
+illustrator {
+  name: "Delgado Jr., Peter"
+}
+illustrator {
+  name: "Pillsbury, Joe"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+illustrator {
+  name: "Ricker, Scott"
+  job: "designer"
+}
+illustrator {
+  name: "Whitley, Peter"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "advertising traffifc manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Blaskowsky, Barbara"
+  job: "circulation manager"
+}
+date {
+  year: 1999
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXIII 12"
+number: "259"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

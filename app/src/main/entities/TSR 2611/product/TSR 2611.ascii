@@ -1,0 +1,41 @@
+template {
+  name: "TSR 2611"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 218"
+  }
+  world: "Planescape"
+  description: "\\large{Open at your own risk}\n                    \\emph{This volume\'s outlawed in the \\Place{Cage}, berk---it\'s a crime just to\n                    own it. \'Course, that makes it required reading for peery cutters. Which\n                    factol\'s gone barmy, and which one ain\'t quite alive? Who tops the\n                    \\Group{Hardheads}\' hit list, and who\'s a \\Group{Sensate} spy? What portals,\n                    spells, and powers can a factioneer use to give his foes the laugh? Catch the\n                    chant here!}\n                    Designed for players and Dungeon Masters alike, \\Product{The Factol\'s\n                    Manifesto} provides a covert look at Sigil\'s 15 factions---the bands whose\n                    philosophies shape the multiverse. For each faction, get the dirt on:\n                    \\list\n                    {Secret histories, current plans, and raging conflicts.}\n                    {Headquarters and other safe houses, including detailed, full-color maps.}\n                    {Bloods and bahser\'s bound to meet, from the factol on down.}\n                    {New and vital abilities for the faithful.}\n                    \\large{This dangerous tome lights a torch in the dark...take care not to get\n                    burned!}"
+}
+title: "Factol\'s Manifesto"
+leader: "The"
+date {
+  year: 1995
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 160
+system: ADND_2ND
+audience: ALL
+type: ACCESSORY
+style: SOFT_COVER
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

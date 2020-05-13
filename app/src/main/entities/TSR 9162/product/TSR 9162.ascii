@@ -1,0 +1,45 @@
+template {
+  name: "TSR 9162"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Lankhmar"
+  description: "step into a new world of intrigue and adventure"
+}
+title: "Lankhmar, City of Adventure"
+date {
+  year: 1985
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "247"
+  check: 3
+}
+isbn13 {
+}
+pages: 96
+system: ADND_1ST
+type: CAMPAIGN_SETTING
+price {
+  currency: "$"
+  number: 1200
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "maps"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "city"
+  number: 1073741824
+}

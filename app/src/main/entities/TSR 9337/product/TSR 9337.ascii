@@ -1,0 +1,28 @@
+template {
+  name: "TSR 9337"
+  synonym: "WGS2"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  world: "Greyhawk"
+  description: "the Ice Barbarians try to steal the five blades"
+}
+title: "Howl from the North"
+date {
+  year: 1991
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

@@ -1,0 +1,41 @@
+template {
+  name: "TSR 1502"
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Generic"
+  description: "dices for the game"
+}
+title: "Dragon Dice Kicker Pack 2: Firewalkers"
+author {
+  name: "Lester Smith"
+}
+date {
+  year: 1996
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0294"
+  check: 9
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: DICE
+  description: "randomly assorted"
+  number: 8
+}

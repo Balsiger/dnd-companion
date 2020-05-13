@@ -1,0 +1,58 @@
+template {
+  name: "TSR 8489"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\NPC{Cadderly}, the \\Place{Edificant Library}\'s eccentric young\n                    scholar-priest, has survived his first adventure, but the chaos curse is just\n                    the beginning of \\Place{Castle Trinity}\'s plans for regional\n                    conquest. \\NPC{Cadderly} and his friends must save the inhabitants of the\n                    beautiful \\Monster{elven} forest, \\NPC{Shilmista}, where a new opponent leads\n                    an army of vile monsters. Not even \\NPC{Cadderly}\'s powerful companions can\n                    insulate him from the trials of character and courage that he must face.\n                    \\Product{In Sylvan Shadows} is the second in a new series of novels entitled\n                    \\Product{The Cleric Quintet}, set in the \\Product{Forgotten Realms} fantasy\n                    world from TSR, Inc. Author R.A. Salvatore also wrote the \\Product{New York\n                    Times} bestselling novels \\Product{The Halfling\'s Gem} and\n                    \\Product{Sojourn}."
+}
+title: "In Sylvan Shadows"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Easley, Jeff"
+}
+date {
+  year: 1992
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "321"
+  check: 3
+}
+isbn13 {
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Two"
+series: "Cleric Quintet"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

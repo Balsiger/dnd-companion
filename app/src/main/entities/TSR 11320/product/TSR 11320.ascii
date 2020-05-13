@@ -1,0 +1,30 @@
+template {
+  name: "TSR 11320"
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Marvel Super Heroes"
+  description: "descriptions for more than one 100 friends and foes of the Fantastic Four"
+}
+title: "Fantastic Four Roster Book"
+author {
+  name: "Richard Dakan"
+}
+author {
+  name: "Jack Emmert"
+}
+date {
+  year: 1999
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+system: SAGA
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

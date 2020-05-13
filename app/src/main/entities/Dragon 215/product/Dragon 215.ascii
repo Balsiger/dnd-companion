@@ -1,0 +1,170 @@
+template {
+  name: "Dragon 215"
+  world: "Generic"
+}
+title: "Dragon 215"
+author {
+  name: "Richards, Jonothan M."
+}
+author {
+  name: "Kane, Thomas"
+}
+author {
+  name: "Nephew, John"
+}
+author {
+  name: "King, Robert J."
+}
+author {
+  name: "Jay"
+}
+author {
+  name: "Dee"
+}
+author {
+  name: "Bunnell, John C."
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Bigelow, Robert \'Bob\'"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Wybo II, Michael John"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Schend, Steven E."
+}
+author {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "associate editor"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "editorial assistant"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "Hinds, Gareth"
+}
+illustrator {
+  name: "Lake, Lissanne"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Zenz, Dave"
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Kohl, Charles"
+  job: "photography"
+}
+illustrator {
+  name: "Lessl, Bob"
+}
+illustrator {
+  name: "Hanson, David"
+}
+illustrator {
+  name: "Ferman, Michael"
+}
+illustrator {
+  name: "Doney, Mark"
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Manui, Barbara"
+}
+illustrator {
+  name: "Adams, Chris"
+}
+illustrator {
+  name: "Bethke, Mike"
+  job: "photography"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Ciske, Renee"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1995
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XIX 10"
+number: "215"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

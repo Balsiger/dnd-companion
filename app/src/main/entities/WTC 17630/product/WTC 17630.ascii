@@ -1,0 +1,34 @@
+template {
+  name: "WTC 17630"
+  world: "None"
+  description: "The second title in a series that peers into a mysterious new area of the\n                    Magic world.\n                    \\Product{Heretic: Betrayers of Kamigawa} continues a series that will explore\n                    a new and mysterious area of the \\Place{Magic: The Gathering} world that you\n                    have never seen before. This novel previews the newest trading card game set\n                    to be released in February, giving you a sneak peek at the new elements of\n                    the game."
+}
+title: "Heretic: Betrayers of Kamigawa"
+author {
+  name: "McGough, Scott"
+}
+date {
+  year: 2005
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3575"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book II"
+series: "Kamigawa Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

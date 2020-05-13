@@ -1,0 +1,36 @@
+template {
+  name: "TSR 8731"
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "A collection of powerful magical artifacts is the only defense against the\n                    forces of evil that are arrayed against \\Place{Dominaria}. \\NPC{Gerrard}, the\n                    heir to the Legacy, together with \\NPC{Sisay}, captain of the flying ship\n                    \\Item{Weatherlight}, has sought out many parts of the Legacy.\n                    \\bold{Gerrard\'s Quest}\n                    \\NPC{Sisay} has been kidnapped by \\NPC{Volrath}, ruler of the plane of\n                    \\Place{Rath}. \\NPC{Gerrard} stands at a crossroads. His companion is in\n                    danger, the Legacy may be lost forever. Only he -- with the loyal crew of the\n                    \\Item{Weatherlight} -- can rescue \\NPC{Sisay} and recover the Legacy."
+}
+title: "Rath and Storm"
+subtitle: "Gerrard\'s Legacy"
+editor {
+  name: "Archer, Peter"
+}
+date {
+  year: 1998
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1175"
+  check: 1
+}
+isbn13 {
+}
+pages: 352
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+producer: "TSR"
+series: "Anthology"
+price {
+}

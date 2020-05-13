@@ -1,0 +1,58 @@
+template {
+  name: "PZO 3026"
+  synonym: "Dwellers, Dungeon"
+  world: "Generic"
+  description: "Unleash the denizens of fallen temples, monstrous lairs, and forgotten catacombs with Dungeon Dwellers Face Cards: This 54-card set of beautifully illustrated, full-color Face Cards lets you add a whole new dimension to your game and show your players the faces of the enemy! In addition to artwork from Paizo\'s finest illustrators, each card also includes space on the back to add your notes for each monster or character, allowing you to keep track of who\'s who. Face Cards are designed for the Pathfinder Roleplaying Game, but are usable with any fantasy roleplaying game."
+  short_description: "Face cards of dungeon dwellers."
+}
+title: "Dungeon Dwellers"
+subtitle: "54 Full-Color Face Cards for any fantasy roleplaying game."
+cover {
+  name: "Macourek, Corey"
+}
+illustrator {
+  name: "Macourek, Corey"
+  job: "card design"
+}
+illustrator {
+  name: "Robinson, Sarah E."
+  job: "art direction"
+}
+illustrator {
+  name: "Frasier, Crystal"
+  job: "graphic design"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2012
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "478"
+  check: 8
+}
+pages: 54
+system: NONE
+type: CARDS_TYPE
+style: SMALL_BOX
+producer: "Paizo"
+series: "GameMaster"
+series: "Face Cards"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: CARD
+  description: "face"
+  number: 54
+}
+layout: FULL_COLOR

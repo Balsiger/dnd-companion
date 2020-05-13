@@ -1,0 +1,44 @@
+template {
+  name: "TSR 3117"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Birthright"
+  description: "rules for wizards in Cerilia"
+}
+title: "Book of Magecraft"
+author {
+  name: "Rabe, Jean"
+}
+date {
+  year: 1996
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0373"
+  check: 2
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

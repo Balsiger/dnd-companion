@@ -1,0 +1,41 @@
+template {
+  name: "TSR 9321"
+  synonym: "RA2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Ravenloft"
+  description: "rescue prisoners and escape the dark ship of horror"
+}
+title: "Ship of Horror"
+date {
+  year: 1991
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "127"
+  check: 10
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

@@ -1,0 +1,50 @@
+template {
+  name: "WTC 96581"
+  world: "Generic"
+  description: "Choose a battlefield and prepare to fight for it! Whether you lead the\n                    ragtag outfit rallied inside an Entry Pack, assemble a handpicked force, or\n                    amass a grand army, these adventurous characters, taken straight from the\n                    Dungeons & Dragons rulebooks, are ready for battle -- right out of the box.\n                    Each Dungeons & Dragons Miniatures Entry Pack contains 16 fully assembled,\n                    hand-painted collectible miniatures complete with double-sided statistic\n                    cards for use with the D&D roleplaying game, as well as a 40-page rulebook\n                    for fast, head-to-head miniatures combat.\n                    Each pack contains:\n                    \\list\n                    {16 randomized miniatures (1 rare, 5 uncommon, and 10 common) with\n                    statistics cards}\n                    {1 complete basic rulebook}\n                    {1 20-sided die}\n                    {1 checklist for the miniatures set}\n                    {Terrain mapsheet and cards}"
+}
+title: "Miniatures Entry Pack"
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3316"
+  check: 10
+}
+isbn13 {
+}
+system: DND_3RD
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+series: "D&D Miniatures"
+price {
+}
+content {
+  part: MINIATURE
+  description: "randomized, plastic, prepainted"
+  number: 16
+}
+content {
+  part: BOOKLET
+  description: "rulebook"
+  number: 1073741824
+}
+content {
+  part: DICE
+  description: "20-sided"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "checklist"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "terrain mapsheet and cards"
+  number: 1073741824
+}

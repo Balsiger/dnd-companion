@@ -1,0 +1,91 @@
+template {
+  name: "TSR 8315P"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "The three adventure-seeking sons of \\NPC{Caramon Majere} lose a bet to a\n  flamboyant, magnificently bearded \\Monster{dwarf}, and wake up, shanghaied,\n  on an incredible \\Monster{gnomish} sailing vessel questing after the\n  legendary \\Item{Graygem}.\n\n  Who is the mysterious \\NPC{Dougan Redhammer}, and what perils are in store\n  for \\NPC{Sturm}, \\NPC{Tanin}, and \\NPC{Palin}, the young \\Class{mage} haunted\n  by the legacy of \\NPC{Raistlin}?\n\n  In nine short stories by superlative writers, the companions confront\n  \\Class{wizards} and \\Monster{dragons}, magical spectacles and \\Item{daggers}\n  possessed, and survive memorable encounters with the minor races of\n  \\Place{Krynn}.\n\n  Plus, a rolicking new novella by Margaret Weis and Tracy Hickman chronicling\n  the outrageous fortunes of the next generation of heroes.\n\n  The \\Place{Dragonlance} Saga, with three million copies sold, continues!"
+}
+title: "Kender, Gully Dwarves and Gnomes"
+subtitle: "\'Wanna Bet?\'"
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "Simon, Morris"
+}
+author {
+  name: "Siegel, Barbara"
+}
+author {
+  name: "Siegel, Scott"
+}
+author {
+  name: "Peary, Danny"
+}
+author {
+  name: "Bakst, Harold"
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+author {
+  name: "Williams, Michael"
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 1987
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "382"
+  check: 8
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume II"
+series: "Tales Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

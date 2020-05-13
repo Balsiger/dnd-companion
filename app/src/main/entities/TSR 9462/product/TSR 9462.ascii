@@ -1,0 +1,67 @@
+template {
+  name: "TSR 9462"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "At last, gaming screens for players, too!\n                    The \\Product{Priest\'s Screen} speeds up game play by taking the most\n                    frequently used character-specific information from the AD&D game\n                    \\Product{Player\'s Handbook} and \\Product{Priest\'s Handbook} and making it\n                    instantly accessible. Now the informnation players need on the spot to play\n                    any kind of priest---including clerics and druids---can be right at their\n                    fingertips. The screen folds in a neat triangle that sits on the table top in\n                    front of players for at-a-glance reference.\n                    Also enclosed are eight additional pages of valuable reference material that\n                    can be slipped into character folders. These pages feature an extensive\n                    \\Product{Player\'s Handbook} and \\Product{Tome of Magic} spell and\n                    spell-statistics list for clerics, a complete Turning Undead Table, and other\n                    handy tables and charts.\n                    \\emph{Suitable for all levels of play}."
+}
+title: "Priest\'s Screen"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+editor {
+  name: "Brown, Anne K."
+}
+cover {
+  name: "Elmore, Larry"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+date {
+  year: 1994
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "816"
+  check: 9
+}
+isbn13 {
+}
+pages: 4
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+style: SCREEN
+producer: "TSR"
+series: "Screen"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: SCREEN
+  number: 1073741824
+}
+content {
+  part: PAGE
+  description: "valuable material"
+  number: 4
+}

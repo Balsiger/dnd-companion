@@ -1,0 +1,52 @@
+template {
+  name: "TSR 2621"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  world: "Planescape"
+  description: "\\large{War is Hell --- Literally.}\n                    \\emph{Since before mortals drew breath, the cunning \\Monster{baatezu} and the\n                    fiery \\Monster{tanar\'ri} have struggled furiously to batter each other out of\n                    existence. The price in their devastating war of annihilation: the\n                    \\Place{Lower Planes}. \'Course, when two unstoppable armies of evil collide,\n                    the tremors might leave the entire \\Place{multiverse} a smoking ruin. And woe\n                    be to any berk who stands against them---or simply gets in their way.}\n                    Created for both players and Dungeon Masters, \\Product{Hellbound: The Blood\n                    War} is a comprehensive resource on the infernal clash that has torn the\n                    planes apart for millennia. Though the war has spilled into many other\n                    \\Product{Planescape} products, the full story of the roaring conflict has\n                    never been detailed---until now. \\Product{Hellbound} features:\n                    \\list\n                    {\\bold{The Dark of the War}, an 80-page guide for the Dungeon Master\n                    that reveals the secrets of the struggle---its history, strategies,\n                    magic, and battlefields.}\n                    {\\bold{The Chant of the War}, a 32-page book for DMs and players,\n                    detailing the facts that player characters would know about the\n                    conflict.}\n                    {\\bold{War Games}, a 96-page book of three complete \\Event{Blood War}\n                    adventures, including an epic scenario in which PCs can weaken the\n                    fiends permanently and \\emph{forever} change the course of the\n                    war---not to mention create a brand-new monster in the process}\n                    {\\bold{Visions of War}, a 24-page, full-color booklet of illustrations\n                    and maps (scenes and sites in the adventures).}\n                    {\\bold{The Bargain}, a 16-page, full-color comic book of wartime love\n                    and betrayal, painted by DiTerlizzi and Robh Ruppel.}"
+}
+title: "Hellbound: The Blood War"
+date {
+  year: 1996
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 280
+system: ADND_REVISED
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "The Bargain"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Visions of War"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "War Games"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Dark of the War"
+  number: 1073741824
+}

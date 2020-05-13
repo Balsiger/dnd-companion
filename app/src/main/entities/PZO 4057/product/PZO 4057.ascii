@@ -1,0 +1,53 @@
+template {
+  name: "PZO 4057"
+  category: "map"
+  category: "tiles"
+  synonym: "Pathfinder Map Pack: Forest Dangers"
+  world: "Generic"
+  description: "Anything can hide among the trees and along the paths that wind through the woods, but who ever said every trail was safe? Whether the hapless travelers are merely passing through, tracking dangerous beasts, or seeking a lost ruin, the Game Master shouldn\'t have to sketch every feature. This Pathfinder Map Pack provides captivating 5\" \303\227 8\" map tiles that can be combine with each other and Map Pack: Forest Trails to create a variety of perilous paths. Inside, you\'ll find 18 richly crafted map tiles, including:\n\n\\list\n{Perilous Trails}\n{River Crossing}\n{Rock Slide}\n{Spider Webs}\n{Swamp Border}\n{Wild Fires}\n\nGame Masters shouldn\'t waste their time sketching maps every time characters enter the woods. With Pathfinder Map Pack: Forest Dangers, you\'ll always have a threat ready when the adventurers brave the wilds!\n"
+  short_description: "Color map tiles of forest dangers."
+}
+title: "Forest Dangers"
+subtitle: "No Walk in the Park"
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "design"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+date {
+  year: 2015
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "770"
+  check: 3
+}
+system: NONE
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Paizo"
+series: "Pathfinder Map Pack"
+series: "Map Pack"
+price {
+  currency: "$"
+  number: 1499
+  precision: 100
+}
+content {
+  part: BOX
+  description: "packaging"
+  number: 1
+}
+content {
+  part: MAP
+  description: "tile"
+  number: 18
+}
+layout: FOUR_COLOR

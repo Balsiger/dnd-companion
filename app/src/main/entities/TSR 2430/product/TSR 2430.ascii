@@ -1,0 +1,34 @@
+template {
+  name: "TSR 2430"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Dark Sun"
+  description: "solve a terrifying mystery, high-level"
+}
+title: "Forest Maker"
+date {
+  year: 1994
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "841"
+  check: 10
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

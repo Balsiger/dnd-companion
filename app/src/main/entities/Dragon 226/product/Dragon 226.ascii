@@ -1,0 +1,176 @@
+template {
+  name: "Dragon 226"
+  world: "Generic"
+}
+title: "Dragon 226"
+author {
+  name: "Fraser, Paul"
+}
+author {
+  name: "Clarke, David"
+}
+author {
+  name: "Thompson, Melissa C."
+}
+author {
+  name: "Strasser, Jason"
+}
+author {
+  name: "Bottorff, Michelle"
+}
+author {
+  name: "Turpin, Andrew"
+}
+author {
+  name: "Selinker, Michael A."
+}
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Howery, David"
+}
+author {
+  name: "Martin, Robert"
+}
+author {
+  name: "Thalberger, Rudy"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bryant, Anthony J."
+  job: "editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "associate assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "Burdick, Scott"
+}
+cartographer {
+  name: "Boholst, Roy M."
+}
+illustrator {
+  name: "Shanteau, Pamela"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Slack, Doug"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Longmeier, Phil"
+}
+illustrator {
+  name: "Horne, David"
+}
+illustrator {
+  name: "Barnett, Dee"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Klasnich, Robert"
+}
+illustrator {
+  name: "Bryant, Anthony J."
+}
+illustrator {
+  name: "May, Rex"
+}
+illustrator {
+  name: "Guntner, Frank"
+}
+illustrator {
+  name: "Holloway, James"
+}
+illustrator {
+  name: "Hrenchuk, Bill"
+}
+illustrator {
+  name: "Muleady, Bob"
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "Pilsbury, Joseph"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Lessl, Bob"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1996
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XX 9"
+number: "226"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

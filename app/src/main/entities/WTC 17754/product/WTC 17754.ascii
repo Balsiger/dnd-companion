@@ -1,0 +1,35 @@
+template {
+  name: "WTC 17754"
+  world: "Star Wars"
+  description: "Countless planets span the galaxy -- every one just a hyperspace jump\n  away. From bustling spaceports to desolate wastelands, it\'s up to you, the\n  Gamemaster, to provide the details and descriptions that bring them to\n  life. Whether you\'re preparing a game session beforehand, or running an\n  encounter on the fly, this book will help you fill every corner of the galaxy\n  with memorable individuals, cinematic locales, and desperate situations.\n\n  This sourcebook features:\n\n  \\list\n  {Information, tips, and ideas for fleshing out every game session, from\n   individual encounters to entire campaigns}\n  {100 adventure ideas and over a dozen mini-campaign ideas}\n  {48 pregenerated and mapped-out encounter locations, such as a Nightclub,\n   Hangar Bay, and Luxury Apartment}\n  {Random name generators for all of the heroic species featured in the\n   \\Product{Star Wars Roleplaying Game Revised Core Rulebook}}\n  {10 pregenerated supporting characters, including the Common Thug,\n   Freighter Pilot, and Taxi Driver, along with tables for generating\n   personalities, mannerisms, and quirks}\n\n  To use this sourcebook, you also need the \\Product{Star Wars Roleplaying Game\n  Revised Core Rulebook}.\n\n  This product is for use with all Star Wars eras."
+}
+title: "Galactic Campaign Guide"
+subtitle: "It\'ll take a few moments to get the coordinates from the navi-computer."
+author {
+  name: "Schweighofer, Peter"
+}
+author {
+  name: "Wiker, JD"
+}
+date {
+  year: 2003
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2892"
+  check: 1
+}
+isbn13 {
+}
+pages: 160
+system: D20
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}

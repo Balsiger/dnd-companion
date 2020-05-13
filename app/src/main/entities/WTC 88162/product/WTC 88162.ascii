@@ -1,0 +1,139 @@
+template {
+  name: "WTC 88162"
+  world: "Forgotten Realms"
+  description: "\\Place{Waterdeep} beckons! For centuries, this grand city has stood at the\n                    edge of the \\Place{Sea of Swords}, tempting heroes with its bustling port,\n                    thriving markets, hidden perils, and half-forgotten dungeons. Adventure waits\n                    on every street corner, behind every locked door, and below every cellar!\n                    This supplement for the D&D game offers an in-depth examination of\n                    \\Place{Waterdeep}. It includes a rich history of the city, detailed city\n                    maps, descriptions of key locations, statistics for important NPCs,\n                    information on local laws, and rules for running and playing in Waterdhavian\n                    adventures.\n                    \\list\n                    {4 prestige classes}\n                    {38 magic items}\n                    {11 city maps}\n                    The first in-depth look at \\Place{Waterdeep}, the shining jewel of the\n                    \\Place{Forgotten Realms} setting, in many years.\n                    \\Product{City of Splendors: Waterdeep} offers an in-depth examination of the\n                    great city of \\Place{Waterdeep} in the \\Place{Forgotten Realms} setting. An\n                    overview of the city includes history, a who\'s who, information on laws, and\n                    rules for running and playing in a Waterdhavian campaign. Information on the\n                    people of \\Place{Waterdeep} covers non-player characters, arcane schools,\n                    armed forces, guilds, nobility, prestige classes specific to the city, and\n                    more. Also included in the book are discussions of specific \\Place{Waterdeep}\n                    locales, adventure locales, and new monsters. An extensive appendix gives\n                    information on new equipment, magic items, psionic powers, poisons, spells,\n                    and more."
+}
+title: "City of Splendors: Waterdeep"
+subtitle: "Explore the Shining Jewel of \\Place{Faer\\hat{u}n}"
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Greenwood, Ed"
+  job: "additional design"
+}
+author {
+  name: "Jacobs, James"
+  job: "additional design"
+}
+author {
+  name: "Schend, Steven E."
+  job: "additional design"
+}
+author {
+  name: "Reynolds, Sean k"
+  job: "additional design"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "developer"
+}
+editor {
+  name: "Rice, Cindi"
+}
+editor {
+  name: "Sarli, Gary"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Fischer, Scott M."
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Rams, Vinod"
+}
+illustrator {
+  name: "Sardinha, Rick"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG R&D"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Jason"
+  job: "image technician"
+}
+typographer {
+  name: "Lo0kotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3693"
+  check: 2
+}
+isbn13 {
+}
+pages: 160
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 11836"

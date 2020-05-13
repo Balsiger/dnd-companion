@@ -1,0 +1,59 @@
+template {
+  name: "TSR 9469"
+  synonym: "HR7"
+  world: "Generic"
+  description: "Nine hundred years ago, the Dark Ages ended. But a new and terrible age then\n                    began, one of brutality and heroism, terror and courage, glorious victory and\n                    disastrous defeat. Western Europe turned its eyes eastwards toward the Holy\n                    Land, and moved to take it from the Saracens. But the forces of Islam would\n                    have none of this, and under the call of \\emph{jihad} they arose to meet the\n                    invaders.\n                    \\Product{The Crusades} presents the land of Outremer as a powerful AD&D\n                    setting, with historical background, maps, new character kits, details on\n                    strange magic and fantastic beasts, and adventures. It is a violent and\n                    dangerous world, but one of promise and hope as well. Only the brave need\n                    come."
+}
+title: "Crusades"
+leader: "The"
+author {
+  name: "Kurtz, Steve"
+}
+editor {
+  name: "Varney, Allen"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "III, David C. Sutherland"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+date {
+  year: 1994
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "858"
+  check: 4
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: SOURCEBOOK
+style: SOFT_COVER
+producer: "TSR"
+number: "7"
+series: "Historical Reference"
+price {
+  currency: "$ "
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "color"
+  number: 1073741824
+}

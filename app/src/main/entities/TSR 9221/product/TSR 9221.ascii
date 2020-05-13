@@ -1,0 +1,27 @@
+template {
+  name: "TSR 9221"
+  synonym: "DQ1"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+}
+title: "Shattered Statue / Enchanted Wood"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}

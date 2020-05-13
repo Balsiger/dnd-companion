@@ -1,0 +1,26 @@
+template {
+  name: "DMA 000067"
+  world: "None"
+}
+title: "RPG International Spring Catalog"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+pages: 16
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+producer: "RPG International"
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

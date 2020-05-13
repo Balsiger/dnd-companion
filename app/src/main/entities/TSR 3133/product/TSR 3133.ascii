@@ -1,0 +1,46 @@
+template {
+  name: "TSR 3133"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 228"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "Birthright"
+  description: "war and anarchy for the throne of Anuire"
+}
+title: "War"
+author {
+  name: "Simon Hawke"
+}
+date {
+  year: 1996
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0495"
+  check: 10
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2199
+  precision: 100
+}

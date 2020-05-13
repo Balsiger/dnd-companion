@@ -1,0 +1,108 @@
+template {
+  name: "WTC 31732"
+  synonym: "DN3"
+  world: "Generic"
+  description: "Your tabletop never looked better! With this pack of customizable terrain tiles, you can add a new dimension to your Dungeon & Dragons adventures. Easy to set up and infinitely expandable, this pack allows you to create the adventures you want to play. Pick up additional packs to create larger, more elaborate encounters."
+  short_description: "Map tiles around ghastly manor."
+}
+title: "Shadowghast Manor"
+subtitle: "Create your own haunted houses and crypts."
+author {
+  name: "Lee, Peter"
+  job: "dungeon tiles designer"
+}
+editor {
+}
+cover {
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+typographer {
+}
+manager {
+  name: "Tapp, Gretchen"
+  job: "senior product engineer"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D R&D senior producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D R&D group manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of R&D games and novels"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+date {
+  year: 2011
+  month: 12
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5801"
+  check: 6
+}
+pages: 6
+system: NONE
+type: ACCESSORY
+style: FOLDER
+producer: "WTC"
+series: "Dungeon Tiles"
+price {
+  currency: "$"
+  number: 1195
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1
+}
+content {
+  part: CARD
+  description: "durable, double-sided card stock sheets with terrain"
+  number: 6
+}
+layout: FULL_COLOR

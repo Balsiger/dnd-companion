@@ -1,0 +1,35 @@
+template {
+  name: "WTC 9692874"
+  world: "None"
+  description: "\\NPC{Rani Sen} longs to fit in at school. So she joins the \\Group{Fashion\n                    Divas}, a club whose members are some of the most popular girls at\n                    \\Place{Middletown High}. As she helps plan the \\Group{Divas}\' annual\n                    fashion show, \\NPC{Rani}\'s popularity grows. But still, something feels\n                    wrong. It takes a chance encounter and a crazy dare to show her what really\n                    matters: true friends."
+}
+title: "Rani and the Fashion Divas"
+subtitle: "Put cold cream on your face and go out in public. Would you dare?"
+author {
+  name: "Banerjee, Anjali"
+}
+date {
+  year: 2005
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3782"
+  check: 3
+}
+isbn13 {
+}
+pages: 144
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 4"
+series: "Star Sisterz"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

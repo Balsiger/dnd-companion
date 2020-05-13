@@ -1,0 +1,27 @@
+template {
+  name: "TSR 21353"
+  reference {
+    name: "net"
+  }
+  world: "Dominaria"
+}
+title: "Official Urza\'s Legacy Game Guide"
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1353"
+  check: 3
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1199
+  precision: 100
+}

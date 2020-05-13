@@ -1,0 +1,39 @@
+template {
+  name: "TSR 21403"
+  reference {
+    name: "net"
+  }
+  world: "Dominaria"
+  description: "The \\Event{Ice Age} has come to an abrupt end, but the world\'s troubles have\n                    not. Legions of \\Monster{undead} still plague the living. The temporary peace\n                    in \\Place{Kjeldor} has come to an end, and an evil far more treacherous than\n                    \\NPC{Lim D\342\210\232\302\252l} has been unleashed upon the land.\n                    The ice has gone, but the evil remains."
+}
+title: "Shattered Alliance"
+leader: "The"
+subtitle: "After the ice comes the peril"
+author {
+  name: "Jeff Grubb"
+}
+date {
+  year: 2000
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1403"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book III"
+series: "Ice Age Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

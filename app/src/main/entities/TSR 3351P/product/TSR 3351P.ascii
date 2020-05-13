@@ -1,0 +1,22 @@
+template {
+  name: "TSR 3351P"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Buck Rogers"
+}
+title: "Arrival"
+date {
+  year: 1994
+}
+isbn {
+}
+isbn13 {
+}
+system: XXVC
+audience: UNKNOWN
+price {
+  currency: "\302\254\302\243 "
+  number: 399
+  precision: 100
+}

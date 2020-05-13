@@ -1,0 +1,90 @@
+template {
+  name: "Dungeon 31"
+  world: "Generic"
+  description: "This is issue 31 of the dungeon magazine."
+}
+title: "Dungeon 31"
+author {
+  name: "Kurtz, Steven"
+}
+author {
+  name: "Walsh, Willie"
+}
+author {
+  name: "Rick, Greg"
+}
+author {
+  name: "Schell, Brad"
+}
+author {
+  name: "Connors, William W."
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Wood, Robin"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Miller, David O."
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Wood, Robin"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1991
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "VI 1"
+number: "31"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

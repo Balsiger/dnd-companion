@@ -1,0 +1,25 @@
+template {
+  name: "DMA 000064"
+  description: "The 2001 May to August catalog of Wizards of the Coast."
+}
+title: "May - August 2001 Catalogue"
+date {
+  year: 2001
+}
+isbn {
+}
+isbn13 {
+}
+pages: 30
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

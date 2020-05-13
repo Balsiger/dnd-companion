@@ -1,0 +1,27 @@
+template {
+  name: "TSR 8441"
+  reference {
+    name: "catalogue96"
+  }
+  description: "fantasy art of TSR"
+}
+title: "Worlds of TSR"
+leader: "The"
+author {
+  name: "Marlys Heeszel"
+}
+date {
+  year: 1994
+}
+isbn {
+}
+isbn13 {
+}
+audience: ALL
+type: SPECIAL_BOOK
+style: HARDCOVER
+price {
+  currency: "\302\254\302\243"
+  number: 1499
+  precision: 100
+}

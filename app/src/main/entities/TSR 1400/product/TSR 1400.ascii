@@ -1,0 +1,92 @@
+template {
+  name: "TSR 1400"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  world: "Generic"
+  description: "Base game system as introduction."
+}
+title: "Dragon Strike"
+date {
+  year: 1993
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "635"
+  check: 2
+}
+isbn13 {
+}
+system: DRAGON_STRIKE
+audience: ALL
+type: CAMPAIGN_SETTING
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: MISC
+  description: "VHS"
+  number: 1073741824
+}
+content {
+  part: BOARD
+  description: "gameboard"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "figures"
+  number: 24
+}
+content {
+  part: CARD
+  description: "playing"
+  number: 110
+}
+content {
+  part: CARD
+  description: "character"
+  number: 6
+}
+content {
+  part: SCREEN
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "adventurebook"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "mapbook"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "rulebook"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "playing pieces"
+  number: 43
+}
+content {
+  part: MISC
+  description: "clips"
+  number: 24
+}
+content {
+  part: DICE
+  number: 3
+}

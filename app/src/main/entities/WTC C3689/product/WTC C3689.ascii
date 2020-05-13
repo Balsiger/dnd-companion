@@ -1,0 +1,39 @@
+template {
+  name: "WTC C3689"
+  world: "Generic"
+  description: "Good for dungeon and wilderness encounters alike, this sturdy double-sided, grid-lined play surface is ideal for when your Dungeon & Dragons campaign gets tactical. The D&D Adventure Grid also folds up for easy transport and storage, and can be used with both wet-erase and dry-erase pens interchangeably.\n\n\\em{Pens and miniatures not included.}\n"
+  short_description: "Foldable dungeon and wilderness play areas."
+}
+title: "Adventure Grid"
+subtitle: "Strategy by Design"
+date {
+  year: 2017
+  month: 10
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6621"
+  check: 9
+}
+pages: 2
+audience: UNKNOWN
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1
+}
+content {
+  part: MAP
+  description: "play area"
+  number: 2
+}

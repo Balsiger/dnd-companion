@@ -1,0 +1,39 @@
+template {
+  name: "TSR 2524"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Savage Coast"
+  description: "a lot of monsters"
+}
+title: "Monstrous Compendium, Savage Coast Appendix"
+author {
+  name: "Coleman, Loren L."
+}
+author {
+  name: "Zuvich, Ted"
+}
+date {
+  year: 1996
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0409"
+  check: 7
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: RULEBOOK
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

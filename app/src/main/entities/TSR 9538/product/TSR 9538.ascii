@@ -1,0 +1,53 @@
+template {
+  name: "TSR 9538"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{Had I not seen the chaos that ensued, I would never have believed the\n                    tale \\Place{Shadowdale}\'s sage wove for me that day... Who would have\n                    believed that anything had the power to rip \\NPC{Halaster Blackcloak} bodily\n                    from his \\Place{Undermountain}? Who again could predict the maelstrom of\n                    dangers that a dungeon gone mad would unleash upon an unsuspecting\n                    \\Place{Realms}? It is thanks to the brave and noble souls who dared reach\n                    into the villains\' clutches to save the life of \\NPC{Halaster the Mad Mage}\n                    that we all rise to greet another sun.}\n                    \\right{---\\NPC{Gamalon Idogyr}, starfaring mage formerly of\n                    \\Place{Llorbauth}}\n                    This \\Product{Dungeon Crawl} adventure returns once more to the hallowed\n                    halls of \\Place{Undermountain}, but it\'s a different day. At dawn of\n                    Highharvestide 1369, every practitioner of magic on the \\Place{Sword Coast}\n                    knew there was a problem. By midmorning, the \\Group{Lords of\n                    \\Place{Waterdeep}} confirmed the ill omens: Some brave souls worthy of the\n                    title \'Hero\' must enter \\Place{Undermountain} on a mission to save\n                    \\NPC{Halaster Blackcloak}! Could these heroes be your group of player\n                    characters?\n                    This is a stand-alone module and does not require extra support\n                    materials. It can be placed into a campaign on any AD&D world, but best fits\n                    and impacts a \\Product{Forgotten Realms} campaign set in\n                    \\Place{Undermountain} or \\Place{Waterdeep}.\n                    For four to six characters of levels 10--14"
+}
+title: "Undermountain Trilogy III: Stardock"
+date {
+  year: 1997
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0451"
+  check: 8
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Dungeon Crawl"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,96 @@
+template {
+  name: "WTC 86430"
+  world: "Eberron"
+  description: "A \\Place{Brelish} spay has vanished with a powerful magic sword. Pursuing\n  the fugitive are operatives from a number of other factions intent on\n  recovering the traitor, his stolen weapon, or both. As the slippery agent\n  flees across \\Place{Khorvaire}, only the most relentless heroes will stay on\n  the intrigue-laced trail and capture their target.\n\n  \\Product{Whispers of the Vampire\'s Blade} is a stand-alone adventure for the\n  Dungeons & Dragons game that will immerse your characters in the\n  \\Place{Eberron} campaign setting. Designed to challenge 4th-level D&D heroes,\n  it hurls them across the continent of \\Place{Khorvaire} with action-packed\n  overland and aerial travel.\n\n  To use this adventure, a Dungeon Master also needs the \\Product{Eberron\n  Campaign Setting}, the \\Product{Player\'s Handbook}, \\Product{Dungeon Master\'s\n  Guide}, and \\Product{Monster Manual}. A player only needs the\n  \\Product{Eberron Campaign Setting} and the \\Product{Player\'s Handbook}.\n\n  Take advantage of the RPGA\'s Player Rewards Program by scoring points with\n  this adventure."
+}
+title: "Whispers of the Vampire\'s Blade"
+subtitle: "Join the Hunt for an Elusive Traitor"
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "development"
+}
+editor {
+  name: "Slavicsek, Bill"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Cheung, Carmen"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Finch, Andrew"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production manager"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3510"
+  check: 3
+}
+isbn13 {
+}
+pages: 32
+system: DND_3RD
+type: ADVENTURE
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9236"
+  synonym: "GAZ9"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Minrothad Guilds"
+leader: "The"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

@@ -1,0 +1,67 @@
+template {
+  name: "TSR 9274"
+  synonym: "FR10"
+  reference {
+    name: "catalogue93"
+  }
+  world: "Forgotten Realms"
+  description: "This booklet present the \\Place{Old Empires} for DMs and players\n                    alike. Descriptions of all the major cities and towns, maps of the most\n                    important ones, information on the people, places, economics, geography, and\n                    cultures of these countries are within these pages.\n                    Prepare, then, to enter the realms of god-kings and pharaohs, of strange\n                    magic unknown even to the likes of the \\Group{Red Wizards} of\n                    \\Place{Thay}. These are the \\Place{Old Empires}."
+}
+title: "Old Empires"
+author {
+  name: "Bennie, Scott"
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "MacDonald, Kathleen C."
+}
+manager {
+  name: "Barnett, Dee"
+  job: "keylining"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "821"
+  check: 8
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

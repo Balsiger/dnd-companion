@@ -1,0 +1,57 @@
+template {
+  name: "WTC 96450"
+  world: "Forgotten Realms"
+  description: "The Streets of \\Place{Waterdeep}...\n                    Where danger lurks round every corner as the avatars of the gods seek the\n                    \\Item{Tablets of Fate}.\n                    Where \\God{Cyric} and \\God{Myrkul}, \\God{god of death}, plot to capture\n                    \\God{Midnight} and twist the \\Item{Tablets} to their own dark ends,\n                    imperiling the very existence of \\Place{Faer\\hat{u}n}.\n                    Where the destiny of the world will be decided and a new pantheon of gods\n                    will rise into the heavens."
+}
+title: "Waterdeep"
+author {
+  name: "Denning, Troy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3111"
+  check: 6
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "Avatar Series"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

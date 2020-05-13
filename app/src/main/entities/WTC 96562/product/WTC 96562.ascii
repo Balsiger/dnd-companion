@@ -1,0 +1,40 @@
+template {
+  name: "WTC 96562"
+  world: "Forgotten Realms"
+  description: "\\Group{House Dlardrageth} is an ancient cabal of demon-spawned \\Monster{sun\n                    elves} who burn for vengeance against the elven realms that defeated them\n                    long ago.\n                    \\NPC{Araevin} is an \\Monster{elf} \\Class{mage} from \\Place{Evereska} who\n                    discovers \\Group{Dlardrageth}\'s return and may have to spend his sanity to\n                    defeat them.\n                    \'All in all, this is perhaps the best-written Realms novel yet\'\n                    \\right{--Ed Greenwood}\n                    \\right{Author of \\Product{Elminster\'s Daughter}}\n                    New York Times best-selling author Richard Baker launches a new trilogy that\n                    brings the \\Monster{elves} of \\Place{Faer\\hat{u}n} out of hiding."
+}
+title: "Forsaken House"
+subtitle: "Ten Millennia of Hubris, Betrayal, Failure, and Retreat Are Coming to an End"
+author {
+  name: "Baker, Richard L. III"
+}
+cover {
+  name: "Rex, Adam"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2004
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 338
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "The Last Mythal"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

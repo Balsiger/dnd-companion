@@ -1,0 +1,33 @@
+template {
+  name: "TSR 11792"
+  reference {
+    name: "net"
+  }
+  world: "Episode I"
+  description: "create new adventures set in the mysterious city of Theed"
+}
+title: "Star Wars: Episode I Adventure Game"
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+  year: 2000
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1792"
+  check: 10
+}
+isbn13 {
+}
+pages: 96
+system: STAR_WARS
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}

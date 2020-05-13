@@ -1,0 +1,37 @@
+template {
+  name: "TSR 3571"
+  synonym: "25CS2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "stop the space pirates, once and for all"
+}
+title: "Sargasso of Space"
+date {
+  year: 1993
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "065"
+  check: 6
+}
+isbn13 {
+}
+system: XXVC
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

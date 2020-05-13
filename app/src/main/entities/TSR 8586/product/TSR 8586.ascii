@@ -1,0 +1,48 @@
+template {
+  name: "TSR 8586"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Forgotten Realms"
+  description: "Hidden from his powerful family\'s enemies behind the hideous mask of his own\n                    face. Sent by the \\God{goddess of beauty} on an impossible mission. Driven to\n                    find a way past his own flesh, into a soul torn between destiny and love.\n                    Deep in the ancient valleys of the enigmatic \\Place{Utter East}, \\NPC{Atreus}\n                    will finally look into the..."
+}
+title: "Faces of Deception"
+subtitle: "\\NPC{Atreus of Erlkazar}"
+author {
+  name: "Denning, Troy"
+}
+cover {
+  name: "Fields, Fred"
+}
+date {
+  year: 1998
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1183"
+  check: 2
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book Two"
+series: "Lost Empires"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

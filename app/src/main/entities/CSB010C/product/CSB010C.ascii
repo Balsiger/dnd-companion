@@ -1,0 +1,45 @@
+template {
+  name: "CSB010C"
+  description: "For use with the current version of the world\'s most popular RPG or many other games. Zone Effects are great for marking the area of a continuous effect or a sustained power. Scales up or down easily to mark larger or smaller zones and does not occupy squares on a battlemap. No more having to mark up the battlemap only to erase it when the effect is removed. Sold in a pack of four and models are supplied in orange resin."
+  short_description: "4 orange zone effect markers styled as flames."
+}
+title: "Zone Effects - Flame Orange"
+subtitle: "Terraform Battlefield Scenery"
+author {
+}
+editor {
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2011
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Armorcast"
+series: "Zone Effects"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "Zone effect marker"
+  number: 4
+}
+layout: FULL_COLOR

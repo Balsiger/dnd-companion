@@ -1,0 +1,38 @@
+template {
+  name: "TSR 21323"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "Argoth is decimated...\n                    Tidal waves have turned canyons into rivers...\n                    Earthquakes leveled the cities...\n                    \\Place{Dominaria} is in ruins.\n                    Now the struggle for this war-torn world is to survive."
+}
+title: "Colors of Magic"
+leader: "The"
+subtitle: "The brothers\' struggle for power has ended..."
+editor {
+  name: "Lebow, Jess"
+}
+date {
+  year: 1999
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1323"
+  check: 1
+}
+isbn13 {
+}
+pages: 342
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

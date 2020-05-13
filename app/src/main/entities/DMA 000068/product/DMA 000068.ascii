@@ -1,0 +1,28 @@
+template {
+  name: "DMA 000068"
+  world: "None"
+}
+title: "Casket Works"
+date {
+  year: 2000
+}
+isbn {
+}
+isbn13 {
+}
+pages: 56
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+producer: "Reaper"
+number: "issue 5"
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: BLACK_AND_WHITE

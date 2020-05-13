@@ -1,0 +1,42 @@
+template {
+  name: "TSR 21818"
+  synonym: "WTC 88092"
+  world: "Forgotten Realms"
+  description: "After a fight, some warriors seek to return home.\n                    Others seek revenge.\n                    The battle of \\NPC{Akhlaur}\'s Swamp is over, and its heroes part ways. One\n                    becomes a wizard\'s apprentice and tries to unravel her mysterious\n                    lineage. Another hero returns to his queen, only to find that all is not was\n                    it was.\n                    Hidden from them both, the \\NPC{Magehound} broods. She cannot forgive those\n                    who drove her from power, and she will stop at nothing to be avenged. Her\n                    bitterness ensures that \\NPC{Akhlaur}\'s Swamp was only the beginning for them\n                    all."
+}
+title: "Floodgate"
+leader: "The"
+author {
+  name: "Cunningham, Elaine"
+}
+cover {
+  name: "Foster, John"
+}
+date {
+  year: 2001
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1818"
+  check: 7
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "Counselors & Kings"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

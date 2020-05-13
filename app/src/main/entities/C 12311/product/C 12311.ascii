@@ -1,0 +1,53 @@
+template {
+  name: "C 12311"
+  description: "1 miniture"
+}
+title: "Taranis (Swordsman)"
+author {
+}
+author {
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "Celtos"
+price {
+  currency: "DM "
+  number: 1300
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}

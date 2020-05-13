@@ -1,0 +1,90 @@
+template {
+  name: "PZO 3040"
+  category: "cards"
+  world: "Generic"
+  description: "Make your social encounters come alive with new surprises and tactics! This beautifully illustrated 52-card deck gives you a great way to run courtly intrigue and taver showdowns in your Pathfinder Roleplaying Game campaign. Whether you\'re using deception, wit, or intimidation to get your way, this deck presents complete rules for extending subtle and devious conflicts. Jump into the drama and dominate the scene with Pathfinder Cards: Social Combat!"
+  short_description: "A deck of cards to handle social combat"
+}
+title: "Social Combat"
+subtitle: "Pathfinder Cards"
+author {
+  name: "Bulmahn, Jason"
+  job: "designer"
+}
+author {
+  name: "Radney-MacFarland, Stephan"
+  job: "additional designer"
+}
+author {
+  name: "Reynolds, Sean K"
+  job: "additional designer"
+}
+editor {
+  name: "Bauer, Judy"
+}
+editor {
+  name: "Carey, Chris"
+}
+editor {
+  name: "Macklin, Ryan"
+}
+editor {
+  name: "Schneider, F. Wesley"
+}
+editor {
+  name: "Sutter, James Lafond"
+}
+cover {
+  name: "Dixon, Matt"
+  job: "box illustration"
+}
+illustrator {
+  name: "Dixon, Matt"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Dixon, Matt"
+  job: "card back illustration"
+}
+illustrator {
+  name: "Morris, Sonja"
+  job: "art director"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2014
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "610"
+  check: 2
+}
+system: DND_3_5
+audience: ALL
+type: CARDS_TYPE
+style: SMALL_BOX
+producer: "Paizo"
+series: "Pathfinder Cards"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: BOX
+  description: "packaging"
+  number: 1
+}
+content {
+  part: CARD
+  description: "combat card"
+  number: 52
+}
+layout: FULL_COLOR

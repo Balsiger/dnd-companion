@@ -1,0 +1,160 @@
+template {
+  name: "Dragon 350"
+  world: "Generic"
+  description: "Issue 350 of the magazine. "
+}
+title: "Dragon 350"
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Cole, Joshua"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Frost, Josh"
+}
+author {
+  name: "Hanson, Matthew J."
+}
+author {
+  name: "Hart, Mark A."
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "Manley, Jake"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Sutter, James Lafond"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "managing editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Gravato, John"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Pozca, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXXI 7"
+number: "350"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

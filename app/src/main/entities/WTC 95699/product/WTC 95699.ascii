@@ -1,0 +1,33 @@
+template {
+  name: "WTC 95699"
+  world: "None"
+  description: "Dungeons & Dragons isn\'t just a game--for millions of fans it\'s a community\n  and a way of life.\n\n  This assortment features five unique and humorous slogans related to Dungeons\n  & Dragons. It\'s a fun, easy, and inexpensive way for current and former\n  D&D players to express their love of the game and share an in-joke with other\n  players.\n\n  D&D has never been hotter than it is today\342\200\232\303\204\303\256and with tens of thousands of\n  these stickers on cars, notebooks, and elsewhere across America, it\'s only\n  going to get hotter!"
+}
+title: "D&D Bumper Stickers"
+date {
+  year: 2005
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4147"
+  check: 2
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: ACCESSORY
+style: STICKER
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: STICKER
+  description: "bumper"
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,153 @@
+template {
+  name: "Dragon 247"
+  world: "Generic"
+}
+title: "Dragon 247"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Adkison, Peter D."
+}
+author {
+  name: "Heard, Bruce"
+}
+author {
+  name: "Moldvay, Tom"
+}
+author {
+  name: "Bonny, Ed"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Perkins, Chris"
+}
+author {
+  name: "Novak, Kate"
+}
+author {
+  name: "Dietz, Sebastian"
+}
+author {
+  name: "Richards, Jonathan M."
+}
+author {
+  name: "Knowles, Brent"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Smith, Lester"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "post, rk"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Pillsbury, Joseph"
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+illustrator {
+  name: "Shanteau, Pamela"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Morales, Rags"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Hanson, Dave"
+}
+illustrator {
+  name: "Mayer, Dwain"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "ad traffifc manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXII 10"
+number: "247"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

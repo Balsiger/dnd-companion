@@ -1,0 +1,106 @@
+template {
+  name: "Dungeon 60"
+  world: "Generic"
+  description: "This is issue 60 of the dungeon magazine."
+}
+title: "Dungeon 60"
+author {
+  name: "Maxwell, Randy"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Walsh, Willie"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bryant, Anthony J."
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "associate editor"
+}
+cover {
+  name: "Holloway, Jim"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Lazarretti, Rob"
+}
+cartographer {
+  name: "Scott, Michael"
+}
+illustrator {
+  name: "Lazzaretii, Rob"
+  job: "spot illustrations"
+}
+illustrator {
+  name: "Holloway, James"
+}
+illustrator {
+  name: "Lazarretti, Rob"
+}
+illustrator {
+  name: "post, rk"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Craig, Terry"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1996
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "X 6"
+number: "60"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

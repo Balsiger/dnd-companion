@@ -1,0 +1,192 @@
+template {
+  name: "WTC C2208"
+  category: "adventure"
+  category: "Adventure"
+  world: "Generic"
+  world: "Forgotten Realms"
+  description: "A death curse has befaller everyone who\'s been raised from the dead. It\'s victims are rotting away, and all efforts to reverse the decay have failed.\n\nThe soulds of the dead are being stolen one by one and trapped inside a necromantic artifact. Only its destruction will free the trapped spirits and allow the dead to be raised once more.\n\nAll paths lead to \\Place{Chult}, a mysterious land of valcanoes, jungles, and the ruins of fallen kingdoms. Below them all awaits a deadly tomb. The trap is set. Will you take the bait?\n\nA Dungeons & Dragons adventure for characters of level 1 - 11.\n\nFor use with the fifth edition Player\'s Handbook, Monster Manual and Dungeons Master\'s Guide."
+  short_description: "An dungeon crawl adventure in Chult for level 1 to 11."
+}
+title: "Tomb of Annihilation"
+subtitle: "Dare to defy death in this adventure for the world\'s greatest roleplaying game."
+author {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+author {
+  name: "Doyle, Will"
+  job: "designer"
+}
+author {
+  name: "Winter, Steve"
+  job: "designer"
+}
+author {
+  name: "Lee, Adam"
+  job: "additional design"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "managing editor"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Sernett, Matt"
+  job: "editorial assistant"
+}
+cover {
+  name: "Oliver, Ben"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Bradley, Christopher"
+}
+illustrator {
+  name: "Chevrier, Jedd"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Dien, Chris"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Hannigan, Leesha"
+}
+illustrator {
+  name: "Maury, Victor"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Widerman, Eva"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Kate Irwiun"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna"
+  job: "additional art direction"
+}
+illustrator {
+  name: "Whitters, Richard"
+  job: "additional art direction"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+illustrator {
+  name: "Gershman, David"
+  job: "art administration"
+}
+manager {
+  name: "Stan!"
+  job: "producer"
+}
+manager {
+  name: "Ward, Pendleton"
+  job: "story consultant"
+}
+manager {
+  name: "Lowder, James"
+  job: "story consultant"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "story creator"
+}
+manager {
+  name: "Lee, Adam"
+  job: "story creator"
+}
+manager {
+  name: "Whitters, Richard"
+  job: "story creator"
+}
+manager {
+  name: "Crawford, Jeremy"
+  job: "lead rules developer"
+}
+manager {
+  name: "Fleming, Heather"
+  job: "project manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "product engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+date {
+  year: 2017
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6610"
+  check: 3
+}
+pages: 256
+system: DND_NEXT
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: MAP
+  number: 1
+}
+layout: FULL_COLOR

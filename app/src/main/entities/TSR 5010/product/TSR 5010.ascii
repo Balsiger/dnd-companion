@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5010"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Dwarves of the Mountain King"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

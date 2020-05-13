@@ -1,0 +1,35 @@
+template {
+  name: "WTC 88658"
+  world: "Star Wars"
+  description: "The \\Group{Yuuzhan Vong} have shattered the \\Place{New Republic}\'s promise\n  of peace throughout the galaxy. System by system, they bring death and\n  enslavement to all they encounter. Even the \\Group{Jedi} have failed to slow\n  the merciless advance of this dark tide. As this terrible threat from beyond\n  the galaxy\'s edge pushes closer to \\Place{Coruscant}, the need for great\n  heroes grows ever more dire.\n\n  This sourcebook features:\n\n  \\list\n  {New prestige classes, feats, species, ships, and starship combat tactics}\n  {New archetypes with statistics for play at low, medium, and high levels}\n  {Rules for the \\Group{Yuuzhan Vong}, including their soldiers and priests,\n   ships, weapons, and equipment}\n  {Action-packed adventure seeds designed for mid- to high-level characters}\n  {Game statistics for characters from \\Product{The New Jedi Order} novels,\n   including \\Product{Vector Prime}, \\Product{Onslaught}, \\Product{Ruin},\n   \\Product{Hero\'s Trial}, \\Product{Jedi Eclipse}, \\Product{Balance Point},\n   \\Product{Conquest}, \\Product{Rebirth}, and \\Product{Star by Star}}\n\n  To use this sourcebook, you also need the \\Product{Star Wars Roleplaying Game\n  Revised Core Rulebook}."
+}
+title: "New Jedi Order Sourcebook"
+subtitle: "There\'s a time to run and a time to stand..."
+author {
+  name: "Wiker, JD"
+}
+author {
+  name: "Miller, Steve"
+}
+date {
+  year: 2002
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2777"
+  check: 1
+}
+isbn13 {
+}
+pages: 160
+system: D20
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}

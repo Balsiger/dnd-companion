@@ -1,0 +1,178 @@
+template {
+  name: "WTC 25462"
+  world: "Gamma World"
+  description: "Evil cyborgs in golden armor are abducting people from the \\Place{Barony of Horn}, and that ain\'t right. All trails lead to a mysterious lab on the shores of \\Place{Lake Michig}, but the adventure doesn\'t end there. To stop the \\Group{Legion of Gold} and save the world, you must boldly go where many have gone before. Strap yourself in and kiss \\Place{Gamma Terra} goodbye --- you\'re heading\' to the \\Place{Moon}.\n\nThis fun expansion for the D&D \\Product{Gamma World} Roleplaying Game includes new hero options, new rules for vocations and heroic feats, new monsters, and a full-length adventure along with foldout battle maps and card stock tokens depicting various creatures and characters.\n\nGame components:\n\n\\list\n{160-page book containing new hero options, expanded rules, new monsters, and a full-length adventure}\n{2 full-color, double-sided, foldout battle maps}\n{4 card stock sheets of character and creature tokens}\n{10 Alpha Mutation and Omega Tech cards}"
+  short_description: "A Gamma World expansion around evil cyborgs in golden armor."
+}
+title: "Legion of Gold"
+subtitle: "Takle One Small Step for Mutantkind"
+author {
+  name: "Backer, Richard"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Schaefer, Peter"
+  job: "lead developer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "developer"
+}
+editor {
+  name: "Moore, Cal"
+  job: "lead"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Cottrill, Tora"
+  job: "managing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "managing editor"
+}
+cover {
+  name: "Ellis, Steve"
+}
+cartographer {
+  name: "Bando, Jared"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Faille, Michael"
+}
+illustrator {
+  name: "Parnell, Patrick Thomas"
+}
+illustrator {
+  name: "Piatti, Federico"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Tardiff, Christopher"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D creative manager"
+}
+manager {
+  name: "Wyatt, James"
+  job: "D&D design manager"
+}
+manager {
+  name: "Collins, Andy"
+  job: "D&D development and editing manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of D&D R&D and book publishing"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Applin-Rosta, Raini"
+  job: "senior buyer"
+}
+date {
+  year: 2011
+  month: 3
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5510"
+  check: 7
+}
+pages: 160
+system: DND_4
+type: CAMPAIGN_EXPANSION
+style: BOX
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2999
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Expansion book"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "foldout, battle map"
+  number: 2
+}
+content {
+  part: SHEET
+  description: "die-cut monster and character tokens"
+  number: 4
+}
+content {
+  part: CARD
+  description: "mutant and tech"
+  number: 10
+}
+required_requirements: "Gamma World"
+layout: FULL_COLOR

@@ -1,0 +1,34 @@
+template {
+  name: "TSR 2433"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dark Sun"
+  description: "a lot of monsters"
+}
+title: "Monstrous Compendium"
+leader: "Dark Sun Appendix II"
+date {
+  year: 1995
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: MONSTER_COMPENDIUM
+number: "unknown"
+series: "Monstrous Compendium"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}

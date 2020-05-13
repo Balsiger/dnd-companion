@@ -1,0 +1,37 @@
+template {
+  name: "TSR 11615"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  world: "Dark.Matter"
+  description: "stand-alone adventure revealing a disturbing reality"
+}
+title: "Killing Jar"
+leader: "The"
+author {
+  name: "Cordell, Bruce R."
+}
+date {
+  year: 2000
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1615"
+  check: 10
+}
+isbn13 {
+}
+pages: 64
+system: ALTERNITY
+type: ADVENTURE
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}

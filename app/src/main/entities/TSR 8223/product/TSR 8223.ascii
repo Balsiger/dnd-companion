@@ -1,0 +1,37 @@
+template {
+  name: "TSR 8223"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+  description: "two powerful forces collied, who will triumph ?"
+}
+title: "Thorn and Needle"
+date {
+  year: 1993
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "397"
+  check: 3
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

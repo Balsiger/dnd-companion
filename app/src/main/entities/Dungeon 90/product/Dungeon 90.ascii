@@ -1,0 +1,128 @@
+template {
+  name: "Dungeon 90"
+  world: "Generic"
+  description: "This is issue 90 of the dungeon magazine, together with the\n   \\Product{Polyhedron 149} issue."
+}
+title: "Dungeon 90"
+author {
+  name: "Alvarez, J.C."
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "McCoy, Angel Leigh"
+}
+author {
+  name: "Mees, Bernard"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assisstant editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+cover {
+  name: "Brom"
+}
+illustrator {
+  name: "Collins, Michael"
+}
+illustrator {
+  name: "Thompson, Derek"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Zipse, Craig"
+}
+illustrator {
+  name: "Diesel"
+}
+illustrator {
+  name: "Thomasson, Chris"
+  job: "art director"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Chung, Alice"
+  job: "advertis intern"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 2002
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 118
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XV 6"
+number: "90"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,32 @@
+template {
+  name: "MM 20006"
+}
+title: "Beds"
+illustrator {
+  name: "Ochmann, J."
+  job: "sculptor"
+}
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: SMALL_BOX
+producer: "Mega Miniatures"
+series: "Dungeon Decor"
+price {
+  currency: "$"
+  number: 850
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "Bed"
+  number: 4
+}
+layout: FULL_COLOR

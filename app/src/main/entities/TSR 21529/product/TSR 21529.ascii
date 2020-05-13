@@ -1,0 +1,38 @@
+template {
+  name: "TSR 21529"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "Welcome to a world of rich folklore where \\Monster{angels} watch over the\n                    righteous, in which sea monsters sink ships, where dark figures lurk under\n                    every child\'s bed. Now the mysteries of \\Place{Dominaria} are explained."
+}
+title: "Myths of Magic"
+leader: "The"
+subtitle: "Perhaps the stories are true..."
+author {
+  name: "Jess Lebow"
+}
+date {
+  year: 2000
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1529"
+  check: 3
+}
+isbn13 {
+}
+pages: 342
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

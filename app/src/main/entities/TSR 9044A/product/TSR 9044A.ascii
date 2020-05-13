@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9044A"
+  synonym: "B3"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Palace of the Silver Princess"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

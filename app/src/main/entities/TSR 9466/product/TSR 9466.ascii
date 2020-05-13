@@ -1,0 +1,33 @@
+template {
+  name: "TSR 9466"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+  description: "race against time to solve the mystery before the beast kills again"
+}
+title: "Howls in the Night"
+date {
+  year: 1995
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

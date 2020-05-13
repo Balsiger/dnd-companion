@@ -1,0 +1,48 @@
+template {
+  name: "WTC 24745"
+  synonym: ""
+  world: "Forgotten Realms"
+  description: "\\large{Born in shadow.}\n                    Suspended between the worlds of the living and the dead is a thrill-seeking race imbued with the fleeting power of shadow: the \\Monster{shadar-kai}.\n                    \\large{Baptized by blood.}\n                    \\NPC{Ashok} bears the scars of many battles, lashing out with iron-spiked chains at any who stand against him\342\200\232\303\204\303\256friend, foe, and brother alike. Until he is abandoned on the \\Place{Shadowfell} to fade away.\n                    \\large{Claimed by the Lord of Battles.}\n                    In the city of \\Place[Ikemmu}, a bastion of disciplined \\Monster{shadar-kai}, a cleric of the god of battle has a vision of a \\Monster{shadar-kai} man, surrounded by flames and ravens, dying on the \\Place{Shadowfell}. A man who may be the savior of \\Place{Ikemmu}.\n                    \\emph{Or its ultimate downfall.}\n                    "
+  short_description: "A novel in the \\Place{Shadowfell}"
+}
+title: "Unbroken Chain"
+subtitle: "Heroes in dark times. Adventure in sinister places."
+author {
+  name: "Johnson, Jaleigh"
+}
+cover {
+  name: "Koniotis, Kos"
+}
+date {
+  year: 2010
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5626"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5626"
+  check: 5
+}
+pages: 342
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

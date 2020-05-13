@@ -1,0 +1,42 @@
+template {
+  name: "TSR 9334"
+  synonym: "DLS4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "Kagonesti elves in all their splendour"
+}
+title: "Wild Elves"
+date {
+  year: 1991
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "140"
+  check: 7
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

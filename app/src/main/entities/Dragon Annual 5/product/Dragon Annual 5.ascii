@@ -1,0 +1,222 @@
+template {
+  name: "Dragon Annual 5"
+  world: "Generic"
+  description: "Annual issue 5. "
+}
+title: "Dragon Annual 5"
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Wilkes, Christopher"
+}
+author {
+  name: "Schubert, Stephen"
+}
+author {
+  name: "McLeod, Christian Paul"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Ryan, Michael G."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Chunn, David"
+}
+author {
+  name: "Morton, E.W."
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Haw, Kevin N."
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Bebris, Carrie A."
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Haddock, Eric"
+  job: "assistant editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robin D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+editor {
+  name: "Fiorito, Stacie A."
+  job: "editorial intern"
+}
+cover {
+  name: "Harrington, Glenn"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Parente, Paolo"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Vega, Manny"
+}
+illustrator {
+  name: "Mosely, Tony"
+}
+illustrator {
+  name: "Hinds, Rob"
+}
+illustrator {
+  name: "Calero, Dennis"
+}
+illustrator {
+  name: "Gregory, D. Alexander"
+}
+illustrator {
+  name: "Vilardi, Mike"
+}
+illustrator {
+  name: "Riche, Darrell"
+}
+illustrator {
+  name: "Madan, Dev"
+}
+illustrator {
+  name: "Narciso, Shauna Wolf"
+  job: "senior art director"
+}
+illustrator {
+  name: "Whitley, Peter"
+  job: "art director"
+}
+illustrator {
+  name: "Dow, Travers"
+  job: "designer"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Dunn, John."
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "assistant production manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Chung, Alice"
+  job: "advertising intern"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2000
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+number: "Annual 5"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

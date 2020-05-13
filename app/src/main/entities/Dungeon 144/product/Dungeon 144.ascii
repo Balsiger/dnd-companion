@@ -1,0 +1,155 @@
+template {
+  name: "Dungeon 144"
+  world: "Generic"
+  description: "This is issue 144 of the dungeon magazine."
+}
+title: "Dungeon 144"
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Brown, Russell"
+}
+author {
+  name: "Larwood, Phillip"
+}
+author {
+  name: "McArtor, Mike"
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Sutter, James Lafond"
+}
+author {
+  name: "Wissel, Christopher"
+}
+editor {
+  name: "Jacobs, James"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Walker, Jeremy"
+  job: "assistant editor"
+}
+editor {
+  name: "Sutter, James Lafond"
+  job: "assistant editor"
+}
+cover {
+  name: "Hou, Andrew"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christ"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Dillon, Julie"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Hous, Andrew"
+}
+illustrator {
+  name: "Lazaretti, Robert"
+}
+illustrator {
+  name: "Mahey, Warren"
+}
+illustrator {
+  name: "Moseley, Tom"
+}
+illustrator {
+  name: "UDON"
+}
+illustrator {
+  name: "Gak, Todd"
+}
+illustrator {
+  name: "Grundetjern, Espen"
+}
+illustrator {
+  name: "Law, Shane"
+}
+illustrator {
+  name: "Ng, Joe"
+}
+illustrator {
+  name: "Zubkavich, Jim"
+}
+illustrator {
+  name: "West, Chris"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Pocza, Drew"
+  job: "art director"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising & sales director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2007
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "3 21"
+number: "144"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

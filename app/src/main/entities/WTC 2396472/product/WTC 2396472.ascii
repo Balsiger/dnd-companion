@@ -1,0 +1,127 @@
+template {
+  name: "WTC 2396472"
+  world: "Eberron"
+  description: "Welcome to a world of swashbuckling action and dark fantasy, a world ruled by great dynasties and tempered by war. The \\Product{Eberron Campaign Setting} holds many wonders, from dragonmarks to \\Monster{warforged}, deadly dungeons to \\Item{elemental airships}. As the shadows of evil and conspiracy threaten to envelop the land, heroes of prophecy come forth to save the day.\n\nThis Dungeons & Dragons supplement contains everything you need to run thrilling adventures i the world of \\Place{Eberron}: historical and geographical information, adventure hooks, monsters, villains, an introductory adventure, and a full-color poster map of the continent of \\Place{Khorvaire}.\n\n\\bold{Use this material to run an \\World{Eberron} campaign or to add new elements to any D&D game.}"
+  short_description: "The 4th edition Eberron Campaign Setting."
+}
+title: "Eberron Campaign Guide"
+subtitle: "Explore a World of Magic and Intrigue"
+author {
+  name: "Schaefer, Peter"
+  job: "developer"
+}
+author {
+  name: "Collins, Andy"
+  job: "additional development"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+editor {
+  name: "Grubb, Jeff"
+  job: "text review"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "text review"
+}
+editor {
+  name: "Lance, Neil"
+  job: "text review"
+}
+editor {
+  name: "Rogers, John"
+  job: "text review"
+}
+editor {
+  name: "Tweet, Jonathan"
+  job: "text review"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Moyer, Lee"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Tedin"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Valenzuela, Brian"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "additional graphic designer"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "additional graphic designer"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+date {
+  year: 2009
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5099"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5099"
+  check: 7
+}
+pages: 288
+system: DND_4
+type: CAMPAIGN_SETTING
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "rules"
+  number: 1
+}
+content {
+  part: MAP
+  description: "Khorvaire, full color, poster-sized"
+  number: 1
+}
+layout: FULL_COLOR

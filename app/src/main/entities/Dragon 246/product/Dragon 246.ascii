@@ -1,0 +1,150 @@
+template {
+  name: "Dragon 246"
+  world: "Generic"
+}
+title: "Dragon 246"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Adkison, Peter D."
+}
+author {
+  name: "Brown, Lloyd III"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Richards, Jonoahtan M."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Detwiler, Gregory W."
+}
+author {
+  name: "Varney, Allen"
+}
+author {
+  name: "Smith, Lester"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Sutfin, Michael"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Van Camp, Susan"
+}
+illustrator {
+  name: "Robb, Phil"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Schwartz, Stephen"
+}
+illustrator {
+  name: "Morales, Rags"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Vrbanic, George"
+}
+illustrator {
+  name: "Hanson, David"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Pillsbury, Joseph"
+}
+illustrator {
+  name: "Canny, James B."
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+manager {
+  name: "Mangelson, Roger"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "ad traffifc manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+date {
+  year: 1998
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXII 9"
+number: "246"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

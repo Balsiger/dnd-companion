@@ -1,0 +1,40 @@
+template {
+  name: "TSR 2177"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Generic"
+  description: "A lot of spells from \\Spell{Squaring the Circle} to \\Spell{Zone of\n                    Despair}."
+}
+title: "Wizard\'s Spell Compendium, Volume Four"
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1209"
+  check: 10
+}
+isbn13 {
+}
+pages: 288
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+number: "Volume Four"
+series: "Wizard\'s Spells Compendium"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

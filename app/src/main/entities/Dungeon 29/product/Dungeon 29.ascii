@@ -1,0 +1,95 @@
+template {
+  name: "Dungeon 29"
+  world: "Generic"
+  description: "This is issue 29 of the dungeon magazine."
+}
+title: "Dungeon 29"
+author {
+  name: "Fairbourn, Jeff"
+}
+author {
+  name: "Maxwell, Randy"
+}
+author {
+  name: "Wilson, Leonard"
+}
+author {
+  name: "Bicking, J. Mark"
+}
+author {
+  name: "Walsh, Willie"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Baxa, Thomas M."
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Ward, Kevin"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Frazier, Dan"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1991
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "V 5"
+number: "29"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "rune pages"
+  number: 1073741824
+}

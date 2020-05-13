@@ -1,0 +1,29 @@
+template {
+  name: "WTC 88168"
+  world: "Generic"
+  description: "Dungeon Rooms, Puzzles, and Traps\n                    \\large{Danger Around Every Corner and Behind Every Screen}\n                    The greatest threat to any adventuring party is a devious Dungeon\n                    Master. This book is spring-loaded with ideas, both subtle and sinister, that\n                    will ensure every gaming session is appropriately hazardous, including:\n                    \\list\n                    {Over fifty encounters designed to be dropped into any campaign.}\n                    {Scalable scenarios that can be pitted against characters from 1st to\n                    20th level.}\n                    {Advice for creating your own deceptive and deadly situations.}\n                    Dungeon Master who want to keep their players on their toes will be inspired\n                    by the invaluable material within these pages.\n                    To use this accessory, a Dungeon Master needs also the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}."
+}
+title: "Book of Challenges"
+date {
+  year: 2002
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: DND_3RD
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "DM Guidebook"
+price {
+  currency: "$ "
+  number: 3195
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

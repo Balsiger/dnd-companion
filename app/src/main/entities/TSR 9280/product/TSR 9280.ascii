@@ -1,0 +1,69 @@
+template {
+  name: "TSR 9280"
+  synonym: "SJR1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "Who among you who have dared to enter the starry deeps has not heard of the\n  dark, drifting derelcits of earlier spacefarers? The silent, menacing lairs\n  of monsters that may hide great treasures for those bold enough to explore\n  them? And what space-captain plies the spacelanes who does not dream of a\n  bigger, sleeker, more powerful ship than his present one?\n\n  \\Product{Lost Ships} holds the answer that bold spacefarers have been\n  seeking:\n\n  \\list\n  {\\bold{Monsters!}}\n  {\\bold{New spells} to better arm intrepid adventurers.}\n  {\\bold{New Ships!} Twenty new ship types.}\n  {\\bold{Flotsam of Space}---mini-menaces that can bring space to\n   exciting life.}\n  {\\bold{New rules} to help DMs run extended space adventures.}\n  {\\bold{New adventures} galore that can make any spacebound AD&D game\n   campaign an exciting (and dangerous) place for your characters!}\n\n  \\Product{Lost Ships} is your first-class ticket to high adventure in space!"
+}
+title: "Lost Ships"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Jaquays, Paul"
+}
+editor {
+  name: "Brown, Anne K."
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Barras, Dell"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Grubb, Jeff"
+  job: "mentor"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "graphic design"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "831"
+  check: 5
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

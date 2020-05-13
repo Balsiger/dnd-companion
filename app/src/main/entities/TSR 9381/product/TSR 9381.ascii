@@ -1,0 +1,38 @@
+template {
+  name: "TSR 9381"
+  synonym: "DLQ1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "introductory adventure about Solamnic Knights"
+}
+title: "Knight\'s Sword"
+date {
+  year: 1992
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "421"
+  check: 10
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

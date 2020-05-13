@@ -1,0 +1,33 @@
+template {
+  name: "TSR 8258"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "an easy-to-understand primer explaining the TSR universe of games"
+}
+title: "From the Dragon\'s Mouth"
+author {
+  name: "Richard Awlinson"
+}
+date {
+  year: 1997
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0891"
+  check: 2
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}

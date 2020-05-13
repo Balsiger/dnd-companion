@@ -1,0 +1,45 @@
+template {
+  name: "WTC A2670"
+  world: "Forgotten Realms"
+  description: "\\large{First there were Three.}\n\nMere weeks after escaping \\Place{Neverwinter}, \\NPC{Farideh}\'s dreams are still hunted by \\NPC{Lorcan}, the \\Monster{cambion} devil whose power fuels her own. One of the only four known descendents of the original \\NPC{Brimstone Angel}, \\NPC{Farideh} has no regrets about the pact she made with the \\Monster{devil}. But no one in the \\Place{Hells} knows that she has a twin - an impulsive eager sister, just waiting to be corrupted. At least as long as \\NPC{Lorcan} can keep her secret.\n\n\\large{And then you found the fourth.}\n\nDetermined to protect her sister, \\NPC{Farideh} searches for a ritual that could call \\NPC{Lorcan} out of the \\Place{Hells}. But in the midst of her hunt, she\'s drawn into an assignment for the secret society the \\Group{Harpers}, an assignment which leads her and a ragtag group of allies to an ancient \\Place{Netherese} library deep underground.\n\n\\large{The Fifth One is Mine.}\n\nWhile the group combs the side, dodging \\Monster{ghosts} and magical traps, \\NPC{Farideh} discovers a magical book whose pronouncements throw into question everything she thought she knew about herself and her sister. The more the Book gives up its macabre secrets, the more on thing becomes clear - a traitor lurks among them.\n\n\\large{The Fifth Brimstone Angel.}"
+  short_description: "Another book in the Brimstone Angel series."
+}
+title: "Lesser Evils"
+subtitle: "Brimstone Angels"
+author {
+  name: "Evans, Erin M."
+}
+illustrator {
+  name: "Yum, Min"
+}
+date {
+  year: 2012
+  month: 12
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6376"
+  check: 8
+}
+pages: 388
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Brimstone Angels"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "book"
+  number: 1
+}
+layout: COLOR_COVER

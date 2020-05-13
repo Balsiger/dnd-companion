@@ -1,0 +1,49 @@
+template {
+  name: "WTC 25465"
+  world: "Generic"
+  description: "With Divine Power Power Cards, you don\'t need to crack open a rulebook every time you cast a spell or swing your sword --- all the crucial information is at your fingertips. Just pick out the deck for your character class, select the cards for your character\'s powers, and you\'re ready to play the Dungeon & Dragons Roleplaying Game!"
+  short_description: "Cards with all Divine Power Cleric Powers."
+}
+title: "Cleric Power Cards"
+subtitle: "Unleash the Deck of Champions"
+cover {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+date {
+  year: 2010
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5513"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5513"
+  check: 8
+}
+system: DND_4
+audience: PLAYER
+type: ACCESSORY
+style: SMALL_BOX
+producer: "WTC"
+number: "Cleric"
+series: "Power Cards"
+price {
+  currency: "$"
+  number: 999
+  precision: 100
+}
+content {
+  part: CARD
+  description: "power"
+  number: 100
+}
+layout: FULL_COLOR

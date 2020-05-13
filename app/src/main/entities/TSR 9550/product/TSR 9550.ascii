@@ -1,0 +1,70 @@
+template {
+  name: "TSR 9550"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  world: "Generic"
+  description: "\\large{\'When the Storm Comes in With Its Teeth, Teeth, Teeth ...}\n                    Black clouds build on the horizon with supernatural swiftness as the light of\n                    day drains away like a guttering candle. As the wind screams and sea spray\n                    blinds the eyes, the masts splinter and the deck heels over, a plaything of\n                    the storm. A nightmare \\Monster{shark} hunts the murky ocean for all the\n                    succumb to the hammer of the winds. Can anyone survive the Tempest of the\n                    \\God{Deep Mother}?\n                    \\Product{Night of the Shark} is the second part of an adventure trilogy\n                    featuring the evil \\Monster{sahuagin}, deadly sea devils in pursuit of an\n                    ancient relic known only as \\Item{The Stone Which Abides}. This adventure can\n                    be played independently, or it can be linked together as part of the\n                    adventure series that began with \\Product{Evil Tide} and concluded with\n                    \\Product{Sea of Blood}."
+}
+title: "Night of the Shark"
+author {
+  name: "Cordell, Bruce R."
+}
+editor {
+  name: "Reid, Thomas M."
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Mecha, Eileen"
+  job: "graphic design"
+}
+date {
+  year: 1997
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0718"
+  check: 5
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Monstrous Arcana"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

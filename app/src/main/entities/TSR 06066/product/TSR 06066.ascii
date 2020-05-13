@@ -1,0 +1,48 @@
+template {
+  name: "TSR 06066"
+  reference {
+    name: "net"
+  }
+  description: "preconstructed deck with water Pok\342\210\232\302\251mon"
+}
+title: "Water Blast Theme Deck"
+date {
+  year: 1999
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "57530"
+  title: "822"
+  check: 3
+}
+isbn13 {
+}
+system: POKEMON
+audience: ALL
+type: BOARD_GAME
+price {
+  currency: "$ "
+  number: 999
+  precision: 100
+}
+content {
+  part: CARD
+  description: "60 card deck"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "Pok\342\210\232\302\251mon coin"
+  number: 1073741824
+}
+content {
+  part: COUNTER
+  description: "damage"
+  number: 10
+}
+content {
+  part: BOOK
+  description: "rulebook"
+  number: 1073741824
+}

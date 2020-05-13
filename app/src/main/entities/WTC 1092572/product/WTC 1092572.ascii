@@ -1,0 +1,144 @@
+template {
+  name: "WTC 1092572"
+  world: "Generic"
+  description: "\\emph{Twenty-seven years ago, a band of adventurers led by the great wizard \\NPC{Mordenkainen} entered the dungeons below \\Place{Castle Greyhawk} and released the evil demigod \\God{Iuz}, intending to slay him. Betrayal led to failure, \\God{Iuz} escaped, and many lives were lost. Today, evil has returned to \\Place{Castle Greyhawk}, and \\NPC{Mordenkainen} must place his trust in the hands of a new generation of heroes. Those who fail will be lost, and those who triumph will be legends.}\n                    \\Place{Castle Greyhawk} has become a grand fixture of the \\Place{Cairn Hills}, tempting the likes of \\NPC{Mordenkainen}, \\NPC{Bigby}, and \\NPC{Tenser} with its dark mysteries. Today it lies in ruin, ravaged by the years and countless assaults. However, many of its greatest treasures and secrets remain hidden in the sprawling dungeons beneath, where terrible monsters and fiendish traps defy new generations of heroes in search of fame and glory.\n                    This campaign adventure revists the legendary ruins of \\Place{Castle Greyhawk} and its dungeons, incorporating many new twists and suprises. It is designed for characters of levels 8-13 and features an easy-to-use combat encounter format. This book also presents several new monsters and magical items."
+}
+title: "Expedition to the Ruins of Greyhawk"
+subtitle: "\\NPC{Mordenkainen} needs you. The good people of \\Place{Greyhawk} need you. What are you waiting for?"
+author {
+  name: "Bulmahn, Jason"
+  job: "designer"
+}
+author {
+  name: "Jacobs, James"
+  job: "designer"
+}
+author {
+  name: "Mona, Erik"
+  job: "designer"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Griese, Beth"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Coimbra, Miguel"
+}
+illustrator {
+  name: "Denmark, Thomas"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Hooper, Fred"
+}
+illustrator {
+  name: "Mahey, Warren"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Wooten, Ben"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Isaac, Nick"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Jordan, Robert"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "freelance coordinator"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+  name: "Walker, Kris"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4358"
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4358"
+  check: 6
+}
+pages: 224
+system: DND_3_5
+type: ADVENTURE
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 96582"
+layout: FULL_COLOR

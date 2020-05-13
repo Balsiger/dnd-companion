@@ -1,0 +1,201 @@
+template {
+  name: "WTC 34416"
+  world: "Generic"
+  description: "No artifact promised more power than the \\Item{Book of Vile Darkness}, but its pages contain secrets so evil that only the most corrupt souls can gaze upon them without being driven mad or destroyed utterly. Use this tome to add a touch of evil to your Dungeons & Dragons character or campaign, or embrace the darkness and let evil dominate your game.\n\n\\bold{Components:}\n\\list\n{96-page Dungeon Master\'s book with chapters describing evil villains and campaigns; a host of vile monsters, magic items, organizations, traps and hazards, terrain, diseases, and curses; and a short adventure featuring the \\Item{Book of Vile Darkness} artifact}\n{32-page player\'s book featuring vile feats, character themes, paragon paths, and one epic destiny}\n{Double-sided battle map for use with the adventure in the DM\'s book}"
+  short_description: "A book about evil and how to play or DM it."
+}
+title: "Book of Vile Darkness"
+leader: "The"
+subtitle: "Devour It Before It Devours You"
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Schubert, Stephen"
+  job: "lead developer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "developer"
+}
+author {
+  name: "O\'Connor, Tanis"
+  job: "developer"
+}
+editor {
+  name: "O\'Connor, Tanis"
+  job: "lead"
+}
+editor {
+  name: "Geluso, Dawn J."
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+editor {
+  name: "Helmick, Daniel"
+  job: "additional proofreading"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "managing editor"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cover {
+  name: "England, Wayne"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Baxa, Tom"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Christenson, Anna"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Jedruszek, Tomasz"
+}
+illustrator {
+  name: "Lockwood, Tood"
+}
+illustrator {
+  name: "Moeller, Christopher"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Szikszai, Gabor"
+}
+illustrator {
+  name: "UDON"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D senior group manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D senior producer"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2011
+  month: 12
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5868"
+  check: 9
+}
+pages: 128
+system: DND_4
+type: RULES_SUPPLEMENT
+style: FOLDER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1
+}
+content {
+  part: BOOK
+  description: "DM\'s Book"
+  number: 1
+}
+content {
+  part: BOOKLET
+  description: "Player\'s Book"
+  number: 1
+}
+content {
+  part: MAP
+  description: "double-sided battle map"
+  number: 1
+}
+layout: FULL_COLOR

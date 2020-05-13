@@ -1,0 +1,73 @@
+template {
+  name: "TSR 2119"
+  synonym: "MC9"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "Prepare to be boarded! Here are still more new, inventive, dangerous, and\n  entertaining creatures and races for your \\Place{Spelljammer} campaign\n  setting! There are \\Monster{giant undead insects}, \\Monster{star gypsies},\n  \\Monster{space plants}, and much, much more awaiting your stellar travelers\n  in these pages. \\Monster{Elven war-beasts}, \\Monster{giant space turtles},\n  \\Monster{orcish death-creatures}, and other beings of the \\Place{phlogiston},\n  \\Place{crystal spheres}, and \\Place{wildspace} roam this volume. Some look\n  nasty, and are; some look nasty, and aren\'t. Which are which? Read the\n  entries and find out for yourself! And of course, they are ogranized into\n  five-hole-punched pages that fit into your \\Product{Monstrous Compendium}\n  binders."
+}
+title: "Monstrous Compendium, Spelljammer Appendix 2"
+author {
+  name: "Davis, Scott"
+}
+author {
+  name: "Ewell, Newton H."
+}
+author {
+  name: "Terra, John"
+}
+editor {
+  name: "Varney, Allen"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+date {
+  year: 1991
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: SHEETS
+producer: "TSR"
+number: "IX"
+series: "Monster Compendium"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "loose"
+  number: 32
+}
+content {
+  part: PAGE
+  description: "full-color divider"
+  number: 4
+}

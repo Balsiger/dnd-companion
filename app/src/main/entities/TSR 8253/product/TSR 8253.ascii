@@ -1,0 +1,38 @@
+template {
+  name: "TSR 8253"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "None"
+}
+title: "Winged Magic"
+author {
+  name: "Mary H. Herbert"
+}
+date {
+  year: 1996
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0484"
+  check: 4
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+series: "Dark Horse Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

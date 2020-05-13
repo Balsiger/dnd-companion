@@ -1,0 +1,53 @@
+template {
+  name: "TSR 1165"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{Step into the past of 650 DR and experience the sights, sounds, and\n                    innumerable wonders of fabled \\Place{Myth Drannor} at its height. Walk the\n                    wooded glades of \\Place{Cormanthyr}, the last major \\Monster[Elf]{elven}\n                    empire on \\Place{Faer\\hat{u}n}, and discover marvelous secrets lost to the\n                    \\Place[Forgotten Realms]{Realms} of the present day.}\n                    This Arcane Age campaign expansion for the \\Place{Forgotten Realms} campaign\n                    setting contains all the information necessary to begin either a full-fledge\n                    \\Place[Cormanthyr]{Cormanthyran} campaign or a journey back in time some 700\n                    years to see the \\Place[Myth Drannor]{City of Song} at its most glorious.\n                    This 160-page book contains exhaustive details on the history, culture,\n                    military, society, and citizens of the forest nation of\n                    \\Place{Cormanthyr}. Features include a timeline of \\Monster[Elf]{elven}\n                    history on \\Place{Toril}, a rundown of \\Place{Cormanthyr}\'s ruler and\n                    important individuals, plus more information on the city of \\Place{Myth\n                    Drannor} at its height as well as on the communities of \\Place{Semberhome}\n                    and the \\Place{Tangled Vale}. In addition, a new speciality wizard, the\n                    \\Class[Elven Dualist]{elven dualist}, is introduced and detailed.\n                    Also included is a large section that gives the reader knowledge of the\n                    \\Monster[Elf]{elves}\' magical rites, rituals, and unique magical weapons and\n                    items. Features include new and expanded rules on the \\Monster[Elf]{elves}\'\n                    potent High Magic, \\Item[Moonblade]{moonblades}, and the multitude of magics\n                    that helped make \\Place{Myth Drannor} the glittering gem of\n                    \\Place{Faer\\hat{u}n} that it was. Finally, a two-sided, full-color map of the\n                    nation of \\Place{Cormanthyr} and an aerial view of \\Place{Myth Drannor}\n                    complete this exciting package---the largest collection of\n                    \\Monster[Elf]{elven} lore ever."
+}
+title: "Cormathyr: Empire of Elves"
+date {
+  year: 1998
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0761"
+  check: 4
+}
+isbn13 {
+}
+pages: 160
+system: ADND_REVISED
+type: CAMPAIGN_EXPANSION
+style: SOFT_COVER
+producer: "TSR"
+series: "Arcane Age"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

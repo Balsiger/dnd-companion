@@ -1,0 +1,53 @@
+template {
+  name: "WTC 95751"
+  world: "Generic"
+  description: "The \\Monster{black dragon}, a temperamental tyrant, rules the swamp. Nearby\n                    villages pay it tribute---or else. It breathes a deadly stream of acid that\n                    dissolves meta, stone, flesh, or bone with terrible ease.  Drawn from the\n                    pages of the Dungeons & Dragons \\Product{Monster Manual} and\n                    \\Product{Dragonomicon}, the Gargantuan \\Monster{Black Dragon} makes a bold\n                    and dramatic statement as it erupts from its fetid swamp to wreck havoc on\n                    unwary adventurers or battle-hardened warbands."
+  short_description: "A gargantuan Black Dragon"
+}
+title: "Gargantuan Black Dragon"
+subtitle: "The First in a Series of Limited-Edition Highly Collectable Iconic D&D Monsters"
+date {
+  year: 2006
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4167"
+  check: 7
+}
+isbn13 {
+}
+system: DND_3_5
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+number: "1"
+series: "D&D Icons"
+price {
+  currency: "$ "
+  number: 2999
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "gargantuan, painted, plastic"
+  number: 1
+}
+content {
+  part: SHEET
+  description: "Rules and Scenaries"
+  number: 1
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1
+}
+content {
+  part: CARD
+  description: "staticstics"
+  number: 1
+}
+required_requirements: "Miniatures Game"
+layout: FULL_COLOR

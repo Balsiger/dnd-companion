@@ -1,0 +1,35 @@
+template {
+  name: "WTC 96560"
+  world: "Dragonlance"
+  description: "This attractive new re-release of \\Product{The Gates of Thorbardin}\n  showcases a new look for the Heroes series.\n\n  Deep beneath the mountain fortress of \\Place{Skullcap}, legend has it, are\n  the remains of the dark wizard \\NPC{Fistandantilus} and the path to the gates\n  of the \\Monster{dwarven} kingdom of \\Place{Thorbardin}. Buried somewhere\n  along that perilous path is the magical \\Item{helm of Grallen}, son of\n  \\NPC{King Duncan}, tragic hero of the \\Event{Dwarfgate War}. The finder of\n  \\Item{Grallen\'s helm}, it is prophesized, will be rewarded and honored by a\n  united \\Place{Thorbardin} -- but he will also open the gates of the realm to\n  fresh horror and chaos.\n\n  In \\Place{The Gates of Thorbardin}, Dan Parkinson, author of\n  \\Place{Starsong}, continues the history of the \\Monster{dwarves} of\n  \\Place{Krynn} in the tradition of Nancy Varian Berberick\'s best-selling\n  \\Place{Dragonlance} novel, \\Product{Stormblade}."
+}
+title: "Gates of Thorbardin"
+leader: "The"
+subtitle: "Magic and Peril Under the Earth"
+author {
+  name: "Parkinson, Dan"
+}
+date {
+  year: 2004
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "912"
+  check: 5
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "5"
+series: "Heroes Book"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

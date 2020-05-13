@@ -1,0 +1,41 @@
+template {
+  name: "TSR 11327"
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "First published in 1981, B2, \\Product{The Keep on the Borderlands} by Gary\n                    Gygax has been played by more people than any other roleplaying adventure,\n                    providing an introduction to the hobby for hundreds of thousands of games.\n                    Now, almost twenty years later, the \\Place{Keep} has declined into a sleepy\n                    outpost settlement. The trained warriors once stationed here and the\n                    experienced adventurers who once flocked to the spot are long gone. But evil\n                    once again stirs in the fabled \\Place{Caves of Chaos}. Humanoids, undead, and\n                    evil minions of a dark goddess plot to destroy their enemies. Only novice\n                    adventurers who have come to try their hand at dungeon delving in this\n                    traditional training spot stand in their way.\n                    Light your torches, assemble your marching order, draw your weapons, and\n                    sharpen your wits. It\'s time for a new generation of heroes to take on the\n                    challenge.\n                    This 64-page book includes:\n                    \\list\n                    {A special \'Advice to the DM\' section for beginning Dungeon Masters,\n                    offering tips and tricks of the trade.}\n                    {Detailed descriptions of the \\Place{Keep} and its inhabitants.}\n                    {Wilderness encounters with a wide range of classic monsters.}\n                    {Room-by-room descriptions of every chamber within the \\Place{Caves of\n                    Chaos}.}"
+}
+title: "Return to the Keep on the Borderlands"
+date {
+  year: 1999
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1327"
+  check: 4
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Silver Anniversary"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

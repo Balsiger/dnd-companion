@@ -1,0 +1,53 @@
+template {
+  name: "PZO 3009"
+  synonym: ""
+  world: "Generic"
+  description: "Tools of thievery and blasphemous weapons. Strange cursed coins and infernal texts of heretical lore. These diabolical treasures and more await discovery in the \\Product{Council of Thieves} Adventure Path. This 54-card set of beautifully illustrated, full-color item cards allows you to track your newest and most sinister treasures in vibrant detail"
+  short_description: "GameMastery Item Cards"
+}
+title: "Council of Thieves"
+subtitle: "GameMastery"
+author {
+  name: "Alvarez, Jeff"
+}
+author {
+  name: "Self, Chris"
+}
+manager {
+  name: "Bulmahn, Jason"
+  job: "product concept and coordination"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2009
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "193"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "193"
+}
+pages: 54
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Item Cards"
+price {
+}
+content {
+  part: CARD
+  description: "Item"
+  number: 54
+}
+layout: FULL_COLOR

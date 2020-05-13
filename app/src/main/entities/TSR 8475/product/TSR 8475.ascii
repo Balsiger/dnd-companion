@@ -1,0 +1,52 @@
+template {
+  name: "TSR 8475"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{\\Place{Maztica}!}\n                    In a corner of the world far removed from the known \\Place{Forgotten Realms}\n                    stands the exotic continent of \\Place{Maztica}. There \\NPC{Erix} the slave\n                    girl learns of a great destiny laid upon her by the gods themselves. At the\n                    same time, across the sea, a fateful mission of exploration embarks.\n                    The explorers, a legion of seasoned mercenaries, sail westward to discover a\n                    land of primitive savagery mixed with high culture, of brutal, bloodthirsty\n                    gods and lavish treasures. Under the banner of their vigilant god,\n                    \\God{Helm}, the legion claims these lands for their own.\n                    Only as \\NPC{Erix} sees her land invaded by these strangers, when her world\n                    itself starts to collapse around her, is her starling destiny revealed...\n                    \\Product{Ironhelm} is the first novel in \\Product{The Maztica Trilogy},\n                    Douglas Niles\'s newest epic saga based on the \\Product{Forgotten Realms}\n                    fantasy setting."
+}
+title: "Ironhelm"
+author {
+  name: "Niles, Douglas"
+}
+cover {
+  name: "Fields, Fred"
+}
+date {
+  year: 1990
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "903"
+  check: 6
+}
+isbn13 {
+}
+pages: 314
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book One"
+series: "Maztica Trilogy"
+price {
+  currency: "\302\254\302\243 "
+  number: 499
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

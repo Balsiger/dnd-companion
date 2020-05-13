@@ -1,0 +1,48 @@
+template {
+  name: "TSR 1095"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "A pack of 12 collectors cards."
+}
+title: "TSR Fantasy Collector Cards 1993, Part II"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1993
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "785"
+  check: 5
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: ALL
+type: CARDS_TYPE
+style: PACK
+producer: "TSR"
+series: "Trading Cards"
+price {
+  currency: "$ "
+  number: 100
+  precision: 100
+}
+content {
+  part: CARD
+  number: 12
+}

@@ -1,0 +1,43 @@
+template {
+  name: "TSR 2444"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 225"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "Dark Sun"
+  description: "mysteries in the Last Sea, Wanderers Chronicles"
+}
+title: "Mind Lords of the Last Sea"
+leader: "The"
+author {
+  name: "Forbeck, Matt"
+}
+date {
+  year: 1996
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0367"
+  check: 8
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

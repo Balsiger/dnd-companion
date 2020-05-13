@@ -1,0 +1,77 @@
+template {
+  name: "TSR 9273"
+  synonym: "SJA1"
+  reference {
+    name: "catalogue93"
+  }
+  world: "Spelljammer"
+  description: "On a busy day in the marketplace, something hurtles down out of a clear\n  sky. When the dust clears, you see that it\'s a ship\'s anchor, attached to a\n  rope that stretches up as far as you can see. What do you do?\n\n  Pull your AD&D game players up the rope and into the astounding universe of\n  fantasy space! Send their spacegoing galleon, the \\Item{Skyrunner}, across\n  the vast reaches of \\Place{Wildspace}. Drop them in the \\Place{Hive}, the\n  largest dungeon ever created. Then pit them against the \\NPC{Ravager}, a\n  monster that threatens the characters\' entire homeworld!\n\n  \\Product{Wildspace} is the first adventure for the AD&D \\Product{Spelljammer}\n  Campaign Set. The \\Product{Spelljammer} boxed set is required to play. This\n  64-page adventure fits easily into your existing campaign, as either a change\n  of pace from goundling adventures or the beginning of a new career in\n  space.\n\n  This adventure is designed for four to six player characters of levels 6 to\n  8."
+}
+title: "Wildspace"
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Brown, Anne K."
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Statema, John"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "graphic design"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+manager {
+  name: "Parker, Roy"
+  job: "keylining"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "819"
+  check: 6
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

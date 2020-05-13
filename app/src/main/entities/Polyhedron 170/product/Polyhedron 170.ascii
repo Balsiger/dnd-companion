@@ -1,0 +1,67 @@
+template {
+  name: "Polyhedron 170"
+  world: "Generic"
+  description: "Issue of polyhedron (together with Dungeon 110)."
+}
+title: "Polyhedron 170"
+author {
+  name: "Richards, Ian"
+}
+author {
+  name: "Handley, Rich"
+}
+author {
+  name: "Pena, Abel G."
+}
+author {
+  name: "Noonan, David"
+}
+editor {
+  name: "Mona, Erik"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+cover {
+  name: "Carlisle, Jeffrey"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art direction"
+}
+date {
+  year: 2004
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 22
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "170"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

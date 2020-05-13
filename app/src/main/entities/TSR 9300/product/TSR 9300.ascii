@@ -1,0 +1,70 @@
+template {
+  name: "TSR 9300"
+  synonym: "FR11"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "It takes most adventurers in the \\Place[Forgotten Realms]{Realms} a lifetime\n                    to learn more than a handful of the secrets of the \\Monster[Dwarf]{dwarves}.\n                    The seeking costs some their lives.\n                    But \\NPC{Elminster}\'s agreed to change all that.\n                    Welcome to \\Product[TSR 9300]{Dwarves Deep}.\n                    Welcome to the secrets of the \\Monster[Dwarf]{dwarves}.\n                    This sourcebook is one of a series that belongs on the bookshelf of any\n                    dungeon master exploring the rich lands (and dark under-realms) of the\n                    \\Place{Forgotten Realms}. It presents an introduction to the\n                    \\Monster[Dwarf]{Deep Folk} of \\Place{Faer\\hat{u}n}. Virtually all of the\n                    famous \'dungeons\' of the \\Place[Forgotten Realms]{Realms}, explored by\n                    adventurers seeking treasure, magic, and lore, were built---and in most\n                    cases, once occupied---by the \\Monster[Dwarf]{dwarves}. Learn their ways and\n                    unlock their secrets.\n                    In the pages of \\Product[TSR 9300]{Dwarves Deep}, readers will find:\n                    \\list\n                    {\\Monster[Dwarf]{Dwarven} spells of earth and fire,}\n                    {\\Monster[Dwarf]{Dwarven} magical items of rare quality and power,}\n                    {Details of the \\Monster[Dwarf]{dwarven} language, their names and runes,}\n                    {Details of \\Monster[Dwarf]{dwarven} clans, priesthoods, and adventuring\n                    brotherhoods,}\n                    {Details of \\Monster[Dwarf]{dwarven} lands and settlements, including the\n                    fabled riches, ways, and armies of the \\Place{Great Rift}, the\n                    \\Place[Deep]{Deeps}, and the \\Place{Lost Kingdoms},}\n                    {New monsters and notes on \\Monster[Dwarf]{dwarven} halfbreeds and the\n                    special powers wielded by \\Monster[Dwarf]{dwarven} \\Group{High Old Ones},}\n                    {Special metals and alloys used by the \\Monster[Dwarf]{dwarves} to hone the\n                    blades that slay their enemies,}\n                    {\\Monster[Dwarf]{Dwarven} beards...and much, much more!}"
+}
+title: "Dwarves Deep"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Brown, Timothy B."
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Price, Andy"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "keylining"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "880"
+  check: 3
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5014"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Bugbear & Goblin"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

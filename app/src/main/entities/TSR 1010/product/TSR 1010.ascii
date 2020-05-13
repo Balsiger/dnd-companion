@@ -1,0 +1,21 @@
+template {
+  name: "TSR 1010"
+  reference {
+    name: "net price list"
+  }
+  description: "Unknown"
+}
+title: "Dungeon! Game"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

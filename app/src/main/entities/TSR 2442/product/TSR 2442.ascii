@@ -1,0 +1,41 @@
+template {
+  name: "TSR 2442"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "Dark Sun"
+  description: "Chronicles of Athas Series, book five"
+}
+title: "Rise and Fall of a Dragon King"
+leader: "The"
+author {
+  name: "Lynn Abbey"
+}
+date {
+  year: 1996
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0476"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+series: "Ch"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

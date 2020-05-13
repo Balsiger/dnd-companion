@@ -1,0 +1,32 @@
+template {
+  name: "TSR 1067"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "Includes all the rare and normal numbered cards in the 1991 series.\n                    \\list\n                    {every card counterfeit proof}\n                    {the only official AD&D 2nd edition cards available}"
+}
+title: "1991 Trading Cards Premier Edition Factory Set"
+date {
+  year: 1991
+}
+isbn {
+}
+isbn13 {
+}
+pages: 750
+system: ADND_2ND
+audience: ALL
+type: CARDS_TYPE
+style: MEDIUM_BOX
+producer: "TSR"
+series: "Trading Cards"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: CARD
+  number: 750
+}

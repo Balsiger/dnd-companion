@@ -1,0 +1,36 @@
+template {
+  name: "TSR 11374"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Greyhawk"
+  description: "sourcebook about the shadowy villains of the Greyhawk setting"
+}
+title: "Scarlet Brotherhood"
+leader: "The"
+author {
+  name: "Reynolds, Sean"
+}
+date {
+  year: 1999
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1374"
+  check: 6
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1795
+  precision: 100
+}

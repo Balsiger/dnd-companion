@@ -1,0 +1,84 @@
+template {
+  name: "SJG 3403"
+  world: "Generic"
+  description: "It\'s all about the thrill of combat... meeting worthy foes and murdering\n  them by surprise.... gleefully slaughtering their low-level\n  minions... defiling the corpses... and, of course, TAKING THEIR STUFF. The\n  \\Product[SJG 3403]{Munchkin Monster Manual} contains dozens of foes for you\n  and your comrades to slay, from the dreaded \\Monster{Gazebo} to the\n  despicable \\Monster{Potted Plant}! And yes, of course there are stats for\n  \\Monster{Plutonium Dragons}. Of \\emph{all} ages.\n\n  \\small{Requires the use of the \\Product{Dungeons & Dragons Player\'s\n  Handbook}, Third Edition, published by Wizards of the Coast.}"
+}
+title: "Munchkin Monster Manual"
+author {
+  name: "Mangrum, John W."
+}
+author {
+  name: "Haring, Scott"
+  job: "additional material"
+}
+author {
+  name: "Witt, Justin De"
+  job: "additional material"
+}
+editor {
+  name: "Hackard, Andrew"
+}
+editor {
+  name: "Jackson, Steve"
+}
+cover {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+manager {
+  name: "Hackard, Andrew"
+  job: "managing editor"
+}
+manager {
+  name: "Chapman, Monique"
+  job: "project administration"
+}
+manager {
+  name: "Fernandez, Alex"
+  job: "page design"
+}
+manager {
+  name: "Witt, Justin De"
+  job: "production art"
+}
+manager {
+  name: "Hackard, Andrew"
+  job: "art direction"
+}
+manager {
+  name: "Stephens, Monica"
+  job: "print buyer"
+}
+manager {
+  name: "Jepson, Ross"
+  job: "sales management"
+}
+manager {
+  name: "Vetromile, Andy"
+  job: "errata coordination"
+}
+date {
+  year: 2003
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "55634"
+  title: "669"
+  check: 7
+}
+isbn13 {
+}
+pages: 48
+system: D20
+type: MONSTER_COMPENDIUM
+style: HARDCOVER
+series: "Munchkin"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

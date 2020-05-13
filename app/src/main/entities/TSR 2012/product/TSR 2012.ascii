@@ -1,0 +1,78 @@
+template {
+  name: "TSR 2012"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "This tome contains alphabetical listings of monsters designed for use with\n                    the Advanced Dungeons & Dragons Game System. Each creature is described and\n                    most are illustrated for easy identification.\n                    Using the new encounter tables contained herein, this work is sure to add new\n                    excitement to any AD&D game."
+}
+title: "Fiend Folio"
+author {
+  name: "Staff, TSR"
+}
+editor {
+  name: "Turnbull, Don"
+}
+cover {
+  name: "Emmanuel"
+}
+illustrator {
+  name: "Baker, Chris"
+}
+illustrator {
+  name: "Dee, Jeff"
+}
+illustrator {
+  name: "Emmanuel"
+}
+illustrator {
+  name: "Fiore, Albie"
+}
+illustrator {
+  name: "Hunter, Alan"
+}
+illustrator {
+  name: "Nicholson, Russ"
+}
+illustrator {
+  name: "Otus, Erol"
+}
+illustrator {
+  name: "Roslof, Jim"
+}
+illustrator {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Willingham, Bill"
+}
+illustrator {
+  name: "Wilson, Polly"
+}
+illustrator {
+  name: "Yates, Tony"
+}
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_1ST
+type: ACCESSORY
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

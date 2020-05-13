@@ -1,0 +1,55 @@
+template {
+  name: "TSR 8569"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 228"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "Forgotten Realms"
+  description: "Thousands of years before the Age of \\NPC{Elminster}, dragons rule the skies\n                    of \\Place{Faer\\hat{u}n}, and \\Monster{elves} dominate the huge forests that\n                    cover the land. Only in the mighty, magical empire of \\Place{Netheril} are\n                    men a force to be reckoned with.\n                    Bored and haughty in his midair castle, the \\Place{Netherese} \\Class{mage}\n                    \\NPC{Candlemas} bets fellow wizard \\NPC{Sysquemalyn} that a certain\n                    \\Class{barbarian} who has caught his eye can survive the most savage tests\n                    his friend---and deadly rival---can devise. The only rule: The tests must\n                    offer the subject some chance to survive, however slight.\n                    Of course, \'playing fair\' is a concept as alien to \\Class{wizards} of\n                    \\Place{Netheril} as \'mercy\'.\n                    But the subject of their wager, \\NPC{Sunbright Steelshanks} of the\n                    \\Group{Rengarth Tribe}, has a mind---and a will---of his own. And\n                    \\NPC{Candlemas} and \\NPC{Sysquemalyn} are not only players in this lethal\n                    game of swords and sorcery..."
+}
+title: "Sword Play"
+subtitle: "\\Class{Wizard}\'s Wager"
+author {
+  name: "Emery, Clayton"
+}
+cover {
+  name: "Pollack, Allan"
+}
+date {
+  year: 1996
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0492"
+  check: 5
+}
+isbn13 {
+}
+pages: 314
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book One"
+series: "Netheril Trilogy"
+series: "Arcane Age"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

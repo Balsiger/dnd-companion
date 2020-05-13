@@ -1,0 +1,198 @@
+template {
+  name: "Dragon 358"
+  world: "Generic"
+  description: "Issue 358 of the Dragon Magazine."
+}
+title: "Dragon 358"
+subtitle: "Master Crafting Core Beliefs: St. Cuthbert Chess Monsters Ecology of the Kaorti"
+author {
+  name: "Baase, Kevin"
+}
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Brown, Russell"
+}
+author {
+  name: "Christensen, William L."
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Cort&igrave;jo, Brian"
+}
+author {
+  name: "Drain, Jonathan"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Hart, Mark A."
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "Jansing, Eric"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Ling Jr., John E."
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Schwartz, David"
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Taylor, Troy E."
+}
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "Vespa, Jonathan"
+}
+editor {
+  name: "Mona, Erik"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "managing editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "associate editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "associate editor"
+}
+cover {
+  name: "UDON"
+}
+cover {
+  name: "Stevens, Chris"
+}
+cover {
+  name: "Yan, Kevin"
+}
+cartographer {
+  name: "Wootten, Sam"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Dechamps, Eric"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Gravato, John"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Stevens, Chris"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Yan, Kevin"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "art director"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising & marketing director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2007
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+producer: "Paizo"
+volume: "XXXII"
+number: "3"
+series: "Dragon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+layout: FULL_COLOR

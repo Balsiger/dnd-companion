@@ -1,0 +1,145 @@
+template {
+  name: "WTC 9538772"
+  world: "Generic"
+  description: "Through subtle plotting and brutal aggression, the forces of the \\Place{Nine\n                    Hells} seek to corrupt or dominate all who stand against them. These\n                    \\Monster{fiends}, as ancient and terrible as any in the multiverse, forge\n                    armies out of the souls of the wicked and use them to enforce their iron\n                    rule. Can your adventurers stand against the might and tyranny of the\n                    \\Place{Nine Hells}?\n                    This supplement for the D&D game presents the definitive treatise on\n                    \\Monster{devils} and their malefic home. Along with information about the\n                    physiology, psychology, society, and schemes of the \\Monster{devils}\n                    themselves, you\'ll find feats, spells, items, and tactics commonly employed\n                    by these infernal creatures and those who oppose them. This book also\n                    provides detailed information on various \\Monster{devils},\n                    \\Monster{archdevils}, and the \\Place{layers of the Nine Hells}."
+  short_description: "A guide to \\Place{Hell} and its denizens."
+}
+title: "Tyrants of the Nine Hells"
+subtitle: "Fell Legions and Insidious Plots"
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Mearls, Mike"
+  job: "development"
+}
+author {
+  name: "Decker, Jesse"
+  job: "development"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "development"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Sarli, Gary"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Mimura, Raven"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Christina"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+number: "II"
+series: "Fiendish Codex"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

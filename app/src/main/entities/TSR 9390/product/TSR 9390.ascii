@@ -1,0 +1,61 @@
+template {
+  name: "TSR 9390"
+  synonym: "FOR4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "From the storm-lashed rocks west of fabled \\Place{Evermeet} to the\n                    \\Place{Plains of Purple Dust}, all the folk of \\Place{Faer\\hat{u}n} have\n                    heard of the \\Group{Harpers}.\n                    Noble fools, some call them. Crazy, misguided meddlers, others say. Still\n                    other disagree. \'The one true hope of the \\Place[Forgotten Realms]{Realms}\',\n                    said one princess. \'A shining light in the darkness of our lives\', agreed a\n                    sage, \'pray that it never goes out\'.\n                    Just who are these mysterious, wandering folk who wear the silver harp pins\n                    and walk softly in the most dangerous shadows of the \\Place[Forgotten\n                    Realms]{Realms}?\n                    This book reveals the secrets, rules, and magic of the \\Group{Harpers},\n                    including:\n                    \\list\n                    {\\Group[Harpers]{Harper} Runes}\n                    {\\Group[Harpers]{Harper} Magic}\n                    {The long, colorful History of the \\Group{Harpers}}\n                    {Their evil Foes}\n                    {Their special Allies}\n                    {The fabled \\Group{High Heralds}}\n                    {What \\Group{Harpers} Do}\n                    {\\Group[Harpers]{Harper} Haunts: their strongholds, and the \\Group{Harpers}\n                    who (literally) haunt them!}\n                    {Joining the \\Group{Harpers}, and how to become a True\n                    \\Group[Harpers]{Harper} and a Master \\Group[Harpers]{Harper}...}\n                    ...And more, from favorite \\Group[Harpers]{Harper} ballads to detailed\n                    \\Group[Harpers]{Harper} NPCs. This is a sourcebook you\'ll turn to again and\n                    again. It lays bare the warring power groups who work behind the scenes in\n                    \\Place{Faer\\hat{u}n}; no \\Place{Forgotten Realms} campaign is complete\n                    without it!"
+}
+title: "Code of the Harpers"
+leader: "The"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+manager {
+  name: "O\'Keefe, Gaye"
+  job: "production"
+}
+date {
+  year: 1993
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "644"
+  check: 1
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

@@ -1,0 +1,50 @@
+template {
+  name: "TSR 9200"
+  synonym: "H3"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "continuation of H2"
+}
+title: "Bloodstone Wars"
+leader: "The"
+author {
+  name: "Dobson, Michael"
+}
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Greenwood, Ed"
+}
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,69 @@
+template {
+  name: "TSR 9427"
+  synonym: "HHQ5"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "The kingdom of \\Place{Tramilar} was once a powerful state. Now, disease and\n                    dissent have left the kingdom weak. The \\Place{Dreadwoods} on the kingdom\'s\n                    northern border are a haunt for evil creatures and plots. Discord stalks the\n                    very halls of the king. Only the bravest and most dedicated warrior could\n                    overcome the obstacles hidden in the forest and lurking in the throne room.\n                    \\Product{Fighter\'s Challenge II} is a special One-On-One Advanced Dungeons &\n                    Dragons adventure designed for a Dungeon Master and one player---perfect for\n                    very small groups, for those times when the whole group can\'t get together,\n                    and for the player who wants his or her character to earn some extra\n                    experience while playing the role of a knight errant.\n                    Can you survive the horrors of the \\Place{Dreadwoods}? Are you ready to face\n                    treachery and deceit in high places? Adventure and danger await around every\n                    bend in the trail!"
+}
+title: "Fighter\'s Challenge II"
+author {
+  name: "Bittner, Drew"
+}
+editor {
+  name: "Shipley, Mark"
+}
+cover {
+  name: "Olson, Erik"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+date {
+  year: 1994
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "826"
+  check: 6
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "One on One Adventure"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

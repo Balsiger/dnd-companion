@@ -1,0 +1,31 @@
+template {
+  name: "TSR 1160P"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "Cards for the game."
+}
+title: "Spellfire Booster Pack 12: Dungeon"
+author {
+  name: "Dori Hein"
+}
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0676"
+  check: 6
+}
+isbn13 {
+}
+system: SPELLFIRE
+audience: ALL
+type: BOOSTER_PACK
+style: PACK
+price {
+  currency: "$ "
+  number: 10000
+  precision: 100
+}

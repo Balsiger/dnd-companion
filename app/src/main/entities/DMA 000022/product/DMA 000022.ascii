@@ -1,0 +1,20 @@
+template {
+  name: "DMA 000022"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "unknown"
+}
+title: "Chainmail (\'Guidon Games\')"
+date {
+  year: 1971
+}
+isbn {
+}
+isbn13 {
+}
+system: CHAINMAIL
+audience: UNKNOWN
+price {
+}

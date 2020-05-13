@@ -1,0 +1,34 @@
+template {
+  name: "TSR 9253"
+  synonym: "WG8"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Greyhawk"
+  description: "update to 2nd Edition, levels 0-10"
+}
+title: "Fate of Istus"
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "712"
+  check: 2
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

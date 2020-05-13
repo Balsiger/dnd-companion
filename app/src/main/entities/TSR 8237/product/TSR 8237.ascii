@@ -1,0 +1,40 @@
+template {
+  name: "TSR 8237"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+}
+title: "Yor\'s Revenge"
+author {
+  name: "Roy V. Young"
+}
+date {
+  year: 1995
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0131"
+  check: 4
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Two"
+series: "Days of Yor Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

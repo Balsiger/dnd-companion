@@ -1,0 +1,128 @@
+template {
+  name: "Dungeon 81"
+  world: "Generic"
+  description: "This is issue 81 of the dungeon magazine."
+}
+title: "Dungeon 81"
+author {
+  name: "Ertman, Kent"
+}
+author {
+  name: "Reed, Charles C."
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Ferguson, DeAnna"
+}
+author {
+  name: "Douglas, Felix"
+}
+author {
+  name: "Dare, Darren"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Haddock, Eric"
+  job: "assistant editor"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Perkins, Chris"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Daly, Paul"
+}
+illustrator {
+  name: "Bartman, Dan"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "McDevitt, Brad"
+}
+illustrator {
+  name: "Collins, Michael"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "assistant production manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 2000
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XIV 3"
+number: "81"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9033B"
+  synonym: "S3"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+}
+title: "Expedition to the Barrier Peaks"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}

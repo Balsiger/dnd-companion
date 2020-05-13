@@ -1,0 +1,164 @@
+template {
+  name: "Dragon 279"
+  world: "Generic"
+  description: "Issue 279 of the magazine. The main theme are elves."
+}
+title: "Dragon 279"
+author {
+  name: "Robin D. Laws"
+}
+author {
+  name: "Monte Cook"
+}
+author {
+  name: "Stephen Kenson"
+}
+author {
+  name: "Kenneth Hite"
+}
+author {
+  name: "Sean K Reynolds"
+}
+author {
+  name: "Herndon, Cory J."
+}
+author {
+  name: "James Wyatt"
+}
+author {
+  name: "J. Gregory Keyes"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Mike Selinker"
+}
+author {
+  name: "Michael G. Ryan"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Ray Winniger"
+}
+author {
+  name: "Gary Gygax"
+}
+author {
+  name: "Michael Trice"
+}
+author {
+  name: "Mike McVey"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Haddock, Eric"
+}
+editor {
+  name: "Matthew Sernett"
+}
+cover {
+  name: "Brom"
+}
+illustrator {
+  name: "Vinod Rams"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Kennon James"
+}
+illustrator {
+  name: "Brown, Damon"
+}
+illustrator {
+  name: "Justing Sweet"
+}
+illustrator {
+  name: "Ron Spencer"
+}
+illustrator {
+  name: "Riche, Darrell"
+}
+illustrator {
+  name: "Gregory, Doug Alexander"
+}
+illustrator {
+  name: "Mike May"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+}
+manager {
+  name: "Johnny Wilson"
+  job: "group publisher"
+}
+manager {
+  name: "Wendy Noritake"
+  job: "publisher"
+}
+manager {
+  name: "Peter Whitley"
+  job: "art director"
+}
+manager {
+  name: "Travers W. Dow"
+  job: "graphic designer"
+}
+manager {
+  name: "Pierce Watters"
+  job: "circulation director"
+}
+manager {
+  name: "Bob Henning"
+  job: "advertising sales director"
+}
+manager {
+  name: "John Dunn"
+  job: "production director"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "production manager"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Chung, Alice"
+  job: "advertising intern"
+}
+date {
+  year: 2001
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXV"
+number: "279"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

@@ -1,0 +1,183 @@
+template {
+  name: "Dragon 289"
+  world: "Generic"
+  description: "Issue 289 of the magazine. Oriental Adventures issue."
+}
+title: "Dragon 289"
+author {
+  name: "Gary Gygax"
+}
+author {
+  name: "Dean Poisso"
+}
+author {
+  name: "Matthew Sernett"
+}
+author {
+  name: "Stephen Kenson"
+}
+author {
+  name: "Robin D. Laws"
+}
+author {
+  name: "James Jacobs"
+}
+author {
+  name: "Patrick T. Younts"
+}
+author {
+  name: "James Wyatt"
+}
+author {
+  name: "Kenneth Hite"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Owen K. C. Stephens"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Mike McVey"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Will McDermot"
+}
+author {
+  name: "Ray Winninger"
+}
+editor {
+  name: "Jessie Decker"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Matthew Sernett"
+}
+editor {
+  name: "Stacie Fiorito"
+}
+cover {
+  name: "Jon Foster"
+}
+illustrator {
+  name: "Jon Foster"
+}
+illustrator {
+  name: "Sam Wood"
+}
+illustrator {
+  name: "John Kovalic"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Jeremy Jarvis"
+}
+illustrator {
+  name: "Jeff Laubenstein"
+}
+illustrator {
+  name: "Gregory, Doug Alexander"
+}
+illustrator {
+  name: "Arnie Swekel"
+}
+illustrator {
+  name: "Tom Gianni"
+}
+illustrator {
+  name: "Ron Spencer"
+}
+illustrator {
+  name: "Stefano Gaudino"
+}
+illustrator {
+  name: "Strain, D.T."
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Todd Harris"
+}
+illustrator {
+  name: "Phil Foglio"
+}
+manager {
+  name: "John Wilson"
+  job: "group publishing"
+}
+manager {
+  name: "Pierce Watters"
+  job: "circulation direction"
+}
+manager {
+  name: "Bob Henning"
+  job: "advertising sales direction"
+}
+manager {
+  name: "John Dunn"
+  job: "production direction"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistance"
+}
+manager {
+  name: "Theresa Cummins"
+  job: "design"
+}
+manager {
+  name: "James, Andy"
+  job: "design"
+}
+manager {
+  name: "Peter Whitley"
+  job: "staff illusionist"
+}
+date {
+  year: 2001
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 130
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII"
+number: "289"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "part 3 of the Forgotten Realms map"
+  number: 1073741824
+}

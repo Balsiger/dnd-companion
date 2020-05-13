@@ -1,0 +1,185 @@
+template {
+  name: "Dragon 294"
+  world: "Generic"
+  description: "Issue 294 of the magazine. Deities & Demigods issue."
+}
+title: "Dragon 294"
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Smith, Mat"
+}
+author {
+  name: "Noonan, David W."
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Haddock, Eric"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Drader, Darrin"
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Herndon, Cory J."
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Hind, Chris"
+}
+author {
+  name: "Loeb, Aaron"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assistant editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "contributing editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robing D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+cover {
+  name: "Nielsen, Terese"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Gianato, Anthony"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Shaw, Stan"
+}
+illustrator {
+  name: "Watters, Anthony"
+}
+illustrator {
+  name: "Wayahak, Jonathan"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2002
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 11"
+number: "294"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

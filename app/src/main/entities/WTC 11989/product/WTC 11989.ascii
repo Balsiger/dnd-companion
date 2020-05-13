@@ -1,0 +1,33 @@
+template {
+  name: "WTC 11989"
+  synonym: "WTC 88670"
+  world: "Forgotten Realms"
+  description: "\\large{Evil Powers Threaten \\Place{Faer\\hat{u}n}}\n                    Sinister cabals plot in shadows, while merciless armies gather for\n                    war. Explore the inner workings of infamous factions such as the \\Group{Red\n                    Wizards} and the \\Group{Zhentarim}. Discover more recently unveiled enemies,\n                    including the \\Group[Shades]{shades} and the \\Group{People of the Black\n                    Wood}. With detailed descriptions of key villains, secret headquarters, and\n                    more, this guide covers everything a Dungeon Master needs to conspire against\n                    the heroes of the \\Place{Forgotten Realms} \\Product[WTC 11836]{game setting}.\n                    \\list\n                    {29 villainous groups}\n                    {Maps of evil strongholds}\n                    {New spells, feats, and magic items}\n                    To use this accessory, you also need the \\Product[TSR 11550]{Player\'s\n                    Handbook}, the \\Product[TSR 11551]{Dungeon Master\'s Guide}, the \\Product[TSR\n                    11552]{Monster Manual}, and the \\Product[WTC 11836]{Forgotten Realms Campaign\n                    Setting}."
+}
+title: "Lords of Darkness"
+date {
+  year: 2001
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1989"
+  check: 2
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+type: ACCESSORY
+style: SOFT_COVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

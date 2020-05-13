@@ -1,0 +1,49 @@
+template {
+  name: "TSR 8073"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  world: "Ravenloft"
+}
+title: "Lord of the Necropolis"
+author {
+  name: "Gene DeWeese"
+}
+date {
+  year: 1997
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0660"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Fifteen ?"
+series: "Ravenloft Books"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

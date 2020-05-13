@@ -1,0 +1,29 @@
+template {
+  name: "WTC 11847"
+  synonym: "WTC 88239"
+  world: "Generic"
+  description: "\\large{From Temple to Tomb}\n                    \\emph{\\Place{Nightfang Spire} has long brooded in lonely silence, shadowed\n                    within the walls of a steep defile. A tall stone column, it resembles nothing\n                    so much as an enormous fang of some vanished, mythical beast. Once, a fervent\n                    religious order thrived here---before its god was slain. Embracing the death,\n                    \\Place{Nightfang Spire} was transformed into a massive, hollow mortuary\n                    filled with the restless dead.}\n                    \\Product{Heart of Nightfang Spire} is a stand-alone adventure for the Dungeon\n                    & Dragons game. This adventure challenges 10th-level heroes who follow the\n                    rumor of a \\Monster{dragon}\'s hoard to the imposing edifice known as\n                    \\Place{Nightfang Spire}. When they arrive, the truth about the place is\n                    revealed in all its awful clarity.\n                    To use this adventure, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide} and the \\Product{Monster\n                    Manual}."
+}
+title: "Heart of Nightfang Spire"
+date {
+  year: 2001
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: DND_3RD
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 1395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

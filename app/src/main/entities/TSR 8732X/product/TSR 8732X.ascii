@@ -1,0 +1,24 @@
+template {
+  name: "TSR 8732X"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+}
+title: "Battle Against the Draconians"
+date {
+  year: 1994
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+system: WILD_SPACE
+type: ADVENTURE
+number: "Book Four"
+price {
+  currency: "\302\254\302\243 "
+  number: 199
+  precision: 100
+}

@@ -1,0 +1,110 @@
+template {
+  name: "Dungeon 49"
+  world: "Generic"
+  description: "This is issue 49 of the dungeon magazine."
+}
+title: "Dungeon 49"
+author {
+  name: "Sheppard, Lee"
+}
+author {
+  name: "Quirk, Tony"
+}
+author {
+  name: "Cunningham, J. Lee"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Waldbauer, Bob"
+}
+author {
+  name: "Shell, J. Bradley"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Culotta, Shari"
+}
+author {
+  name: "Baughman, Todd"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Jaquays, Paul"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Dow, Tom"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Dougherty, Charles"
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+typographer {
+  name: "Isler, Tracy"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1994
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "IX 1"
+number: "49"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

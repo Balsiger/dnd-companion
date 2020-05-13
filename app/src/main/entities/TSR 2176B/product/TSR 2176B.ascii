@@ -1,0 +1,21 @@
+template {
+  name: "TSR 2176B"
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "A CD-ROM with core rule books, in the 2nd version."
+}
+title: "AD&D CD-ROM 2.0"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_REVISED
+audience: ALL
+type: ACCESSORY
+style: MEDIUM_BOX
+price {
+}

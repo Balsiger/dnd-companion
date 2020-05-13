@@ -1,0 +1,96 @@
+template {
+  name: "TSR 2114"
+  synonym: "DMGR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Imagine a world of knights in shining armor, mighty castles, and high\n                    chivalry. In this book you\'ll find a wealth of information designed to allow\n                    any DM to create a campaign world based on feudal \\Place{Europe}. Sections\n                    address life in a feudal culture, the duties of the nobility, and the true\n                    meaning of knighthood. You\'ll find a complete system for the design and\n                    construction of castles, new Battlesystem rules for the resolution of sieges,\n                    a quick resolution system for massive military campaigns, and an assortment\n                    of generic castles to spark your imagination. \\Product{The Castle Guide} is a\n                    must for any player or DM who\'s ever wanted to fight for a seat at the\n                    \\Place{Round Table}."
+}
+title: "Castle Guide"
+leader: "The"
+author {
+  name: "Boucher, Grant"
+}
+author {
+  name: "Troy, Christensen"
+}
+author {
+  name: "Collins, Arthur"
+}
+author {
+  name: "Findley, Nigel"
+}
+author {
+  name: "Brown, Timothy B."
+}
+author {
+  name: "Connors, William W."
+}
+editor {
+  name: "Connors, William W."
+}
+cartographer {
+  name: "Sutherland, Dave"
+}
+cartographer {
+  name: "Graphics, Frey"
+}
+illustrator {
+  name: "Martin, Jean Elizabeth"
+}
+illustrator {
+  name: "Olson, Erik"
+}
+illustrator {
+  name: "Widing, Ken"
+}
+typographer {
+  name: "O\'Keefe, Geye"
+}
+manager {
+  name: "Bakk, Linda"
+  job: "graphic design"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "837"
+  check: 4
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "2"
+series: "Dungeon Master Guide"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

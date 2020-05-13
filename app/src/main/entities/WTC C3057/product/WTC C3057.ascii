@@ -1,0 +1,46 @@
+template {
+  name: "WTC C3057"
+  category: "Novel"
+  world: "Forgotten Realms"
+  description: "You claim to know the beast, but how well do you really know this creature, this volcano?\n\nYou have met its offspring and touched its outer edges, but you have not faced it directly.\n\nI have spoken to \\NPC{Archmage Gromph} about this and we are in agreement.\n\nYou should face the \\Monster{primordial} directly. \n\nYou should stand before it and let it reveal to you more of its secrets.\n\nIt may be our only hope in reconstructing the magic that will keep it in place."
+  short_description: "Book II in the Homecoming series"
+}
+title: "Maestro"
+subtitle: "There is plenty here that concerns me greatly"
+author {
+  name: "Salvatore, R. A."
+}
+cover {
+  name: "Briclot, Aleksi"
+}
+date {
+  year: 2017
+  month: 6
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6614"
+  check: 1
+}
+pages: 393
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book II"
+series: "Homecoming"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

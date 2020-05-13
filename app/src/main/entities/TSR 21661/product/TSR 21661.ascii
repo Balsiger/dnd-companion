@@ -1,0 +1,42 @@
+template {
+  name: "TSR 21661"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Forgotten Realms"
+  description: "The \\Class{bards} of \\Place{Waterdeep} remember the past. Or do they? Even\n                    as they sing their ballads, a mysterious spell is changing their\n                    memories. \\NPC{Danilo Thann}, \\Group{Harper} and would-be \\Class{bard}, sets\n                    out to uncover the mystery. In this quest, his closest companion is his\n                    deadliest enemy, the rogue \\Monster{elf} \\NPC{Elaith Craulnober}.\n                    At stake is not merely the future of \\Place{Faer\\hat{u}n} but also its\n                    past."
+}
+title: "Elfsong"
+author {
+  name: "Cunningham, Elaine"
+}
+date {
+  year: 2000
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1661"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Book I"
+series: "Songs and Swords"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

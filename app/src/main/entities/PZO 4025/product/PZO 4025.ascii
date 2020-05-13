@@ -1,0 +1,57 @@
+template {
+  name: "PZO 4025"
+  synonym: ""
+  world: "Generic"
+  description: "Beyond the safety of the shores roll vast seas of excitement and danger! From attacks by daring raiders and merchant vessels in peril, to vessels ready for new captains to claim them, the waves hide countless menaces just waiting to be faced. Now your adventures can set sail with Paizo Publishing\342\200\232\303\204\303\264s latest GameMastery Map Pack! This line of gaming products provides simple and elegant tools for the busy Game Master.\n\ninside, you\342\200\232\303\204\303\264ll find 18 beautiful 5"
+  short_description: "GameMastery Map Pack"
+}
+title: "Boats & Ships"
+subtitle: "Set Sail for Adventure!"
+cover {
+  name: "Macourek, Corey"
+}
+cartographer {
+  name: "Macourek, Corey"
+}
+illustrator {
+  name: "Macourek, Corey"
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "230"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "230"
+  check: 2
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: SHEETS
+producer: "Paizo"
+number: "25"
+series: "GameMastery Map Pack"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 18
+}
+layout: FULL_COLOR

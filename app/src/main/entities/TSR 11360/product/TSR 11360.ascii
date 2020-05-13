@@ -1,0 +1,35 @@
+template {
+  name: "TSR 11360"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Ravenloft"
+  description: "thirteen golems along with complete descriptions and short adventures"
+}
+title: "Children of the Night: Created"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1999
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1360"
+  check: 6
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

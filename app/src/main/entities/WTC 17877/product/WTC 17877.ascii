@@ -1,0 +1,58 @@
+template {
+  name: "WTC 17877"
+  world: "Dragonlance"
+  description: "This direct follow-up to the recent best-selling \\Product{War of Souls\n  trilogy} deals with the \\Monster{minotaurs}, a species with which the author\n  is particularly associated in the minds of \\Product{Dragonlance} fans. This\n  series will move the \\Monster{minotaur} species to the forefront of the\n  \\Place{Dragonlance} world, and since this is the first hardcover title that\n  deals directly with the world-changing fallout at the end of the \\Product{War\n  of Souls}, it is both a key title for \\Product{Dragonlance} fans and an\n  excellent entry point for new readers."
+}
+title: "Night of Blood"
+author {
+  name: "Knaak, Richard A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2938"
+  check: 3
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume I"
+series: "Minotaur Wars"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}

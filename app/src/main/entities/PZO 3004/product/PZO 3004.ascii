@@ -1,0 +1,61 @@
+template {
+  name: "PZO 3004"
+  world: "Generic"
+  description: "From a dropped sword to hitting your friend in the back with an errant spear, mistakes happen. In the heat of battle, such fumbles range from comical to deadly. This deck of 52 cards includes everything you need to add critical fumbles to your game, including the fumble mechanic and a host of optional rules designed to give the players and edge. Each card has four different results based on the fumble type, all of which are compatible with the world;s most popular fantasy game. Stabbing yourself in the foot has never been this much fun."
+  short_description: "A deck with critical fumble cards."
+}
+title: "Critical Fumble Deck"
+subtitle: "GameMastery"
+author {
+  name: "Bulmahn, Jason"
+  job: "product concept and design"
+}
+author {
+  name: "McArtor, Michael"
+  job: "additional design and development"
+}
+author {
+  name: "Walker, Jeremy"
+  job: "additional design and development"
+}
+cover {
+  name: "Deschamps, Eric"
+  job: "box deisgn"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "071"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "071"
+  check: 1
+}
+system: DND_3_5
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Paizo"
+series: "GameMaster"
+price {
+  currency: "$"
+  number: 999
+  precision: 100
+}
+content {
+  part: CARD
+  description: "critical fumble card"
+  number: 52
+}
+layout: FULL_COLOR

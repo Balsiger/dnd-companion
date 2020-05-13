@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8465"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Lankhmar"
+}
+title: "Dragonsword of Lankhmar"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: ONE_ON_ONE
+audience: ALL
+type: NOVEL
+number: "Book Five"
+price {
+}

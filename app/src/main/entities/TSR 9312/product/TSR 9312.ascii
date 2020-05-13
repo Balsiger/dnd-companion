@@ -1,0 +1,75 @@
+template {
+  name: "TSR 9312"
+  synonym: "SJR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "\\Place{Toril}: that blue-green orb on which live \\NPC{Elminster},\n  \\NPC{Lhaeo}, and the \\Group{Harpers}, to name but a few. The planet so many\n  adventurers call \'home\'. To many, it seems to be the center of the\n  universe.\n\n  For be that from the truth! There are seven other planets in \\Place{Toril}\'s\n  system, some close to the primary star, other farther from its warmth. These\n  pages real little-known facts about every planet in \\Place{Realmspace}: the\n  crystal sphere containing the lands known as the \\Place{Forgotten Realms}.\n\n  \\Product{Realmspace} is an accessory for the \\Place{Spelljammer} campaign\n  setting. The \\Product{Spelljammer} boxed set is needed to use this\n  booklet. The material in this accessory will enhance any \\Place{Forgotten\n  Realms} campaign in which the concept of spelljamming has been (or is about\n  to be) introduced.\n\n  In addition to the 96-page booklet, this product includes:\n\n  \\list\n  {a full-size poster map of the \\Place{Realmspace} crystal sphere,\n          showing all the planets in their relative orbits.}\n  {statistics on new ship types, including the \\Item{Batship} and the\n   \\Item{Tsunami}.}\n  {several short adventures, suitable for introducing characters to the\n   wonders of \\Place{Realmspace}.}"
+}
+title: "Realmspace"
+author {
+  name: "Henson, Dale \'Slade\'"
+}
+author {
+  name: "Boomgarden, Karen S."
+}
+editor {
+  name: "Thomas, Gary L."
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Baxa, Thomas M."
+}
+cartographer {
+  name: "Ewell, Newton H."
+}
+illustrator {
+  name: "Ewell, Newton H."
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "keylining"
+}
+date {
+  year: 1991
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "052"
+  check: 4
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

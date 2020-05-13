@@ -1,0 +1,52 @@
+template {
+  name: "WTC 17728"
+  world: "Forgotten Realms"
+  description: "Author Ed Greenwood concludes the story of \\NPC{Shandril of Highmoon} in\n                    this third volume of the \\Product{Shandril\'s Saga} trilogy. This mass market\n                    edition of the trade paperback features new cover art by Jon Sullivan."
+}
+title: "Hand of Fire"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+}
+editor {
+}
+cover {
+  name: "Sullivan, Jon"
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "Shandril\'s Saga"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

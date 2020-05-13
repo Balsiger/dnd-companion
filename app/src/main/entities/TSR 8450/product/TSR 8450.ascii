@@ -1,0 +1,30 @@
+template {
+  name: "TSR 8450"
+  reference {
+    name: "catalog98"
+  }
+  description: "a collection of original artwork of the trading card game"
+}
+title: "Art of the Magic: The Gathering"
+leader: "The"
+author {
+  name: "Peter Archer"
+}
+date {
+  year: 1998
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1178"
+  check: 6
+}
+isbn13 {
+}
+pages: 144
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: SPECIAL_BOOK
+price {
+}

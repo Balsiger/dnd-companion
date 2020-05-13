@@ -1,0 +1,36 @@
+template {
+  name: "TSR 6931"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Generic"
+  description: "epic adventure featuring the ultimate team of Super-Villains"
+}
+title: "Avengers: Mastsers of Evil"
+author {
+  name: "Steve Miller"
+}
+date {
+  year: 1998
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1232"
+  check: 4
+}
+isbn13 {
+}
+pages: 48
+system: MARVEL_SUPER_HEROES
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

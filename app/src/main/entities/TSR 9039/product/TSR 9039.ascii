@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9039"
+  synonym: "A1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Slave Pits of the Undercity"
+date {
+  year: 1980
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 400
+  precision: 100
+}

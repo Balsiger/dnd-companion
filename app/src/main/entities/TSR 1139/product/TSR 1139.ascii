@@ -1,0 +1,36 @@
+template {
+  name: "TSR 1139"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+  description: "Mighty powers, weapons and Kismet cards."
+}
+title: "Blood Wars Escalation Pack 6: Hand of Fates"
+author {
+  name: "Steven Schend"
+}
+date {
+  year: 1996
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0465"
+  check: 8
+}
+isbn13 {
+}
+system: BLOOD_WARS
+audience: ALL
+type: BOOSTER_PACK
+style: PACK
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}

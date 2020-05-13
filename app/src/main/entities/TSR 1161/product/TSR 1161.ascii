@@ -1,0 +1,37 @@
+template {
+  name: "TSR 1161"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "Cards for the game."
+}
+title: "Spellfire Booster Pack 13: Fiends"
+author {
+  name: "Kevin Melka"
+}
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0716"
+  check: 9
+}
+isbn13 {
+}
+system: SPELLFIRE
+audience: ALL
+type: BOOSTER_PACK
+style: PACK
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  number: 12
+}

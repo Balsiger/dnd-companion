@@ -1,0 +1,130 @@
+template {
+  name: "TSR 1056"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\large{Inside You\'ll Discover a \'King\'s Ransom\' in Castles and Accessories!}\n                    \\bold{Explore Three Spectacular Castles...}\n                    \\list\n                    {\'\\Place{Darkhold}\' in the \\Place{Forgotten Realms} setting: Towering\n                    stronghold of the nefarious \\Group{Black Network}.}\n                    {\'\\Place{Drungar}\' in the \\Place{Dragonlance} setting: Bastion of\n                    defense against \\NPC{Thenol}\'s undead armies.}\n                    {\'\\Place{Hart}\' in the \\Place{Greyhawk} setting: A paladin\'s shining,\n                    star-shaped fortress.}\n                    \\bold{Fight Battles at the Castle Walls...}\n                    Experience the thrill of conquest with:\n                    \\list\n                    {Huge Battlesystem scenarios for each castle}\n                    {A complete war on the \\Place{Drungar} Frontier}\n                    {New and expanded siege, sorcery, and campaign rules for the\n                    Battlesystem miniature game}\n                    \\bold{Build a Fortress!}\n                    Construct key parts of \\Place{Hart}, \\Place{Drungar}, \\Place{Darkhold}---or\n                    build your own fortress with these Adventure Fold-up pieces:\n                    \\list\n                    {Over 40 towers, buildings, and walls}\n                    {Over 60 accessories, including battlements, doors, windows, arrow\n                    slits, rooftops, and drawbridges}\n                    {Over 40 \'Tools of War\', from fieldworks and \\Item[Siege Tower]{siege towers}\n                    to \\Item[Ballista]{ballistae} and a \\Item[Catapult]{catapult}}\n                    {Over 80 floorplan aids, including 2-D markers for corridors,\n                    stairwells, and more}\n                    This message is brought to you by \'Affordable Castles\', a\n                    \\Monster[Halfling]{hafling} contractor\'s firm in the \\Place{Heartlands}. See\n                    inside for details."
+}
+title: "Castles"
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Nesmith, Bruce"
+}
+editor {
+  name: "Hayday, Andria"
+}
+cover {
+  name: "Heyer, Carol"
+}
+cover {
+  name: "Olson, Erik"
+}
+cover {
+  name: "Loveless, Roger"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Joanis, Greg"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "graphic design"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "production"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "883"
+  check: 8
+}
+isbn13 {
+}
+pages: 134
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Darkhold"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Drungar"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Hart"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "assembly instructions"
+  number: 4
+}
+content {
+  part: POSTER
+  description: "color"
+  number: 3
+}
+content {
+  part: MAP
+  description: "poster-sized color"
+  number: 3
+}
+content {
+  part: SHEET
+  description: "3D fold ups"
+  number: 12
+}

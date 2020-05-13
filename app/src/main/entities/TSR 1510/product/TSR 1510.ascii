@@ -1,0 +1,50 @@
+template {
+  name: "TSR 1510"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "Generic"
+  description: "dices for the game"
+}
+title: "Dragon Dice Kicker Pack 7: Scalders"
+author {
+  name: "Olmesdahl, Bill"
+}
+date {
+  year: 1998
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0687"
+  check: 1
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: DICE
+  description: "randomly assorted"
+  number: 8
+}

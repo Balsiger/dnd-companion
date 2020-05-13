@@ -1,0 +1,161 @@
+template {
+  name: "Dragon 313"
+  world: "Generic"
+  description: "Issue 312 of the magazine. Races of Power issue."
+}
+title: "Dragon 313"
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Malcolm, Mark"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Nudson, Wade"
+}
+author {
+  name: "Peterson, Steven Palmer"
+}
+author {
+  name: "Poisso, Dean"
+}
+author {
+  name: "Troop, Trent"
+}
+author {
+  name: "Turley, Kieran"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+editor {
+  name: "Clarke Wilkes, Jennifer"
+  job: "editorial assistance"
+}
+editor {
+  name: "Williams, Penny"
+  job: "editorial assistance"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Harris, Todd"
+}
+illustrator {
+  name: "Johnson, Scott"
+}
+illustrator {
+  name: "Kerschl, Karl"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "McClellan, David"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Wahlstrum, David"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+date {
+  year: 2003
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVIII 6"
+number: "313"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

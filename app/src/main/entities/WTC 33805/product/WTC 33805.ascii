@@ -1,0 +1,210 @@
+template {
+  name: "WTC 33805"
+  world: "Generic"
+  description: "Prepare to enter the \\Place{Shadowfell},  a disturbing reflection of the natural world and a dark haven for lost souls and deathly spirits. Foul creatures haunt this forsaken plane, you out of the gloom rises a city of twisted splendor where adventure awaits and anything can happen.\n\nThis Dungeons & Dragons game product contains all the information a Dungeon Master needs to run thrilling adventures set in \\Place{Gloomwrought}, a city in the bleak and deathly plane known as \\Place{Shadowfell}. The material in this product can also be adapted for any Dungeons & Dragons campaign. \n\nThis box contains the following components:\n\n\\list\n{128-page Campaign Guide describing the city of \\Place{Gloomwrought} and other locations within the \\Place{Shadowfell}}\n{32-page book of encounters set in \\Place{Gloomwrought} and the \\Place{Shadowfell}}\n{Double-sided, full-color poster map depicting the city of \\Place{Gloomwrought} on one side and tactical city-based encounter maps on the other.}\n{2 card stock sheets of die-cut character and monster tokens}\n{Deck of 30 cards that Dungeon Masters can use to enhance \\Place{Shadowfell}-based encounters}"
+  short_description: "\\Place{Gloomwrough} and Beyond, an introduction to the \\Place{Shadowfell}."
+}
+title: "Shadowfell"
+leader: "The"
+subtitle: "Not Afraid of Death, Aere You?"
+author {
+  name: "Clautice, Andy"
+}
+author {
+  name: "de Bie, Erik Scott"
+}
+author {
+  name: "Goetz, Matt"
+}
+author {
+  name: "Bilsland, Greg"
+  job: "lead developer"
+}
+author {
+  name: "Bonner, Logan"
+  job: "developer"
+}
+author {
+  name: "Sims, Chris"
+  job: "developer"
+}
+editor {
+  name: "Bilsland, Greg"
+  job: "lead"
+}
+editor {
+  name: "Bonner, Logan"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Geluso, Dawn J."
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Beisner, Ralph"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Beyit, Kerem"
+}
+illustrator {
+  name: "Ejsing, Jesper"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Ortiz, Hector"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Alexander, Rob"
+}
+illustrator {
+  name: "McEvoy, Patrick"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphci designer"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Tardiff, Christopher"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D senior producter"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D group manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of D&D and book publishing"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2011
+  month: 5
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5848"
+  check: 1
+}
+pages: 160
+system: DND_4
+type: RULES_SUPPLEMENT
+style: BOX
+producer: "WTC"
+price {
+  currency: "$"
+  number: 3999
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "128-page Campaign Guide"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "32-page encounter book"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "double-sided poster"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "die-cut card stock tokens"
+  number: 2
+}
+content {
+  part: CARD
+  description: "DM cards"
+  number: 30
+}
+required_requirements: "Rules Compendium"
+required_requirements: "Dungeon Master\'s Kit"
+optional_requirements: "Heroes of the Fallen Lands"
+optional_requirements: "Monster Vault"
+optional_requirements: "Heroes of the Forgotten Kingdoms"
+optional_requirements: "D&D Dungeon Tiles"
+layout: FULL_COLOR

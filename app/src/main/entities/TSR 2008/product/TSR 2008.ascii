@@ -1,0 +1,23 @@
+template {
+  name: "TSR 2008"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Chainmail (black and white)"
+date {
+  year: 1975
+}
+isbn {
+}
+isbn13 {
+}
+system: CHAINMAIL
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

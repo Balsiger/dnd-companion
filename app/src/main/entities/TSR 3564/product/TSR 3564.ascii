@@ -1,0 +1,29 @@
+template {
+  name: "TSR 3564"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Buck Rogers"
+  description: "Inner Planets Trilogy, book two"
+}
+title: "Prime Squared"
+date {
+  year: 1993
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Two"
+series: "Inner Planets Trilogy"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

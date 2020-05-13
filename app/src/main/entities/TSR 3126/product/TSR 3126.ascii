@@ -1,0 +1,51 @@
+template {
+  name: "TSR 3126"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  world: "Birthright"
+  description: "a large amount of information for priests in the Birthright setting"
+}
+title: "Book of Priestcraft"
+leader: "The"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Maxwell, Duane"
+}
+author {
+  name: "Stark, Ed"
+}
+date {
+  year: 1997
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0655"
+  check: 3
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

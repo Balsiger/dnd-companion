@@ -1,0 +1,35 @@
+template {
+  name: "TSR 11339"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Star*Drive"
+  description: "descriptions of new systems and planets"
+}
+title: "Outbound: An Explorer\'s Guide"
+author {
+  name: "Stark, Ed"
+}
+date {
+  year: 1999
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1339"
+  check: 8
+}
+isbn13 {
+}
+pages: 96
+system: ALTERNITY
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

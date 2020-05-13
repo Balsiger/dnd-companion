@@ -1,0 +1,52 @@
+template {
+  name: "TSR 8336P"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "Becoming a \\Class{knight} has changed the \\NPC{Weasel} very\n  little. \\NPC{Galen Pathwarden} is still reluctant to adventure, still out to\n  save his own skin at virtually any cost. But when his brother \\NPC{Brithelm}\n  vanishes mysteriously, \\NPC{Galen} sets aside his better judgement and\n  embarks on a quest that leads under the earth, deep into a conspiracy of\n  darkness, and to the end of his courage.\n\n  \\NPC{Galen} returns to imperiled \\Place{Solamnia} in this exciting sequel to\n  the top-sellling \\Product{Weasel\'s Luck}, also by Michael Williams, the bard\n  of the \\Place{Dragonlance} saga."
+}
+title: "Galen Beknighted"
+subtitle: "The Reluctant Knight Returns"
+author {
+  name: "Williams, Michael"
+}
+date {
+  year: 1990
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "921"
+  check: 4
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume Three"
+series: "Heroes II"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

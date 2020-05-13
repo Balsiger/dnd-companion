@@ -1,0 +1,152 @@
+template {
+  name: "WTC 9556472"
+  world: "Generic"
+  description: "\\large{Divine Power at Your Command}\n                    Mastery of divine power is no longer reserved for the \\Class{cleric} or \\Class{Paladin}. With devotion and dedication, any hero can become a divine champion and a force to shake the heavens. Your strength comes from the universe itself, and you can use your divine gifts to create, heal, or destroy. Your choices shape the world.\n                    This book gives players and Dungeon Masters an unprecedented resource for using divine power and religion in their game. In addition to new feats, spells, items, and prestige classes, the \\Product{Complete Champion} game supplement presents exciting adventure locations, affiliation mechanics for different deities and organizations, and a system for designing your own religions based on the cleric domain system. Alternative class features for every standard class and more reserve feasts provide extended options for players interested in creating or advancing characters along a road to divine power."
+}
+title: "Complete Champion"
+subtitle: "A Player\'s Guide to Divine Heroes"
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Thomasson, Chris"
+}
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Louve, Rhiannon"
+}
+author {
+  name: "Astleford, Gary"
+}
+author {
+  name: "Mearls, Mike"
+  job: "development"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Polak, Eric"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Argyle, Steve"
+}
+illustrator {
+  name: "Belledin, Stephen"
+}
+illustrator {
+  name: "Ciombra, Miguel"
+}
+illustrator {
+  name: "Denmark, Thomas"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Hooper, Fred"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+typographer {
+}
+manager {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "freelance manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4034"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4034"
+  check: 9
+}
+pages: 160
+system: DND_3_5
+audience: ALL
+type: RULES_SUPPLEMENT
+style: BOOKLET
+series: "Complete"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+layout: FULL_COLOR

@@ -1,0 +1,206 @@
+template {
+  name: "WTC 31731"
+  description: "The \\Place{Feywild} is a bright reflection of the world, a place of enchantment and illusion where magic is master. For the unprepared adventurer, the \\Place{Feywild} perilous: cruel \\Monster{giants}, fierce beasts, and devious \\Monster{faries} dwell there. For others, the \\Place{Feywild} is a land of opportunity, with vast tracts of unexplared wilderness filled with ancient ruins and lost treasures. If you\'re going to survive long, you\'ll need to embrace your wild side and channel the magic and primal power of the \\Place{Feywild}.\n\n\\Product{Player\'s Option: Heroes of the Feywild} presents races, classes, character themes, feats, powers, and other character options that have a strong connection to the \\Place{Feywild}. It also gives players and Dungeon Masters background information on the inhabitants of this weird and wondrous plane, and how adventurers might cross paths with them.\n"
+  short_description: "A player\'s option supplement about the \\Place{Feywild}."
+}
+title: "Heroes of the Feywild"
+subtitle: "Magic and Mayhem for the Wild at Heart"
+author {
+  name: "Thompson, Rodney"
+  job: "lead designer"
+}
+author {
+  name: "Pozas, Claudio"
+  job: "designer"
+}
+author {
+  name: "Townshend, Steve"
+  job: "design"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "additional design"
+}
+author {
+  name: "Marmell, Ari"
+  job: "additional design"
+}
+author {
+  name: "Mearls, Mike"
+  job: "additional design"
+}
+author {
+  name: "Sernett, Matt"
+  job: "additional design"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "development"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "development"
+}
+author {
+}
+author {
+}
+author {
+}
+author {
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Moore, Cal"
+}
+editor {
+  name: "Fitzgerald Gray, Scott"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editing"
+}
+cover {
+  name: "Elmasli, Emrah"
+  job: "front"
+}
+cover {
+  name: "Belisle, Eric"
+  job: "back"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Barger, Ryan"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O&#39Conner, William"
+}
+illustrator {
+  name: "Silver, Andrew"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Winters, Mark"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "art director"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic design"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic design"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D RPG Senior Manager"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D bd team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress nager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2011
+  month: 11
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5836"
+  check: 8
+}
+pages: 160
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Player\'s Option"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Book"
+  number: 1
+}
+required_requirements: "WTC 2173672"
+optional_requirements: "Heroes of the Fallen Lands"
+optional_requirements: "Heroes of the Forgotten Kingdoms"
+optional_requirements: "Rules Compendium"
+layout: FULL_COLOR

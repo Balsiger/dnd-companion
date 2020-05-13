@@ -1,0 +1,145 @@
+template {
+  name: "TSR 9315"
+  synonym: "LC4"
+  reference {
+    name: "catalogue93"
+  }
+  world: "Forgotten Realms"
+  description: "Ahoy maties! Cast off for adventure with the members of the RPGA\n                    Network. Get to know one of the busiest ports of the \\Place{Sea of Fallen\n                    Stars}, where adventure awaits on land, at sea, and below the waves. Pirates,\n                    hones sailors, smugglers, fishermen, and water creatures rub shoulders with\n                    stalwart adventurers bent on exploring the ships in the harbor, businesses on\n                    the waterfront, and a few mysteries less audacious locals prefer to\n                    ignore. This product contains new buildings and personalities for the\n                    \\Place{Forgotten Realms} Living City campaign setting, and your own 3-D\n                    fold-up ship."
+}
+title: "Port of Raven\'s Bluff"
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Dyer, Phillip A."
+}
+author {
+  name: "Argall, David Carl"
+}
+author {
+  name: "Selinker, Mike"
+}
+author {
+  name: "Miller, John"
+}
+author {
+  name: "Dawson, Jim"
+}
+author {
+  name: "Nicholson, Wes"
+}
+author {
+  name: "McNally-Frech, Charly"
+}
+author {
+  name: "Beach, Tim"
+}
+author {
+  name: "Parenti, Nick"
+}
+author {
+  name: "Buehler, Pat"
+}
+author {
+  name: "Kemper, Eric"
+}
+author {
+  name: "Kemper, Terrence"
+}
+author {
+  name: "Frech, Dewey"
+}
+author {
+  name: "Anderson, Roger"
+}
+author {
+  name: "Wahl, Michael"
+}
+author {
+  name: "Adamski, Halina"
+}
+author {
+  name: "Jensen, Chas"
+}
+author {
+  name: "Haile, Doug"
+}
+author {
+  name: "Drake, Zachary M."
+}
+author {
+  name: "Allen, Thomas"
+}
+author {
+  name: "Buchanan, James"
+}
+author {
+  name: "Littrel, Joe"
+}
+author {
+  name: "Nicholls, Rob"
+}
+author {
+  name: "Szachnowski, Lucy"
+}
+author {
+  name: "Kruh, Andrew"
+}
+editor {
+  name: "Wise, David"
+}
+cover {
+  name: "Ward, Kevin"
+}
+cartographer {
+  name: "Conant, Dave"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "keylining"
+}
+manager {
+  name: "Kauth, Dennis"
+  job: "gatefold ship"
+}
+date {
+  year: 1991
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "120"
+  check: 2
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+series: "RPGA"
+price {
+  currency: "$"
+  number: 1200
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

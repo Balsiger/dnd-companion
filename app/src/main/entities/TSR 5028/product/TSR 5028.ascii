@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5028"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Terrible Troll & Goblin"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

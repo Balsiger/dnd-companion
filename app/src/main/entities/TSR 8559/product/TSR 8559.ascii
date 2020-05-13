@@ -1,0 +1,55 @@
+template {
+  name: "TSR 8559"
+  synonym: "WTC 86603"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 218"
+  }
+  world: "Forgotten Realms"
+  description: "The \\Event{Time of Troubles} had arrived. The chaos of spilled blood,\n                    lawless strife, monsters unleashed, and avatars roaming \\Place{Faer\\hat{u}n}\n                    had come.}\n                    But wrathful and warring gods were not \\Place{Faer\\hat{u}n}\'s only problem.\n                    The dreaded and insidious \\Group{Shadowmasters} had seized the opportunity to\n                    increase their influence and power while \\God{Mystra} and her minions were\n                    otherwise engaged. The \\Group{Shadowmasters} had woven a magical cloak of\n                    spells that would render the wearer invisible to their rival\'s magic.\n                    \\emph{The shadow over \\Place{Faer\\hat{u}n} spreads.}"
+}
+title: "Cloak of Shadows"
+subtitle: "The Shadow Over \\Place{Faer\\hat{u}n}"
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Fields, Fred"
+}
+date {
+  year: 1995
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0301"
+  check: 5
+}
+isbn13 {
+}
+pages: 315
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book Two"
+series: "Shadow of the Avatar"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

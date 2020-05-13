@@ -1,0 +1,30 @@
+template {
+  name: "TSR 8320?"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Dragonlance"
+  description: "the set of the Legends trilogy"
+}
+title: "Legends Trilogy"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "all volumes"
+series: "Legends Trilogy"
+price {
+}

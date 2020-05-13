@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9231"
+  synonym: "DL15"
+  reference {
+    name: "net price list"
+  }
+  world: "Dragonlance"
+}
+title: "Mists of Krynn"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

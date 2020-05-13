@@ -1,0 +1,28 @@
+template {
+  name: "TSR 1116C"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+  description: "Starter deck, 3rd edition."
+}
+title: "Spellfire: Master the Magic Card Game, 3rd Edition"
+date {
+  year: 1994
+}
+isbn {
+}
+isbn13 {
+}
+system: SPELLFIRE
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+  currency: "\302\254\302\243 "
+  number: 699
+  precision: 100
+}

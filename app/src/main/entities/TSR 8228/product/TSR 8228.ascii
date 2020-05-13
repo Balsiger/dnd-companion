@@ -1,0 +1,44 @@
+template {
+  name: "TSR 8228"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "None"
+  description: "an adventure/myster/comed about saying goodby to one\'s monsters"
+}
+title: "Naked Came the Sasquatch"
+author {
+  name: "John Boston"
+}
+date {
+  year: 1993
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 450
+  precision: 100
+}

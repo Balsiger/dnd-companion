@@ -1,0 +1,60 @@
+template {
+  name: "WTC 17994"
+  world: "Dragonlance"
+  description: "This title completes the exploration of a key part of \\Place{Dragonlance}\n  history. The era explored in this novel, although referred to frequently\n  throughout many \\Place{Dragonlance} novels, is being finely detailed for the\n  first time. In addition, this title features popular characters that appear\n  throughout the \\Product{Dragonlance Legends} trilogy."
+}
+title: "Sacred Fire"
+author {
+  name: "Pierson, Chris"
+}
+author {
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3036"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume III"
+series: "Kingpriest Trilogy"
+price {
+  currency: "$ "
+  number: 688
+  precision: 100
+}

@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9403"
+  synonym: "TM1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Western Countries Trail Map"
+leader: "The"
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}

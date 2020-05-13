@@ -1,0 +1,38 @@
+template {
+  name: "TSR 1126"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "None"
+  description: "\'Powers\' for the spellfire game."
+}
+title: "Spellfire AD&D Powers Booster Pack, Set 6"
+date {
+  year: 1995
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0209"
+  check: 4
+}
+isbn13 {
+}
+system: SPELLFIRE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  description: "random"
+  number: 15
+}

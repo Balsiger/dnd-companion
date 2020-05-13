@@ -1,0 +1,45 @@
+template {
+  name: "WTC 17769"
+  world: "Forgotten Realms"
+  description: "\\NPC{Vambran} and \\NPC{Emriana} have survived assassination attempts, family\n                    feuds, arranged marriages, and monster guarded secrets. But now things are\n                    starting to get really dangerous.\n                    \\large{The Scions of \\Place{Arrabar}}\n                    Heirs to a legacy of blood and steel struggle for control of a nation of\n                    mercenaries at odds with its neighbors and at war with itself.\n                    This title continues the trilogy exploring the political intrigue of a\n                    mercenary society in the \\Place{Forgotten Realms} world. The entire series is\n                    authored by R.A. Salvatore\'s War of the Spider Queen author and rising star\n                    Thomas M. Reid and features stunning cover art from artist Duane O. Meyers."
+}
+title: "Ruby Guardian"
+leader: "The"
+subtitle: "A forbidden alliance solidifies, an army marches, and an ancient society begins to crumble."
+author {
+  name: "Reid, Thomas M."
+}
+cover {
+  name: "Meyers, Duane O."
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2004
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7689"
+  title: "3382"
+  check: 10
+}
+isbn13 {
+}
+pages: 308
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "Scions of Arrabar"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

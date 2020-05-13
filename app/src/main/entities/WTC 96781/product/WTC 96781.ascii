@@ -1,0 +1,69 @@
+template {
+  name: "WTC 96781"
+  world: "Forgotten Realms"
+  description: "Realms rise and fall, \\Monster{human} lives tick by like seconds on a clock,\n                    and the \\Monster{dragons} watch from on high. But when the mighty\n                    \\Monster{wyrms} lose their minds, when they succumb to their basest, most\n                    violent impulses, time stands still.\n                    And that just happens to be the moment you should be running the fastest.\n                    From the far corners of \\Place{Far\\hat{u}n}, from the skies above and the\n                    pits below, from the imaginations of the next generation of fantasy masters,\n                    come tales of \\Monster{dragons} good and evil.\n                    This collection features all new stories by \\Place{Forgotten Realms}\n                    newcomers including \\Product{Maiden of Pain} author Kameron M. Franklin,\n                    Murray J.D. Leeder, Erik Scott de Bie, James P. Davies, and many more.\n                    This anthology features a range of stories by authors new to the\n                    \\Place{Forgotten Realms} setting writing about \\Monster{dragons}. It fleshes\n                    out many details from Richard Lee Byers\'s \\Product{Year of Rogue Dragons}\n                    trilogy and features art work by award winning artist Matt Stawicki."
+}
+title: "Realms of the Dragons II"
+subtitle: "The Year of Rogue Dragons"
+author {
+  name: "Tettensor, Erin"
+}
+author {
+  name: "Jones, Rosemary"
+}
+author {
+  name: "Scott de Bie, Erik"
+}
+author {
+  name: "Stroh, Harley"
+}
+author {
+  name: "Franklin, Kameron M."
+}
+author {
+  name: "Collins, J.L."
+}
+author {
+  name: "Pitrat, Jim"
+}
+author {
+  name: "Gentry, Ed"
+}
+author {
+  name: "Davids, James P."
+}
+author {
+  name: "Johnson, Jaleigh"
+}
+author {
+  name: "Leeder, Murray J.D."
+}
+editor {
+  name: "Athans, Philip"
+}
+cover {
+  name: "Stawicki, Matt"
+}
+date {
+  year: 2005
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 272
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "The Year of Rogue Dragons"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

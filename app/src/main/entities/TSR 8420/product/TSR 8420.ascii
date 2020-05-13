@@ -1,0 +1,20 @@
+template {
+  name: "TSR 8420"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+  description: "solo quest"
+}
+title: "Fearie Mound of Dragonkind"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+audience: ALL
+type: NOVEL
+price {
+}

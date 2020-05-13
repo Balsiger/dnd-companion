@@ -1,0 +1,62 @@
+template {
+  name: "DMA 000079"
+  world: "Call of Cthulhu"
+  description: "Es beginnt ganz allt\\umlaut{a}glich: Eine Frau beauftragt einen Detektiv,\n  ihren Mann zu suchen. Doch schnell entwickelt sich aus einem Routine-Auftrag\n  ein Abenteuer, dass die harmolse Beschaulichkeit eines kleinen\n  St\\umlaut{a}dtchens als Fassade entlarvt, hinter der ein finsteres Geheimnis\n  aus uralter Zeit lauert. Und auch die \'Kinder- und Hausm\\umlaut{a}rchen\' der\n  Gebr\\umlaut{u}der Grimm erlangen pl\\umlaut{o}tzlich eine neue und\n  beunrihigende Bedeutung."
+}
+title: "Froschk\\umlaut{o}nig Fragmente"
+leader: "Die"
+subtitle: "Ein Abenteuer im Deutschland der 20er Jahren"
+author {
+  name: "Sch\\umlaut{u}tte, Steffen"
+}
+author {
+  name: "Schiemichen, Wolfgang"
+  job: "zusaetzliche Texte"
+}
+author {
+  name: "Gebr\\umlaut{u}der Grimm}"
+  job: "zusaetzliche Texte"
+}
+editor {
+  name: "Gladys, Rainer"
+}
+cover {
+  name: "Gerwin, Frank"
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+  name: "Gerwin, Frank"
+}
+illustrator {
+  name: "Sanders, Merian A."
+}
+date {
+  year: 1993
+  month: 4
+}
+isbn {
+  group: "3"
+  publisher: "89260"
+  title: "555"
+  check: 6
+}
+isbn13 {
+}
+pages: 80
+system: CHAOSIUM
+type: ADVENTURE
+style: SOFT_COVER
+producer: "Laurin"
+price {
+  currency: "$ SFr "
+  number: 2480
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

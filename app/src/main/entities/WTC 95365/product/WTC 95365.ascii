@@ -1,0 +1,184 @@
+template {
+  name: "WTC 95365"
+  world: "Generic"
+  description: "The \\Product{Tome of Magic} supplement presents three new kinds of magic\n                    that you can integrate easily into any Dungeon & Dragons campaign. These\n                    magic \'subsystems\' function alongside the existing D&D magic system and offer\n                    new game mechanics, character options, and adventure possibilities. Within\n                    this tome you\'ll find three new standard classes---one for each new kind of\n                    magic---as well as new spells, feats, prestige classes, monsters, and magic\n                    items tied thematically to each.\n                    \\bold{Pact Magic}\n                    Powerful entities known as \\Item{vestiges} exist beyond the boundaries of\n                    life, death, and undeath. The \\Class{binder} uses pact magic---a combination\n                    of symbols and secret rituals---to summon these entities, strike bargains\n                    with them, and gain their formidable and sometimes bizarre supernatural\n                    powers.\n                    \\bold{Shadow Magic}\n                    The \\Place{Plane of Shadow} is a dark, twisted reflection of the real\n                    world. The \\Class{shadowcaster}, by understanding the fundamental properties\n                    of the plane and unlocking its magical mysteries, learns to harness and\n                    channel its umbral gloom, shaping the darkness to server her whim.\n                    \\bold{Truename Magic}\n                    Every creature has a truename---the word of its creation. The\n                    \\Class{truenamer} knows the primal language of the universe---the language of\n                    Truespeech---and learns the truenames of creatures and objects to gain\n                    control over them, transform them, or destroy them.\n                    Three new magic systems for any D&D campaign.\n                    \\Product{Tome of Magic} introduces three new magic subsystems for the D&D\n                    game. Any or all of these systems can easily be inserted into a\n                    campaign. Pact magic gives characters the ability to channel lost souls,\n                    harnessing their abilities to gain supernatural powers. Shadow magic draws\n                    power from the mysterious \\Place{Plane of Shadow}. Truename magic gives\n                    characters that learn and properly use the true name of a creature or object\n                    immense power over it. All three systems introduce new base classes and\n                    spellcasting mechanics. Also included are new feats, prestige classes, magic\n                    items, and spells."
+}
+title: "Tome of Magic"
+subtitle: "Unlock the Magical Power of Vestiges, Shadows, and Syllables"
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Noonan, Dave"
+}
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Collins, Andy"
+  job: "development team"
+}
+author {
+  name: "Decker, Jesse"
+  job: "development team"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "development team"
+}
+author {
+  name: "Schubert, Steve"
+  job: "development team"
+}
+author {
+  name: "Watkins, Rob"
+  job: "development team"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Komarck, Michael"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Malidore, Chris"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG R&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "graphic design"
+}
+illustrator {
+  name: "Wylie, Christina"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3909"
+  check: 5
+}
+isbn13 {
+}
+pages: 288
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

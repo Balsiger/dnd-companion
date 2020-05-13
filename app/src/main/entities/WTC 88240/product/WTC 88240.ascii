@@ -1,0 +1,41 @@
+template {
+  name: "WTC 88240"
+  world: "Generic"
+  description: "The wizard and sorcerer who wins the well-known Duel Arcane will be awarded\n  the \\Item{Golden Wand}, a magical device that holds incredible power. Magic\n  users come from far and wide to compete in the contest. Some are drawn to\n  glory, others to the competition. Still more come for other, darker reasons,\n  driven by an oath to a merciless death god.\n\n  And some oaths cannot be broken."
+}
+title: "Oath of Nerull"
+author {
+  name: "T.H. Lain"
+}
+cover {
+  name: "Todd Lockwood"
+}
+date {
+  year: 2002
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2851"
+  check: 4
+}
+isbn13 {
+}
+pages: 180
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 3"
+series: "D&D 3rd Edition Introduction Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "the text"
+  number: 1073741824
+}

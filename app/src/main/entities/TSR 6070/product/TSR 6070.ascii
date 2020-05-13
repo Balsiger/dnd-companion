@@ -1,0 +1,19 @@
+template {
+  name: "TSR 6070"
+  reference {
+    name: "net price list"
+  }
+}
+title: "RGPA Network Slipcases (set of 6)"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$"
+  number: 4000
+  precision: 100
+}

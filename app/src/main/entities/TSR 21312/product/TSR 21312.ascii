@@ -1,0 +1,50 @@
+template {
+  name: "TSR 21312"
+  synonym: "WTC 86511"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "From the murky depths of the \\Place{Shining Sea} rises a prehistoric menace\n                    who commands a rising tide of invasion to crash over the shores of\n                    \\Place{Faer\\hat{u}n}.\n                    \\NPC{Iakhovas} has plotted for long, bitter years to regain the powers that\n                    were torn from hin by an angry goddess. Now, nothing will stand in his way,\n                    and the face of \\Place{Toril} will never be the same again.\n                    Oblivious to the growing danger of the undersea civilizations, the surface\n                    world is about to awaken to a new, horrifying threat from the sea."
+}
+title: "Rising Tide"
+author {
+  name: "Odom, Mel"
+}
+cover {
+  name: "Maitz, Don"
+}
+cartographer {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+date {
+  year: 1999
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1312"
+  check: 6
+}
+isbn13 {
+}
+pages: 343
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "Threat from the Sea"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

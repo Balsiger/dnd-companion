@@ -1,0 +1,118 @@
+template {
+  name: "TSR 1091"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Al-Qadim"
+  description: "Golden \\Place{Huzuz}, the \\Place{City of Delights}, is the \'heart of the\n                    heart\' of the enlightened lands. It is the religious and political center of\n                    \\Place{Zakhara} and, say its inhabitants, the most beautiful city in the\n                    entire world. But beneath the beauty lies mystery, for the court of the\n                    \\NPC{Grand Caliph} is as full of intrigue as the \\Place{Grand Bazaar} is full\n                    of adventures waiting to happen. Come, explore the delights and dangers of\n                    \\Place{Huzuz the Golden}, heart of the \\Place{Al-Qadim} campaign world.\n                    Contents:\n                    \\list\n                    {2 guidebooks totaling 192 pages}\n                    {8 full-color reference cards}\n                    {8 Monstrous Compendium sheets}\n                    {1 clear map overlay for measuring distance}\n                    {2 full-color poster map sheets!}"
+}
+title: "City of Delights"
+author {
+  name: "Prusa, Tom"
+}
+author {
+  name: "Beach, Tim"
+}
+author {
+  name: "Kurtz, Steve"
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Ruppel, Robh"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+cartographer {
+  name: "Felegy, Cynthia K."
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Raab, Robin"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Beach, Tim"
+  job: "project coordination"
+}
+manager {
+  name: "Hayday, Andria"
+  job: "page design"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "page design"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "cover design"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "O\'Keefe, Gaye"
+  job: "production"
+}
+date {
+  year: 1993
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "589"
+  check: 5
+}
+isbn13 {
+}
+pages: 192
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Gem of Zakhara"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Golden Huzuz"
+  number: 1073741824
+}
+content {
+  part: PAGE
+  description: "Monstrous Compendium"
+  number: 16
+}
+content {
+  part: SHEET
+  description: "color cardsheet"
+  number: 8
+}
+content {
+  part: MISC
+  description: "clear plastic measuring overlay"
+  number: 1073741824
+}

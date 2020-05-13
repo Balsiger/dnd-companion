@@ -1,0 +1,59 @@
+template {
+  name: "TSR 8576"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Forgotten Realms"
+  description: "When \\NPC{Joel} became a priest of the new god \\God{Finder}, he knew it\n                    meant forfeiting the honor and security of his position as a master bard. Now\n                    his freedom and his very life are at stake as powers of evil embroil the\n                    priests of \\God{Finder} in a struggle against a plot to resurrect the dead\n                    god \\God{Bane}.\n                    With only his allies the young freedom fighter \\NPC{Holly Harrowslough}, the\n                    mysterious winged woman \\NPC{Jas}, and the aging priest \\NPC{Jedidiah},\n                    \\NPC{Joel} embarks on a mission to rever the \\Item{Hand of Bane}. His quest\n                    leads him from the \\Place{Realms} all the way to the extra-planar city of\n                    \\Place{Sigil}. There \\NPC{Joel} must rely on all his courage, wisdom, and\n                    strength to thwart the return of \\God{Bane the Tyrant} and rescue the god\n                    \\God{Finder} from imminent death.\n                    \\Product{Finder\'s Bane} is the fifteenth in an open-ended series of novels\n                    focusing on the \\Group{Harpers}, the secret organization for Good in the\n                    \\Place{Forgotten Realms} fantasy world."
+}
+title: "Finder\'s Bane"
+author {
+  name: "Novak, Kate"
+}
+author {
+  name: "Grubb, Jeff"
+}
+cover {
+  name: "Gallego, Blas"
+}
+cartographer {
+  name: "Diesel"
+}
+date {
+  year: 1997
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0658"
+  check: 8
+}
+isbn13 {
+}
+pages: 314
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 15 Book 1"
+series: "Harpers"
+series: "Lost Legends"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

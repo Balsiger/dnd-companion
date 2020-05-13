@@ -1,0 +1,56 @@
+template {
+  name: "WTC 9593074"
+  world: "Eberron"
+  description: "He was a decorated soldier, thought to have died twenty years ago.\n\nBut yesterday in \\Place{Karrnath} his body washed ashore, unkempt, dressed in rags...\n\nand MURDERED.\n\nNow it\'s up to a hardened soldier out for cold vengeance and a chronicler looking for a story to unravel a dead man\'s past---and with it, the future of \\Place{Khorvaire}."
+}
+title: "Bound by Iron"
+author {
+  name: "Bolme, Edward"
+}
+editor {
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4264"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4264"
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book I"
+series: "The Inquisitives"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

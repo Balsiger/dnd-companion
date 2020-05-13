@@ -1,0 +1,95 @@
+template {
+  name: "WTC 17990"
+  world: "Forgotten Realms"
+  description: "The best stories, the best authors, together in one volume for the first\n                    time.\n                    \\Product{The Best of the Realms} presents your favorite stories from a decade\n                    of Forgotten Realms anthologies---every one chosen by you."
+}
+title: "Best of the Realms"
+leader: "The"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Golden, Christie"
+}
+author {
+  name: "King, J. Robert"
+}
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Novak-Grubb, Kate"
+}
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Strohm, Keith Francis"
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Lebow, Jess"
+}
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+  name: "Athans, Philip"
+}
+editor {
+  name: "King, J. Robert"
+}
+editor {
+  name: "Lowder, James"
+}
+editor {
+  name: "Thomson, Brian M."
+}
+editor {
+  name: "Baldwin, Lizz"
+}
+cover {
+  name: "Zug, Mark"
+}
+date {
+  year: 2003
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3024"
+  check: 1
+}
+isbn13 {
+}
+pages: 335
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "The Best of the Realms"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

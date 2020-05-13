@@ -1,0 +1,82 @@
+template {
+  name: "TSR 9345"
+  synonym: "RR3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Ravenloft"
+  description: "At last some means of combatting the ultimate undead, \\Monster{vampires},\n                    have found their way into print. Within these pages, \\NPC{Dr. Rudolph Van\n                    Richten} shares his vast background as one of \\Place{Ravenloft}\'s most\n                    formidable lore masters and \\Monster{Vampire} hunters. Decades of research\n                    and experience have been compiled into discussions which define the very\n                    nature of those \'kings of the undead\', and help put them at a disadvantage to\n                    mortals, whom they consider to be \'mere cattle\'.\n                    \\NPC{Dr. Van Richten} has detailed vampiric poers, weaknesses, feeding and\n                    sleeping habits, even their varied relationships with others of their own\n                    kind. Old myths are dispelled, new facts are uncovered, and the experiences\n                    of both \\Monster{vampires} and those who hunt them are recorded for your\n                    safety and elightment.\n                    Quickly! Soon the sun sets and the dead will rise! The \\Monster{vampires} of\n                    \\Place{Ravenloft} know no mercy, and you must be prepared before the darkness\n                    engulfs you."
+}
+title: "Van Richten\'s Guide to Vampires"
+author {
+  name: "Findley, Nigel D."
+}
+editor {
+  name: "Wise, David"
+}
+editor {
+  name: "Brown, Anne K."
+}
+editor {
+  name: "Hayday, Andria"
+}
+editor {
+  name: "King, Rob"
+}
+cover {
+  name: "Beauvais, Denis"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Parker, Roy"
+  job: "graphic design"
+}
+date {
+  year: 1992
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "151"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+series: "Van Richten\'s Guide"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

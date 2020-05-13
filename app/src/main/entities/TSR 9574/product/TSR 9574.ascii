@@ -1,0 +1,43 @@
+template {
+  name: "TSR 9574"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  world: "Forgotten Realms"
+  description: "For over a decade, mystery has surrounded the fate of the lost goddess of\n                    trade and wealth, \\God{Waukeen}. The \\God[Waukeen]{Golden Lady} disappeared\n                    during the \\Event{Time of Troubles} and has not been heard from since. Now,\n                    in Marpenoth in the Year of the Tankard (1370 DR), a young prophet suffers\n                    from disturbing, divine visions that reveal a beautiful, golden-tressed woman\n                    imprisoned on a far plane of existence by some great evil.\n                    The leader of \\God{Waukeen}\'s church believes that these visions mean\n                    \\God{Waukeen} is alive but trapped in the deadly and dangerous\n                    \\Place{Abyss}. A party of adventurers is dedicated to peeling back the\n                    mystery of the \\God[Waukeen]{Golden Lady}\'s fate. Their route takes them to\n                    the plane-spanning \\Place{Infinite Staircase} and beyond, to the\n                    \\Place{Abyss}, the home of the demonic \\Monster[Tanar\'ri]{tanar\'ri}. The\n                    heroes must brave the dangers of the \\Place{Abyss} and rescue the lost\n                    goddess from the clutches of one of the most brilliant and dangerous of all\n                    \\Monster[Abyssal Lord]{Abyssal lords}.\n                    This stand-alone adventure was developed in concert with the \\Product[TSR\n                    2600]{Planescape} adventure anthology \\Product[TSR 2632]{Tales from the\n                    Infinite Staircase}. They can be played separately. However, guidelines\n                    within both allow a Dungeon Master to use either product as a subplot for the\n                    other, creating new opportunities for player characters and extending the\n                    opportunity for adventure."
+}
+title: "For Duty & Deity"
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

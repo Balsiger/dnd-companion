@@ -1,0 +1,107 @@
+template {
+  name: "Dungeon 57"
+  world: "Generic"
+  description: "This is issue 57 of the dungeon magazine."
+}
+title: "Dungeon 57"
+author {
+  name: "Hartshorne, John A."
+}
+author {
+  name: "Smith, Stephen J."
+}
+author {
+  name: "Grasdyk, Jeroen"
+}
+author {
+  name: "Widen, Cameron"
+}
+author {
+  name: "Spahn, Peter C."
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Bryant, Anthony J."
+  job: "associate editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "Ruppel Robh"
+}
+cartographer {
+  name: "Scott, Michael"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Holloway, James"
+}
+illustrator {
+  name: "Burr, Dan"
+}
+illustrator {
+  name: "Dollar, John"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+typographer {
+  name: "Isler, Tracy"
+}
+typographer {
+  name: "Kerkstra, Nancy"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1996
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "X 3"
+number: "57"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

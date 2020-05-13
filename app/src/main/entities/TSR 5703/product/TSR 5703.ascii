@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5703"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Elves"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

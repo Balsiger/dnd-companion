@@ -1,0 +1,62 @@
+template {
+  name: "TSR 2137"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Lankhmar"
+  description: "Updates the Lankhmar, City of Adventure sourcebook."
+}
+title: "Lankhmar: City of Adventure"
+leader: "The"
+author {
+  name: "Pryor, Anthony"
+}
+date {
+  year: 1993
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "658"
+  check: 1
+}
+isbn13 {
+}
+pages: 160
+system: ADND_2ND
+type: ADVENTURE
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

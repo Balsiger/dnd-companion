@@ -1,0 +1,71 @@
+template {
+  name: "TSR 11644"
+  synonym: "WTC 86575"
+  world: "Generic"
+  description: "Two hundred years ago, the great \\Monster{dwarf} smith \\NPC{Durgeddin the\n                    Black} built \\Place{Khundrukar}, a hidden stronghold for his war of vengeance\n                    against all \\Monster{orckind}. For years \\NPC{Durgeddin} labored, until the\n                    \\Monster{orcs} discovered \\Place{Khundrukar} and stormed the citadel, slaying\n                    all within. Legends say that \\NPC{Durgeddin}\'s masterful blades and\n                    glittering treasures were never found.\n                    The \\Product{Forge of Fury} is a stand-alone adventure for the new Dungeons &\n                    Dragons game. It details \\Place{Khundrukar}\'s five extensive levels and\n                    fierce tribes, dangerous obstacles, diabolical traps, and monstrous\n                    creatures."
+}
+title: "Forge of Fury"
+leader: "The"
+subtitle: "{What Waits in the Ruined Dwarf Stronghold?"
+author {
+  name: "Baker, Richard L. III"
+}
+editor {
+  name: "Horner, Miranda"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+typographer {
+  name: "Dorries, Erin"
+}
+manager {
+  name: "Stark, Ed"
+}
+manager {
+  name: "Floyd, Sherry"
+}
+manager {
+  name: "Glenn, Sean"
+}
+manager {
+  name: "Murin, Dawn"
+}
+manager {
+  name: "Fisher, Josh"
+}
+manager {
+  name: "DeLong, Chas"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1644"
+  check: 3
+}
+isbn13 {
+}
+pages: 32
+system: DND_3RD
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

@@ -1,0 +1,35 @@
+template {
+  name: "WTC 11857"
+  synonym: "WTC 88668"
+  world: "Generic"
+  description: "\\large{Finess and Versatility Make Powerful Allies}\n                    Bards and rogues rely on a stunning array of skills and abilities to give\n                    them an edge over any adversary. Packed with new ways to customize even the\n                    most artful characters, this book includes:\n                    \\list\n                    {New feats, prestige classes, weapons, spells, magic items, and\n                    equipment.}\n                    {Complete guidelines for trapmaking, including 90 sample traps.}\n                    {Descriptions of a wide range of thieves\' guilds and bardic colleges.}\n                    {Detailed rules for flanking opponents in combat.}\n                    Dungeon Masters and players who want to add a new dimension to their bards\n                    and rogues will find a wealth of indispensable material within these pages.\n                    To use this accessory, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}. A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Song and Silence"
+date {
+  year: 2001
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1857"
+  check: 8
+}
+isbn13 {
+}
+pages: 96
+system: DND_3RD
+audience: ALL
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Class Guidebook"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,114 @@
+template {
+  name: "Dungeon 70"
+  world: "Generic"
+  description: "This is issue 70 of the dungeon magazine."
+}
+title: "Dungeon 70"
+author {
+  name: "DiFiore Jr., Andrew"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Miller, Andy"
+}
+author {
+  name: "Ertman, Kent"
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "McDevitt, Bradley"
+}
+illustrator {
+  name: "Diesel"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+date {
+  year: 1997
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 80
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XII 4"
+number: "70"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

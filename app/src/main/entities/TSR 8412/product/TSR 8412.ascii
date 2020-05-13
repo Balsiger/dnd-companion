@@ -1,0 +1,56 @@
+template {
+  name: "TSR 8412"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "Yet again, the \\Place{Moonshase Isles} comes under the threat of sinister\n                    and supernatural forces.\n                    A council of dark sorcerers has usurped the will of the \\NPC{High King}. An\n                    army of \\Monster{ogres} and \\Monster{zombies} guided by \\God{Bhaal}, the\n                    super-deity of death and destruction, threatens the gentle \\Group{Ffolk}\n                    while the puppet king acquiesces.\n                    Meanwhile, the young druid \\NPC{Robyn} grapples with her new powers, and\n                    \\NPC{Prince Tristan Kendrick} struggles to earn his birthright. They must\n                    join forces with the children of the Goddess for a showdown with the dread\n                    \\Group{Black Wizards} that will seal the fate of the \\Place{Moonshae\n                    Isles}.\n                    Fantastical new creatures, dire occurrences, and wondrous events abound in\n                    Book Two of the \\Product{Moonshae Trilogy}, sequel to Douglas Niles\'\n                    best-selling \\Product{Darkwalker on Moonshae}, based on the\n                    \\Product{Forgotten Realms} adventures, TSR\'s newest and most extensive\n                    fantasy campaign."
+}
+title: "Black Wizards"
+author {
+  name: "Niles, Douglas"
+}
+cover {
+  name: "Parkinson, Keith"
+}
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "563"
+  check: 4
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Two"
+series: "Moonshae Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,41 @@
+template {
+  name: "TSR 2518"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Mystara"
+  description: "chivalry meets \'the Dirty Dozen\'"
+}
+title: "Dark Knight of Karameikos"
+author {
+  name: "Brown, Timothy B."
+}
+date {
+  year: 1995
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0307"
+  check: 4
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

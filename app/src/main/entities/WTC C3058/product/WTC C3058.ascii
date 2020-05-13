@@ -1,0 +1,44 @@
+template {
+  name: "WTC C3058"
+  world: "Forgotten Realms"
+  description: "\"Something\'s not right,\" he said.\n\n\"\\NPC{Drizzt} has been...\"\n\n\"Yeah, he telled me as much already\", the \\Monster{dwarf} answered, \"All about the journey.\" And he turned back to the empty corridor.\n\n\"Not all,\" said \\NPC{Jarlaxle}. He gave a little laugh, \"Not nearly all, I fear.\"\nHe, too, loocked once more to the path the reunited couple had taken.\n\nA moment later, \\NPC{Jarlaxle} put his hand back on \\NPC{Bruenor}\'s shoulder --- neither was sure exactly why.\n\n\"There\'s something ye ain\'t tellin\' me, \\Monster{elf}\", \\NPC{Bruenor} said."
+  short_description: "Book III of the Homecoming series"
+}
+title: "Hero"
+author {
+  name: "Salvatore R.A."
+}
+cover {
+  name: "Briclot, Aleksi"
+}
+date {
+  year: 2017
+  month: 10
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6615"
+  check: 8
+}
+pages: 440
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "Homecoming"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

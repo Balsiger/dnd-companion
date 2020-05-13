@@ -1,0 +1,48 @@
+template {
+  name: "WTC 17643"
+  world: "Eberron"
+  description: "Hardened by the \\Event{Last War}, four soldiers have come to \\Place{Sharn},\n  fabled \\Place{City of Towers}, capital of adventure, home to the best and\n  worst that \\Place{Eberron} has to offer. After a lifetime of fighting, war is\n  all they know. Now, in a time of uneasy peace, the must struggle to survive.\n\n  But then people start turning up dead.\n\n  The heroes soon find themselves caught in a plot that will take them from the\n  highest reaches of power to the most sordid dephts of the \\Place{city of\n  wonder}, shadow, and adventure.\n\n  \\Product{The City of Towers} launches a brand new novel line set in the world\n  of \\Place{Eberron}, Wizards of the Coast\'s newest D&D campaign setting."
+}
+title: "City of Towers"
+leader: "The"
+author {
+  name: "Baker, Keith"
+}
+cover {
+  name: "Zug, Mark"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2005
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3584"
+  check: 7
+}
+isbn13 {
+}
+pages: 378
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 1"
+series: "The Dreaming Dark"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

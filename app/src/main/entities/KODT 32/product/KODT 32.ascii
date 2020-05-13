@@ -1,0 +1,46 @@
+template {
+  name: "KODT 32"
+  description: "Issue 32 of the Knights of the Dinner Table comics."
+}
+title: "Tales from Hog Wallers"
+subtitle: "Issue 32"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+}
+author {
+  name: "Johansson, Steve"
+}
+author {
+  name: "Kenzer, David S."
+}
+cover {
+  name: "Hall, Benjamin"
+}
+date {
+  year: 1999
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 40
+system: NONE
+audience: ALL
+type: COMICS
+style: BOOKLET
+producer: "K&C"
+number: "Issue 32"
+series: "Knights of the Dinner Table"
+price {
+  currency: "$ "
+  number: 1199
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

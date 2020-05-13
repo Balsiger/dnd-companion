@@ -1,0 +1,97 @@
+template {
+  name: "Dungeon 42"
+  world: "Generic"
+  description: "This is issue 42 of the dungeon magazine."
+}
+title: "Dungeon 42"
+author {
+  name: "Shell, J. Bradley"
+}
+author {
+  name: "Aberg, Peter"
+}
+author {
+  name: "Lai, Gary"
+}
+author {
+  name: "Howery, David"
+}
+author {
+  name: "Hind, Chris"
+}
+author {
+  name: "Kurtz, Steve"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "assistant editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Burdick, Scott"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Williams, L.A."
+}
+illustrator {
+  name: "Dougherty, Charles"
+}
+illustrator {
+  name: "Aidala, Marco"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1993
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "VII 6"
+number: "42"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

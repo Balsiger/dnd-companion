@@ -1,0 +1,86 @@
+template {
+  name: "WTC 33275"
+  world: "Generic"
+  world: "Forgotten Realms"
+  world: "Dark Sun"
+  world: "Eberron"
+  description: "Twelve critically acclaimed and best-selling authors gather to spin stories set in the worlds of Dungeon & Dragons, tales filled with desperate \\Monster{dragons} and cruel \\Monster{elves}, honorable \\Monster{demons} and fickle gods, wild magic and the sharpest of steel."
+  short_description: "A collection of short stories."
+}
+title: "Untold Adventures"
+subtitle: "Step Inside the Imagination of Master Storytellers"
+author {
+  name: "Shirley, John"
+}
+author {
+  name: "Foster, Alan Dean"
+}
+author {
+  name: "Smedman, Lisa"
+}
+author {
+  name: "Resnick, Mike"
+}
+author {
+  name: "Kenyon, Kay"
+}
+author {
+  name: "Zettel, Sarah"
+}
+author {
+  name: "Park, Paul"
+}
+author {
+  name: "Anderson, Kevin J."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Jones, Rosemary"
+}
+author {
+  name: "Nye, Jody Lynn"
+}
+editor {
+}
+cover {
+  name: "Jones, Android"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2011
+  month: 6
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5837"
+  check: 5
+}
+pages: 376
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

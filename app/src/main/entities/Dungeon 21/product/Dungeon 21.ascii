@@ -1,0 +1,92 @@
+template {
+  name: "Dungeon 21"
+  world: "Generic"
+  description: "This is issue 21 of the dungeon magazine."
+}
+title: "Dungeon 21"
+author {
+  name: "Walsh, Willie"
+}
+author {
+  name: "Smith, Stephen J."
+}
+author {
+  name: "Ward, James M."
+}
+author {
+  name: "Maaske, Matthew"
+}
+author {
+  name: "Barrett, Craig H."
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Aulisio, Janet"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Gladrosich, Bob"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Hanchette, Paul"
+  job: "art director"
+}
+typographer {
+  name: "MacDonald, Kathleen C."
+}
+manager {
+  name: "Ward, Jim"
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1990
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "IV 3"
+number: "21"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color"
+  number: 1073741824
+}

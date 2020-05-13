@@ -1,0 +1,52 @@
+template {
+  name: "WTC 2195974"
+  world: "Forgotten Realms"
+  description: "..the hooded man said again -- or started to, until a flash of lightning shot through the camp and drove into a keg of warm ale beside him. As the keg exploded, liquid flying, a sheet of dissipating electricity stole the darkness from the growing twilight.\n                    All six of the companions fell back, shielding their eyes. When they regained their sight, one and all saw the lone figure of a lean dark elf standing atop one of their wagons.\n                    \\Large{\\NPC{Drizzt Do\'Urden}}\n                    ...gasped one of the \\Monster{dwarves}.\n                    "
+  short_description: "The first book with Drizzt in the Transitions series."
+}
+title: "Orc King"
+leader: "The"
+subtitle: "Suffer no \\Monster{orc} to live"
+author {
+  name: "Salvatore R.A."
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+date {
+  year: 2008
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5046"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5046"
+  check: 1
+}
+pages: 398
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "I"
+series: "Transitions"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

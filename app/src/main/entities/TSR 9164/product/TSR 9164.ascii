@@ -1,0 +1,89 @@
+template {
+  name: "TSR 9164"
+  synonym: "OA1"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "From the Log of the \\Item{Leaping Dolphin}:\n                    \'110th Day: The gale nae stop for twa days. My ship is driven before it and\n                    the magus is as helpless as a wee babe. \\NPC{Akito} names the winds tai-fun\n                    in his heathen tongue...\'\n                    Drawn by the lure of adventure and riches, a crew of seamen sails valiantly\n                    into uncharted seas. In the squalid dens of the port districts, tales hint at\n                    a land of untold riches across the waves. But getting there is only the\n                    beginning.\n                    Across the waters lies \\Place{Kozakura}, a land of mystery and danger. There\n                    you will discover new cultures, strange values, secret powers, and fabulous\n                    terrors. For \\Place{Kozakura} is a land of \\emph{Oriental Adventures}.\n                    \\Product[TSR 9164]{Swords of the Daimyo} is the first module designed for use\n                    with the AD&D \\Product[TSR 2018]{Oriental Adventures} rule book. \\Product[TSR\n                    9164]{Swords of the Daimyo} includes descriptions and maps of the island of\n                    \\Place{Kozakura}, detailed information and maps of \\Place{Miyama Province} of\n                    \\Place{Kozakura}, and a series of adventures to introduce old and new player\n                    characters to the intrigues of the Orient."
+}
+title: "Swords of the Daimyo"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Foote, Kelly"
+}
+editor {
+  name: "Breault, Mike"
+}
+editor {
+  name: "McCready, Anne Gray"
+}
+editor {
+  name: "Martin, Karen S."
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Kauth, Marsha"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+typographer {
+  name: "Bakk, Linda"
+}
+manager {
+  name: "O\'Malley, Colleen"
+  job: "keylining"
+}
+date {
+  year: 1986
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "273"
+  check: 2
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+type: ACCESSORY
+style: FOLDER
+producer: "TSR"
+series: "Oriental Adventures"
+price {
+  currency: "$"
+  number: 1200
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Adventure Book of Miyama"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Province Book of Miyama"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

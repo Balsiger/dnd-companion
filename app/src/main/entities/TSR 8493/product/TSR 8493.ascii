@@ -1,0 +1,62 @@
+template {
+  name: "TSR 8493"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "For centuries, adventurers have sought the fabled \\Item{Ring of Winter},\n                    rumored to posses the magical might to make the wearer immortal and bring a\n                    second Ice Age down upon the \\Place{Realms}. \\NPC{Artus Cimber} knows where\n                    it is.\n                    After discovering the ring is hidden in the jungles of \\Place{Chult}, he sets\n                    off to fulfill the quest that has devoured a decade of his life. Knowing that\n                    the artifact is hidden somewhere in the danger-filled jungles and recovering\n                    it are two entirely different matters, however---especially when a lost city,\n                    rampaging dinosaurs, and the villainous Cult of Frost all stand between\n                    \\NPC{Artus} and his goal.\n                    \\Place{The Ring of Winter} is the fifth in an open ended series of novels\n                    focusing on the \\Group{Harpers}, the secret organization for Good in the\n                    \\Place{Forgotten Realms} fantasy world."
+}
+title: "Ring of Winter"
+leader: "The"
+author {
+  name: "Lowder, James"
+}
+cover {
+  name: "Fields, Fred"
+}
+date {
+  year: 1992
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "330"
+  check: 2
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Five"
+series: "Harpers Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

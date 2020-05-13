@@ -1,0 +1,31 @@
+template {
+  name: "TSR 1500P"
+  reference {
+    name: "net"
+  }
+  world: "Generic"
+  description: "The base set of the game."
+}
+title: "Dragon Dice POP"
+author {
+  name: "Lester Smith"
+}
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0322"
+  check: 8
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+  currency: "$"
+  number: 15540
+  precision: 100
+}

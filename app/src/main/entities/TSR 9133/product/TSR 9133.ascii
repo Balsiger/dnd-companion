@@ -1,0 +1,30 @@
+template {
+  name: "TSR 9133"
+  synonym: "DL12"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+}
+title: "Dragons of Faith"
+date {
+  year: 1986
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "092"
+  check: 6
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

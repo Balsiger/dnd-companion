@@ -1,0 +1,78 @@
+template {
+  name: "TSR 9449"
+  synonym: "ALQ7"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Al-Qadim"
+  description: "\\large{Set Sail with the \\Group{Pirates of Chaos}!}\n                    A thousand welcomes, noble friend! I see your eye is as keen as the\n                    \\Monster{eagle} and your mind as sharp as my \\Item{jambiya}, for you hold in\n                    your hand a great treasure. This box contains everything needed to launch an\n                    epic adventure featuring corsairs and mamluks:\n                    \\list\n                    {A stunning poster map of the \\Place{Corsair Domains} and\n                    \\Place{Zakhara}\'s northern shores.}\n                    {Six full-color cardstock sheets containing maps and player aids.}\n                    {An 8-page booklet filled with new monsters, including the dreaded\n                    \\Monster{ghul-kin}.}\n                    {A 32-page sourcebook detailing the wily pirates of \\Place{Hawa} and\n                    their greatest enemies, the stalwart mamluks of \\Place{Qudra}, plus\n                    several new magical items.}\n                    {A 64-page adventure book presenting a fabulous array of tales set in\n                    or near the \\Place{Corsair Domains}. Meet the beautiful and notorious\n                    \\NPC{Jayani al-Jasir}, called by some the \\NPC{Queen of Pirates}. Face\n                    untold perils to fetch the wondrous waters of the\n                    \\Place{River of Gold}. Save \\Place{Hawa}\'s people from the horrible\n                    \\NPC{Soultaker}, and much, much more. But beware! Treachery awaits at\n                    the hands of those you trust most!}\n                    Recommended for use with the \\Product{Arabian Adventures} rulebook."
+}
+title: "Corsairs of the Great Sea"
+author {
+  name: "Rea, Nicky"
+}
+editor {
+  name: "Rateliff, John D."
+}
+cover {
+  name: "Fields, Fred"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Wells, Janis"
+  job: "proofreading"
+}
+date {
+  year: 1994
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "867"
+  check: 3
+}
+isbn13 {
+}
+pages: 104
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Campaign Guide"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Adventures in the Corsair Domains"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Monstrous Compendium"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "color"
+  number: 6
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

@@ -1,0 +1,35 @@
+template {
+  name: "MM 20024"
+  description: "An assortment of Tombstones."
+  short_description: "An assortment of Tombstones."
+}
+title: "Tombstones"
+subtitle: "Dungeon Decor"
+illustrator {
+  name: "Grassnick"
+  job: "sc"
+}
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: SMALL_BOX
+producer: "Mega Miniatures"
+series: "Dungeon Decor"
+price {
+  currency: "$"
+  number: 1199
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "Tombstone"
+  number: 25
+}
+layout: FULL_COLOR

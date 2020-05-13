@@ -1,0 +1,102 @@
+template {
+  name: "Dungeon 64"
+  world: "Generic"
+  description: "This is issue 64 of the dungeon magazine."
+}
+title: "Dungeon 64"
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Culotta, Shari"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Crook, Jeff"
+}
+author {
+  name: "Stack, Jennifer Tittle"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Vuckovich, Michelle"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Baldwin, Lizz"
+  job: "editorial assistant"
+}
+cover {
+  name: "Nelson, Mark"
+}
+cartographer {
+  name: "Scott, Michael"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+illustrator {
+  name: "McDevitt, Bradley"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Craig, Terry"
+  job: "production"
+}
+manager {
+  name: "Baerbock, Linda"
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1997
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XI 4"
+number: "64"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

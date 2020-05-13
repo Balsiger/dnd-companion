@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9116"
+  synonym: "AC4"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Book of Marvelous Magic"
+leader: "The"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

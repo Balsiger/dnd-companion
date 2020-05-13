@@ -1,0 +1,47 @@
+template {
+  name: "WTC 17562"
+  world: "Forgotten Realms"
+  description: "The horseman lifteth up both the bright \\Item{sword} and the glittering\n                    \\Item{spear}, and there is a multitude of slain, and a great number of\n                    carcasses. There is none end of their corpses upon their corpses.\n                    The spiritual heart of \\Place{Faer\\hat{u}n} beats in time with a hundred\n                    gods, and for each, a thousand servants or more. \\Product{The Priests} is a\n                    series that tells the tales of but a few.\n                    \\Product{Mistress of the Night} is the second title in this \\Place{Forgotten\n                    Realms} novel series that focuses specifically on priests, the popular D&D\n                    iconic class also known as clerics. Each title chronicles priests loyal to a\n                    different deity in the \\Place{Forgotten Realms} pantheon. Like the preceding\n                    series \\Product{The Rogues}, each novel in \\Product{The Priests} series is\n                    written as a stand-alone adventure."
+}
+title: "Mistress of the Night"
+subtitle: "The Priests"
+author {
+  name: "Bassingthwaite, Don"
+}
+author {
+  name: "Gross, Dave"
+}
+cover {
+  name: "Fishman, Marc"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2004
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7689"
+  title: "3346"
+  check: 3
+}
+isbn13 {
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 2"
+series: "The Priests"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

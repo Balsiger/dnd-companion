@@ -1,0 +1,38 @@
+template {
+  name: "MM 001"
+  description: "Some additions to the rooms."
+}
+title: "Room Set"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: BOX
+producer: "Dwarven Forge"
+price {
+}
+content {
+  part: MINIATURE
+  description: "Room"
+  number: 29
+}
+content {
+  part: MINIATURE
+  description: "\'Swining\' Door"
+  number: 2
+}
+content {
+  part: BOOKLET
+  description: "example setups"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "Bow Tie Connector"
+  number: 50
+}

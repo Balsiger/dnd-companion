@@ -1,0 +1,163 @@
+template {
+  name: "WTC 9568472"
+  world: "Generic"
+  description: "Since the dawn of the DUNGEONS & DRAGONS game, the dungeon has remained a\n                    place of mystery, excitement, and danger. \\Monster{Purple worms} burrow\n                    through the earth, eager for their next meal. Savage \\Monster{orcs} lurk\n                    within the darkness, ready to surge forth and lay waste to civilized\n                    lands. Strange cults, mutated monsters, and forgotten gods hide within the\n                    choking darkness of the dungeon\'s halls. Nowhere else offers greater\n                    prospects for wealth, magic, and power. Yet the horrors that lurk beneath the\n                    world never give up their treasures without a fight....\n                    This D&D supplement presents a refreshing new take on dungeon adventures. It\n                    shows Dungeon Masters how to inject excitement, innovation, and thrilling\n                    adventure into their dungeons. New rules for encounter traps allow DMs to\n                    build deadly snares to catch the unwary. For players, the factotum class is a\n                    cunning wanderer, a jack-of-all-trades who can cope with anything the dungeon\n                    throws at him. New equipment, feats, and prestige classes give adventurers\n                    the tools they need to survive the dark beneath the earth."
+  short_description: "An Essential Guide to Dungeon Adventuring"
+}
+title: "Dungeonscape"
+subtitle: "Welcome to the Dungeon!"
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Burlew, Rich"
+}
+author {
+  name: "Sims, Chris"
+  job: "additional design"
+}
+author {
+  name: "Bonner, Logan"
+  job: "additional design"
+}
+author {
+  name: "Stark, Ed"
+  job: "additional design"
+}
+author {
+  name: "Noonan, Dave"
+  job: "additional design"
+}
+author {
+  name: "Mearls, Mike"
+  job: "developer"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Coimbra, Miguel"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Nordstrand, Torstein"
+}
+illustrator {
+  name: "Roach, David"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Martin, Michael"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4118"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4118"
+  check: 6
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

@@ -1,0 +1,32 @@
+template {
+  name: "TSR 9587"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Dragonlance"
+  description: "fight the final battles of the Fourth Age"
+}
+title: "Seeds of Chaos"
+author {
+  name: "Niles, Douglas"
+}
+date {
+  year: 1998
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}

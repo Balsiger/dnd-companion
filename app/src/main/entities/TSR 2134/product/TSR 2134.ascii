@@ -1,0 +1,98 @@
+template {
+  name: "TSR 2134"
+  synonym: "PHBR9"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "Clever illusionists and sly practical jokers. Brilliant burglers and\n                    easygoing farmers. Now \\Product{The Complete Book of \\Monster{Gnomes} and\n                    \\Monster{Halflings}} reveals the secrets of these two popular races---their\n                    culture, beliefs, and subraces (including two new subraces), as well as\n                    twenty-eight new character kits, from the \\Monster{gnome} Goblinsticker to\n                    the \\Monster{halfling} Forestwalker. If you enjoy playing \\Monster{gnome} or\n                    \\Monster{halfling} characters, or if you\'re a DM interested in creating an\n                    all-\\Monster{gnome} or all-\\Monster{halfling} campaign, this is the book for\n                    you!"
+}
+title: "Complete Book of Gnomes & Halflings"
+leader: "The"
+author {
+  name: "Niles, Douglas"
+}
+editor {
+  name: "Rateliff, John D."
+}
+cartographer {
+  name: "Sutherland, Dave"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Crabtree, James"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "graphic designer"
+}
+date {
+  year: 1993
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "573"
+  check: 9
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "9"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

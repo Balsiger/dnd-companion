@@ -1,0 +1,16 @@
+template {
+  name: "TSR 6058"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "RPGA Slipcase"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

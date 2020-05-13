@@ -1,0 +1,32 @@
+template {
+  name: "TSR 11444"
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "From the pages of \\Product{Dungeon} magazine.\n                    \\large{The quest for honor and the search for treasure sometimes lead to\n                    death and despair.}\n                    Herein are featured six adventures originally presented in \\Product{Dungeon\n                    Adventures} magazine:\n                    \\list\n                    {\\bold{Caermor} by Nigel D. Findley: True evil walks among the\n                    villagers of \\Place{Caermor}. You must uncover the danger in time to\n                    save the village from destruction.}\n                    {\\bold{The Moor-Tomb Map} by Jon Bailye: A mysterious map leads you\n                    into the perilous \\Place{Willowmoors} and, with any luck, the lost\n                    bom of \\NPC{Dalvan Meir}.}\n                    {\\bold{The Cauldron of Plenty} by Willie Walsh: The king wants it. The\n                    \\Monster{giant} has it. Do you have the gall or the guile to take it?}\n                    {\\bold{King Oleg\'s Dilemma} by Lee Sheppard: An alliance with the\n                    \\Monster{dwarves} would solve many of \\NPC{King Oleg}\'s problems, but\n                    reaching the \\Monster{dwarves} is easier said than done.}\n                    {\\bold{Encounter in the Wildwood} by Willie Walsh: A trek through the\n                    wood pits heroes against a truly monstrous band of brigands.}\n                    {\\bold{Masqueraider} by Randy Maxwell: Journey to a haunted valley to\n                    find the elusive marauder that threatens the town of \\Place{Tyrluk}.}\n                    \\Product{Dungeons of Despair} is a collection of low-level adventures for the\n                    Advanced Dungeons & Dragons game. Each adventure stands alone, but any of\n                    them can be inserted easily into an ongoing AD&D campaign. They can also be\n                    played as follow-up adventures to those presented in \\Product{Road to\n                    Danger}, the first anthology of adventures taken from the pages of\n                    \\Product{Dungeon Adventures}."
+}
+title: "Dungeons of Despair"
+date {
+  year: 1999
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

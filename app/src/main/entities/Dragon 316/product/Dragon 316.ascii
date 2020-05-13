@@ -1,0 +1,164 @@
+template {
+  name: "Dragon 316"
+  world: "Generic"
+  description: "Issue 316 of the magazine. Spies issue."
+}
+title: "Dragon 316"
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+}
+author {
+  name: "Four, Johnn"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Harlan, Thomas"
+}
+author {
+  name: "Jackson, Evan Michael"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Poisso, Dean"
+}
+author {
+  name: "Smith, Mat"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "editorial assistant"
+}
+editor {
+  name: "Williams, Penny"
+  job: "editorial assistant"
+}
+cover {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "James, Kennon"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Luckas, Chuch"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Velotta, Patrick"
+  job: "graphic designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "group publishing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+date {
+  year: 2004
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVIII 9"
+number: "316"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

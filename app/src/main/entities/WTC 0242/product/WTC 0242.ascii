@@ -1,0 +1,238 @@
+template {
+  name: "WTC 0242"
+  world: "Generic"
+  description: "\\large{Endless adventure and untold excitement await}\n\\bold{by Jonathan Tweet, Monte Cook, and Skip Williams}\nPrepare to venture forth with your bold companions into a world of heroic\nfantasy. Within these pages, you\'ll discover all the tools and options you\nneed to create characters worthy of song and legend for the Dungeons &\nDragons roleplaying game."
+}
+title: "Player\'s Handbook"
+author {
+  name: "Tweet, Jonathan"
+}
+author {
+  name: "Collins, Andy"
+  job: "revision"
+}
+author {
+  name: "Cook, Monte"
+  job: "D&D 3rd edition core design team"
+}
+author {
+  name: "Tweet, Jonathan"
+  job: "D&D 3rd edition core design team"
+}
+author {
+  name: "Williams, Skip"
+  job: "D&D 3rd edition core design team"
+}
+author {
+  name: "Adkison, Peter"
+  job: "additional design"
+}
+author {
+  name: "Baker, Richard"
+  job: "additional design"
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "development"
+}
+author {
+  name: "Sims, Chris"
+  job: "developer"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "development"
+}
+author {
+  name: "Stark, Ed"
+  job: "development"
+}
+editor {
+  name: "Martin, Julia"
+}
+editor {
+  name: "Rateliff, John"
+}
+editor {
+  name: "McQuillan, Bill"
+  job: "editorial assistance"
+}
+editor {
+  name: "Noonan, David"
+  job: "editorial assistance"
+}
+editor {
+  name: "Quick, Jeff"
+  job: "editorial assistance"
+}
+editor {
+  name: "Williams, Penny"
+  job: "editorial assistance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Higgenbotham, Henry"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "West, Lars-Grant"
+}
+illustrator {
+  name: "Fischer, Scott"
+}
+illustrator {
+  name: "Foster, John"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "visual creative director"
+}
+illustrator {
+  name: "Irvin, Kate"
+  job: "additional art direction"
+}
+illustrator {
+  name: "Lockwood, Todd"
+  job: "D&D conceptual artist"
+}
+illustrator {
+  name: "Wood, Sam"
+  job: "D&D conceptual artist"
+}
+illustrator {
+  name: "Adelsperger, Matt"
+  job: "D&D logo design"
+}
+illustrator {
+  name: "Floyd, Sherry"
+  job: "D&D logo design"
+}
+illustrator {
+  name: "Floyd, Sherry"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Hebron, Paul"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photographer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Cheung, Carmen"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Walker, Nancy"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "Production Manager"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "R&D group manager"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "D&D brand team"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+date {
+  year: 2012
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6246"
+  check: 4
+}
+pages: 320
+system: NONE
+audience: ALL
+type: RULEBOOK
+style: HARDCOVER
+producer: "WTC"
+number: "Book I"
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

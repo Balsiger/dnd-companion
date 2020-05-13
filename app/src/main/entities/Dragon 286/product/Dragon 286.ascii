@@ -1,0 +1,176 @@
+template {
+  name: "Dragon 286"
+  world: "Generic"
+  description: "Issue 286 of the magazine. Issue about Shannara."
+}
+title: "Dragon 286"
+author {
+  name: "Gary Gygax"
+}
+author {
+  name: "Murphy, Brian"
+}
+author {
+  name: "Thomasson, Chris"
+}
+author {
+  name: "Terry Brooks"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Kenneth Hite"
+}
+author {
+  name: "Julia Martin"
+}
+author {
+  name: "Haddock, Eric"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Rick Moscatello"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Robin D. Laws"
+}
+author {
+  name: "Ray Winninger"
+}
+author {
+  name: "Mike McVey"
+}
+author {
+  name: "Johnn Four"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Matthew Sernett"
+}
+cover {
+  name: "Terese"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "John Kovalic"
+}
+illustrator {
+  name: "Larry McDougall"
+}
+illustrator {
+  name: "Jeremy Jarvis"
+}
+illustrator {
+  name: "Val Mayerik"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Ron Spencer"
+}
+illustrator {
+  name: "Tony DiTerlizzi"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Ted Beargeon"
+}
+illustrator {
+  name: "Matt Wilson"
+}
+illustrator {
+  name: "Mark Price"
+}
+illustrator {
+  name: "Nicholas Isaac"
+}
+illustrator {
+  name: "Wagner, E.B."
+}
+illustrator {
+  name: "Jerry Seltzer"
+}
+illustrator {
+  name: "Tony Moseley"
+}
+illustrator {
+  name: "Phil Foglio"
+}
+manager {
+  name: "John Wilson"
+  job: "group publishing"
+}
+manager {
+  name: "Pierce Watters"
+  job: "circulation direction"
+}
+manager {
+  name: "Bob Henning"
+  job: "advertising sales direction"
+}
+manager {
+  name: "John Dunn"
+  job: "production direction"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistance"
+}
+manager {
+  name: "Jen Gilbert"
+  job: "design"
+}
+manager {
+  name: "Peter Whitley"
+  job: "art direction"
+}
+date {
+  year: 2001
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII"
+number: "288"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "map of Shannara"
+  number: 1073741824
+}

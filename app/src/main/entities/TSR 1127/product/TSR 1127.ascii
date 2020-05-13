@@ -1,0 +1,60 @@
+template {
+  name: "TSR 1127"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  world: "None"
+  description: "Base set for the Spellfire game."
+}
+title: "Spellfire: Master the Magic Card Game"
+author {
+  name: "Jim Butler"
+}
+author {
+  name: "Dori Hein"
+}
+author {
+  name: "Kevin Melka"
+}
+date {
+  year: 1996
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0210"
+  check: 8
+}
+isbn13 {
+}
+system: SPELLFIRE
+audience: ALL
+type: BOARD_GAME
+style: BOX
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "rules"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "deck"
+  number: 55
+}
+content {
+  part: CARD
+  description: "booster"
+  number: 12
+}

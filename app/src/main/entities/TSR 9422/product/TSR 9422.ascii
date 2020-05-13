@@ -1,0 +1,78 @@
+template {
+  name: "TSR 9422"
+  synonym: "GA1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "The legendary coastal city of \\Place{Carsall} existed two centuries\n                    ago---before it vanished beneath the waves, reputedly at the hands of an\n                    angry sea god. Stories of the city and tales of fabulous artifacts\n                    originating from \\Place{Carsall} still abound. Now, the clerics of a seaside\n                    town have proven that some unusual items are indeed from the legendary\n                    city---and two priests involved in the process, as well as a mysterious\n                    stranger, are missing.\n                    Are player characters willing to risk life and breath beneath the water to\n                    find the lost city? Does the city truly exist, or is the story simply a hoax\n                    put forth by crooked fishermen? Take the plunge---explore \\Product{The Murky\n                    Deep}!"
+}
+title: "Murky Deep"
+leader: "The"
+author {
+  name: "Ritchie, Norman B."
+}
+editor {
+  name: "Kandler, Lance"
+}
+cover {
+  name: "Lakey, John"
+}
+cover {
+  name: "Lakey, Laura"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+date {
+  year: 1993
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "574"
+  check: 7
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

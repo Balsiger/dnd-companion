@@ -1,0 +1,99 @@
+template {
+  name: "TSR 1087"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "Far off the traveled paths of \\Place{wildspace}, a lone crystal sphere bobs\n  in the \\Place{phlogiston}, waiting for unwary visitors greedy for\n  adventure. This is the \\Place{Astromundi Cluster}, a setting easy to\n  find...and nigh-impossible to escape.\n\n  Unique among the spheres, \\Place{Clusterspace} holds no planets---only\n  thousands of asteroids that wander in a seemingly endless realm. Here\n  \\Group{Arcane}, \\Monster{neogi}, \\Monster{illithids} and \\Monster{humans}\n  have learned to coexist in a semblance of peace to ensure their survival. But\n  the carefully-wrought balance of power may change at any time, and heroes\n  have to choose their allies and enemies carefully. Within the\n  \\Place{Cluster}, there are no such fine guarantees as honor or trust between\n  friends and foes.\n\n  \\bold{The Astromundi Cluster} accessory includes:\n\n  \\list\n  {A 32-page player\'s manual to the factions and features of\n   \\Place{Clusterspace}. \\emph{The Astrogator\'s Guide} gives players all\n   the information they need about the races and major asteroid clusters\n   of the \\Place{Shattered Sphere}, life and culture in the\n   \\Place{Cluster}, and a new ship and weapon types.}\n  {A 64-page DM guide, \\emph{Adventures in the \\Place{Shattered Sphere}},\n   which reveals to the Dungeon Master the secrets of the\n   \\Place{Astromuni Cluster}, from the magically powerful \\Group{Antilan\n   Empire} to the behind-the-scenes plots of the \\Group{Arcane}}\n  {A 96-page DM book describing in full detail the most important\n   asteroids and other features of the \\Place{Cluster}, its physical\n   makeup and economy, and new magic and spells.}\n  {Two full-size maps illustrating the planetary orbits of the\n   \\Place{Cluster}\'s celestial bodies, and schematic layouts of a feared\n   crystal citadel and important trading post.}\n  {Twenty-four cards filled with ship blueprints, important faction\n   illustrations and descriptions, orbital maps, and more.}"
+}
+title: "Astromundi Cluster"
+leader: "The"
+author {
+  name: "Witt, Sam"
+}
+editor {
+  name: "Carter, Michele"
+}
+cover {
+  name: "Olson, Erik"
+}
+cover {
+  name: "Miller, David O."
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Knecht, John"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Miller, David O."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Baker, Richard L. III"
+  job: "design concept"
+}
+date {
+  year: 1993
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "632"
+  check: 8
+}
+isbn13 {
+}
+pages: 192
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "The Celestial Almanac"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Adventures in the Shattered Sphere"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Astrogator\'s Guide"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "color cardsheets"
+  number: 24
+}
+content {
+  part: MAP
+  description: "planetary"
+  number: 2
+}

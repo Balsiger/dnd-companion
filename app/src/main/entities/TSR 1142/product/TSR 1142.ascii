@@ -1,0 +1,123 @@
+template {
+  name: "TSR 1142"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 228"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "Forgotten Realms"
+  description: "The \\Place[The North]{Savage Frontier}, the \\Place[The North]{Barbaric\n                    North}, the \\Place[The North]{Cold Waste}, the \\Place[The North]{Uneducated\n                    Backyard}. These, among others are nicknames for the \\Place[The\n                    North]{North}. This is a land of rabid monsters and ruthless barbarians,\n                    where nature is the strongest force for leagues in any\n                    direction. \\Product[TSR 1142]{The North} campaign expansion for the\n                    \\Place{Forgotten Realms} setting is the authority on the lands from\n                    \\Place{Daggerford} in the sourth to \\Place{Ten-Towns} in the north, from\n                    \\Place{Anauroch} in the east to the \\Place{Ice Peak} in the west.\n                    This new campaign expansion contains everything a player or Dungeon Master\n                    needs to adventure in this savage and perilous territory, including:\n                    \\list\n                    {\\emph{The Wilderness}---A 96-page timeline and geographical overview\n                    of the north, featuring a description of the land\'s native and\n                    monsters and including out-of-print information found in TSR\'s\n                    accessory \\Product[TSR 9233]{FR 5 The Savage Frontier}.}\n                    {\\emph{Cities and Civilization}---64 pages of facts on all the cities,\n                    towns, and hamlets in the \\Place{North}.}\n                    {\\emph{Daggerford}---A 32-page book describing a complete city\n                    designed to be a hometown for your campaign\'s bravest heroes, with\n                    detailed building descriptions based on information from the old TSR\n                    adventure \\Product[TSR 9212]{N5 Under Illefarn}.}\n                    {\\emph{Two Poster Maps}---Full-color sheets showing the entire\n                    environs of the \\Place{North}. On the reverse side is a map of the\n                    town of \\Place{Daggerford}, plus an extensive set of random encounter\n                    tables.}"
+}
+title: "North"
+leader: "The"
+author {
+  name: "Henson, Dale \'Slade\'"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Martin, Julia E."
+}
+author {
+  name: "Schend, Steven E."
+}
+author {
+  name: "Jacquays, Paul"
+}
+author {
+  name: "Perrin, Steve"
+}
+author {
+  name: "Butler, Jim"
+}
+editor {
+  name: "Butler, Jim"
+}
+editor {
+  name: "Vuckovich, Michelle"
+}
+cover {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Salvador, Martin"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Wise, David"
+  job: "project coordination"
+}
+manager {
+  name: "Reid, Thomas M."
+  job: "project coordination"
+}
+manager {
+  name: "Galica, Bob"
+  job: "art coordination"
+}
+manager {
+  name: "Conant, Dave"
+  job: "electronic press coordination"
+}
+manager {
+  name: "Danowski, Don"
+  job: "graphic design"
+}
+manager {
+  name: "Hoeke, Dave"
+  job: "manufacturing coordination"
+}
+date {
+  year: 1996
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 192
+system: ADND_REVISED
+type: CAMPAIGN_EXPANSION
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Daggerford"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Wilderness"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Cities"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 2
+}

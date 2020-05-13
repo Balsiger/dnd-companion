@@ -1,0 +1,82 @@
+template {
+  name: "WTC 2174174"
+  synonym: "H2"
+  world: "Generic"
+  short_description: "A heroic tierr adventure for characters of 4th to 6th level."
+}
+title: "Thunderspire Labyrinth"
+subtitle: "Deadly Perils Aways in the Ruined Minotaur City"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Mearls, Mike"
+}
+editor {
+  name: "Bilsland, Greg"
+}
+editor {
+  name: "Crawford, Jeremy"
+}
+cover {
+  name: "O&#39Conner, William"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+date {
+  year: 2008
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4872"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4872"
+  check: 7
+}
+pages: 96
+system: DND_4
+type: ADVENTURE
+style: FOLDER
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "adventure book one"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "adventure book two"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "poster sized, double sided, color"
+  number: 1073741824
+}
+required_requirements: "WTC 2175072"
+required_requirements: "WTC 2172072"
+required_requirements: "WTC 2173672"
+layout: FULL_COLOR

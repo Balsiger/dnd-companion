@@ -1,0 +1,45 @@
+template {
+  name: "PZO 4013"
+  world: "Generic"
+  description: "And the slums are not even safe during the day! Paizo Publishing\'s GameMastery line of gaming accessories continues its mantra of providing simple and elegant tools for the busy Game Master with the newest GameMastery Map Pack release: \\Product{Slums}. Inside you\'ll find 18 beautiful 5\'\'x8\'\' map tiles that can be combined to form a number of slum locations that could be part of any fantasy city, including:\n\n\\list\n{Muddy Streets}\n{Poor Market}\n{Crumbling Buildings}\n{Decrepit Church}\n{Rat-infested Landfill}\n\nGame Masters shouldn\'t waste their time drawing winding muddy streets and ramshackle buildings. With \\Product{GameMastery Map Pack: Slums}, you can drop a few tiles and continue on with the game. Keep it simple. Keep it fun."
+  short_description: "Map tiles for slums."
+}
+title: "Slums"
+subtitle: "Some Neighborhoods Are Not Safe at Night"
+cartographer {
+  name: "Macourek, Corey"
+}
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "067"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "067"
+  check: 4
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Map Pack"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "map tile"
+  number: 18
+}
+layout: FULL_COLOR

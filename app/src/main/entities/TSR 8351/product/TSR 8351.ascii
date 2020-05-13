@@ -1,0 +1,47 @@
+template {
+  name: "TSR 8351"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dragonlance"
+}
+title: "Swordsheath Scroll"
+leader: "The"
+author {
+  name: "Parkinson, Dan"
+}
+date {
+  year: 1994
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "686"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume Three"
+series: "Dwarven Nations Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

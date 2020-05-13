@@ -1,0 +1,34 @@
+template {
+  name: "TSR 3127"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Birthright"
+  description: "second Rjurik domain opens to players"
+}
+title: "Stjordvik"
+date {
+  year: 1996
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0421"
+  check: 6
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+audience: PLAYER
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}

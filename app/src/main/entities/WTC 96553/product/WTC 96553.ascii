@@ -1,0 +1,57 @@
+template {
+  name: "WTC 96553"
+  world: "Forgotten Realms"
+  description: "This latest title expands the civil upheaval among the \\Monster{drow}, one\n                    of the most popular races in the \\Place{Forgotten Realms}\n                    setting. Best-selling author R.A. Salvatore wrote the prologue to\n                    Annihilation and continues to consult on the series, lending his expertise as\n                    the author who brought \\Monster{drow} society to the forefront of the\n                    \\Place{Forgotten Realms} setting."
+}
+title: "Annihilation"
+author {
+  name: "Athans, Philip"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3237"
+  check: 6
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "5"
+series: "RA Salvatore\'s War of the Spider Queen"
+price {
+  currency: "$ "
+  number: 2496
+  precision: 100
+}

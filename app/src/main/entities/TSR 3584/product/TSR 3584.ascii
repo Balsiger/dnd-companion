@@ -1,0 +1,30 @@
+template {
+  name: "TSR 3584"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "all the information needed to run a space station"
+}
+title: "Spacestation Hauberk"
+date {
+  year: 1993
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "391"
+  check: 4
+}
+isbn13 {
+}
+system: XXVC
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}

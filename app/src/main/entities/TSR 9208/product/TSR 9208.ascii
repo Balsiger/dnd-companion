@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9208"
+  synonym: "GAZ3"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Principalities of Glantri"
+leader: "The"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

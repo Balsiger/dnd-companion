@@ -1,0 +1,35 @@
+template {
+  name: "TSR 9588"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Dragonlance"
+  description: "a detailed look at Ansalon\'s best-known city"
+}
+title: "Palanthas"
+author {
+  name: "Brown, Steven"
+}
+date {
+  year: 1998
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1199"
+  check: 9
+}
+isbn13 {
+}
+pages: 96
+system: SAGA
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1195
+  precision: 100
+}

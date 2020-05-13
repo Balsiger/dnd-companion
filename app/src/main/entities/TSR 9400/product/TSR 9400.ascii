@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9400"
+  synonym: "TM3"
+  reference {
+    name: "net price list"
+  }
+  world: "Dragonlance"
+}
+title: "Krynn Trail Map"
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

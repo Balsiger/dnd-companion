@@ -1,0 +1,49 @@
+template {
+  name: "WTC A7382"
+  world: "Forgotten Realms"
+  description: "In the sixth and final book of the multi-author Sundering series, Ed Greenwood, the creator of the \\Place{Forgotten Realms}, chronicles the exploits of \\NPC{Elminster} as he fights for the future of \\Place{Fear\303\273n}. \n\nChaos grips \\Place{Faer\303\273n} as vainglory, prophecy, and ancient forces comingle in the shadows cast by war. Agents of the \\Group{Shadovar} lurk in the corners of \\Place{Candlekeep} in search of the arcane secrets that will power their war machine toward \\Place{Myth Drannor}. Gods and their Chosen run amok, all in a gambit to seize power. And a thread foretold by an ancient seer stirs.\n\nAt the heart of it all, \\God{Mystra}, the great goddess of magic, has withdrawn from the world. Without her protection, \\NPC{Elminster}, her greatest champion, fears for the nascent \\Item{Weave}, the fabric of magic \\God{Mystra} wields to bind \\Place{Faer\303\273n}. Wil the \\NPC{Nightseer Shar}, mistress of the great and fearsome \\Group{Shadovar}, seize the opportunity to blanked the world with her \\Item{Shadow Weave}?\n\nWith the help of \\NPC{Storm Silverhand} and his protege \\NPC{Amarune}, \\NPC{Elminster} works frantically to strengthen the \\Item{Weave}\'s tethers and forestall what seems an inevitable reckoning. But other interests machinate for their own sinister ends.\n\nAs the Sundering draws nigh, \\NPC{Elminster} and his heroic cohorts must see the signs for what they are. The choice of worlds lies in balance."
+  short_description: "The final book in the Sundering series."
+}
+title: "Herald"
+leader: "The"
+subtitle: "The Sundering"
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+date {
+  year: 2014
+  month: 6
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6460"
+  check: 4
+}
+pages: 339
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book VI"
+series: "The Sundering"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

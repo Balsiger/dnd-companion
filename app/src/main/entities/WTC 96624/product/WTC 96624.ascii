@@ -1,0 +1,45 @@
+template {
+  name: "WTC 96624"
+  world: "Generic"
+  description: "\\large{Collect}\n                    Encounter \\Class{fighters}, \\Class{wizards}, \\Monster{dragons}, and all your\n                    favorite Dungeons & Dragons heroes and monsters!\n                    \\large{Battle}\n                    Challenge your friends to fast, head-to-head combat between the forces of\n                    good and evil!\n                    \\large{Roleplay}\n                    Create new adventures and exiting campaigns using the Dungeons & Dragons\n                    roleplaying game!\n                    This Booster Pack Contains:\n                    \\list\n                    {8 randomized, prepainted, durable plastic miniatures}\n                    {Full-color game stat cards}\n                    Pick up the \\Product{Dungeons & Dragons Miniatures Starter Set} for\n                    collectable miniatures game rules, additional miniatures, and more."
+}
+title: "Aberrations Booster Pack"
+subtitle: "Unleash a Horde of Unnatural Monsters"
+cover {
+  name: "Reynolds, Wayne"
+}
+date {
+  year: 2004
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3501"
+  check: 4
+}
+isbn13 {
+}
+system: DND_3RD
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+number: "5"
+series: "D&D Miniatures"
+price {
+}
+content {
+  part: MINIATURE
+  description: "randomized, prepainted"
+  number: 8
+}
+content {
+  part: CARD
+  description: "statistics"
+  number: 8
+}
+content {
+  part: SHEET
+  description: "aberration check list"
+  number: 1073741824
+}

@@ -1,0 +1,44 @@
+template {
+  name: "TSR 8220"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+  description: "Noressa leaves her primitive home to fulfil her destiny"
+}
+title: "Token of Dragonsblood"
+author {
+  name: "Cole, Damaris"
+}
+date {
+  year: 1991
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "076"
+  check: 1
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

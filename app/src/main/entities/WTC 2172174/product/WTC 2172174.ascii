@@ -1,0 +1,54 @@
+template {
+  name: "WTC 2172174"
+  world: "Generic"
+  description: "This Dungeons & Dragons accessory presents official character record sheets for the D&D Roleplaying Game. These sheets are designed for optimal playability and support character of all classes from 1st to 30th level.\n                    This accessory also includes 64 color-codec cards on which players can record their attack powers, utility powers, and magi item powers to speed up play and reduce page-flipping during the game.\n                    \\bold{Bonus!} This package also includes widescreen-style versions of the official character record sheet. These sheets reorganize the information present on the standard sheet into a horizontal format that doesn\'t crowd the middle of the table---that precious territory the DM keeps telling you to clear off so he can lay out the next room in the dungeon.\n                    These pages and cards are contained in an attractive, illustrated folder for storing your character sheet and all the campaign notes you gather while adventuring."
+  short_description: "Roleplaying Game Character Sheets & Power Cards"
+}
+title: "Character Record Sheets"
+subtitle: "Stay Organized"
+date {
+  year: 2008
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4853"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4853"
+  check: 6
+}
+pages: 12
+system: DND_4
+audience: PLAYER
+type: ACCESSORY
+style: FOLDER
+price {
+  currency: "$"
+  number: 995
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "card sheet"
+  number: 8
+}
+content {
+  part: PAGE
+  description: "character sheet"
+  number: 4
+}
+content {
+  part: FOLDER
+  description: "storage"
+  number: 1073741824
+}
+required_requirements: "WTC 2173672"
+optional_requirements: "WTC 2175072"
+optional_requirements: "WTC 2172072"
+layout: FULL_COLOR

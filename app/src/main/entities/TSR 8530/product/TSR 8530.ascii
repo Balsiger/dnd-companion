@@ -1,0 +1,22 @@
+template {
+  name: "TSR 8530"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Fireseed"
+leader: "The"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Thirty"
+price {
+}

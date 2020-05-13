@@ -1,0 +1,205 @@
+template {
+  name: "WTC 28346"
+  world: "Generic"
+  description: "Welcome to the \\Place{Nentir Vale}, a frontier land sheltered by mountains and strewn with abandoned farmsteads, ruined manors, and broken keeps --- the perfect base for any Dungeons & Dragons campaign. Many heroes begin their adventuring careers here; a few also meet untimely ends.\n\n\\Product{Monster Vault: Threads to the Nentir Vale} presents game statistics and lore for deadly new monsters that prowl \\Place{Nentir Vale}, including such classic Dungeons & Dragons creatures as the \\Monster{boggle}, the \\Monster{hound of ill omen}, and the \\Monster{penanggalan}. Other entries focus on campaign villains present in the \\Place{Nentir Vale} region, among them the \\Group{Barrowhaunts}, the \\Group{Iron Circle}, and the \\Group{Raven Roost} bandits.\n\nThe monsters and villains included in this game supplement are appropriate challenges for heroic and paragon tier characters and fit easily into any home campaign, as well as other Dungeons & Dragons published campaign settings. In addition to a 128-page book of ready-to-play monsters and villains, this products includes 8 die-cut sheets of card stock monster and villain tokens and a double-sized battle map featuring four different locations you can use when running encounters."
+  short_description: "Monster Vault monsters and villains, including statistics and tokens."
+}
+title: "Threats to the Nentir Vale"
+subtitle: "Monsters and Villains for Your Campaign"
+author {
+  name: "Hershey, Sterling"
+}
+author {
+  name: "James, Brian R."
+}
+author {
+  name: "James, Matt"
+}
+author {
+  name: "Townshend, Steve"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "additional design"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "additional design"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "lead developer"
+}
+author {
+  name: "Bilsland, Greg"
+  job: "developer"
+}
+author {
+  name: "Wilkes, Jennifer Clarke"
+  job: "developer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "developer"
+}
+editor {
+  name: "Moore, Cal"
+  job: "lead"
+}
+editor {
+  name: "Geluso, Dawn J."
+}
+editor {
+  name: "O\'Connor, Tanis"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing eitor"
+}
+cover {
+  name: "Prescott, Steve"
+  job: "front"
+}
+cover {
+  name: "Boros, Zoltan"
+  job: "back"
+}
+cover {
+  name: "Szikszai, Gabor"
+  job: "back"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Szikszai, Gabor"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Dixon, Matt"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Gillespie, Adam"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Hulse, Twozdai"
+  job: "graphic designer"
+}
+typographer {
+  name: "Tardiff, Christopher"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D senior producer"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "D&D producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D group manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of D&D R&D and book publishing"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2011
+  month: 6
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5838"
+  check: 2
+}
+pages: 128
+system: DND_4
+type: RULES_SUPPLEMENT
+style: FOLDER
+producer: "WTC"
+series: "Monster Vault"
+price {
+  currency: "$"
+  number: 3499
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "monster and villain statistics"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "die-cut monster and villain tokens"
+  number: 8
+}
+required_requirements: "Rules Compendium"
+required_requirements: "Dungeon Master\'s Kit"
+required_requirements: "Monster Vault"
+layout: FULL_COLOR

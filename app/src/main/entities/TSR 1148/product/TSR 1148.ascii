@@ -1,0 +1,71 @@
+template {
+  name: "TSR 1148"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Dragonlance"
+  description: "Campaign setting and new game system."
+}
+title: "Dragonlance Fifth Age"
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Weinlein, Sue"
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0535"
+  check: 2
+}
+isbn13 {
+}
+pages: 240
+system: SAGA
+type: CAMPAIGN_SETTING
+style: BOX
+series: "5th Age"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 3
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "playing"
+  number: 100
+}
+content {
+  part: CARD
+  description: "double-sided reference"
+  number: 1073741824
+}

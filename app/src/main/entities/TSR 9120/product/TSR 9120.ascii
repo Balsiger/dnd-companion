@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9120"
+  synonym: "UK4"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "When a Star Falls"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

@@ -1,0 +1,34 @@
+template {
+  name: "WTC 9501572"
+  world: "Forgotten Realms"
+  description: "\\emph{I grant you your soul, but not your life. Be happy that I have found a\n                    measure of mercy.}\n                    \\bold{The Witch-King}\n                    A \\Monster{lich} of unspeakable power that people say has been destroyed, but\n                    whose hand still somehow holds the realm in its grip.\n                    \\bold{The Knight}\n                    A champion of good with secrets as dark as any assassin\'s, she is the\n                    unlikeliest ally a \\Monster{dark elf} has ever had.\n                    \\NPC{Entreri} and \\NPC{Jarlaxle} might be strangers in the rugged,\n                    unforgiving mountains of the \\Place{Bloodstone Lands}, but they\'ve been in\n                    difficult places before. Caught between the ghost of a power-mad\n                    \\Monster{lich}, and the righteous fury of an oath-bound knight, they\'ve never\n                    felt more at home."
+}
+title: "Promise of the Witch-King"
+author {
+  name: "Salvatore, R.A."
+}
+date {
+  year: 2005
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3823"
+  check: 4
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Book II"
+series: "The Sellswords"
+price {
+  currency: "$ "
+  number: 2795
+  precision: 100
+}

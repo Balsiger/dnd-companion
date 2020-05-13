@@ -1,0 +1,105 @@
+template {
+  name: "WTC 25123"
+  synonym: ""
+  world: "Generic"
+  description: "In the war against evil, some heroes turn to magic, faith, or primal spirits. Your strength, however comes from within. Skill and agility. Cunning and might. Bow and blade. These are the hallmarks of the martial hero.\n                    This Dungeons & Dragons Roleplaying Game supplement presents new options for martial characters, including new powers, builds, feats, paragon paths, and epic destinies designed for the fighter, ranger, rogue, and warlord classes. \\Product{Martial Power 2} also introduces two new rules systems --- martial practices and combat styles --- that allow you to create custom fighting techniques and play truly legendary martial heroes."
+  short_description: "Options for Fighters, Rangers, Rogues, and Warlords"
+}
+title: "Martial Power 2"
+subtitle: "Legends Made with Bow and Blade"
+cover {
+  name: "Horsley, Ralph"
+  job: "front"
+}
+cover {
+  name: "Boros, Zoltan"
+  job: "back"
+}
+cover {
+  name: "Szikszai, Gabor"
+  job: "back"
+}
+illustrator {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Sweckel, Arnie"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic design"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic design"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic design"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+date {
+  year: 2010
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5389"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5389"
+  check: 9
+}
+pages: 160
+system: DND_4
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Powers"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

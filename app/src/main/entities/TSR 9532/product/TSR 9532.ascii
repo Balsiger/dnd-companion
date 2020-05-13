@@ -1,0 +1,50 @@
+template {
+  name: "TSR 9532"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Generic"
+  description: "Admit it...you\'ve always wanted to design your own fantasy world. But the\n                    job was just too big and complicated, so you either quit in frustration or\n                    didn\'t start at all. Get out your pencils and markers, because it\'s time to\n                    make that dream come true! From the first steps of picking a campaign hook to\n                    the final details of crafting a kingdom or city, \\Product{World Builder\'s\n                    Guidebook} leads you by stage through the process of creating your own,\n                    unique campaign world. Build a world modeled after your favorite movies or\n                    books, detail a portion of an existing world, or create your own fantasy\n                    world from scratch!\n                    Some of the features you\'ll find in the \\Product{World Builder\'s Guidebook}\n                    include:\n                    \\list\n                    {An introduction to the art of world building;}\n                    {Guidelines and random tables for creating continents, kingdoms,\n                    societies, local areas, towns and cities, ecologies, pantheons,\n                    histories, and sites of interest;}\n                    {A pad of 32 copyable forms, mapping paper, and hex sheets---an\n                    indisspensable set of tools for your world-building efforts!}\n                    \\large{You\'re the master architect of an entire world. What are your going to\n                    build?}"
+}
+title: "World Builder\'s Guidebook"
+date {
+  year: 1996
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0434"
+  check: 8
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+series: "Builder\'s Guidebook"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "32 sheet pad with 8 card sheets"
+  number: 1073741824
+}

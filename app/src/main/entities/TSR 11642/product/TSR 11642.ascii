@@ -1,0 +1,49 @@
+template {
+  name: "TSR 11642"
+  synonym: "WTC 86574"
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "\\large{A Place for Everything!}\n                    No matter how unusual or powerful your Dungeon & Dragons character is, this\n                    complete set of character sheets lets you keep a record of everything that\n                    makes your character unique.\n                    Include:\n                    \\list\n                    {Eleven double-sided single class character sheets, one for each of the\n                    classes in the D&D \\Product{Player\'s Handbook}.}\n                    {A double-sided sheet for multiclass characters.}\n                    {A sheet for special creatures such as a wizard\'s or sorcerer\'s\n                    familiar, a paladin\'s mount, or a druid\'s animal companion.}\n                    {Spell planner worksheets and a magic item record sheet.}\n                    {Easy-to-follow instructions and a sample filled-out sheet.}\n                    Every page is designed to be easy to photocopy, so you never have to worry\n                    about having a fresh sheet handy when you need one."
+}
+title: "Player Character Record Sheets"
+author {
+  name: "Martin, Julia"
+}
+author {
+  name: "Glenn, Sean"
+}
+date {
+  year: 2000
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1642"
+  check: 7
+}
+isbn13 {
+}
+pages: 16
+system: DND_3RD
+audience: ALL
+type: ACCESSORY
+style: FOLDER
+producer: "TSR"
+series: "Record Sheets"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "different character sheets"
+  number: 16
+}
+content {
+  part: FOLDER
+  number: 1073741824
+}

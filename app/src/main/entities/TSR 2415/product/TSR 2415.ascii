@@ -1,0 +1,54 @@
+template {
+  name: "TSR 2415"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dark Sun"
+  description: "Prism Pentad, book five"
+}
+title: "Cerulean Storm"
+leader: "The"
+author {
+  name: "Troy Denning"
+}
+date {
+  year: 1993
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "642"
+  check: 5
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Five"
+series: "Prism Pentad"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

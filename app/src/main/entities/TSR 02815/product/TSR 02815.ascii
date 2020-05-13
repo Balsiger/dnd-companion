@@ -1,0 +1,31 @@
+template {
+  name: "TSR 02815"
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Star*Drive"
+  description: "reveals the details of an emerging alian conspiracy"
+}
+title: "Threats from Beyond"
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+  year: 1999
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1218"
+  check: 9
+}
+isbn13 {
+}
+system: ALTERNITY
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

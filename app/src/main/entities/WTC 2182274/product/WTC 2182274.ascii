@@ -1,0 +1,53 @@
+template {
+  name: "WTC 2182274"
+  world: "Eberron"
+  description: "\\Place{Darguun}. Nation of \\Monster{goblin}s. Built on the vision of a single warlord, \\NPC{Lhesh Haruuc}.\n\nBut \\NPC{Lhesh Haruuc} grows old, and \\Place{Darguun} threatens to tear itself apart. With the help of \\NPC{Geth}, a lordless shifter, he\'ll seek an ancient relic with which he can unite his people. Treachery and the machination of the dragonmarked houses are already tearing at his rule. Will the legacy of ancient glories be enough to save a nation\'s future?\n\nThe beginning of a thrilling tale of empire, betrayal, and power by the author of the acclaimed \\Product{Dragon Below} trilogy!\n"
+  short_description: "First book in the Legacy of Dhakaan trilogy."
+}
+title: "Doom of Kings"
+leader: "The"
+subtitle: "Even Mighty Empires Fall."
+author {
+  name: "Bassingthwaite, Don"
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2008
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4918"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4918"
+  check: 2
+}
+pages: 372
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book I"
+series: "Legacy of Dhakaan"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

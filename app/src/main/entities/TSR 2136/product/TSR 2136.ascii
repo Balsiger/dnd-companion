@@ -1,0 +1,85 @@
+template {
+  name: "TSR 2136"
+  synonym: "PHBR11"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "Forest guardian, border runner, bounty hunter, and more---the full potential\n                    of the ranger class has never been plumbed. Until now. Come learn the inner\n                    most secrets of one of the most popular AD&D character classes. Details on\n                    every part of the Ranger\'s life, from allied forest brethren to unusual out\n                    door equipment. With 15 new and exciting character kits, this book is an\n                    information-packed accessory for the AD&D Game. A special appendix gives the\n                    rules for the original AD&D ranger class."
+}
+title: "Complete Ranger\'s Handbook"
+leader: "The"
+author {
+  name: "Swan, Rick"
+}
+editor {
+  name: "Danford, Elizabeth T."
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Bell, Julie"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Fields, Fred"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+date {
+  year: 1994
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "634"
+  check: 4
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "11"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

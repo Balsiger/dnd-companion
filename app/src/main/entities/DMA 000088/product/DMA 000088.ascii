@@ -1,0 +1,145 @@
+template {
+  name: "DMA 000088"
+  world: "Forgotten Realms"
+  description: "When evil giants attack your home in Ardeep Forest, your parents think you\342\200\231re dead and they go hunting for your missing little brother. You wake up and set out after them, helped by a giant wizard who lives in a flying tower. You don\342\200\231t know where they\342\200\231ve gone, but you know that if you don\342\200\231t find them, you\342\200\231re all in big trouble. Wield your magic wisely against the giants, wizard."
+  short_description: "You become the hero and choose your own fate."
+}
+title: "Big Trouble"
+subtitle: "Against the Giants!"
+author {
+  name: "Forbeck, Matt"
+}
+author {
+  name: "Crazy Monkey Creative"
+  job: "design"
+}
+author {
+  name: "Bellwood, Rosie"
+  job: "design"
+}
+editor {
+  name: "Walters, Kirsty"
+}
+cover {
+  name: "Sweet, Justin"
+}
+cover {
+  name: "Fischer, Scott M."
+}
+illustrator {
+  name: "Pisano, Allessandra"
+}
+illustrator {
+  name: "Salchi, Amir"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "Tregor-Erdner, Cory"
+}
+illustrator {
+  name: "Bader, Daren"
+}
+illustrator {
+  name: "Dorman, David"
+}
+illustrator {
+  name: "Kuioka, Emi"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Ortiz, Hector"
+}
+illustrator {
+  name: "Balmet, John-Paul"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Kok Joon Wen, Julian"
+}
+illustrator {
+  name: "Sweet, Justin"
+}
+illustrator {
+  name: "Irwin, Kate"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Moyer, Lee"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Molnar, Mark"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Fischer, Scott M."
+}
+illustrator {
+  name: "Chaturvedi, Sidharth"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Tenery, Thom"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "England, Wayne"
+}
+date {
+  year: 2018
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "5362"
+  title: "0244"
+  check: 1
+}
+pages: 124
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Endless Quest"
+price {
+  currency: "$"
+  number: 899
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

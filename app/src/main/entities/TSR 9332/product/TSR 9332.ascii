@@ -1,0 +1,36 @@
+template {
+  name: "TSR 9332"
+  synonym: "HWR1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Hollow World"
+  description: "the Kingdom of Azca"
+}
+title: "Sons of Azca"
+date {
+  year: 1991
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "138"
+  check: 5
+}
+isbn13 {
+}
+system: DND_1ST
+type: CAMPAIGN_EXPANSION
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

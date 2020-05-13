@@ -1,0 +1,87 @@
+template {
+  name: "TSR 9392"
+  synonym: "FRS1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "Between \\Place{Cormyr} and the \\Place{Moonsea} lie the beautiful forests and\n                    fields of the \\Place[Dales]{Dalelands}, home to some of the most powerful\n                    characters and exciting adventures in the \\Place{Heartlands}. Proud and free,\n                    these scattered realms stand against the dark evil of \\Place{Zhentil Keep}\n                    and the savage raiders of the mountains and forests. Ancient magic lies\n                    buried in dangerous ruins within the vast \\Place{Elven Forest}, waiting for\n                    the hand bold enough to seize it.\n                    The \\Place[Dales]{Dalelands} are a place where adventurers are welcomed, and\n                    heroes rewarded with gold, honor, and power. Enemies, old and new, move\n                    against the \\Place{Dales} constantly, and the call goes out for the brave and\n                    true heroes to defend the land!\n                    The \\Place[Dales]{Daleleands} are the oldest campaign setting of the\n                    \\Product[TSR 1085]{Forgotten Realms}, finally described in detail. New and\n                    exciting information about each of these independent lands is contained in\n                    this accessory. Of course, the dark and sinister enemies who plot against the\n                    \\Place{Dales} are described as well! Prepare to meet the challenges of the\n                    \\Place[Dales]{Dalelands}!"
+}
+title: "Dalelands"
+leader: "The"
+author {
+  name: "III, L. Richard Baker"
+}
+editor {
+  name: "Steinberg, Richard"
+}
+cover {
+  name: "Lakey, John"
+}
+cover {
+  name: "Lakey, Laura"
+}
+cartographer {
+  name: "Murin, Dawn"
+}
+illustrator {
+  name: "Hotz, Eric"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+illustrator {
+  name: "Beauvais, Denis"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphic coordination"
+}
+date {
+  year: 1993
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

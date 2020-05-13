@@ -1,0 +1,39 @@
+template {
+  name: "TSR 3590P"
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "None"
+  description: "authorized biography of Anthony \'Buck\' Rogers"
+}
+title: "A Life in the Future"
+author {
+  name: "Martin Caidin"
+}
+date {
+  year: 1996
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0527"
+  check: 1
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

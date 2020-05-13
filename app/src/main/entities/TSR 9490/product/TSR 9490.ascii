@@ -1,0 +1,83 @@
+template {
+  name: "TSR 9490"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 221"
+  }
+  world: "Forgotten Realms"
+  description: "An excerpt from \\emph{A Treatise on the Life of the \\Place{High Moor}} by\n                    the druid \\NPC{Bara}:\n                    \\emph{The environment includes such things as terrain, flora, fauna, weather,\n                    and natural and arcane forces. All these elements---each aspect of the\n                    environment and each organism---form a tapestry known as the ecology. And\n                    like a tapestry of cloth, this one can suffer severe damage if a single\n                    thread is removed, no matter how ugly the thread.}\n                    This appendix includes two booklets penned by friends of \\NPC{Elminster} of\n                    \\Place{Shadowdale}. Collected here are:\n                    \\list\n                    {a 32-page booklet containing the words of the inimitable \\NPC{Bara},\n                    feisty druid of the \\Place{High Moor}, describing the ecology of\n                    that region}\n                    {a 32-page booklet by the \\NPC{Lark of Suzail} that gives her\n                    descriptions of the slithering inhabitants of the \\Place{Serpent\n                    Hills}; and}\n                    {a brief booklet of tables to aid the Dungeon Master in determining\n                    random encounters for adventurers whose travels take them through\n                    these areas.}\n                    Those planning to explore these regions would be well advised to read the\n                    works herein to prepare themselves for the reptilian dangers of the\n                    \\Place{Serpent Hills} and the hazards of the \\Place{High Moor}---from its\n                    beasts to its protective druid herself!"
+}
+title: "Elminster\'s Ecologies Appendix II: The High Moor and the Serpent Hills"
+author {
+  name: "Beach, Tim"
+}
+editor {
+  name: "Martin, Julia E."
+}
+cover {
+  name: "Fields, Fred"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0171"
+  check: 3
+}
+isbn13 {
+}
+pages: 72
+system: ADND_REVISED
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+series: "Elminster\'s Ecologies"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "The Serpent Hills"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The High Moor"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Encounter Tables"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

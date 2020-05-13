@@ -1,0 +1,210 @@
+template {
+  name: "WTC 2396672"
+  world: "Generic"
+  description: "Brave adventurers scour the dungeon in search of treasure, but around the next corner something terrible and hungry waits for them. What will it be this time?\n                    This Dungeons & Dragons core rulebook contains a horde of monsters to unleash upon your campaign world and its greatest heroes. It includes monsters appropriate for all levels of play. Terrorize your players with such classic creatures as \\Monster{silver dragon}s, \\Monster{frost giant}s, and \\Monster{rust monster}s. Threaten them with new variants of existing 4th Edition monsters, including new \\Monster{beholders}, \\Monster{demons}, and \\Monster{lycanthrope}s. Surprise them with never-before-seen monsters such as the \\Monster{star spawn}, the \\Monster{witherling}, and the \\Monster{chaos shard}. Your D&D game will never be the same!"
+  short_description: "Roleplaying game core rules with additional monsters."
+}
+title: "Monster Manual 2"
+subtitle: "Do You Hear Something?"
+author {
+  name: "Sims, Chris"
+}
+author {
+  name: "Bonner, Logan"
+  job: "additional design"
+}
+author {
+  name: "Gorden, Greg"
+  job: "additional design"
+}
+author {
+  name: "Lindsay, Chris"
+  job: "additional design"
+}
+author {
+  name: "Mearls, Mike"
+  job: "additional design"
+}
+author {
+  name: "Sernett, Matthew"
+  job: "additional design"
+}
+author {
+  name: "Stolze, Greg"
+  job: "additional design"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "lead developer"
+}
+author {
+  name: "Lee, Peter"
+  job: "developer"
+}
+author {
+  name: "Schaefer, Peter"
+  job: "developer"
+}
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "additional development"
+}
+editor {
+  name: "Morgenroth, Jeff"
+}
+editor {
+  name: "Cottrill, Tora"
+  job: "managing editor"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Ejsing, Jesper"
+  job: "front"
+}
+cover {
+  name: "Horsley, Ralph"
+  job: "back"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Hanley, Des"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Rams, Vinod"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Valenzuela, Brian"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Williams, Eric"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "senior art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Girard, Sara"
+  job: "D&D brand team"
+}
+manager {
+  name: "Durham, Martin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2009
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5101"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5101"
+  check: 7
+}
+pages: 224
+system: DND_4
+type: MONSTER_COMPENDIUM
+style: HARDCOVER
+producer: "WTC"
+number: "2"
+series: "Monster Manual"
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,168 @@
+template {
+  name: "WTC 21712"
+  world: "Generic"
+  description: "\\large{Run the Game}\n                    Build your own dungeons and pit your friends against monsters and villains!\n                    \\large{Play the Game}\n                    Explore the dungeon with your friends, fight the monsters, and bring back the treasure!"
+  short_description: "The starter set for 4th Edition D&D"
+}
+title: "Roleplaying Game Starter Set"
+subtitle: "Enter the World of Adventure and Imagination"
+author {
+  name: "Wilkes, Jennifer Clarke"
+  job: "additional design and development"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "additional design and development"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "additional design and development"
+}
+author {
+  name: "Decker, Jesse"
+  job: "additional design and development"
+}
+author {
+  name: "Donais, Michael &#39;Mike&#39;"
+  job: "additional design and development"
+}
+author {
+  name: "Gutschera, Robert"
+  job: "additional design and development"
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "additional design and development"
+}
+author {
+  name: "Lee, Peter"
+  job: "additional design and development"
+}
+author {
+  name: "Martin, Julia"
+  job: "additional design and development"
+}
+author {
+  name: "Mohan, Kim"
+  job: "additional design and development"
+}
+author {
+  name: "Noonan, David"
+  job: "additional design and development"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "additional design and development"
+}
+author {
+  name: "Sernett, Matthew"
+  job: "additional design and development"
+}
+author {
+  name: "Sims, Chris"
+  job: "additional design and development"
+}
+author {
+  name: "Stark, Ed"
+  job: "additional design and development"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "additional design and development"
+}
+author {
+  name: "Watkins, Rob"
+  job: "additional design and development"
+}
+author {
+  name: "Winter"
+  job: "additional design and development"
+}
+author {
+  name: "Youngs, Chris"
+  job: "additional design and development"
+}
+author {
+  name: "Heinsoo, Rob"
+  job: "D&D 4th edition design team"
+}
+author {
+  name: "Collins, Andy"
+  job: "D&D 4th edition design team"
+}
+author {
+  name: "Wyatt, James"
+  job: "D&D 4th edition design team"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "D&D 4th edition final development strike team"
+}
+author {
+  name: "Mearls, Mike"
+  job: "D&D 4th edition final development strike team"
+}
+author {
+  name: "Wyatt, James"
+  job: "D&D 4th edition final development strike team"
+}
+author {
+}
+author {
+}
+editor {
+}
+cover {
+  name: "O&#39Connor, William"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "imaging"
+}
+manager {
+  name: "McCarthy, Ryan"
+  job: "production manager"
+}
+date {
+  year: 2008
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4820"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4820"
+  check: 8
+}
+pages: 78
+system: DND_4
+audience: ALL
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 1699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Dungeon Master\'s Book"
+  number: 1
+}
+content {
+  part: DICE
+  number: 6
+}
+layout: FULL_COLOR

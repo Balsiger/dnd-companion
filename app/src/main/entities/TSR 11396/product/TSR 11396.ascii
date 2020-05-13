@@ -1,0 +1,39 @@
+template {
+  name: "TSR 11396"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  world: "Dragonlance"
+  description: "the heroes are taken deep into new militant ogre realms"
+}
+title: "Rise of the Titans"
+author {
+  name: "Dakan, Richard \'Ricko\'"
+}
+date {
+  year: 2000
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1396"
+  check: 7
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ADVENTURE
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

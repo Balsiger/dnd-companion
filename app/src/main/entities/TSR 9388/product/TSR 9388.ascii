@@ -1,0 +1,82 @@
+template {
+  name: "TSR 9388"
+  synonym: "FR16"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "information on Halruaa and Lurien"
+}
+title: "Shining South"
+leader: "The"
+author {
+  name: "Prusa, Tom"
+}
+editor {
+  name: "Hill, Troy"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Butler, Jeff"
+}
+cartographer {
+  name: "Beck, Steve"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "O\'Keefe, Gaye"
+  job: "production"
+}
+date {
+  year: 1993
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "595"
+  check: 10
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

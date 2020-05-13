@@ -1,0 +1,33 @@
+template {
+  name: "TSR 11626"
+  world: "Forgotten Realms"
+  description: "In this, the sixth indispensable travel guide by \\NPC{Volothamp Geddarm},\n                    famed traveler of the Realms, the wonders of the mysterious South are laid\n                    bare for all to see. Adventurers seeking their fortunes in the lands made\n                    famous by the \\Product[Baldur\'s Gate II]{Baldur\'s Gate II: Shadows of Amn}\n                    computer game will find all the dangers and treasures this rich territory has\n                    to offer. And as always, the finest establishements on the gold coasts of\n                    \\Place{Amn} and \\Place{Tethyr} are rated with the handy coin, pipe, and\n                    tankard system.\n                    Learn:\n                    \\list\n                    {Where in \\Place{Athkatla} you can speak with a painting.}\n                    {Why wizards keep turning dead in \\Place{Hallowturrets House}.}\n                    {How one guildmaster can ship goods across the city in total secrecy.}\n                    {Whose jeweled bird can deliver secret recorded messages.}\n                    {What treasures are guarded by reefs and \\Monster[Sahuagin]{sahuagin} near\n                    \\Place{Hook Isle}}\n                    {When to experience the full splendor of the \\Place{Dome of the Rose}.}\n                    Suitable for all levels of play.\n                    Special note: This edition of \\Product[TSR 11626]{Volo\'s Guide to Baldurs\n                    Gate II: Shadows of Amn}, intended for travelers from beyond the borders of\n                    \\Place{Faer\\hat{u}n}, contains notes and commentary by the famous archmage\n                    and sage, \\NPC{Elminster}."
+}
+title: "Volo\'s Guide to Baldur\'s Gate II"
+date {
+  year: 2000
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1626"
+  check: 5
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Volo\'s Guide"
+price {
+  currency: "$ "
+  number: 1695
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

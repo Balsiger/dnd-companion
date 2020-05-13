@@ -1,0 +1,240 @@
+template {
+  name: "WTC 17921"
+  world: "Generic"
+  description: "This book presents an unstoppable wave of creatures ranging from\n                    \\Monster{ambush drake} to \\Monster{zezir}. A menagerie of beasts, behemoths\n                    and other ferocious beings, the monsters presented here are well prepared to\n                    battle or befriend the characters of any campaign.\n                    This supplement for the D&D game offers a fully illustrated array of new\n                    creatures such as the \\Monster{boneclaw}, \\Monster{eldritch giant}, and\n                    \\Monster{web golem}. Also included are advanced versions of some monsters as\n                    well as tactics sections to help DMs effectively run more complex\n                    creatures. Additionally, many entries contain information about where\n                    monsters are likely to appear in the \\Place{Forgotten Realms} and\n                    \\Place{Eberron} campaign settings.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook} and \\Product{Dungeon Master\'s Guide}. A player needs only the\n                    \\Product{Player\'s Handbook}."
+}
+title: "Monster Manual III"
+subtitle: "Monsters, Monsters, and More Monsters"
+author {
+  name: "Burlew, Rich"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Finch, Andrew J."
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+}
+author {
+  name: "Redman, Rich"
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Thomasson, Chris"
+}
+author {
+  name: "Toomey, P. Nathan"
+}
+author {
+  name: "Baker, Keith"
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "additional design"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "additional design"
+}
+author {
+  name: "Jacobs, James"
+  job: "additional design"
+}
+author {
+  name: "Noonan, David"
+  job: "additional design"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "additional design"
+}
+author {
+  name: "Selinker, Mike"
+  job: "additional design"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "additional design"
+}
+author {
+  name: "Wyatt, James"
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "development team"
+}
+author {
+  name: "Finch, Andrew J."
+  job: "development team"
+}
+author {
+  name: "Stark, Ed"
+  job: "development team"
+}
+editor {
+  name: "Collins, Greg"
+}
+editor {
+  name: "Rateliff, John D."
+}
+editor {
+  name: "Sarli, Gary"
+}
+editor {
+  name: "Lindsay, Christopher"
+  job: "proofreader"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "managing editor"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Higgenbotham, Henry"
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Garres, Rafa"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Irving, Frazer"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Minnis, Leslie"
+}
+illustrator {
+  name: "Ormston, Dean"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Rams, Vinod"
+}
+illustrator {
+  name: "Rex, Adam"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Baker, Candice"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Finch, Andrew J."
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "directory of RPG R&D"
+}
+manager {
+  name: "Fischer Josh"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3430"
+  check: 1
+}
+isbn13 {
+}
+pages: 224
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+number: "III"
+series: "Monster Manual"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

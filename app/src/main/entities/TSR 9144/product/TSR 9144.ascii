@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9144"
+  synonym: "DL11"
+  reference {
+    name: "net price list"
+  }
+  world: "Dragonlance"
+}
+title: "Dragons of Glory"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

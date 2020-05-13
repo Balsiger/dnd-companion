@@ -1,0 +1,23 @@
+template {
+  name: "TSR 8243"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Greyhawk"
+}
+title: "Price of Power"
+leader: "The"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Four"
+series: "Greyhawk"
+price {
+}

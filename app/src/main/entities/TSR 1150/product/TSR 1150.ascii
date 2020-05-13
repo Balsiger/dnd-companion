@@ -1,0 +1,46 @@
+template {
+  name: "TSR 1150"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Dragonlance"
+  description: "Reference for fighting and an epic adventure."
+}
+title: "Heroes of Steel"
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Weinlein, Sue"
+}
+date {
+  year: 1996
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0539"
+  check: 5
+}
+isbn13 {
+}
+pages: 144
+system: SAGA
+type: ACCESSORY
+style: BOX
+series: "5th Age"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}

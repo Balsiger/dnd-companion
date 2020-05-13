@@ -1,0 +1,58 @@
+template {
+  name: "WTC 9546672"
+  world: "Forgotten Realms"
+  description: "\\emph{Because of the friends I have known, the honorable people I have met,\n                    I know I am no solitary hero of unique causes. I know that when I die, that\n                    which is important will live on. This is my legacy; by the grace of the gods,\n                    I am not alone.}\n                    -- \\NPC{Drizzt Do\'Urden}\n                    Having found a measure of peace among the \\Monster{dwarves} in the reclaimed\n                    \\Place{Mithral Hall}, \\NPC{Drizzt} begins to know contentment for perhaps the\n                    first time in his tumultuous life. But for a \\Monster[drow]{dark elf}\n                    renegade from a city ruled by priestesses of a demon goddess, no peace can\n                    long last. It is \\God{Lolth} herself, the dreaded \\God{Queen of the Demonweb\n                    Pits}, who musters her followers to pour up from the black depths of the\n                    \\Place{Underdark} to reclaim for their goddess the one soul that had managed\n                    to elude her. The soul of \\NPC{Drizzt Do\'Urden}.\n                    Millions of readers have already discovered the magic of R.A. Salvatore\302\254\302\242s\n                    Forgotten Realms novels. This deluxe new series puts the saga of the\n                    \\Monster{dark elf} renegade in its proper chronological order, and\n                    reintroduces a generation to the Legend of Drizzt\n                    A deluxe new hardcover edition of The New York Times best-selling classic."
+}
+title: "Legacy"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2006
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3984"
+  check: 2
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book VII"
+series: "The Legend of Drizzt"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

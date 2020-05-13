@@ -1,0 +1,74 @@
+template {
+  name: "WTC 9573074"
+  synonym: "DT2"
+  world: "Generic"
+  description: "Your tabletop never looked better! These Dungeon Tiles are the first in a\n                    new series of dungeon-building aids for Dungeon Masters. With D&D Miniatures\n                    and this pack of customizable dungeon grids, you can add a new dimension to\n                    your D&D adventures. Easy to set up and infinitely expandable, this pack\n                    allows you to create the dungeons and adventures you want to play. Future\n                    sets will allow players to create larger, more elaborate dungeons!\n                    This pack contains six durable, double-sided, four color illustrated dungeon\n                    grids, featuring rooms, corridors, and passages of various sizes, plus doors,\n                    walls, and other terrain elements that you can use to make great D&D\n                    encounters that enhance your roleplaying game experience."
+}
+title: "Arcane Corridors"
+subtitle: "Create Places of Power"
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Perkins, Christopher"
+}
+cover {
+  name: "Cortez, Leon"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "art director"
+}
+manager {
+  name: "McKee, Kay"
+  job: "production manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+date {
+  year: 2006
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4155"
+  check: 3
+}
+isbn13 {
+}
+pages: 6
+system: DND_3_5
+type: ACCESSORY
+style: FOLDER
+number: "II"
+series: "Dungeon Tiles"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "dungeon tile"
+  number: 6
+}
+required_requirements: "player\'s handbook"
+required_requirements: "dungeon master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Miniatures"
+layout: FULL_COLOR

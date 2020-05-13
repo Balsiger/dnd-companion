@@ -1,0 +1,25 @@
+template {
+  name: "TSR 1129"
+  reference {
+    name: "catalogue96"
+  }
+  world: "None"
+  description: "More cards for the Spellfire game."
+}
+title: "Spellfire Forgotten Realms Booster Pack, Set 4"
+date {
+  year: 1994
+}
+isbn {
+}
+isbn13 {
+}
+system: SPELLFIRE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "\302\254\302\243 "
+  number: 199
+  precision: 100
+}

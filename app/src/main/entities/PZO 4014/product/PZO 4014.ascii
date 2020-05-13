@@ -1,0 +1,45 @@
+template {
+  name: "PZO 4014"
+  world: "Generic"
+  description: "But take care to make a map as you go, because these caves could go on forever! Paizo Publishing\'s GameMastery line of gaming accessories continues it mission of providing simple and elegant tools for the busy Game Master with the newest GameMastery Map Pack relase: \\Product{Caverns}. Inside you\'ll find 18 beautiful 5\'\' by 8\'\' map tiles that can be combined to form a number of underground locations that could be part of any dungeon cave network, including:\n\n\\list\n{Mushroom Cavern}\n{Lava Cave}\n{Twisting Corridors}\n{Monster Den}\n{Underground River}\n{Vast Chasm}\n\nGame Masters shouldn\'t waste their time scribbling out twisting caverns and gloomy caves. With \\Product{Game Mastery Map Pack: Caverns}, you can keep your party busy for hours, while letting you concentrate on the monsters that live there!"
+  short_description: "A map pack with carvern tiles."
+}
+title: "Caverns"
+subtitle: "Descend Into the Darkness Below"
+cartographer {
+  name: "Macourek, Corey"
+}
+date {
+  year: 2008
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "068"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "068"
+  check: 1
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Map Pack"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "map"
+  number: 18
+}
+layout: FULL_COLOR

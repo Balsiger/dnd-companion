@@ -1,0 +1,35 @@
+template {
+  name: "WTC 17851"
+  world: "None"
+  description: "On the side stand the followers of \\NPC{Phage}, who cry out for new arena\n                    combats, new champions, new blood spilled in the sand. On the other are the\n                    supporters of \\NPC{Akroma}, the \\Monster{angel}, who preaches a terrifying\n                    religion hallowing her creator.\n                    In the middle stands the lonely figure of \\NPC{Kamahl}. Once a champion of\n                    the pits, he must now atone for the terrible wrongs he has wrought. Those\n                    wrongs gave birth to \\NPC{Phage} and \\NPC{Akroma}. They gave birth to the\n                    suffering of the world.\n                    Now \\NPC{Kamahl} must sweep the land clean of this terrible blight. But his\n                    fury may destroy that which he most loves."
+}
+title: "Legions"
+subtitle: "In Titanic Battle, the World Stands Divided."
+author {
+  name: "King, J. Robert"
+}
+date {
+  year: 2003
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2914"
+  check: 6
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book II"
+series: "Onslaught Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

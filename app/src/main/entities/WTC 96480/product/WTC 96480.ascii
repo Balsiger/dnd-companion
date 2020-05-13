@@ -1,0 +1,57 @@
+template {
+  name: "WTC 96480"
+  world: "Forgotten Realms"
+  description: "This collection of four New York Times best-selling novels from premiere\n                    fantasy author R.A. Salvatore includes \\Product{The Silent Blade},\n                    \\Product{The Spine of the World}, \\Product{Servant of the Shard}, and\n                    \\Product{Sea of Swords}. These titles continue the tale of Salvatore\'s\n                    signature character \\NPC{Drizzt Do\'Urden}, one of the most well-known figures\n                    in the \\Place{Forgotten Realms} setting."
+}
+title: "Paths of Darkness Collector\'s Edition"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3155"
+  check: 8
+}
+isbn13 {
+}
+pages: 1056
+system: NONE
+audience: PLAYER
+type: NOVEL
+style: HARDCOVER
+number: "Collection"
+series: "Paths of Darkness"
+price {
+  currency: "$ "
+  number: 2795
+  precision: 100
+}

@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9234"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Dungeon Master\'s Design Kit"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

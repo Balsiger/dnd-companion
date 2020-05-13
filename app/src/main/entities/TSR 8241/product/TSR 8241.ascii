@@ -1,0 +1,22 @@
+template {
+  name: "TSR 8241"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Greyhawk"
+}
+title: "Artifact of Evil"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Two"
+series: "Greyhawk"
+price {
+}

@@ -1,0 +1,116 @@
+template {
+  name: "Dungeon 12"
+  world: "Generic"
+  description: "\nLight of Lost Souls, Scepter of the Underworld, At the Spottle Parlor, Intrigue in the Depths, Huddle Farm, Dungeon Adventures Index"
+}
+title: "Dungeon 12"
+subtitle: "Issue 12"
+author {
+  name: "Findley, Nigel D."
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Lach, Michael"
+}
+author {
+  name: "Pisto, Rocco"
+}
+author {
+  name: "Walsh, Willie"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Price, Patrick Lucien"
+  job: "editorial assistant"
+}
+editor {
+  name: "Lucas, Eileen"
+  job: "editorial assistant"
+}
+editor {
+  name: "Jenkins, Robin"
+  job: "editorial assistant"
+}
+cover {
+  name: "Medley, Linda"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Giadrosich, Bob"
+}
+illustrator {
+  name: "Bennett, Richard"
+}
+illustrator {
+  name: "Wright, Michael"
+}
+illustrator {
+  name: "Valusek, Valerie A."
+}
+illustrator {
+  name: "Medley, Linda"
+}
+illustrator {
+  name: "Raupp, Roger"
+  job: "art director"
+}
+typographer {
+}
+manager {
+  name: "Cook, Mike"
+  job: "publisher"
+}
+manager {
+}
+manager {
+}
+manager {
+  name: "Schulz, Pat"
+  job: "subscriptions"
+}
+manager {
+  name: "Svikel, Lori"
+  job: "production assistant"
+}
+manager {
+  name: "Favaro, Marilyn"
+  job: "production assistant"
+}
+date {
+  year: 1988
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+type: MAGAZINE
+style: BOOKLET
+producer: "TSR"
+volume: "II"
+number: "6"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,45 @@
+template {
+  name: "TSR 1097"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\large{1993 Collector Cards Factory Set. 495-Card Complete Set}\\\n                    \\list{includes \\bold{all} the regular cards in the 1993 series}\n                    {the only official \\bold{AD&D} 2nd edition collector cards}\n                    {uses only offical \\bold{AD&D} 2nd edition game rules}"
+}
+title: "1993 Fantasy Collector Cards Factory Set"
+date {
+  year: 1993
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "682"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: ALL
+type: CARDS_TYPE
+style: MEDIUM_BOX
+producer: "TSR"
+series: "Trading Cards"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: CARD
+  number: 495
+}

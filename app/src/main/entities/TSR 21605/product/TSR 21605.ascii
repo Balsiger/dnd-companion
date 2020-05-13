@@ -1,0 +1,42 @@
+template {
+  name: "TSR 21605"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  world: "Forgotten Realms"
+  description: "\\NPC{Cadderly} must leave his home to combat the evil unleashed by the\n                    \\Item{Chaos Curse}. To counter \\Place{Castle Trinity}\'s plans for conquest,\n                    the \\Class{cleric} and his friends enter the beautiful forest of\n                    \\Place{Shilmista}. But among the trees and glades of the forest,\n                    \\NPC{Cadderly} must battle a monstrous evil."
+}
+title: "In Sylvan Shadows"
+author {
+  name: "Salvatore, R.A."
+}
+date {
+  year: 2000
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1605"
+  check: 2
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Book Two"
+series: "Cleric Quintet"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,28 @@
+template {
+  name: "Reaper 02067"
+  description: "Stefan Von Kruger, a human (?) fighter with large (bat)sword and shield"
+}
+title: "Stefan Von Kruger"
+author {
+  name: "Rodolfi, B."
+}
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: DARK_HEAVEN
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+series: "Apocalypse"
+price {
+  currency: "$ "
+  number: 225
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}

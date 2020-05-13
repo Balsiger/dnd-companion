@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8956"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Ravenloft"
+}
+title: "Master of Ravenloft"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: SUPER_ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Six"
+price {
+}

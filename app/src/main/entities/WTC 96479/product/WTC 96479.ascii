@@ -1,0 +1,44 @@
+template {
+  name: "WTC 96479"
+  world: "Forgotten Realms"
+  description: "He told stories.\n                    He told even more lies.\n                    He told people what they wanted to hear.\n                    He told himself he wasn\'t doing anything wrong.\n                    He told the mysterious stranger from \\Place{Shou Lung} that he\'d help him.\n                    He told the most dangerous man in \\Place{Altumbel} that he would deliver a\n                    fortune in gems.\n                    He should have kept his mouth shut.\n                    Fourth in a series that brings to life the people who survive on the fringes\n                    and in the shadows of the Forgotten Realms world---The rogues."
+}
+title: "Yellow Silk"
+leader: "The"
+author {
+  name: "Bassingthwaite, Don"
+}
+cover {
+  name: "Zaug, Mark"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2004
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3152"
+  check: 3
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Four"
+series: "Rogues"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,104 @@
+template {
+  name: "Dungeon 26"
+  world: "Generic"
+  description: "The Dungeon Magazine."
+}
+title: "Dungeon 26"
+subtitle: "Issue #26"
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Terra, John"
+}
+author {
+  name: "Smith, Stephen J."
+}
+author {
+  name: "Ouzts, Jay"
+}
+author {
+  name: "Barrett, Craig H."
+}
+author {
+  name: "Kederich, Christopher"
+}
+author {
+  name: "Walsh, Willie"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+editor {
+  name: "Nowak, Joseph M."
+  job: "editorial assistant"
+}
+cover {
+  name: "Burdick, Scott"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Widing, Ken"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Wilbur, Ronald"
+}
+illustrator {
+  name: "Schwartz, Stephen F."
+}
+illustrator {
+  name: "Ward, Kevin"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+typographer {
+}
+manager {
+  name: "Ward, James M."
+  job: "publisher"
+}
+manager {
+  name: "Wise, Dave"
+  job: "subscriptions"
+}
+date {
+  year: 1990
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: ADND_1ST
+type: MAGAZINE
+style: BOOKLET
+producer: "TSR"
+volume: "V"
+number: "2"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

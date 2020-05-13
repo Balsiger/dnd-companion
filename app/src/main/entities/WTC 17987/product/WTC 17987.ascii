@@ -1,0 +1,35 @@
+template {
+  name: "WTC 17987"
+  world: "None"
+  description: "A \\Monster{dragon} sits on the throne of \\Place{Madara}, and his regent\n                    rules with knives in the dark. The islands bleed, the mainland shakes, and\n                    even the champion has forsaken his office. Does no honor remain in the\n                    empire?\n                    Ask \\NPC{Ayesha}, who has turned her hands from breaking artifacts to making\n                    forests. Ask \\NPC{Wasitora}, whose \\Monster{cat-dragon} kits fight the armies\n                    of evil. Most of all, ask \\NPC{Tetsuo}, who must regain his honor by\n                    destroying the emperor he once served."
+}
+title: "Champion\'s Trial"
+subtitle: "Evil Triumphant"
+author {
+  name: "McGough, Scott"
+}
+date {
+  year: 2003
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3015"
+  check: 2
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "Magic Legends Cycle Two"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,46 @@
+template {
+  name: "TSR 9498"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  world: "Ravenloft"
+  description: "experience the dark night in the 1890\'s on Gothic Earth"
+}
+title: "Gothic Earth"
+leader: "The"
+author {
+  name: "Connors, William W."
+}
+date {
+  year: 1995
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0193"
+  check: 4
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

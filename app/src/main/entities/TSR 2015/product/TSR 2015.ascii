@@ -1,0 +1,19 @@
+template {
+  name: "TSR 2015"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Dungeons and Dragons Expert Rulebook"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+price {
+}

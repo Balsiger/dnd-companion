@@ -1,0 +1,44 @@
+template {
+  name: "TSR 21566"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "\\NPC{Ansoain} has been murdered, and her son \\NPC{Galimer} taken hostage.\n                    \\NPC{Druhallen}, a young magic user must avenge the murder of his teacher and\n                    rescue her son from a dubious fate. But not everyone is telling\n                    \\NPC{Druhallen} the truth.\n                    \\NPC{Druhallen} and his companions must brave the ruins of \\Place{Dekanter}\n                    to find a missing artifact...\\Item{The Nether Scroll}.\n                    Without the \\Item{Nether Scroll} \\NPC{Galimer} may die. With it\n                    \\NPC{Druhallen} may go mad."
+}
+title: "Nether Scroll"
+leader: "The"
+author {
+  name: "Abbey, Lynn"
+}
+cover {
+  name: "Pollack, Alan"
+}
+date {
+  year: 2000
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1566"
+  check: 8
+}
+isbn13 {
+}
+pages: 311
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 4"
+series: "Lost Empires"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

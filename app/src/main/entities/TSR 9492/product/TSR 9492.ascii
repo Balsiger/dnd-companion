@@ -1,0 +1,90 @@
+template {
+  name: "TSR 9492"
+  synonym: "(FOR9)"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "Forgotten Realms"
+  description: "From \\Place{Waterdeep} to \\Place{Thay}, from the \\Place{Great Glacier} to\n                    \\Place{Calimshan}, wizards and rogues dress, thing, and behave in ways that\n                    tell the learned observer just where they hail from. Sometimes the\n                    differences are obvious---anyone can distinguish a seafaring mage from a\n                    turban-crowned spellcaster, or a thief of \\Place{Lantan} from a burglar of\n                    \\Place{Amn}. But often, appearance give no clue: even wizards and rogues of\n                    the \\Place[Dales]{Dalelands} vary from \\Place[Dales]{Dale} to\n                    \\Place[Dales]{Dale}, though one may look the same as\n                    another. \\Group{Faer\\hat{u}nians} are fiercly proud of their heritage, and\n                    they carry their native traits with them wherever they go.\n                    Within these pages are dozens of kits designed to help players in a\n                    \\Place{Forgotten Realms} campaign discover their characters\' roots and\n                    reflect them in role-playing. Special benefits and disadvantages related to\n                    each particular home town or territory allow players to create unique kits\n                    that can be applied to mages, specialist wizards, and rogues, and they can\n                    even be layered over other kits. As a bonus, two new player character\n                    subclasses have been included: the intriguing spellsinger and the stealthy\n                    shadow walker."
+}
+title: "Wizards and Rogues of the Realms"
+author {
+  name: "Connors, William W."
+}
+editor {
+  name: "McCready, Anne Gray"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Isler, Tracey L."
+}
+manager {
+  name: "Greenwood, Ed"
+  job: "original spellslinger design"
+}
+manager {
+  name: "Jacquays, Paul"
+  job: "graphic coordination"
+}
+manager {
+  name: "Reid, Thomas M."
+  job: "product coordination"
+}
+manager {
+  name: "Wise, David"
+  job: "product coordination"
+}
+manager {
+  name: "Galica, Bob"
+  job: "graphic coordination"
+}
+manager {
+  name: "Conant, Dave"
+  job: "electronic prepress coordination"
+}
+date {
+  year: 1995
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0190"
+  check: 10
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

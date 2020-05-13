@@ -1,0 +1,90 @@
+template {
+  name: "WTC 88546"
+  world: "Dragonlance"
+  description: "The legendary times of the \\NPC{Kingpriest}, the Reign of \\NPC{Istar}, and\n  the \\Event{War of the Lance}. Tales of the wrath of gods, the clash of\n  \\Monster{dragons}, the emergence of foul villains and shining heroes.\n\n  Here are collected the best short stories of the \\Product{Dragonlance Tales\n  II} series. For new readers, this is your invitation to a world of wondrous\n  adventure and fantasy, while for longtime followers of the\n  \\Place{Dragonlance} saga, this is a collector\'s edition of indispensable\n  stories.\n\n  This volume includes an exciting fast-play adventure by Tracy Hickman set in\n  the world of \\Place{Dragonlance}.\n\n  \\Place{Dragonlance} fans will be thrilled to read this follow-up to\n  \\Product{The Best of Tales, Volume One}."
+}
+title: "Best of Tales, Volume Two"
+leader: "The"
+author {
+  name: "Williams, Michael"
+}
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Carter, Tonya C."
+}
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Parkinson, Dan"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2700"
+  check: 3
+}
+isbn13 {
+}
+pages: 416
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "The Best of Tales"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

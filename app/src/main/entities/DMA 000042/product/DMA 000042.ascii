@@ -1,0 +1,18 @@
+template {
+  name: "DMA 000042"
+  synonym: "TSRGN14"
+  reference {
+    name: "complete product listing"
+  }
+  description: "Unknown"
+}
+title: "Large Hex Grid Mapping Paper"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

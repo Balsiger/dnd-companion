@@ -1,0 +1,23 @@
+template {
+  name: "TSR 5178"
+  reference {
+    name: "catalog96"
+  }
+  description: "yearly assortment of the TSR core products"
+}
+title: "TSR 1996 Core Product Assortment"
+date {
+  year: 1996
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0550"
+  check: 6
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

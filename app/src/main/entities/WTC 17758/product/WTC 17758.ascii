@@ -1,0 +1,141 @@
+template {
+  name: "WTC 17758"
+  world: "Generic"
+  description: "Marrow-chilling conditions, deadly hazards, and other dangers threaten\n                    explorers of frostfell environments. A wintry grave awaits those who venture\n                    forth unprepared, whether traveling through polar regions and frozen\n                    mountaintops to ice-glazed dungeons, or the \\Place{Ice Wastes} of the\n                    \\Place{Abyss}.\n                    This supplement for the D&D game explores the impact of arctic conditions and\n                    extreme cold-weather environments on every aspect of game play. Along with\n                    rules for adapting to, navigating through, and surviving hazardous\n                    cold-weather conditions and terrain, Frostburn also includes new spells,\n                    feats, magic items, prestige classes, and monsters associated with icy\n                    realms.\n                    To use this supplement, a Dungeon Master needs the \\Product{Player\'s\n                    Handbook} and \\Product{Dungeon Master\'s Guide}. A player needs only the\n                    \\Product{Player\'s Handbook}."
+}
+title: "Frostburn"
+subtitle: "Survival at Sub-Zero"
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Strayton, George"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "development team leader"
+}
+author {
+  name: "Finch, Andrew J."
+  job: "development team"
+}
+author {
+  name: "Noonan, David"
+  job: "development team"
+}
+author {
+  name: "Wyatt, James"
+  job: "development team"
+}
+editor {
+  name: "Collins, Greg"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "managing editor"
+}
+cover {
+  name: "Wood, Sam"
+}
+cartographer {
+  name: "Jacobs, James"
+}
+cartographer {
+  name: "Gabmle, Todd"
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Cotie, Mitch"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "McClain, Dennis Crabapple"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Hudnut, David"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+illustrator {
+  name: "Kovacs, Doug"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Finch, Andrew J."
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Joshua C.J."
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2896"
+  check: 4
+}
+isbn13 {
+}
+pages: 224
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Environment Series"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "terrain tiles"
+  number: 2
+}

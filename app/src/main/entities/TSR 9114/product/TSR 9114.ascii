@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9114"
+  synonym: "XL1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Quest for the Heartstone"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

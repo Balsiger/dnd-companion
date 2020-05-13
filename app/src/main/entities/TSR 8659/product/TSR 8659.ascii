@@ -1,0 +1,30 @@
+template {
+  name: "TSR 8659"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "a myster novel"
+}
+title: "Murder in the Tower of High Sorcery"
+author {
+  name: "Teri White"
+}
+date {
+  year: 1997
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 1699
+  precision: 100
+}

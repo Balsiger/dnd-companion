@@ -1,0 +1,70 @@
+template {
+  name: "WTC 24191"
+  synonym: "E2"
+  world: "Generic"
+  description: "A sleepless evil lingers in the subterranean depths of the \\Place{Shadowfell}. Gloomy tunnels spill into the dread kingdom of \\NPC{Doresain} the \\NPC{Ghoul King}, wretched servant to the demon lord \\God{Orcus}. Neither living nor dead, the \\NPC{Ghoul King} casts his shroud of undeath over all who oppose him, and from these fallen enemies he breeds an army. Who can stand against this murderous and hateful force of destruction?\n                    \\Product{Kingdom of the Ghouls} is an adventure that challenges characters from 24th level to 26th level. It can be played as a stand-alone adventure or as the second part of an epic three-part series of adventures that continues the storyline begin in \\Product{H1: Keep on the Shadowfell}. This folder includes two adventure books and a double sided battle map designed for use with D&D Miniatures."
+  short_description: "An Adventure for Characters of 24th - 26th level."
+}
+title: "Kingdom of Ghouls"
+subtitle: "All That Lives Must Die"
+editor {
+  name: "Vallese, Ray"
+}
+cover {
+  name: "Mimura, Raven"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+date {
+  year: 2009
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5231"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5231"
+  check: 1
+}
+pages: 96
+system: DND_4
+type: ADVENTURE
+style: FOLDER
+producer: "WTC"
+number: "2"
+series: "E"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "adventure"
+  number: 2
+}
+content {
+  part: MAP
+  description: "two sided battle map"
+  number: 1
+}
+layout: FULL_COLOR

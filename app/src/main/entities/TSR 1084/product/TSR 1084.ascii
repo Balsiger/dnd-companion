@@ -1,0 +1,112 @@
+template {
+  name: "TSR 1084"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{\\Place{Myth Drannor}, city of glory. We shall not see its like\n                    again.}\n                    \\bold{Perhaps you\'ve heard its shining story...} of a time when\n                    \\Monster[Elf]{elves} and \\Monster[Dwarf]{dwarves}, \\Monster[Gnome]{gnomes}\n                    and \\Monster[Halfling]{haflings} and \\Monster[Human]{men} lived and loved\n                    together, striving to create beauty and right wrongs. Magic was brighter\n                    then, in the \\Place[Myth Drannor]{City of Song}. Folk were richer then, in\n                    the \\Place[Myth Drannor]{City of Wonder}. Once this proud city stood as the\n                    highest jewel in the glittering crown of civilization.\n                    \\bold{There came a day} when it was overwhelmed by evil, thrown down,\n                    despoiled, and left a ruin in the heart of its encircling wood, as all things\n                    of beauty are.\n                    Evil spawned and crawled there, and the \\Monster[Elf]{elves} kept watch\n                    around it, that evil might not spread. Centuries passed, but the tales let\n                    few forget the powerful magic, the great treasure---and the deadly horrors\n                    that lay waiting within its walls.\n                    Now the \\Monster[Elf]{elves} are gone, and adventurers from a hundred lands\n                    and cities are rushing to \\Place{Myth Drannor}, to seize what they can of the\n                    long-lost glory. If the \\Class[Bard]{bards} and \\Class[Sage]{sages} are\n                    right, power lies there for the claiming that could chance the face of the\n                    \\Place[Forgotten Realms]{Realms}, rule kingdoms or lay waste to them.\n                    If you would be part of this exciting quest, this boxed set if for\n                    you. Inside await four poster maps, eight cardsheets, eight Monstrous\n                    Compendium sheets, and two booklets---a 128-page Campaign Guide, and a\n                    32-page Adventure Booklet---filled with details about \\Place{Myth Drannor}, a\n                    fully detailed campaign setting for high-level characters in the world of the\n                    \\Place{Forgotten Realms}. New monsters and magical items await to sparkle and\n                    challenge in any AD&D campaign---and this set lays bare the secret at the\n                    heart of \\Place{Myth Drannor}; the fabled \\Item{Mythal}!\n                    Don\'t be left by the fireside, listening, wistful and poor. Join the rush for\n                    gems and gold, magic and power! Open this box and enter into fabled\n                    \\Place{Myth Drannor}!"
+}
+title: "Ruins of Myth Drannor"
+leader: "The"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Ewell, Newton H."
+}
+cover {
+  name: "Olson, Erik"
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Statema, John"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+manager {
+  name: "Boomgarden, Karen S."
+  job: "proofreading"
+}
+manager {
+  name: "Martin, Julia E."
+  job: "proofreading"
+}
+date {
+  year: 1993
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 176
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Campaign Guide to Myth Drannor"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Myth Drannor Adventures"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: PAGE
+  description: "monstrous compendium"
+  number: 16
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 4
+}
+content {
+  part: SHEET
+  description: "card"
+  number: 8
+}

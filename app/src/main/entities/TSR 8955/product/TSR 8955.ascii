@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8955"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Test of the Ninja"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Five"
+price {
+}

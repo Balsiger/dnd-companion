@@ -1,0 +1,160 @@
+template {
+  name: "WTC 25382"
+  synonym: ""
+  world: "Generic"
+  description: "Do you crave the envy of your gaming peers? Do you want them to sit up and take notice every time your character takes center stage? It so, this book is for you.\n                    Whether you\'re a novice or an experience Dungeons & Dragons player, the \\Product{Player\'s Strategy Guide} provides friendly tips and tricks for making your characters and adventuring parties jaw-droppingly cool and fun to play. This book also includes entertaining sidebars written by gaming pros and celebrities on the fine art of character optimization."
+}
+title: "Player\'s Strategy Guide"
+subtitle: "For Awesome Characters Only"
+author {
+  name: "Bilsland, Greg"
+  job: "additional contributor"
+}
+author {
+  name: "Carter, Michele"
+  job: "additional contributor"
+}
+author {
+  name: "Champagne, Chris"
+  job: "additional contributor"
+}
+author {
+  name: "Collins, Greg"
+  job: "additional contributor"
+}
+author {
+  name: "Dommermuth, Brady"
+  job: "additional contributor"
+}
+author {
+  name: "Frazier, Don"
+  job: "additional contributor"
+}
+author {
+  name: "Goldstein, Doug"
+  job: "additional contributor"
+}
+author {
+  name: "Helmick, Daniel"
+  job: "additional contributor"
+}
+author {
+  name: "Krohn, Craig"
+  job: "additional contributor"
+}
+author {
+  name: "Mazzanoble, Shelly"
+  job: "additional contributor"
+}
+author {
+  name: "Milano, Dan"
+  job: "additional contributor"
+}
+author {
+  name: "Monin, Didier"
+  job: "additional contributor"
+}
+author {
+  name: "Rogers, John"
+  job: "additional contributor"
+}
+author {
+  name: "Schaefer, Peter"
+  job: "additional contributor"
+}
+author {
+  name: "Schmadeka, Reid"
+  job: "additional contributor"
+}
+author {
+  name: "Sernett, Matthew"
+  job: "additional contributor"
+}
+author {
+  name: "Tulach, Chris"
+  job: "additional contributor"
+}
+author {
+  name: "Wheaton, Wil"
+  job: "additional contributor"
+}
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "lead developer"
+}
+author {
+  name: "Schaefer, Peter"
+  job: "developer"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+cover {
+  name: "Krahulik, Mike"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "additional graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+date {
+  year: 2010
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5488"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5488"
+  check: 9
+}
+pages: 160
+system: DND_4
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Roleplaying Game Supplement"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

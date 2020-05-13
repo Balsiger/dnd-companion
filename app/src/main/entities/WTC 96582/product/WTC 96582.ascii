@@ -1,0 +1,132 @@
+template {
+  name: "WTC 96582"
+  world: "Generic"
+  description: "Bold adventurers\' tales are filled with harrowing combat punctuated by\n                    clashing swords and flashing spells. From minor scuffles to climactic\n                    battles, the conflicts between heroes, villains, monsters, and minions range\n                    across sweeping battle fields and verdant forests to dank caverns and\n                    treacherous dungeons. Victory awaits those well versed in the arts of war.\n                    This supplement for the D&D game provides expanded rules and guidelines for\n                    running dynamic combats and creating daunting combatants. Inside are new base\n                    classes and prestige classes, over 30 new feats, more than 65 new spells, new\n                    magic items, and weapon special abilities. Include are three dozen new\n                    monsters, including the formidable \'aspects\' of deities and archfiends. Along\n                    with complete rules for everything from fast-paced skirmishes and squad-based\n                    encounters to mass battles, random dungeons, and miniatures battle campaigns,\n                    the \\Product{Miniatures Handbook} assembles a legion of information, options,\n                    rules, and guidelines to keep you fully engaged in every combat.\n                    The \\Product{Miniatures Handbook} maximizes the impact the v. 3.5 edition of\n                    the D&D core rulebooks and the D&D Miniatures line will have on your game. To\n                    use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, \\Product{Dungeon Master\'s Guide}, and \\Product{Monster Manual}. A\n                    player needs only the \\Product{Player\'s Handoobk}."
+}
+title: "Miniatures Handbook"
+subtitle: "Cries of Battle Fill the Air"
+author {
+  name: "Donais, Michael \'Mike\'"
+}
+author {
+  name: "Elias, Skaff"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Tweet, Jonathan"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "additional design"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "developer"
+}
+author {
+  name: "Eckelberry, David"
+  job: "developer"
+}
+editor {
+  name: "Ryan, Charles"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Tappin, Stephen"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Hairsine, Trevor"
+}
+illustrator {
+  name: "Hanley, Des"
+}
+illustrator {
+  name: "Smith, Adrian"
+}
+illustrator {
+  name: "Tappin, Stephen"
+}
+illustrator {
+  name: "Wright, Richard"
+}
+illustrator {
+  name: "McVey, Mike"
+  job: "art director"
+}
+typographer {
+  name: "Kolkowsky, Mari"
+  job: "graphic design"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Gibson, Craig"
+  job: "photographer"
+}
+typographer {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Wiley, Jason"
+  job: "image technician"
+}
+manager {
+  name: "Stark, Ed"
+  job: "core D&D design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Kirchoff, Mary"
+  job: "vice president of publishing"
+}
+manager {
+  name: "Durham, Martin"
+  job: "project manager"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production manager"
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3281"
+  check: 3
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

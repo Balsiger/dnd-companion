@@ -1,0 +1,36 @@
+template {
+  name: "TSR 21600"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "Before history itself, the plane of \\Place{Dominaira} was ruled by the\n                    \\Group{Thran}. They built machines and artifacts, the likes of which have\n                    never since been seen. But amid this civilization, a shadow took root, one\n                    that would stretch its arms across space and time.\n                    The hideous evil of \\Place{Phyrexia} was born."
+}
+title: "Thran"
+leader: "The"
+subtitle: "Before the Brothers\' War. Before the five colors of magic."
+author {
+  name: "Robert J. King"
+}
+date {
+  year: 1999
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1438"
+  check: 6
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

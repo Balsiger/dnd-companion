@@ -1,0 +1,87 @@
+template {
+  name: "WTC 25354"
+  world: "Generic"
+  description: "Played by Dungeon & Dragons characters everywhere, \\Product{Three-Dragon Ante: Emperor\'s Gambit} hails from the ancient dragonborn empire of \\Place{Arkhosia}. Kick back and experience this high-stakes game of chance popularized in the royal courts and raunchy taverns of the D&D world!\n                    \\Product{Three-Dragon Ante: Emperor\'s Gambit} is a fast-paced, noncollectable card game for 2 to 6 players. It can be played as a standalone game or combined with the original \\Product{Three-Dragon Ante} card game. The two versions of the game are fully compatible."
+  short_description: "A standalone card game for 2-6 players."
+}
+title: "Three-Dragon Ante - Emperor\'s Gambirt"
+subtitle: "A Barbarian, A Wizard, and a Cleric Walk into a Tavern..."
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "McQuillan, Bill"
+  job: "game development"
+}
+author {
+  name: "Heinsoo, Rob"
+  job: "rules writing"
+}
+author {
+  name: "McQuillan, Bill"
+  job: "rules writing"
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+  name: "Philips, Craig"
+  job: "character illustrations"
+}
+illustrator {
+  name: "Choi, Jay"
+  job: "graphic design"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic design"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "brand management"
+}
+manager {
+  name: "Tapp, Gretchen"
+  job: "production management"
+}
+date {
+  year: 2010
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5478"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5478"
+}
+pages: 24
+system: NONE
+audience: ALL
+type: CARD_GAME
+style: SMALL_BOX
+producer: "WTC"
+number: "2"
+series: "Three-Dragon Ante"
+price {
+  currency: "$"
+  number: 1499
+  precision: 100
+}
+content {
+  part: CARD
+  description: "play card"
+  number: 72
+}
+content {
+  part: BOOKLET
+  description: "rulebook"
+  number: 1
+}
+layout: FULL_COLOR

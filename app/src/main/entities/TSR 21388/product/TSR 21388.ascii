@@ -1,0 +1,45 @@
+template {
+  name: "TSR 21388"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "\\NPC{Wulfgar} returns from the \\Place{Abyss} to find there are\n                    \\Monster{demons} a hammer cannot crush.\n                    \\NPC{Entreri} has used his dagger to carve an empire in the back streets of\n                    \\Place{Calimport}, as he seeks the head of his oldest foe.\n                    \\NPC{Drizzt} learns that not all wounds bleed. And not all blades kill.\n                    \'Salvatore shows here, as in many of his other books...intelligence in using\n                    the classic elements, a pleasant dry wit and a narrative gift that make this\n                    book certain to keep \\Product{Forgotten Realms} readers turning pages\'.\n                    \\right{---Publishers Weekly}"
+}
+title: "Silent Blade"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Lockwood, Todd"
+}
+date {
+  year: 1999
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1388"
+  check: 6
+}
+isbn13 {
+}
+pages: 394
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book 1"
+series: "Paths of Darkness"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

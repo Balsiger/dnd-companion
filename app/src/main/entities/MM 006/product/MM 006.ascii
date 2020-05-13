@@ -1,0 +1,68 @@
+template {
+  name: "MM 006"
+  description: "Some additions to the rooms."
+}
+title: "Wicked Additions Set"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: BOX
+producer: "Dwarven Forge"
+price {
+}
+content {
+  part: MINIATURE
+  description: "Curved Passage"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "Curved Corner Room"
+  number: 4
+}
+content {
+  part: MINIATURE
+  description: "Large Rectangualr Floor"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "Sets of Upper and Lower Stairs"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "Red Pillars"
+  number: 4
+}
+content {
+  part: MINIATURE
+  description: "Long Straight Passage"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "Demon Archway"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "\'Raisable\' Portcullis"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "example setups"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "Bow Tie Connector"
+  number: 40
+}

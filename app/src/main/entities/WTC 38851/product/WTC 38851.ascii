@@ -1,0 +1,294 @@
+template {
+  name: "WTC 38851"
+  synonym: "Waterdeep, Lords of"
+  world: "Generic"
+  description: "\\Product[WTC 38851]{Lords of Waterdeep} is a game of intrigue, shifting resources, and secretive schemes in the most fantastic metropolis of the \\Place{Forgotten Realms}.\n\nThe powerful lords of the city contend for control of \\Place{Waterdeep}, the \\Place[Waterdeep]{City of Splendors}. Behind the gleaming facade of tall buildings and windings streets, dark intrigues and shady back-alley dealings play out, leaving the city\'s treasures and resources ripe for plunder.\n\nIn this fast-paced game of constantly changing fortunes, you take on the role of a \\Group{Lord of Waterdeep}. Through your Agents, you recruit Adventurers and send them on Quests designed to win favor and spread your influence throughout the city. Expand your treasury, purchase Buildings, assign Agents -- choose your actions wisely and you can become the suprese \\Group{Lord of Waterdeep}!\n"
+  short_description: "Gold and Double-Dealing Flow Freely in the \\Place[Waterdeep]{City of Splendors}."
+}
+title: "Lords of Waterdeep"
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "Lee, Peter"
+}
+author {
+  name: "Huber, Joe"
+  job: "development"
+}
+author {
+  name: "Lee, Peter"
+  job: "development"
+}
+author {
+  name: "Johnson, Mons"
+  job: "development"
+}
+author {
+  name: "Turian, Mike"
+  job: "additional development"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+cover {
+  name: "Horsley, Ralph"
+}
+cartographer {
+  name: "Schley, Mike"
+  job: "game board illustration"
+}
+illustrator {
+  name: "Belisle, Eric"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Belledin, Steven"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Boros, Zoltan"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Bradley, Noah"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Deschamps, Eric"
+  job: "card illustrations"
+}
+illustrator {
+  name: "England, Wayne"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Engle, Jason"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Foti, Tony"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Harris, Todd"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Lemen, Ron"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Lyon, Howard"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Mahy, Warren"
+  job: "card illustrations"
+}
+illustrator {
+  name: "McEvoy, Patrick"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Nelson, Jim"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Horsley, Ralph"
+  job: "card illustrations"
+}
+illustrator {
+  name: "O\'Conner, William"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Paquette, Adam"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Rapoza, David"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Sardinha, Richard"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Silver, Andrew"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Stokes, Anne"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Szikszai, Gabor"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Tapia, Matias"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Walker, Kev"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Walpole, Tyler"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Widermann, Eva"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Williams, Eric L."
+  job: "card illustrations"
+}
+illustrator {
+  name: "Wilson, Matthew D."
+  job: "card illustrations"
+}
+illustrator {
+  name: "Wood, Sam"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Wootten, Ben"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Zhang, James"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphci designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+}
+manager {
+  name: "Thompson, Rodney"
+  job: "D&D tabletop games manager"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D R&D senior group manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Gutierre, Godot"
+  job: "production manager"
+}
+date {
+  year: 2012
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5991"
+  check: 4
+}
+pages: 24
+audience: ALL
+type: BOARD_GAME
+style: BOX
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4999
+  precision: 100
+}
+content {
+  part: PLAYING_PIECE
+  description: "wooden Adventurer cubes, Agents, and score markers"
+  number: 133
+}
+content {
+  part: CARD
+  description: "Intrigue, Quest, and Lords of Waterdeep"
+  number: 121
+}
+content {
+  part: MISC
+  description: "Storage tray"
+  number: 1
+}
+content {
+  part: COUNTER
+  description: "Gold, Victory, and control tokens"
+  number: 146
+}
+content {
+  part: CARD
+  description: "building tiles"
+  number: 24
+}
+content {
+  part: CARD
+  description: "cardstock player mats"
+  number: 5
+}
+content {
+  part: BOARD
+  description: "game board"
+  number: 1
+}
+content {
+  part: BOOKLET
+  description: "rulebook"
+  number: 1
+}
+layout: FULL_COLOR

@@ -1,0 +1,57 @@
+template {
+  name: "WTC 88395"
+  world: "Forgotten Realms"
+  description: "This three-book set is perfect for collectors and an ideal gift for readers\n                    unfamiliar with the \\Place{Forgotten Realms} setting. \\Product{The Dark Elf\n                    Trilogy}--\\Product{Homeland}, \\Product{Exile}, and \\Product{Sojourn}--are\n                    enclosed in a hard-sided slipcover case featuring the cover art from the\n                    series.  "
+}
+title: "Dark Elf Trilogy Gift Set"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2683"
+  check: 10
+}
+isbn13 {
+}
+pages: 960
+system: NONE
+audience: ALL
+type: NOVEL
+style: BOX
+series: "Dark Elf Trilogy"
+price {
+  currency: "$ "
+  number: 2097
+  precision: 100
+}

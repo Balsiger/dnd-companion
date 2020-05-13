@@ -1,0 +1,161 @@
+template {
+  name: "WTC 17741"
+  world: "Generic"
+  description: "Trembling hands have recorded horrifying stories of encounters with\n                    \\Monster{aboleths}, \\Monster{beholders}, \\Monster{mind flayers}, and other\n                    aberrations. The victims of these alien creatures are quickly overwhelmed by\n                    mind-numbing terror -- their only comfort is the hope for a quick death.\n                    This supplement for the D&D game presents a comprehensive look at some of the\n                    most bizarre creatures ever to invade the world of fantasy roleplaying. Along\n                    with information about the physiology, psychology, society, and schemes of\n                    these strange beings, you\'ll find spells, feats, tactics, and tools commonly\n                    employed by those who hunt them. \\Product{Lords of Madness: The Book of\n                    Aberrations} also provides new rules, prestige classes, monsters, sample\n                    encounters, and fully developed NPCs ready to instill fear in any hero.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, \\Product{Dungeon Master\'s Guide}, and \\Product{Monster Manual}.\n                    A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Lords of Madness: The Book of Aberrations"
+subtitle: "Unnatural Creatures of Unspeakable Evil"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Winter, Steve"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "development"
+}
+author {
+  name: "Collins, Andy"
+  job: "development"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "managing editor"
+}
+cover {
+  name: "England, Wayne"
+}
+cover {
+  name: "Cod, Ed"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Cotie, Mitch"
+}
+illustrator {
+  name: "Cod, Ed"
+}
+illustrator {
+  name: "Crabapple-McClain, Dennis"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Fix, Colin"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+illustrator {
+  name: "Kovacs, Doug"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director of D&D"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director rpg"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Jason"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Joshua C.J."
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3657"
+  check: 6
+}
+isbn13 {
+}
+pages: 224
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Monsters"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

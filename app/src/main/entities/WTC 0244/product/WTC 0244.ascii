@@ -1,0 +1,242 @@
+template {
+  name: "WTC 0244"
+  world: "Generic"
+  description: "Weave exciting tales of heroism filled with magic and monsters. Within these\npages, you\'ll discover the tools and options you need to create detailed\nworlds and dynamic adventures for your players to experience in the Dungeons\n& Dragons roleplaying game."
+}
+title: "Dungeon Master\'s Guide"
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Collins, Andy"
+  job: "revision"
+}
+author {
+  name: "Tweet, Jonathan"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Adkison, Peter D."
+  job: "additional design"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "additional design"
+}
+author {
+  name: "Noonan, David"
+  job: "additional design"
+}
+author {
+  name: "Noonan, David"
+  job: "revision"
+}
+author {
+  name: "Redman, Rich"
+  job: "revision"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "revision"
+}
+author {
+  name: "Collins, Andy"
+  job: "revision"
+}
+author {
+  name: "Redman, Rich"
+  job: "revision"
+}
+author {
+  name: "William, Skip"
+  job: "revision"
+}
+editor {
+  name: "Martin, Julia"
+}
+editor {
+  name: "Rateliff, John"
+}
+editor {
+  name: "Maxwell, Duane"
+  job: "editorial assitance"
+}
+editor {
+  name: "Quick, Jeff"
+  job: "editorial assitance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "development and editing revision"
+}
+cover {
+  name: "Higginbotham, Henry"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Fischer, Scott"
+}
+illustrator {
+  name: "Foster, John"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Snoddy, Brian"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Walker, Kevin"
+}
+illustrator {
+  name: "Adelsperger, Matt"
+  job: "D&D logo design"
+}
+illustrator {
+  name: "Floyd, Sherry"
+  job: "D&D logo design"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photographer"
+}
+typographer {
+  name: "Ausland, Victoria"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Cheung, Carmen"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+typographer {
+  name: "Walker, Nancy"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "Production Manager"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "R&D group manager"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "D&D brand team"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+date {
+  year: 2012
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6245"
+  check: 7
+}
+pages: 320
+system: DND_3_5
+type: RULEBOOK
+style: HARDCOVER
+producer: "WTC"
+number: "Book II"
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: POSTER
+  description: "playing map"
+  number: 1
+}
+required_requirements: "WTC 17524"
+layout: FULL_COLOR

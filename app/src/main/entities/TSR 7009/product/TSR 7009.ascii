@@ -1,0 +1,25 @@
+template {
+  name: "TSR 7009"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  description: "role play gang members or Federal Agents after gang members"
+}
+title: "Gangbusters"
+date {
+  year: 1993
+}
+isbn {
+}
+isbn13 {
+}
+system: GANGBUSTERS
+type: BOARD_GAME
+price {
+  currency: "\302\254\302\243"
+  number: 1250
+  precision: 100
+}

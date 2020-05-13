@@ -1,0 +1,179 @@
+template {
+  name: "WTC 4537"
+  category: "adventure"
+  category: "next"
+  category: "Adventure"
+  synonym: "Baldur\'s Gate, Murder in"
+  world: "Forgotten Realms"
+  description: "Wealth flows into the city of \\Place{Baldur\'s Gate} like water. As the rich luxuriate in their mansions atop the bluff and artisans ply their trades on the steep streets, masses of poor laborers swell in the slums. Money and power beget political scandal, religious fervor, crime... and murder. No one feels safe on the rain-darkened streets. Strange, foreign gods are beseeched in secret shrines. The city is rife with corruption. And through it all, the body count keeps rising.\n\n\\Product{Murder in Baldur\'s Gate} is a Dungeons & Dragons Roleplaying Game adventure that can be played using the rules for 3rd Edition (3.5), 4th Edition, and the D&D Next playtest. Monster and NPC statistics needed to run the adventure for these editions can be downloaded for free at DungeonsandDragons.com/sundering.\n\nPlay this adventure every Wednesday at D&D Encounters and help shape the future of the \\Place{Forgotten Realms}."
+}
+title: "Murder in Baldur\'s Gate"
+subtitle: "Blood in the Streets!"
+author {
+  name: "Greenwood, Ed"
+  job: "design"
+}
+author {
+  name: "Sernett, Matt"
+  job: "design"
+}
+author {
+  name: "Winter, Alexander"
+  job: "design"
+}
+author {
+  name: "Winter, Steve"
+  job: "design"
+}
+author {
+  name: "Cordell, Bruce"
+  job: "additional design"
+}
+author {
+  name: "Dupuis, Chris"
+  job: "additional design"
+}
+author {
+  name: "LaPille, Tom"
+  job: "additional design"
+}
+author {
+  name: "Lee, Peter"
+  job: "additional design"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "additional design"
+}
+author {
+  name: "Tulach, Chris"
+  job: "additional design"
+}
+author {
+  name: "Wyatt, James"
+  job: "additional design"
+}
+editor {
+  name: "Geluso, Dawn J."
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Jacobs, James"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "senior creative art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+typographer {
+  name: "Lokotz, Angie"
+  job: "publishing production manager"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D group manager"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "D&D producer"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "D&D brand team"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Feil, John"
+  job: "D&D brand team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "Production Manager"
+}
+manager {
+  name: "Tulach, Chris"
+  job: "organized play"
+}
+date {
+  year: 2013
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6463"
+  check: 5
+}
+pages: 96
+type: ADVENTURE
+style: FOLDER
+producer: "WTC"
+number: "I"
+series: "The Sundering"
+price {
+  currency: "$ 3"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "campaign guide"
+  number: 1
+}
+content {
+  part: BOOKLET
+  description: "adventure "
+  number: 1
+}
+content {
+  part: SCREEN
+  description: "4 panel DM screen"
+  number: 1
+}
+content {
+  part: FOLDER
+  description: "packaging"
+  number: 1
+}
+layout: FULL_COLOR

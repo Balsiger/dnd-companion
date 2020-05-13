@@ -1,0 +1,45 @@
+template {
+  name: "WTC 24178"
+  world: "Generic"
+  description: "\\Monster{Earth giants}, \\Monster{frost giants}, \\Monster{fire giants} ... when the giants strike out to raid and destroy the civilized lands, it becomes apparent that something much larger and much more dangerous lurks in the background. A group of adventurers must locate the spark that has ignited this spreading fire and find a way to snuff it out before it engulfs the world.\n                    \\Product{Revenge of the Giants} is a super-length adventure that takes characters from 12th level to 17th level. It includes background material, adventure hooks, new monsters and magic items, and a powerful, unfolding story that shows off the best of the paragon tier of play. It also includes a double-sided battle map depicting key encounter sites, designed for use with D&D Miniatures."
+  short_description: "A paragon tier adventure for characters of 12th - 17th level."
+}
+title: "Revenge of the Giants"
+subtitle: "Against the Giants"
+date {
+  year: 2009
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5205"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5205"
+  check: 2
+}
+pages: 160
+system: DND_4
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: MAP
+  description: "double-sided poster sized battle map"
+  number: 1
+}
+layout: FULL_COLOR

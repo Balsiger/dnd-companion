@@ -1,0 +1,61 @@
+template {
+  name: "WTC 9501174"
+  world: "Dragonlance"
+  description: "Two of the authors of the \\Product{Elven Nations} trilogy now continue the\n  story of the \\Monster{elves}! The fortunes of war have driven the once-great\n  \\Monster{elven} nations into exile in the desert land of \\Place{Khur}. The\n  \\Monster{elves} must overcome extraordinary perils including treachery to\n  establish a new homeland."
+}
+title: "Sanctuary"
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Cook, Tonya Carter"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3817"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume One"
+series: "Elven Exiles"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

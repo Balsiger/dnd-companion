@@ -1,0 +1,37 @@
+template {
+  name: "TSR 21683"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "Against a darkened cloud it comes, framed by thunder and lightning, soaring\n  over the ravaged land: the \\Place{flying citadel}, mightiest power in the\n  arsenal of the \\Monster{dragon} highlords.\n\n  In an age of war, an evil \\Class{wizard} learned the secret of creating these\n  castles in the air and sought to use them to gain power over all\n  \\Place{Krynn}. Against him were ranged a red-robed \\Class{magic-user}, a\n  \\Class{cleric}, an ancient \\Class{warrior}, and -- naturally -- a\n  \\Monster{kender}.\n\n  Their battle shook the skies of \\Place{Krynn}."
+}
+title: "Citadel"
+leader: "The"
+subtitle: "Weapon of the Dark Queen"
+author {
+  name: "Richard A. Knaak"
+}
+date {
+  year: 2000
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1683"
+  check: 4
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "Dragonlance Classic Series"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

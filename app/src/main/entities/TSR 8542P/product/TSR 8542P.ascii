@@ -1,0 +1,53 @@
+template {
+  name: "TSR 8542P"
+  synonym: "WTC 866510520"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{I can find no answers in \\Place{Mithril Hall}... The apparent serenity\n                    of \\NPC{Drizzt Do\'Urden}, the brooding quiet, will show me nothing of the\n                    future designs of the \\Monster{drow}. Yet, for the sake of my friends, I must\n                    know those dark intentions. And so I fear that there remains only one place\n                    for me to look...}\n                    The \\Place{Underdark}. A place of brooding darkness, where no shadows exist,\n                    and where \\NPC{Drizzt Do\'Urden} does not with to go. The noble \\Monster{dark\n                    elf} must return there, though, must go back to find his friends in the\n                    \\Monster{gnome} city of \\Place{Blindgenstone}, and on to\n                    \\Place{Menzoberranzan}, the city of \\Monster{drow}. Only then can\n                    \\NPC{Drizzt} discern what perils might reach out from that dark place to\n                    threaten his friends in \\Place{Mithril Hall}.\n                    He finds allies where he least expects them and enemies he thought long\n                    gone. His scimitars slash at monsters too evil to reside under the sunlight\n                    of the surface world, while his inner strength wrestles with the tumult of\n                    emotions assaulting the noble \\Monster{drow} when he looks once more on his\n                    dreaded homeland. All the while \\NPC{Drizzt} must fend off the weight of\n                    guilt he carries for a dear friend lost to him forever."
+}
+title: "Starless Night"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Ruppel, Robh"
+}
+date {
+  year: 1994
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book One"
+series: "Legacy of the Drow"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

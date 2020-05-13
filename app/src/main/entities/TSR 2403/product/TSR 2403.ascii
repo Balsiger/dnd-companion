@@ -1,0 +1,46 @@
+template {
+  name: "TSR 2403"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dark Sun"
+  description: "Prism Pentad, book two"
+}
+title: "Crimson Legion"
+leader: "The"
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "260"
+  check: 8
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Two"
+series: "Prism Pentad"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

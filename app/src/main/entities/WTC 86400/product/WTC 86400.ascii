@@ -1,0 +1,183 @@
+template {
+  name: "WTC 86400"
+  world: "Eberron"
+  description: "Grab your pack and leap into an action-packed, intrigue-laced world of\n  cinematic adventure. Within the \\Product{Eberron Campaign Setting}, you\'ll\n  discover a vast, richly detailed world infused with magic and waiting to be\n  filled with daring escapades and dangerous exploits. Throw open the\n  cover---and be ready for anything.\n\n  Inside this book, you\'ll find all the details you\'ll need to embark on\n  Dungeon & Dragons adventures in the exiting world of \\Place{Eberron}:\n\n  \\list\n  {4 new racess: \\Monster{changeling}, \\Monster{kalashtar}, \\Monster{shifter},\n   and \\Monster{warforged}}\n  {Over 70 new feats, 8 new prestige classes, and a new character class: the\n   \\Class{artificer}}\n  {New equipment, weapons, spells, and magic items}\n  {New monsters and monster templates}\n  {Highly detailed regions, new organizations, and a short adventure to launch\n   your campaign}"
+}
+title: "Campaign Setting"
+subtitle: "Find Action Around Every Corner of the World"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "world and story development"
+}
+author {
+  name: "Baker, Keith"
+  job: "game design"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "game design"
+}
+author {
+  name: "Wyatt, James"
+  job: "game design"
+}
+author {
+  name: "Decker, Jesse"
+  job: "game development"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "game development"
+}
+author {
+  name: "Finch, Andrew J."
+  job: "game development"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Rateliff, John"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cover {
+  name: "Hawkins, Daniel"
+  job: "sculpted cover design"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Avon, John"
+}
+illustrator {
+  name: "Beargeon, Tom"
+}
+illustrator {
+  name: "Beet"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Coker, Tomm"
+}
+illustrator {
+  name: "Garres, Rafa"
+}
+illustrator {
+  name: "Irving, Frazer"
+}
+illustrator {
+  name: "Jones, Andrew"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "Moyer, Lee"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Pilcerova, Martina"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Vohlwinkel, Franz"
+}
+illustrator {
+  name: "Walker, Ken"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Jordan, Robert"
+  job: "image technician"
+}
+typographer {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+typographer {
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Finch, Andrew J."
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: DND_3RD
+type: CAMPAIGN_SETTING
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

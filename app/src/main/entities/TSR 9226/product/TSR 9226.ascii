@@ -1,0 +1,83 @@
+template {
+  name: "TSR 9226"
+  synonym: "I14"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "Ravening armies sweep across the land! Vast hordes of foul monsters lay\n                    siege to mighty cities! Tremendous battles are fought to decide the fate of\n                    entire lands---and \\emph{you} are in command!\n                    \\Product[TSR 9226]{Swords of the Iron Legion} is an anthology of adventures\n                    set in the \\Place{Forgotten Realms} campaign setting for large-scale battle\n                    using the \\Product[TSR 1019]{Battlesystem} rules for mass combat. The\n                    adventures, written by a group of talented designers, range from simple\n                    skirmishes to all-out wars!  Flying creatures, war machines, fortifications,\n                    and plenty of other twists ensure that each scenario is more than a simple\n                    bash-\'em-up. Some adventures also include roleplaying opportunities for\n                    characters, who get a chance to perform individual heroics to lead their\n                    armies to victory!\n                    These adventures are suitable for one-time play, or they can be inserted with\n                    ease into an existing campaign. Complete descriptions of the armies, special\n                    characters, terrain, and other interesting features to guarantee you hours of\n                    fund on a grand scale are included in each adventure.\n                    Ad Adventure for 6--8 Charcters Levels 1--15 and up."
+}
+title: "Swords of the Iron Legion"
+author {
+  name: "Connors, Bill"
+}
+author {
+  name: "Mortika, Christopher"
+}
+author {
+  name: "Reid, Rick"
+}
+author {
+  name: "Bennie, Scott"
+}
+author {
+  name: "Terra, John"
+}
+author {
+  name: "Batista, Jay"
+}
+author {
+  name: "Schelper, Roy"
+}
+author {
+  name: "Swan, Rick"
+}
+editor {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Heard, Bruce"
+}
+editor {
+  name: "Rabe, Jean"
+}
+cover {
+  name: "Elmore, Larry"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "559"
+  check: 6
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

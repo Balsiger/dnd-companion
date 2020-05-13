@@ -1,0 +1,111 @@
+template {
+  name: "TSR 9358"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "At last! Complete in one catalog, all the finest merchandise\n                    \\Place{Faer\\hat{u}n} has to offer is presented by that enterprising\n                    entrepreneur, \\NPC{Aurora the Eclectic}.\n                    Useful for players in any AD&D fantasy campaign (and other role-playing\n                    games, too!), this is a handy listing of items and goods of all kinds, from\n                    farming tools to scribes\' pens, from imported \\Place{Shou Lung} silks to\n                    \\Place[Maztica]{Maztican} cotton, from wines and ales to breads and\n                    cheeses. Prices are given the gold piece standard, for simple\n                    conversion. Players\' \'shopping trips\' will never be the same!\n                    It is our hope that players and DMs will find this Catalogue both useful and\n                    enjoyable. \\NPC[Aurora the Eclectic]{Aurora} is not above editorializing\n                    about her wares, but we think her opinions will be informative as well as\n                    entertaining."
+}
+title: "Aurora\'s Whole Realms Catalog"
+author {
+  name: "Brown, Anne K."
+}
+author {
+  name: "King, J. Robert"
+}
+author {
+  name: "Beach, Tim"
+}
+author {
+  name: "Boomgarden, Karen S."
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Martin, Julia E."
+}
+author {
+  name: "McComb, Colin"
+}
+author {
+  name: "Reid, Thomas M."
+}
+author {
+  name: "Schend, Steven E."
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Partners, Design"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+illustrator {
+  name: "Aidala, Marco"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "graphic design"
+}
+manager {
+  name: "Lokotz, Angelika"
+  job: "graphic design"
+}
+manager {
+  name: "King, J. Robert"
+  job: "graphic design"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "production"
+}
+manager {
+  name: "Brown, Richard W."
+  job: "special thanks"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "327"
+  check: 2
+}
+isbn13 {
+}
+pages: 160
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,38 @@
+template {
+  name: "TSR 11384"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Generic"
+  description: "comprehensive guide expands upon the psionics"
+}
+title: "Mindwalking: A Guide to Psionics"
+author {
+  name: "J.D. Wiker"
+}
+date {
+  year: 1999
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1384"
+  check: 3
+}
+isbn13 {
+}
+pages: 96
+system: ALTERNITY
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

@@ -1,0 +1,82 @@
+template {
+  name: "TSR 9263"
+  synonym: "REF1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "This indispensable aid to the Dungeon Master puts all the most important\n                    combat and encounter tables at your fingertips! Don\'t slow down the action by\n                    searching for a number; keep them in front of you all the time with this\n                    handy screen and reference guide.\n                    Also included is a 16-page adventure, \\Product{Terrible Trouble at\n                    Tragidore}. This exciting RPGA tournament adventure is intended for\n                    medium-level characters (levels 5-8). It contains advice and tips for novice\n                    Dungeon Masters but is suitable for use by all players."
+}
+title: "Dungeon Master Screen / Terrible Trouble at Tragidore"
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Rabe, Bruce"
+}
+editor {
+  name: "Mohan, Kim"
+}
+cover {
+  name: "Horne, Daniel"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Horne, Daniel"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "keylining"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "747"
+  check: 5
+}
+isbn13 {
+}
+pages: 16
+system: ADND_2ND
+type: ACCESSORY
+style: SCREEN
+producer: "TSR"
+series: "Screen"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: SCREEN
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "adventure"
+  number: 1073741824
+}

@@ -1,0 +1,18 @@
+template {
+  name: "TSR 8005"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+}
+title: "Polyheadrals"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: UNKNOWN
+price {
+}

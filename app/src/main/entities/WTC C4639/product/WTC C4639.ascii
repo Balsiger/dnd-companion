@@ -1,0 +1,221 @@
+template {
+  name: "WTC C4639"
+  world: "Forgotten Realms"
+  description: "In the city of \\Place{Waterdeep} rests a tavern called the \\Place{Yawning Portal}, named after the gaping pit in its common room. At the bottom of this crumbling shaft is a labyrinthine dungeon shunned by all but the most daring adventurers. Know as \\Place{Undermountain}, this dungeon is the domain of the mad wizard \\NPC{Halaster Blackcloack}. Long has the \\NPC{Mad Mage} dwelt in these forlorn depths, seeding his lair with monsters, traps, and mysteries. To what end? That question is a constant source of speculation and concern.\n\nThis adventure picks up where \\Product{Waterdeep: Dragon Heist} leaves off, taking characters of 5th level or higher all the way to 20th level should they explore the entirety of \\NPC{Halaster}\'s home. Twenty-three levels of \\Place{Undermountain} are detailed herein, along with the subterranean refuge of \\Place{Skullport}. Treasures and secrets abound, but tread with care!"
+  short_description: "A Dungeons & Dragons adventure for characters of levels 5 - 20."
+}
+title: "Waterdeep: Dungeon of the Mad Mage"
+subtitle: "The Greatest Dungeon of Them All"
+author {
+  name: "Perkins, Christopher"
+  job: "lead designer"
+}
+author {
+  name: "Benham, Bill"
+  job: "designer"
+}
+author {
+  name: "Chen, Lysa"
+  job: "designer"
+}
+author {
+  name: "Chenier, Kiel"
+  job: "designer"
+}
+author {
+  name: "Dillon, Don"
+  job: "designer"
+}
+author {
+  name: "Hoffman, Claire"
+  job: "designer"
+}
+author {
+  name: "Introcaso, James"
+  job: "designer"
+}
+author {
+  name: "Marks, Greg"
+  job: "designer"
+}
+author {
+  name: "Patrick, Alan"
+  job: "designer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "designer"
+}
+author {
+  name: "Woodall, Travis"
+  job: "designer"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+editor {
+  name: "Click, Matt"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Schneider, F. Wesley"
+}
+editor {
+  name: "Sernett, Matt"
+}
+editor {
+  name: "Welch, Kate"
+}
+cover {
+  name: "Sheppard, Cynthia"
+}
+cartographer {
+  name: "Hartin, Tim"
+}
+illustrator {
+  name: "Daarken"
+  job: "concept artist"
+}
+illustrator {
+  name: "Wood, Shawn"
+  job: "concept artist"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Cearley, Clint"
+}
+illustrator {
+  name: "Chaturvedi, Sidharth"
+}
+illustrator {
+  name: "Felix, Jason"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Hannigan, Leesha"
+}
+illustrator {
+  name: "Hurwitz, Lake"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Keiser, Sam"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Kollros, Mathias"
+}
+illustrator {
+  name: "Moeller, Christopher"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Irvin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna"
+  job: "additional art director"
+}
+illustrator {
+  name: "Whitters, Richard"
+  job: "additional art director"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+illustrator {
+  name: "Gershman, David"
+  job: "art administrator"
+}
+manager {
+  name: "Tovar, Dan"
+  job: "producer"
+}
+manager {
+  name: "Warren, Matt"
+  job: "project manager"
+}
+manager {
+  name: "Stan!"
+  job: "project manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "product engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+date {
+  year: 2018
+  month: 11
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6626"
+  check: 4
+}
+pages: 320
+system: DND_NEXT
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+series: "Waterdeep"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

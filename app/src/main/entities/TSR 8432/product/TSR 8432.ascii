@@ -1,0 +1,19 @@
+template {
+  name: "TSR 8432"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Dragonlance"
+}
+title: "Dragonlance Saga graphic novel 3"
+date {
+  year: 1988
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: NOVEL
+price {
+}

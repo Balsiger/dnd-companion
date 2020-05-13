@@ -1,0 +1,23 @@
+template {
+  name: "TSR 1001B"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Dungeons & Dragons Basic Set"
+date {
+  year: 1979
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+type: RULEBOOK
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

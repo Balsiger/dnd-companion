@@ -1,0 +1,53 @@
+template {
+  name: "WTC 25356"
+  synonym: ""
+  world: "Eberron"
+  description: "Eberron\'s fragile peace is crumbling. Armies gather, and for the first time in generations, \\Monster{dragons} rise to war. Prophecies are fulfilled. And the one man at the center of it all, the prophesied \\NPC{Storm Dragon}, lies helpless, his powers stripped away, his mind teetering on the edge of madness.\n\nEven as a band of desperate heroes try to restore the \\NPC{Storm Dragon} and prevent another world war, darker forces are at work. Some lust for power and are willing to do anything to seize it, even rouse \\Place{Eberron}\'s most fearsome powers for a full-scale...\n\n\\Large{Dragon War}."
+  short_description: "Book Three of the Draconic Prophecies trilogy."
+}
+title: "Dragon War"
+subtitle: "\'Whatever you deserve, freedom is what you have been given. Use your freedom as if you deservice it.\'"
+author {
+  name: "Wyatt, James"
+}
+cover {
+  name: "Swanland Raymond"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2010
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5482"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5482"
+  check: 7
+}
+pages: 372
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book Three"
+series: "Draconic Prophecies"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

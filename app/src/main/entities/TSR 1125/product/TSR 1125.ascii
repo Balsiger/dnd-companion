@@ -1,0 +1,81 @@
+template {
+  name: "TSR 1125"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Generic"
+  description: "\\large{A missing mage...}\n                    \\large{A ruthless band of kidnappers...}\n                    \\large{A sinister conspiracy...}\n                    \\Product[TSR 1125]{Night Below}, the first epic campaign adventure for the\n                    AD&D game, is designed to take the player characters from 1st level to 10th\n                    level and beyond. The PCs start as beginning adventurers on a routine courier\n                    mission who soon become drawn into combating a sinister plot that menaces the\n                    pleasant land of \\Place{Haranshire}.\n                    By the end of Book I, The Evils of \\Place{Haranshire}, the player characters\n                    should have worked their way up to 5th level. Book II, Perils of the\n                    \\Place{Underdark}, shifts the scene to the underground as the characters\n                    search the seemingly endless realm of the \\Place[Underdark]{underdark} to\n                    discover the fate of the kidnappers\' victims. By the time they reach the dark\n                    cavern of \\Place{The Sunless Sea} in Book III, they should be each 10th level\n                    or above, ready at last to confront the ultimate evil behind the far-reaching\n                    conspiracy.\n                    Inside this box are\n                    \\list\n                    {Three 64-page books comprising a single grand-scale adventure, which\n                    can be placed in any AD&D campaign world.}\n                    {16 Player Handout sheets featuring art, maps, charts, and letters.}\n                    {8 two-sided Dungeon Master Reference Cards providing cutouts, monster\n                    rosters, and two new evil deities.}\n                    {An eight-page booklet of new \\Product[Monster Compendium]{Monstrous\n                    Compendium} entries detailing three new races and two new monsters.}\n                    {6 full-color poster maps detailing all the important locations in the\n                    entire campaign setting.}"
+}
+title: "Night Below: The Underdark Campaign"
+date {
+  year: 1995
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0179"
+  check: 9
+}
+isbn13 {
+}
+pages: 200
+system: ADND_REVISED
+type: ADVENTURE
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "The Evils of Haranshire"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Perils of the Underdark"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Sunless Sea"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "poster-sized"
+  number: 6
+}
+content {
+  part: SHEET
+  description: "MC"
+  number: 4
+}
+content {
+  part: CARD
+  description: "DM reference"
+  number: 6
+}
+content {
+  part: SHEET
+  description: "handouts"
+  number: 16
+}

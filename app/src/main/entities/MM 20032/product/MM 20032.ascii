@@ -1,0 +1,31 @@
+template {
+  name: "MM 20032"
+  description: "An assortment of Shields."
+  short_description: "An assortment of Shields"
+}
+title: "Shields Assortment"
+subtitle: "Dungeon Decor"
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: SMALL_BOX
+producer: "Mega Miniatures"
+series: "Dungeon Decor"
+price {
+  currency: "$"
+  number: 999
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "Shield"
+  number: 20
+}
+layout: FULL_COLOR

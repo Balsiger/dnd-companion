@@ -1,0 +1,139 @@
+template {
+  name: "WTC 9538072"
+  world: "Eberron"
+  description: "You belong to one of the great dynastic houses of commerce, and you bear an\n  arcane symbol of your house\'s power on your skin. This dragonmark makes you\n  special. It grant you access to arcane powers. Whether it\'s a gift of the\n  great \\Monster{dragon} Eberron or a sign of the draconic Prophecy, no one\n  knows. However, one thing is certain: Those who possess dragonmarks have a\n  destiny, the exact nature of which has yet to be revealed.\n\n  This supplement explores each of the thirteen dragonmarked houses in detail\n  and presents advice for playing dragonmarked characters within a house or\n  house guild. In addition, the book introduces exciting new options for\n  dragonmarked characters, including prestige classes, feats, and\n  spells. Finally, it discusses aberrant dragonmarks and their role in the\n  campaign.\n\n  Dragonmarked offers an in-depth look at the power of dragonmarks and the\n  thirteen dragonmarked houses of the Eberron world. It also provides exciting\n  new options for players with dragonmarked characters, including roleplaying\n  hooks, new feats, new prestige classes, and new spells."
+  short_description: "A new supplement exploring a unique aspect of the Eberron world."
+}
+title: "Dragonmarked"
+subtitle: "The Mark of Dragons - a Sign of Destiny"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Lyons, Michelle"
+}
+author {
+  name: "Suleiman, C.A."
+}
+author {
+  name: "Marmell, Ari"
+  job: "additional design"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "additional design"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Bonner, Logan"
+  job: "editorial assistant"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Cotie, Mitch"
+}
+illustrator {
+  name: "Drennan, Rick"
+}
+illustrator {
+  name: "Flores, Gonzalo"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Hooper, Fred"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "art director"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Christina"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3933"
+  check: 8
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+type: CAMPAIGN_EXPANSION
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Eberron Campaign Setting"
+layout: FULL_COLOR

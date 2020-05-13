@@ -1,0 +1,49 @@
+template {
+  name: "WTC 17881"
+  world: "Dragonlance"
+  description: "The flames of war devour \\Place{Ansalon}. The army of dead souls marches toward conquest, led by the mystical warrior \\NPC{Mina}, who serves the powerful \\God{One God}.\n\nA small band of heroes, driven to desperate measures, leads the fight against overwhelming odds.\n\nTwo unlikely protagonists emerge. One is a \\Monster{dragon} overlord who will not easily relinquish her rule. The other is an irrepressible \\Monster{kender} who has been on a strange and remarkable journey that will end in startling and unforeseen fashion.\n"
+  short_description: "The stirring climax of the \\Product{War of Souls}."
+}
+title: "Dragons of a Vanished Moon"
+subtitle: "The stirring climax of the \\Product{War of Souls}."
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+cover {
+  name: "Stawicki, Matt"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2003
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2950"
+  check: 2
+}
+isbn13 {
+}
+pages: 629
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume III"
+series: "War of Souls"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

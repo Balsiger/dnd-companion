@@ -1,0 +1,29 @@
+template {
+  name: "TSR 9207"
+  synonym: "IM3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+  description: "adventure for novice immortals"
+}
+title: "Best of Intentions"
+leader: "The"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}

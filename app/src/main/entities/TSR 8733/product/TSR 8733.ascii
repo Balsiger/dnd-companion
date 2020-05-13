@@ -1,0 +1,38 @@
+template {
+  name: "TSR 8733"
+  reference {
+    name: "catalog98"
+  }
+  world: "None"
+  description: "Escaping from \\Place{Rath}, the crew of the flying ship \\Item{Weatherlight}\n                    finds itself adrift. Grieving for their lost comrades and in need of repairs,\n                    they make their painful way to \\Place{Mercadia}, a city where everything is\n                    for sale.\n                    But not everything is as it seems. In the streets of \\Place{Mercadia}, the\n                    heroes of the \\Item{Weatherlight} find that more than merchandise can be\n                    bought and sold."
+}
+title: "Mercadian Masques"
+subtitle: "Treachery stalks the Weatherlight."
+author {
+  name: "Lebaron, Francis"
+}
+date {
+  year: 1998
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1188"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book 1"
+series: "Masquerade Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

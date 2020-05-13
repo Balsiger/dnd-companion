@@ -1,0 +1,80 @@
+template {
+  name: "TSR 8346"
+  synonym: "WTC 86076"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "A \\Monster{kender} becomes a \\Class{Solamnic Knight} (almost).\n\n  An \\Monster{ogre} emerges as an unlikely savior of the \\Monster{dwarven}\n  race.\n\n  And \\Class{gladiators} compete in the bloodsport of \\Place{Istar}.\n\n  Together with a novella by Margaret Weis and Tracy Hickman, these and more\n  short stories, penned by Richard A. Knaak, Michael Williams, and others of\n  the original \\Place{Dragonlance} Saga creative team -- tell wondrous tales of\n  \\Place{Krynn} in the legendary time of the Kingpriest."
+}
+title: "Reign of Istar"
+leader: "The"
+subtitle: "Before the Cataclysm..."
+author {
+  name: "Williams, Michael"
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "Parkinson, Dan"
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 1992
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "326"
+  check: 4
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Volume One"
+series: "Tales II Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

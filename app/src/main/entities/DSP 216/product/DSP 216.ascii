@@ -1,0 +1,49 @@
+template {
+  name: "DSP 216"
+  description: "Ten years ago, a comic strip called \\Product{Dork Tower} made a quiet start in a magazine called \\Product{Shadis}. Soon moving to other venues, comic books, and web sites, \\Product{Dork Tower} became one of the longest-running, most critically-acclaimed and (most importantly) geekiest gaming comic strips out there. \\Product[DSP 216]{Dork Decade} collects every comic strip from \\Product{Shadis} and \\Product{Dragon} magazines of the strip\'s first decade, chronologically and in color for the first time, along with notes, sketches and much more. Give in to the Dork size! HUZZAH!"
+}
+title: "Dork Decade"
+subtitle: "What A Long Strange Strip It\'s Been!"
+author {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Kovalic"
+}
+date {
+  year: 2007
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "933288"
+  title: "52"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "933288"
+  title: "52"
+  check: 9
+}
+pages: 144
+system: NONE
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "Dork Storm Press"
+series: "Dork Tower"
+price {
+  currency: "$"
+  number: 1599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

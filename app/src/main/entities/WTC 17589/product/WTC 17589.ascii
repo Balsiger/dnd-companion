@@ -1,0 +1,62 @@
+template {
+  name: "WTC 17589"
+  world: "Dragonlance"
+  description: "\\Product{The Qualinesti}, the third title in \\Product{The Elven Nations}\n  trilogy, was first released in mass market format in 1991 and it documented\n  the ancient schism of the \\Monster{elven} races in the \\Place{Dragonlance}\n  world. Unavailable for the past several years, this title is now being\n  brought back into print in a new mass market edition in order to fulfill\n  rising demand."
+}
+title: "Qualinesti"
+leader: "The"
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Cook, Tonya Carter"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3373"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume III"
+series: "The Elven Nations Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,71 @@
+template {
+  name: "TSR 9430"
+  synonym: "FOR5"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "For many years, \\Place{Evermeet} has remained a mystery, known only as the\n                    \\Monster[Elf]{elves}\' place of refuge. So far, details about the island\n                    itself, its geography, and society have been sketchy. It is known that\n                    \\Place{Evermeet} is protected by illusory magic, that ships lose their way or\n                    vanish mysteriously if they approach the isle, and that the\n                    \\Monster[Elf]{elven} navy is the finest in the realms. Past publications have\n                    also revealed that \\Place{Evermeet} is ruled by \\NPC[Amlaruil]{Queen\n                    Amlaruil}, and that her husband \\NPC{Zaor} was murdered decades ago. Beyond\n                    this, little is known.\n                    The \\Product[TSR 9430]{Elves of Evermeet} attempts to investigate and explain\n                    the inner workings of the \\Monster[Elf]{elven} island, and develop the realm\n                    as a setting for \\Place{Forgotten Realms} adventures. Until now,\n                    \\Place{Evermeet} has been reserved exclusively for the \\Monster[Elf]{elves}\n                    and officially closed to \\Monster[Human]{humans}, \\Monster[Dwarf]{dwarves},\n                    and other races. But this product will help you work \\Place{Evermeet} into\n                    your campaign and allow other PC races to visit, or at least interact, with\n                    the mysterious island.\n                    Included are:\n                    \\list\n                    {new \\Monster[Elf]{elven} magic (for High Mages),}\n                    {\\Monster[Elf]{elven} NPCs,}\n                    {tips on playing \\Place{Evermeet} \\Monster[Elf]{elves},}\n                    {gods and goddesses of the island, and}\n                    {adventure ideas for your own campaign!}\n                    Bring the wonder that is \\Place{Evermeet} into your game, with this\n                    sourcebook. It\'s a mystery no more!"
+}
+title: "Elves of Evermeet"
+author {
+  name: "Pryor, Anthony"
+}
+editor {
+  name: "McCready, Anne Gray"
+}
+cover {
+  name: "Lakey, Laura"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Frazier, Daniel"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Boomgarden, Karen S."
+  job: "inhouse coordination"
+}
+manager {
+  name: "Coumbe, Tim"
+  job: "electronic press coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1994
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

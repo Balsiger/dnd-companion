@@ -1,0 +1,20 @@
+template {
+  name: "DMA 000026"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "none"
+}
+title: "Monster & Treasure Assortment, Set One: Dungeon Levels One to Three"
+date {
+  year: 1977
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+price {
+}

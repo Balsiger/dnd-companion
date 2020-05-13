@@ -1,0 +1,46 @@
+template {
+  name: "TSR 8446"
+  synonym: "WTC 86384"
+  reference {
+    name: "complete product listing"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "Welcome, guest, to our inn.\n\n  Shake the dust from your boots and throw off the cares of the weary road you\n  travel. Have no fear of \\Monster{boglin} or \\Monster{draconian},\n  \\Monster{dragon} or \\Monster{ogre} (except in legend and song that you will\n  hear around our fire)! This night, guest, you are safe and warm within the\n  branches of the sheltering \\Place{vallenwood}.\n\n  \\right{-- Your proprietors, \\NPC{Caramon} and \\NPC{Tika Majere}}\n\n  For your enjoyment, we offer\n\n  \\list\n  {How the Companions Met}\n  {Lord \\NPC{Gunthar}\'s War Journal}\n  {\\NPC{Bertrem}\'s Essays on the Races of \\Place{Krynn}}\n  {Notes from \\NPC{Raistlin}\'s Book of Herb Lore}\n  {Rune Readings and Numerological Charts}\n  {Songs, Recipes, Musical Scores}\n  {Legends, Proverbs, Artifacts of \\Place{Krynn}}\n\n  And a few other items we may have overlooked (as the \\Monster{kender} said\n  when he emptied his pockets)."
+}
+title: "Leaves from the Inn of the Last Home"
+subtitle: "Bill of Fare"
+notes: "According to WoTC website released in November 1993"
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 1987
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "465"
+  check: 4
+}
+isbn13 {
+}
+pages: 256
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

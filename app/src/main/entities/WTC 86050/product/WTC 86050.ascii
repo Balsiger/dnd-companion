@@ -1,0 +1,62 @@
+template {
+  name: "WTC 86050"
+  world: "Dragonlance"
+  description: "An all-new young reader adaptation of the third \\Place{Dragonlance} novel.\n\n  The third \\Place{Dragonlance} novel in the trilogy that launched the entire\n  \\Place{Dragonlance} novel line, \\Product{Dragons of Spring Dawning}, has been\n  adapted to a format for young readers. The novel has been divided into two\n  volumes, \\Product{Hope\'s Flame} and \\Product{A Dawn of Dragons}."
+}
+title: "Hope\'s Flame"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3099"
+  check: 3
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Part Five"
+series: "Dragonlance Chronicles"
+series: "Dragons of Spring Dawning"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

@@ -1,0 +1,27 @@
+template {
+  name: "TSR 3029"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "S.P.I."
+  description: "a new version of the old SPI game"
+}
+title: "European Theater of Operations"
+date {
+  year: 1993
+}
+isbn {
+}
+isbn13 {
+}
+system: WORLD_WAR_II
+audience: ALL
+type: BOARD_GAME
+price {
+  currency: "$"
+  number: 3995
+  precision: 100
+}

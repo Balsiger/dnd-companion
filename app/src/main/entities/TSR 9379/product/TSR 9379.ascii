@@ -1,0 +1,80 @@
+template {
+  name: "TSR 9379"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "Well met, traveler!\n                    You hold in your hands an amusing and insightful guide to\n                    \\Place{Waterdeep}---the metropolis of the \\Place{North}, the\n                    \\Place[Waterdeep]{City of Splendors}. This handy pouch-sized tome presents\n                    \\NPC[Volothamp Geddarm]{Volo}\'s choice of the finest, most spectacular, and\n                    least known (but most desired) information about the people, customs, and\n                    locations in \\Place{Waterdeep}---ranked with a handy coin, dagger, pipe, and\n                    tankard rating system.\n                    Discover:\n                    \\list\n                    {What it\'s like to attend a private party hosted by\n                    \\Place[Waterdeep]{Whaterdhavian} nobles,}\n                    {Where \\Place{Waterdeep}\'s ghosts walk,}\n                    {Legends and clues about famous, as-yet-unrecovered treasures,}\n                    {What fare a typical \\Place[Waterdeep]{Waterdhavian} menu offers you,}\n                    {The best moon-kissed spots to meed \\Place[Waterdeep]{Waterdhavians} of the\n                    opposite sex,}\n                    {\\Place{Waterdeep}\'s best shops and craftsmen,}\n                    {The best places to dine, stay, see---and of course, avoid!}\n                    \\bold{Suitable for all levels of play.}\n                    Special Note: This edition of \\NPC[Volothamp Geddarm]{Volo}\'s Guide to\n                    \\Place{Waterdeep}, intended for travelers from beyond the borders of\n                    \\Place{Faer\\hat{u}n}, contains notes and commentary by the famous archmage\n                    and sage \\NPC{Elminster}."
+}
+title: "Volo\'s Guide to Waterdeep"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Martin, Julia E."
+}
+cover {
+  name: "Ruppel, Robh"
+}
+cartographer {
+  name: "Meyer, Joel"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+date {
+  year: 1993
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "335"
+  check: 3
+}
+isbn13 {
+}
+pages: 240
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Volo\'s Guide"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

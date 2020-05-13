@@ -1,0 +1,30 @@
+template {
+  name: "TSR 8214"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "None"
+  description: "they protect their home colonies"
+}
+title: "Outbanker"
+date {
+  year: 1993
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "\302\254\302\243 "
+  number: 250
+  precision: 100
+}

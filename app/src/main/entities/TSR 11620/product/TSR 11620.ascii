@@ -1,0 +1,39 @@
+template {
+  name: "TSR 11620"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  world: "Star*Drive"
+  description: "this sourcebook reveals the secrets of the Aegis system"
+}
+title: "System Guide to Aegis"
+author {
+  name: "William W. Connors"
+}
+author {
+  name: "Steven Schend"
+}
+date {
+  year: 2000
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1620"
+  check: 6
+}
+isbn13 {
+}
+pages: 96
+system: ALTERNITY
+type: ACCESSORY
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

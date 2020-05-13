@@ -1,0 +1,163 @@
+template {
+  name: "Dragon 237"
+  world: "Generic"
+}
+title: "Dragon 237"
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Beal, Clayton R."
+}
+author {
+  name: "Stigliano, Todd"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Melka, Kevin"
+}
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "MacQuarrie, Lachlan"
+}
+author {
+  name: "Heard, Bruce"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Dunnell, Brian"
+}
+author {
+  name: "Swan Rick"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "associate editor"
+}
+editor {
+  name: "Baldwin, Lizz"
+  job: "editorial assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "Miller, David O."
+}
+illustrator {
+  name: "Van Camp, Susan"
+}
+illustrator {
+  name: "Schwartz, Stephen"
+}
+illustrator {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Valusek, Valerie A."
+}
+illustrator {
+  name: "Walden, Tonia"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Winter, Steve"
+}
+illustrator {
+  name: "Pillsbury, Joseph"
+}
+illustrator {
+  name: "Schwartz, Stephen"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Geraci, Jeff"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Phil, Longmier"
+}
+illustrator {
+  name: "Gilliard, Harry W."
+}
+illustrator {
+  name: "Doney, Mark"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Baerbock, Linda"
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1997
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXI 8"
+number: "237"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

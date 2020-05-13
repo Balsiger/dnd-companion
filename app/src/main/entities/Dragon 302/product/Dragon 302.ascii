@@ -1,0 +1,184 @@
+template {
+  name: "Dragon 302"
+  world: "Generic"
+  description: "Issue 302 of the magazine. Magic issue."
+}
+title: "Dragon 302"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Broadhurst, Creighton"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Christ, David"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Dunwoody, Charles"
+}
+author {
+  name: "Four, Johnny"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Looby, Paul"
+}
+author {
+  name: "Mearls, Michael"
+}
+author {
+  name: "Richards, Jhnatan"
+}
+author {
+  name: "Tanner, Chris"
+}
+author {
+  name: "Turley, Kieran"
+}
+author {
+  name: "Vardeman, Robet"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Anderson, Kyle J."
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Grenier, Todd"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Sass, Mike"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Walstrom, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2002
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 118
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 7"
+number: "302"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "traps & treasures"
+  number: 1073741824
+}

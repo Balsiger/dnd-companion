@@ -1,0 +1,25 @@
+template {
+  name: "DMA 000017"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+  description: "unknown"
+}
+title: "Underworld and Wilderness Adventures"
+leader: "The"
+date {
+  year: 1974
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 350
+  precision: 100
+}

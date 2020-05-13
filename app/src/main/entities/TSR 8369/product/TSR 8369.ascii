@@ -1,0 +1,43 @@
+template {
+  name: "TSR 8369"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 225"
+  }
+  world: "Dragonlance"
+  description: "culmination of the Dragonlance chronicles"
+}
+title: "Dragons of Summer Flame"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+date {
+  year: 1995
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0189"
+  check: 6
+}
+isbn13 {
+}
+pages: 560
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2295
+  precision: 100
+}

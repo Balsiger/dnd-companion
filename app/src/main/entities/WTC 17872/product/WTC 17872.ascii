@@ -1,0 +1,138 @@
+template {
+  name: "WTC 17872"
+  world: "Forgotten Realms"
+  description: "Every corner of \\Place{Faer\\hat{u}n} harbors its own sinister element. When\n                    opportunities arise, malevolent groups and nefarious individuals emerge from\n                    the shadows to make their infamous marks on the \\Place{Realms}. Within these\n                    pages, you will discover everything players and Dungeon Masters need to\n                    create the most evil organizations, treacherous villains, and morally\n                    ambiguous antiheroes to ever afflict the \\Place{Forgotten Realms} game\n                    setting.\n                    \\list\n                    {3 new races}\n                    {Over 30 new spells}\n                    {New feats and prestige classes}\n                    Everything you need to know to play evil or morally ambiguous characters in\n                    the \\Place{Forgotten Realms} setting.\n                    \\Product{Champions of Ruin} is a comprehensive guide to playing evil\n                    characters in the \\Place{Forgotten Realms} setting. Many aspects of play are\n                    covered: vengeance, ambition, evil vs. evil, corruption and moral failure,\n                    loyalty and betrayal. The book also discusses types of evil -- lawful,\n                    chaotic, and neutral -- as well as morally ambivalent characters such as\n                    anti-heroes and rogues. Elder evils of extreme power are discussed along with\n                    tools, feats, spells, evil places and planar touchstones, and guilds and\n                    organizations that evil characters can join. Two new races are also\n                    introduced."
+}
+title: "Champions of Ruin"
+subtitle: "Explore the Darker Side the Realms"
+author {
+  name: "Crook, Jeff"
+}
+author {
+  name: "Upchurch, Wil"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "additional design"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "additional design"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "developer"
+}
+author {
+  name: "Boyd, Eric L."
+  job: "developer"
+}
+author {
+  name: "Krashos, George"
+  job: "developer"
+}
+editor {
+  name: "Thompson, John"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Parillo, Lucio"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Sasso, Marco"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Jason"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "RPG design manager"
+}
+manager {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG R&D"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3692"
+  check: 4
+}
+isbn13 {
+}
+pages: 160
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}

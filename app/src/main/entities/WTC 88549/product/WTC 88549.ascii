@@ -1,0 +1,49 @@
+template {
+  name: "WTC 88549"
+  world: "Dragonlance"
+  description: "A mysterious force holds \\Place{Krynn} in thrall. A young \\NPC{woman},\n  protected by her regiment of dark-armored knights, calls upon the might of an\n  unknown god to bring victory to her army as it sweeps across the land. The\n  souls of the dead rob the living of their magic. A \\Monster{dragon} overlord\n  threatens the very land the elves hold most dear.\n\n  Amidst the chaos, a band of brave and selfless heroes struggles against an\n  immortal power that appears to thwart them at every turn. The encroaching\n  darkness threatens to engulf all hope, all faith, all light.\n\n  \\Event{The War of Souls} rages on.\n\n  The New York Times bestselling hardcover now in paperback.\n\n  This latest title from \\Place{Dragonlance} cocreators Margaret Weis and Tracy\n  Hickman is the sequel to the New York Times bestselling \\Product{Dragons of a\n  Fallen Sun}. This paperback version contains a preview chapter from the\n  upcoming conclusion to the trilogy, \\Product{Dragons of a Vanished Moon}."
+  short_description: "Volume II in the War of Souls series"
+}
+title: "Dragons of a Lost Star"
+subtitle: "The \\Event{War of Souls} rages on."
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+cover {
+  name: "Stawicki, Matt"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2002
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2706"
+  check: 2
+}
+isbn13 {
+}
+pages: 550
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume II"
+series: "War of Souls"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,259 @@
+template {
+  name: "WTC B8682"
+  category: "Rules Supplement"
+  world: "Forgotten Realms"
+  description: "The esteemed loremaster \\NPC{Volothamp Geddarm} is back! He\'s written a fantastical dissertation, covering some of the most iconic monsters in the worlds of Dungeons & Dragons. But the \\NPC{Sage of Shadowdale} himself, \\NPC{Elminster}, doesn\'t believe \\NPC{Volo} gets some of the details quite right. Don\'t miss out as \\NPC{Volo} and \\NPC{Elminster} team up to illuminate the uninitiated on creatures both common and obscure.\n\nSure to inspire any Dungeon Master, this book explores the stories and lairs of various monsters, including giants, \\Monster{mind flayers}, \\Monster{Orcs}, and goblinoids. Players can also find rules for playing a variety of new races, including the angelic \\Monster{aasimar} and the feline \\Monster{tabaxi}. Also included are game statistics for scores of monsters - some new to the game, and some that hail from the game\'s past - which are ready to appear in D&D adventures as mighty friends or fearsome foes."
+  short_description: "Immerse yourself in monster lore in this supplement."
+}
+title: "Volo\'s Guide to Monsters"
+subtitle: "Research Has Never Been So Dangerous"
+author {
+  name: "Mearls, Mike"
+  job: "lead designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "lead rules developer"
+}
+author {
+  name: "Lee, Adam"
+  job: "designer"
+}
+author {
+  name: "Mohan, Kim"
+  job: "designer"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+author {
+  name: "Reynolds, Sean K"
+  job: "designer"
+}
+author {
+  name: "Sernett, Matthew"
+  job: "designer"
+}
+author {
+  name: "Sims, Chris"
+  job: "designer"
+}
+author {
+  name: "Winter, Steve"
+  job: "designer"
+}
+author {
+  name: "Greenwood, Ed"
+  job: "additional designer"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Dupuis, Chris"
+  job: "editorial assitant"
+}
+editor {
+  name: "Petrisor, Ben"
+  job: "editorial assistant"
+}
+editor {
+  name: "Stan!"
+  job: "editorial assistant"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Blando, Jared"
+}
+illustrator {
+  name: "Babbey, Tom"
+}
+illustrator {
+  name: "Balmet, John-Paul"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Bradley, Christopher"
+}
+illustrator {
+  name: "Burburan, Filip"
+}
+illustrator {
+  name: "Burdett, Christopher"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "Crowe, Stephen"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Dorman, Dave"
+}
+illustrator {
+  name: "Faille, Michael"
+}
+illustrator {
+  name: "Fischer, Scott M."
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Guay, Rebecca"
+}
+illustrator {
+  name: "Hurwitz, Lake"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lacera, Jorge"
+}
+illustrator {
+  name: "Ljunggren, Daniel"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Nelor, Marco"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Irvin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna Wolf"
+  job: "additional art director"
+}
+illustrator {
+  name: "Whitters, Richard"
+  job: "additional art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+manager {
+  name: "Fleming, Heather"
+  job: "project manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "product engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+date {
+  year: 2016
+  month: 11
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6601"
+  check: 1
+}
+pages: 224
+system: DND_NEXT
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

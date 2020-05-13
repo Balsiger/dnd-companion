@@ -1,0 +1,60 @@
+template {
+  name: "WTC 2172274"
+  world: "Eberron"
+  description: "During the \\Event{Last War}, \\NPC{Gaven d\'Lyrandar} hunted powerful \\Item{dragonshards} in the world\'s most dangerous places. But on one mission the danger proved too great, and he found an ancient artifact whose power filled his mind with strange visions of impending doom.\n\nExiled from his House, spurned by his family, \\NPC{Gaven} has spent years locked in the island prison of \\Place{Dreadhold}, the most impregnable fortress in all the world. He has whiled away the years on the verge of madness, his only companion a hated war criminal who seems all too interested in \\NPC{Gaven}.\n\nBut when a bold prison break sets \\NPC{Gaven} loose upon the world and in the company of a desperate band of outlaws, his strange dreams begin to make sense. The shards of vision begin to form a pattern, a fulfillment of the ancient \\Event{Prophecy of the Dragons}. As \\NPC{Gaven} becomes both hunter and hunted, he must put the pieces together before it is too late, before the \\Monster{Storm Dragon} awakens to shake the foundations of the world."
+  short_description: "Draconic Prohecies, Book One"
+}
+title: "Storm Dragon"
+subtitle: "Draconic Prophecies"
+author {
+  name: "Wyatt, James"
+}
+editor {
+}
+cover {
+  name: "Swandland, Raymond"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2008
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4854"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4854"
+  check: 3
+}
+pages: 373
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book One"
+series: "Draconic Prophecies"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

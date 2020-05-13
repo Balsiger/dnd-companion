@@ -1,0 +1,26 @@
+template {
+  name: "WTC 96701"
+  world: "Generic"
+  description: "The Huge Pack contains a randomized selection of figures designed to expand\n                    any collection of Dungeons & Dragons miniatures. Figures in this set are\n                    chosen directly from key D&D titles, including the \\Product{Miniatures\n                    Handbook}, \\Product{Expanded Psionics Handbook} and the new \\Product{Eberron\n                    Campaign Setting}. Also, in honor of the 30th anniversary of Dungeons &\n                    Dragons, the set contains characters and creatures made popular during the\n                    history of the game.\n                    In addition, one of the nine miniatures are much larger than any miniatures\n                    released to date and are representative of classic, larger-than-life D&D\n                    icons such as giants and dragons.\n                    Huge Pack components:\n                    \\list\n                    {Nine randomized, pre-painted plastic miniatures, including one huge\n                    miniature.}\n                    {Statistics cards for each miniature.}\n                    The product line features:\n                    \\list\n                    {72 unique miniatures in the Giants of Legend set, inlcuding 12 huge-sized\n                    creatures.}\n                    {Miniatures are pre-painted plastic, and are built to standard hobby scale\n                    (30mm).}\n                    {All D&D miniatures packages are randomized and made up of rare, uncommon,\n                    and common figures.}\n                    {Every miniature can be used to add dimension to roleplaying games or to\n                    play skirmish-level or mass-battle combat scenarios.}"
+}
+title: "Giants of Legend Huge Pack"
+date {
+  year: 2004
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3495"
+  check: 6
+}
+isbn13 {
+}
+system: DND_3RD
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+number: "4"
+series: "D&D Miniatures"
+price {
+}

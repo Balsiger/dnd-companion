@@ -1,0 +1,122 @@
+template {
+  name: "TSR 2101"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "This is the indispensable encyclopedia of fantasy role-playing and also the\n                    perfect companion to the referee\'s 2nd Edition \\Product{Dungeon Master\'s\n                    Guide}. Everything players need is here: how to determine a character\'s\n                    Strength, Wisdom, Charisma, and other abilities; the differences amon the\n                    various fantasy races, from \\Monster{elves} and \\Monster{haflings} to\n                    \\Monster{dwarves}, \\Monster{gnomes}, and others; complete rules for character\n                    improvement; the most advantageous mapping and combat procedures; and much\n                    more, all in this easy-to-use, revised version of the classic role-playing\n                    rulebook. With this 2nd Edition, the best-selling role-playing game in\n                    history gets even better!"
+}
+title: "Player\'s Handbook"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Winter, Steve"
+}
+author {
+  name: "Pickens, Jon"
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Chaffee, Douglas"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Farley, Craig"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Olson, Erik"
+}
+illustrator {
+  name: "Pennington, Jack"
+}
+illustrator {
+  name: "Butler, Jeff"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Martin, Jean E."
+}
+illustrator {
+  name: "Sutherland, Dave"
+}
+typographer {
+  name: "Janke, Kim"
+}
+typographer {
+  name: "Bakk, Linda"
+}
+typographer {
+  name: "Elmore, Betty"
+}
+typographer {
+  name: "Lokotz, Angie"
+}
+manager {
+  name: "Pickens, Jon"
+  job: "playtest coordination"
+}
+manager {
+  name: "Bakk, Linda"
+  job: "graphic design"
+}
+manager {
+  name: "O\'Malley, Colleen"
+  job: "keylining"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "keylining"
+}
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "716"
+  check: 5
+}
+isbn13 {
+}
+pages: 256
+system: ADND_2ND
+audience: PLAYER
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+number: "1"
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

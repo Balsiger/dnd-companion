@@ -1,0 +1,53 @@
+template {
+  name: "TSR 8544"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "Scholar-priest \\NPC{Cadderly} returns to the \\Place{Edificant Library} to\n                    find his life shattered. \\NPC{Danica}, the library, and \\NPC{Cadderly}\'s own\n                    livelihood are at stake as he tries to put the chaos curse to rest for\n                    good.\n                    \\Product{The Chaos Curse} is the exciting conclusion to \\Product{The Cleric\n                    Quintet}, set in the \\Place{Forgotten Realms} fantasy world from TSR,\n                    Inc. Author R.A. Salvatore also wrote the \\Product{New York Times}\n                    best-selling novels \\Product{Starless Night}, \\Product{The Legacy},\n                    \\Product{The Halfling\'s Gem}, and \\Product{Sojourn}."
+}
+title: "Chaos Curse"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Easley, Jeff"
+}
+date {
+  year: 1994
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "860"
+  check: 6
+}
+isbn13 {
+}
+pages: 299
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Five"
+series: "Cleric Quintet"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

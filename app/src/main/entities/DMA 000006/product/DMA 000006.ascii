@@ -1,0 +1,25 @@
+template {
+  name: "DMA 000006"
+  description: "British catalog of the 1993 stock of TSR"
+}
+title: "Hobby Shop Catalogue 1993"
+date {
+  year: 1993
+}
+isbn {
+}
+isbn13 {
+}
+pages: 49
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

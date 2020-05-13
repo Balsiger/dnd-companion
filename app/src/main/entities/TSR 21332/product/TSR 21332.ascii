@@ -1,0 +1,23 @@
+template {
+  name: "TSR 21332"
+  reference {
+    name: "net"
+  }
+  world: "None"
+}
+title: "Deck Construction Companion"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 999
+  precision: 100
+}

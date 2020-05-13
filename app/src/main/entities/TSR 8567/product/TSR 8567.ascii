@@ -1,0 +1,54 @@
+template {
+  name: "TSR 8567"
+  synonym: "WTC 86646"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Forgotten Realms"
+  description: "Strange magic is on the loose in \\Place{Firefall Keep}---magic that kills.\n                    The mightiest \\Group{War Wizards} are baffled, and the shadow of destruction\n                    threatens valiant \\Group{Harpers} and nobles of the fair realm of\n                    \\Place{Cormyr} alike. With \\Group{Harpers} in jeopardy, it is up to the\n                    legendary \\NPC{Bard of \\Place{Shadowdale}}, \\NPC{Storm Silverhand}, to\n                    overcome this lethal and mysterious force.\n                    \'Whenever I think I can relax at last, someone hastens to brutally point out\n                    to me that I\'ve fresh work to do. It\'s time to save the world again.\'\n                    \\right{---\\NPC{Storm Silverhand}}.\n                    \\Product{Stormlight} is the fourteenth in an open-ended series of novels\n                    focusing on the \\Group{Harpers}, the secret organization for Good in the\n                    \\Place{Forgotten Realms} fantasy world."
+}
+title: "Stormlight"
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Velez, Walter"
+}
+date {
+  year: 1996
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0520"
+  check: 4
+}
+isbn13 {
+}
+pages: 309
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book 14"
+series: "Harpers Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

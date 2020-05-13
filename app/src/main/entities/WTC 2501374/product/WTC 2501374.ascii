@@ -1,0 +1,50 @@
+template {
+  name: "WTC 2501374"
+  world: "Forgotten Realms"
+  description: "\\emph{You didn\'t get away. It caught you.}\n                    \\NPC{Anusha} took the warlock\'s sleeping potion to stay in her dreamform while she battled the great \\Monster{kraken}.\n                    \\emph{What do you mean?}\n                    That potion that prevented her from waking in time to escape the \\Monster{kraken}\342\200\232\303\204\303\264s trap.\n                    \\emph{That relic sucked your mind into its heart.}\n                    He\'d do anything to free her -- even go to the \\Place{City of Torment} itself.\n                    \\Large{He just has to figure out how.}"
+  short_description: "Book II in the Abolethic Sovereignty"
+}
+title: "City of Torment"
+subtitle: "\\Place{Xxiphu}, in the \\Place{Sea of Fallen Stars}"
+author {
+  name: "Cordell, Bruce R."
+}
+cover {
+  name: "Targete, J.P."
+}
+cartographer {
+}
+date {
+  year: 2009
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5184"
+  check: 2
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5184"
+}
+pages: 309
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book II"
+series: "Abolethic Sovereignty"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

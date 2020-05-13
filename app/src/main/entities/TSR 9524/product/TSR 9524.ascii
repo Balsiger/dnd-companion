@@ -1,0 +1,76 @@
+template {
+  name: "TSR 9524"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  world: "Forgotten Realms"
+  description: "Behold the newest, brightest, and perhaps best travel guide by the\n                    world-walking, all-seeing \\NPC[Volothamp Geddarm]{Volo}! Fresh from\n                    recounting the splendors of \\Place{Cormyr}, the \\Place{Forest Kingdom}, and\n                    circumnavigating all of \\Place{Toril} in a bold and wondrous adventure that\n                    none have equaled for its haste and humor, the tireless \\NPC[Volothamp\n                    Geddarm]{Volo} has come at last to the beautiful \\Place{Dales} of the\n                    \\Place{Dragonreach} in the \\Place{Heartlands} of the \\Place[Forgotten\n                    Realms]{Realms} and set forth his florid account of things to see, things to\n                    do ... and things to avoid. Many of the finest establishments and most\n                    striking sights and landmarks of the \\Place{Dales} are featured here, ranked\n                    with the handy coin, dagger, pipe, and tankard ratings system. \\NPC[Volothamp\n                    Geddarm]{Volo} has identified the best and the worst, so you need waste no\n                    precious time nor coins of your own discovering just with attraction best\n                    suits your taste.\n                    Discover:\n                    \\list\n                    {Where to find caverns whose walls sparkle with gems.}\n                    {The way into the tombs of the \\Group{Twelve Dancing Wizards}---and\n                    why they dance.}\n                    {The curse that lies on several barrow tombs and why it was laid.}\n                    {Where one might find the \\Item{Talking Bone} and what it does.}\n                    {Why it is best not to move any of the \\Item{Chessmen of\n                    Valsprendar}.}\n                    {Where to find a door that opens into a room halfway across\n                    \\Place{Faer\\hat{u}n}---and why it should be used only with extreme\n                    caution.}\n                    Suitable for all levels of play.\n                    Special Note: This edition of \\Product[TSR 9524]{Volo\'s Guide to the\n                    Dalelands}, intended for travelers from beyond the borders\n                    \\Place{Faer\\hat{u}n}, contains notes, commentary, and substantial revisions\n                    by the famous sage and archmage \\NPC{Elminster} of \\Place{Shadowdale}."
+}
+title: "Volo\'s Guide to the Dalelands"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Martin, Julia E."
+}
+cover {
+  name: "Cabral, Ciruelo"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Brandon, Theresa"
+}
+illustrator {
+  name: "Crnkovich, Tony"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Galica, Robert J."
+  job: "graphic coordination"
+}
+date {
+  year: 1996
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0406"
+  check: 2
+}
+isbn13 {
+}
+pages: 240
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Volo\'s Guide"
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

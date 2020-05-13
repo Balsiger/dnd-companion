@@ -1,0 +1,35 @@
+template {
+  name: "WTC 88268"
+  world: "Generic"
+  description: "\\large{Even Greater Threats Await!}\n                    As heroes grown in power, they seek out more formidable adversaries. Whether\n                    sinister or seductive, ferocious or foul, the creatures lurking within these\n                    pages will challenge the most experienced characters of any campaign.\n                    This supplement for the D&D game unleashes a horde of monsters to confront\n                    characters at all levels of play, including several with Challenge Ratings of\n                    21 or higher. Inside are old favorites such as the \\Monster{death knight} and\n                    the \\Monster{gem dragons}, as well as all-new creatures such as the\n                    \\Monster{bronze serpent}, the \\Monster{effigy}, and the\n                    \\Monster{fiendwurm}. Along with updated and expanded monster creation rules,\n                    \\Product{Monster Manual II} provides an inexhaustible source of ways to keep\n                    even the toughest heroes fighting and running for their lives.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook} and the \\Product{Dungeon Master\'s Guide}. A player needs only the\n                    \\Product{Player\'s Handbook}."
+}
+title: "Monster Manual II"
+date {
+  year: 2002
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2873"
+  check: 5
+}
+isbn13 {
+}
+pages: 224
+system: DND_3RD
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "TSR"
+number: "II"
+series: "Monster Manual"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "the book"
+  number: 1073741824
+}

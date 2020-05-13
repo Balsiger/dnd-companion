@@ -1,0 +1,24 @@
+template {
+  name: "TSR 8730"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+}
+title: "Battle Against Lord Fear"
+date {
+  year: 1994
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+system: WILD_SPACE
+type: ADVENTURE
+number: "Book Two"
+price {
+  currency: "\302\254\302\243 "
+  number: 199
+  precision: 100
+}

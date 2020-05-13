@@ -1,0 +1,46 @@
+template {
+  name: "TSR 2632"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  world: "Planescape"
+  description: "\\large{The \\Place{Infinite Staircase} is a planewalker\'s dream. But a dream\n                    can turn into a nightmare...}\n                    \\emph{Stretching to every plane imaginable, the \\Place{Infinite Staircase} is\n                    one of the best-kept secrets of planar travel in the multiverse. Watched over\n                    by the mysterious \\Monster{lillendi}, the \\Place{Staircase} stretches in all\n                    directions, bending back upon itself to form the ultimate three-dimensional\n                    maze---and every landing where the \\Place{Staircase} stops, a doorway to a\n                    new planar location awaits the traveler.}\n                    The chaotic morass of energy and matter filling \\Place{Limbo} holds a dark\n                    secret---the same secret found in the depths of \\Place{Baator}, in an\n                    underground hive-city on \\Place{Arcadia}, and in a battle-torn\n                    \\Monster{githyanki} fortress on the \\Place{Astral Plane}. Using the\n                    \\Place{Infinite Staircase}, a group of planewalkers must travel to these\n                    far-flung locations, and elsewhere, to learn of a new threat to the\n                    planes---and stop it. Even exploring the \\Place{Staircase} itself can be\n                    dangerous, particularly when it\'s ravaged by a barmy \\Monster{fiend} and an\n                    even crazier sorceress.\n                    \\Product{Tales From the Infinite Staircase} features eight separate but\n                    linked adventures presented in a new format. The adventures can be played in\n                    any order, yet each scenario impacts upon and changes those played after\n                    it. Further, the PCs can return to the individual scenario locations and find\n                    that conditions have changed so that more adventuring is possible. Each of\n                    the eight adventures can also be played separately.\n                    \\Product{Tales From the Infinite Staircase} can be linked with the epic\n                    adventure from the \\Product{Forgotten Realms} setting, \\Product{For Duty &\n                    Deity}, wherein the heroes must traverse the \\Place{Infinite Staircase} to\n                    reach the foreboding realm of \\NPC{Graz\'zt}, a wicked lord of the\n                    \\Place{Abyss}."
+}
+title: "Tales from the Infinite Staircase"
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1204"
+  check: 9
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ADVENTURE
+style: SOFT_COVER
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

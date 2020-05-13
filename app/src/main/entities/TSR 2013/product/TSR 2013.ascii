@@ -1,0 +1,26 @@
+template {
+  name: "TSR 2013"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+}
+title: "Deities & Demi-Gods"
+date {
+  year: 1980
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1200
+  precision: 100
+}

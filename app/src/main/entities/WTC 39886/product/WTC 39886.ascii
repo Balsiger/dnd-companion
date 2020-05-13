@@ -1,0 +1,109 @@
+template {
+  name: "WTC 39886"
+  synonym: "DN6"
+  world: "Generic"
+  description: "Your tabletop never looked better! With this pack of customizable terrain tiles, you can add a new dimension to your Dungeons & Dragons adventures. Easy set up and infinitely expandable, this pack allows you to create the adventures you want to play. Pick up additional packs to create larger, more elaborate encounters."
+  short_description: "Dungeon tiles for a castle."
+}
+title: "Castle Grimstead"
+subtitle: "Have Fun Building Your Castle!"
+author {
+  name: "Lee, Peter"
+}
+cover {
+  name: "Engle, Jason A."
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Irvin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+manager {
+  name: "Tapp, Gretchen"
+  job: "senior product engineer"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D R&D senior producer"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "D&D R&D producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D R&D senior manager"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+date {
+  year: 2012
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6039"
+  check: 2
+}
+pages: 6
+system: NONE
+type: ACCESSORY
+style: FOLDER
+producer: "WTC"
+number: "DN6"
+series: "Dungeon Tiles"
+price {
+  currency: "$"
+  number: 1195
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1
+}
+content {
+  part: SHEET
+  description: "terrain tiles"
+  number: 6
+}
+layout: FULL_COLOR

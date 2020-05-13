@@ -1,0 +1,47 @@
+template {
+  name: "CSB012"
+  world: "Generic"
+  description: "Bloodied Base - 25 mm square base with textured surface and hearts raised around the edge this is for marking the bloodied condition on a figure when it is at half HP or less. Sold in a package of five markers. Sculpted by Clint Staples.\n"
+  short_description: "A set of 5 bases to indicated bloodied status."
+}
+title: "Bloodied Base"
+subtitle: "There Will Be Blood"
+author {
+}
+editor {
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+  name: "Staples, Clint"
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "Armorcast"
+price {
+  currency: "$ "
+  number: 500
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "bloodied base"
+  number: 5
+}
+layout: FULL_COLOR

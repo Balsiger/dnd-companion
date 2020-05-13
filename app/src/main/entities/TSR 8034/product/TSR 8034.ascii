@@ -1,0 +1,45 @@
+template {
+  name: "TSR 8034"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "\\NPC{Teldin Moore}\'s magical amulet allows him to \'see\' through the eyes of\n  the great ship \\Item{Spelljammer}, across the wilds of space. Following clues\n  from an ancient \\Monster[gnome]{gnomish} library and the vision he sees, he\n  traces the mighty craft through the \\Place{crystal spheres}. He employs his\n  magical cloak\'s power and discovers his quarry\'s home, but \\NPC{Teldin}\'s\n  cloak---and the possibility it could give him control over the\n  \\Item{Spelljammer}---continues to drawn enemies, often in the guise of\n  friends. Will he survive long enough to face the final danger that awaits him\n  at the point of the \\Item{Spelljammer}\'s origin---the \\Place{Broken\n  Sphere}?\n\n  \\Product{The Broken Sphere}, set in the \\Place{Spelljammer} fantasy universe,\n  is the fifth book in the \\Product{Cloakmaster Cycle} of \\Place{Spelljammer}\n  space fantasy novels from TSR, Inc."
+}
+title: "Broken Sphere"
+leader: "The"
+author {
+  name: "Findley, Nigel"
+}
+cover {
+  name: "Scott, Michael"
+}
+date {
+  year: 1993
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "596"
+  check: 8
+}
+isbn13 {
+}
+pages: 314
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Five"
+series: "Cloakmaster Cycle"
+price {
+  currency: "$ "
+  number: 399
+  precision: 100
+}

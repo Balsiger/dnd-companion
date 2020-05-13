@@ -1,0 +1,38 @@
+template {
+  name: "TSR 8205"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+  description: "a threat forces elvish and Mannish races into an alliance"
+}
+title: "Jewels of Elvish"
+leader: "The"
+date {
+  year: 1993
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "726"
+  check: 2
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

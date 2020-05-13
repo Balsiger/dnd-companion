@@ -1,0 +1,50 @@
+template {
+  name: "WTC 25355"
+  synonym: ""
+  world: "Forgotten Realms"
+  description: "A fallen statue, caught in the cobbles of the city it tried first to save, and then to destroy.\n                    Hollowed out, built over, and rented in pieces as apartments.\n                    \\emph{\\NPC{Tennora} wants to master wizardry at the \\Place{House of Wonder} and forge a life in the bustling City of \\Place{Waterdeep}. Her plans are unfolding admirably until a madwoman arrives at the \\Place{God Catcher}, where \\NPC{Tennora} has rented a room, and screems for the landlady --- soon demonstrating she\'s more than a crazy woman with strong longs. Quite a lot more.}\n                    The \\Product{The God Catcher} is a wild adventure that rages from end to end of \\Place{Waterdeep}: it features vivid characters who have fascinating lives, I loved it, and you will too!"
+}
+title: "God Catcher"
+leader: "The"
+subtitle: "Dreams Heavy with Prophecy emanate from the God Catcher"
+author {
+  name: "Evans, Erin M."
+}
+cover {
+  name: "Jones, Android"
+}
+date {
+  year: 2010
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5486"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5486"
+  check: 5
+}
+pages: 339
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "5"
+series: "Ed Greenwood Presents Waterdeep"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

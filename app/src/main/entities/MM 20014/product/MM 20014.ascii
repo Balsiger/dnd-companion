@@ -1,0 +1,35 @@
+template {
+  name: "MM 20014"
+  description: "A pair of sarcophagi."
+  short_description: "A pair of sarcophagi."
+}
+title: "Sarcophagus His & Hers"
+subtitle: "Dungeon Decor"
+illustrator {
+  name: "Ochmann, J."
+  job: "sculptor"
+}
+date {
+  year: 2008
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: SMALL_BOX
+producer: "Mega Miniatures"
+series: "Dungeon Decor"
+price {
+  currency: "$"
+  number: 1199
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "Sarcophagus"
+  number: 2
+}
+layout: FULL_COLOR

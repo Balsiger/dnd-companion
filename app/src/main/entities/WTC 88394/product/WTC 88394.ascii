@@ -1,0 +1,60 @@
+template {
+  name: "WTC 88394"
+  world: "Dragonlance"
+  description: "This three-book set is perfect for collectors and an ideal gift for readers\n  unfamiliar with the \\Place{Dragonlance} setting. The \\Product{Chronicles\n  Trilogy} -- \\Product{Dragons of Autumn Twilight}, \\Product{Dragons of Winter\n  Night}, and \\Product{Dragons of Spring Dawning}--are enclosed in a hard-sided\n  slipcover case featuring the stunning cover art from the series."
+}
+title: "Chronicles Trilogy Gift Set"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2681"
+  check: 3
+}
+isbn13 {
+}
+pages: 1232
+system: NONE
+audience: ALL
+type: NOVEL
+style: BOX
+producer: "WTC"
+series: "Dragonlance Chronicles"
+price {
+  currency: "$ "
+  number: 2097
+  precision: 100
+}

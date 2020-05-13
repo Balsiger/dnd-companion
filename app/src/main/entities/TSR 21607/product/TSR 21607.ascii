@@ -1,0 +1,40 @@
+template {
+  name: "TSR 21607"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Forgotten Realms"
+  description: "The war rages on.\n                    \\NPC{Cadderly}, \\Class{scholar-priest} of the \\Place{Edificant Library},\n                    leads the combined forces of \\Place{Caradoon} and \\Place{Shilmista} forest\n                    against \\Place{Castle Trinity}, stronghold of his enemy \\NPC{Aballister}. But\n                    another mission calls him on a journey leading into the past.\n                    A past he would just as soon forget."
+}
+title: "Fallen Fortress"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+date {
+  year: 2000
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1607"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book IV"
+series: "Cleric Quintet"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

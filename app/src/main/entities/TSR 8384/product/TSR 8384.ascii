@@ -1,0 +1,46 @@
+template {
+  name: "TSR 8384"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  world: "Dragonlance"
+  description: "\\NPC{Emilo Haversack} is unusually worried for a \\Monster{kender} -- though\n  he can\'t for the life of him remember what his problem is. Still, he\'s been\n  wandering across \\NPC{Ansalon} for quite some time, trying to remember what\'s\n  wrong. All he can recall is the name of a very evil, very dead\n  \\Class{wizard}... \\NPC{Fistandantilus}.\n\n  Joined by a young \\Monster{kendermaid}, a \\Monster{human} lad, and a devout,\n  if somewhat naive \\Class{priest}, \\NPC{Emilo} is drawn into a mysterious\n  quest. As he draws closer to the secret of his past, he and his friends find\n  themselves caught in an increasingly sinister web of intrigue.\n\n  And as the conclusion of the adventure approaches, the companions learn that\n  their purpose is one that could catapult them from \\Place{Krynn} -- and\n  forever change the destiny of the world they leave behind."
+}
+title: "Fistnadantilus Reborn"
+subtitle: "A Lost Legends Book"
+author {
+  name: "Niles, Douglas"
+}
+date {
+  year: 1997
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0708"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Volume II"
+series: "Lost Legends"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

@@ -1,0 +1,19 @@
+template {
+  name: "TSR 6057"
+  reference {
+    name: "net price list"
+  }
+}
+title: "RPGA Fantasy Note Pads"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 175
+  precision: 100
+}

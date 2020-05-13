@@ -1,0 +1,172 @@
+template {
+  name: "PP 00251"
+  world: "Call of Cthulhu"
+  description: "\\bold{Der Blutsauger von Scharzbrunn}\n\n  Im Jahre 998 AD kl\\umlaut{a}ren die Charaktere in winterlicher\n  Atmosph\\umlaut{a}re eine unheimliche Mordserie beim Kloster\n  \\emph{Schwarzbrunn} auf.\n\n  \\emph{Ein schauriges Abenteuer f\\umlaut{u}r Cthulhu 1000 AD.}\n\n  \\bold{Garten der L\\umlaut{u}ste}\n\n  Die Charactere, allesamt der Spanischen Inquisition zugeh\\umlaut{o}rig, werde\n  in ein Bergdorf geschickt, in dem eine Jungfrau schanger sein und davor\n  stehen soll, \\emph{Jesus Christus} wiederzugeb\\umlaut{a}ren!\n\n  \\emph{Ein blasphemisches Abentuer um die Spanische Inquisition.}\n\n  \\bold{Die Zeit der dunklen Tr\\umlaut{a}ume}\n\n  Eine Seuche grassiert in \\Place{Paris} und eine obskure Fraimaurerloge\n  verfolgt scheinbar gany sonderbare Pl\\umlaut{a}ne. Steht dies in Zusammenhang\n  mit dem Bau der Metro und den Einst\\umlaut{u}rzen, die sich dabei ereignen?\n\n  \\emph{Ein alptraumhaftes Abentuer in Paris der 1890er.}\n\n  \\bold{Fairy Tales}\n\n  In einem Dorf irischer Einwanderer in den USA suchen die Charaktere nach\n  einem vermissten M\\umlaut{a}dchen und komment in Kontakt zur keltischen Feen-\n  und Geisterwelt, die hier besonders nah ist.\n\n  \\emph{Ein Abentuer in den 1920ern und der Anderswelt.}\n\n  \\bold{Das Jcarus-Project}\n\n  Die Charactere m\\umlaut{u}ssen das im All treibende Raumschiffe Icarus\n  untersuchen. St\\umlaut{u}ck f\\umlaut{u}r St\\umlaut{u}ck begreifen sie, was\n  hier geschehen ist. Am Enede steht der Wahnsinn in seiner pursten Form.\n\n  \\emph{Ein Science-Fiction-Abenteuer in der fernen Zukunft.}\n\n  \\bold{Reise zur anderen Seite}\n\n  Die Anderswelt der keltischen Mythen und ihre Verbindung zum Cthulhu-Mythos.\n\n  \\emph{Ein Quellenteil f\\umlaut{u}r Cthulhu in der Anderswelt.}"
+}
+title: "Aus Aeonen"
+author {
+  name: "Bogdan, Ulrike"
+}
+author {
+  name: "Frankck, Stefan"
+}
+author {
+  name: "Geisler, Stefan"
+}
+author {
+  name: "Heller, Frank"
+}
+author {
+  name: "K\\umlaut{o}hn, Steffen"
+}
+author {
+  name: "Maser, Christoph"
+}
+author {
+  name: "O\'Connel, Mary"
+}
+author {
+  name: "Oden, Matthias"
+}
+author {
+  name: "Steines, Jan Christoph"
+}
+author {
+  name: "Szachnowski, Lucya"
+}
+author {
+  name: "Bogdan, Ulrike"
+  job: "Uebersetzung"
+}
+author {
+  name: "Wichniewski, Micha"
+  job: "Uebersetzung"
+}
+editor {
+  name: "Heller, Frank"
+}
+editor {
+  name: "Heller, Frank"
+  job: "Lektorat"
+}
+editor {
+  name: "Steines, Jan Christoph"
+  job: "Lektorat"
+}
+editor {
+  name: "Erdmann, Julia"
+  job: "Korrektorat"
+}
+editor {
+  name: "Gill, Heiko"
+  job: "Korrektorat"
+}
+editor {
+  name: "G\\umlaut{o}ttmann, Holger"
+  job: "Korrektorat"
+}
+editor {
+  name: "Heller, Frank"
+  job: "Korrektorat"
+}
+editor {
+  name: "Wessel, Christina"
+  job: "Korrektorat"
+}
+cover {
+}
+cover {
+}
+cartographer {
+  name: "Lensig, Bj\\umlaut{o}rn"
+}
+cartographer {
+  name: "Nett, Aljoscha S."
+}
+cartographer {
+  name: "Schlicht, Chris"
+}
+illustrator {
+  name: "Ertsey, Samar"
+}
+illustrator {
+  name: "Lensig, Bj\\umlaut{o}rn"
+}
+illustrator {
+  name: "Schlicht, Chris"
+}
+illustrator {
+  name: "Schneider, Kim"
+}
+illustrator {
+  name: "Bogdan, Ulrike"
+  job: "Bildarchiv"
+}
+illustrator {
+  name: "Geisler, Stefan"
+  job: "Bildarchiv"
+}
+illustrator {
+  name: "Heller Frank"
+  job: "Bildarchiv"
+}
+illustrator {
+  name: "K\\umlaut{o}hn, Steffen"
+  job: "Bildarchiv"
+}
+illustrator {
+  name: "Kleye, Kostja"
+  job: "Handoutgestaltung"
+}
+illustrator {
+  name: "Nett, Aljoscha S."
+  job: "Handoutgestaltung"
+}
+illustrator {
+  name: "Schlicht, Chris"
+  job: "Handoutgestaltung"
+}
+illustrator {
+  name: "Schneider, Kim"
+  job: "Handoutgestaltung"
+}
+illustrator {
+  name: "Escher, Manfred"
+  job: "Cover-Konzeption und Design"
+}
+typographer {
+  name: "Kr\\umlaut{u}ger, Maik"
+}
+typographer {
+}
+manager {
+  name: "Finkernagel, Andreas"
+  job: "Verlagsleitung"
+}
+date {
+  year: 2004
+}
+isbn {
+  group: "3"
+  publisher: "930635"
+  title: "90"
+  check: 9
+}
+isbn13 {
+}
+pages: 176
+system: CHAOSIUM
+type: ADVENTURE
+style: SOFT_COVER
+producer: "Pegasus Press"
+series: "Cthuloide Welde Bibliothek"
+price {
+  currency: "Euro "
+  number: 1695
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

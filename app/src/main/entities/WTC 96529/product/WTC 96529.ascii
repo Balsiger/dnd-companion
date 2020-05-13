@@ -1,0 +1,43 @@
+template {
+  name: "WTC 96529"
+  world: "Forgotten Realms"
+  description: "\\large{\\Place{Hlondeth}}\n                    A city populated by the humanoid serpents know as the \\Monster{yuan-ti}, and\n                    rule by\n                    \\large{\\Group{House Extaminos}}\n                    The powerful House of Serpents, and the ultimate target of\n                    \\large{\\Group{The Pox}}\n                    A human cult whose members worship the goddess of plague and disease, and who\n                    beings to work the deadly will of\n                    \\large{\\Group{Sibyl\'s Chosen}}\n                    A dangerous cabal of \\Monster{yuan-ti} who will turn every \\Monster{human} in\n                    the city into a freakish tainted one, unless\n                    \\large{\\NPC{Dediana}}\n                    a \\Monster{yuan-ti} halfblood, can stop them all."
+}
+title: "Venom\'s Taste"
+author {
+  name: "Smedman, Lisa"
+}
+cover {
+  name: "Nielsen, Terese"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3166"
+  check: 3
+}
+isbn13 {
+}
+pages: 308
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 1"
+series: "House of Serpents"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

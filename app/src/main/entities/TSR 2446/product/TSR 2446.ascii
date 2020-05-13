@@ -1,0 +1,44 @@
+template {
+  name: "TSR 2446"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Dark Sun"
+  description: "psionic magical items and artifacts"
+}
+title: "Psionic Artifacts of Athas"
+author {
+  name: "Melka, Kevin"
+}
+author {
+  name: "Nesmith, Bruce"
+}
+date {
+  year: 1996
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0390"
+  check: 2
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

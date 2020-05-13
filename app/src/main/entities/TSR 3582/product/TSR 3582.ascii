@@ -1,0 +1,30 @@
+template {
+  name: "TSR 3582"
+  synonym: "25CR7"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "a catalog of space tools, vehicles, weaponry and other gadgets"
+}
+title: "Hardware"
+date {
+  year: 1993
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "389"
+  check: 2
+}
+isbn13 {
+}
+system: XXVC
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

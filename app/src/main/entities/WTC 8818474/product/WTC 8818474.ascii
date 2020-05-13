@@ -1,0 +1,103 @@
+template {
+  name: "WTC 8818474"
+  world: "Generic"
+  description: "Take the next step in human evolution. With cybernetics, you can advance in\n  ways nature never intended. Cyborgs are the people of the future, and the\n  world of tomorrow is theirs for the taking---a world of virtually limitless\n  possibilities! \\Product{d20 Cyberspace} contains everything you need to build\n  cybernetically enhanced heroes and virtual realities, as well as rules for\n  including cybernetics in a modern, near-future, or far-future campaign.\n\n  This new rules supplement provides everything players and Gamemasters need\n  to create and run campaigns featuring cybernetics in the post-modern realm of\n  cyberpunk fiction. Building on the d20 Future cybernetic rules, d20\n  Cyberscape includes rules for installing cybernetics and playing cyborgs, as\n  well as new advanced classes and enhancements. d20 Cyberscape also features\n  rules for magical and psionic cybernetics and virtual reality networks."
+}
+title: "d20 Cyberspace"
+subtitle: "We Can Improve You. We Have the Technology..."
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Thompson, Rodney"
+  job: "additional design"
+}
+editor {
+  name: "Ryan, Tammie Webb"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Andrasofszky, Kalman"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Grafiksismik"
+}
+illustrator {
+  name: "Falconer, Daniel"
+}
+illustrator {
+  name: "Wimberly, Ronald"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Hebron, Paul"
+  job: "art director"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+illustrator {
+  name: "Hebron, Paul"
+  job: "graphic design"
+}
+illustrator {
+  name: "Jordan, Robert"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+  name: "Fisher, Joshua"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3695"
+  check: 9
+}
+isbn13 {
+}
+pages: 96
+system: D20_MODERN
+type: RULES_SUPPLEMENT
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 88190"
+required_requirements: "WTC 88597"

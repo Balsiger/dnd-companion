@@ -1,0 +1,25 @@
+template {
+  name: "DMA 000013"
+  description: "Poster with the 1998 release schedule of Wizards of the Coast."
+}
+title: "1998 Product Release Schedule"
+date {
+  year: 1998
+}
+isbn {
+}
+isbn13 {
+}
+pages: 1
+system: NONE
+audience: ALL
+type: CATALOG
+style: POSTER
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: POSTER
+  number: 1073741824
+}

@@ -1,0 +1,91 @@
+template {
+  name: "Dungeon 40"
+  world: "Generic"
+  description: "This is issue 40 of the dungeon magazine."
+}
+title: "Dungeon 40"
+author {
+  name: "Shell, J. Bradley"
+}
+author {
+  name: "Bicking, J. Mark"
+}
+author {
+  name: "Rea, Ralph"
+}
+author {
+  name: "Rick, Greg"
+}
+author {
+  name: "Fairbourn, Jeff"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "assistant editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Pollack, Alan"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Miller, David O."
+}
+illustrator {
+  name: "Williams, L.A."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1993
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "VII 4"
+number: "40"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

@@ -1,0 +1,116 @@
+template {
+  name: "WTC 9537774"
+  world: "Generic"
+  description: "The \\Product{Dragondown Grotto} accessory contains two beautifully\n                    illustrated, double-sided battle maps scaled for Dungeon & Dragons play, as\n                    well as a 16-page booklet that represents sample encounters designed for use\n                    with the maps.\n                    The battle maps feature fantastic terrain designed to create large, fluid\n                    encounters, key scenes, and exciting game sessions. Rather than simple\n                    dungeon encounters, these maps evoke the epic struggles that campaign\n                    memories are made of. Three of the maps also make ideal battlegrounds for the\n                    D&D \\Product{Miniatures Game} play. Build your own warband and fight for\n                    control of the Forest Cliff Lair, the Dragon Graveyard, or Dragondown Grotto.\n                    An exciting poster map product!\n                    The \\Product{Fantastic Locations} series of map accessories feature the\n                    winning combination of a short adventure and two large, double-sided,\n                    full-color maps scaled for D&D miniatures, all at a reasonable price\n                    point. This product is tied to 2006\'s Year of Dragons theme, which is a\n                    key marketing platform across the D&D RPG, novels, and miniatures brands.\n                    \\Product{Fantastic Locations: Dragondown Grotto} features two double-sided\n                    poster maps. Three maps are suitable for RPG and skirmish use, while one is\n                    an RPG exclusive. An accompanying 16-page adventure is suitable for any\n                    mid-level campaign. Enemies include creatures from the War of the Dragon\n                    Queen miniatures expansion releasing in the same month. The two poster maps\n                    can be put together to form a dragon\'s lair, while the reverse sides feature\n                    more fantastic locations that players can explore."
+}
+title: "Dragondown Grotto"
+subtitle: "Where to \\Monster{Dragons} Go When They Die?"
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+author {
+  name: "Mearls, Mike"
+  job: "developer"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Staples, Greg"
+}
+cartographer {
+  name: "Engle, Jason"
+  job: "battle mat"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3921"
+  check: 4
+}
+isbn13 {
+}
+pages: 16
+system: DND_3_5
+type: ACCESSORY
+style: BOOKLET
+series: "Fanstatic Locations"
+price {
+  currency: "$ "
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: COVER
+  description: "color"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color battle map"
+  number: 2
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Miniatures Game"
+layout: COLOR_COVER

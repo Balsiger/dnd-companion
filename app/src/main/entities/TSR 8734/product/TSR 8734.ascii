@@ -1,0 +1,35 @@
+template {
+  name: "TSR 8734"
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "\\Place{Dominarian} legends speak of a mighty conflict, obscured by the mists\n                    of history. Of a conflict between the brothers \\NPC{Urza} and \\NPC{Mishra}\n                    for supremacy on the continent of \\Place{Terisiare}. Of titantic engines that\n                    scarred and twisted the very planet. Of a final battle that sank continents\n                    and shook the skies.\n                    The saga of the Brothers\' War."
+}
+title: "Brothers\' War"
+leader: "The"
+subtitle: "The Myth. The Magic."
+author {
+  name: "Grubb, Jeff"
+}
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 409
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book 1"
+series: "Artifacts Cycle"
+price {
+}

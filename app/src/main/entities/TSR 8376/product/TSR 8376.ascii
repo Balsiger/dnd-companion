@@ -1,0 +1,44 @@
+template {
+  name: "TSR 8376"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Dragonlance"
+}
+title: "Dawning of a new Age"
+leader: "The"
+author {
+  name: "Jean Rabe"
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0616"
+  check: 2
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book One"
+series: "Human\'s Struggle for Survival"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

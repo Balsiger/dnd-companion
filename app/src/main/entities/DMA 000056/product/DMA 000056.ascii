@@ -1,0 +1,37 @@
+template {
+  name: "DMA 000056"
+  world: "Generic"
+  description: "Here\'s a bonanza of 93 stimulating brainteasers ideal for limbering and\n  strengthening young mental muscles. Many of the puzzles are classics, while\n  others are presented here for the first time. Ridiculous riddles, tantalizing\n  teasers, intricate mazes, deceptive illusions, tricky questions and a host of\n  unusual word an picture puzzles offer young readers hours of challenging\n  fun.\n\n  Youngsters will love such intriguing mind-builders as The Maze of the\n  Minotaur, the Dime-and-Penny Switcheroo, Mr. Bushyhead\'s Problem, Knock,\n  Knock... Who\'s There?, Mrs. Windbag\'s Gift, Find the Duck, Bee on the Nose,\n  The Flatz Beer Goof and 85 more.\n\n  Compiled by noted puzzle expert Martin Gardner, this collection combines two\n  books in one, providing a double helping of puzzle fun in one convenient\n  volume. Richly illustrated with diagrams and hilarious drawings by Laslo\n  Kubinyi, this curious and comic collection is the perfect companion for car\n  trips, parties and picnics, or those long rainy days. Solutions are at the\n  back of the book but no fair peeking until you\'ve at least given the puzzle a\n  try!\n\n  Unabridged Dover (1988) republication in one volume of \\Product{Perplexing\n  Puzzles and Tantalizing Teasers}, published by Simon & Schuster, New York,\n  1969, and \\Product{More Perplexing Puzzles and Tantalizing Teasers},\n  published by Archway, New York, 1977. 100 black-and-white\n  illustrations. Total of 224pp. \\Frac[5]{3}{8} x \\Frac[8]{1}{2} Paperbound."
+}
+title: "Perplexing Puzzles and Tantalizing Teasers"
+author {
+  name: "Martin Gardner"
+}
+illustrator {
+  name: "Laszlo Kubinyi"
+}
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "486"
+  title: "25637"
+  check: 5
+}
+isbn13 {
+}
+pages: 208
+system: NONE
+type: SOURCEBOOK
+style: PAPERBACK
+producer: "Dover"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

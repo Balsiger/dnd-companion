@@ -1,0 +1,40 @@
+template {
+  name: "TSR 11622"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Forgotten Realms"
+  description: "Cryptic rumors spread across the far \\Place{North}, sparking new interest in\n                    a shadow-haunted ruin. Although it was once a seat of ancient\n                    \\Monster[Dwarf]{dwarven} power, centuries of unspeakable evil have\n                    transformed this former gem mine into the \\Monster[Demon]{demon}-infested,\n                    trap-filled \\Place{Dungeon of Death}. Its name is well deserved---unwary\n                    visitors fall victim either to the ravenous \\Monster[Fiend]{fiends} that\n                    reside within the dungeon or to the insidious Shadow Curse that pervades the\n                    place. Inside lies a grueling challenge to skill and courage that only the\n                    bravest and most experienced heroes will survive.\n                    This stand-alone adventure is set within one of the most infamous dungeons of\n                    the Realms. It easily fits within an existing \\Place{Forgotten Realms}\n                    \\Product[TSR 1085]{campaign}, and it can also be incorporated into any other\n                    AD&D campaign world with minor modification.\n                    \\bold{The \\Product[TSR 11622]{Dungeon of Death}: Who says there\'s no truth in\n                    advertising?}"
+}
+title: "Dungeon of Death"
+leader: "The"
+date {
+  year: 2000
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1622"
+  check: 2
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Dungeon Crawl"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

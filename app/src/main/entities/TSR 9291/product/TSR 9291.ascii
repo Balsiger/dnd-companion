@@ -1,0 +1,31 @@
+template {
+  name: "TSR 9291"
+  synonym: "DLC1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "updated old material"
+}
+title: "Dragonlance Classics Volume #1 (DL1-4)"
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "859"
+  check: 5
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

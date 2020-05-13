@@ -1,0 +1,41 @@
+template {
+  name: "TSR 8655"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "Forgotten Realms"
+}
+title: "Murder in Cormyr"
+author {
+  name: "Williamson, Chet"
+}
+date {
+  year: 1996
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book One"
+series: "Mystery"
+price {
+  currency: "$"
+  number: 1899
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

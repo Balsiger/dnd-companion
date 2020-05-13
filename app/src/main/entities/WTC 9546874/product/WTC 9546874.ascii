@@ -1,0 +1,71 @@
+template {
+  name: "WTC 9546874"
+  world: "Eberron"
+  description: "The war to end all wars -- or so it is hoped. For generations battle broke\n  the once-proud kingdom of \\NPC{Galifar}. As nation fought nation, adventure\n  was never far away from those eager to find it.\n\n  Hunters of evil, seekers of fortune, loyal soldiers, and those just trying to\n  stay alive. These are their tales.\n\n  Tales of the Last War."
+}
+title: "Tales of the Last War"
+leader: "The"
+subtitle: "LAST WAR"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Crilley, Paul"
+}
+author {
+  name: "Waggoner, Tim"
+}
+author {
+  name: "Rosenberg, Aaron"
+}
+author {
+  name: "Page, David A."
+}
+author {
+  name: "Bolme, Edward"
+}
+author {
+  name: "Burton-Oakes, Ian"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Marmell, Ari"
+}
+editor {
+  name: "Seheshted, Mark"
+}
+cover {
+  name: "Knutson, Dana"
+}
+date {
+  year: 2006
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3986"
+  check: 9
+}
+isbn13 {
+}
+pages: 338
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "anthology"
+series: "Last War"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

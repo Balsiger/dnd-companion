@@ -1,0 +1,114 @@
+template {
+  name: "Dungeon 108"
+  world: "Generic"
+  description: "This is issue 108 of the dungeon magazine, together with the\n   \\Product{Polyhedron 167} issue."
+}
+title: "Dungeon 108"
+author {
+  name: "Stearns, Scott"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+cover {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "West, Christopher"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Tsang, Arnold"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "publisher"
+}
+manager {
+  name: "Beals, Matt"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "circulation manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "chief executive officer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "vice president"
+}
+manager {
+  name: "Franklin, Mary"
+  job: "director of marketing"
+}
+manager {
+  name: "Wertz, Vic"
+  job: "technical director"
+}
+manager {
+  name: "Head, Robert"
+  job: "webmaster"
+}
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 74
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "18 3"
+number: "108"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

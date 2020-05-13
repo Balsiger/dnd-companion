@@ -1,0 +1,42 @@
+template {
+  name: "WTC 88230"
+  world: "Generic"
+  description: "Hunting parties from an \\Monster{elven} village are mysteriously\n  disappearing. Similar mysterious plague a \\Monster{dwarven} settlement on the\n  far side of the mountains. Each side blames the other. Only a band of tried\n  and true heroes can root out what sinister force manipulates these normally\n  peaceful people.\n\n  But can the conquer the evil before the tribes go to war?"
+}
+title: "Living Dead"
+leader: "The"
+author {
+  name: "T.H. Lain"
+}
+cover {
+  name: "Todd Lockwood"
+}
+date {
+  year: 2002
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2848"
+  check: 4
+}
+isbn13 {
+}
+pages: 186
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 2"
+series: "D&D 3rd edition Introduction Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "the text"
+  number: 1073741824
+}

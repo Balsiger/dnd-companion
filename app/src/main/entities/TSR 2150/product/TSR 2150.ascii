@@ -1,0 +1,74 @@
+template {
+  name: "TSR 2150"
+  synonym: "PHBR13"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "Druids love forests, true---but they love the arctic tundra, tropical rain\n                    forests, broad savannas, and fungi caverns of the \\Place{Underdark},\n                    too. This 128-page accessory expands the living world of the druid in the\n                    AD&D 2nd Edition game, bringing new homes, character kits, personalities,\n                    spells, magical items, herbal lore, and a hundred details on druidic society,\n                    sacred groves, and high-level aspirations. This book has it all---don\'t leave\n                    the woods without it!"
+}
+title: "Complete Druid\'s Handbook"
+leader: "The"
+author {
+  name: "Pulver, David"
+}
+editor {
+  name: "Weinlein, Sue"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+illustrator {
+  name: "Pollack, Alan"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1994
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "886"
+  check: 10
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "13"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,121 @@
+template {
+  name: "WTC 96566"
+  world: "Forgotten Realms"
+  description: "Chilling fireside tales describe fell plans and foul actions of the horrors\n                    know as the \\Monster{Scaled Ones}: \\Monster{lizardfold}, \\Monster{nagas},\n                    \\Monster{yuan-ti}, and their sinister creator race, the\n                    \\Monster{sarrukh}. Infinitely patient and ruthless, the insidious serpentfolk\n                    seek to enslave \\Place{Faer\\hat{u}n}\'s other races and breed them like\n                    cattle. For those bold enough to peer within, \\Product{Serpent Kingdoms}\n                    offers an unsettinlgy detailed look at the malevolent serpentfolk and lizard\n                    races of the \\Place{Forgotten Realms} game setting.\n                    \\list\n                    {27 new monster}\n                    {27 new feats}\n                    {Dozens of serpentfolk sites}"
+}
+title: "Serpent Kingdoms"
+subtitle: "Crawling Evils Never Sleep"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Drader, Darrin"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "managing editor"
+}
+cover {
+  name: "Sutfin, Michael"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Crabapple-McClain, Dennis"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Leon Cortez"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Baker, Candice"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christoper"
+  job: "design manater"
+}
+manager {
+  name: "Find, Andrew"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Joshua C.J."
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3277"
+  check: 5
+}
+isbn13 {
+}
+pages: 192
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

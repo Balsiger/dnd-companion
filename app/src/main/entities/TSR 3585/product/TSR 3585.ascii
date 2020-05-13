@@ -1,0 +1,46 @@
+template {
+  name: "TSR 3585"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Buck Rogers"
+  description: "Invaders of Charon Series, volume three"
+}
+title: "Warlords of Jupiter"
+author {
+  name: "William H. Jr. Keith"
+}
+date {
+  year: 1993
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "576"
+  check: 3
+}
+isbn13 {
+}
+pages: 288
+system: NONE
+type: NOVEL
+number: "Volume Three"
+series: "Invaders of Charon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

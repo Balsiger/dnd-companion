@@ -1,0 +1,23 @@
+template {
+  name: "TSR 6899"
+  synonym: "MSL1"
+  reference {
+    name: "catalog91S"
+  }
+  world: "Generic"
+}
+title: "X-Terminate"
+date {
+  year: 1991
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+system: MARVEL_SUPER_HEROES
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

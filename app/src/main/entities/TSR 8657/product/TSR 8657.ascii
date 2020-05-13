@@ -1,0 +1,52 @@
+template {
+  name: "TSR 8657"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Forgotten Realms"
+  description: "\\larger{Who killed \\NPC{Darlington Blade}}\n                    In a country where impersonating a mage is punishable by death, \\NPC{Pryce\n                    Covington} has a \\emph{big} problem, unless he can somehow unravel the web of\n                    intrigue surrounding a most perplexing....\n                    \\bold{Murder in \\Place{Halruaa}}\n                    When he borrowed a warm cloak from a cold corpse, little did charming,\n                    rapier-witted ne\'er-do-well \\NPC{Pryce Covington} suspect that he would be\n                    mistaken throught the Shining South for the legendary \\NPC{Darlington Blade},\n                    adventurer, wizard, and interpid hero.\n                    \\NPC{Pryce} doesn\'t mind the red-carpet treatment he\'s mistakenly given, but\n                    he does mind that the penalty for impersonating a mage, even by accident, is\n                    death. He doesn\'t mind that \\NPC{Blade}\'s recently expired teacher has a\n                    statuesque and skillful daughter, but he does mind that she has the\n                    suspicious eye of a \\God{Mystran} inquisitress.\n                    No, \\NPC{Pryce Covington} doesn\'t even mind that he is getting in deeper with\n                    every person he meets, every word he speaks, and every move he makes, but he\n                    \\emph{does} mind that whoever murdered the real \\NPC{Darlington Blade} is\n                    extremely dangerous and obviously has placed him on top of his \'must kill\'\n                    list!\n                    Match wits with \\NPC{Pryce}, the bogus \\NPC{Blade}, as he sleuths his way\n                    through magic, mirth, and mayhem to solve a baffling \\Product{Murder in\n                    Halruaa}."
+}
+title: "Murder in Halruaa"
+author {
+  name: "Meyers, Richard S."
+}
+cover {
+  name: "Elmore, Larry"
+}
+date {
+  year: 1996
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0521"
+  check: 2
+}
+isbn13 {
+}
+pages: 249
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book Three"
+series: "Fantasy Mysteries"
+price {
+  currency: "$"
+  number: 1899
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

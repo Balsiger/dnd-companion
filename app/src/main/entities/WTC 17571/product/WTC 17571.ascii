@@ -1,0 +1,57 @@
+template {
+  name: "WTC 17571"
+  world: "Dragonlance"
+  description: "This title is the next in a series that explores the lives of key characters\n  from Margaret Weis & Tracy Hickman\'s New York Times best-selling \\Product{War\n  of Souls trilogy}. \\Product{Wizards\' Conclave} describes events that directly\n  overlap events during the \\Event{War of Souls}, and it features two lead\n  characters familiar to any fan of the \\Place{Dragonlance} world."
+}
+title: "Wizards\' Conclave"
+author {
+  name: "Niles, Douglas"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3351"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "The Age of Mortals"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

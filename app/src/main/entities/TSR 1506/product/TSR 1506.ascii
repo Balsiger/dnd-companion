@@ -1,0 +1,41 @@
+template {
+  name: "TSR 1506"
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Generic"
+  description: "dices for the game"
+}
+title: "Dragon Dice Kicker Pack 5: Swamp Stalkers"
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+  year: 1996
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0464"
+  check: 10
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: DICE
+  description: "randomly assorted"
+  number: 8
+}

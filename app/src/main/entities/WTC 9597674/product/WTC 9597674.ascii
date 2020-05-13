@@ -1,0 +1,118 @@
+template {
+  name: "WTC 9597674"
+  world: "Generic"
+  description: "\\Monster{Wolves} prowls the graveyard of the sleepy \\Place{Kingsholm}, and\n                    death lurks behind shadowed tombstones. Something has disturbed the sleepers\n                    in the mausoleum, and brave adventurers are needed to explore the catacombs\n                    beneath the graves and discover what evil stirs in the darkling depths.\n                    \\Product{Barrow of the Forgotten King} is a D&D adventure designed for\n                    2nd-level characters. It can be played as a stand-alone adventure or as the\n                    first adventure in a three-part series. Each encounter contains special\n                    tactical information for the Dungeon Master and expanded map features for\n                    ease of play.\n                    The mighty statue of a forgotten king stands atop a lonely hill overlooking\n                    the town of \\Place{Kingsholm}. No one remembers the ancient sovereign or his\n                    dynasty, but locals shun the graveyard on the hillside near the\n                    statue. Sinister shapes lurk among the tombstones, and evil stirs in the\n                    catacombs below."
+}
+title: "Barrow of the Forgotten King"
+subtitle: "Who Disturbs the Slumber of the Forgotten King"
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Sims, Chris"
+  job: "development"
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Prescott, Steve"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+cartographer {
+  name: "Isaac, Nick"
+  job: "tactical map design"
+}
+cartographer {
+  name: "Vergel de Dios, Erika"
+  job: "tactical map design"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4318"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4318"
+}
+pages: 64
+system: DND_3_5
+type: ADVENTURE
+style: BOOKLET
+number: "1"
+series: "Adventure Series"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "adventure"
+  number: 1073741824
+}
+content {
+  part: COVER
+  description: "color and maps"
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: COLOR_COVER

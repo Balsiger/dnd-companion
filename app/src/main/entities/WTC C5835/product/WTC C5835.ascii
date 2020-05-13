@@ -1,0 +1,451 @@
+template {
+  name: "WTC C5835"
+  description: "The world\'s most popular roleplaying game meets the world\'s most popular trading card game in this campaign sourcebook, detailing the Magic: The Gathering world of \\Place{Ravnica} for use in Dungeons & Dragons.\n\nFrom deep catacombs to sky raking spires. \\Place{Ravnica} is covered in countless layers constructed over thousands of years. Lofty cathedrals, hulking courthouses, towering apartments, sprawling tenements, and cobblestone plazas spread as far as the eye can see.\n\nIn this teeming cosmopolis, the quilds vie for power, wealth, and influence. Held in an uneasy peace by a magical force called the Guildpact. But the Guildpact doesn\'t prevent the intrigue, subterfuge, and political machinations that are the hallmark of life in \\Place{Ravnica}.\n\nAnd now the Guildpact is gone, or smeems to be. What chaos might erupt if the ambition and rivalry of the guilds goes unchecked? It\'s up to you to choose your guild and shape the future of \\Place{Ravnica}.\n"
+  short_description: "A sourcebook about \\Place{Ravnica}, the world of Magic: The Gathering."
+}
+title: "Guildmaster\'s Guide to Ravnica"
+subtitle: "Stand With Your Guild"
+author {
+  name: "Wyatt, James"
+  job: "lead designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "lead designer"
+}
+author {
+  name: "Levitch, Ari"
+  job: "designer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "designer"
+}
+author {
+  name: "Mearls, Mike"
+  job: "designer"
+}
+author {
+  name: "Schwalb, Robert J."
+  job: "designer"
+}
+author {
+  name: "Tulach, Chris"
+  job: "designer"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Athans, Phil"
+}
+editor {
+  name: "Welch, Kate"
+}
+cover {
+  name: "Villeneuve, Magali"
+}
+cartographer {
+  name: "De Ro, Jonas"
+}
+cartographer {
+  name: "Dyson Logos"
+}
+illustrator {
+  name: "Alexander, Deruchenko"
+}
+illustrator {
+  name: "Amundsen, Even"
+}
+illustrator {
+  name: "Argyle, Steve"
+}
+illustrator {
+  name: "Baga, Volkan"
+}
+illustrator {
+  name: "Barger, Ryan"
+}
+illustrator {
+  name: "Belledin, Stephen"
+}
+illustrator {
+  name: "Bierek, Mike"
+}
+illustrator {
+  name: "Bodin, Johann"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Bradley, Noah"
+}
+illustrator {
+  name: "Brassel, John Severin"
+}
+illustrator {
+  name: "Burburan, Filip"
+}
+illustrator {
+  name: "Burmak, Dmitry"
+}
+illustrator {
+  name: "Burt, Wesley"
+}
+illustrator {
+  name: "Cearley, Clint"
+}
+illustrator {
+  name: "Ceran, Milivoj"
+}
+illustrator {
+  name: "Chan, Jason"
+}
+illustrator {
+  name: "Chaturvedi, Sidharth"
+}
+illustrator {
+  name: "Chen, Zezhou"
+}
+illustrator {
+  name: "Chevrier, Jedd"
+}
+illustrator {
+  name: "Chippy"
+}
+illustrator {
+  name: "Childs, Cliff"
+}
+illustrator {
+  name: "Choi, Sung"
+}
+illustrator {
+  name: "Choi, Yongjae"
+}
+illustrator {
+  name: "Choo, Jehan"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "De Gesincourt, Florian"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Dominic, Simon"
+}
+illustrator {
+  name: "Fischer, Scott M."
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Han, Yeong-Hao"
+}
+illustrator {
+  name: "Hass, Josh"
+}
+illustrator {
+  name: "Hayes, Michael C."
+}
+illustrator {
+  name: "Izzy"
+}
+illustrator {
+  name: "Jedruszek, Tomasz"
+}
+illustrator {
+  name: "Jones, Jamie"
+}
+illustrator {
+  name: "Kieryluk, Igor"
+}
+illustrator {
+  name: "Kollros, Mathias"
+}
+illustrator {
+  name: "Konstad, Alex"
+}
+illustrator {
+  name: "Kopinski, Karl"
+}
+illustrator {
+  name: "Lasahido, Lius"
+}
+illustrator {
+  name: "Ljunggren, Daniel"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Lunter, Titus"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Maniak, Slawomir"
+}
+illustrator {
+  name: "McKinnon, Seb"
+}
+illustrator {
+  name: "Miller, Aaron"
+}
+illustrator {
+  name: "Minguez, Victor Adame"
+}
+illustrator {
+  name: "Mohrbacher, Peter"
+}
+illustrator {
+  name: "Murai, William"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Nelson, Winona"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+illustrator {
+  name: "Ortiz, Karla"
+}
+illustrator {
+  name: "Paick, James"
+}
+illustrator {
+  name: "Palumbo, David"
+}
+illustrator {
+  name: "Pancoast, Ryan"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Park, Jung"
+}
+illustrator {
+  name: "Pilcerova, Martina"
+}
+illustrator {
+  name: "rk post"
+}
+illustrator {
+  name: "Prima, Livia"
+}
+illustrator {
+  name: "Rahn, Chris"
+}
+illustrator {
+  name: "Rainville, Jason"
+}
+illustrator {
+  name: "Rallis, Chris"
+}
+illustrator {
+  name: "Rapoza, David"
+}
+illustrator {
+  name: "Ravenna, Jenn"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Rutkowski, Grzegorz"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Sels, Bram"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Steinbauer, Anna"
+}
+illustrator {
+  name: "Stella, Zack"
+}
+illustrator {
+  name: "Stewart, Matt"
+}
+illustrator {
+  name: "Stone, Chase"
+}
+illustrator {
+  name: "Swanland, Raymond"
+}
+illustrator {
+  name: "Tan, Wisnu"
+}
+illustrator {
+  name: "Titov, Viktor"
+}
+illustrator {
+  name: "Vargas, Randy"
+}
+illustrator {
+  name: "Velinov, Svetlin"
+}
+illustrator {
+  name: "Villeneuve, Magali"
+}
+illustrator {
+  name: "Voss, Johannes"
+}
+illustrator {
+  name: "Walker, Kev"
+}
+illustrator {
+  name: "Walpole, Tyler"
+}
+illustrator {
+  name: "Wang, Jack"
+}
+illustrator {
+  name: "Winters, Mark"
+}
+illustrator {
+  name: "Wright, Richard"
+}
+illustrator {
+  name: "Zabrocki, Darek"
+}
+illustrator {
+  name: "Zana, Eytan"
+}
+illustrator {
+  name: "Zringibl, Kirsten"
+}
+illustrator {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Narciso, Shauna"
+  job: "art director"
+}
+illustrator {
+  name: "Levitch, Ari"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "additional graphic designer"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+  job: "additional art director"
+}
+illustrator {
+  name: "Cranford, Jeremy"
+  job: "additional art director"
+}
+illustrator {
+  name: "Ansman-Wolfe, Pamela"
+  job: "additional art director"
+}
+illustrator {
+  name: "Ingvarsson, Taylor"
+  job: "additional art director"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "additional art director"
+}
+illustrator {
+  name: "Sheppard, Cynthia"
+  job: "additional art director"
+}
+illustrator {
+  name: "Vallas, Andrew"
+  job: "additional art director"
+}
+illustrator {
+  name: "Winters, Mark"
+  job: "additional art director"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+illustrator {
+  name: "Gershman, David"
+  job: "art administrator"
+}
+manager {
+  name: "Tovar, Dan"
+  job: "producer"
+}
+manager {
+  name: "Warren, Matt"
+  job: "project manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "product engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+date {
+  year: 2018
+  month: 11
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6659"
+  check: 2
+}
+pages: 256
+system: DND_NEXT
+type: SOURCEBOOK
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

@@ -1,0 +1,32 @@
+template {
+  name: "TSR 3575"
+  synonym: "25CR4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Buck Rogers"
+  description: "struggle for the moons high technology"
+}
+title: "Luna"
+date {
+  year: 1991
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: XXVC
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

@@ -1,0 +1,53 @@
+template {
+  name: "TSR 8343"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "Although \\NPC{Raistlin} and \\NPC{Caramon} urge him not to go, \\NPC{Sturm\n  Brightblade} attends an annual \\Place{Solamnic} ceremony that is interrupted\n  by...\n\n  A stranger, taunting challenge. Clues from the past. Death.\n\n  Once he accepts a mysterious gauntlet, young \\NPC{Sturm} must make a\n  dangerous journey with some curious friends, rescue a fair if querulous maid,\n  defeat a traitor knight, and learn the secret fate of his long-lost\n  father. He must also learn the meaning of honor.\n\n  The fourth installment in the popular \\Product{Meetings Sextet} tells the\n  story of \\NPC{Sturm Brightblade}, the noble \\Class{Solamnic Knight}, in the\n  years before \\NPC{Sturm} joined up with the other companions of the\n  best-selling \\Product{Dragonlance series}."
+}
+title: "Oath and the Measure"
+leader: "The"
+subtitle: "Secrets of the past."
+author {
+  name: "Williams, Michael"
+}
+date {
+  year: 1992
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "336"
+  check: 1
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume IV"
+series: "Meetings Sextet"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

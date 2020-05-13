@@ -1,0 +1,45 @@
+template {
+  name: "TSR 9566"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  world: "Dragonlance"
+  description: "rules questions and new ideas for hear creation, magic use and plot twist"
+}
+title: "Saga Companion"
+leader: "A"
+author {
+  name: "Connors, William W."
+}
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1197"
+  check: 2
+}
+isbn13 {
+}
+pages: 128
+system: SAGA
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}

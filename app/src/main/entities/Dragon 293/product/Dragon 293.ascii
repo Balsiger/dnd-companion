@@ -1,0 +1,202 @@
+template {
+  name: "Dragon 293"
+  world: "Generic"
+  description: "Issue 293 of the magazine. World Building issue."
+}
+title: "Dragon 293"
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Ryan, Michael, G."
+}
+author {
+  name: "McVey, Geoffrey"
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Winninger, Ray"
+}
+author {
+  name: "Redman, Rich"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Holian, Gary"
+}
+author {
+  name: "Kerrigan, Stuart"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Heinsoo, Rob"
+}
+author {
+  name: "Moscatello, Rick"
+}
+author {
+  name: "Four, Johnny"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assistant editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robing D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+cover {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Engle, Jason E."
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Shaw, Stan"
+}
+illustrator {
+  name: "Thomson, Derek"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2002
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 10"
+number: "293"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "battle map"
+  number: 1073741824
+}

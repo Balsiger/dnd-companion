@@ -1,0 +1,93 @@
+template {
+  name: "Dungeon 22"
+  world: "Generic"
+  description: "This is issue 22 of the dungeon magazine."
+}
+title: "Dungeon 22"
+author {
+  name: "Salas, Dan"
+}
+author {
+  name: "Howery, David"
+}
+author {
+  name: "Maxwell, Randy"
+}
+author {
+  name: "Norman, Bruce"
+}
+author {
+  name: "Terra, John"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Holloway, Jim"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Synk, Lucy"
+}
+illustrator {
+  name: "Gladrosich, Bob"
+}
+illustrator {
+  name: "Bennett, Richard"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Hanchette, Paul"
+  job: "art director"
+}
+typographer {
+  name: "MacDonald, Kathleen C."
+}
+manager {
+  name: "Ward, Jim"
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1990
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "IV 4"
+number: "22"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

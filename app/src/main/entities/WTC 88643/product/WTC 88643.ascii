@@ -1,0 +1,195 @@
+template {
+  name: "WTC 88643"
+  world: "Forgotten Realms"
+  description: "Whether \\Class{cleric} or \\Class{commoner}, \\Class{wizard} or\n                    \\Class{warrior}, nearly everyone in \\Place{Faer\\hat{u}n} pays homage to at\n                    least one patron deity. Some of those divine powers inspire respect, while\n                    others elicit fear. Good or evil, all of them coexist within these\n                    pages. Complete information for key gods, along with the powers and abilities\n                    granted to their most dedicated followers, and descriptions of supporting\n                    deities combine to provide this look at all the gods of the \\Place{Forgotten\n                    Realms} \\Product{campaign setting}.\n                    \\list\n                    {Over 115 gods}\n                    {20 specialty priest prestige classes}\n                    {Maps of four temples}\n                    This collection details the thirty most important gods in the\n                    \\Place{Forgotten Realms} setting and expands upon the profiles of the rest of\n                    the deities.\n                    To use this accessory, a Dungeon Master also needs the \\Product{Forgotten\n                    Realms Campaign Setting}, the \\Product{Player\'s Handbook}, the\n                    \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster Manual}."
+}
+title: "Faiths & Pantheons"
+subtitle: "Religion in the Realms"
+author {
+  name: "Boyd, Eric L."
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "additional design"
+}
+author {
+  name: "Boyd, Letitia"
+  job: "additional design"
+}
+author {
+  name: "Haddock, Eric"
+  job: "additional design"
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "additional design"
+}
+author {
+  name: "Marin, Julia"
+  job: "additional design"
+}
+author {
+  name: "Reynolds, Sean K"
+  job: "developer"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Williams, Penny"
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Angus, Glen Michael"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Calero, Dennis"
+}
+illustrator {
+  name: "Dubisch, Michael"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Evans, Mark"
+}
+illustrator {
+  name: "Fischer, Scott"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Kaluta, Michael W."
+}
+illustrator {
+  name: "Locke, Vince"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Puddnhead"
+}
+illustrator {
+  name: "Macourek, Corey"
+}
+illustrator {
+  name: "Law, Stephanie Pui-Mun"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Sass, Mike"
+}
+illustrator {
+  name: "Smylie, Mark"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Templesmith, Ben"
+}
+illustrator {
+  name: "Walker, Kev"
+}
+illustrator {
+  name: "Wilson, Matt"
+}
+illustrator {
+  name: "Woods, Renick"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Campbell, Robert"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Campbell, Robert"
+  job: "graphic designer"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+typographer {
+  name: "Percival, Sonya"
+}
+manager {
+  name: "Baker, Richard L. III"
+  job: "creative director"
+}
+manager {
+  name: "Valterra, Anthony"
+  job: "business manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "vice-president RPG R&D"
+}
+manager {
+  name: "Kirchoff, Mary"
+  job: "vice-president publishing"
+}
+manager {
+  name: "Durham, Martin"
+  job: "project manager"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production manager"
+}
+date {
+  year: 2002
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2759"
+  check: 3
+}
+isbn13 {
+}
+pages: 224
+system: DND_3RD
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 3295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

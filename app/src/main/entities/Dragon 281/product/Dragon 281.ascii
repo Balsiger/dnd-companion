@@ -1,0 +1,221 @@
+template {
+  name: "Dragon 281"
+  world: "Generic"
+  description: "Issue 281 of the magazine. An issue about psionics."
+}
+title: "Dragon 281"
+author {
+  name: "Ryan, Michael G."
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "McDermott, Will"
+}
+author {
+  name: "Schubert, Stephen"
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Morton, E.W."
+}
+author {
+  name: "Laws, Robin D."
+}
+author {
+  name: "Keyes, J. Gregory"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Sullivan, Robert"
+}
+author {
+  name: "Terrazzino, Joseph R."
+}
+author {
+  name: "McVey, Mike"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Winninger, Ray"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Haddock, Eric"
+  job: "assistant editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Greenwood, Ed"
+  job: "contributing editor"
+}
+editor {
+  name: "Laws, Robin D."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+editor {
+  name: "Selinker, Mike"
+  job: "contributing editor"
+}
+editor {
+  name: "Williams, Skip"
+  job: "contributing editor"
+}
+editor {
+  name: "Winninger, Ray"
+  job: "contributing editor"
+}
+cover {
+  name: "Parente, Paolo"
+}
+illustrator {
+  name: "John Kovalic"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Arellano, Carlo"
+}
+illustrator {
+  name: "Walsh, Stephen"
+}
+illustrator {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Laubenstein, Jeff"
+}
+illustrator {
+  name: "Sweet, Justin"
+}
+illustrator {
+  name: "Bilgrey, Marc"
+}
+illustrator {
+  name: "Seltzer, Jerry"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Harrington, Glenn"
+}
+illustrator {
+  name: "Gianni, Tom"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Snoddy, Brian"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photos"
+}
+illustrator {
+  name: "Rams, Vinod"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Whitley, Peter"
+  job: "art direction"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publishing"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation direction"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales direction"
+}
+manager {
+  name: "Dunn, John"
+  job: "production management"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistance"
+}
+date {
+  year: 2001
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXV 10"
+number: "281"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

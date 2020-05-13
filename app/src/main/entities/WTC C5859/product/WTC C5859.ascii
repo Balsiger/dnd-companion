@@ -1,0 +1,52 @@
+template {
+  name: "WTC C5859"
+  world: "Generic"
+  description: "This accessory contains resources that Dungeon Masters can use to enhance the experience of running a campaign in the sprawling city of \\Place{Ravnica}, a separately sold Dungeons & Dragons campaign sourcebook.\n\nContained within this durable folder are 20 cardstock sheets designed for use with dry-erase markers. Printed on these sheets are the following resources to help you run your Ravnica campaign:\n\\list{7 double-sided color maps of \\Place{Ravnica}\'s \\Place{Tenth District}, whith helpful quick-reference information about each district}\n{11 double-sided, single color maps of adventure sites associated with Ravnica\'s guilds, with helpful reference information on each location}\n{2 perforated sheets of color cards (18 cards total) with character illustrations on one side and descriptions of guild charms on the other}"
+  short_description: "Maps and miscellanous information about Ravnica."
+}
+title: "Guildmaster\'s Guide to Ravnica: Maps and Miscellany"
+subtitle: "City maps and adventure sites for the world\'s greatest roleplaying game."
+date {
+  year: 2018
+  month: 11
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6661"
+  check: 5
+}
+system: DND_NEXT
+type: ACCESSORY
+style: FOLDER
+producer: "WTC"
+series: "Ravnica"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "Packaging"
+  number: 1
+}
+content {
+  part: SHEET
+  description: "Maps of the Tenth District"
+  number: 7
+}
+content {
+  part: SHEET
+  description: "Maps of adventure sites"
+  number: 11
+}
+content {
+  part: SHEET
+  description: "Color Cards"
+  number: 2
+}
+layout: FULL_COLOR

@@ -1,0 +1,81 @@
+template {
+  name: "TSR 2144"
+  synonym: "DMGR6"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "There is no little enemy.\n                    \\right{---\\emph{French proverb}}\n                    A paranoid warlord, a bitter \\Monster{drow} priestess, a power-mad archmage,\n                    a sly \\Monster{dwarven} assassin---not all the characters in the AD&D game\n                    went the way of heroes. Villains---beings dedicated to committing evil---are\n                    the most dangerous foes of all foes, and thus the most useful of all tools\n                    that a Dungeon Master has to create a memorable campaign. This book presents\n                    the most complete guidelines ever offered on creating villains for\n                    role-playing games. Miss this advice at your own peril!"
+}
+title: "Complete Book of Villains"
+leader: "The"
+author {
+  name: "Botula, Kirk"
+}
+editor {
+  name: "Stein, Kevin"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Nolan, Graham"
+}
+illustrator {
+  name: "Eagle, Bruce"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "production"
+}
+date {
+  year: 1994
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "837"
+  check: 1
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "6"
+series: "Dungeon Master Guide"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

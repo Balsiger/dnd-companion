@@ -1,0 +1,80 @@
+template {
+  name: "Polyhedron 137"
+  world: "Generic"
+  description: "Issue 137 of Polyhedron."
+}
+title: "Polyhedron 137"
+author {
+  name: "Stephen H. Jay"
+}
+author {
+  name: "Gibson, Ed"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Buehler, Carl"
+}
+author {
+  name: "Paul Gosselin"
+}
+author {
+  name: "Mark Barnabo"
+}
+author {
+  name: "William James Cuffe"
+}
+author {
+  name: "Patricia A. Jackson"
+}
+author {
+  name: "Waller, Danny J."
+}
+author {
+  name: "Gregory Detwiler"
+}
+author {
+  name: "Lloyd Brown III"
+}
+editor {
+  name: "Sean Glenn"
+}
+manager {
+  name: "TSR, Inc."
+  job: "Scout Ranger Service"
+}
+manager {
+  name: "Ryan Dancey"
+  job: "Native Guide"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Lantern Bearer"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "Sherpa"
+}
+manager {
+  name: "Mark Painter"
+  job: "Sherpa"
+}
+date {
+  year: 1999
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "19"
+number: "4"
+series: "Polyhedron"
+price {
+}

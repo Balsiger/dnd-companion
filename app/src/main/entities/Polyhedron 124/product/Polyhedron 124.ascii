@@ -1,0 +1,80 @@
+template {
+  name: "Polyhedron 124"
+  world: "Generic"
+  description: "Issue 124 of Polyhedron."
+}
+title: "Polyhedron 124"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Monte Cook"
+}
+author {
+  name: "Gary Labrecque"
+}
+author {
+  name: "Gregory Detwiler"
+}
+author {
+  name: "William W. Connors"
+}
+author {
+  name: "Hauptmann, Andrew"
+}
+author {
+  name: "Nichols, Bobby"
+}
+author {
+  name: "Roger E. Moore"
+}
+author {
+  name: "Fred Faber"
+}
+author {
+  name: "Hesperin, Clio"
+}
+author {
+  name: "Jacinth Moonspring"
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "Mary Shelly"
+}
+manager {
+  name: "Scott Douglas"
+  job: "Dr Victor Frankenstein"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Henry Clerval"
+}
+manager {
+  name: "Conant, Dave"
+  job: "The Villager"
+}
+manager {
+  name: "Terry Craig"
+  job: "The Villager"
+}
+date {
+  year: 1996
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "16"
+number: "9"
+series: "Polyhedron"
+price {
+}

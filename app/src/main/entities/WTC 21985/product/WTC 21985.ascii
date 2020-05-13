@@ -1,0 +1,39 @@
+template {
+  name: "WTC 21985"
+  synonym: "WTC 88203"
+  world: "Forgotten Realms"
+  description: "\\large{Death to the Children of \\God{Bhaal}!}\n                    On the run and hunted by everyone in \\Place{Faer\\hat{u}n}, \\God{Bhaal}\'s\n                    offspring are wiped out. Instead of ridding the land of evil, each kill gives\n                    more power to a vicious group of \\Monster{Bhaalspawn} intent on returning\n                    their father to the world.\n                    Follow the ultimate battle of the children of \\God{Bhaal} in this thrilling\n                    novel based on the computer game from BioWare and Interplay."
+}
+title: "Baldur\'s Gate II, Throne of Bhaal"
+author {
+  name: "Karpyshyn, Drew"
+}
+cover {
+  name: "Greiner, Todd"
+}
+date {
+  year: 2001
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1985"
+  check: 10
+}
+isbn13 {
+}
+pages: 246
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,58 @@
+template {
+  name: "TSR 8494"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The \\Group{Ffolk} have forsaken their goddess, the \\God{Earthmother}, and\n                    have turned to new gods to protect them. Now, capricious and malevolent, one\n                    of the new lords has turned the worship of the \\Group{Ffolk} against them. It\n                    falls to the royal daughters of High King \\NPC{Tristan Kendrick} to confront\n                    the evil that now threatens their land.\n                    Douglas Niles is the author of the immensely popular \\Product{Maztica} and\n                    \\Product{Moonshae} Trilogies. The \\Product{Druidhome Trilogy} is the\n                    much-anticipated sequel to the \\Product{Moonshae Trilogy}."
+}
+title: "Prophet of Moonshae"
+author {
+  name: "Niles, Douglas"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+date {
+  year: 1992
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "319"
+  check: 1
+}
+isbn13 {
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book One"
+series: "Druidhome Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

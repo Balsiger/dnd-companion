@@ -1,0 +1,48 @@
+template {
+  name: "TSR 8373"
+  synonym: "WTC 86077"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "This is the prophecy given by the god \\God{Reorx} to \\NPC{Verden Leafglow},\n  a reformed \\Monster{green dragon} rejected by \\God{Takhisis}, the \\God{queen\n  of villainy}. For good measure, \\God{Reorx} tells the \\Monster{dragon} to\n  give the hero a helping hand.\n\n  \\bold{\'Forever Aghar\'}\n\n  But who is this mighty hero? Why none other than \\NPC{Bron}, son of the\n  leader of the \\Monster{gully dwarf} tribe of \\Group{Bulp}. Befriended by\n  \\NPC{Verden Leafglow}, \\NPC{Bron} must prove his mettle as the first Aghar\n  hero when the \\Monster{gully dwarves} are caught up in the struggles that\n  follow the \\Event{War of the Lance}.\n\n  \\bold{The \\Monster{Gully Dwarves}}\n\n  The \\Product{Lost Histories Series} probes the historical roots and epic\n  struggles of the heretofore little-known peoples of \\Place{Krynn}."
+}
+title: "Gully Dwarves"
+leader: "The"
+subtitle: "From the lowest of the low will arise a hero..."
+author {
+  name: "Parkinsonm Dan"
+}
+date {
+  year: 1996
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0497"
+  check: 6
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Volume V"
+series: "Lost Histories Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

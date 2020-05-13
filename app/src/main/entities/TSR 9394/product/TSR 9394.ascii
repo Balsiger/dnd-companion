@@ -1,0 +1,48 @@
+template {
+  name: "TSR 9394"
+  synonym: "DLC2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Dragonlance"
+  description: "several older adventures"
+}
+title: "Dragonlance Classics Volume #2 (DL6-9)"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1993
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "570"
+  check: 4
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

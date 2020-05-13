@@ -1,0 +1,18 @@
+template {
+  name: "TSR 5409"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "D&D Companion Figure Set"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

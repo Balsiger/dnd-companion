@@ -1,0 +1,41 @@
+template {
+  name: "WTC 17852"
+  world: "Generic"
+  description: "Far beneath the earth, a sinister ritual takes place. A corrupt cleric seeks\n  the \\Item{Eye of Gruumsh}, a relic sacred to the hideous god of the\n  orcs. Against hi m stand a scullery maid, a paladin, a priest of the god\n  \\God{Pelor}, and a half-orc barbarian.\n\n  Will they be enough?"
+}
+title: "Bloody Eye"
+leader: "The"
+author {
+  name: "T.H. Lain"
+}
+cover {
+  name: "Sam Wood"
+}
+cover {
+  name: "Matthew Mitchell"
+}
+date {
+  year: 2003
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 181
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 5"
+series: "D&D 3rd Edition Introduction Series"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

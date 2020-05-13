@@ -1,0 +1,137 @@
+template {
+  name: "Dragon 225"
+  world: "Generic"
+}
+title: "Dragon 225"
+author {
+  name: "Rateliff, John D."
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Sherman, Fraser"
+}
+author {
+  name: "Selinker, Michael A."
+}
+author {
+  name: "Clarke, David"
+}
+author {
+  name: "Beal, Clayton R."
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Martin, Robert"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Rabe, Jean"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bryant, Anthony J."
+  job: "editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "associate assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Coleman, Jason R."
+}
+illustrator {
+  name: "Lusebrink, Amy"
+}
+illustrator {
+  name: "May, Rex F."
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "Pilsbury, Joseph"
+}
+illustrator {
+  name: "Guntner, Frank"
+}
+illustrator {
+  name: "Meyer, Dwain"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Hrenchuk, Bill"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1996
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XX 8"
+number: "225"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

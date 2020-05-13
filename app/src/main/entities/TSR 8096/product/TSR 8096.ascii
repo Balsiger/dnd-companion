@@ -1,0 +1,37 @@
+template {
+  name: "TSR 8096"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Ravenloft"
+}
+title: "Night of the Tiger"
+author {
+  name: "Jean Rabe"
+}
+date {
+  year: 1995
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0114"
+  check: 4
+}
+isbn13 {
+}
+pages: 192
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Eight"
+series: "New Series"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

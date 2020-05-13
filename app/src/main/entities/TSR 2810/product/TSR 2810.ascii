@@ -1,0 +1,37 @@
+template {
+  name: "TSR 2810"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "None"
+  description: "a scapegoat for a political mistake is disgraced and should be used as mo"
+}
+title: "Starrise at Corrival"
+author {
+  name: "Duane, Diane"
+}
+date {
+  year: 1998
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1179"
+  check: 4
+}
+isbn13 {
+}
+pages: 352
+system: ALTERNITY
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

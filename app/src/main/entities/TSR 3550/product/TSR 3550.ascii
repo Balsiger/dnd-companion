@@ -1,0 +1,26 @@
+template {
+  name: "TSR 3550"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Buck Rogers"
+  description: "powerful battles from Mercury to the asteroids"
+}
+title: "Battle for the 25th Century"
+date {
+  year: 1993
+}
+isbn {
+}
+isbn13 {
+}
+audience: ALL
+type: BOARD_GAME
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}

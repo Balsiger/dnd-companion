@@ -1,0 +1,198 @@
+template {
+  name: "WTC 2178972"
+  world: "Generic"
+  description: "The heroes of bow and blade, martial warriors stand tall against the threats of evil. Clad in sturdy armor and holding a trusty weapon, your martial hero must rely on wit and grit to achieve victory.\n                    This Dungeons & Dragons supplement presents hundreds of new powers, feats, paragon paths, and epic destinies designed for the fighter, ranger, rogue, and warlord classes.\n                    It includes brand-new builds and class features for these four classes, allowing you to play new versions of you favorite martial classes --- from the battlerager fighter or cutthroat rogue to the bravura warlord or beastmaster ranger."
+  short_description: "Options for Fighters, Rangers, Rogues, and Warlords"
+}
+title: "Martial Power"
+subtitle: "Draw Your Sword"
+author {
+  name: "Heinsoo, Rob"
+  job: "lead designer"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Sims, Chris"
+}
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Collins, Andy"
+  job: "additional design"
+}
+author {
+  name: "Logue, Nicolas"
+  job: "additional design"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "additional design"
+}
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "developer"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+author {
+  name: "Schaefer, Peter"
+  job: "developer"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "lead editor"
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "O&#39Conner, William"
+}
+illustrator {
+  name: "Belledin, Steve"
+}
+illustrator {
+  name: "Borazio, Leonardo"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Flores, Gonzalo"
+}
+illustrator {
+  name: "Gillespie, Adam"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "Louie, Wes"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Moyer, Lee"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "Spears, Ron"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Tappin, Stephen"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "d&d story design and development manager"
+}
+manager {
+  name: "Collins, Andy"
+  job: "d&d system design and development manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2008
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4981"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4981"
+  check: 6
+}
+pages: 160
+system: DND_4
+audience: UNKNOWN
+number: "Martial"
+series: "Power Series"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,44 @@
+template {
+  name: "WTC 9554674"
+  world: "Forgotten Realms"
+  description: "\\large{Lady of the \\Group{Order of Twilight}}\n                    \\large{Witch of the \\Group{Gargauthans}}\n                    \\large{Blood Magus}\n                    \\NPC{Morgynn} seethed for years under the yoke of ignorance her mother\n                    enforced. Then death came for \\NPC{Morgynn}, and after embracing it she was\n                    reborn with frightening powers of incredible strength.\n                    When a wandering ghostwalker and a seer\'s hubris provide the perfect opening\n                    to expand her dominion, she seizes the opportunity. But the ghostwalker is\n                    proving more trouble than she had bargained for...\n                    James P. Davis explores a terrifying sorceress in a deadly battle of wits and\n                    steel."
+}
+title: "Bloodwalk"
+author {
+  name: "Davis, James P."
+}
+cover {
+  name: "Mayers, Duane O."
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+date {
+  year: 2006
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4018"
+  check: 2
+}
+isbn13 {
+}
+pages: 314
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "2"
+series: "The Wizards"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

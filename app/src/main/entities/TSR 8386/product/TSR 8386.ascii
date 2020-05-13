@@ -1,0 +1,99 @@
+template {
+  name: "TSR 8386"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "Dragonlance"
+  description: "Old companions and fresh heroes.\n\n  New and ever more fantastical creatures and monsters.\n\n  Banished gods and lost magic.\n\n  \\Monster{Dragon} overlords are taking over the world of \\Place{Krynn}.\n\n  \\Event{The Chaos War} is ending.\n\n  \\Event{The Fifth Age} is beginning.\n\n  A collection of fantastical short stories exploring the new \\Event{Fifth Age}\n  setting from the best known \\Place{Dragonlance} writers."
+}
+title: "Relics and Omens"
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "McGrew, Robyn"
+}
+author {
+  name: "Pack, Janet"
+}
+author {
+  name: "Stein, Kevin T."
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Cook, Sue Weinlein"
+}
+author {
+  name: "Crook, Jeff"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Perrin, Don"
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 1998
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1169"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Volume 1"
+series: "Tales of the Fifth Age"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

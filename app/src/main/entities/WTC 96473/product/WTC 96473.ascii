@@ -1,0 +1,34 @@
+template {
+  name: "WTC 96473"
+  world: "None"
+  description: "\\Product{The Darksteel Eye} continues a series that explores a new and\n                    mysterious world in the \\Place{Magic: The Gathering} setting. This novel\n                    previews the newest card set to be released in February, giving you a sneak\n                    peek at the newest elements of the game."
+}
+title: "Darksteel Eye"
+leader: "The"
+author {
+  name: "Lebow, Jess"
+}
+date {
+  year: 2004
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3140"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Mirrodin Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

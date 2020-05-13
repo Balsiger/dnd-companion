@@ -1,0 +1,146 @@
+template {
+  name: "Dragon 320"
+  world: "Generic"
+  description: "Issue 319 of the magazine. 30 Years of D&D issue."
+}
+title: "Dragon 320"
+author {
+  name: "Byers, Richard Lee"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Loe, Casey"
+}
+author {
+  name: "Marable, Ken"
+}
+author {
+  name: "McArtor, Mike"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Smith, Mat"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "McClellan, Dave"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "St. Goddard, Aaron"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Velotta, Patrick"
+  job: "graphic designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "group publishing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "circulation manager"
+}
+date {
+  year: 2004
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIX 1"
+number: "319"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

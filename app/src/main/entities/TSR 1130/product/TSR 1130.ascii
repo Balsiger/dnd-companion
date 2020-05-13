@@ -1,0 +1,31 @@
+template {
+  name: "TSR 1130"
+  reference {
+    name: "catalog95"
+  }
+  world: "None"
+  description: "M<ore troops and leaders for extra-planar legions."
+}
+title: "Blood Wars Escalation Pack 1: Rebels and Reinforcements"
+date {
+  year: 1995
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+system: BLOOD_WARS
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  description: "random"
+  number: 15
+}

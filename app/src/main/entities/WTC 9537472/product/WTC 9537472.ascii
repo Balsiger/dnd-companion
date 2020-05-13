@@ -1,0 +1,185 @@
+template {
+  name: "WTC 9537472"
+  world: "Generic"
+  description: "Whether you\'re creating a new character or improving an existing one, the\n                    \\Product{Player\'s Handbook II} supplement has something you need. This volume\n                    provides new character options for players, including:\n                    \\list\n                    {New class features for all your favorite classes}\n                    {A rebuilding system that allows you to update existing characters}\n                    {New advancement options and affiliations}\n                    {New staring equipment packages}\n                    {New teamwork benefits}\n                    {New feats and spells}\n                    A follow-up to the \\Product{Player\'s Handbook} designed to aid players and\n                    provide more character options.\n                    \\Product{The Player\'s Handbook II} builds upon existing materials in the\n                    \\Product{Player\'s Handbook}. This is the first direct followup to the\n                    best-selling and most used D&D rulebook. It is specifically designed to\n                    expand the options available for players by both providing new material and\n                    increasing the uses for existing rules. Included are chapters on character\n                    race, background, classes, feats, spells, character creation, and character\n                    advancement. New rules include racial affiliations that make race matter as a\n                    character advances in level, new character classes and alternate class\n                    features for existing classes, new feats, tools for rapid character creation,\n                    and additional organization and teamwork benefits -- an option first\n                    introduced in \\Product{Dungeon Master\'s Guide II} and \\Product{Heroes of\n                    Battle}."
+  short_description: "A follow-up to the \\Product{Player\'s Handbook} designed to aid players and provide more character options."
+}
+title: "Player\'s Handbook II"
+subtitle: "Make Your Characters the Best they Can Be"
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Brunner, Frank"
+  job: "additional design"
+}
+author {
+  name: "Johnson, Luke"
+  job: "additional design"
+}
+author {
+  name: "Lindsay, Christopher"
+  job: "additional design"
+}
+author {
+  name: "Schwalb, Robert J."
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "development team"
+}
+author {
+  name: "Decker, Jesse"
+  job: "development team"
+}
+author {
+  name: "Mearls, Mike"
+  job: "development team"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "development team"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Rateliff, John D."
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Scott, Dan"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Belledin, Steve"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Hudnut, David"
+}
+illustrator {
+  name: "Komarck, Michael"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director D&D"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Christina"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3918"
+  check: 4
+}
+isbn13 {
+}
+pages: 224
+system: DND_3_5
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Core Books"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

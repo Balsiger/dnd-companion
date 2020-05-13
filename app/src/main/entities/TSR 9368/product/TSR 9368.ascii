@@ -1,0 +1,40 @@
+template {
+  name: "TSR 9368"
+  synonym: "PC4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "players play werewolfs"
+}
+title: "Night Howlers"
+date {
+  year: 1992
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "392"
+  check: 2
+}
+isbn13 {
+}
+system: DND_1ST
+type: ACCESSORY
+producer: "TSR"
+series: "Creature Crucible"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

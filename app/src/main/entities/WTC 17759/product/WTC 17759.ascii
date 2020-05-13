@@ -1,0 +1,58 @@
+template {
+  name: "WTC 17759"
+  world: "Forgotten Realms"
+  description: "This title is the third and final hardcover release in the latest trilogy\n                    from R.A. Salvatore, which once again features his popular dark elf character\n                    \\NPC{Drizzt Do\'Urden}. Both of the previous titles in the series were New\n                    York Times best-sellers upon hardcover release, while the first title in the\n                    trilogy, \\Product{The Thousand Orcs}, hit the list upon mass market release\n                    as well. The second title in the series, \\Product{The Lone Drow}, had the\n                    highest debut ever on the New York Times best-seller list for a Salvatore\n                    title with Wizards of the Coast, Inc. at #7, and it stayed on the list for 10\n                    straight weeks."
+}
+title: "Two Swords"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3360"
+  check: 7
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book III"
+series: "The Hunter\'s Blades Trilogy"
+price {
+  currency: "$ "
+  number: 2595
+  precision: 100
+}

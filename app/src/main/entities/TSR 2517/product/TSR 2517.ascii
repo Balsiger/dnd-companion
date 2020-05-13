@@ -1,0 +1,44 @@
+template {
+  name: "TSR 2517"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  world: "Mystara"
+  description: "events, peoples, kingdoms"
+}
+title: "Joshuan\'s Almanac"
+author {
+  name: "Dupuis, Ann"
+}
+author {
+  name: "Tornabene, Liz"
+}
+date {
+  year: 1995
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0192"
+  check: 6
+}
+isbn13 {
+}
+pages: 240
+system: ADND_2ND
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}

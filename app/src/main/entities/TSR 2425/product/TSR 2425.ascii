@@ -1,0 +1,54 @@
+template {
+  name: "TSR 2425"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dark Sun"
+  description: "Tribe of One Trilogy, book one"
+}
+title: "Outcast"
+leader: "The"
+author {
+  name: "Simon Hawke"
+}
+date {
+  year: 1993
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "676"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book One"
+series: "Tribe of One Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

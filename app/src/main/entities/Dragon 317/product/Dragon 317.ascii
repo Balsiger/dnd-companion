@@ -1,0 +1,180 @@
+template {
+  name: "Dragon 317"
+  world: "Generic"
+  description: "Issue 317 of the magazine. Exotic Heroes issue."
+}
+title: "Dragon 317"
+author {
+  name: "Alvarez, J.C."
+}
+author {
+  name: "Bishop, Jim"
+}
+author {
+  name: "Bucak, S. Deniz"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+}
+author {
+  name: "Dunwoody, Charles"
+}
+author {
+  name: "Greeley, Philip, M."
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Poisso, Dean"
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Smith, Mat"
+}
+author {
+  name: "Scott, Andrew M."
+}
+author {
+  name: "Stout, Travid"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Hooper, Fred"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Luckas, Chuch"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Tedin, Mark"
+}
+illustrator {
+  name: "Wahlstrum, David"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Velotta, Patrick"
+  job: "graphic designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "group publishing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVIII 10"
+number: "317"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

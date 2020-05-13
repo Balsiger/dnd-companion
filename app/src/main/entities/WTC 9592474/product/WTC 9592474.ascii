@@ -1,0 +1,58 @@
+template {
+  name: "WTC 9592474"
+  world: "Forgotten Realms"
+  description: "The realm of \\Place{Thay} has long been ruled by the uneasy peace of an alliance of \\Class{wizards}, but all along there has been one who believes he is the true master. And when that one wizard finally moves against his former allies, his homeland could be only the first of his conquests."
+}
+title: "Unclean"
+subtitle: "Good. You understand now. I\342\200\232\303\204\303\264m not your beloved anymore. I\342\200\232\303\204\303\264m Unclean -- foul, and a slave to creatures fouler still.Please . . . please . . . destroy me if you can."
+author {
+  name: "Byers, Richard Lee"
+}
+editor {
+}
+cover {
+  name: "Ruth, Greg"
+}
+cartographer {
+  name: "Lazzareti, Rob"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4258"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4258"
+  check: 9
+}
+pages: 344
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "The Haunted Lands"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

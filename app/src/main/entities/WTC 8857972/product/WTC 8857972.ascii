@@ -1,0 +1,149 @@
+template {
+  name: "WTC 8857972"
+  world: "Generic"
+  description: "\\large{Harness a New and Original Source of Magical Power}\n                    Drawn from the ambient life energy that fills the multiverse, \\Item{incarnum}\n                    is the essence of all creatures. \\Item{Incarnum} flows as a deep, blue,\n                    radiant mist, and those with the knowledge to harness this energy can shape\n                    it into objects of great power, called \\Item{soulmelds}. Using\n                    \\Item{soulmelds} crafted from raw \\Item{incarnum}, an adventurer opens up new\n                    avenues of ability never available before.\n                    In the tradition of the \\Product{Expanded Psionics Handbook}, the\n                    \\Product{Magic of Incarnum} games supplement presents an alternative to\n                    conventional magic that grants access to a new source of power. Characters of\n                    all classes can experience \\Item{incarnum} through feats, spells, psionic\n                    powers, and prestige classes, while \\Item{incarnum}-wielding standard classes\n                    such as the \\Class{incarnate} and the \\Class{soulborn} allow players to take\n                    full advantage of \\Item{incarnum}\'s amazing powers.\n                    The \\Product{Magic of Incarnum} games supplement includes a wealth of options\n                    and advice about incorporating this new power source into ongoing or\n                    brand-new campaigns.\n                    This supplement introduces a magical substance called incarnum into the D&D\n                    game. With this book, the players characters can meld incarnum-the\n                    power of souls living, dead, and unborn-into magical items and even\n                    their own bodies, granting them special attacks, defenses, and other\n                    abilities (much as magic items and spells do). Incarnum can be shaped and\n                    reshaped into new forms, giving characters tremendous versatility in the\n                    dungeon and on any battlefield.\n                    This book also features new classes, prestige classes, feats, and other\n                    options for characters wishing to explore the secrets of incarnum, as well as\n                    rules and advice for including incarnum in a D&D campaign."
+}
+title: "Magic of Incarnum"
+subtitle: "A New Source of Power for Your D&D Game"
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Brunner, Frank"
+}
+author {
+  name: "Schubert, Stephen"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "development"
+}
+author {
+  name: "Noonan, David"
+  job: "development"
+}
+author {
+  name: "Watkins, Rob"
+  job: "development"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Higginbotham, Henry"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Poole, Mark"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Trevas, Chris"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG R&D"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "art director"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3701"
+  check: 7
+}
+isbn13 {
+}
+pages: 224
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"

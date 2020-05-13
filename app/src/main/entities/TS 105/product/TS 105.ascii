@@ -1,0 +1,29 @@
+template {
+  name: "TS 105"
+  synonym: ""
+  description: "Huge flaming wreckage marker."
+  short_description: "Huge flaming wreckage marker."
+}
+subtitle: "Flaming Wreckage"
+manager {
+}
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: BOOKLET
+producer: "WTC"
+price {
+}
+content {
+  part: MINIATURE
+  description: "flaming wreckage marker"
+  number: 1073741824
+}
+layout: FULL_COLOR

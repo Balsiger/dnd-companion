@@ -1,0 +1,56 @@
+template {
+  name: "TSR 11510"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  world: "Generic"
+  description: "the alternity game essentials"
+}
+title: "Alternity"
+author {
+  name: "William W. Connors"
+}
+author {
+  name: "Sean Reynolds"
+}
+date {
+  year: 1999
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1510"
+  check: 2
+}
+isbn13 {
+}
+system: ALTERNITY
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$ "
+  number: 999
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 2
+}
+content {
+  part: FOLDER
+  description: "heros"
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  description: "DM"
+  number: 1073741824
+}
+content {
+  part: DICE
+  number: 1073741824
+}

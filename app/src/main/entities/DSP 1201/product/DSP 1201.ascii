@@ -1,0 +1,41 @@
+template {
+  name: "DSP 1201"
+  description: "You hold in you hands the heaviest reading on Henchmen in the known\n  universe. Journey along with \\NPC{Yeagar the Warrior}, \\NPC{Artax the\n  Wizard}, \\NPC{Piffany the Cleric}, and, the hero of our tales, \\NPC{Nodwick\n  the Henchman}! Contained herein are the first twelce issues of the Nodwick\n  Comic book, where you\'ll meet strange gods, participate in the Hench Games,\n  meet medieval super-men, discover why \'It\'s a Wonderful Afterlife\', go on a\n  dungeon crawl, and even experience \\emph{*gasp*} a world without\n  \\NPC{Piffany}! So heft a copy of this tome for the ages and get henched!"
+}
+title: "Haulin\' Assets"
+subtitle: "The wait is over, but the weight has just begun!"
+author {
+  name: "Williams, Aaron"
+}
+cover {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "933288"
+  title: "10"
+  check: 8
+}
+isbn13 {
+}
+pages: 308
+system: NONE
+audience: ALL
+type: COMICS
+style: PAPERBACK
+producer: "Henchman Publishing"
+number: "Book I & II"
+series: "The Nodwick Chronicles"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

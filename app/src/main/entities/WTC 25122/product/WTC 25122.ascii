@@ -1,0 +1,67 @@
+template {
+  name: "WTC 25122"
+  synonym: ""
+  world: "Generic"
+  description: "\\Monster{Goblin}s have invaded \\Place{Kiris Dahn}, once a jewel in the crown of \\Place{Nerath}, the fallen human kingdom. Within its plundered ruins lie treasures yet to be unearthed, including the last of the \\Item{slaying stones} --- deadly relics from bygone wars. Even now, evil forces scour the ruins in search of the stone, but they are not alone! Adventurers have come to \\Place{Kiris Dahn}, bringing death and destruction in their wake.\n                    \\Product{The Slaying Stone} is a stand-alone Dungeons & Dragons adventure designed for 1st-level characters. It fits easily into any homebrew campaign and features an easy-to-run encounter format and a full-color, double-sided battle map."
+  short_description: "An Adventure for Charaters of 1st level."
+}
+title: "Slaying Stone"
+leader: "The"
+subtitle: "Death Hides in \\Place{Kiris Dahn}"
+author {
+  name: "Bonner, Logan"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+cover {
+  name: "Horsley, Ralph"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+cartographer {
+  name: "Bonner, Logan"
+}
+typographer {
+  name: "Tardiff, Christopher"
+  job: "publishing production specialist"
+}
+date {
+  year: 2010
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5388"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5388"
+  check: 2
+}
+pages: 32
+system: DND_4
+type: ADVENTURE
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Adventure"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "double-sided, battle map"
+  number: 1073741824
+}
+layout: FULL_COLOR

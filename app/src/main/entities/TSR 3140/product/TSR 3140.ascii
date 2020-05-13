@@ -1,0 +1,36 @@
+template {
+  name: "TSR 3140"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Birthright"
+  description: "first bestiary for Cerilia with a host of new creatures"
+}
+title: "Blood Spawn"
+author {
+  name: "Bebris, Carrie A."
+}
+date {
+  year: 1998
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1243"
+  check: 10
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}

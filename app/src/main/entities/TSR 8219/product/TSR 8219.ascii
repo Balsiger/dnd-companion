@@ -1,0 +1,42 @@
+template {
+  name: "TSR 8219"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+  description: "an overworked college professor is propelled into another plane"
+}
+title: "Falcon Rises"
+leader: "The"
+date {
+  year: 1991
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "075"
+  check: 3
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

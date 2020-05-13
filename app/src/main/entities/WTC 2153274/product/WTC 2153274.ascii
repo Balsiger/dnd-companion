@@ -1,0 +1,60 @@
+template {
+  name: "WTC 2153274"
+  world: "Eberron"
+  description: "When you\'ve got a problem, he\'s your man. But when he finds himself in possession of a strange relic, he gets even more trouble than he can handle. His enemies want the relic, he wants its owner, and the City Watch wants him locked away for good. As if that weren\342\200\232\303\204\303\264t enough, a mysterious woman just hired him to find a magic device that could bring the world to its knees. Could the two be related?\n\nWhen a job turns this dangerous, whether you win or lose doesn\342\200\232\303\204\303\264t matter. The best you can hope for is just to survive."
+}
+title: "Left Hand of Death"
+leader: "The"
+subtitle: "\\NPC{Ulther Whitsun} is a fixer."
+author {
+  name: "DeWolf Parker"
+}
+editor {
+  name: "Sehestedt, Mark"
+}
+cover {
+  name: "Van Der Haegen, Cyril"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4713"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4713"
+  check: 3
+}
+pages: 277
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 1"
+series: "The Lanternlight Files"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

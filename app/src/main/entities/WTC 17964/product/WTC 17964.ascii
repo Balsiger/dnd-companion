@@ -1,0 +1,61 @@
+template {
+  name: "WTC 17964"
+  world: "Dragonlance"
+  description: "The third and last title in the second \\Place{Dragonlance} novel trilogy\n  released for the first time ever in a trade hardcover edition. Featuring the\n  stunning art and design that graced the cover of the paperback edition, the\n  new version of this series is a follow-up to the release of the\n  \\Place{Dragonlance} novels \\Product{Chronicles} trilogy in hardcover in\n  2003."
+}
+title: "Test of the Twins"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3388"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume III"
+series: "Dragonlance Legends"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}

@@ -1,0 +1,93 @@
+template {
+  name: "Dungeon 27"
+  world: "Generic"
+  description: "This is issue 27 of the dungeon magazine."
+}
+title: "Dungeon 27"
+author {
+  name: "Neverdowski, Charles"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "James, Ted"
+}
+author {
+  name: "Zuvich, Thomas"
+}
+author {
+  name: "Barrett, Craig H."
+}
+author {
+  name: "Smedman, Lisa"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Miller, Tom"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Schwartz, Steve"
+}
+illustrator {
+  name: "Thompson, Ruth"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1991
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "V 3"
+number: "27"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

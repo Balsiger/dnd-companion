@@ -1,0 +1,57 @@
+template {
+  name: "TSR 2519"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  world: "Mystara"
+  description: "race against time and treachery"
+}
+title: "Black Vessel"
+leader: "The"
+author {
+  name: "Morris Simon"
+}
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0507"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: ADND_2ND
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: GATEFOLD
+  description: "self-cover with map sheets"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "looseleaf handouts"
+  number: 8
+}

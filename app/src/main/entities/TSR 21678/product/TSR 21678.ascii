@@ -1,0 +1,49 @@
+template {
+  name: "TSR 21678"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "The regiment of \\Monster{draconian} engineers featured in the \\Product{Doom Brigade} seek a safe haven for their precious cargo of young \\Monster{draconians}. All they have to do is stay alive. Surely that shouldn\'t be too hard.\n\nBut Commander \\NPC{Kang} puzzles over a sinister mystery. Why are some of his men vanishing? \\NPC{Kang} will have to use Draconian Measures to defeat his foes and save his race. They\'d better be enough --- the fate of his entire race hangs in the balance."
+  short_description: "Second book in the Kang\'s Regiment series."
+}
+title: "Dragonian Measure"
+author {
+  name: "Perrin, Don"
+}
+author {
+  name: "Margaret Weis"
+}
+cover {
+  name: "Horne, Daniel"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1678"
+  check: 8
+}
+isbn13 {
+}
+pages: 350
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "2"
+series: "Kang\'s Regiment"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

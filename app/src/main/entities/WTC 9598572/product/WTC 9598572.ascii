@@ -1,0 +1,56 @@
+template {
+  name: "WTC 9598572"
+  world: "Forgotten Realms"
+  description: "The kingdom of \\Place{Cormyr} is in need of heroes. Only the bravest and most loyal stand a chance in the trials to come. Standing tall against the darkness that besieges their homeland, a band of youthful adventurers answer that call.\n                    \\large{They are the \\Group{Knights of Myth Drannor}.}"
+}
+title: "Swords of Dragonfire"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+}
+cover {
+  name: "Stewart, Matt"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4339"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4339"
+  check: 5
+}
+pages: 340
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book II"
+series: "The Knights of Myth Drannor"
+price {
+  currency: "$"
+  number: 2595
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

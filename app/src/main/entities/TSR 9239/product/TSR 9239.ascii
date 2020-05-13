@@ -1,0 +1,68 @@
+template {
+  name: "TSR 9239"
+  synonym: "FRC2"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "Day breaks, and the crowing of a distant \\Monster[Rooster]{rooster} wakes\n                    you from an all-too-short sleep. Another day of adventure, you think as you\n                    arise---but then you stop short. You, and all of your companions, have an\n                    elaborate blue tattoo covering most of your sword arm!\n                    And there\'s more to these marks than a drunken prank. As you try to find out\n                    the source and meaning of your new adornment, you are drawn further and\n                    further into danger and mystery. Will you become a pawn in somebody else\'s\n                    power game, or will you fight for your freedom and individuality?\n                    \\Product[TSR 9239]{Curse of the Azure Bonds} is an adventure set in the\n                    \\Place{Forgotten Realms} game world for the AD&D 2nd Edition game. It is\n                    based on the best-selling novel, \\Product[TSR 8414]{Azure Bonds}, by Jeff\n                    Grubb and Kate Novak. And watch for the \\Product{Azure Bonds} computer game,\n                    coming soon from Strategic Simulations, Inc.!"
+}
+title: "Curse of the Azure Bonds"
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "MacDonald, George"
+}
+author {
+  name: "Hickman, Tracy"
+}
+author {
+  name: "Novak, Kate"
+}
+author {
+  name: "Perrin, Steve"
+}
+author {
+  name: "Lowder, Jim"
+}
+editor {
+  name: "Mohan, Kim"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Beauvais, Denis"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Graham, Cory"
+  job: "keylining"
+}
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "606"
+  check: 1
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ADVENTURE
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

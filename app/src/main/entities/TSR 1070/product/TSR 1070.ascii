@@ -1,0 +1,81 @@
+template {
+  name: "TSR 1070"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Revised D&D base system."
+}
+title: "Dungeons & Dragons Game"
+author {
+  name: "Denning, Troy"
+}
+date {
+  year: 1991
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "082"
+  check: 6
+}
+isbn13 {
+}
+pages: 64
+system: DND_1ST
+type: RULEBOOK
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "rulebook"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "dragon card learning pack"
+  number: 1073741824
+}
+content {
+  part: SCREEN
+  description: "DM screen"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "stand ups"
+  number: 48
+}
+content {
+  part: DICE
+  description: "dice"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "map"
+  number: 1073741824
+}

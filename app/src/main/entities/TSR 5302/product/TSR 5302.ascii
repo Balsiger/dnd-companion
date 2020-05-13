@@ -1,0 +1,18 @@
+template {
+  name: "TSR 5302"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Clerics & Druids"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

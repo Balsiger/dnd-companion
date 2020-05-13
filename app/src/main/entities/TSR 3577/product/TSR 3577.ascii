@@ -1,0 +1,24 @@
+template {
+  name: "TSR 3577"
+  reference {
+    name: "catalog91W"
+  }
+  world: "Buck Rogers"
+  description: "new equipment, rules and ship information"
+}
+title: "Technical Compendium"
+date {
+  year: 1991
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+system: XXVC
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

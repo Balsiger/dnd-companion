@@ -1,0 +1,80 @@
+template {
+  name: "Polyhedron 133"
+  world: "Generic"
+  description: "Issue 133 of Polyhedron."
+}
+title: "Polyhedron 133"
+author {
+  name: "Kevin W. Melka"
+}
+author {
+  name: "Klim Altman"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "James P. Buchanan"
+}
+author {
+  name: "William James Cuffe"
+}
+author {
+  name: "Gregory W. Detwiler"
+}
+author {
+  name: "Michael L. Howard"
+}
+author {
+  name: "Matt Brebner"
+}
+author {
+  name: "Kurt Samson"
+}
+author {
+  name: "Gibson, Ed"
+}
+author {
+  name: "Laura Moody Harvey"
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "The Cordon Blue"
+}
+manager {
+  name: "Lisa Stevens"
+  job: "Floor Manager"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Grand Chef"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "Wait Staff"
+}
+manager {
+  name: "Paul Alan Timm"
+  job: "Wait Staff"
+}
+date {
+  year: 1998
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "18"
+number: "6"
+series: "Polyhedron"
+price {
+}

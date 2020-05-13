@@ -1,0 +1,47 @@
+template {
+  name: "TSR 8380"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Dragonlance"
+  description: "two isolated bands during the Chaos War"
+}
+title: "Doom Brigade"
+leader: "The"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Perrin, Don"
+}
+date {
+  year: 1996
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0526"
+  check: 3
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2399
+  precision: 100
+}

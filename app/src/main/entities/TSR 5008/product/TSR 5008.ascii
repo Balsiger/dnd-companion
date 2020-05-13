@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5008"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Heroic Men-At-Arms"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

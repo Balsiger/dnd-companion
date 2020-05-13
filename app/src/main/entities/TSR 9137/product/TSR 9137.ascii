@@ -1,0 +1,26 @@
+template {
+  name: "TSR 9137"
+  synonym: "DL9"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+}
+title: "Dragons of Deceit"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 750
+  precision: 100
+}

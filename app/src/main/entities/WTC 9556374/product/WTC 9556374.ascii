@@ -1,0 +1,58 @@
+template {
+  name: "WTC 9556374"
+  world: "Generic"
+  description: "When \\NPC{Driskoll} discovers a \\Monster{small snake} in an alley, he names\n  it \\NPC{Suma} and takes it home. \\NPC{Driskoll} loves his new pet, but\n  \\NPC{Kellach} is worried. Ever since \\NPC{Suma} arrived, a mysterious\n  sleeping sickness has swept through \\NPC{Curston} -- the only clue a mark\n  like a serpent\'s tongue left on the victims\' skin. Is \\NPC{Suma} really just\n  a harmless pet? Or is there more to this snake than meets the eye?"
+}
+title: "Mark of the Yuan-Ti"
+author {
+  name: "Roberts, Kerry Daniel"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2006
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4033"
+  check: 6
+}
+isbn13 {
+}
+pages: 192
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 12"
+series: "Knights of the Silver Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

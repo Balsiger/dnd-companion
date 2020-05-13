@@ -1,0 +1,46 @@
+template {
+  name: "WTC 9554074"
+  world: "Eberron"
+  description: "They\'ve been hunted across the \\Place{Mournland}, captured in\n  \\Place{Karrnath}, and attacked in a \\Monster{dragon}\'s mountain lair. One\n  band of adventurers has had enough. Time to take the battle to the\n  enemy. Time to fight back. One young woman will have to decide to give in or\n  embrace her destiny as -- the \\NPC{Queen of Death}."
+}
+title: "Queen of the Death"
+leader: "The"
+author {
+  name: "Forbeck, Matt"
+}
+cover {
+  name: "Rex, Adam"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2006
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4012"
+  check: 3
+}
+isbn13 {
+}
+pages: 378
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 3"
+series: "The Lost Mark"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

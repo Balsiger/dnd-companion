@@ -1,0 +1,42 @@
+template {
+  name: "TSR 21547"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  world: "Dragonlance"
+}
+title: "Dragons of Autumn Twilight"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+date {
+  year: 2000
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1574"
+  check: 9
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume One"
+series: "Chronicles Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

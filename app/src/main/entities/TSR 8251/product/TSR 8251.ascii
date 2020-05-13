@@ -1,0 +1,39 @@
+template {
+  name: "TSR 8251"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+  description: "blend of science fictionl, magic, and mythos"
+}
+title: "Dragons Can Only Rust"
+author {
+  name: "Cymri, Chrys"
+}
+date {
+  year: 1995
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0157"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

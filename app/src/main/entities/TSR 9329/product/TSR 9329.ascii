@@ -1,0 +1,40 @@
+template {
+  name: "TSR 9329"
+  synonym: "LNR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Lankhmar"
+  description: "adventures in Newhon"
+}
+title: "Tales of Lankhmar"
+date {
+  year: 1991
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

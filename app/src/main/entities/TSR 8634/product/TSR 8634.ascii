@@ -1,0 +1,53 @@
+template {
+  name: "TSR 8634"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  world: "Forgotten Realms"
+  description: "It\'s the most important wedding of the decade---and someone has kidnapped\n                    the bride! As the nobility of \\Place{Faer\\hat{u}n} gather in\n                    \\Place{Waterdeep} for the marriage of \\NPC{Piergeiron the Paladinson},\n                    \\NPC{Open Lord} of the city, dark and mysterious forces are at work,\n                    threatening his happiness. But be careful; for in this world, nothing is ever\n                    what it seems.\n                    \\Product{The Abduction} is the first part in a nine-book serial novel\n                    published by TSR and set in the exciting world of the \\Place{Forgotten\n                    Realms}. Be sure to look for Part 2, \\Product{The Paladins} at your local\n                    bookstore."
+}
+title: "Abduction"
+leader: "The"
+author {
+  name: "King, Robert J."
+}
+cover {
+  name: "LeMay, Heather"
+}
+date {
+  year: 1998
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0864"
+  check: 5
+}
+isbn13 {
+}
+pages: 86
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Part 1"
+series: "Double Diamond Triangle Saga"
+price {
+  currency: "$ "
+  number: 99
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

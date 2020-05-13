@@ -1,0 +1,49 @@
+template {
+  name: "WTC 24279"
+  world: "Generic"
+  description: "With Player\'s Handbook Power Cards, you don\'t need to crack open a rulebook every time you cast a spell or swing your sword --- all the crucial information is at your fingertips. Just pick out the deck for your character class, select the cards for your character\'s powers, and you\'re ready to play the Dungeon & Dragons Roleplaying Game!"
+  short_description: "Cards with all Player\'s Handbook Cleric Powers."
+}
+title: "Cleric Power Cards"
+subtitle: "Power Up You D&D Game"
+cover {
+  name: "O&#39Conner, William"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+date {
+  year: 2009
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5271"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5271"
+  check: 7
+}
+system: DND_4
+audience: PLAYER
+type: ACCESSORY
+style: SMALL_BOX
+producer: "WTC"
+number: "Cleric"
+series: "Power Cards"
+price {
+  currency: "$"
+  number: 999
+  precision: 100
+}
+content {
+  part: CARD
+  description: "power"
+  number: 100
+}
+layout: FULL_COLOR

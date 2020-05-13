@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9062"
+  synonym: "U1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Sinister Secret of Saltmarsh"
+leader: "The"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

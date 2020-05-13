@@ -1,0 +1,71 @@
+template {
+  name: "TSR 2615"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "Planescape"
+  description: "\\large{Between law and chaos... lies conflict.}\n                    \\bold{Planes Divine}\n                    Unleash the animal within on the \\Place{Beastlands}\n                    Dream beneath the twin heavens of \\Place{Bytopia}\n                    Plunge into the pure waters of \\Place{Elysium}\n                    \\bold{Planes Diabolic}\n                    Rot in the \\Place{Red Prison} of \\Place{Carceri}\n                    Blister beneath the fiery eruptions of \\Place{Gehenna}\n                    Despair in the crushing emptiness of the \\Place{Gray Waste}\n                    \\bold{Planes in Conflict !}\n                    On the \\Place{Great Ring}, six planes lie in direct opposition. Above looms\n                    the triad of Good, holding fast against the tide of corruption. Below lurks\n                    the triad of Evil, stained red by the eternal \\Event{Blood War}. Both resist\n                    the pull of Law and Chaos. Any berk who calls them \'neutral\' planes has never\n                    experienced their full extremes!\n                    \\bold{Dare to enter the conflict and find:}\n                    \\list\n                    {\\bold{Two 64-page books} describing each plane and its inhabitants for\n                    the Dungeon Master, with details on the monsters, realms, sites, and\n                    dangers of each plane.}\n                    {\\bold{A Player\'s Guide to Conflict,} a 32-page, full-color introduction\n                    to the wonders and hazards of these planes, for DM and player\n                    alike. Featuring sites not described elsewhere.}\n                    {\\bold{Adventures in Conflict}, a 32-page book presenting four complete\n                    adventures designed for PCs of low to high levels.}\n                    {\\bold{Monstrous Supplement,} a 32-page, full-color booklet detailing 15\n                    creatures, including master \\Monster{yugoloths}, creatures of\n                    \\Place{Oceanus}, godly servants, and power-cursed outcasts.}\n                    {\\bold{Six fully detailed, poster-sized maps} illustrating the layers of\n                    each plane, with precise maps and text descriptions of important\n                    sites.}"
+}
+title: "Planes of Conflict"
+date {
+  year: 1995
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 234
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 5
+}
+content {
+  part: BOOKLET
+  description: "Monster Supplement"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Adventures in Conflict"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Liber Benevolentiae"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Liber Malevolentiae"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "A player\'s Guide to Conflict"
+  number: 1073741824
+}

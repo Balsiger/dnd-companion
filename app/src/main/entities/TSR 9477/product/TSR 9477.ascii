@@ -1,0 +1,72 @@
+template {
+  name: "TSR 9477"
+  synonym: "RR10"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+  description: "\\emph{There are realms and realms incomprehensible to the puny mortals who\n                    dwell within this cage that they term the \\Place{Land of the Mists}!}\n                    \\right{--- The Madrigorian, Book I, Chapter I}\n                    \\Monster{Fiends} have come forth from the \\Place{Abyss} and into\n                    \\Place{Ravenloft}! Masters of deception and manipulation, these ancient evil\n                    beings stalk the Lands, roaming freely in pursuit of their foul ends, and\n                    warping the very Land around them to suit their needs.\n                    \\NPC{Dr. Rudolph Van Richten} has set himself on their trail and presents\n                    here his preliminary findings and theories on these beings from places\n                    of unimaginable horror.\n                    \\NPC{Dr. Van Richten} exposes the nature, origin, strengths and weaknesses of\n                    the \\Monster{Fiend}, and how it reaches the \\Place{Land of the Mists}. He\n                    explores the character of these beings, and their connections to the people\n                    and the Land itself. In the ultimate irony, these awesome creatures are as\n                    trapped by the Land as any mortal, seduced by the prospects of power and\n                    glory!\n                    Beware of the \\Monster{Fiend}! For those caught in the web of a Fiendish\n                    plot, nothing as it seems. To defeat a \\Monster{Fiend}, a quick wit and a\n                    strong heart are more important than a strong arm or flashing blade!\n                    \\bold{96 pages - Recommended for All Character Levels}"
+}
+title: "Van Richten\'s Guide to Fiends"
+author {
+  name: "Woodruff, Teeuwynn"
+}
+editor {
+  name: "Miller, Steven"
+}
+cover {
+  name: "Burdick, Scott"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Johnson, Harold"
+  job: "project coordination"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphics coordination"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+date {
+  year: 1995
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0122"
+  check: 5
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+series: "Van Richten\'s Guide"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

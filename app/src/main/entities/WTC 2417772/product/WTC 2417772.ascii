@@ -1,0 +1,102 @@
+template {
+  name: "WTC 2417772"
+  world: "Generic"
+  description: "You\'ve just defeated the monsters, and in the back of their lair you find an old wooden chest atop a pile of bones and rusty weapons. Through the keyhole spills wondrous golden light. What magical treasures will you find inside?\n                    This Dungeons & Dragons game supplement presents hundreds of new magic items, including weapons, armor, ammunition, tomes, totems, and wondrous items appropriate for any D&D campaign. This book also introduces item sets, thematically linked collections of equipment that grant additional powers when the gear is worn by a single character or multiple party members."
+  short_description: "Arms and Equipment for All Character Classes."
+}
+title: "Adventurer\'s Vault 2"
+subtitle: "Make Your Wishes Come True"
+author {
+  name: "Bonner, Logan"
+  job: "development"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "additional development"
+}
+author {
+  name: "Watkins, Rob"
+  job: "additional development"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Murray, Sean \'Muttonhead\'"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Williams, Eric L."
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+date {
+  year: 2009
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5204"
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5204"
+  check: 5
+}
+pages: 160
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+number: "2"
+series: "Adventurers Vault"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

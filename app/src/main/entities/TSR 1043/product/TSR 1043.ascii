@@ -1,0 +1,48 @@
+template {
+  name: "TSR 1043"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Greyhawk"
+  description: "Unknown"
+}
+title: "City of Greyhawk"
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "731"
+  check: 9
+}
+isbn13 {
+}
+pages: 192
+system: ADND_2ND
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 3
+}
+content {
+  part: POSTER
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  number: 2
+}

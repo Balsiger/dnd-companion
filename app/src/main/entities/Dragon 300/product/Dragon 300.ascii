@@ -1,0 +1,164 @@
+template {
+  name: "Dragon 300"
+  world: "Generic"
+  description: "Issue 300 of the magazine. 26 Years of Dungeons & Dragons issue."
+}
+title: "Dragon 300"
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Edwards, Terry"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Jacob, James"
+}
+author {
+  name: "Mohan, Kim"
+}
+author {
+  name: "Schneider, Wesley"
+}
+author {
+  name: "Veltum, Glen"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Wilson, Johnny"
+}
+author {
+  name: "Wyatt, James"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+cover {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Alexander, Rob"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Fischer, Scott"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2002
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 5"
+number: "300"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

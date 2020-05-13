@@ -1,0 +1,36 @@
+template {
+  name: "TSR 21559"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "The long-awaited completion of Rath is approaching. The \\NPC{Dark Lord}\'s\n                    plans to invade \\Place{Dominaria} will soon see fruition. Only the struggle\n                    for power in this artificial plane remains. \\NPC{Urza Planeswalker} will not\n                    stop the \\Place{Phyrexian} empire.\n                    Witness the creation of his nemesis."
+}
+title: "Nemesis"
+subtitle: "A new threat looms on the horizon."
+author {
+  name: "Paul B. Thompson"
+}
+date {
+  year: 2000
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1559"
+  check: 5
+}
+isbn13 {
+}
+pages: 311
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

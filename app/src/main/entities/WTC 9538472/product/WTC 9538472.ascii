@@ -1,0 +1,156 @@
+template {
+  name: "WTC 9538472"
+  world: "Generic"
+  description: "Every sentient creature is born with some potential to work magic. However,\n                    true mastery of arcane magic requires skill, practice, and power beyond the\n                    reach of common folk---specifically, the power to harness raw magic and shape\n                    it into a desired effect. You are among those gifted few who have learned to\n                    channel arcane magic, shaping it to serve your creative or destructive whims.\n                    This D&D supplement is intended for players and Dungeon Masters. In addition\n                    to providing the definitive treatise on arcane magic, it expands the\n                    character options available to users of arcane magic, including bards,\n                    sorcerers, wizards, assassins, warlocks, and wu jen. Herein you\'ll find\n                    never-before-seen prestige classes, spells and invocations, magic items,\n                    alchemical items, heritage feats, and reserve feats (a new type of feat that\n                    grants special abilities to those who remain charged with magical\n                    power). Alternative class features give other character classes---from the\n                    barbarian to the rogue-\342\200\232\303\204\303\256-a little taste of what it\'s like to be an arcanist\n                    without sacrificing their core identities."
+  short_description: "Complete information about the Mage"
+}
+title: "Complete Mage"
+subtitle: "Arcane Power at Your Fingertips"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Williams, Penny"
+}
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Liquette, Kolja Raven"
+}
+author {
+  name: "Collins, Andy"
+  job: "development"
+}
+author {
+  name: "Carter, Michele"
+}
+author {
+  name: "Sernett, Matthew"
+  job: "development"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Coimbra, Miguel"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Christina"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Complete"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

@@ -1,0 +1,19 @@
+template {
+  name: "DMA 000034"
+  synonym: "RP1"
+  reference {
+    name: "complete product listing"
+  }
+  description: "A belt buckle with a TSR motif."
+}
+title: "TSR Belt Buckle"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

@@ -1,0 +1,228 @@
+template {
+  name: "WTC 28069"
+  world: "Generic"
+  description: "Few wizards know more about magic than the mighty \\NPC{Mordenkainen}, whose arcane achievements are without peer. He\'s the Archmage of Adventure ... and no stranger to unearthing hidden lore. Stand aside, \\NPC{Tenser}! Back to the books, \\NPC{Otiluke}! No one can match \\NPC{Mordenkainen}\'s collection of magic items. Still, he hardly seems the type to settle down and open a magic shop. And yet...\n\nWelcome to \\Product{Mordenkainen\'s Magnificient Emporium}, a wondrous collection of magic items --- each one with a story to tell. This tome provides Dungeon Masters with an assortment of treasures to tempt adventurers, and it supplies players with an arsenal to take on the most dangerous monsters. This book adds stories and adventure possibilities to the treasures presented within, setting these items apart from run-of-the-mill adventuring gear. Hold on to your magic hats --- everything must go!"
+  short_description: "Magical items galore."
+}
+title: "Mordenkainen\'s Magificent Emporium"
+subtitle: "Equip Your Heroes With the Best"
+author {
+  name: "Crawford, Jeremy"
+}
+author {
+  name: "Schubert, Stephen"
+}
+author {
+  name: "Sernett, Matt"
+}
+author {
+  name: "Allison, Tavis"
+  job: "design"
+}
+author {
+  name: "Fitzgerald Gray, Scott"
+  job: "design"
+}
+author {
+  name: "Schwalb, Robert J."
+  job: "design"
+}
+author {
+  name: "Sernett, Matt"
+  job: "design"
+}
+author {
+  name: "Tidball, Jeff"
+  job: "design"
+}
+author {
+  name: "Baker, Richard"
+  job: "additional design"
+}
+author {
+  name: "Bernstein, Eytan"
+  job: "additional design"
+}
+author {
+  name: "Bilsland, Greg"
+  job: "additional design"
+}
+author {
+  name: "Bonner, Logan"
+  job: "additional design"
+}
+author {
+  name: "Mearls, Mike"
+  job: "additional design"
+}
+author {
+  name: "Pozas, Claudio"
+  job: "additional design"
+}
+author {
+  name: "Sims, Chris"
+  job: "additional design"
+}
+author {
+  name: "Wyatt, James"
+  job: "additional design"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "lead devlopment"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "development"
+}
+editor {
+  name: "Moore, Cal"
+  job: "lead"
+}
+editor {
+  name: "O\'Conner, Tanis"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "O&#39Conner, William"
+}
+cartographer {
+}
+illustrator {
+  name: "Dutrait, Vincent"
+}
+illustrator {
+  name: "Elmasli, Emrah"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Himmelman, Jeff"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Komarck, Michael"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O&#39Conner, William"
+}
+illustrator {
+  name: "Ortiz, Hector"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Sheppard, Cynthia"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Dunnet, Yasuyo"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D R&D senior producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D R&D group manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2011
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5744"
+  check: 6
+}
+pages: 160
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Roleplaying Game Supplement"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Book"
+  number: 1
+}
+required_requirements: "WTC 2173672"
+required_requirements: "Rules Compendium"
+required_requirements: "WTC 2175072"
+required_requirements: "WTC 2172072"
+optional_requirements: "Heroes of the Fallen Lands"
+optional_requirements: "Heroes of the Forgotten Kingdoms"
+layout: FULL_COLOR

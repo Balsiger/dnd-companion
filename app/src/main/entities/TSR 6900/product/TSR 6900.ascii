@@ -1,0 +1,22 @@
+template {
+  name: "TSR 6900"
+  reference {
+    name: "catalog91S"
+  }
+  world: "Generic"
+}
+title: "Marvel Super Heroes Basic Set"
+date {
+  year: 1991
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+system: MARVEL_SUPER_HEROES
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

@@ -1,0 +1,23 @@
+template {
+  name: "TSR 2020S"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Wilderness Survival Guide / Wild Things set"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

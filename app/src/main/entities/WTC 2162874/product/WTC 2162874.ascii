@@ -1,0 +1,56 @@
+template {
+  name: "WTC 2162874"
+  world: "Forgotten Realms"
+  description: "No one has laid eyes on the \\Place{Obsidian Ridge} in over a century. The floating mountain is a legend, lost in the dustiest tomes... until it appears as if from nowhere over the kingdom of \\Place{Erlkazar}.\n                    Driven by the madness of its master wizard, the \\Place{Obsidian Ridge} will destroy everything in its path until the wizard gets what he wants: the princess of \\Place{Erlkazar} for a bride. But deep in the tunnels of the \\Place{Obsidian Ridge}, a room of trophies attests that he wants a great deal more.\n                    \\emph{The citadel has hunted such quarry before.}\n                    "
+}
+title: "Obsidian Ridge"
+subtitle: "Nothing is beyond the reach of the \\Place{Obsidian Ridge}."
+author {
+  name: "Lebow, Jess"
+}
+editor {
+}
+cover {
+  name: "Seidman, David"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2008
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4785"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4785"
+}
+pages: 313
+system: NONE
+type: NOVEL
+style: BOOKLET
+number: "2"
+series: "The Citadels"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

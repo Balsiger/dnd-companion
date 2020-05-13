@@ -1,0 +1,52 @@
+template {
+  name: "TSR 8040"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  world: "Generic"
+  description: "The \\Item{Rod of Seven Parts}...\n\n  ...originated at the dawn of time, the symbolic centerpiece of the conflict\n  between law and chaos.\n\n  Broken into pieces by powerful magic, scattered across a dangerous landscape,\n  the \\Item{rod}\'s components draw menacing forces from distant planes---and\n  change, forever, the life of any unsuspecting mortal who finds himself in\n  possession of even a single segment.\n\n  From the \\Group{Wind Dukes}, guardians of law, to the hideous \\NPC{Queen of\n  Chaos} herself, heroes and monsters compete to find the pieces of the\n  \\Item{rod}. Violent conflicts surround the bold heroes who strive to protect\n  the artifact, until the companions realize that only by facing ultimate chaos\n  can the forces of evil be vanquished."
+}
+title: "Rod of Seven Parts"
+leader: "The"
+author {
+  name: "Niles, Douglas"
+}
+cover {
+  name: "Jeff Easley"
+}
+date {
+  year: 1996
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0479"
+  check: 8
+}
+isbn13 {
+}
+pages: 348
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+series: "AD&D Tomes"
+price {
+  currency: "$"
+  number: 2199
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

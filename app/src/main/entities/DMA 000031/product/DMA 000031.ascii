@@ -1,0 +1,20 @@
+template {
+  name: "DMA 000031"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Planescape"
+  description: "unknown"
+}
+title: "Plancescape Sketchbook"
+date {
+  year: 1994
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_REVISED
+audience: UNKNOWN
+price {
+}

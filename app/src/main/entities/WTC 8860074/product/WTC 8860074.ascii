@@ -1,0 +1,43 @@
+template {
+  name: "WTC 8860074"
+  world: "Forgotten Realms"
+  description: "I will bring my people again from the depths of the sea. That thy foot may\n                    be dipped in the blood of thine enemies, and the tongue of thy dogs in the\n                    same.\n                    The spiritual heart of \\Place{Faer\\hat{u}n} beats in time with a hundred\n                    gods, and for each, a thousand servants. The Priests is a series that tells\n                    the tales of but a few.\n                    This book in the \\Product{Priests} series deals with a valiant\n                    \\Monster{shalarin} priestess who is trying to save her home and avenge her\n                    mother\'s death. This series is designed to bring new readers into the world\n                    of the \\Place{Forgotten Realms}. The books can be read in any order."
+  short_description: "Book 4 of The Priests."
+}
+title: "Queen of the Depths"
+subtitle: "The Priests"
+author {
+  name: "Byers, Richard Lee"
+}
+cover {
+  name: "Fishman, Marc"
+}
+date {
+  year: 2005
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3737"
+  check: 8
+}
+isbn13 {
+}
+pages: 309
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "4"
+series: "The Priests"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

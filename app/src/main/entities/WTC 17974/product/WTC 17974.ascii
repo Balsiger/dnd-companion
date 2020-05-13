@@ -1,0 +1,45 @@
+template {
+  name: "WTC 17974"
+  world: "Forgotten Realms"
+  description: "\\large{One \\Monster{Dark Elf}.}\n                    Two Enchanted Blades.\n                    One Unknown Enemy.\n                    And A Horde Of Invadors.\n                    When a blood-thirsty band of \\Monster{Orcs}, led by an as-yet-unseen enemy,\n                    comes rampaging out of the \\Place{Spine of the World}, it lays waste to\n                    everything in its path. \\Monster{Dark elf} range \\NPC{Drizzt Do\'Urden} and\n                    his most trusted friends find themselves in the path of destruction. As\n                    blades slash and feet trample, even they may not withstand the Thousand\n                    \\Monster{Orcs}."
+}
+title: "Thousand Orcs"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2980"
+  check: 4
+}
+isbn13 {
+}
+pages: 367
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+volume: "Book I"
+number: "Book I"
+series: "The Hunter\'s Blades Trilogy"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

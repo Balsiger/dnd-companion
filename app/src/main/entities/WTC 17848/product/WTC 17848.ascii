@@ -1,0 +1,56 @@
+template {
+  name: "WTC 17848"
+  world: "Forgotten Realms"
+  description: "\\emph{\'No race in all the \\Place{Realms} better understands the word\n                    vengeance than the \\Monster{drow}. Vengeance is their dessert at their daily\n                    table, the sweetness they taste upon their smirking lips as though it was the\n                    ultimate delicious pleasure. And so hungering did the \\Monster{drow} come for\n                    me.}\n                    \\right{---\\NPC{Drizzt Do\'Urden}}\n                    For the first time in one volume, here is New York Times best-selling author\n                    R.A. Salvatore\'s saga of the battles of the dreadful \\God{Spider Queen Lolth}\n                    and her vicious \\Monster{drow} followers against \\NPC{Drizzt Do\'Urden}, one\n                    of the most beloved characters in fantasy literature."
+}
+title: "Legacy of the Drow Collector\'s Edition"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2908"
+  check: 1
+}
+isbn13 {
+}
+pages: 1088
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "Legacy of the Drow"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}

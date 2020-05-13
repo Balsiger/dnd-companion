@@ -1,0 +1,56 @@
+template {
+  name: "WTC 2013374"
+  world: "Forgotten Realms"
+  description: "When goddesses sit down to play a game, the stakes are the souls of their worshipers, and their own immortality. Not even the other gods of the \\Place{Demonweb Pits} can resist the draw of that fateful game, and one has already fallen.\n                    But there are mortals that can sense even the shifting winds of the \\Place{Outer Planes}, and not all of them are powerless, even in the face of the \\God{Queen of the Demonweb Pits}. After all, it took a mortal to make \\God{Lolth} what she\'s become, and it may take another mortal to put her back in her place.\n                    \\large{But how many more gods will die in the process?}"
+}
+title: "Storm of the Dead"
+subtitle: "\\God{Lolth} Always Plays to Win"
+author {
+  name: "Smedman, Lisa"
+}
+editor {
+}
+cover {
+  name: "Benscoter, Wes"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4701"
+  check: 2
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4701"
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "The Lady Penitent"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

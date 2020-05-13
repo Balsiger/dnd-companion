@@ -1,0 +1,124 @@
+template {
+  name: "Dungeon 75"
+  world: "Generic"
+  description: "This is issue 75 of the dungeon magazine."
+}
+title: "Dungeon 75"
+author {
+  name: "Reed, Charles C."
+}
+author {
+  name: "Kenower, William"
+}
+author {
+  name: "Devaney, Steve"
+}
+author {
+  name: "Adkins, Matthew G."
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistant editor"
+}
+editor {
+  name: "Carlson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Delfino"
+}
+cartographer {
+  name: "Daniele, Stephen A."
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+illustrator {
+  name: "Mitchell, Matthew"
+}
+illustrator {
+  name: "McDevitt, Bradley"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Rawles, Fred"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+manager {
+  name: "Blaskowsky, Barbara"
+  job: "circulation manager"
+}
+manager {
+  name: "Heft, Rebecca"
+  job: "circulation assistant"
+}
+date {
+  year: 1999
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 88
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XIII 3"
+number: "75"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

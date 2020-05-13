@@ -1,0 +1,56 @@
+template {
+  name: "WTC 2178174"
+  world: "None"
+  description: "Ancient beasts imbued with magic, and prone to madness. Masters of a world where they are kings among men. Legendary creatures few have ever seen, and lived to tell the tale. Eldritch constructs bent to the service of godlike wizards. From four worlds of magic and mystery, one monster rises above all others to threaten death, offer hope, spread fear, or horde treasure. No matter what the world, only a \\Monster{dragon} can set it, and the imaginations of millions, afire. Four of the most exciting shared worlds in the history of fantasy come together for the first time in one volume, drawn together at last by the mighty dragons of myth and legend."
+  short_description: "Four stories about dragons set in the Forgotten Realms, Dragonlance, Eberron, and Magic: The Gathering."
+}
+title: "Dragons Worlds Afire"
+subtitle: "Featuring 4 Novellas From R.A. Salvatore, Margaret Weis & Tracy Hickman, Keith Baker, and Scott McGough"
+cover {
+  name: "Myers, Duane O."
+}
+illustrator {
+  name: "Sergesketter, Chad"
+  job: "black & white"
+}
+illustrator {
+  name: "Adelsperger, Matt"
+  job: "art director"
+}
+illustrator {
+  name: "Adelsperger, Matt"
+  job: "designer"
+}
+date {
+  year: 2008
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4976"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4976"
+  check: 2
+}
+pages: 144
+system: NONE
+audience: ALL
+type: NOVEL
+style: SOFT_COVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

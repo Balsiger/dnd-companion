@@ -1,0 +1,57 @@
+template {
+  name: "TSR 2618"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Planescape"
+  description: "\\NPC{Aereas} and his \\Monster{angel} allies saved the \\Place{City of Doors}.\n\nBut what is left of the cousins? \\NPC{Nina} is a soulless body, and \\NPC{Areas} a bodiless soul.\n\nIt is time for new heroes to rise and carve out their own utopias. It is time for \\NPC{Tara} and \\NPC{Aegis}, daughter of \\NPC{Aereas} and son of \\NPC{Nina}, to make a stand.\n\nOf course, they may need some help from a skeletal god, a \\Monster[Gnome]{gnomish} music maker, a fallen \\Monster{angel}, and other planar powers."
+}
+title: "Planar Powers"
+subtitle: "\\NPC{Nina} and her \\Monster{fiend} legions scoured the \\Place{Abyss}."
+author {
+  name: "King, J. Robert"
+}
+cover {
+  name: "Pollak, Alan"
+}
+illustrator {
+  name: "Diesel"
+}
+date {
+  year: 1997
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0532"
+  check: 8
+}
+isbn13 {
+}
+pages: 313
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book Three"
+series: "Blood Wars Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+layout: COLOR_COVER

@@ -1,0 +1,31 @@
+template {
+  name: "TSR 11514"
+  reference {
+    name: "Dragon 263"
+  }
+  world: "Generic"
+  description: "fast-play fintrodction to Alternity"
+}
+title: "Incident at Exile"
+author {
+  name: "William W. Connors"
+}
+date {
+  year: 1999
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1514"
+  check: 5
+}
+isbn13 {
+}
+system: ALTERNITY
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

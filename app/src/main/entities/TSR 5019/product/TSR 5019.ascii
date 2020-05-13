@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5019"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Neo-Otyugh (bendable)"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

@@ -1,0 +1,61 @@
+template {
+  name: "WTC 25152"
+  synonym: "DU7"
+  world: "Generic"
+  description: "Your tabletop never looked better! With Dungeons & Dragons Miniatures and this pack of customizable terrain tiles, you can add a new dimension to your D&D adventures. Easy to set up and infinitely expandable, this pack allows you to create the D&D adventures you want to play. Pick up additional packs to create larger, more elaborate encounters."
+}
+title: "Desert of Athas"
+subtitle: "Awesome desert terrain and 3D set pieces"
+author {
+  name: "Lee, Peter"
+  job: "designer"
+}
+cover {
+  name: "Murayama, Soe"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "art director"
+}
+manager {
+}
+date {
+  year: 2010
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5398"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5398"
+  check: 1
+}
+pages: 6
+system: DND_4
+type: CARDS_TYPE
+style: FOLDER
+producer: "WTC"
+number: "DU7"
+series: "Dungeon Tiles"
+price {
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "double-sided map sheet"
+  number: 6
+}
+layout: FULL_COLOR

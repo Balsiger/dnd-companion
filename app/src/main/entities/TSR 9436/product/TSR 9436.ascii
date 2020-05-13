@@ -1,0 +1,54 @@
+template {
+  name: "TSR 9436"
+  synonym: "Entry 8"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "come aboard the Flying Dutchman"
+}
+title: "In the Phantom\'s Wake"
+author {
+  name: "Henson, Dale"
+}
+date {
+  year: 1993
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "664"
+  check: 6
+}
+isbn13 {
+}
+pages: 32
+system: DND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "die-cut figure"
+  number: 20
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 1073741824
+}

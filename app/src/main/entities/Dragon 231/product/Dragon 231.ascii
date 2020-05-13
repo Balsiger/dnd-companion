@@ -1,0 +1,173 @@
+template {
+  name: "Dragon 231"
+  world: "Generic"
+}
+title: "Dragon 231"
+author {
+  name: "Garrison, Karl"
+}
+author {
+  name: "Stern, Renee"
+}
+author {
+  name: "Kuciak, Michael T."
+}
+author {
+  name: "Granato, Larry"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Bunnell, John C."
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Winter, Steve"
+}
+author {
+  name: "King, J. Robert"
+}
+author {
+  name: "Cook, Sue Weinlein"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Hein, Dori"
+}
+author {
+  name: "Olmesdahl, Bill"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bryant, Anthony J."
+  job: "editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "associate assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "Punchatz, Don Ivan"
+}
+illustrator {
+  name: "Burr, Dan"
+}
+illustrator {
+  name: "Cavalier, Bill"
+}
+illustrator {
+  name: "Holloway, James"
+}
+illustrator {
+  name: "Ahlstrom, Lorelle"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Dollar, John"
+}
+illustrator {
+  name: "Ruppel, Robh"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Murin, Dawn"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Pilsbury, Joe"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Hearon, Michael"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1996
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXI 2"
+number: "231"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

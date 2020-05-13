@@ -1,0 +1,133 @@
+template {
+  name: "WTC 88172"
+  world: "Generic"
+  description: "\\large{Sling fireballs and dodge bullets}\n\n  Explosive action and epic adventure fill the modern world when fantasy and\n  reality collide. In \\Product{Urban Arcana}, heroes armed with swords, spells,\n  shotguns, and cell phones dive headlong into trouble with monsters, mobsters,\n  cabals, and corporations. Take a deep breath, and discover the realms of\n  fantasy within the gritty shadows of the modern world.\n\n  To use this product, you also need the \\Product{d20 Modern Roleplaying Game}\n  core rulebook, for players and Gamemasters, this product is compatible with\n  other d20 System roleplaying games."
+}
+title: "Urban Arcana"
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Stan!"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "original concept"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "development and editing"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "development and editing"
+}
+cover {
+  name: "Johnson, Dave"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Alexander, Jason"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Ballard, Lee"
+}
+illustrator {
+  name: "Hampton, Justin"
+}
+illustrator {
+  name: "McLeod, Kagan"
+}
+illustrator {
+  name: "Jr., Ken Meyer"
+}
+illustrator {
+  name: "Ormston, Dean"
+}
+illustrator {
+  name: "Parker, Jake"
+}
+illustrator {
+  name: "Puddnhead"
+}
+illustrator {
+  name: "Shy, Christopher"
+}
+illustrator {
+  name: "Ward, Chad Michael"
+}
+illustrator {
+  name: "Wayshak, Jonothan"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Cheung, Carmen"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "game design manager"
+}
+manager {
+  name: "Raper, Robert"
+  job: "art director"
+}
+manager {
+  name: "Kirchoff, Mary"
+  job: "vice president of publishing"
+}
+manager {
+  name: "Valterra, Anthony"
+  job: "category manager"
+}
+manager {
+  name: "Durham, Martin"
+  job: "project manager"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production manager"
+}
+date {
+  year: 2003
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2659"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: D20_MODERN
+type: CAMPAIGN_SETTING
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

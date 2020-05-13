@@ -1,0 +1,174 @@
+template {
+  name: "WTC 17739"
+  world: "Generic"
+  description: "Sweltering temperatures, bone-scouring windstorms, and other dangers\n                    threaten explorers in waste environments. From arid deserts and volcanic\n                    regions to ash-choked dungeons and the lava-filled layers of \\Place{Gehenna},\n                    unwary travelers may fall victim to the unrelenting hazards that await.\n                    This supplement for the D&D game explores the impact of desert conditions and\n                    extreme hot-weather environments on every aspect of game play. Along with\n                    rules for adapting to, navigating through, and surviving hazardous\n                    hot-weather conditions and terrain, \\Product{Sandstorm} also includes new\n                    races, spells, feats, magic items, prestige classes, and monsters associated\n                    with deserts and other wastelands.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook} and \\Product{Dungeon Master\'s Guide}. A player needs only the\n                    \\Product{Player\'s Handbook}."
+}
+title: "Sandstorm"
+subtitle: "Take the Heat"
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Clarke Wilkes, Jennifer"
+}
+author {
+  name: "Wiker, JD"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "developer"
+}
+author {
+  name: "Finch, Andrew J."
+  job: "developer"
+}
+author {
+  name: "Noonan, David"
+  job: "developer"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Rice, Cindi"
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Thompson, Ben"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+illustrator {
+  name: "Cotie, Mitch"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Hudnut, David"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+illustrator {
+  name: "Kovacs, Doug"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Tappin, Stephen"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Joshua C.J."
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3655"
+  check: 10
+}
+isbn13 {
+}
+pages: 224
+system: DND_3_5
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Environment Series"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "miniature"
+  number: 4
+}

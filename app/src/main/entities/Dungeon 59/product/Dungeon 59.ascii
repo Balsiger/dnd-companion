@@ -1,0 +1,100 @@
+template {
+  name: "Dungeon 59"
+  world: "Generic"
+  description: "This is issue 59 of the dungeon magazine."
+}
+title: "Dungeon 59"
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Guzzetta, John"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Ross, Tony"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Bryant, Anthony J."
+  job: "associate editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "Szczudlo, Tony"
+}
+cartographer {
+  name: "Boholst, Roy M."
+}
+illustrator {
+  name: "Lazzaretii, Rob"
+  job: "spot illustrations"
+}
+illustrator {
+  name: "Dollar, John"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Holloway, James"
+}
+illustrator {
+  name: "Burnett, C.H."
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Craig, Terry"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1996
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "X 5"
+number: "59"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

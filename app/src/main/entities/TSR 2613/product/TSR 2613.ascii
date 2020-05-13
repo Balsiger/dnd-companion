@@ -1,0 +1,45 @@
+template {
+  name: "TSR 2613"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 221"
+  }
+  world: "Planescape"
+  description: "\\large{Clueless is as good as dead.}\n                    \\emph{Don\'t matter if you\'re a blood\'s blood or a leatherhead with a lot to\n                    learn---this book\'s for you. The planes are full of critters that\'d just as\n                    soon kill a berk as look at him, and plenty more that like to rattle their\n                    bone-boxes for nothing more than the sheer pleasure of it. What a cutter\n                    needs is a book like this one---something that tells the real dark of what\'s\n                    waiting out there, just on the other side of that portal.}\n                    This \\Product{Monstrous Compendium} appendix contains nearly 100 new monsters\n                    from the \\Place{Outlands} and various \\Place{Outer Planes}, and a few updated\n                    creatures that haven\'t seen print for quite some time. The \\Monster{aasimar},\n                    a new player character race, awaits your discovery---along with\n                    \\Monster{eladrins}, \\Monster{guardinals}, \\Monster{hollyphants},\n                    \\Monster{rilmani}, new \\Monster{tanar\'ri}, and more!"
+}
+title: "Monstrous Compendium Planescape Appendix II"
+date {
+  year: 1995
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0173"
+  check: 10
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+number: "Appendix II"
+series: "Monster Compendium"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

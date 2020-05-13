@@ -1,0 +1,46 @@
+template {
+  name: "TSR 1156"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+  description: "Cards for the game."
+}
+title: "Spellfire Draconomicon Booster Pack, Set 10"
+author {
+  name: "Jim Butler"
+}
+author {
+  name: "Dori Hein"
+}
+author {
+  name: "Kevin Melka"
+}
+date {
+  year: 1996
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0629"
+  check: 4
+}
+isbn13 {
+}
+system: SPELLFIRE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  number: 12
+}

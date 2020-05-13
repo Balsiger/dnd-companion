@@ -1,0 +1,36 @@
+template {
+  name: "TSR 3141"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Birthright"
+  description: "conclusion of the Essence of Evil epic storyline"
+}
+title: "Charge of the Cold Rider"
+author {
+  name: "Stark, Ed"
+}
+date {
+  year: 1998
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1244"
+  check: 8
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}

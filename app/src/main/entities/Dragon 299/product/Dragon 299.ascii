@@ -1,0 +1,151 @@
+template {
+  name: "Dragon 299"
+  world: "Generic"
+  description: "Issue 299 of the magazine. Knights & Paladins issue."
+}
+title: "Dragon 299"
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Coyle, Christopher"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Smedman, Lisa"
+}
+author {
+  name: "Tresca, Michael"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Fiorito, Stacie"
+  job: "assistant editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Angus, Glen Michael"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Laubenstein, Jeff"
+}
+illustrator {
+  name: "May, Mike"
+}
+illustrator {
+  name: "Mitchell, Matt"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Shaw, Stan"
+}
+illustrator {
+  name: "Swekel Arnie"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2002
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 4"
+number: "299"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

@@ -1,0 +1,93 @@
+template {
+  name: "TSR 9540"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  world: "Forgotten Realms"
+  description: "As the floating cities of \\Place{Netheril} hover peacefully in the air, the\n                    winds of intrigue all around them. The \\Monster[Phaerimm]{phaerimm} continue\n                    to plot the downfall of the \\Group{Netherese} even as \\NPC{Karsus} prepares\n                    for the casting of his greatest spell. Undead walk the land, driving\n                    \\Monster[Orc]{orcs} and \\Monster[Human]{humans} before them. And somewhere\n                    below the greatest nation of \\Place{Faer\\hat{u}n}, the \\Monster{Tarrasque}\n                    awakens from a long slumber.\n                    \\Product[TSR 9540]{How the Mighty Are Fallen} is an adventure designed for\n                    use with the \\Product[TSR 1147]{Netheril: Empire of Magic} boxed campaign\n                    setting (which is required to play this adventure). Within these pages, the\n                    final heroes of \\Place{Netheril} can:\n                    \\list\n                    {\\bold{Gather the spell components} that \\NPC{Karsus} requires for\n                    casting his \'most wondrous\' spell, the only 12th-level spell ever\n                    known. He just needs a few body parts from two creatures---a\n                    \\Monster[Gold Dragon]{gold dragon} and the \\Monster{Tarrasque}.}\n                    {\\bold{Reunite lost lovers} after they have been separated by\n                    death. \\NPC{Nopheus}\'s wife was killed in a magical explosion, and\n                    now he\'s finally saved enough money for her to be\n                    resurrected. Certainly a dead body couldn\'t pose a threat to a band\n                    of stalwart heroes?!}\n                    {\\bold{Follow the winds of Fate} to wherever \\God{Tyche} delivers\n                    them. Numerous side adventures allow players to take their characters\n                    to a variety of different locations. Some heroes might want to follow\n                    the trail of the missing \\Item[Nether Scrolls]{nether scrolls}, while\n                    others might want to join the resistance and fight \\NPC{Karsus} and the\n                    other archwizards. But only the bravest hearts can take the first step...}"
+}
+title: "How the Mighty Are Fallen"
+author {
+  name: "Henson, Dale \'Slade\'"
+}
+editor {
+  name: "Butler, Jim"
+}
+cover {
+  name: "Jainschigg, Nick"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+typographer {
+  name: "Isler, Tracey L."
+}
+manager {
+  name: "Reid, Thomas M."
+  job: "project coordination"
+}
+manager {
+  name: "Anthony, Mark"
+  job: "concept"
+}
+manager {
+  name: "Butler, Jim"
+  job: "concept"
+}
+manager {
+  name: "Martin, Julia E."
+  job: "concept"
+}
+manager {
+  name: "Schend, Steven E."
+  job: "concept"
+}
+manager {
+  name: "Ward, Jim"
+  job: "concept"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Galica, Bob"
+  job: "art coordination"
+}
+manager {
+  name: "Conant, Dave"
+  job: "prepress coordination"
+}
+date {
+  year: 1996
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0537"
+  check: 9
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Arcane Age"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

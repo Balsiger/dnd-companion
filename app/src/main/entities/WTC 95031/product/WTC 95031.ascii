@@ -1,0 +1,56 @@
+template {
+  name: "WTC 95031"
+  world: "Star Wars"
+  description: "Lead the galaxy\'s greatest legends into battle! Fourth in a series of titles\n  that accompany each Star Wars miniatures expansion, \\Product{Ultimate\n  Missions: Universe} provides ready-to-play battle scenarios perfect for\n  anyone looking to maximize their Star Wars Miniatures experience. In addition\n  to game-related content, this full-color product also contains a\n  double-sided, fold-out poster map and new color terrain tiles to diversify\n  gameplay.\n\n  Requires the \\Product{Universe Starter Pack} plus \\Product{Universe booster\n  packs} to play."
+}
+title: "Ultimate Missions: Universe"
+author {
+  name: "Wiker, JD"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3843"
+  check: 9
+}
+isbn13 {
+}
+pages: 96
+system: STAR_WARS
+type: MINIATURE
+style: PAPERBACK
+producer: "WTC"
+series: "Star Wars Miniatures"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}

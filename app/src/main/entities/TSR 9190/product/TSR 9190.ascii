@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9190"
+  synonym: "B1-9"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "In Search of Adventure"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

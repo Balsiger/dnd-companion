@@ -1,0 +1,61 @@
+template {
+  name: "WTC 88543"
+  world: "Dragonlance"
+  description: "Years have passed since the end of the \\Event{War of the Lance}. The people\n  of \\Place{Ansalon} have rebuilt their lives, their houses, their\n  families. The \\Group{Companions of the Lance}, too, have returned to their\n  homes, raising children and putting the days of their heroic deeds behind\n  them.\n\n  But peace on \\Place{Krynn} comes at a price. The forces of darkness are ever\n  vigilant, searching for ways to erode the balance of power and take\n  control. When subtle changes begin to permeate the fragile peace, new lives\n  are drawn into the web of fate woven around all the races. The time has come\n  to pass the sword -- or the staff -- to the children of the Lance.\n\n  They are the Second Generation.\n\n  An all-new repackaged paperback edition of a classic \\Place{Dragonlance}\n  novel.\n\n  This book of five novellas bridges the gap between the \\Product{Chronicles\n  and Legends} trilogies and \\Product{Dragons of Summer Flame}. While detailing\n  their adventures, \\Product{The Second Generation} also sets up key events and\n  characters in future \\Place{Dragonlance} novels."
+}
+title: "Second Generation"
+leader: "The"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2694"
+  check: 5
+}
+isbn13 {
+}
+pages: 448
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

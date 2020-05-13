@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5715"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Halflings"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

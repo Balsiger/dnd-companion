@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5011"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Sarken Mercenaries"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

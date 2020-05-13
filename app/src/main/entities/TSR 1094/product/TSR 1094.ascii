@@ -1,0 +1,56 @@
+template {
+  name: "TSR 1094"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Mystara"
+  description: "Boxed set with world of Mystara."
+}
+title: "Champions of Mystara: Heroes of the Princess Ark"
+author {
+  name: "Dupuis, Ann"
+}
+date {
+  year: 1993
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "615"
+  check: 8
+}
+isbn13 {
+}
+pages: 224
+system: DND_1ST
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 3
+}
+content {
+  part: POSTER
+  description: "maps"
+  number: 4
+}
+content {
+  part: CARD
+  description: "cardstock"
+  number: 8
+}

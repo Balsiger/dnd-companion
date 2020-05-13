@@ -1,0 +1,167 @@
+template {
+  name: "Dragon 210"
+  world: "Generic"
+}
+title: "Dragon 210"
+author {
+  name: "Satran, Michael"
+}
+author {
+  name: "Jones, Spike Y."
+}
+author {
+  name: "Moldvay, Tom"
+}
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Hood, Daniel"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Carpenter, Ken"
+}
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Detwiler, Gregory W."
+}
+author {
+  name: "Nesmith, Bruce"
+}
+author {
+  name: "Baran, Nicholas"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Grubb, Jeff"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "associate editor"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "editorial assistant"
+}
+cover {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Riley, Timothy"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Klosterman, Al"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Lake, Lissanne"
+}
+illustrator {
+  name: "Burr, Dan"
+}
+illustrator {
+  name: "Kohl, Charles"
+  job: "photography"
+}
+illustrator {
+  name: "Williams, Gary"
+}
+illustrator {
+  name: "Lessl, Bob"
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "Watkins, Chris"
+}
+illustrator {
+  name: "Akan, Galan"
+}
+illustrator {
+  name: "Dodson, Wayne"
+}
+illustrator {
+  name: "Manui, Barbara"
+}
+illustrator {
+  name: "Adams, Chris"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1994
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XIX 5"
+number: "210"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

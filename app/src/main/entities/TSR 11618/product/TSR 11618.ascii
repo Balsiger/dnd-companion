@@ -1,0 +1,39 @@
+template {
+  name: "TSR 11618"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  world: "Generic"
+  description: "easy introduction to Alternity with the Starcraft universe"
+}
+title: "Starcraft"
+author {
+  name: "Eckelberry, David"
+}
+date {
+  year: 2000
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1618"
+  check: 4
+}
+isbn13 {
+}
+pages: 96
+system: ALTERNITY
+type: ACCESSORY
+style: PAPERBACK
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}

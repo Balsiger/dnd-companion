@@ -1,0 +1,27 @@
+template {
+  name: "TSR 9298"
+  synonym: "RA1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Ravenloft"
+  description: "a poor vampire with a horde of little goblins invading its home"
+}
+title: "Feast of Goblyns"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

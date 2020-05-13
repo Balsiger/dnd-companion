@@ -1,0 +1,271 @@
+template {
+  name: "WTC 2181672"
+  world: "Forgotten Realms"
+  description: "When TSR published \\Product{The Crystal Shard} in 1988, the \\Monster{drow} \\Class{ranger} \\NPC{Drizzt Do\'Urden} first drew his enchanted \\Item{scimitar}s and a legend was born. Two decades later, the legend has grown and a generation of fans have made \\NPC{Drizzt} na dhis creator, R.A. Salvatore, known throught the world."
+  short_description: "Celebrating the 20th year of Drizzt Do\'Urden."
+}
+title: "Reader\'s Guide to R.A. Salvatore\'s The Legend of Drizzt"
+leader: "A"
+subtitle: "Celebrate Twenty Years of the Greatest Fantasy Hero of a Generation"
+author {
+  name: "Noah, Eric R."
+  job: "researcher"
+}
+author {
+  name: "Ross, James"
+  job: "researcher"
+}
+author {
+  name: "Salla, Sandra"
+  job: "researcher"
+}
+editor {
+  name: "Morris, Susan J."
+}
+cover {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Bader, Daren"
+}
+illustrator {
+  name: "Beet"
+}
+illustrator {
+  name: "Belledin, Steve"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Cavotta, Matthew &#39Matt&#39"
+}
+illustrator {
+  name: "Cotie, Mitch"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Despain, Brian"
+}
+illustrator {
+  name: "Dutton, Michael &#39;Mike&#39;"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Evans, Mark"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Fields, Fred"
+}
+illustrator {
+  name: "Foster, Jon"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Guay Mitchel, Rebecca"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Hooper, Fred"
+}
+illustrator {
+  name: "Hudnut, David"
+}
+illustrator {
+  name: "Hudson, Heather"
+}
+illustrator {
+  name: "Jackoilrain"
+}
+illustrator {
+  name: "Locke, Vince"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Marchesi, Roberto"
+}
+illustrator {
+  name: "Mitchell, Matthew"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Moeller, Christopher"
+}
+illustrator {
+  name: "Myers, Duane O."
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+illustrator {
+  name: "Pavelec, James"
+}
+illustrator {
+  name: "Philippi, Michael"
+}
+illustrator {
+  name: "Pollack, Alan"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Rex, Adam"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Ruppel, Robh"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Sass, Mike"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Stawicki, Matt"
+}
+illustrator {
+  name: "Stewart, Matthew"
+}
+illustrator {
+  name: "Sweet, Justin"
+}
+illustrator {
+  name: "Sweckel, Arnie"
+}
+illustrator {
+  name: "Tappin, Stephen"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Vohwinkel, Frank"
+}
+illustrator {
+  name: "Walker, Kev"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wilson, Matt"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Zhang, Xi James"
+}
+illustrator {
+  name: "Adelsperger, Matt"
+  job: "art direction"
+}
+illustrator {
+  name: "Colavito, Dan"
+  job: "designer"
+}
+date {
+  year: 2008
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4915"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4915"
+  check: 1
+}
+pages: 168
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

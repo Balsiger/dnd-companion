@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8962"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Curse of the Werewolf"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book Twelve"
+price {
+}

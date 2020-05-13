@@ -1,0 +1,27 @@
+template {
+  name: "TSR 9260"
+  synonym: "B11"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+}
+title: "King\'s Festival"
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}

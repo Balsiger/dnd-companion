@@ -1,0 +1,43 @@
+template {
+  name: "WTC 1772774"
+  world: "Forgotten Realms"
+  description: "The shadows deepen in every corner of the \\Place{Realms}.\n                    The sun no longer shines on a man who has embraced the darkness within him.\n                    The day\'s opposite finds \\NPC{Erevis Cale} so far along the path away from\n                    his own humanity, he may never again walk as a man.\n                    In the end, to be Chosen by a god like \\God{Mask} is more curse than\n                    blessing."
+}
+title: "Midnight\'s Mask"
+author {
+  name: "Kemp, Paul S."
+}
+cover {
+  name: "Spears, Ron"
+}
+cartographer {
+  name: "Bartoletti, Nick"
+}
+date {
+  year: 2005
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3643"
+  check: 6
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "Erevis Cale Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

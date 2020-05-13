@@ -1,0 +1,44 @@
+template {
+  name: "WTC 96536"
+  world: "Forgotten Realms"
+  description: "Renegade \\Monster{dragon} hunter \\NPC{Dorn} hates dragons with a passion few\n                    can believe, let alone match. He has devoted his entire life---a life spent\n                    in the twisted body of a \\Monster{half-golem}---to killing every\n                    \\Monster{dragon} he can find.\n                    You might feel the same way if one of them had killed your entire family in\n                    front of your eyes, bitten you in half, and left you for dead.\n                    Killing one \\Monster{dragon} at a time is hard enough, but when the\n                    irresistible impulse to slip into feral madness begins to overcome not one,\n                    but every \\Monster{dragon} all across \\Place{Faer\\hat{u}n}, civilization\'s\n                    only hope may line in the last alliance \\NPC{Dorn} and his fellow\n                    \\Monster{dragon} hunters would ever accept.\n                    No matter what happens, the next year is going to be a difficult one for\n                    \\Monster{Dorn}, and for \\Place{Faer\\hat{u}n} itself.\n                    The Year of Rogue Dragons has come."
+}
+title: "Rage"
+leader: "The"
+author {
+  name: "Byers, Richard Lee"
+}
+cover {
+  name: "Stawicki, Matt"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2004
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3187"
+  check: 6
+}
+isbn13 {
+}
+pages: 344
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 1"
+series: "Year of Rogue Dragons"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

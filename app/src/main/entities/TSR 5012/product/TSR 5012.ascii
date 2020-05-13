@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5012"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Orcs of the Broken Bone"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

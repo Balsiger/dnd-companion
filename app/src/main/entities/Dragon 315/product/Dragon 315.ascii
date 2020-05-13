@@ -1,0 +1,163 @@
+template {
+  name: "Dragon 315"
+  world: "Generic"
+  description: "Issue 315 of the magazine. Campaign Classics issue."
+}
+title: "Dragon 315"
+author {
+  name: "Brown, Steven \'Stan!\'"
+}
+author {
+  name: "Brunner, Frank"
+}
+author {
+  name: "Chambers, Jamie"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Marable, Ken"
+}
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Pramas, Chris"
+}
+author {
+  name: "Poisso, Dean"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Schwartz, David"
+}
+author {
+  name: "Smith, Mat"
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Wyatt, James"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+cover {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Hooper, Fred"
+}
+illustrator {
+  name: "James, Kennon"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lee, Rob"
+}
+illustrator {
+  name: "McClellan, Dave"
+}
+illustrator {
+  name: "Mitten, Cara"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Steinman, Bob"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Velotta, Patrick"
+  job: "graphic designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "group publishing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+date {
+  year: 2004
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVIII 8"
+number: "315"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

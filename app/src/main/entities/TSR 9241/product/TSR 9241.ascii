@@ -1,0 +1,33 @@
+template {
+  name: "TSR 9241"
+  synonym: "GAZ10"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "about orcs, hobgoblins, kobolds, ..."
+}
+title: "Orcs of Thar"
+leader: "The"
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "623"
+  check: 1
+}
+isbn13 {
+}
+system: DND_1ST
+type: CAMPAIGN_EXPANSION
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

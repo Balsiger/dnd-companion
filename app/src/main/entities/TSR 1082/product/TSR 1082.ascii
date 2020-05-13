@@ -1,0 +1,31 @@
+template {
+  name: "TSR 1082"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Rules to use immortals in D&D."
+}
+title: "Wrath of the Immortals"
+date {
+  year: 1992
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+type: ACCESSORY
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

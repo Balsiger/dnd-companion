@@ -1,0 +1,59 @@
+template {
+  name: "TSR 9511"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  world: "Generic"
+  description: "\\emph{On a rugged island filled with unnatural dangers, fierce and proud\n                    barbarians must fight for their lives.}\n                    The barbarians who call themselves the \\Group{Knorr}, driven from their\n                    homeland, wanted nothing but freedom and an honorable existence when they\n                    landed on the shores of \\Place{Jakandor}. What they found was an island\n                    occupied by despicable wielders of vile magic---the \\Group{Broken People}, as\n                    the \\Group{Knorr} call them, who rely on legions of animated corpses to do\n                    their fighting. These enemies represent everything the \\Group{Knorr} find\n                    hateful and dishonorable, and no clansman will rest until the last of the\n                    \\Group{Broken People} has tasted \\Group{Knorrman} steel.\n                    A new, self-contained campaign arena conceived by Jeff Grubb, the\n                    \\Product{Odyssey} setting can be placed within any Advanced Dungeons &\n                    Dragons world. New barbarian character kits, new forms of magic, and the\n                    opportunity for new styles of role-playing make \\Product{Jakandor: Island of\n                    War} a fresh experience for all players, novices and veterans alike."
+}
+title: "Jakandor: Island of War!"
+date {
+  year: 1998
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0371"
+  check: 6
+}
+isbn13 {
+}
+pages: 144
+system: ADND_REVISED
+type: RULEBOOK
+style: SOFT_COVER
+producer: "TSR"
+number: "1"
+series: "Jakandor Odyssey Trilogy"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "DM\'s lorebook"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

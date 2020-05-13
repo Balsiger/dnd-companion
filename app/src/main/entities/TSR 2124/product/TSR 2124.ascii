@@ -1,0 +1,85 @@
+template {
+  name: "TSR 2124"
+  synonym: "PHBR6"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\Item{Battle axes} and beards. Good companions when traveling\n                    underground. Handy with tools. If that was your view of \\Monster{dwarves},\n                    you need \\Product{The Complete Book of \\Monster{Dwarves}}. Discover 24 new\n                    character kits, new weapons, and new possibilities, including six\n                    \\Monster{dwarf} subraces, new proficiencies, strongholds, origin myths, and a\n                    look at \\Monster{dwarven} personalities. After reading \\Product{The Complete\n                    Book of \\Monster{Dwarves}}, you may still look down on these short folk...but\n                    only to see them!"
+}
+title: "Complete Book of Dwarves"
+leader: "The"
+author {
+  name: "Bambra, Jim"
+}
+editor {
+  name: "Stewart, Doug"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Yockey, Laurie"
+}
+typographer {
+  name: "O;Keefe, Gaye"
+}
+date {
+  year: 1991
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "110"
+  check: 5
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "6"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

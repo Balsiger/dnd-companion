@@ -1,0 +1,167 @@
+template {
+  name: "Dragon 233"
+  world: "Generic"
+}
+title: "Dragon 233"
+author {
+  name: "Granato, Larry"
+}
+author {
+  name: "Estes, James"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Parks, Jim"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Hein, Dori"
+}
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "associate editor"
+}
+editor {
+  name: "Baldwin, Lizz"
+  job: "editorial assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Lubov"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Rex, Adam"
+}
+illustrator {
+  name: "Martin, James G. Jr.0"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Ruppel, Robh"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Murin, Dawn"
+}
+illustrator {
+  name: "Ferman, Michael"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Wagner, Edward B."
+}
+illustrator {
+  name: "Post, R.K."
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "Hrenchuk, Bill"
+}
+illustrator {
+  name: "Meyer, Dwain"
+}
+illustrator {
+  name: "Pilsbury, Joseph"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXI 4"
+number: "233"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,38 @@
+template {
+  name: "TSR 9344"
+  synonym: "DLR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "the culture and military strategies of Taladas Minotaurs"
+}
+title: "Taladas: The Minotaurs"
+date {
+  year: 1992
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "150"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

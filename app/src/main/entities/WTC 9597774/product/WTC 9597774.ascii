@@ -1,0 +1,121 @@
+template {
+  name: "WTC 9597774"
+  world: "Eberron"
+  description: "What begins as a simple expedition to explore an ancient jungle temple sends adventurers headlong into a search of the \\Item{Dragon\'s Eye}, an artifact created ages ago by \\Monster{demons} in order to gain power over \\Monster{dragons}. But where exactly is this mysterious artifact, and why do the \\Group{Cloudreavers} and the \\Group{Emerald Claw} think the adventurers already have it? Only \\NPC{Lady Vol} knows the truth. Her deadly cat-and-mouse game leads the characters from the wilderness of \\Place{Q\'barra} to the wild coasts of the \\Place{Lhazaar Principalities} and the soaring peaks of \\Place{Argonessen}. There, at last, they can learn the secret of the \\Item{Dragon\'s Eye} and foil the \\Monster{lich queens} plans... if they survive!\n\nThe \\Product[WTC 9597774]{Eyes of the Lich Queen} adventure for the Dungeons & Dragons game draws on the richness of the \\Place{Eberron} campaign setting. Designed for heroes of 5th level, this adventures sends them on a world-spanning journey as they battle cultists, pirates, long-dead spirits, and even \\Monster{dragons} in their search for the enigmatic \\Item{Dragon\'s Eye}."
+}
+title: "Eyes of the Lich Queen"
+subtitle: "Be the First to Find the \\Item{Dragon\'s Eye}"
+author {
+  name: "Schubert, Stephen"
+}
+author {
+  name: "Logue, Nicolas"
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Reynold, Wayne"
+}
+cartographer {
+  name: "Hunter, Kyle"
+}
+cartographer {
+  name: "Yochum, Trish"
+  job: "tactical map design"
+}
+illustrator {
+  name: "Lemen, Ron"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "art director"
+}
+illustrator {
+  name: "Waters, Anthony S."
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+date {
+  year: 2007
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4319"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4319"
+  check: 7
+}
+pages: 128
+system: DND_3_5
+type: ADVENTURE
+style: SOFT_COVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 86400"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 17752"
+layout: FULL_COLOR

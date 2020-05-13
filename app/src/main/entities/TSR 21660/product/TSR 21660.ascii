@@ -1,0 +1,42 @@
+template {
+  name: "TSR 21660"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 268"
+  }
+  reference {
+    name: "Dragon 270"
+  }
+  world: "Forgotten Realms"
+  description: "Silent death stalks the \\Group{Harpers} of \\Place{Faer\\hat{u}n}. One by one,\n                    members of the semi-secret society for good in the \\Place{Realms} are falling\n                    to a murderer\'s blade. Now a \\NPC{Harper} agent and a beautiful\n                    \\Monster{half-elf} \\Class{assassin} must solve the mystery. If they fail,\n                    they will be the next victims.\n                    But things in the \\Place{Realms} are rarely that simple."
+}
+title: "Elfshadow"
+author {
+  name: "Cunningham, Elaine"
+}
+date {
+  year: 2000
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1660"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Book I"
+series: "Songs & Swords"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

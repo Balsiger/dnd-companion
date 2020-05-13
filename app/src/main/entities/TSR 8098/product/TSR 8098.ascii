@@ -1,0 +1,37 @@
+template {
+  name: "TSR 8098"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "None"
+  description: "a Resistance fighter battles evil alien life-forms"
+}
+title: "Galactic Challenge"
+author {
+  name: "Varney, Allen"
+}
+date {
+  year: 1995
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0158"
+  check: 6
+}
+isbn13 {
+}
+pages: 192
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+series: "Amazing Engine"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}

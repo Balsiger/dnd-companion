@@ -1,0 +1,42 @@
+template {
+  name: "TSR 9441"
+  synonym: "AC1011"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "who\'s who and what\'s what in Mystara"
+}
+title: "Poor Wizard\'s Almanac II"
+author {
+  name: "Dupuis, Ann"
+}
+date {
+  year: 1993
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 240
+system: DND_1ST
+type: ACCESSORY
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

@@ -1,0 +1,45 @@
+template {
+  name: "WTC 88616"
+  world: "Forgotten Realms"
+  description: "In the blasted ruins of \\Place{Tilverton}, \\Monster{demons} stalk the\n                    shadows.\n                    In \\Place{Evereska} and \\Place{Cormyr}, alliances crumble.\n                    In the sun-baked desert of \\Place{Anauroch}, an empire of darkness is\n                    established.\n                    In the soul of a tortured elf, the future is decided.\n                    From the author of \\Product{The Summoning}, \\Product{The Siege}, and\n                    \\Product{Death of the Dragon} (with Ed Greenwood), the Realms-shaking\n                    \\Product{Returns of the Arch Wizards} series comes to a stunning\n                    conclusion!"
+}
+title: "Sorcerer"
+leader: "The"
+author {
+  name: "Denning, Troy"
+}
+cover {
+  name: "Sullivan, Jon"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2002
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2795"
+  check: 10
+}
+isbn13 {
+}
+pages: 343
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "Return of the Archwizards"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "the story"
+  number: 1073741824
+}

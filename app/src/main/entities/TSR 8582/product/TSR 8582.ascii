@@ -1,0 +1,97 @@
+template {
+  name: "TSR 8582"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Forgotten Realms"
+  description: "A murder victim is turned into a \\Monster{zombie}, just long enough to cover\n                    up the circumstances of his own death...\n                    A silent ghost with a friendly grin greets those about to meet their doom...\n                    The only clue to who\'s killing a party of adventurers is the letter \'H\',\n                    written in the blood of one of the victims...\n                    All new stories of murders, suspense, and intrigue by Elaine Cunningham, Jeff\n                    Grubb, Ed Greenwood, and other favorite \\Place{Forgotten Realms} authors."
+}
+title: "Realms of Mystery"
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Lowder, James"
+}
+author {
+  name: "Herbert, Mary H."
+}
+author {
+  name: "Brown, Steven \'Stan!\'"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Byers, Richard Lee"
+}
+author {
+  name: "Strohm, Keith Francis"
+}
+author {
+  name: "King, J. Robert"
+}
+author {
+  name: "Thomson, Brian M."
+}
+author {
+  name: "Archer, Peter"
+}
+author {
+  name: "Reid, Thoms M."
+}
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Athans, Philip"
+}
+cover {
+  name: "Pollack, Alan"
+}
+date {
+  year: 1998
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1171"
+  check: 9
+}
+isbn13 {
+}
+pages: 336
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

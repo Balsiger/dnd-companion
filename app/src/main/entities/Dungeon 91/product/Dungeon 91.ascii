@@ -1,0 +1,140 @@
+template {
+  name: "Dungeon 91"
+  world: "Generic"
+  description: "This is issue 91 of the dungeon magazine, together with the\n   \\Product{Polyhedron 150} issue."
+}
+title: "Dungeon 91"
+author {
+  name: "Corvello, Brian"
+}
+author {
+  name: "Edwards, Terry"
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "Richards, Johnathan"
+}
+author {
+  name: "Shell, J. Bradley"
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Lee, Robert"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Mona, Erik"
+  job: "contributing editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "contributing editor"
+}
+editor {
+  name: "Fiorito, Stacie A."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+cover {
+  name: "Anderson, Kyle J."
+}
+illustrator {
+  name: "Anderson, Kyle J."
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "James, Kennon"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lee, Robert"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Zipse, Craig"
+}
+illustrator {
+  name: "Thomasson, Chris"
+  job: "art director"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+date {
+  year: 2002
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 116
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XVI 1"
+number: "91"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

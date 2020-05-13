@@ -1,0 +1,55 @@
+template {
+  name: "WTC 17981"
+  world: "Forgotten Realms"
+  description: "This slip-covered gift set contains the four New York Times best-selling\n                    titles that make up the \\Product{Legacy of the Drow} series: \\Product{The\n                    Legacy}, \\Product{Starless Night}, \\Product{Siege of Darkness}, and\n                    \\Product{Passage to Dawn}. Each of these titles center around\n                    R.A. Salvatore\'s signature \\Monster{dark elf} character."
+}
+title: "Legacy of the Drow Gift Set"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3001"
+  check: 2
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: BOX
+series: "Legacy of the Drow"
+price {
+  currency: "$ "
+  number: 3199
+  precision: 100
+}

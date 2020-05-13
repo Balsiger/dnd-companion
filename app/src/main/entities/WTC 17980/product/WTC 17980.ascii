@@ -1,0 +1,43 @@
+template {
+  name: "WTC 17980"
+  world: "Forgotten Realms"
+  description: "The shadows grow long on the mean streets of \\Place{Selgaunt}.\n                    The sun sets on one man\'s serivce to \\Place{Sembia}\'s merchant lords.\n                    The day\'s end finds \\NPC{Erevis Cale} serving a new master, one who is beyond\n                    the petty accumulation of wealth.\n                    After all, what is gold to one who trades in souls?"
+}
+title: "Twilight Falling"
+author {
+  name: "Kemp, Paul S."
+}
+cover {
+  name: "Nielsen, Terese"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2003
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2998"
+  check: 7
+}
+isbn13 {
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "Erevis Cale Trology"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

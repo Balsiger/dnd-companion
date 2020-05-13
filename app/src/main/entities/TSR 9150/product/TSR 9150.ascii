@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9150"
+  synonym: "CA1"
+  reference {
+    name: "net price list"
+  }
+  world: "Lankhmar"
+}
+title: "Swords of the Undercity"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

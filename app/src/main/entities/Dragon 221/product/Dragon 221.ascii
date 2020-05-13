@@ -1,0 +1,200 @@
+template {
+  name: "Dragon 221"
+  world: "Generic"
+}
+title: "Dragon 221"
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Melka, Kevin"
+}
+author {
+  name: "Winter, Jon"
+}
+author {
+  name: "Bebris, Carrie A."
+}
+author {
+  name: "Brown, Anne K."
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Jay"
+}
+author {
+  name: "Dee"
+}
+author {
+  name: "JB"
+}
+author {
+  name: "Bunnell, John C."
+}
+author {
+  name: "Stackpole, Mike"
+}
+author {
+  name: "Baichtal, John W."
+}
+author {
+  name: "Zelinski, Peter"
+}
+author {
+  name: "Bonny, Edward"
+}
+author {
+  name: "Vuckovich, Michele"
+}
+author {
+  name: "Collier, James R."
+}
+author {
+  name: "Thauberger, Rudy"
+}
+author {
+  name: "Haw, Kevin N."
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Schend, Steve"
+}
+author {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "Elmore, Larry"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Shipman, R. Ward"
+}
+illustrator {
+  name: "Holloway, James"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Burr, Dan"
+}
+illustrator {
+  name: "Kohl, Charles"
+  job: "photography"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Dollar, John"
+}
+illustrator {
+  name: "Walton, Jason"
+}
+illustrator {
+  name: "Lessl, Bob"
+}
+illustrator {
+  name: "Doney, Mark"
+}
+illustrator {
+  name: "Cavalier, Bill"
+}
+illustrator {
+  name: "Gage, Eric"
+}
+illustrator {
+  name: "May, Rex F."
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "Manui, Barbara"
+}
+illustrator {
+  name: "Adams, Chris"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1995
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XX 4"
+number: "221"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

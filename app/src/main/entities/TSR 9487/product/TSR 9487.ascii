@@ -1,0 +1,80 @@
+template {
+  name: "TSR 9487"
+  synonym: "FOR7"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 221"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{As \\NPC{Kiruna} reached the mouth of the cavern, she realized the heat\n                    was emanating from two towering braziers, one on either side of the\n                    entrance. Deep gauges---now she could see they were runes, of ancient\n                    origin---ringed their bases and rims, their lines and curves carved by\n                    instruments far larger than any she could wield.\n                    Her eyes adjusted slowly to the darkness within the \\Monster[Stone\n                    Giant]{stone giant}\'s home. On the walls she could make out stunning friezes\n                    and portraits, all carved in bas-relief with artistry like none she had seen\n                    back home in \\Place{Shadowdale}. \\NPC{Kiruna} stood for a moment, gazing on\n                    these immense figures and faces, her reverie broken only by the realization\n                    that she was shivering; no, not shivering, but being shaken. The floor was\n                    quivering, and, echoing in the depths of the darkness, footsteps\n                    approached...}\n                    Enter the world of \\Place{Faer\\hat{u}n}\'s \\Monster[Giant]{giants} as first\n                    revealed in Troy Denning\'s \\Product{Twilight Giants} trilogy\n                    novels. \\Product[TSR 9487]{Giantcraft} presents game material based on those\n                    characters and events, including statistics for \\NPC[Brianna]{Princess\n                    Brianna}, \\NPC{Tavis Burdun}, and others; a section on player-character\n                    \\Monster[Giant]{giants} and \\Monster[Giant-kin]{giant-kin}; a chapter on\n                    \\Monster[Giant]{giant} religion; a new magic-using class, the runecaster;\n                    details on \\Monster[Giant]{giant} rune magic; and detailed lairs for the main\n                    \\Monster[Giant]{giant} types found in the \\Place{Ice Spires} and their\n                    environs. Read about the \\Place[Levendhule]{levendhule}, a forbidden \'living\n                    cave\'; uncover the secrets of the Ordning; learn the history of the sons and\n                    daughters of \\God{Annam}. Dungeon Masters and players alike are certain to\n                    find invaluable information in this latest \\Place[Forgotten Realms]{Realms}\n                    sourcebook. (Familiarity with the novels is not necessary to use this\n                    accessory.)"
+}
+title: "Giantcraft"
+author {
+  name: "Winninger, Ray"
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Grubb, Jeff"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Hein, Dori"
+}
+illustrator {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+illustrator {
+  name: "Frazier, Daniel"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Coumbe, Tim"
+  job: "electronic prepress coordination"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+date {
+  year: 1995
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0163"
+  check: 2
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,107 @@
+template {
+  name: "PP 00268"
+  world: "Call of Cthulhu"
+  description: "\\bold{H\\umlaut{a}upter des Schreckens}\n\n  Weihnachten, bei London. Winterlich und friedlich. Doch als sich zur\n  Geisterstunde ein geheimnisvoller Selbstmord ereignet, nehmen die Ereignisse\n  ihren Lauf. Was hat es mit der Treppe des Zauberers auf sich? Welches\n  Geheimnis umgibt das alte Nonnenkloster? Und welche Antworten warten in\n  Madame Tussauds Wachsfigurenkabinett?\n\n  \\emph{Ein mysteri\\umlaut{o}ses Abenteuer in und um London in the 1920ern.}\n\n  \\bold{Geister in Loch Feinn}\n\n  Die Gef\\umlaut{a}hrten folgen der Spur eines ermordeten Wissenschaflers von\n  London nach Schottland. Der Pal\\umlaut{a}ontologe versuchte, den wahren Kern\n  in all den Sagen von Drachen zu finden - aber was entdeckte er in Lock Feinn,\n  das zu seinem gewaltsamen Tode f\\umlaut{u}hrte?\n\n  \\emph{Ein Abentuer im nebligen Lond und Schottland in den 1920ern.}"
+}
+title: "Terror Britannicus"
+author {
+  name: "Hupperich, Gerd"
+}
+author {
+  name: "Rahman, Glenn"
+}
+author {
+  name: "Schiemichen, Wolgang"
+}
+author {
+  name: "Gill, Heiko"
+  job: "Ergaenzungen"
+}
+editor {
+  name: "Heller, Frank"
+}
+editor {
+  name: "Heller, Frank"
+  job: "Lektorat"
+}
+editor {
+  name: "Gill, Heiko"
+  job: "Korrektorat"
+}
+editor {
+  name: "Ungermann-Voss, Miriam"
+  job: "Korrektorat"
+}
+cover {
+  name: "Escher, Manfred"
+  job: "Cover-Konzeption und Design"
+}
+cartographer {
+  name: "Ungermann-Voss, Miriam"
+}
+illustrator {
+  name: "Kleye, Kostja"
+  job: "Handoutgestaltung"
+}
+illustrator {
+  name: "Ungermann-Voss, Miriam"
+  job: "Handoutgestaltung"
+}
+illustrator {
+  name: "Burri, Dan"
+  job: "Bildredaktion"
+}
+illustrator {
+  name: "Heller, Frank"
+  job: "Bildredaktion"
+}
+illustrator {
+  name: "Wessel, Christina"
+  job: "Bildredaktion"
+}
+illustrator {
+  name: "Schiemichen, Wolfang"
+  job: "Mitwirkung Bildredation"
+}
+illustrator {
+  name: "Kr\342\210\232\302\272ger, Maik"
+  job: "Inndendesign-Entwurf"
+}
+illustrator {
+  name: "Rinke, Holger"
+  job: "Innendesign-Entwurf"
+}
+typographer {
+  name: "Kr\\umlaut{u}ger, Maik"
+}
+manager {
+  name: "Finkernagel, Andreas"
+  job: "Verlagsleitung"
+}
+date {
+  year: 2004
+}
+isbn {
+  group: "3"
+  publisher: "930635"
+  title: "88"
+  check: 7
+}
+isbn13 {
+}
+pages: 96
+system: CHAOSIUM
+type: ADVENTURE
+style: SOFT_COVER
+producer: "Pegasus Press"
+series: "Cthulhoide Welten Bibliothek"
+price {
+  currency: "Euro "
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9059"
+  synonym: "D1-2"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Descent into the Depths of the Earth"
+date {
+  year: 1981
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 400
+  precision: 100
+}

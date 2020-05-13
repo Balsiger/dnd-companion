@@ -1,0 +1,49 @@
+template {
+  name: "TSR 9569"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "Generic"
+  description: "\\large{Hungry Tendrils Stir in the Dark...}\n                    \\emph{\'Something\'s back there\' he screamed.\n                    I turned to look, and behold the incarnation of my fear staring back:\n                    A robed figure stood just out of the light, but I could see just enough to\n                    make out a misshapen head from which depended a writhing, coiling cluster of\n                    slick tentacles.\n                    As I opened my mouth to give warning of the true enemy, I felt a scratch\n                    cross the surface of my mind...}\n                    \\Product{The Illithiad} is a visually stunning tome that details important\n                    information on \\Monster{mind flayers}, their mental powers, and their dire\n                    plans to control the \\Place{multiverse}.\n                    This \'complete book of \\Monster{illithids}\' covers:\n                    \\list\n                    {The anatomy and physiology of the \\Monster{mind flayer}.}\n                    {The terrible truth about the \\Monster{mind flayer} life cycle.}\n                    {\\Monster{Illithid-kin}, undead \\Monster{mind flayers}, and new\n                    \'flayer-kin monsters.}\n                    {A balanced look at \\Monster{illithid} psionic powers.}\n                    {\\Monster{Illithid} origins, history, theology, psychology, and\n                    society.}\n                    {Unique \\Monster{mind flayer} psionic abilities and items.}\n                    \\Product{The Illithiad} is the third volume in the popular \\Product{Monstrous\n                    Arcana} game accessory series and is indispensable for DMs who want to add\n                    these terrifying creatures to their campaigns. \\Product{The Illithiad}\n                    supports the \\Monster{mind flayer} adventure trilogy: \\Product{A Darkness\n                    Gathering}, \\Product{Masters of Eternal Night}, and \\Product{Dawn of the\n                    Overmind}."
+}
+title: "Illithiad"
+leader: "The"
+date {
+  year: 1998
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1206"
+  check: 5
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Monstrous Arcana"
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

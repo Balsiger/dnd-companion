@@ -1,0 +1,73 @@
+template {
+  name: "IDW 1"
+  world: "Forgotten Realms"
+  description: "\\NPC{Teirflin} and \\NPC{Doum\'weille} are half-Drow siblings, locked in competition for the ownership of the sword \\Item{Khazid\'hea} - the Cutter! Their father, the Drow renegate Tos\'un - a veteran of battles against the \\Place{Kindgom of Many Arrows} - is forced to choose his heir... but the powerful sword may have its own say on the subject.\n\nWritten by R.A. Salvatore and Geno Salvatore with art by David Baldeon."
+  short_description: "Grphic story about Khazid\'hea."
+}
+title: "Cutter"
+subtitle: "Graphic Novel"
+author {
+  name: "Salvatore, R.A."
+}
+author {
+  name: "Salvatore, Geno"
+}
+editor {
+  name: "Barber, John"
+  job: "series"
+}
+editor {
+  name: "Eisinger, Justin"
+  job: "collection"
+}
+editor {
+  name: "Simon, Alonzo"
+  job: "collection"
+}
+cover {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Baldeon, David"
+}
+illustrator {
+  name: "Cruz, David Garcia"
+  job: "colors"
+}
+illustrator {
+  name: "Uyetake, Neil"
+  job: "letters"
+}
+illustrator {
+  name: "Uyetake, Neil"
+  job: "collection design"
+}
+date {
+  year: 2014
+  month: 4
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "61377"
+  title: "792"
+  check: 3
+}
+pages: 128
+system: NONE
+audience: ALL
+type: COMICS
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2499
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

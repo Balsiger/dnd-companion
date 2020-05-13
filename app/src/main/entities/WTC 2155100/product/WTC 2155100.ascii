@@ -1,0 +1,199 @@
+template {
+  name: "WTC 2155100"
+  world: "Generic"
+  description: "This starter set contains everything you need to compete in head-to-head D&D battles against a friend. Pit the \\Monster{Green Dragon}\'s warband against the \\Monster{Elf} Warlkock\'s warband to see which side can control the dungeon!\n                    New, fully illustrated battle maps of dungeons and wilderness areas make every game exciting and different!"
+  short_description: "The 4th edition miniatures game"
+}
+title: "D&D Miniatures Game Starter Set"
+subtitle: "The \\Monster{Green Dragon} roars its challenge as the \\Monster{elf} Warlkock prepares to hurl a deadly curse."
+author {
+  name: "Schubert, Stephen"
+  job: "rulebook"
+}
+author {
+  name: "Heinsoo, Rob"
+  job: "rulebooks"
+}
+editor {
+}
+cover {
+  name: "Reynolds, Wayne"
+  job: "package art"
+}
+cover {
+  name: "Prescott, Steve"
+  job: "package art"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Grant-West, Lars"
+  job: "model concepting"
+}
+illustrator {
+  name: "Griffith, David"
+  job: "model concepting"
+}
+illustrator {
+  name: "Horsley, Ralph"
+  job: "model concepting"
+}
+illustrator {
+  name: "Nelson, James"
+  job: "model concepting"
+}
+illustrator {
+  name: "O&#39Connor, William"
+  job: "model concepting"
+}
+illustrator {
+  name: "Plucinski, Zak"
+  job: "model concepting"
+}
+illustrator {
+  name: "Prescott, Steve"
+  job: "model concepting"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+  job: "model concepting"
+}
+illustrator {
+  name: "Spencer, Ron"
+  job: "model concepting"
+}
+illustrator {
+  name: "Swekel, Arnie"
+  job: "model concepting"
+}
+illustrator {
+  name: "Zhang, James"
+  job: "model concepting"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Dunnet, Yasuyo"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Forward-Rollins, Eve"
+  job: "model painting"
+}
+illustrator {
+  name: "Goddard, Kimberly"
+  job: "model painting"
+}
+illustrator {
+  name: "Radney-MacFarland, Stephen"
+  job: "model painting"
+}
+illustrator {
+  name: "Sharp, Dylan"
+  job: "model painting"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "D&D senior art director"
+}
+typographer {
+}
+manager {
+  name: "Vergel de Dois, Erica"
+  job: "production"
+}
+manager {
+  name: "Glasenapp-Horn, Monica"
+  job: "production"
+}
+manager {
+  name: "Dumas, Brian"
+  job: "production"
+}
+manager {
+  name: "Rouse, Scott"
+  job: "brand manager"
+}
+manager {
+  name: "Foster, Lianae"
+  job: "brand manager"
+}
+manager {
+  name: "Xu, Ivan"
+  job: "project engineer"
+}
+manager {
+  name: "Cheung, Henry"
+  job: "project engineer"
+}
+manager {
+  name: "Tsang, Kenny"
+  job: "project engineer"
+}
+date {
+  year: 2008
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4754"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4754"
+  check: 6
+}
+system: DND_4
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+series: "D&D Miniatures"
+price {
+  currency: "$"
+  number: 1999
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "non random, fully painted, plastic"
+  number: 5
+}
+content {
+  part: CARD
+  description: "full-color game stat"
+  number: 5
+}
+content {
+  part: BOOKLET
+  description: "rulebook"
+  number: 1
+}
+content {
+  part: MAP
+  description: "double-sided, full-color"
+  number: 2
+}
+content {
+  part: DICE
+  description: "20-sided"
+  number: 1
+}
+content {
+  part: PLAYING_PIECE
+  description: "damage counters"
+  number: 20
+}
+required_requirements: "WTC 2155100"
+optional_requirements: "WTC 2155100"
+layout: FULL_COLOR

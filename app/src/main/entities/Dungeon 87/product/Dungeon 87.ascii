@@ -1,0 +1,122 @@
+template {
+  name: "Dungeon 87"
+  world: "Generic"
+  description: "This is issue 87 of the dungeon magazine."
+}
+title: "Dungeon 87"
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Robert Lee"
+}
+author {
+  name: "Eckelberry, David"
+}
+author {
+  name: "W. Jason Peck"
+}
+author {
+  name: "Tito Leati"
+}
+author {
+  name: "Mike Selinker"
+}
+author {
+  name: "Johnathan M. Richards"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Matthew Sernett"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "John D. Rateliff"
+}
+cover {
+  name: "Critchlow, Carl"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "Robert Lee"
+}
+cartographer {
+  name: "West, Christopher"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Tito Leati"
+}
+illustrator {
+  name: "rk post"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chuck Lukacs"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "art director"
+}
+manager {
+  name: "John Dunn"
+  job: "production manager"
+}
+manager {
+  name: "Pierce Watters"
+  job: "circulation director"
+}
+manager {
+  name: "Bob Henning"
+  job: "advertising director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "advertising & circulation assistant"
+}
+manager {
+  name: "Johnny Wilson"
+  job: "group publisher"
+}
+date {
+  year: 2001
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 144
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XV 3"
+number: "87"
+series: "Dungeon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: CD
+  number: 1073741824
+}

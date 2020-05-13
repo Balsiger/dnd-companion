@@ -1,0 +1,161 @@
+template {
+  name: "Dragon 323"
+  world: "Generic"
+  description: "Issue 323 of the magazine. "
+}
+title: "Dragon 323"
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Clements, John"
+}
+author {
+  name: "Clough, C. Wesley"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Connolly, Paul"
+}
+author {
+  name: "Farrese, Richard"
+}
+author {
+  name: "Forbeck, Matt"
+}
+author {
+  name: "Leach, Paul"
+}
+author {
+  name: "Lin, Monte"
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "McArtor, Mike"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Poisso, Dean"
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Tresca, Michael"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Barrum, Joachim"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Thomas, Rob"
+}
+illustrator {
+  name: "Wahlstrom, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Schley, Mike"
+  job: "graphic designer"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "group publishing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "circulation manager"
+}
+date {
+  year: 2004
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 130
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIX 4"
+number: "323"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

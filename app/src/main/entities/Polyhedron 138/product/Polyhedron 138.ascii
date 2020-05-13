@@ -1,0 +1,72 @@
+template {
+  name: "Polyhedron 138"
+  world: "Generic"
+  description: "Issue 138 of Polyhedron."
+}
+title: "Polyhedron 138"
+author {
+  name: "Mason Porter"
+}
+author {
+  name: "Steve Jay"
+}
+author {
+  name: "Gibson, Ed"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Matthew Sernett"
+}
+author {
+  name: "Mike Selinker"
+}
+author {
+  name: "Woollums, Erica"
+}
+editor {
+  name: "Mona, Erik"
+}
+manager {
+  name: "TSR, Inc."
+  job: "publisher"
+}
+manager {
+  name: "Ryan Dancey"
+  job: "brand management"
+}
+manager {
+  name: "Robert Wiese"
+  job: "RPGA coordination"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "production"
+}
+manager {
+  name: "Mark Painter"
+  job: "art direction"
+}
+manager {
+  name: "Sean Glenn"
+  job: "graphic design"
+}
+date {
+  year: 1999
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "19"
+number: "5"
+series: "Polyhedron"
+price {
+}

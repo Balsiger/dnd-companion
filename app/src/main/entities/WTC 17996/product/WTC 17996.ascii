@@ -1,0 +1,50 @@
+template {
+  name: "WTC 17996"
+  world: "Forgotten Realms"
+  description: "He thought it was a game.\n                    He thought no one would get hurt.\n                    He thought he could trust a tanarukk bandit.\n                    The thought he was hired for his skill and cunning.\n                    He thought it was just another victim, just another mark.\n                    He thought he could do his job without turning the entire city against him.\n                    He was wrong.\n                    Second in a new series that brings to life the people who survive on the\n                    fringes and in the shadows of the \\Place{Forgotten Realms}\n                    word---\\Product{The Rogues}."
+}
+title: "Black Bouquet"
+leader: "The"
+author {
+  name: "Byers, Richard Lee"
+}
+editor {
+  name: "Athans, Philip"
+}
+cover {
+  name: "Zug, Mark"
+}
+cartographer {
+  name: "Greenwood, Ed"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2003
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3042"
+  check: 10
+}
+isbn13 {
+}
+pages: 301
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Second"
+series: "Rogues"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

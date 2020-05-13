@@ -1,0 +1,34 @@
+template {
+  name: "WTC 88057"
+  world: "Dragonlance"
+  description: "The regiment of \\Monster{draconian} engineers featured in \\Product{The Doom\n  Brigade} seek a safe haven for their precious cargo of young\n  \\Monster{draconians}. All they have to do is stay alive. Surely that\n  shouldn\'t be too hard.\n\n  But Commander \\NPC{Kang} puzzles over a sinister mystery. Why are some of his\n  men vanishing? \\NPC{Kang} will have to use draconian measures to defeat his\n  foes and save his race. They\'d better be enough -- the fate of his entire\n  race hangs in the balance."
+}
+title: "Draconia Measures"
+author {
+  name: "Perrin, Don"
+}
+author {
+  name: "Weis, Margaret"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1678"
+  check: 8
+}
+isbn13 {
+}
+pages: 350
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume 2"
+series: "Kang\'s Regiment"
+price {
+}

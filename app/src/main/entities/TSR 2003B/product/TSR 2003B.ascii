@@ -1,0 +1,22 @@
+template {
+  name: "TSR 2003B"
+  reference {
+    name: "net price list"
+  }
+  world: "Greyhawk"
+}
+title: "Greyhawk (black and white)"
+date {
+  year: 1975
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

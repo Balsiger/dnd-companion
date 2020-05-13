@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9030"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Non-Player Character Records"
+date {
+  year: 1979
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

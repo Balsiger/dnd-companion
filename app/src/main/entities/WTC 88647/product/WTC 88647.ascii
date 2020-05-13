@@ -1,0 +1,144 @@
+template {
+  name: "WTC 88647"
+  world: "Forgotten Realms"
+  description: "The heroes of the \\Place{Forgotten Realms} are as diverse and varied as the\n                    regions from which they hail. This collection of \\Place{Faer\\hat{u}nian} lore\n                    and arcana allows you to create and equip an endless array of characters\n                    braced for the challenges they\'ll encounter. From races, feats, and spells to\n                    prestige classes, magic items, and more, \\Product{Player\'s Guide to\n                    Faer\\hat{u}n} provides a v.3.5 update to the \\Product{Forgotten Realms\n                    setting}, introduces some old favorites from 1st and 2nd Edition, and offers\n                    all-new character-building material.\n                    \\list\n                    {Over 60 feats}\n                    {Over 30 prestige classes}\n                    {Over 90 spells}\n                    To use this accessory, you also need the \\Product{Forgotten Realms Campaign\n                    Setting}, the \\Product{Player\'s Handbook}, the \\Product{Dungeon Master\'s\n                    Guide}, and the \\Product{Monster Manual}."
+}
+title: "Player\'s Guide to Faer\\hat{u}n"
+subtitle: "Make Your Mark on the Realms"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Stout, Travis"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "developer"
+}
+author {
+  name: "Finch, Andrew J."
+  job: "developer"
+}
+author {
+  name: "Noonan, David"
+  job: "developer"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "Gwendolyn F.M. Kestrel"
+  job: "managing editor"
+}
+editor {
+  name: "Finch, Andrew J."
+  job: "development manager"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+editor {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+cover {
+  name: "Rex, Adam"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Garres, Rafa"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Okumura, Scott"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Sardinha, Rick"
+}
+illustrator {
+  name: "Thompson, Ben"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Irwin, Kate"
+  job: "graphic designer"
+}
+typographer {
+  name: "Raper, Robert"
+  job: "graphic designer"
+}
+typographer {
+  name: "Wiley, Jason"
+  job: "image technician"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Stark , Ed"
+  job: "design manager"
+}
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3134"
+  check: 5
+}
+isbn13 {
+}
+pages: 192
+system: DND_3_5
+audience: PLAYER
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 3295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,255 @@
+template {
+  name: "WTC B2436"
+  category: "adventure"
+  category: "Adventure"
+  world: "Forgotten Realms"
+  description: "The first signs are always small: bandits on the roads, pirates on the \\Place{Dessarin River}, monster sightings throughout the \\Monster{Sumber Hills} - all too close to the lands of civilized folk.\n\nTo top things off, a delegation from the \\Monster{dwarven} city of \\Place{Mirabar} has gone missing. Are these events all some bizarre coincidence, or is there a deeper reason behind them?\n\nWorking through it prophets, the \\NPC{Elder Elemental Eye} has emerged to spread chaos across the \\Place{Forgotten Realms}. How will the adventurers prevent absolute devastation?\n\nA Dungeons & Dragons adventure for characters of levels 1-15.\n\nIncludes new spells and the element-touched \\Monster{genasi} as a new playable race.\n\nFor use with the fifth edition \\Product{Player\'s Handbook}, \\Product{Monster Manual}, and \\Product{Dungeon Master\'s Guide}."
+  short_description: "Prevent elemental annihilation in this adventure for the world\'s greatest roleplaying game."
+}
+title: "Princes of the Apocalypse"
+subtitle: "Primordial Evil Threatens the Realms"
+author {
+  name: "Baker, Richard"
+  job: "lead designer"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Reid, Thomas M."
+}
+author {
+  name: "Schubert, Stephen"
+}
+author {
+  name: "Townshend, Steve"
+}
+author {
+  name: "Ludwig, Jeff"
+}
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Thompson, Rodney"
+  job: "additional design"
+}
+author {
+  name: "Lee, Peter"
+  job: "additional design"
+}
+author {
+  name: "Sims, Chris"
+  job: "additional design"
+}
+author {
+  name: "Sernett, Matt"
+  job: "additional design"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Janssen, Stacy"
+}
+cover {
+  name: "Swanland, Raymond"
+}
+cartographer {
+  name: "MacDonald, Sean"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Balmet, John-Paul"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Burburan, Filip"
+}
+illustrator {
+  name: "Burdett, Christopher"
+}
+illustrator {
+  name: "Christensen, Anna"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Mayhew, Justin"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Pillion, Klaus"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Rogers, Ned"
+}
+illustrator {
+  name: "Smith, Lee"
+}
+illustrator {
+  name: "Swanland, Raymond"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Iwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna Wolf"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Heiss, Bree"
+  job: "graphic designer"
+}
+typographer {
+  name: "McCormack, Nissa"
+  job: "typesetter"
+}
+typographer {
+  name: "Wilkes, Jennifer Clarke"
+  job: "proofreader"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D lead designer"
+}
+manager {
+  name: "Crawford, Jeremy"
+  job: "D&D lead designer"
+}
+manager {
+  name: "Perkins Christoper"
+  job: "story lead"
+}
+manager {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "producer"
+}
+manager {
+  name: "Shinkle, Neil"
+  job: "project management"
+}
+manager {
+  name: "Hay, John"
+  job: "project management"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production services"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production services"
+}
+manager {
+  name: "Gershman, David"
+  job: "production services"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "brand and marketing"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "brand and marketing"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand and marketing"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "brand and marketing"
+}
+manager {
+  name: "Fell, John"
+  job: "brand and marketing"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lundstrom, Kim"
+  job: "brand and marketing"
+}
+manager {
+  name: "Kidd, Trevor"
+  job: "brand and marketing"
+}
+date {
+  year: 2015
+  month: 4
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6578"
+  check: 6
+}
+pages: 256
+system: DND_NEXT
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+series: "Elemental Evil"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

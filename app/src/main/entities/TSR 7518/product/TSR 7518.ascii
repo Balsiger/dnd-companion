@@ -1,0 +1,47 @@
+template {
+  name: "TSR 7518"
+  synonym: "GWA2"
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  description: "a detailed picture of the Overlord\'s domain"
+}
+title: "Overlord of Bonparr"
+author {
+  name: "TSR Staff"
+}
+date {
+  year: 1993
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "599"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: GAMMA_WORLD
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: MAP
+  number: 1073741824
+}

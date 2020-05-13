@@ -1,0 +1,25 @@
+template {
+  name: "WOC 40055"
+  description: "This boxed set contains one \\Monster{black dragon} model, stunningly\n                    sculpted by Kim Graham and hand-cast in lead-free pewter. As a foe for your\n                    D&D game or just as a collector\'s piece, the black dragon is a must for the\n                    serious fantasy fan.\n                    Unsheathe your sword and kick down the door---it\'s time to play D&D!"
+}
+title: "Black Dragon"
+author {
+  name: "Kim Graham"
+}
+date {
+  year: 2000
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_3RD
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+price {
+}
+content {
+  part: MINIATURE
+  number: 1073741824
+}

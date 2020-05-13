@@ -1,0 +1,75 @@
+template {
+  name: "TSR 9509"
+  synonym: "(FOR10)"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "Forgotten Realms"
+  description: "Fighters and clerics have long been mainstays in many AD&D game\n                    campaigns. Now, take a look inside this book and discover the dozens of kits\n                    created to adapt these basic classes to the unique and popular lands of\n                    \\Place{Faer\\hat{u}n}. Learn what a difference your homeland makes when you\n                    choose a warrior\'s kit, or discover the benefits as well as disadvantages of\n                    worshiping certain gods of the \\Place[Forgotten Realms]{Realms}. Some\n                    differences amon people are subtle, while others can be quite glaring. This\n                    tome reveals ways to identify whether a mercenary hails from \\Place{Chondath}\n                    or \\Place{Waterdeep}. It tells you that not all black-clad priest are evil\n                    followers of \\God{Cyric}, and even priests of the demipowers have skills to\n                    respect.\n                    In addition to priest and warrior kits, unique PC subclasses are revealed\n                    herein: the \\Group[Harpers]{Harper}, roving guardian of nature and justice,\n                    and the Crusader, a militant priest able to defend the faith with steel if\n                    necessary. As sure as \\NPC{Elminster}\'s pipe glows green, the true warriors\n                    and priests of the \\Place[Forgotten Realms]{Realms} stand revealed at last!"
+}
+title: "Warriors and Priests of the Realms"
+author {
+  name: "Terra, John"
+}
+editor {
+  name: "Schend, Steven E."
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+illustrator {
+  name: "Dollar, John"
+}
+typographer {
+  name: "Isler, Tracey L."
+}
+manager {
+  name: "Reid, Thomas M."
+  job: "project coordination"
+}
+manager {
+  name: "Wise, David"
+  job: "project coordination"
+}
+manager {
+  name: "Galica, Bob"
+  job: "graphic coordination"
+}
+manager {
+  name: "Conant, Dave"
+  job: "electronic prepress coordination"
+}
+date {
+  year: 1996
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0368"
+  check: 6
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+audience: PLAYER
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "TSR 2159"

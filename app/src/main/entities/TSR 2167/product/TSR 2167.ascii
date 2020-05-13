@@ -1,0 +1,186 @@
+template {
+  name: "TSR 2167"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  world: "Generic"
+  description: "\\large{Welcome To the AD&D CD-ROM Core Rules!}\n                    The AD&D \\Product{CD-ROM Core Rules} product is designed to increase your\n                    enjoyment of the AD&D game. It accomplishes much of the \'work\' of the game\n                    and allows you to enjoy creative play with a number of tools to assist you\n                    along the way.\n                    The product is divided into three major sections: \\emph{Player Character}\n                    aids in the creation and upkeep of player characters; \\emph{Book On Line}\n                    provides a quick, easy way to find and manipulate information about the game\n                    system; and the \\emph{DM Toolkit} offers utilities to assist in the creation\n                    of fun and interesting adventures. In addition to these three main sections,\n                    the \\emph{Village Tour} presents a short, animated AD&D adventure.\n                    \\Product{Core Rules} is based primarily on the game system as explained in\n                    the \\Product{Player\'s Handbook} and \\Product{Dungeon Master Guide}. This is\n                    supplemented by the \\Product{Monstrous Manual} tome, \\Product{Arms and\n                    Equipment Guide}, and \\Product{Tome of Magic}. Here you will find the core of\n                    the game system from which everything else derives."
+}
+title: "AD&D CD-ROM Volume I, Core Rules"
+author {
+  name: "Sehmer, James W."
+}
+author {
+  name: "Burns, Gilbert K."
+}
+author {
+  name: "Penman, Rebecca J."
+}
+author {
+  name: "Otto, Kurt B."
+}
+editor {
+  name: "Eckelberry, David"
+}
+editor {
+  name: "Rateliff, John"
+}
+editor {
+  name: "Winter, Steve"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Knowles, Cheryl"
+}
+illustrator {
+  name: "Hauksdottir, Carolly"
+}
+illustrator {
+  name: "Sturgeon, Jeff"
+}
+illustrator {
+  name: "Fennel, Jeff"
+}
+illustrator {
+  name: "Lam, Frank"
+}
+illustrator {
+  name: "Mellow, Diane"
+}
+illustrator {
+  name: "Cabrera, Armand"
+}
+illustrator {
+  name: "Werckle, Michael D."
+}
+illustrator {
+  name: "Shubat, Brian J."
+}
+illustrator {
+  name: "Turman, Eirc"
+}
+illustrator {
+  name: "McNeely, Elizabeth"
+}
+typographer {
+  name: "Mazurek, Julie"
+}
+manager {
+  name: "Scahefer, Eric J."
+  job: "test and data entry"
+}
+manager {
+  name: "Shetney, Erik S."
+  job: "test and data entry"
+}
+manager {
+  name: "Penman, Jeff"
+  job: "test and data entry"
+}
+manager {
+  name: "Houten, Phil Van"
+  job: "test and data entry"
+}
+manager {
+  name: "Penman, Joy"
+  job: "test and data entry"
+}
+manager {
+  name: "Sosa, A. J."
+  job: "test and data entry"
+}
+manager {
+  name: "Penman, Victor"
+  job: "project management"
+}
+manager {
+  name: "Connors, William C."
+  job: "development"
+}
+manager {
+  name: "Nesmith, Bruce"
+  job: "development"
+}
+manager {
+  name: "Reid, Thomas M."
+  job: "development"
+}
+manager {
+  name: "Winter, Steve"
+  job: "development"
+}
+manager {
+  name: "Wise, David"
+  job: "development"
+}
+manager {
+  name: "III, L. Richard Baker"
+  job: "research"
+}
+manager {
+  name: "Nystul, Mike"
+  job: "research"
+}
+manager {
+  name: "Winter, Steve"
+  job: "research"
+}
+manager {
+  name: "Ren, Shan"
+  job: "package design"
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0602"
+  check: 2
+}
+isbn13 {
+}
+pages: 16
+system: ADND_REVISED
+type: ELECTRONIC_ACCESSORY
+style: MEDIUM_BOX
+producer: "TSR"
+series: "CD-ROM"
+price {
+  currency: "$"
+  number: 5995
+  precision: 100
+}
+content {
+  part: CD
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "instructions"
+  number: 1073741824
+}

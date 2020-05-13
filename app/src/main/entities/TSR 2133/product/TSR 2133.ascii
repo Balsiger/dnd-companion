@@ -1,0 +1,80 @@
+template {
+  name: "TSR 2133"
+  synonym: "DMGR5"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\emph{DM:} \'OK, you\'re all sitting in the tavern when...\'\n                    \\emph{Players:} \'Oh no, not another tavern scenario! We\'re tired of those! We\n                    want something different!\'\n                    If this sounds like your latest gaming session, \\Product{Creative\n                    Campaigning} can help. This book is loaded with ideas and suggestions that\n                    will make even the most jaded players sit up and pay attention. Everything\n                    from alternate settings to variant rules to really strange adventures is\n                    included. Put your gaming back on track for outstanding heroic adventure."
+}
+title: "Creative Campaigning"
+author {
+  name: "Pryor, Tony"
+}
+author {
+  name: "Herring, Tony"
+}
+author {
+  name: "Tweet, Jonathan"
+}
+author {
+  name: "Ritchie, Norm"
+}
+illustrator {
+  name: "Frank, Ken"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Lakey, Jon"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+date {
+  year: 1993
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "561"
+  check: 5
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "5"
+series: "Dungeon Master Guide"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

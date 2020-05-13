@@ -1,0 +1,32 @@
+template {
+  name: "WTC 17762"
+  world: "Star Wars"
+  description: "Second in a series of titles that accompany each \\Place{Star Wars}\n  miniatures expansion, \\Product{Ultimate Missions: Clone Strike} provides\n  extended information and gameplay suggestions for anyone looking to maximize\n  their \\Product{Star Wars Miniatures} experience. In addition to game-related\n  content, this full-color product also contains a fold-out poster map and new\n  color terrain tiles to diversify gameplay."
+}
+title: "Ultimate Missions: Clone Strike"
+author {
+  name: "Wiker, JD"
+}
+date {
+  year: 2005
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3664"
+  check: 9
+}
+isbn13 {
+}
+pages: 96
+system: D20
+audience: ALL
+type: ACCESSORY
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2999
+  precision: 100
+}

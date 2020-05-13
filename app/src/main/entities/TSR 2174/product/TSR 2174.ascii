@@ -1,0 +1,48 @@
+template {
+  name: "TSR 2174"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Ravenloft"
+  description: "\\large{Night is Falling. The Mists are Rising. Embrace the Darkness.}\n                    \\emph{Enter the dark and macabre world of \\Place{Ravenloft}. But\n                    beware---once you begin to walk among the mists and shadows, you can never\n                    leave.}\n                    \\Product{Domains of Dread} is the core rulebook for the second edition of the\n                    award-winning \\Product{Ravenloft} campaign setting---the original fantasy\n                    horror role-playing game. Within the pages of this book, players and Dungeon\n                    Masters will discover the darkest secrets of the \\Place{Land of the Mists},\n                    including many never-before-seen features:\n                    \\list\n                    {Detailed guidelines on designing anything from short-term horror\n                    adventures to long-running campaigns of twisted terror.}\n                    {Complete rules for generating player characters native to the\n                    \\Place{Demiplane of Dread}.}\n                    {Four new character classes specifically for use in \\Product{Ravenloft}\n                    campaigns---the avenger, the anchorite, the gypsy, and the arcanist!}\n                    {An all-new player character race---the half-\\Monster{Vistani}!}\n                    {Updated and expanded descriptions of the \\Place{Demiplane} and the\n                    foul lords who rule its tortured domains!}\n                    {Revised fear, horror, and madness checks to enhance the terror.}\n                    {New rules for power checks, plus thirteen detailed steps that lead\n                    from grace to absolute corruption!}"
+}
+title: "Domains of Dread"
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0672"
+  check: 3
+}
+isbn13 {
+}
+pages: 288
+system: ADND_REVISED
+type: RULEBOOK
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 1073741824
+}

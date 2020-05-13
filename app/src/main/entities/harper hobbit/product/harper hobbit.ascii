@@ -1,0 +1,66 @@
+template {
+  name: "harper hobbit"
+  world: "Generic"
+  description: "The Hobbit is the story of \\NPC{Bilbo Baggins}, a quiet and contented \\Monster{Hobbit} whose life is turned upside down when he joins the wizard \\NPC{Gandalf} and thirteen dwarves on their quest to reclaim stolen treasure.\n\nIt is a journey fraught with danger - and in the end \\NPC{Bilbo} alone must face the guardian of this treasure, the most dreaded \\Monster{dragon} in all \\Place{Middle-earth}...\n\nJ.R.R. Tolkien\'s enchanting prelude to \\Product{The Lord of the Rings} is one of the best-loved books of all time. Carefully abridged and beautifully painted, David Wenzel\'s graphic novel has become a best-selling classic in its own right.\n\nWith more than 30 pages of new artwork and improvements by the artist, this revised edition has been newly rescanned from the original paintings to produce the most authentic version ever published, to delight \\Product{Hobbit} fans old and new."
+  short_description: "An illustrated version of the classical Hobbit story."
+}
+title: "Hobbit"
+leader: "The"
+subtitle: "Revised Edition"
+author {
+  name: "Tolkien, J.R.R."
+}
+author {
+  name: "Dixon, Charles"
+  job: "story adapdation"
+}
+author {
+  name: "Deming, Sean"
+  job: "story adapdation"
+}
+cover {
+  name: "Wenzel, David"
+}
+illustrator {
+  name: "Wenzel, David"
+}
+illustrator {
+  name: "Pearson, Bill"
+  job: "lettering"
+}
+illustrator {
+  name: "Caven, Terence"
+  job: "design"
+}
+manager {
+  name: "Mitchelmore, Anna"
+  job: "production"
+}
+date {
+  year: 2006
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "261"
+  title: "10266"
+  check: 8
+}
+pages: 138
+system: NONE
+type: ACCESSORY
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "\302\243"
+  number: 1299
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "book"
+  number: 1
+}
+layout: FULL_COLOR

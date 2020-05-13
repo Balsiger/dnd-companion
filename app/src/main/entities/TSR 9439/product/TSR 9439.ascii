@@ -1,0 +1,37 @@
+template {
+  name: "TSR 9439"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Ravenloft"
+  description: "Revenloft version of Frankenstein"
+}
+title: "Adam\'s Wrath"
+date {
+  year: 1994
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "833"
+  check: 9
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

@@ -1,0 +1,27 @@
+template {
+  name: "TSR 8892"
+  reference {
+    name: "complete product listing"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  world: "Dragonlance"
+}
+title: "Dragonlance calendar 1992"
+date {
+  year: 1991
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: CALENDAR
+price {
+}

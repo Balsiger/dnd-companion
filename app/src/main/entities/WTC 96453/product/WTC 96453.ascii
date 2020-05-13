@@ -1,0 +1,44 @@
+template {
+  name: "WTC 96453"
+  world: "Forgotten Realms"
+  description: "She wanted you.\n                    She wanted a new life.\n                    She wanted to stretch her skills.\n                    She wanted a trophy worthy of a master thief.\n                    She wanted to find the source of the treasured crimson gold.\n                    She wanted to face an undead emperor on his home ground and live to tell the\n                    tale.\n                    Careful what you wish for.\n                    \\Product{The Crimson Gold} is the third in a series that brings to life the\n                    people who survive on the fringes and in the shadows of the \\Place{Forgotten\n                    Realms} world---\\Product{The Rogues}."
+}
+title: "Crimson Gold"
+leader: "The"
+author {
+  name: "Whitney-Robinson, Voronica"
+}
+cover {
+  name: "Zug, Mark"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2003
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3120"
+  check: 5
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book three"
+series: "Rogues"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

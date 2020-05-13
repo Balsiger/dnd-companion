@@ -1,0 +1,33 @@
+template {
+  name: "TSR 21315"
+  synonym: "WTC 86513"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "For \\NPC{Goldmoon} and her followers, \\Place{Schallsea Island} is a place of\n  bright beginnings. In the shadow of the magical ruin called the \\Place{Silver\n  Stair}, a translucent spiral that leads to visions and revelations, they have\n  started construction on the \\Place{Citadel of Light}. For the first time\n  since the \\Event{Chaos War}, the future looks promising.\n\n  But two forces challenge \\NPC{Goldmoon}\'s plan to launch a new mystical order\n  on \\Place{Krynn} -- one clad in the plate mail of a \\Group{Solamnic Knight},\n  the other hidden by mysterious magic and dark shadows.\n\n  Jean Rabe\'s novel tells the compelling tale of the struggle to preserve the\n  \\Place{Silver Stair} and to prevent the dream of \\Place{Schallsea Island}\n  from becoming a nightmare."
+}
+title: "Silver Stair"
+leader: "The"
+author {
+  name: "Rabe, Jean"
+}
+date {
+  year: 1999
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 314
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+series: "Bridges of Time"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

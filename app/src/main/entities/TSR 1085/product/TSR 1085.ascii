@@ -1,0 +1,170 @@
+template {
+  name: "TSR 1085"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "It is a world where the gods have walked and fantastic armies clashed. It is\n                    the home of \\NPC{Elminster}, \\NPC{Alias}, \\NPC[King Azoun IV]{Azoun},\n                    \\NPC[Khelben \'Blackstaff\' Arunsun]{Khelben}, and \\NPC[Drizzt\n                    Do\'Urden]{Drizzt} the \\Monster[Drow]{dark elf}. It is the most popular\n                    fantasy campaign in history. Well met, traveler, and welcome to the\n                    \\Place{Forgotten Realms}.\n                    Designed for the AD&D 2nd Edition game, the new \\Product[TSR 1031]{Forgotten\n                    Realms Campaign Setting} is a major expansion and complete revision of the\n                    original, best-selling boxed set. This set contains everything that a player\n                    or Dungeon Master needs to launch into a world of adventure and imagination.\n                    \\bold{The new campaign setting contains:}\n                    \\list\n                    {\\bold{A Grand Tour of the Realms}---a 128-page book, concentrating on\n                    the \\Place{Heartlands}, the land of the \\Place{Dales},\n                    \\Place{Cormyr}, and \\Place{Waterdeep}, and chock full of useful\n                    information about other significant \\Place[Forgotten Realms]{Realms}\n                    locations on the continent of \\Place{Faer\\hat{u}n}.}\n                    {\\bold{Running the Realms}---a 64-page guide to the Forgotten Realms\n                    for the Dungeon Master, showing how to create the\n                    \\Place[Forgotten Realms]{Realms} campaign, and giving details about the\n                    secrets, NPCs, and deities of the \\Place[Forgotten Realms]{Realms}.}\n                    {\\bold{Shadowdale}---a 96-page book, presenting the most important\n                    town in the \\Place[Forgotten Realms]{Realms} as the basis of an ongoing\n                    campaign, including a \\emph{new} introductory adventure, \'Beneath\n                    the \\Place{Twisted Tower}\'.}\n                    {\\bold{8 Monstrous Compendium} pages covering the deadliest creatures\n                    of the \\Place[Forgotten Realms]{Realms}.}\n                    {\\bold{6 card sheets} showing nearly 100 sign, trail glyps, symbols,\n                    magical sigils, and religious symbols of the\n                    \\Place[Forgotten Realms]{Realms} in full color.}\n                    {\\bold{4 all-new} four-color maps, two of eastern and western\n                    \\Place{Faer\\hat{u}n}, and two smaller-scale, detailed maps of the\n                    heartlands of the \\Place[Forgotten Realms]{Realms}.}\n                    The revised \\Product[TSR 1031]{Forgotten Realms Campaign Setting} is both a\n                    perfect introduction and a concise restructuring of the earlier boxed set,\n                    not to be missed by either long-time fans or newcomers to the grandest\n                    campaign setting of all."
+}
+title: "Forgotten Realms"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Bingle, Donald J."
+}
+editor {
+  name: "Martin, Julia E."
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+cartographer {
+  name: "Felegy, Cynthia"
+}
+cartographer {
+  name: "Beck, Steve"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+cartographer {
+  name: "Murin, Dawn"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Crabtree, James"
+}
+illustrator {
+  name: "Hotz, Eric"
+}
+illustrator {
+  name: "Raab, Robin"
+}
+illustrator {
+  name: "Barr, George"
+}
+illustrator {
+  name: "Beauvais, Denis"
+}
+illustrator {
+  name: "Conrad, Tim"
+}
+illustrator {
+  name: "Uttam"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+illustrator {
+  name: "Kousek, Renee"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Holz, Paul M."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Boomgarden, Karen S."
+  job: "product group manager"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "production"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "production"
+}
+date {
+  year: 1993
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "617"
+  check: 4
+}
+isbn13 {
+}
+pages: 304
+system: ADND_2ND
+type: CAMPAIGN_SETTING
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "A Grand Tour of the Realms"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Running the Realms"
+  number: 1073741824
+}
+content {
+  part: PAGE
+  description: "monstrous compendium"
+  number: 16
+}
+content {
+  part: SHEET
+  description: "card"
+  number: 6
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 4
+}
+content {
+  part: OVERLAY
+  description: "transparent plastic measuring"
+  number: 2
+}

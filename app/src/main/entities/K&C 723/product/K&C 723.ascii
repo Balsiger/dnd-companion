@@ -1,0 +1,53 @@
+template {
+  name: "K&C 723"
+  description: "Issues Seventy-Seven through Eighty of Knights of the Dinner Tables crammed between two covers."
+  short_description: "Issues Seventy-Seven through Eighty of Knights of the Dinner Tables crammed between two covers."
+}
+title: "Bundle of Trouble: Volume Twenty-Three"
+subtitle: "Issues Seventy-Seven through Eighty of Knights of the Dinner Tables"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+}
+author {
+  name: "Johansson, Steve"
+}
+author {
+  name: "Kenzer, David S."
+}
+cover {
+  name: "Vrbanic, George"
+}
+date {
+  year: 2007
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "59459"
+  title: "074"
+  check: 5
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "K&C"
+number: "23"
+series: "Knights of the Dinner Table"
+series: "Bundle of Trouble"
+price {
+  currency: "$"
+  number: 1199
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

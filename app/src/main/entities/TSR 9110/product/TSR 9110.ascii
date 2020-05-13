@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9110"
+  synonym: "C3"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Lost Island of Castanamir"
+leader: "The"
+date {
+  year: 1984
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

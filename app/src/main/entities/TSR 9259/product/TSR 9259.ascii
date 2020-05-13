@@ -1,0 +1,20 @@
+template {
+  name: "TSR 9259"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+}
+title: "Jade Hare"
+leader: "The"
+date {
+  year: 1992
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+price {
+}

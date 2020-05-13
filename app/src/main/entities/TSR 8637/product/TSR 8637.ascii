@@ -1,0 +1,58 @@
+template {
+  name: "TSR 8637"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  world: "Forgotten Realms"
+  description: "The \\Class{paladins} sent by the \\NPC{Lord of Waterdeep} to rescue his\n                    kidnapped bride have arrived in a kingdom of the \\Place{Utter East}. The\n                    monarch seems friendly; but the kingdom is beset by menacing\n                    \\Monster{fiends}. Before the rule agrees to help the knights in their quest,\n                    there is just one small task they must perform...\n                    \\Product{Errand of Mercy} is the fourth part in a nine-book serial novel\n                    published by TSR and set in the exciting world of the \\Place{Forgotten\n                    Realms}. Be sure to look for the first three parts, \\Product{The Abduction},\n                    \\Product{The Paladins}, and \\Product{The Mercenaries}. Continue the adventure\n                    with Part 5, \\Product{An Opportunity For Profit} and the remaining four\n                    parts, 6 through 9 at your local bookstore."
+}
+title: "Errand of Mercy"
+author {
+  name: "Moore, Roger"
+}
+cover {
+  name: "LeMay, Heather"
+}
+date {
+  year: 1998
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0867"
+  check: 10
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Part 4"
+series: "Double Diamond Triangle Saga"
+price {
+  currency: "$ "
+  number: 299
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

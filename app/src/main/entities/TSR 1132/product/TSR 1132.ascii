@@ -1,0 +1,34 @@
+template {
+  name: "TSR 1132"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "None"
+  description: "Planar gods and their forces."
+}
+title: "Blood Wars Escalation Pack 3: Powers and Proxies"
+date {
+  year: 1995
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+system: BLOOD_WARS
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 250
+  precision: 100
+}
+content {
+  part: CARD
+  description: "random"
+  number: 15
+}

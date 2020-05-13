@@ -1,0 +1,43 @@
+template {
+  name: "TSR 3121"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Birthright"
+  description: "new territory, with the lands and culture of Viking-like people"
+}
+title: "Rjurik Highlands"
+leader: "The"
+author {
+  name: "Pryor, Anthony"
+}
+date {
+  year: 1996
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0395"
+  check: 3
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

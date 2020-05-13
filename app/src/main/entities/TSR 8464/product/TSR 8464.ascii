@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8464"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Challenge of Druid\'s Grove"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+system: ONE_ON_ONE
+audience: ALL
+type: NOVEL
+number: "Book Four"
+price {
+}

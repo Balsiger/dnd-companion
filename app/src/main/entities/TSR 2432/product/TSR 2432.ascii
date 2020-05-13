@@ -1,0 +1,33 @@
+template {
+  name: "TSR 2432"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dark Sun"
+  description: "epic underground adventure"
+}
+title: "City by the Silt Sea"
+date {
+  year: 1994
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}

@@ -1,0 +1,140 @@
+template {
+  name: "GMG 4371"
+  world: "Generic"
+  description: "\\large{Systems-neutral Tools for Every Game Master}\n\n\\Product[GMG 4371]{GM Gems: A Tome of Game Master Inspiration} is filled with a wealth of information and ideas to empower every aspect of your game. Never run boring, vanilla games and never be caught flat-footed!\n\n\\large{Inspiration and Perspiration}\n\nThis 64-page collection of tricks and tips is systems-neutral, so you can play it with any role playing game you choose. GM Gems is written by veteran Game Masters and some of today\'s best known RPG designes, and includes:\n\n\\list\n{Alchemical Mishaps}\n{Empty Room Worth Describing}\n{Extraordinary Campsites}\n{Familiar Creatures with Unfamiliar Faces}\n{Short Encounters for Short Attention Spans}\n{Unique Taverns and Inns}\n{Unusual Holidays}\n\nAnd much, much more!"
+  short_description: "A Collection of Game Master Inspiration"
+}
+title: "GM Gems"
+subtitle: "A Collection of Game Master Inspiration"
+author {
+  name: "Agresta, Lou"
+}
+author {
+  name: "Barton, Rone"
+}
+author {
+  name: "Brown, Russell"
+}
+author {
+  name: "Conklin, B. Matthew III"
+}
+author {
+  name: "Courts, Elizabeth"
+}
+author {
+  name: "Daigle, Adam"
+}
+author {
+  name: "Doyon, Ashavan"
+}
+author {
+  name: "Ganz, Tom"
+}
+author {
+  name: "Greer, Stephen S."
+}
+author {
+  name: "Hall, David"
+}
+author {
+  name: "Happ, Stefan"
+}
+author {
+  name: "Healy, Ed"
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "Larwood, Phillip"
+}
+author {
+  name: "Ling Jr., John E."
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "Manning, Rob"
+}
+author {
+  name: "Oppedisano, Greg"
+}
+author {
+  name: "Ragland, Greg"
+}
+author {
+  name: "Shackleton, Craig"
+}
+author {
+  name: "Smith, Patrick"
+}
+editor {
+  name: "Rudel, Aeryn \'Blackdirge\'"
+}
+cover {
+  name: "O&#39Conner, William"
+}
+illustrator {
+  name: "McAusland, William"
+}
+illustrator {
+  name: "Pinto, Jim"
+  job: "art director"
+}
+illustrator {
+  name: "Pinto, Jim"
+  job: "art coordinationgraphic designer"
+}
+manager {
+  name: "Greer, Stephen S."
+  job: "project manager"
+}
+manager {
+  name: "Agresta, Lou"
+  job: "project developer"
+}
+manager {
+  name: "Barton, Rone"
+  job: "project developer"
+}
+manager {
+  name: "Conklin III, B. Matthew"
+  job: "project developer"
+}
+manager {
+  name: "Doyon, Ashavan"
+  job: "project developer"
+}
+date {
+  year: 2007
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "9801291"
+  title: "1"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "9801291"
+  title: "1"
+  check: 3
+}
+pages: 64
+system: NONE
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "Goodman Games"
+price {
+  currency: "$"
+  number: 1599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,50 @@
+template {
+  name: "TSR 8551"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{The King is dead, long live the king.}\n                    Meet \\NPC{Pinch}, a man of many titles: scoundrel, thief, criminal\n                    extraordinaire...heir to the throne?\n                    \\NPC{Manferic II}, \\NPC{Pinch}\'s guardian and the formerl rule of\n                    \\Place{Ankhapur}, has died without a direct heir. By ancient law, the crown\n                    will pass to the relative \'chosen by the cup\', a family relic, in a ceremony\n                    whereby the rightful heir is selected and pretenders and other rejected\n                    candidates meet their deaths.\n                    \\Place{Pinch}\'s outlaw days have prepared him for life on the mean\n                    streets...but is he ready for the dangers that lurk in courtly hallways,\n                    among royal relatives and dagger-bearing shadows?"
+}
+title: "King Pinch"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+cover {
+  name: "Velez, Walter"
+}
+illustrator {
+  name: "Murin, Dwan"
+}
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0127"
+  check: 6
+}
+isbn13 {
+}
+pages: 316
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book One"
+series: "Nobles"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

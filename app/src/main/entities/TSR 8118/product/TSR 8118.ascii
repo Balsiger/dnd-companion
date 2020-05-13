@@ -1,0 +1,23 @@
+template {
+  name: "TSR 8118"
+  reference {
+    name: "net price list"
+  }
+  world: "None"
+  description: "comic strip collection"
+}
+title: "Snarf Quest: The Book"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: NOVEL
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

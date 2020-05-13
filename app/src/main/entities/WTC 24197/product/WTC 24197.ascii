@@ -1,0 +1,52 @@
+template {
+  name: "WTC 24197"
+  synonym: ""
+  world: "Forgotten Realms"
+  description: "\\NPC{Kaanyr Vhok} backed up a step as the \\Monster{demons} closed in. \'I have been to the \\Monster{angel}\'s plane,\' he said. \'I have spied on them. They are fools, and I know where they are weakest.\'\n                    Having escaped from his gilded cage in \\Place{Heaven} into the claws of \\Monster{demons}, the \\Monster{half-demon} ruler of the \\Group{Scoured Legion} is finally in position to exact revenge on his angelic captors.\n                    \\NPC{Aliisza} hissed. \'There are a hundred ways she can circumvent your desires while sticking to any sort of agreement she makes. Hells, she could agree to anything you want today and change her mind two days later. She\'s a \\Monster{demon}. She can\'t be trusted."
+  short_description: "Final book in the Empyrean Odyseey series."
+}
+title: "Crystal Mountain"
+leader: "The"
+subtitle: "The Empyrean Odyssey"
+author {
+  name: "Reid, Thomas M."
+}
+cover {
+  name: "Nentrup, Jeff"
+}
+cartographer {
+}
+date {
+  year: 2009
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5235"
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5235"
+  check: 9
+}
+pages: 305
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "The Empyrean Odyssey"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

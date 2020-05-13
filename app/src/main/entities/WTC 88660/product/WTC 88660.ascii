@@ -1,0 +1,58 @@
+template {
+  name: "WTC 88660"
+  world: "Forgotten Realms"
+  description: "\\Product{The Ogre\'s Pact} is the first novel in a trilogy that deals with\n                    the \\Monster{giants} of the \\Place{Forgotten Realms}\n                    setting. \\Monster{Giants} are little written about, and this trilogy, written\n                    by New York Times best-selling author Troy Denning, was the first to detail\n                    them. This edition features new cover art."
+}
+title: "Ogre\'s Pact"
+leader: "The"
+author {
+  name: "Denning, Troy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3731"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "Twilight Giants"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

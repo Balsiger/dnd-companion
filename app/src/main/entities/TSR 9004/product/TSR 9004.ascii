@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9004"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Dungeon Geomorphs, Set One (Basic Dungeon)"
+date {
+  year: 1976
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 300
+  precision: 100
+}

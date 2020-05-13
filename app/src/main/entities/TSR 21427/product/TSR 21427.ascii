@@ -1,0 +1,48 @@
+template {
+  name: "TSR 21427"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Forgotten Realms"
+  description: "From a dark and dusty tomb, \\NPC{Elminster} emerges, seeking the guidance of\n                    \\God{Mystra}, and finds only silence. He is drawn into the clutches of the\n                    mysterious and sinister \\NPC{Lady of Shadows}. The path he takes will lead to\n                    a \\Place{Realms}-shaking confrontation where \\NPC{Elminster} has to make the\n                    most important choice of his long life.\n                    Whatever he decides, the \\Place{Realms} will be forever changed..."
+}
+title: "Temptation of Elminster"
+leader: "The"
+subtitle: "How do you tempt an archmage who has everything?"
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+date {
+  year: 1999
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 410
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "3"
+series: "Elminster Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

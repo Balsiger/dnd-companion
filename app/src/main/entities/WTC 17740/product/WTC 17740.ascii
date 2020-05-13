@@ -1,0 +1,105 @@
+template {
+  name: "WTC 17740"
+  world: "Generic"
+  description: "Dash down the gaslit streets of Victorian horror or ride the dusty trails of\n  the \\Place{Wild West}. Board the tall ships of the Spanish Main or raid the\n  trenches of the Great War. In \\Product{d20 Past}, heroes can find excitement\n  in any historical era from the \\Event{Renaissance} to \\Event{World War\n  II}. Whether period-specific or pulp-flavored, the possibilities for\n  adventure in the world of yesteryear are endless.\n\n  To use this product, you also need the \\Product{d20 Modern Roleplaying Game}\n  core rulebook. For players and Gamemasters, this product is compatible with\n  other d20 System roleplaying games.\n\n  This new rules supplement provides everything players and gamemasters need to\n  participate in adventures in the time period between the \\Event{Renaissance}\n  and \\Event{World War II}, including new character options and rules for early\n  modern \\Item{firearms}. It begins with an exploration of the historical\n  period between 1450 and 1950, then provides rules for creating characters and\n  campaigns that blend realism and fantasy. \\Product{d20 Past} also presents\n  alternative campaign models, along with all the rules needed to play\n  swashbuckling pirate adventures, Victorian horror investigations, thrilling\n  Pulp Era escapades, and more, including three ready-to-play campaign\n  modules."
+}
+title: "d20 Past"
+subtitle: "Rally Heroes and Rewrite History"
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+}
+author {
+  name: "Noonan, David"
+  job: "additional designer"
+}
+editor {
+  name: "Ryan, Tammie Webb"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Johnson, Dave"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Ksismik, Grafi"
+}
+illustrator {
+  name: "Maheh, Warren"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Jason"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Joshua"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3656"
+  check: 8
+}
+isbn13 {
+}
+pages: 96
+system: D20_MODERN
+audience: ALL
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

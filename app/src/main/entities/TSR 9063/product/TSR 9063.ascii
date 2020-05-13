@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9063"
+  synonym: "N1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Against the Cult of the Reptile God"
+date {
+  year: 1982
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 550
+  precision: 100
+}

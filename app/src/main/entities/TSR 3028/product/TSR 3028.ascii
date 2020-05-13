@@ -1,0 +1,31 @@
+template {
+  name: "TSR 3028"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "S.P.I."
+  description: "go through the wartorn cities and rural areas of Europe"
+}
+title: "Europe Aflame"
+date {
+  year: 1993
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "742"
+  check: 4
+}
+isbn13 {
+}
+system: WORLD_WAR_II
+audience: ALL
+type: BOARD_GAME
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}

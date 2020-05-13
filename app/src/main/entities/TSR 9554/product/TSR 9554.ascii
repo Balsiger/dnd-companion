@@ -1,0 +1,51 @@
+template {
+  name: "TSR 9554"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Dragonlance"
+  description: "explores the center of the new faith, the Citadel of Light"
+}
+title: "Citadel of Light"
+author {
+  name: "Miller, Steve"
+}
+date {
+  year: 1998
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0748"
+  check: 7
+}
+isbn13 {
+}
+pages: 192
+system: SAGA
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 2195
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 1073741824
+}

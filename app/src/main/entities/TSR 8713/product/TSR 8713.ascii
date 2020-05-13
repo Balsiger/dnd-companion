@@ -1,0 +1,22 @@
+template {
+  name: "TSR 8713"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Witch\'s Spell Book"
+leader: "The"
+date {
+  year: 1985
+}
+isbn {
+}
+isbn13 {
+}
+audience: ALL
+type: NOVEL
+number: "3"
+series: "Cartoon Show"
+price {
+}

@@ -1,0 +1,196 @@
+template {
+  name: "Dragon 341"
+  world: "Generic"
+  description: "Issue 341 of the magazine. "
+}
+title: "Dragon 341"
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Diaz, Oliver"
+}
+author {
+  name: "Fehlauer, Mike"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Hanson, Matthew J."
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Ling Jr., John E."
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "McArtor, Mike"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Pentney, Campbell"
+}
+author {
+  name: "Polojac, John"
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Sutter, James"
+}
+author {
+  name: "Turley, Kieran"
+}
+author {
+  name: "Wissel, Christopher"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "associate editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Adorjany, Attila"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Choi, Jay"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Du Lac, Chad"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Hogg, Jeremy"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Jansson, Niklas"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Teak, Jung Hong"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Subkavich, Jim"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Pozca, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXX 10"
+number: "341"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

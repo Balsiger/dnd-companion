@@ -1,0 +1,111 @@
+template {
+  name: "Dungeon 66"
+  world: "Generic"
+  description: "This is issue 66 of the dungeon magazine."
+}
+title: "Dungeon 66"
+author {
+  name: "Ertman, Kent"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Doyle, Chris"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Corvello, Brian"
+}
+author {
+  name: "Spahn, Peter C."
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Daniele, Stephen A."
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Scott, Michael"
+}
+illustrator {
+  name: "Vallese, Valerie"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Morales, Rags"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "publisher"
+}
+manager {
+  name: "Mangelson, Roger"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising traffic manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Whiting, Sharon"
+  job: "subscriptions"
+}
+date {
+  year: 1997
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XI 6"
+number: "66"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

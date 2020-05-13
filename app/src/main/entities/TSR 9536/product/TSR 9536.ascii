@@ -1,0 +1,48 @@
+template {
+  name: "TSR 9536"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  world: "Generic"
+  description: "Deep below the surface lies an ancient \\Monster{beholder} city called\n                    \\Place{Ilth K\'hinax}. In times past, hundreds of \\Monster{beholders} called\n                    it home---until simmering rivalries within their society exploded into\n                    warfare. The few survivors fled, leaving the city deserted for hundreds of\n                    years. However, the story of \\Place{Ilth K\'hinax}\'s glory was passed down\n                    from one generation of \\Monster{beholders} to the next. Now, after countless\n                    years of self-imposed exile, the \\Monster{beholders} are back!\n                    After securing the city, the \\Monster{hive mother} of \\Place{Ilth K\'hinax}\n                    implemented a plan to wipe out all the beings living above it. Unfortunately\n                    for the \\Monster{beholders}, several facets of the \\Monster{hive mother}\'s\n                    plan have been revealed through the exploits of a party of adventurers. Now,\n                    this group of heroes must meet eye to eye with \\Place{Ilth K\'hinax}\'s newest\n                    occupants in an effort to stop the \\Monster{hive mother}\'s pernicious plan!\n                    \\Product{Eye to Eye} is the last of three adventures featuring the\n                    nightmarish \\Monster{beholder}. It can be played as an individual mission or\n                    as part of the series that began with \\Product{Eye of Pain} and continued in\n                    \\Product{Eye of Doom}.\n                    For four to six characters of levels 8--12"
+}
+title: "Eye to Eye"
+date {
+  year: 1997
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0450"
+  check: 10
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Monstrous Arcana"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

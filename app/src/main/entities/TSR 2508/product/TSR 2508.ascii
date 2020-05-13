@@ -1,0 +1,63 @@
+template {
+  name: "TSR 2508"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  reference {
+    name: "Dragon 228"
+  }
+  world: "Mystara"
+  description: "Dragonlord Chronicles, book three"
+}
+title: "Dragonmage of Mystara"
+author {
+  name: "Thorarinn Gunnarsson"
+}
+date {
+  year: 1996
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0488"
+  check: 7
+}
+isbn13 {
+}
+pages: 400
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Three"
+series: "Dragonlord Chronicles"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: CARD
+  description: "playing"
+  number: 54
+}
+content {
+  part: MISC
+  description: "player handouts"
+  number: 24
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

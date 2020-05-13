@@ -1,0 +1,40 @@
+template {
+  name: "TSR 8381"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  world: "Dragonlance"
+  description: "a handful of humans refuse to surrender"
+}
+title: "Day of the Tempest"
+leader: "The"
+author {
+  name: "Jean Rabe"
+}
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0668"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

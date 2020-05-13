@@ -1,0 +1,40 @@
+template {
+  name: "TSR 21437"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "articles dealing with education, arms and armor, politics, food etc."
+}
+title: "Bertrem\'s Guide to the Age of Mortals: Everyday Life in Krynn of the Fifth Age"
+author {
+  name: "Nancy Varian Berberick"
+}
+author {
+  name: "Stan! Brown"
+}
+author {
+  name: "Paul B. Thompson"
+}
+date {
+  year: 2000
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1437"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

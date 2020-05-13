@@ -1,0 +1,57 @@
+template {
+  name: "TSR 8309P"
+  synonym: "TSR 8309"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "\\NPC{Raistlin} casts the magical spell that has cost him so much. For him, the \\Place{Portal} opens...\n\nBut at the same instant, his twin brother, \\PNC{Caramon}, operates the magical time-traveling device. The fields of magic shift and collide. \\NPC{Caramon} and the \\Monster{kender} \\NPC{Tasslehoff} are flung into an unexpected time and place where they make a horrifying discovery.\n\nAnd \\NPC{Raistlin} enters the \\Place{Abyss}, prepared to face his most deadly challenge -- \\God{Takhisis}, Queen of Darkness."
+  short_description: "The last book in the Legends series."
+}
+title: "Test of the Twins"
+subtitle: "The New York Times Best-Selling Series"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+date {
+  year: 1986
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0264"
+  check: 7
+}
+isbn13 {
+}
+pages: 343
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Volume Three"
+series: "Legends Trilogy"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

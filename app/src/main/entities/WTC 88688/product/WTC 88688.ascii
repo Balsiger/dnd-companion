@@ -1,0 +1,53 @@
+template {
+  name: "WTC 88688"
+  world: "Greyhawk"
+  description: "\\Product{Keep on the Borderlands} was one of the very first D&D adventures,\n  so seasoned gamers remember this product from their early days, and newer\n  gamers will recognize it from the 25th anniversary rerelease.\n\n  \\Place{Greyhawk} novels are based on the classic D&D modules from this world\n  and provide readers with the same kind of feeling that they get playing\n  classic D&D modules."
+}
+title: "Keep on the Borderlands"
+author {
+  name: "Emerson, Ru"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Greyhawk Classics"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

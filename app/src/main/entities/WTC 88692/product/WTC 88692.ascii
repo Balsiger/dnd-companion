@@ -1,0 +1,30 @@
+template {
+  name: "WTC 88692"
+  world: "None"
+  description: "This book will appeal to new readers, as well as die-hard fans. The perfect\n                    entry point for new readers, this book focuses on a fierce competition for\n                    one of the most powerful artifacts ever to exist in the Magic: The Gathering\n                    game and novels. Major changes are occurring in the Magic universe-changes\n                    that devoted fans will be eager to find out about."
+}
+title: "Odyssey"
+author {
+  name: "Moore, Vance"
+}
+date {
+  year: 2001
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book I"
+series: "Odyssey Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

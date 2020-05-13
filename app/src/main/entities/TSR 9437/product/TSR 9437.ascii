@@ -1,0 +1,57 @@
+template {
+  name: "TSR 9437"
+  synonym: "DMR1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  world: "Generic"
+  description: "dungeon master screen and adventure"
+}
+title: "Dungeon Master Screen / Escape From Thunder Rift"
+author {
+  name: "Woodruff, Teuwynn"
+}
+date {
+  year: 1993
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "565"
+  check: 8
+}
+isbn13 {
+}
+pages: 32
+system: DND_1ST
+type: ACCESSORY
+style: SCREEN
+producer: "TSR"
+series: "Screen"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: SCREEN
+  description: "8 panel"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "adventure module"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "4 panel slipcover"
+  number: 1073741824
+}

@@ -1,0 +1,33 @@
+template {
+  name: "TSR 21367"
+  reference {
+    name: "net"
+  }
+  world: "Star*Drive"
+  description: "a bounty hunter and cybernetic killer in a deadly struggle for power"
+}
+title: "Zero Point"
+author {
+  name: "Richard Baker"
+}
+date {
+  year: 1999
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1367"
+  check: 3
+}
+isbn13 {
+}
+system: ALTERNITY
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

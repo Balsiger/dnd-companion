@@ -1,0 +1,86 @@
+template {
+  name: "TSR 8574"
+  synonym: "WTC 86598"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  world: "Forgotten Realms"
+  description: "\\Place{Candlekeep} boasts one of the finest libraries of the \\Place{Realms},\n                    where the privileged fed may conduct their research. But what about its\n                    secret collections? Volumes and scrolls long forgotten or hidden from the\n                    inquiring eyes of browsers. Volumes dealing with matters that can only be\n                    described as \\emph{arcane}.\n                    New tales of \\Place{Toril} past and present, by favorite \\Place{Realms}\n                    authors, including\n                    \\center{Ed Greenwood\n                    Elaine Cunningham\n                    Jeff Grubb\n                    Mark Anthony\n                    and others}"
+}
+title: "Realms of the Arcane"
+author {
+  name: "Nicholson, Wes"
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Dupree, Tom"
+}
+author {
+  name: "King, J. Robert"
+}
+author {
+  name: "Anthony, Mark"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Athans, Philip"
+}
+author {
+  name: "Thomson, Brian M."
+}
+author {
+  name: "Grubb, Jeff"
+}
+editor {
+  name: "Thomson, Brian M."
+}
+cover {
+  name: "Gallego, Blas"
+}
+date {
+  year: 1997
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0647"
+  check: 2
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

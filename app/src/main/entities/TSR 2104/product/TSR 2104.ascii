@@ -1,0 +1,98 @@
+template {
+  name: "TSR 2104"
+  synonym: "MC3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "More monsters escape from the \\Place[Forgotten Realms]{Realms} and into your\n                    AD&D 2nd Edition game! Sixty-four pages chock full of new monsters for use in\n                    your own campaigns and with the \\Place{Forgotten Realms} Campaign\n                    Setting. From the gnomish \\Monster[Svirfneblin]{svirfneblin} to the deadly\n                    \\Monster{Dracolich}; from the \\Monster[Wemic]{wemic} to the\n                    \\Monster[Revenant]{revenant}; they\'re all here!  Battle the\n                    \\Monster[Beholder-Kin]{beholder-kin} of the \\Place{North}, the\n                    \\Monster[Dinosaur]{dinosaurs} of the \\Place{Jungles of Chult}, and the\n                    \\Monster[Oriental Dragon]{oriental dragons} of \\Place{Kara-Tur}. All these\n                    creatures and more are organized in 64 5-hole punched pages that will make a\n                    handy appendix to your Volume One Monstrous Compendium binder. Add them in\n                    and turn them loose on your players."
+}
+title: "Monstrous Compendium, Forgotten Realms Appendix"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Winter, Steve"
+}
+author {
+  name: "Pickens, Jon"
+}
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Martin, David E."
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Thomas, Gary L."
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Beck, Steve"
+  job: "keylining"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "769"
+  check: 6
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: SHEETS
+producer: "TSR"
+number: "Volume III Forgotten Realms Appendix"
+series: "Monstrous Compendium"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: SHEET
+  number: 32
+}
+content {
+  part: PAGE
+  description: "binder"
+  number: 4
+}

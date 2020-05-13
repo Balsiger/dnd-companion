@@ -1,0 +1,61 @@
+template {
+  name: "TSR 8414"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "Her name is \\NPC{Alias}, and she is in big trouble.\n                    She is a sell-sword, a warrior-for-hire, and an adventuress. She awoke with a\n                    series of twisting, magical blue sigils inscribed on her arms and no memory\n                    of where she got them.\n                    Determined to learn the nature of the mysterious tattoo, \\NPC{Alias} joins\n                    forces with an unlikely group of companions: the \\Monster{halfling} bard,\n                    \\NPC{Ruskettle}, the southern mage, \\NPC{Akabar}, and the oddly silent\n                    lizard-man, \\NPC{Dragonbait}. With their help, she discovers that the symbols\n                    hold the key to her very existence.\n                    But those responsible for the sigils aren\'t keen on \\NPC{Alia}\'s continued\n                    good health. And if the five evil masters find her first, she may discover\n                    all too soon their hideous secret.\n                    \\Product{Azure Bonds} is based on the \\Product{Forgotten Realms} setting,\n                    TSR\'s mots extensive fantasy campaign."
+}
+title: "Azure Bonds"
+author {
+  name: "Novak, Kate"
+}
+author {
+  name: "Grubb, Jeff"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+date {
+  year: 1988
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "612"
+  check: 6
+}
+isbn13 {
+}
+pages: 380
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book One"
+series: "Finder\'s Stone Trilogy"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

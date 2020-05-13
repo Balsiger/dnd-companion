@@ -1,0 +1,30 @@
+template {
+  name: "TSR 9306"
+  synonym: "GAZ14"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  world: "Hollow World"
+  description: "people similar to Amerindians, ways to reach the Hollow World"
+}
+title: "Atruaghin Clans"
+leader: "The"
+date {
+  year: 1991
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+type: CAMPAIGN_EXPANSION
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

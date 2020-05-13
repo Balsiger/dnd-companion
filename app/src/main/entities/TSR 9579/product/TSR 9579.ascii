@@ -1,0 +1,37 @@
+template {
+  name: "TSR 9579"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Greyhawk"
+  description: "an epic in the ongoing saga known as Lost Tombs"
+}
+title: "Star Cairns"
+leader: "The"
+author {
+  name: "Moore, Roger"
+}
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1250"
+  check: 2
+}
+isbn13 {
+}
+pages: 48
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

@@ -1,0 +1,44 @@
+template {
+  name: "WTC 9546474"
+  world: "Forgotten Realms"
+  description: "\\bold{\\NPC{Medusanna}}\n                    A priestess of terrifying power convinces the\n                    \\bold{\\Group{Se\'sehen}}\n                    A \\Monster{yuan-ti} tribe from the distant jungles of \\Place{Chult} to serve\n                    her growing cult of\n                    \\bold{\\God{Sseth}}\n                    The merciless god of the serpent people who languishes in the foul plane of\n                    \\bold{\\Place{Smaragh}}\n                    Where a trapped and desperate \\NPC{Karell} can only hope \\NPC{Arvin} will\n                    find her before the\n                    \\bold{\\Group{House of Serpents}}\n                    Finally destroys their last hope for freedom."
+}
+title: "Vanity\'s Brood"
+author {
+  name: "Smedman, Lisa"
+}
+cover {
+  name: "Swanland, Raymond"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2006
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3982"
+  check: 6
+}
+isbn13 {
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "House of Serpents"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

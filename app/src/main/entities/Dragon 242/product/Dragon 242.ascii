@@ -1,0 +1,175 @@
+template {
+  name: "Dragon 242"
+  world: "Generic"
+}
+title: "Dragon 242"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Zuvich, Ted"
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Lambert, Michael"
+}
+author {
+  name: "MacQuarrie, Lachlan"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Watters, Pierce"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Abbey, Lynn"
+}
+author {
+  name: "Schmidt, Bruce"
+}
+author {
+  name: "Brown, Lloyd III"
+}
+author {
+  name: "Richards, Jonathan M."
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "publisher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Geraci, Jeff"
+}
+illustrator {
+  name: "Rosema, Scott"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "McDevitt, Brad"
+}
+illustrator {
+  name: "Schwartz, Steve"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Van Camp, Susan"
+}
+illustrator {
+  name: "Adams, Chris"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Vrbanic, George"
+}
+illustrator {
+  name: "Bryant, Steve"
+}
+illustrator {
+  name: "Zawitaz, David"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Steamy"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Dolan, Harry"
+}
+illustrator {
+  name: "Lindstrom, Steve"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+manager {
+  name: "Mangelson, Roger"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+manager {
+  name: "Whiting, Sharon"
+  job: "subscriptions manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 1997
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXII 5"
+number: "242"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,59 @@
+template {
+  name: "TSR 1141"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  reference {
+    name: "Dragon 228"
+  }
+  world: "Ravenloft"
+  description: "\\large{The Death of \\NPC{Rudolph van Richten}}\n                    \\bold{Old soldiers never die...}\n                    For more than three decades, \\NPC{Dr. Rudolph van Richten} stood against the\n                    forces of darkness, and hunted their servants in the far corners of the\n                    \\Place{land of Mists}. Now he had thought his long battle over, had thought\n                    he could spend his declining years in quiet enjoyment with old friends.\n                    \\bold{But for some, a tragic end is inevitable.}\n                    Dark forces have been gathering in the \\Place{Mists}. Their objective is to\n                    see \\Place{Ravenloft}\'s foremost expert on the supernatural destroyed,\n                    shattered in spirit as well as in body. From the crumbling edifice of\n                    \\NPC{Van Richten}\'s childhood home, an enemy long though vanquished spins a\n                    web of powerful evils and lost souls, drawing \\NPC{Van Richten} to his\n                    doom. And then a group of heroes gets trapped in the web as well...\n                    \\bold{Witness the final stand of \\NPC{Rudolph van Richten!}}\n                    Inside this box is a grand-scale \\Product{Ravenloft} adventure that pushes\n                    heroes to the brink of madness, and draws them into the terrifying scheme to\n                    annihilate \\NPC{Rudolph van Richten}.\n                    The set contains:\n                    \\list\n                    {\\bold{Sea of Madness}, a 96-page book detailing the island of\n                    \\Place{Dominia} and relating the events that start the cycle of doom.}\n                    {\\bold{Homecoming}, a 64-page book describing the \\NPC{Van Richten}\n                    family estate and the large haunted mansion known as \\Place{Bleak\n                    House}. Suitable for use with the \\Product{Bleak House} campaign or\n                    the \\Product{Masque of the Red Death} setting, this adventure is\n                    designed so that it can be played several times, and no two\n                    experiences will be the same.}\n                    {\\bold{Heroes, Monsters, and Settings}, a 32-page book containing game\n                    statistics for some of \\Place{Ravenloft}\'s best known, yet never\n                    detailed, villains; a new type of \\Monster{vampire}; information on\n                    \\Place{Martira Bay} in \\Place{Darkon}; and maps intended for use with\n                    the \\Product{Bleak House} campaign.}\n                    {\\bold{A color map} revealing the layout and secrets of \\Place{Bleak\n                    House} itself.}"
+}
+title: "Bleak House"
+date {
+  year: 1996
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0386"
+  check: 4
+}
+isbn13 {
+}
+pages: 190
+system: ADND_REVISED
+type: ADVENTURE
+style: BOX
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Sea of Madness"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Homecoming"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Heroes, Monsters, and Settings"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 2
+}

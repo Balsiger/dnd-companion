@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5018"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Five-Headed Hydra (bendable)"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

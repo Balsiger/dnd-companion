@@ -1,0 +1,119 @@
+template {
+  name: "TSR 2123"
+  synonym: "DMGR3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "At one time or another, every Dungeon Master faces questions like, \'What\'s\n                    the difference between \\Item{banded mail} and \\Item{splint mail}?\' and \'What\n                    do all these pole arms look like?\' The DM and players alike will be thrilled\n                    to find answers to these and other equipment questions all in this book, the\n                    \\Product{Arms and Equipment Guide}. Lavishly illustrated, this book provides\n                    valuable descriptions and diagrams for a variety of armors, weapons, and\n                    barding, as well as important items of clothing and equipment. This is the\n                    essential volume for the well-equipped character!"
+}
+title: "Arms and Equipment Guide"
+author {
+  name: "Boucher, Grant"
+}
+author {
+  name: "Christensen, Troy"
+}
+author {
+  name: "Pickens, Jon"
+}
+author {
+  name: "Terra, John"
+}
+author {
+  name: "Davis, Scott"
+}
+editor {
+  name: "Brown, Anne K."
+}
+editor {
+  name: "Pickens, Jon"
+}
+illustrator {
+  name: "Horne, Daniel"
+}
+illustrator {
+  name: "Olson, Erik"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+illustrator {
+  name: "Weaver, Michael"
+}
+illustrator {
+  name: "Freas, Kelly"
+}
+illustrator {
+  name: "Freas, Laura"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+illustrator {
+  name: "Sullivan, Stephen"
+}
+illustrator {
+  name: "Frank, Ken"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Feggestad, Sarah"
+}
+date {
+  year: 1991
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "109"
+  check: 1
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "3"
+series: "Dungeon Master Guide"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

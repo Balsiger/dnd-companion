@@ -1,0 +1,36 @@
+template {
+  name: "TSR 2166"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "Welcome to Year Three! Drawn from our best adventures of 1995---not to\n                    mention the award winning \\Product{Dragon}, \\Product{Dungeon}, and\n                    \\Product{Polyhedron} Magazines---this annual also marks the return of many\n                    old classics and introduces some nifty new creatures.\n                    More than 100 denizens of land, sky, sea, and \\Place{Outer Planes} are ready\n                    to sneak, storm, or wheedle their way out of these pages and into the nearest\n                    adventure. These creatures, many of them from the \\Place{Forgotten Realms},\n                    \\Place{Birthright}, \\Place{Ravenloft}, \\Place{Dark Sun}, \\Place{Al-Qadim},\n                    and \\Place{Greyhawk} settings, are looking for new worlds to conquer.\n                    This collection features a full, combined index to the \\Product{Monstrous\n                    Manual} Tome and all three annuals."
+}
+title: "Monstrous Compendium Annual, Volume Three"
+date {
+  year: 1996
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: RULEBOOK
+style: SOFT_COVER
+producer: "TSR"
+number: "Annual Volume Three"
+series: "Monster Manual"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

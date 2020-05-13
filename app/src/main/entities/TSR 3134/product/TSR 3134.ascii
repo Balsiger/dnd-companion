@@ -1,0 +1,55 @@
+template {
+  name: "TSR 3134"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  world: "Birthright"
+  description: "all the rules needed for naval combat"
+}
+title: "Naval Battle System: The Seas of Cerilla"
+author {
+  name: "Baker, Richard L. III"
+}
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0628"
+  check: 6
+}
+isbn13 {
+}
+pages: 16
+system: ADND_REVISED
+type: RULES_SUPPLEMENT
+style: BOX
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "war"
+  number: 51
+}
+content {
+  part: COUNTER
+  number: 200
+}

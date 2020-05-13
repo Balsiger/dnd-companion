@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9172"
+  synonym: "DA1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Adventures in Blackmoor"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

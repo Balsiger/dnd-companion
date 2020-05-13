@@ -1,0 +1,57 @@
+template {
+  name: "WTC 88557"
+  world: "Forgotten Realms"
+  description: "This slip-covered gift set contains the first three books published by\n                    R.A. Salvatore: \\Product{The Crystal Shard}, \\Product{Streams of Silver}, and\n                    \\Product{The Halfling\'s Gem}. These titles introduced the author\'s signature\n                    character, \\NPC{Drizzt Do\'Urden}, hero of Salvatore\'s many New York Times\n                    bestselling titles. These three classic novels are gathered together here in\n                    a handy and attractive slipcase."
+}
+title: "Icewind Dale Trilogy Gift Set"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 1008
+system: NONE
+audience: ALL
+type: NOVEL
+style: BOX
+series: "Icewind Dale"
+price {
+  currency: "$ "
+  number: 2399
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 3
+}

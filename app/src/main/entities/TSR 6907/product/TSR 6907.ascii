@@ -1,0 +1,25 @@
+template {
+  name: "TSR 6907"
+  synonym: "MHR2"
+  reference {
+    name: "catalog92"
+  }
+  world: "Generic"
+  description: "information, stats, solo adventure, map and fold-ups"
+}
+title: "Webs: The Spider-Man Dossier"
+date {
+  year: 1992
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: MARVEL_SUPER_HEROES
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

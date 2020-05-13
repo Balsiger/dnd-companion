@@ -1,0 +1,54 @@
+template {
+  name: "WTC 2164672"
+  world: "Forgotten Realms"
+  description: "\\Product{The Annotated Elminster} collects the first three of Ed Greenwood\342\200\232\303\204\303\264s classic \\NPC{Elminster} novels: \\Product{Elminster: The Making of a Mage}, \\Product{Elminster in Myth Drannor}, and \\Product{The Temptation of Elminster}. Extensive annotations by the author will provide fascinating insight into not only the books themselves but the process of creation that made the\\Place{ Forgotten Realms} world this generation\'s greatest fantasy setting.\n                    "
+}
+title: "Annotated Elminster"
+leader: "The"
+subtitle: "Collector\'s Edition"
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Cavotta, Matthew &#39Matt&#39"
+}
+cover {
+  name: "Murin, Dawn"
+  job: "design"
+}
+cartographer {
+  name: "Gamble, Todd Alan"
+}
+date {
+  year: 2007
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4799"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4799"
+  check: 7
+}
+pages: 872
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+series: "Elminster Series"
+price {
+  currency: "$"
+  number: 2795
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

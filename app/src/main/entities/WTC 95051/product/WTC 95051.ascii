@@ -1,0 +1,251 @@
+template {
+  name: "WTC 95051"
+  world: "Generic"
+  description: "New rules and new figures make an all-new Starter Set.\n                    The rulebooks, components, and configuration of this latest Starter Set have\n                    all been modified to introduce those unfamiliar with D&D or miniatures gaming\n                    to basic skirmish concepts in an easy yet fun manner. Key changes include a\n                    new \'Start Here\' rulebook that takes a step-by-step approach to terms,\n                    battle tactics, and other game elements. This rulebook also features the two\n                    fixed miniatures that are now found in every Starter Set, allowing every\n                    purchaser the same learning experience right out of the box. Two full-color,\n                    double-sided maps supply vital play surfaces and also make a great visual\n                    impact.\n                    In addition to new components, the overall game rules have been updated to\n                    facilitate faster gameplay and encourage larger battles. Rules have been\n                    adjusted to accommodate any size figure, from tiny to huge and even beyond,\n                    and will be compatible with any D&D Miniatures Game release. Per previous\n                    releases, the figures in the set are selected from key D&D roleplaying games\n                    titles such as Monster Manual, Monster Manual III, Miniatures Handbook, and\n                    the Eberron and Forgotten Realms campaign settings. The set also includes an\n                    elite group of figures that come with a second, epic-level stat card,\n                    allowing players to assemble higher-value armies with which to do battle."
+}
+title: "D&D Miniatures Game Starter Set"
+subtitle: "The Greatest Battles of Fantasy Start Here!"
+author {
+  name: "Heinsoo, Rob"
+  job: "game design"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "game development lead"
+}
+author {
+  name: "Decker, Jesse"
+  job: "game development"
+}
+author {
+  name: "Johnson, Mons"
+  job: "game development"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "game development"
+}
+author {
+  name: "Heinsoo, Rob"
+  job: "rulebooks"
+}
+author {
+  name: "Slavicsek, Rob"
+  job: "rulebooks"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+}
+cover {
+}
+cartographer {
+  name: "Engle, Jason"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Horsley, Ralph"
+  job: "package art"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+  job: "model concepting"
+}
+illustrator {
+  name: "Dorman, Dave"
+  job: "model concepting"
+}
+illustrator {
+  name: "Dubisch, Michael"
+  job: "model concepting"
+}
+illustrator {
+  name: "Ellis, Steve"
+  job: "model concepting"
+}
+illustrator {
+  name: "Frank, Carl"
+  job: "model concepting"
+}
+illustrator {
+  name: "Giorello, Tomas"
+  job: "model concepting"
+}
+illustrator {
+  name: "Horsley, Ralph"
+  job: "model concepting"
+}
+illustrator {
+  name: "Huey, Ken"
+  job: "model concepting"
+}
+illustrator {
+  name: "McClain, Dennis Crabapple"
+  job: "model concepting"
+}
+illustrator {
+  name: "Nelson, Jim"
+  job: "model concepting"
+}
+illustrator {
+  name: "Prescott, Steve"
+  job: "model concepting"
+}
+illustrator {
+  name: "Rams, Vinod"
+  job: "model concepting"
+}
+illustrator {
+  name: "Roller, Scott"
+  job: "movel concepting"
+}
+illustrator {
+  name: "Sergesketter, Chad"
+  job: "model concepting"
+}
+illustrator {
+  name: "Spencer, Ron"
+  job: "model concepting"
+}
+illustrator {
+  name: "Stokes, Anne"
+  job: "model concepting"
+}
+illustrator {
+  name: "Forward-Rollins, Eve"
+  job: "model painting"
+}
+illustrator {
+  name: "S., Dylan"
+  job: "model painting"
+}
+illustrator {
+  name: "Beasely, Blake"
+  job: "art direction sculptures"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art direction print"
+}
+illustrator {
+  name: "Lathrop, Jennifer"
+  job: "graphic design"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic design"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "graphic design"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "D&D senior art director"
+}
+manager {
+  name: "Fullerton, Guy"
+  job: "special assistance"
+}
+manager {
+  name: "Derry, Mike"
+  job: "special assistance"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Allen, Mary Elizabeth"
+  job: "brand manager"
+}
+manager {
+  name: "Delong, Chas"
+  job: "production"
+}
+manager {
+  name: "Yu, Kenneth"
+  job: "project engineer"
+}
+date {
+  year: 2006
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3886"
+  check: 2
+}
+isbn13 {
+}
+pages: 54
+system: DND_3_5
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+series: "D&D Miniatures"
+price {
+  currency: "$ "
+  number: 1299
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "painted plastic"
+  number: 12
+}
+content {
+  part: CARD
+  description: "full color statistic"
+  number: 12
+}
+content {
+  part: BOOKLET
+  description: "advanced rules"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Quick Start Battle"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "Template"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "full color poster"
+  number: 2
+}
+content {
+  part: SHEET
+  description: "20 counters"
+  number: 1073741824
+}
+content {
+  part: DICE
+  description: "d20"
+  number: 1073741824
+}
+layout: MIXED

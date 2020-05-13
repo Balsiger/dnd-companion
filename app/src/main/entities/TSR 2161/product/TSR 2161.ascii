@@ -1,0 +1,93 @@
+template {
+  name: "TSR 2161"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "Dragon 224"
+  }
+  world: "Generic"
+  description: "A lot of magical items from \\Item{Theories on Converging Transitions\n                    (Spellbook)} to \\Item{Zweiback of Zymurgy}"
+}
+title: "Encyclopedia Magica, Volume IV"
+author {
+  name: "Henson, Dale \'Slade\'"
+}
+editor {
+  name: "Stewart, Doug"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "Ruppel, Robh"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Winter, Steve"
+  job: "project coordination"
+}
+manager {
+  name: "Daniele, Stephen A."
+  job: "graphic coordination"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Conant, Dave"
+  job: "prepress coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0289"
+  check: 2
+}
+isbn13 {
+}
+pages: 416
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+number: "Volume IV"
+series: "Encyclopedia Magica"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

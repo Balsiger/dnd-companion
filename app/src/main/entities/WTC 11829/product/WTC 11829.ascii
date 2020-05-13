@@ -1,0 +1,102 @@
+template {
+  name: "WTC 11829"
+  synonym: "WTC 88061"
+  world: "Generic"
+  description: "\\bold{Combat Isn\'t Everything---It\'s the Only Thing.}\n                    The masters of armed and unarmed combat, fighters and monks, come into their\n                    own in this book. It\'s packed with ways to customize fighter and monk\n                    characters, including:\n                    \\list\n                    {New feats, prestige classes, weapons, and equipment.}\n                    {Information about special organizations such as the Red Avengers and\n                    the Knight Protectors.}\n                    {Maps of locations that fighters and monks frequent: guard towers,\n                    monasteries, and a gladiatorial arena.}\n                    Indispensable to both players and Dungeon Masters, this book adds excitement\n                    to any campaign."
+}
+title: "Sword and Fist"
+subtitle: "A Guidebook to Monks and Fighters"
+author {
+  name: "Carl, Jason"
+}
+editor {
+  name: "Donovan, Dale A."
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+typographer {
+  name: "Dorries, Erin"
+}
+manager {
+  name: "Collins, Andy"
+}
+manager {
+  name: "Cook, Monte J."
+}
+manager {
+  name: "Cordell, Bruce R."
+}
+manager {
+  name: "Donovan, Dale A."
+}
+manager {
+  name: "Eckelberry, David"
+}
+manager {
+  name: "Noonan, David"
+}
+manager {
+  name: "Tweet, Jonathan"
+}
+manager {
+  name: "Wyatt, James"
+}
+manager {
+  name: "Stark, Ed"
+}
+manager {
+  name: "Murin, Dawn"
+}
+manager {
+  name: "Glenn, Sean"
+}
+manager {
+  name: "Floyd, Sherry"
+}
+manager {
+  name: "Weiner, Larry"
+}
+manager {
+  name: "Fisher, Josh"
+}
+manager {
+  name: "DeLong, Chas"
+}
+manager {
+  name: "Lewis, Brian"
+}
+date {
+  year: 2001
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1829"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: DND_3RD
+audience: ALL
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Class Guidebook"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

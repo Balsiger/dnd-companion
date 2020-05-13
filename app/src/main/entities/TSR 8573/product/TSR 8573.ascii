@@ -1,0 +1,61 @@
+template {
+  name: "TSR 8573"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  world: "Forgotten Realms"
+  description: "The \\Place{Netherese} Empire will collapse in five generations.\n                    A forgotten foe, armed with a hell-spawned source of destructive magic,\n                    returns to seek her revenge, and a lost love is found in a most unexpected\n                    place.\n                    Against a backdrop of war and chaos, the barbarian \\NPC{Sunbright} struggles\n                    to carve out a niche for himself---and his people---in a rapidly changing\n                    world."
+}
+title: "Mortal Consequences"
+subtitle: "Endgame..."
+author {
+  name: "Emery, Clayton"
+}
+cover {
+  name: "Pollack, Alan"
+}
+date {
+  year: 1998
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0683"
+  check: 9
+}
+isbn13 {
+}
+pages: 303
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book Three"
+series: "Netheril Trilogy"
+series: "Arcane Age"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

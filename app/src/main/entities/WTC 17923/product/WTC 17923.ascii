@@ -1,0 +1,33 @@
+template {
+  name: "WTC 17923"
+  world: "Generic"
+  description: "Since 2004 is the 30th anniversary of the Dungeons & Dragons game, Wizards\n                    of the Coast, Inc. is commemorating this milestone with a beautiful, special\n                    edition of the \\Product{Player\'s Handbook}. Created with the collector in\n                    mind, this special release now sports an embossed, leatherbound cover and\n                    premium, gilt-edged paper, along with beautifully designed endpapers. The\n                    text contains errata, so you can use your Special Edition Player\'s Handbook\n                    at the game table as well as display it as a wonderful showpiece."
+}
+title: "Special Edition Player\'s Handbook"
+subtitle: "A deluxe, leatherbound version of the essential tool every D&D player needs."
+date {
+  year: 2004
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3432"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: DND_3RD
+audience: PLAYER
+type: RULEBOOK
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 7500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

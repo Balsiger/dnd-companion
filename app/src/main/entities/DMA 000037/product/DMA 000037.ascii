@@ -1,0 +1,19 @@
+template {
+  name: "DMA 000037"
+  synonym: "ST1"
+  reference {
+    name: "net price list"
+  }
+  description: "Unknown."
+}
+title: "Up the Garden Path"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

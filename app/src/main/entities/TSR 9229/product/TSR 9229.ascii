@@ -1,0 +1,63 @@
+template {
+  name: "TSR 9229"
+  synonym: "FR4"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "From \\Place{Waterdeep} and the \\Place{Sword Coast} to the jungles of\n                    \\Place{Chult} and the faraway lands of \\Place{Thay}, strange and powerful\n                    magics fill the \\Place{Forgotten Realms}. Ancient tomes, powerful spells,\n                    fearsome weapons---all these and more await adventurers who can overcome\n                    terrible dangers to wield great power.\n                    Ed Greenwood, originator of the \\Place{Forgotten Realms} game world, and\n                    famous game designer Steve Perrin have spent many long days with\n                    \\NPC[Elminster]{Elminster of Shadowdale}, perhaps the finest sage in the long\n                    history of \\Place{Abeir-Toril}. The result of all this work is in your\n                    hands.; \\Product[TSR 9229]{The Magister} is a compilation of new spells and\n                    items for your \\Place{Forgotten Realms} campaign.\n                    Some of the new magics described in \\Product[TSR 9229]{The Magister} were\n                    first published in numerous \'\\NPC{Elminster}\' articles in \\Product{Dragon}\n                    magazine. The best of these, along with many new fabulous spells and items,\n                    appear in this volume."
+}
+title: "Magister"
+leader: "The"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Perrin, Steve"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Janke, Kim N."
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+date {
+  year: 1988
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "564"
+  check: 2
+}
+isbn13 {
+}
+pages: 64
+system: ADND_1ST
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

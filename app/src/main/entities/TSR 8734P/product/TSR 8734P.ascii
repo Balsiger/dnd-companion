@@ -1,0 +1,31 @@
+template {
+  name: "TSR 8734P"
+  reference {
+    name: "net"
+  }
+  world: "None"
+}
+title: "Brother\'s War"
+leader: "The"
+author {
+  name: "Jeff Grubb"
+}
+date {
+  year: 1999
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 1"
+series: "Artifacts Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,34 @@
+template {
+  name: "TSR 8448"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "the complete atlas for Krynn"
+}
+title: "Atlas of the Dragonlance World"
+leader: "The"
+date {
+  year: 1987
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "448"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_1ST
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1595
+  precision: 100
+}

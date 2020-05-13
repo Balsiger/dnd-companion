@@ -1,0 +1,77 @@
+template {
+  name: "TSR 9326"
+  synonym: "FOR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "They are the favorite foes of many a party of adventurers. In these pages,\n                    the \\Monster[Drow]{drow} come to life, their culture and powers detailed\n                    fully for the first time. This guide presents new rules galore: new spells,\n                    new magical items, insight into the mysterious of \\God[Lloth]{Lolth},\n                    \\Product[Monster Compendium]{Monstrous Compendium} entries for related\n                    monsters of the \\Place{Underdark}---and much, much more.\n                    Learn all about the \\Monster[Drow]{drow} herein, from the words of the\n                    ancient \\Monster[Elf]{elven} sage \\NPC{Erlathan Greycloak}:\n                    \'Proud, graceful evil. Cruelty personified; talent wasted, beauty lost in\n                    darkness.\'\n                    to the lore of the great sage \\NPC{Elminster}:\n                    \'Did I ever tell thee how close I cam to having a \\Monster[Drow]{drow} wife?\n                    No?  Well, then..."
+}
+title: "Drow of the Underdark"
+leader: "The"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Ewell, Newton H."
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Bradstreet, Timothy"
+}
+illustrator {
+  name: "Harris, Rick"
+}
+typographer {
+  name: "Graphics, Ries"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "keylining"
+}
+date {
+  year: 1991
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "132"
+  check: 6
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

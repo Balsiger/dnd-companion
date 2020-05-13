@@ -1,0 +1,38 @@
+template {
+  name: "TSR 9294"
+  synonym: "DLA3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+}
+title: "Dragon\'s Rest"
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "869"
+  check: 2
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+number: "Module Three"
+series: "Taladas Trilogy"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

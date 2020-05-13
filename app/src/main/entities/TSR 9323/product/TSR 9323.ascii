@@ -1,0 +1,71 @@
+template {
+  name: "TSR 9323"
+  synonym: "HR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\emph{Lay on, soldiers of \\Place{France}! This day we win or die!}\n                    \\NPC{Charlemagne}---conqueror, statesman, lawmaker, the greatest medieval\n                    king of \\Place{Europe}. His reign lasted forty-four years, but his influence\n                    was felt for a thousand. From the chaos of the dark ages he forged a kingdom\n                    that rivaled \\Place{Roman Byzantium} in its power and prestige. Join the\n                    noblest heroes of the age---mighty \\NPC{Roland}, \\NPC{Bradaman} the warrior\n                    maiden, archbishop \\NPC{Turpin}, and \\NPC{Malagigi} the wizard---on royal\n                    quests and wars against the \\Group{Lombards}, \\Group{Moors}, \\Group{Saxons},\n                    and \\Group{Vikings}. Find adventure at the dawn of chivalry!"
+}
+title: "Charlemange\'s Paladins"
+author {
+  name: "Rolston, Ken"
+}
+editor {
+  name: "Breault, Mike"
+}
+editor {
+  name: "Watry, Dori \'the Barbarian\'"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+date {
+  year: 1992
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: SOURCEBOOK
+style: SOFT_COVER
+producer: "TSR"
+number: "2"
+series: "Historical Reference"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}

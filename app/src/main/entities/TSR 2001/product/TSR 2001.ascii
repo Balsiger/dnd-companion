@@ -1,0 +1,31 @@
+template {
+  name: "TSR 2001"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+  description: "Rule for Fantastic Medieval Role Playing Adventure Game Campaigns.\n                    Playable with Paper and Pencil and Miniature Figures"
+}
+title: "Dungeons & Dragons Basic Rulebook"
+date {
+  year: 1978
+}
+isbn {
+}
+isbn13 {
+}
+pages: 48
+system: DND_1ST
+audience: ALL
+type: RULEBOOK
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

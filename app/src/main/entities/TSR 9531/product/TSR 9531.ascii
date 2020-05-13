@@ -1,0 +1,84 @@
+template {
+  name: "TSR 9531"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  world: "Forgotten Realms"
+  description: "The kingdom of \\Place{Cormyr} is a land of law and order, a country\n                    populated by citizens who live good lives and treat their neighbors well. If\n                    you think these characteristics make \\Place{Cormyr} an unexciting and\n                    uninviting place...think again.\n                    Despite the ever-present \\Group[Purple Dragons]{Purple Dragon} soldiers and\n                    \\Group{War Wizards} who are charged with keeping the kingdom safe from\n                    treachery and gree, \\Place{Cormyr} is a place where evil lurks in countless\n                    nooks and crannies, where opportunities for heroic adventurers to do good for\n                    themselves and for all of \\Place{Cormyr} are as abundant as the dents on a\n                    \\Monster[Dwarf]{dwarf}\'s helmet.\n                    \\Product[TSR 9531]{Four from Cormyr} is a quartet of adventures that can be\n                    player individually or as a series. By the time they have experienced all\n                    that lies within this 128-page book, ranging from a grand soiree at the home\n                    of a noble to a chilling expedition into the \\Place{Vast Swamp}, player\n                    characters will know more about this challenging land than they ever thought\n                    they would need to know---and even if they succeed in countering all the\n                    threats they will face, they\'ll find that the conclusion to each adventure\n                    opens a new vista of possibilities for continuing danger and intrigue.\n                    Suitable for six to eight characters of levels 9--12."
+}
+title: "Four from Cormyr"
+author {
+  name: "Terra, John"
+}
+editor {
+  name: "Mohan, Kim"
+}
+cover {
+  name: "Cabral, Ciruelo"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+typographer {
+  name: "Isler, Tracey L."
+}
+manager {
+  name: "Reid, Thomas M."
+  job: "project coordination"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Danowski, Don"
+  job: "graphic design"
+}
+manager {
+  name: "Conant, Dave"
+  job: "electronic prepress coordination"
+}
+date {
+  year: 1997
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0646"
+  check: 4
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ADVENTURE
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

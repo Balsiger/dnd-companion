@@ -1,0 +1,28 @@
+template {
+  name: "TSR 1062"
+  reference {
+    name: "complete product listing"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  world: "Generic"
+  description: "Collector Cards."
+}
+title: "AD&D collector cards, Set 1"
+date {
+  year: 1991
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 100
+  precision: 100
+}

@@ -1,0 +1,23 @@
+template {
+  name: "TSR 2007B"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Swords & Spells (black and white)"
+date {
+  year: 1976
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

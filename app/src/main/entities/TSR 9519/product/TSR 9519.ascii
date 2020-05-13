@@ -1,0 +1,72 @@
+template {
+  name: "TSR 9519"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Forgotten Realms"
+  description: "\'Far be it from me to impugn the mettle of adventurers such as yourself, but\n                    daring the depths of \\Place{Undermountain} merely for fortune\'s sake is more\n                    absurd than kicking a sleeping \\Monster[Dragon]{dragon} in the nose for\n                    sport. Even so, you\'ve returned for another trip to the\n                    \\Place[Undermountain]{Underhalls}, so be prepared. You stand to enter the\n                    \\Place{Lost Level} this time---gird yourselves for diplomacy as well as\n                    destruction. You\'ll find the last stronghold of an extinct\n                    \\Monster[Dwarf]{dwarven} clan---do be good enough to extend the greetings of\n                    the \\NPC[Khelben \'Blackstaff\' Arunsun]{Blackstaff} to \\NPC{Bandaerl}. There\'s\n                    also a dark \\Monster[Vampire]{vampiress} who enjoys a good hunt, and be sure\n                    to mind the \\Monster[Beholder]{beholders}---they\'re trained to keep you from\n                    escaping. Enjoy, and don\'t say \\NPC[Khelben \'Blackstaff\' Arunsun]{Khelben}\n                    didn\'t warn thee.\n                    This \\Product[TSR 9519]{Dungeon Crawl} adventure includes 32 pages of combat\n                    and role-playing hearkening back to classic AD&D dungeon of old. This is a\n                    stand-alone module and does not require additional support materials. It can\n                    easily be inserted into a campaign on any world, but best fits an\n                    \\Place{Undermountain} or \\Place{Waterdeep} campaign within the\n                    \\Place[Forgotten Realms]{Realms}."
+}
+title: "Undermountain Trilogy I: The Lost Level"
+author {
+  name: "Schend, Steven E."
+}
+editor {
+  name: "Olmesdahl, Bill"
+}
+cover {
+  name: "Pollack, Alan"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Geier, Earl"
+}
+typographer {
+  name: "Isler, Tracey L."
+}
+manager {
+  name: "Galica, Robert J."
+  job: "art coordination"
+}
+date {
+  year: 1996
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0399"
+  check: 6
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Dungeon Crawl"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

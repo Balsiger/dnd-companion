@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9052"
+  synonym: "I3"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Pharaoh"
+date {
+  year: 1982
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

@@ -1,0 +1,58 @@
+template {
+  name: "WTC 9593674"
+  world: "Eberron"
+  description: "The three nights of the year when the dark powers of the world gain strength and rise to prey upon the unwary.\n\nWhen one of \\Place{Sharn}\'s most famed Inquisitives is hired to investigate a brutal murder at \\Place{Morgrave Univeristy}, his brilliance may be his damnation, as he uncovers a trail of blood leading from the seediest neighborhoods of the \\Place{City of Towers} to the highest reaches of power."
+}
+title: "Night of the Long Shadows"
+subtitle: "Nights of the Long Shadows"
+author {
+  name: "Crilley, Paul"
+}
+editor {
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4270"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4270"
+  check: 1
+}
+pages: 306
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book II"
+series: "The Inquisitives"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

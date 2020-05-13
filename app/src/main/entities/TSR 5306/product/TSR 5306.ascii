@@ -1,0 +1,18 @@
+template {
+  name: "TSR 5306"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "D&D Basic Figure Set"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

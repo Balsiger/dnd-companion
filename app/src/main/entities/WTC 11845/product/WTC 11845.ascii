@@ -1,0 +1,36 @@
+template {
+  name: "WTC 11845"
+  synonym: "WTC 88238"
+  world: "Generic"
+  description: "\\bold{A Guidebook to Wizards and Sorcerers}\n                    \\large{A Spell Is Better than a Thousand Words}\n                    Every mystic library reserves a place for this single potent volume of arcane\n                    lore. It\'s packed with ways to customize sorcerer and wizard characters,\n                    including:\n                    \\list\n                    {New feats, spells, and magic items.}\n                    {New prestige classes, including the \\Class{dragon disciple},\n                    \\Class{fatespinner}, \\Class{pale apprentice}.}\n                    {Information about special organizations such as the \\Group{Broken\n                    Wands} and the \\Group{Arcane Order}}\n                    {Maps of a mages\' guildhall and a home that a sorcerer and a wizard\n                    share.}\n                    \\Product{Tome and Blood} is indispensable to players and Dungeon Masters who\n                    want to add a new dimension to sorcerers and wizards.\n                    To use this accessory, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}. A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Tome and Blood"
+subtitle: "A Guidebook to Wizards and Sorcerers"
+date {
+  year: 2001
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1845"
+  check: 4
+}
+isbn13 {
+}
+pages: 96
+system: DND_3RD
+audience: ALL
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Class Guidebook"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

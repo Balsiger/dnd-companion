@@ -1,0 +1,44 @@
+template {
+  name: "TSR 9586"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Generic"
+  description: "\\emph{Eternally does the \\NPC{Lord of Nessus} scheme, and his designs are\n                    for all eternity; In the pit of \\Place{Hell} do the \\Monster{devils} teem\n                    round his throne, and his reign is unchallenged; By the eight \\Group{Dark\n                    Ones} is he held supreme, and his name (speak it not!) is \\NPC{Asmodeus}.}\n                    \\right{from \'The Canticle of Thumis\', 142:15}\n                    To some, justice is more important than glory, duty is more important than\n                    desire, and goodness is more important than life. The great paladin\n                    \\NPC{Klysandral} was such a man.\n                    But even the sleep of death, at the end of a long lifetime spent battling\n                    evil, did not bring peace to \\NPC{Klysandral}. During his funeral, the entire\n                    \\Place{Temple of Neheod} was dragged by terrible magic into the \\Place{Nine\n                    Hells}, along with the soul of \\NPC{Klysandral} and scores of living\n                    mourners!\n                    What unearthly motive could be behind this tragedy? Only the bravest,\n                    strongest, and most resolute heroes will have the mettle to find the\n                    answer. Along the way, they will meet the enigmatic wizard \\NPC{Emirikol the\n                    Chaotic}, sail aboard the fiendish ship \\Item{Demonwing}, and finally face\n                    the horrific minions and overwhelming terrors of \\Place{Hell} itself.\n                    Only the path of light can lead the bravest of the brave into perdition and\n                    safely out again. Step wisely, and walk in justice.\n                    \\bold{For four to six characters of levels 15--20}"
+}
+title: "Paladin in Hell"
+leader: "A"
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1210"
+  check: 3
+}
+isbn13 {
+}
+pages: 64
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

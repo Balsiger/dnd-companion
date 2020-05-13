@@ -1,0 +1,61 @@
+template {
+  name: "TSR 1505"
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Generic"
+  description: "introduction of magical items to Dragon Dice"
+}
+title: "Dragon Dice Expansion Set: Magestorm !"
+author {
+  name: "Lester Smith"
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0468"
+  check: 2
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: DICE
+  description: "randomly assorted"
+  number: 8
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "reference"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "dice bag"
+  number: 1073741824
+}

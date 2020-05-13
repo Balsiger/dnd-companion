@@ -1,0 +1,45 @@
+template {
+  name: "WTC 88189"
+  synonym: "WTC 21873"
+  world: "Dragonlance"
+  description: "On the ancient plains of \\Place{Krynn} arise new perils.\n\n  The village of \\Place{Yala-tene} is flourishing. Twelve years of peace and\n  plenty have allowed the little settlement to grow into a thriving town. But\n  its peace is threatened---from within by an ambitious priest of the\n  \\Group{dragon cult}, and from without by a savage horde of \\Class{warriors},\n  bent on conquest. Against this array of evil, \\NPC{Chief Amero} and the\n  \\Monster{bronze dragon} \\NPC{Duranix} strive to hold the fragile threads of\n  civilization together.\n\n  Best-selling writing team Thompson and Cook return to the world of\n  \\Place{Dragonlance} in the second book of the epic \\Product{Barbarians}\n  trilogy."
+}
+title: "Brother of the Dragon"
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Cook, Tonya Carter"
+}
+cover {
+  name: "Wolfe, Corey"
+}
+date {
+  year: 2001
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1873"
+  check: 10
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Two"
+series: "The Barbarians"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,39 @@
+template {
+  name: "TSR 3570"
+  synonym: "25CREF1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "record sheets for players and NPCs"
+}
+title: "Character Record Sheets"
+date {
+  year: 1991
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "057"
+  check: 5
+}
+isbn13 {
+}
+pages: 48
+system: XXVC
+audience: ALL
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9073"
+  synonym: "EX2"
+  reference {
+    name: "net price list"
+  }
+  world: "Greyhawk"
+}
+title: "Land Beyond the Magic Mirror"
+leader: "The"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}

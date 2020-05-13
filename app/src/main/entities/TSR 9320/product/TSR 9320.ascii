@@ -1,0 +1,81 @@
+template {
+  name: "TSR 9320"
+  synonym: "FR13"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\Place[Anauroch]{The Great Desert}. \\Place[Anauroch]{Where The Winds\n                    Wail}. \\Place[Anauroch]{Grave of The Lost Princes}. \\Place[Anauroch]{The\n                    Great Sand Sea}. Not a place many sane folk in the \\Place{Forgotten Realms}\n                    want to visit. But there are plenty of the other sort, who come hence to find\n                    wonders both beautiful and dangerous.\n                    The deadly, shifting sands of \\Place{Anauroch} hide---and occasionally,\n                    tantializingly reveal---the riches and strange treasures of \\Place{The Lost\n                    Kingdoms}, swallowed long ago. The legendary wealth of \\Place{The Cities of\n                    Gold} lies somewhere in its sandy depths.\n                    So, too, do worse things: fell monsters, famous in adventurers\' tales (and\n                    listeners\' nightmares) across the \\Place[Forgotten Realms]{Realms}. Evil,\n                    crawling magic whose counterspells have been long forgotten, whose death\n                    slumbers lightly, ever-ready to awaken and strike down the unwary intruder.\n                    In the pages of this sourcebook, \\Place{Anauroch} comes to life. Its dark,\n                    innermost secrets are revealed, and the colorful cultures of the\n                    \\Group{Bedine}---and beings for worse---are explored. This guide to the most\n                    important \'forgotten\' land of the \\Place{Forgotten Realms} presents new rules\n                    galore: new spells, new adventures, new monsters---and much, much more."
+}
+title: "Anauroch"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Grubb, Jeff"
+  job: "spell development"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "production"
+}
+date {
+  year: 1991
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "126"
+  check: 1
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

@@ -1,0 +1,35 @@
+template {
+  name: "TSR 21324"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "Torn asunder by the nightmares of a mad king, the \\Monster[elf]{elven} realm\n  of \\Place{Silvanesti} has nearly been restored to its former grandeur. But\n  the \\Monster{elf} \\NPC{Porthios}, returning to his homeland, launches a\n  rebellion against young \\NPC{Gilthas}, his own nephew.\n\n  \\NPC{Gilthas}\'s troubles are multiplied by threats from \\Monster{green\n  dragons} and from the \\Group{Knights of Takhisis}. Now, with \\NPC{Porthios}\n  at his throat, \\NPC{Gilthas} must choose between blood and honor.\n\n  Douglas Niles\' \\Place{Dragonlance} novel is filled with treachery and\n  intrigue among the \\Monster[elf]{elves} during the \\Event{Chaos War}, the\n  backdrop for The New York Times best-selling novel \\Product{Dragons of Summer\n  Flame}."
+}
+title: "Puppet King"
+leader: "The"
+subtitle: "Treason within, war from without."
+author {
+  name: "Niles, Douglas"
+}
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1324"
+  check: 10
+}
+isbn13 {
+}
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book 3"
+series: "The Chaos War"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

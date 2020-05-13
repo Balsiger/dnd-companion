@@ -1,0 +1,74 @@
+template {
+  name: "TSR 9330"
+  synonym: "HHQ1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  world: "Generic"
+  description: "Decades ago, \\Place{Sturnheim} was a thriving trade town on a major caravan\n                    route. But then, disaster struck when a gold-laden caravan disappeared\n                    without a trace. Financially ruined, the town slipped into decline, and now\n                    lies almost forgotten on a route that is seldom traveled anymore.\n                    \\Product{Fighter\'s Challenge} is a new type of Advanced Dungeons & Dragons\n                    adventure. It is designed especially for a Dungeon Master and one\n                    player---perfect for very small playing groups, for those times when the\n                    whole group can\'t get together, or for the player who wants his character to\n                    earn some extra experience. This adventure will provide hours of excitement\n                    for the DM and any \\Class{warrior} or multi-class \\Class{fighter} characters\n                    of levels 2 to 4.\n                    You can unravel a 40-year-old mystery and restore the honor of\n                    \\Place{Sturnheim}---if you have the guts!"
+}
+title: "Fighter\'s Challenge"
+author {
+  name: "Terra, John"
+}
+editor {
+  name: "Leeper, Jacqueline"
+}
+editor {
+  name: "Winter, Steve"
+}
+cover {
+  name: "Lakey, John"
+}
+cover {
+  name: "Lakey, Laura"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "357"
+  check: 4
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "One on One Adventure"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "color cover"
+  number: 1073741824
+}

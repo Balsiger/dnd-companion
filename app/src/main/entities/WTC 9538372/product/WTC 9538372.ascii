@@ -1,0 +1,177 @@
+template {
+  name: "WTC 9538372"
+  world: "Generic"
+  description: "Throughout history, \\Monster{dragons} have displayed many grand and\n                    mysterious powers. Now, the secrets of these ancient talents are revealed at\n                    last! Learn to harness the magic, the vigor, the grandeur, and the pure\n                    destructive fire of dragonkind, and achieve a level of power undreamt\n                    of... until now.\n                    This D&D supplement presents an unprecedented variety of new options for your\n                    character, including new prestige classes, feats, spells, psionic powers,\n                    invocations, soulmelds, magic items, companion spirits, and alternative class\n                    features, each one drawing on some element of draconic might. It presents a\n                    new standard class, the \\Class{dragonfire adept}, who combines a potent\n                    breath weapon with various magical invocations. It reveals many new ways to\n                    wield the magic of \\Monster{dragons}, including draconic auras, dragonpacts,\n                    and draconic racial variants. For the DM, this book also provides\n                    dragon-themed adventure seeds and campaign ideas, magical locations to\n                    explore, and new options for making \\Monster{dragons} more powerful and\n                    exciting."
+}
+title: "Dragon Magic"
+subtitle: "Wield the Legendary Power of Dragons"
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "additional design"
+}
+author {
+  name: "Campbell, Christopher"
+  job: "additional design"
+}
+author {
+  name: "Marks, Greg"
+  job: "additional design"
+}
+author {
+  name: "Marmell, Ari"
+  job: "additional design"
+}
+author {
+  name: "Noonan, David"
+  job: "additional design"
+}
+author {
+  name: "Sernett, Matthew"
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+editor {
+  name: "Vallese, Ray"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Polak, Eric"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Gist, E.M."
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Wahlstrom, David"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3936"
+  check: 2
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

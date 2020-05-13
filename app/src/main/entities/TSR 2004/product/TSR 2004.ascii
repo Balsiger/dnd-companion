@@ -1,0 +1,23 @@
+template {
+  name: "TSR 2004"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Blackmoor"
+date {
+  year: 1975
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 500
+  precision: 100
+}

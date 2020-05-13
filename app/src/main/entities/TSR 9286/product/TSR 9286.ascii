@@ -1,0 +1,75 @@
+template {
+  name: "TSR 9286"
+  synonym: "SJA2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "Different worlds have different laws. But everywhere you go, you\'re going to\n  find people who bend and break those laws and turn a healthy profit doing\n  it. Whether sailing the high seas or the \\Place{Flow}, they are called\n  pirates.\n\n  It\'s these pirates that you\'ve been hired to hunt. With letters of marque in\n  your mapcase, your job is to track down and capture, alive or dead, some of\n  the most dangerous characters in the known (and unknown) spheres.\n\n  Of course, not everyone in space is a pirate. You\'ll also meet \\NPC{Torgan\n  Betz} (a man famous for bending the laws, rarely breaking them),\n  \\NPC{Tiktitik}, the \\Monster{Thri-kree} crusader, \\NPC{\'Thought Taker\'} the\n  \\Monster{illithid}, and feared \\Monster{Drow} commander \\NPC{Teela\n  Darkcloud}. Even so, they all have their personal agendas, and it\'s often\n  hard to tell enemies from friends.\n\n  \\Product{Skulls & Crossbows} is an anthology of adventures for the\n  \\Product{Spelljammer} campaign setting. This 64-page anthology easily follows\n  \\Product{Wildspace}, but can be used in any existing AD&D \\Place{Spelljammer}\n  campaign.\n\n  This adventure is designed for a party of four to six characters, levels 6 to\n  10."
+}
+title: "Skull & Crossbows"
+author {
+  name: "Findley, Nigel D."
+}
+editor {
+  name: "Schend, Steven"
+}
+editor {
+  name: "Brown, Anne K."
+}
+cover {
+  name: "Brom"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Abrams, Paul"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "graphic design"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "845"
+  check: 5
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

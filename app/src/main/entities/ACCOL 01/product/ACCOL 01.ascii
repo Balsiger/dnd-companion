@@ -1,0 +1,53 @@
+template {
+  name: "ACCOL 01"
+  world: "Confrontation"
+  description: "3 miniature pillars."
+}
+title: "S\\umlaut{a}ulen des Schweigens"
+author {
+}
+author {
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2000
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "Rackham"
+series: "Confrontation"
+price {
+}
+content {
+  part: MINIATURE
+  number: 3
+}

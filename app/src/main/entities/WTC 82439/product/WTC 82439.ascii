@@ -1,0 +1,266 @@
+template {
+  name: "WTC 82439"
+  category: "adventure"
+  category: "Adventure"
+  world: "Generic"
+  description: "The \\Place{Underdark} is a subterranean wonderland, a vast and twisted labyrinth where fear reigns. It is the home of horrific monsters that have never seen the light of day. \n\nIt is here that the \\Monster{dark elf} \\NPC{Gromph Baenre}, Archmage of \\Place{Menzoberranzan}, casts a foul spell meant to ignite a magical energy that suffuses the \\Place{Underdark} and tears open portals to the demonic \\Place{Abyss}. What steps through surprises even him, and from that moment on, the insanity that pervades the \\Place{Underdark} escalates and threatens to shake the \\Place{Forgotten Realms} to its foundations. Stop the madness before it consumes you!"
+  short_description: "Dare to descend into the \\Place{Underdark} in this adventure for the world\342\200\231s greatest roleplaying game! "
+}
+title: "Out of the Abyss"
+subtitle: "Madness is the Only Escape"
+author {
+  name: "Perkins, Christoper"
+}
+author {
+  name: "Lee, Adam"
+}
+author {
+  name: "Whitters, Richard"
+}
+author {
+  name: "Salvatore R.A."
+  job: "story consultant"
+}
+author {
+  name: "Denning, Troy"
+  job: "story consultant"
+}
+author {
+  name: "Kenson, Steve"
+  job: "lead adventure designer"
+}
+author {
+  name: "Banks, Cam"
+  job: "adventure designer"
+}
+author {
+  name: "Ciechanowski, Walter"
+  job: "adventure designer"
+}
+author {
+  name: "Melchor, Alex"
+  job: "adventure designer"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "adventure designer"
+}
+author {
+  name: "Pramas, Chris"
+  job: "adventure designer"
+}
+author {
+  name: "Schwalb, Robert J."
+  job: "adventure designer"
+}
+author {
+  name: "Sernett, Matt"
+  job: "adventure designer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "adventure designer"
+}
+author {
+  name: "Winninger, Ray"
+  job: "adventure designer"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Cadorette, Tom"
+}
+editor {
+  name: "Lee, Peter"
+  job: "additional proofreading"
+}
+editor {
+  name: "Reynolds, Sean K."
+  job: "additional proofreading"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Blando, Jared"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Empty Room Studios"
+}
+illustrator {
+  name: "Burley, Sam"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Henriquez, Ilich"
+}
+illustrator {
+  name: "Hueso, David"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Sandner, Jasper"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Syme, Bryan"
+}
+illustrator {
+  name: "Nunez de Castro Torres, Carlos"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Waters, Anthony"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Mangold, Hal"
+  job: "art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna Wolf"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D lead designer"
+}
+manager {
+  name: "Crawford, Jeremy"
+  job: "D&D lead designer"
+}
+manager {
+  name: "Shinkle, Neil"
+  job: "project manager"
+}
+manager {
+  name: "Hay, John"
+  job: "project manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production services"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production services"
+}
+manager {
+  name: "Gershman, David"
+  job: "production services"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "brand and marketing"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "brand and marketing"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand and marketing"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "brand and marketing"
+}
+manager {
+  name: "Feil, John"
+  job: "brand and marketing"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "brand and marketing"
+}
+manager {
+  name: "Tito, Greg"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lundstrom, Kim"
+  job: "brand and marketing"
+}
+manager {
+  name: "Kidd, Trevor"
+  job: "brand and marketing"
+}
+date {
+  year: 2015
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6581"
+  check: 6
+}
+pages: 256
+system: DND_NEXT
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+series: "Rage of Demons"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "book"
+  number: 1
+}
+layout: FULL_COLOR

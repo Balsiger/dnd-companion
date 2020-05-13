@@ -1,0 +1,30 @@
+template {
+  name: "PZO 1102"
+  world: "Generic"
+  description: "For 24 years, \\Product{Dragon Magazine}\'s monster ecologies have detailed the fiercest and most fantastic creatures in the Dungeons & Dragons game. This compilation collects more than a dozen of the most popular ecologies from \\Product{Dragon}\'s recent history, including more fiendish details, vivid new art, an index of every ecology ever published, and monster memories from some of the best-known designers and authors in fantasy, including China Mi\342\210\232\302\251ville, R.A. Salvatore, Margaret Weis, Ed Greenwood, Monte Cook, and E. Gary Gygax. Monster lovers and adventurers take heed! The details within might just save your life!"
+}
+title: "Monster Ecologies"
+subtitle: "Here THere Be Monsters!"
+date {
+  year: 2007
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 130
+system: DND_1ST
+type: ACCESSORY
+style: SOFT_COVER
+series: "Monster Ecologies"
+price {
+  currency: "$"
+  number: 1999
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

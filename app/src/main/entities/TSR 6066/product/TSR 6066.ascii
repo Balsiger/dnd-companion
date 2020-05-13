@@ -1,0 +1,21 @@
+template {
+  name: "TSR 6066"
+  synonym: "RPGA3"
+  reference {
+    name: "net price list"
+  }
+}
+title: "Forgotten King"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 500
+  precision: 100
+}

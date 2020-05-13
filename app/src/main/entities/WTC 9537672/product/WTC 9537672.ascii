@@ -1,0 +1,208 @@
+template {
+  name: "WTC 9537672"
+  world: "Generic"
+  description: "This supplement for the D&D game offers a fully illustrated horde of new\n                    monsters such as the \\Monster{clockwork steed}, the \\Monster{tom spider}, and\n                    the evil creatures known as the \\Monster{Spawn of Tiamat}. It also includes\n                    monsters that have previously appeared as D&D miniatures, including the\n                    \\Monster{bloodhulk}, the \\Monster{justice archon} and the \\Monster{wizened\n                    elder}. Finally, the book provides varieties of existing monsters such as the\n                    \\Monster{drow arcane guard}, the \\Monster{orc battle priest}, and the\n                    \\Monster{yuan-ti pureblood slayer}.\n                    In addition to an easy-to-use statistics format, this supplement features\n                    maps of monster lairs, sample encounters, and tactics sections to help DMs\n                    run more complex creatures. Additionally, many entries contain information\n                    about where the monsters are likely to appear in the \\Place{Forgotten Realms}\n                    and \\Place{Eberron} campaign settings.\n                    An indispensable resource containing new monsters suitable for any Dungeons\n                    & Dragons game.\n                    Monster Manual IV is the most recent volume in the bestselling Monster Manual\n                    line. Sure to be popular with both Dungeon Masters and players, this\n                    supplement to the D&D game provides descriptions for a vast array of new\n                    creatures. Each monster is illustrated and features a new stat block format\n                    that facilitates faster gameplay. In addition, the book includes sample\n                    encounters, pregenerated treasure hoards, and sidebars on how to incorporate\n                    the creatures in a Forgotten Realms or Eberron campaign. This product is tied\n                    to 2006\033-F\302\254\302\242s Year of Dragons theme, which is a key marketing platform across\n                    the D&D RPG, novels, and miniatures brands.  "
+}
+title: "Monster Manual IV"
+subtitle: "Scores of Monsters That are Fun to Play and Easy to Run"
+author {
+  name: "Kestrel, Gwendolyn F.M."
+}
+author {
+  name: "Clarke Wilkes, Jennifer"
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Finch, Andrew"
+}
+author {
+  name: "Lindsay, Christopher"
+}
+author {
+  name: "Liquette, Kolja Raven"
+}
+author {
+  name: "Sims, Chris"
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Stout, Travis"
+}
+author {
+  name: "Wiker, JD"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "development team"
+}
+author {
+  name: "Mearls, Mike"
+  job: "development team"
+}
+author {
+  name: "Sernett, Matthew"
+  job: "development team"
+}
+author {
+  name: "Decker, Jesse"
+  job: "development team"
+}
+author {
+  name: "Finch, Andrew"
+  job: "development team"
+}
+editor {
+  name: "Clarke Wilkes, Jennifer"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Jurkat, M. Alexander"
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Higginbotham, Henry"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Hudnut, David"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Zhang, James"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Jaque, Karin"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technicianz"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3920"
+  check: 6
+}
+isbn13 {
+}
+pages: 224
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+number: "IV"
+series: "Monster Manual"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

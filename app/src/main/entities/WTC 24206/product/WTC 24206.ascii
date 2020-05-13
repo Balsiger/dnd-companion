@@ -1,0 +1,42 @@
+template {
+  name: "WTC 24206"
+  world: "Generic"
+  description: "In a troubled world, mighty heroes make names for themselves by fighting back the tide of evil and chaos. New challenges await as they embark on paragon paths and grand new adventures. This core rulebook for the Dungeons & Dragons Roleplaying Game helps a Dungeon Master take the game to the next level.\n                    \\Product{Dungeon Master\'s Guide 2} features advice and rules for Dungeon Masters of all levels of experience, with a particular focus on running adventures and campaigns in the paragon tier (11-20). It includes advanced encounter-building tools, storytelling tips to bring your game to life, new monster frameworks to help you craft the perfect villain, example campaign arcs, a comprehensive look at skill challenges, and a detailed \'home base\' for paragon-tier adventurers --- the interplanar nexus of \\Place{Sigil}, the City of Doors."
+  short_description: "Roleplaying Game Core Rules for the Dungeon Master"
+}
+title: "Dungeon Master\'s Guide 2"
+subtitle: "Have More Fun Behind the Screen"
+date {
+  year: 2009
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5244"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5244"
+  check: 1
+}
+pages: 224
+system: DND_4
+type: RULEBOOK
+style: HARDCOVER
+producer: "WTC"
+number: "DM2"
+series: "Core Rulebooks"
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

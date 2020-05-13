@@ -1,0 +1,42 @@
+template {
+  name: "TSR 7520"
+  synonym: "GWQ3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  description: "all-or-nothing fight for survival in a future world of bizarre mutations"
+}
+title: "Home Before the Sky Falls"
+author {
+  name: "Henson, Dale"
+}
+date {
+  year: 1993
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "674"
+  check: 3
+}
+isbn13 {
+}
+pages: 64
+system: GAMMA_WORLD
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

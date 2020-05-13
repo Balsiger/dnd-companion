@@ -1,0 +1,107 @@
+template {
+  name: "WTC 9538274"
+  world: "Generic"
+  description: "\\Monster{Goblins} set upon the quiet town of \\Place{Barrow\'s Edge}, and the\n                    community cries out for heroes to save them. What has turned the secretive\n                    and reclusive goblins into bloodthirsty raiders? Who is the mysterious new\n                    leader of the tribe? The truth lies deep within the \\Place{Howling Caves}....\n                    \\Product{Scourge of the Howling Horde} is a stand-alone adventure designed\n                    for a group of 1st-level characters. Perfect for new players or seasoned\n                    players, it features an easy-to-use encounter format and includes useful DM\n                    advice for beginning and experienced Dungeon Masters."
+  short_description: "A first level adventure."
+}
+title: "Scourge of the Howling Horde"
+subtitle: "Take Your First Steps On the Road to Adventure"
+author {
+  name: "Kestrel, Gwendolyn F.M."
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "development"
+}
+editor {
+  name: "Slavicsek, Bill"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Bianchi, Simone"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3935"
+  check: 4
+}
+isbn13 {
+}
+pages: 32
+system: DND_3_5
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: COLOR_COVER

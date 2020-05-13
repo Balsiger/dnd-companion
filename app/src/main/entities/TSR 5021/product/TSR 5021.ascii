@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5021"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Deadly Grell (bendable)"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

@@ -1,0 +1,86 @@
+template {
+  name: "WTC 2186374"
+  synonym: "H3"
+  world: "Generic"
+  description: "Trapped in the mysterious \\Place{Pyramid of Shadows}, an ancient conqueror plots his escape. When brave heroes stumble into his infernal prison, he seizes the opportunity he has sought for centuries. Can the band of heroes find their way through a monster-infested dungeon, negotiate the tensions and alliances among its factions, and reach the \\Place{Sanctuary of Light} before \\NPC{Karavakos} escapes, sealing them inside the \\Place{Pyramid of Shadows} forever?\n                    This adventure takes characters from 7th level to 10th level. It can be played as a stand-alone adventure or as the conclusion of a three-part series that begins with \\Product{H1: Keep on the Shadowfell} and continues with \\Product{H2: Thunderpsire Labyrinth}. This folder contains two adventure books and a double-sided battle map designed for use with D&D Miniatures."
+}
+title: "Pyramid of Shadows"
+subtitle: "Evil Stirs in Its Ancient Prison"
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Wyatt, James"
+}
+editor {
+  name: "Carter, Michele"
+}
+cover {
+  name: "O&#39Connor, William"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Murayama, Soe"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "development manager"
+}
+manager {
+  name: "Calloway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2008
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4935"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4935"
+  check: 9
+}
+pages: 96
+system: DND_4
+type: ADVENTURE
+style: FOLDER
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "adventure booklet on"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "adventure booklet two"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "two sided, color, poster-sized"
+  number: 1073741824
+}
+optional_requirements: "WTC 2155100"
+layout: FULL_COLOR

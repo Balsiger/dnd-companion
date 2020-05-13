@@ -1,0 +1,64 @@
+template {
+  name: "TSR 2603"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Planescape"
+  description: "\\bold{Take the plunge into:}\n                    The infinite depths of the \\Place{Abyss}.\n                    The wild passions of \\Place{Arborea}.\n                    The immeasurable randomnes of \\Place{Limbo}.\n                    The howling madness of \\Place{Pandemonium}.\n                    The glorious battlefields of \\Place{Ysgard}.\n                    \\bold{Inside you\'ll find:}\n                    \\list\n                    {The Book of Chaos, a 128-page guide for the Dungeon Master to the\n                    places, creatures and special conditions of the five Chaos planes.}\n                    {The Travelogue, a 48-page player\'s guide to these planes, profusely\n                    illustrated with full-color maps and illustrations}\n                    {Chaos Adventures, a 32-page adventure book containing 3 adventure\n                    outlines for each plane---15 adventures in all!}\n                    {Monstrous Supplement, a 32-page booklet detailing 15 new monsters,\n                    including new \\Monster{tanar\'ri}, the inhabitants of \\Place{Yggdrasil},\n                    and the ever-chaning creatures of \\Place{Limbo}.}\n                    {Five fully detailed, poster-size maps of the realms of Chaos.}\n                    \\large{Dive in2 Dis:HarmOny Upheaval TUMU:LT formlessness ConFuS:Ion BEDlam\n                    AnarchY and chAos!}\n                    (It\'s Chaos, berk, and it don\'t \\emph{have} to make sense!)"
+}
+title: "Planes of Chaos"
+date {
+  year: 1994
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "874"
+  check: 6
+}
+isbn13 {
+}
+pages: 240
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Monstrous Supplement"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Chaos Adventures"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Travelogue"
+  number: 1073741824
+}
+content {
+  part: BOOK
+  description: "The Book of Chaos"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 5
+}

@@ -1,0 +1,41 @@
+template {
+  name: "TSR 21381"
+  synonym: "WTC 86675"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  world: "Dragonlance"
+  description: "\\NPC{Innova}, a young \\Monster{gnomish} recluse, finds himself in a terrible\n  situation. Tried in a \\Monster{gnomish} court for an unfortunate accident and\n  sentenced to spend months at the bottom of \\Place{Mt. Nevermind} tuning\n  \\Item{gnomeflingers}, young \\NPC{Innova} makes an incredible discovery. The\n  whole \\Monster{gnomish} society is changed by one machine that, unlike any\n  other \\Monster{gnomish} invention, makes the entire mountain run like\n  clockwork.\n\n  In the face of this, \\NPC{Commander Halion Khargos} of the \\Group{Knights of\n  Tahkisis} must fulfill his Vision, sent to him by the \\God{Dark Queen\n  Tahkisis}. He must take \\Place{Mt. Nevermind}.\n\n  Fergus Ryan tells the amazing story of the \\Monster{gnomes} of\n  \\Place{Mt. Nevermind} during the upheaval of the \\Event{Chaos War}. And\n  because they\'re \\Monster{gnomes}, their adventures are punctuated with two or\n  three explosions."
+}
+title: "Siege of Mt. Nevermind"
+leader: "The"
+subtitle: "A miraculous machine . . . and a nightmare!"
+author {
+  name: "Fergus Ryan"
+}
+date {
+  year: 1999
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1381"
+  check: 9
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+series: "Chaos War"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}

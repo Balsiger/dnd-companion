@@ -1,0 +1,51 @@
+template {
+  name: "TSR 8558"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "It was the eve of the \\Event{Time of Troubles}. The chaos of spilled blood,\n                    lawless strife, monsters unleashed, and avatars roaming \\Place{Faer\\hat{u}n}\n                    was still to come. Unbeknownst to mortals, the gods had been summoned\n                    together, and among them was \\God{Mystra}, grown proud and willful in the\n                    passing eons. With the others, she was about to be stripped of her godhood.\n                    The secret of her power gave her an idea. She made certain preparations,\n                    looking always for one who would be her successor...But until that person\'s\n                    ascension, her power must be preserved.\n                    A lone mortal must carry the greatest share of her divine energy until the\n                    power could be reclaimed, and it was the fate of this mortal to risk being\n                    destroyed or driven wild, involuntarily and without warning.\n                    \\emph{This was the occasion of \\NPC{Elminster}\'s Doom.}"
+}
+title: "Shadows of Doom"
+subtitle: "\\NPC{Elminster}\'s Doom"
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Fields, Fred"
+}
+date {
+  year: 1995
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0300"
+  check: 7
+}
+isbn13 {
+}
+pages: 314
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Book One"
+series: "Shadow of the Avatar"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,38 @@
+template {
+  name: "TSR 21313"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "The Cleric Quintet"
+}
+title: "Cleric Quintet Collector\'s Edition"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1313"
+  check: 4
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Collector\'s Edition"
+series: "Cleric Quintet"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

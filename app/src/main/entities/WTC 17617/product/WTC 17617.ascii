@@ -1,0 +1,57 @@
+template {
+  name: "WTC 17617"
+  world: "Forgotten Realms"
+  description: "Yet again the \\Place{Moonshae Isles} come under the threat of sinister and\n                    supernatural forces. A council of dark sources has usurped the will of the\n                    \\NPC{High King}. Guided by \\God{Bhaal}, god of death, an army of\n                    \\Monster{ogres} and \\Monster{zombies} threatens the gentle \\Group{Ffolk}\n                    while the puppet king acquiesces. It falls to \\NPC{Tristan}, heir to the\n                    throne of the \\Place{Moonshaes}, and his friend \\NPC{Robyn} the druid, to\n                    guard their homeland from certain destruction.\n                    Released in 1988, \\Product{Black Wizards} was the second novel in the first\n                    trilogy ever published in the \\Place{Forgotten Realms} setting. Unavailable\n                    for the past several years, this title is now being brought back into print\n                    in a newly recovered mass market edition."
+}
+title: "Black Wizards"
+author {
+  name: "Niles, Douglas"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3563"
+  check: 4
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "Moonshae Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

@@ -1,0 +1,100 @@
+template {
+  name: "TSR 2609"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Planescape"
+  description: "Welcome to the \\Place{Cage}! That\'s \\Place{Sigil}, \\Place{City of\n                    Doors}---realm of the \\NPC{Lady of Pain}, gateway to all planes and\n                    possibilities. It\'s the most coveted burg in the \\Place{multiverse}, and this\n                    tome is the key to unlocking its secrets.\n                    Now DMs and cutters alike can discover:\n                    \\list\n                    {little-known facts about \\Place{Sigil}\'s sites and personalities}\n                    {a guide to major portals}\n                    {maps of famous locales, fiendish and divine}\n                    {evocative illustrations by DiTerlizzi, Dameron, Ruppel and Berry}\n                    {an all-new, full-color, poster-sized map of the city, pinpointing\n                    places heretofore unseen}\n                    Which pubs cater to the clueless, and which\'re quick to put a sod in the\n                    dead-book? Where do folks gather to catch an \'Execution by Wyrm\'? For whom do\n                    the \\Item{Bells of Baphomet} toll? Exposing both the low life and glittering\n                    highlights, \\Product{In the Cage} is an essential guide for any blood who\n                    plans on exploring Sigil\'s streets---especially any blood who plans to leave\n                    under his own power."
+}
+title: "In the Cage: A Guide to Sigil"
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Swan, Rick"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Knutson, Dana"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Knutson, Dana"
+}
+illustrator {
+  name: "Ruppel, Robh"
+}
+illustrator {
+  name: "Murin, Dwan"
+}
+illustrator {
+  name: "Feggestad, Sarah"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Hayday, Andria"
+  job: "project management"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Coumbe, Tim"
+  job: "electronic prepress coordination"
+}
+manager {
+  name: "Lokotz, Angelika"
+  job: "production"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+date {
+  year: 1995
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0111"
+  check: 10
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

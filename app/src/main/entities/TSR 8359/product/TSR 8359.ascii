@@ -1,0 +1,105 @@
+template {
+  name: "TSR 8359"
+  synonym: "WTC 86016"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "In this one-of-a-kind collection, you\'ll find:\n\n  \\list\n  {An elite corps of bridge-building \\Monster{draconians}.}\n  {A \\Place{solamni} stalking a dangerous \\Monster{spectre}.}\n  {A \\Monster{minotaur} captured by a dark \\Class{wizard} and put to a cruel\n   and unusual test.}\n  {\\Monster{Kender} who pilfer magic, \\Monster{gully dwarves} who cook a\n   delicious rat sstew, and \\Monster{gnomes} who invent whatchamacallits that\n   wreak spectacular havoc.}\n  {Plus, all manner and hue of \\Monster{dragons}, good, evil, and just plain\n   mischievous.}\n\n  These exciting and other-worldy short stories are by authors of the\n  \\Place{Dragonlance} saga, one of the world\'s best-selling fantasy\n  series. Authors include Nancy Varian Berberick, Jeff Grubb, Richard A. Knaak,\n  Roger E. Moore, Douglas Niles, Nick O\'Donohoe, Michael and Teri Williams, and\n  Margaret Weis."
+}
+title: "Dragons of Krynn"
+leader: "The"
+subtitle: "The Dragons of Krynn"
+author {
+  name: "Williams, Michael"
+}
+author {
+  name: "Williams, Teri"
+}
+author {
+  name: "Berberick, Nancy Varian"
+}
+author {
+  name: "RIchard, Mickey Zucker"
+}
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Pack, Janet"
+}
+author {
+  name: "Stout, Amy"
+}
+author {
+  name: "Perrin, Don"
+}
+author {
+  name: "Marnden, Dan"
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Baker, Linda P."
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Stein, Kevin"
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 1994
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "830"
+  check: 4
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume 1"
+series: "Dragonlance Dragons"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

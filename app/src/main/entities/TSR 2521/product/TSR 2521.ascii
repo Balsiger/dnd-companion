@@ -1,0 +1,43 @@
+template {
+  name: "TSR 2521"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  world: "Savage Coast"
+  description: "swashbuckling campaign setting"
+}
+title: "Savage Coast Campaign Book"
+author {
+  name: "Beach, Tim"
+}
+author {
+  name: "Heard, Bruce"
+}
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0379"
+  check: 1
+}
+isbn13 {
+}
+pages: 256
+system: ADND_REVISED
+audience: ALL
+type: RULEBOOK
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}

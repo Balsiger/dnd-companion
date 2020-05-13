@@ -1,0 +1,37 @@
+template {
+  name: "TSR 11359"
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Generic"
+  description: "\\large{The Ultimate Collection!}\n                    The \\Product{Priest\'s Spell Compendium} is a three-volume series describing\n                    every priest spell for the AD&D game. Spells have been collected from rule\n                    books, campaign settings, supplements, adventures, and magazines dating back\n                    to 1975. Early entries have been updated to be immediately usable, making\n                    this the player\'s and DM\'s definitive source for priest spells."
+}
+title: "Priest\'s Spell Compendium, Volume One"
+date {
+  year: 1999
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1359"
+  check: 2
+}
+isbn13 {
+}
+pages: 288
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+number: "Volume One"
+series: "Priest\'s Spell Compendium"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

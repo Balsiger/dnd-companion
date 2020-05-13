@@ -1,0 +1,127 @@
+template {
+  name: "WTC 9539674"
+  world: "Generic"
+  description: "The \\Product{d20 Future Tech} supplement describes a dazzling array of new\n  gear and gadgets---the latest and greatest technology for heroes and villains\n  of the future. In addition, it presents new types of \\Item{starships},\n  \\Item{robots}, and \\Item{mecha} and expands the rules for combining\n  character, vehicular, starship, and mech combat.\n\n  \\Product{d20 Future Tech} is an extensive collection of high-tech items for\n  use by players and Gamemasters. Building on subsystems first presented in\n  \\Product{d20 Future}, \\Product{d20 Future Tech} presents new gear and options\n  for characters, vehicles, starships, and mecha. Covering technology levels\n  from the current era to the far future, this supplement can be used in any\n  style of modern or future campaign."
+  short_description: "New gear and technology for any d20 Modern or d20 Future campaign."
+}
+title: "d20 Future Tech"
+subtitle: "Whoever Has the Most Stuff Wins!"
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "Wiker, JD"
+}
+editor {
+  name: "Ryan, Tammie Webb"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Adorjany, Attila"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Gaston, Anderson"
+}
+illustrator {
+  name: "Gaston, Andez"
+}
+illustrator {
+  name: "Gregory, D. Alexander"
+}
+illustrator {
+  name: "Jomes, Jaime"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Tasi, Francis"
+}
+illustrator {
+  name: "Hebron, Paul"
+  job: "art director"
+}
+illustrator {
+  name: "Hebron, Paul"
+  job: "graphic design"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "graphic design"
+}
+illustrator {
+  name: "Lathrop, Jennifer"
+  job: "graphic design"
+}
+illustrator {
+  name: "Murayama, Soe"
+  job: "graphic design"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Lokoth, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director RPG R&D"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+manager {
+  name: "Fischer, Joshua"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3949"
+  check: 4
+}
+isbn13 {
+}
+pages: 96
+system: D20_MODERN
+type: RULES_SUPPLEMENT
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "d20 Modern Roleplaying Game"
+required_requirements: "d20 Future"
+layout: FULL_COLOR

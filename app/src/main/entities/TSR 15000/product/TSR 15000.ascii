@@ -1,0 +1,33 @@
+template {
+  name: "TSR 15000"
+  reference {
+    name: "net"
+  }
+  description: "over 180 new cards for the Legend of the Five Rings"
+}
+title: "Fire & Shadow Booster"
+date {
+  year: 2000
+  month: 3
+}
+isbn {
+  group: "1"
+  publisher: "57530"
+  title: "937"
+  check: 8
+}
+isbn13 {
+}
+system: LEGEND_OF_THE_FIVE_RINGS
+audience: ALL
+type: BOOSTER_PACK
+style: PACK
+price {
+  currency: "$ "
+  number: 279
+  precision: 100
+}
+content {
+  part: CARD
+  number: 11
+}

@@ -1,0 +1,45 @@
+template {
+  name: "TSR 9535"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Forgotten Realms"
+  description: "For aeons, folk have struggled to master the world of \\Place{Toril} through\n                    the use of magic. The \\Monster{human} race has stolen what magical knowledge\n                    it can from the \\Monster{elves} and other races, gained more through\n                    workship, and created the rest by building on the work of those who have gone\n                    before. For centuries, \\Monster{human} wizards have experimented with new\n                    spells and variations on existing magic, striving to grow ever more\n                    powerful. They have succeeded to an astonishing degree, but through the death\n                    of secretive mages and the destruction of realms and entire peoples, much of\n                    the lore they built has been lost, hidden, or distorted. To pierce this heavy\n                    cloak of missing knowledge, cryptic sorcerous codes, and misinformation\n                    requires a writer of rare daring, persistence, and magical skill. Such a man\n                    is \\NPC{Volothamp Geddarm}, famous traveler of the \\Place{Realms}---and this\n                    is his most important, long suppressed work, the book that archwizards could\n                    not keep from your hands!\n                    Read this 128-page tome, and learn:\n                    \\list\n                    {How mages gain special powers for themselves---including the awesome\n                    ability known as spellfire.}\n                    {How items may be enchanted to fire forth magic once, twice, or\n                    whenever called upon.}\n                    {The best materials from which to construct magical items.}\n                    {Powerful spells that have hitherto been the secrets of the most\n                    puissant archmages.}\n                    {Details of many of the fell, awesome artifacts of the \\Place{Realms}\n                    known to exist.}\n                    {Lore about teleportation, magical wards, guardian spells, and sites\n                    of power.}\n                    {Much, much more that most wizards would have liked to remain hidden\n                    from the eyes of their rivals---and common folk not skilled in\n                    magic---forever!}\n                    Suitable for all levels of play.\n                    \\bold{Special Note:} This edition of \\Product{Volo\'s Guide to All Things\n                    Magical}, intended for travelers from beyond the borders of\n                    \\Place{Faer\\hat{u}n}, has been heavily rewritten and contains game notes and\n                    commentary by the famous sage and archmage \\NPC{Elminster of\n                    \\Place{Shadowdale}}."
+}
+title: "Volo\'s Guide to All Things Magical"
+date {
+  year: 1996
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0446"
+  check: 1
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Volo\'s Guide"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

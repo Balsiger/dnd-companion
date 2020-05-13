@@ -1,0 +1,29 @@
+template {
+  name: "WTC 96712"
+  world: "Dragonlance"
+  description: "\\Product{Dragon Spell} continues a new series of \\Place{Dragonlance} fantasy\n  adventures written specifically for readers ages 10 and up. Sized to fit\n  young readers, the series features a group of young companions who band\n  together for friendship and excitement during the golden age of the\n  \\Place{Dragonlance} world."
+}
+title: "Dragon Spell"
+author {
+  name: "Sampson, Jeff"
+}
+date {
+  year: 2005
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Dragonlance The New Adventures"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

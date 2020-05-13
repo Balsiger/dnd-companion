@@ -1,0 +1,20 @@
+template {
+  name: "DMA 000027"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "unknown"
+}
+title: "Monster & Treasure Assortment, Set Two: Dungeon Levels Four to Six"
+date {
+  year: 1977
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+price {
+}

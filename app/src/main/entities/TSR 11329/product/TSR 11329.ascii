@@ -1,0 +1,32 @@
+template {
+  name: "TSR 11329"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "epic adventure"
+}
+title: "Sylvan Veil"
+leader: "The"
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Horner, Miranda"
+}
+date {
+  year: 1999
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND_SAGA
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

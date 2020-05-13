@@ -1,0 +1,37 @@
+template {
+  name: "TSR 21684"
+  reference {
+    name: "net"
+  }
+  world: "Rokugan"
+  description: "The \\NPC{Serene Prophet} foresaw its downfall -- tides of \\Monster{demons}\n                    flooding out of the \\Place{Shadowlands}. One man seeks to avert the\n                    catastrophe -- the leader of the \\Group{Scorpion Clan}. He will pay any\n                    price, perpetrate any deception, to save the \\Place{empire}. If he must, he\n                    will become evil to fight evil. He and the emperor\'s champion will battle\n                    each other to the death for that which they both hold dear: \\Place{Rokugan}"
+}
+title: "Scorpion"
+leader: "The"
+subtitle: "\\Place{Rokugan} is Doomed!"
+author {
+  name: "Steven Sullivan"
+}
+date {
+  year: 2000
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1684"
+  check: 2
+}
+isbn13 {
+}
+pages: 312
+system: LEGEND_OF_THE_FIVE_RINGS
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "Clan War Series"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

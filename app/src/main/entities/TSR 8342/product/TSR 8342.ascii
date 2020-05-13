@@ -1,0 +1,58 @@
+template {
+  name: "TSR 8342"
+  synonym: "WTC 86073"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "At long last, the story of the beautiful dark-hearted \\NPC{Kitiara Uth\n  Matar}. This compelling novel tells the story of the birth of her twin\n  brothers, the \\Class{warrior} \\NPC{Caramon} and the frail \\Class{mage}\n  \\NPC{Raistlin}, and \\NPC{Kit}\'s admirable role in their upbringing.\n\n  But her youthful mercenary deeds and increasing fascination with evil throw\n  her into the company of a roguish stranger and band of adventurers whose\n  fates are intermingled with her own. Haunted by the memory of her\n  \\Place{Solamnic} father, she hunts him ceaselessly.\n\n  Tina Daniell\'s first novel brings to life this remarkable\n  \\Class{warrior}-woman, whose credo of \'the sword is truth\' becomes her\n  triumph and downfall."
+}
+title: "Dark Heart"
+subtitle: "Obsession"
+author {
+  name: "Daniell, Tina"
+}
+date {
+  year: 1992
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "116"
+  check: 4
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Volume Three"
+series: "Meetings Sextet"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

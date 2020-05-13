@@ -1,0 +1,93 @@
+template {
+  name: "Dungeon 61"
+  world: "Generic"
+  description: "This is issue 61 of the dungeon magazine."
+}
+title: "Dungeon 61"
+author {
+  name: "De Fazio, Dan"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Anderson, Dovjosef"
+}
+author {
+  name: "Hulbert, Lorrie E."
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Vuckovich, Michelle"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+cover {
+  name: "DiTerlizzi, Tony"
+}
+cartographer {
+  name: "Scott, Michael"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Boholst, Roy M."
+}
+illustrator {
+  name: "Lazzaretii, Rob"
+  job: "table of contents"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Craig, Terry"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XI 1"
+number: "61"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

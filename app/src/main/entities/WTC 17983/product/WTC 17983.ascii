@@ -1,0 +1,44 @@
+template {
+  name: "WTC 17983"
+  world: "Generic"
+  description: "An ancient, jeweled bottle, a missing lover, mysterious black-clad invadors,\n  and a warrior haunted by grief collide in the wilderness and on the\n  battlefield. Driven by rumors that his beloved \\NPC{Naull} may have survived\n  her abduction to the \\Place{Plane of Fire}, \\NPC{Regdar} and a band of loyal\n  mercenaries defy their overlord\'s wrath to seek the truth. Their quest leads\n  the to unexpected discoveries and unearthly danger.\n\n  Will their efforts bring about the return of the damned?"
+}
+title: "Return of the Damned"
+author {
+  name: "T.H. Lain"
+}
+cover {
+  name: "Todd Lockwood"
+}
+cover {
+  name: "Sam Wood"
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3003"
+  check: 9
+}
+isbn13 {
+}
+pages: 180
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 9"
+series: "D&D 3rd Edition Introduction series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

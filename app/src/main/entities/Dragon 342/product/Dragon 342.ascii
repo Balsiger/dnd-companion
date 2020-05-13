@@ -1,0 +1,187 @@
+template {
+  name: "Dragon 342"
+  world: "Generic"
+  description: "Issue 342 of the magazine. "
+}
+title: "Dragon 342"
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Christensen, William L."
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Fehlauer, Mike"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Hunter, Kyle Stanley"
+}
+author {
+  name: "Ling Jr., John E."
+}
+author {
+  name: "Manley, Jake"
+}
+author {
+  name: "Mokumok"
+}
+author {
+  name: "Moseley, Tony"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Sutter, James"
+}
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "Wissel, Christopher"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "associate editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Du Lac, Chad"
+}
+illustrator {
+  name: "Dixon, Matt"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Jansson, Niklas"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "UDON"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Yanner, Kiernan"
+}
+illustrator {
+  name: "Subkavich, Jim"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Pozca, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXX 11"
+number: "342"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

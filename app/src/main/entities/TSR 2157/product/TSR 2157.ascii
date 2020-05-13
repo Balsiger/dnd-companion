@@ -1,0 +1,96 @@
+template {
+  name: "TSR 2157"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 218"
+  }
+  world: "Generic"
+  description: "A lot of magical items from \\Item{Pick of Earth Parting} to \\Item{Thesis on\n                    Conditional Ruptures (Spellbook)}"
+}
+title: "Encyclopedia Magica, Volume III"
+author {
+  name: "Henson, Dale \'Slade\'"
+}
+editor {
+  name: "Stewart, Doug"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Brom, Gerald"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Hildebrandt, Tim"
+}
+illustrator {
+  name: "Loveless, Roger"
+}
+illustrator {
+  name: "Parkinson, Keith"
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Winter, Steve"
+  job: "project coordination"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphic coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0187"
+  check: 10
+}
+isbn13 {
+}
+pages: 416
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+number: "Volume III"
+series: "Encyclopedia Magica"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

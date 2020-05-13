@@ -1,0 +1,57 @@
+template {
+  name: "WTC 17726"
+  world: "Forgotten Realms"
+  description: "This latest title drives the civil upheaval among one of the most popular\n                    races in the \\Place{Forgotten Realms} setting to its epic conclusion. Several\n                    of the previous titles in this series hit the New York Times best-seller list\n                    upon initial release. Best-selling author R.A. Salvatore wrote the prologue\n                    to \\Product{Resurrection} and consulted on the series, lending his expertise\n                    as the author who brought \\Monster{drow} society to the forefront of the\n                    \\Product{Forgotten Realms} setting."
+}
+title: "Resurrection"
+author {
+  name: "Kemp, Paul S."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3640"
+  check: 1
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book VI"
+series: "RA Salvatore\'s War of the Spider Queen"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}

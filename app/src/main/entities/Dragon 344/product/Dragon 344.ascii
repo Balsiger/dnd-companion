@@ -1,0 +1,192 @@
+template {
+  name: "Dragon 344"
+  world: "Generic"
+  description: "Issue 344 of the magazine. "
+}
+title: "Dragon 344"
+author {
+  name: "Baker, Keith"
+}
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Bourgoine, K.R."
+}
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Cole, Joshua"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Farrese, Richard"
+}
+author {
+  name: "Fehlauer, Mike"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Heard, Bruce"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "MacArtor, Mike"
+}
+author {
+  name: "Pett, Richard"
+}
+author {
+  name: "Schnweider, F. Wesley"
+}
+author {
+  name: "Scott, Amber E."
+}
+author {
+  name: "Smith, Mat"
+}
+author {
+  name: "Sutter, James"
+}
+author {
+  name: "Vaughan, Greg"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "managing editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Adorjany, Attila"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Campos, Roberto"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "P\\acute{e}rez, Ram\\grave{o}n"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Pozca, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+pages: 130
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+number: "344"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

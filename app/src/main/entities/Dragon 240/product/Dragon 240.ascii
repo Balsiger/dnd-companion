@@ -1,0 +1,152 @@
+template {
+  name: "Dragon 240"
+  world: "Generic"
+  description: "Mystery & Suspense"
+}
+title: "Dragon 240"
+subtitle: "Issue 240"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "slade"
+}
+author {
+  name: "Cook, Sue Weinlein"
+}
+author {
+  name: "Wybo II, Michael John"
+}
+author {
+  name: "Pickens, Jon"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Collins, Ron"
+}
+author {
+  name: "Martin, Matthew L."
+}
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Varney, Allen"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Hudson, Brian P."
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistance"
+}
+cover {
+  name: "Nelson, Mark"
+}
+cartographer {
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "McDevitt, Brad"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Sutfin, Michael"
+}
+illustrator {
+  name: "Gumulja, Aria"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Pillsbury, Joseph"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+typographer {
+}
+manager {
+  name: "Watters, Pierce"
+  job: "publisher"
+}
+manager {
+  name: "Whiting, Sharon"
+  job: "subscriptions manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 1997
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 120
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "TSR"
+volume: "XXII"
+number: "3"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

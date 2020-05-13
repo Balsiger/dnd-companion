@@ -1,0 +1,146 @@
+template {
+  name: "Dragon 245"
+  world: "Generic"
+}
+title: "Dragon 245"
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Adkison, Peter D."
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Melka, Kevin"
+}
+author {
+  name: "Richards, Jonathan M."
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Varney, Allen"
+}
+author {
+  name: "Smith, Lester"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "publisher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Wilson, Matt"
+}
+illustrator {
+  name: "Raupp, Roger"
+}
+illustrator {
+  name: "Burr, Dan"
+}
+illustrator {
+  name: "Diesel"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Shanteau, Pamela"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Wilson, Matt"
+}
+illustrator {
+  name: "Morales, Rags"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Robb, Phil"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Steamy"
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "Hanson, David"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+manager {
+  name: "Mangelson, Roger"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 1998
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXII 8"
+number: "245"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,34 @@
+template {
+  name: "WTC 96551"
+  world: "Dragonlance"
+  description: "This attractive new re-release of \\Product{Kaz the Minotaur} showcases a new\n  look for the \\Product{Heroes} series. The title character was introduced by\n  the author in \\Product{The Legend of Huma}, the first novel in this series.\n\n  But, the beast-man, scorned and hunted, knows,\n\n  Without honor there is nothing, not even death.\n\n  So, driven by the only ghosts that matter, \\NPC{Huma} and himself,\n\n  \\NPC{Kaz} alone faces the scourge.\n\n  After the defeat of the \\NPC{Dark Queen} and the death of \\NPC{Huma\n  Dragonbane}, the most famous of the \\Group{Knights of Solamnia}, \\NPC{Kaz},\n  the renegade \\Monster{minotaur}, wanders through \\Place{Krynn}, telling the\n  true tale of the land\'s most legendary hero, stalked by his enemies -- a\n  haunted soul, an outcast, a hero. But when \\NPC{Kaz} hears rumors of evil\n  incidents, he returns to warn the \\Group{Knights of Solamnia} -- and is\n  plunged into a dark nightmare of magic, danger and deja-vu."
+}
+title: "Kaz the Minotaur"
+author {
+  name: "Knaak, Richard A."
+}
+date {
+  year: 2004
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3231"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 4"
+series: "Heroes"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

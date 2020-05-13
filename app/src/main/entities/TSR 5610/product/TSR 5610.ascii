@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5610"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Neo-Otyugh, Azer & Korred"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

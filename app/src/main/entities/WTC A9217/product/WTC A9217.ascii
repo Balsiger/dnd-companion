@@ -1,0 +1,427 @@
+template {
+  name: "WTC A9217"
+  category: "core"
+  category: "Rulebook"
+  synonym: "PHB"
+  world: "Generic"
+  description: "The \\Product{Player\'s Handbook} is the essential reference for every Dungeons & Draghons roleplayer. It contains rules for character creation and advancement, backgrounds and skills, exploration and combat, equipment, spells, and much more. \n\nUse this book to create exciting characters from among the most iconic D&D races and classes.\n\nDungeons & Dragons immerses you in a world of adventure. Explore ancient ruins and deadly dungeons. Battle monsters while searching for legendary treasures. Gain experience and power as you trek across uncharted lands with your companions.\n\nThe world needs heroes. Will you answer the call?"
+  short_description: "Everything a player needs to create heroic characters for the world\'s greatest roleplaying game."
+}
+title: "Player\'s Handbook"
+subtitle: "Arm Yourself for Adventure"
+author {
+  name: "Mearls, Mike"
+  job: "D&D lead designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "D&D lead designer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "rules development"
+}
+author {
+  name: "Lee, Peter"
+  job: "rules development"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Schwalb, Robert J."
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Mohan, Kim"
+  job: "additional contributions"
+}
+author {
+  name: "Sernett, Matt"
+  job: "additional contributions"
+}
+author {
+  name: "Dupuis, Chris"
+  job: "additional contributions"
+}
+author {
+  name: "LaPille, Tom"
+  job: "additional contributions"
+}
+author {
+  name: "Baker, Richard"
+  job: "additional contributions"
+}
+author {
+  name: "Horner, Miranda"
+  job: "additional contributions"
+}
+author {
+  name: "Wilkes, Jennifer Clarke"
+  job: "additional contributions"
+}
+author {
+  name: "Winter, Steve"
+  job: "additional contributions"
+}
+author {
+  name: "Hess, Nina"
+  job: "additional contributions"
+}
+author {
+  name: "Townshend, Steve"
+  job: "additional contributions"
+}
+author {
+  name: "Youngs, Chris"
+  job: "additional contributions"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "additional contributions"
+}
+author {
+  name: "Olsen, Tom"
+  job: "additional contributions"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Fitzgerald Gray, Scott"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Argyle, Steve"
+}
+illustrator {
+  name: "Babbey, Tom"
+}
+illustrator {
+  name: "Bader, Daren"
+}
+illustrator {
+  name: "Baker, Drew"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Bradley, Christopher"
+}
+illustrator {
+  name: "Bradley, Noah"
+}
+illustrator {
+  name: "Burley, Sam"
+}
+illustrator {
+  name: "Cearley, Clint"
+}
+illustrator {
+  name: "Ceran, Milivoj"
+}
+illustrator {
+  name: "Chaturvedi, Sidharth"
+}
+illustrator {
+  name: "Chevrier, Jedd"
+}
+illustrator {
+  name: "jD"
+}
+illustrator {
+  name: "Douglas, Allen"
+}
+illustrator {
+  name: "Ejsing, Jesper"
+}
+illustrator {
+  name: "Elliot, Craig"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Fischer, Scott M."
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Gerard, Justin"
+}
+illustrator {
+  name: "Gesincourt, Florian De"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Hurwitz, Lake"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Kotaki, Kekai"
+}
+illustrator {
+  name: "Lawson, Olly"
+}
+illustrator {
+  name: "L\303\274bke, Raphael"
+}
+illustrator {
+  name: "Lunter, Titus"
+}
+illustrator {
+  name: "Maniak, Slawomir"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Miller, Aaron"
+}
+illustrator {
+  name: "Moeller, Christopher"
+}
+illustrator {
+  name: "Molnar, Mark"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "O\'Conner, William"
+}
+illustrator {
+  name: "Ortiz, Hector"
+}
+illustrator {
+  name: "Palumbo, David"
+}
+illustrator {
+  name: "Pisano, Allessandra"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Rey, Rob"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Riley, Aaron J."
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Sheppard, Cynthia"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Stawicki, Matt"
+}
+illustrator {
+  name: "Stone, Alan"
+}
+illustrator {
+  name: "Tenery, Thom"
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Turkel, Autumn Rain"
+}
+illustrator {
+  name: "Vega, Jose"
+}
+illustrator {
+  name: "Walpole, Tyler"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Wen, Joon"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Gelon, Dan"
+  job: "art director"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Rapier, Melissa"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna Wolf"
+  job: "art director"
+}
+illustrator {
+  name: "Heiss, Bree"
+  job: "graphic desgner"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Craig, Barry"
+  job: "graphic designer"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "producer"
+}
+manager {
+  name: "Shinkle, Neil"
+  job: "product management"
+}
+manager {
+  name: "Graham, Kim"
+  job: "product management"
+}
+manager {
+  name: "Hay, John"
+  job: "product management"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production services"
+}
+manager {
+  name: "Dumas, Brian"
+  job: "production services"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production services"
+}
+manager {
+  name: "Gershman, David"
+  job: "production services"
+}
+manager {
+  name: "Williams, Anita"
+  job: "production services"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "brand and marketing"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "brand and marketing"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand and marketing"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "brand and marketing"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lundstrom, Kim"
+  job: "brand and marketing"
+}
+manager {
+  name: "Kidd, Trevor"
+  job: "brand and marketing"
+}
+date {
+  year: 2014
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6560"
+  check: 1
+}
+pages: 320
+system: DND_NEXT
+audience: PLAYER
+type: RULEBOOK
+style: HARDCOVER
+producer: "WTC"
+number: "1"
+series: "D&D Next Core"
+price {
+  currency: "$4"
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

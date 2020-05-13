@@ -1,0 +1,144 @@
+template {
+  name: "WTC 17737"
+  world: "Generic"
+  description: "Hailing from towns and villages in every corner of the world, resourceful\n                    and resilient adventurers emerge from among the races of destiny:\n                    \\Monster{humans}, \\Monster{half-elves}, \\Monster{half-orcs}, and\n                    \\Monster{illumians}. With an unparalleled drive to explore and experience,\n                    these diverse individuals have created names to last throughout the ages.\n                    This supplement for the D&D game provides detailed information on the\n                    psychology, society, culture, behavior, religion, folklore, and other aspects\n                    of the races of destiny, including the \\Monster{illumians}---a new race\n                    presented here. In addition to new subraces and monster races playable as\n                    characters, \\Product{Races of Destiny} also provides new prestige classes,\n                    feats, spells, magic items, equipment, and guidelines for crafting memorable\n                    adventures within \\Monster{human} settlements.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, \\Product{Dungeon Master\'s Guide}, and \\Product{Monster Manual}. A\n                    player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Races of Destiny"
+subtitle: "Heroes Adapted to Adventure"
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Rosenberg, Aaron"
+}
+author {
+  name: "Collins, Andy"
+  job: "development team"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "development team"
+}
+author {
+  name: "Finch, Andrew J."
+  job: "development team"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Collins, Greg"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Rex, Adam"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Cod, Ed"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Hudnut, David"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Miracola, Jeff"
+}
+illustrator {
+  name: "Moore, Monte"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Phillippi Michael"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art directory RPG"
+}
+illustrator {
+  name: "Murin Dawn"
+  job: "art director D&D"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bob Jordan"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Finch, Andrew J."
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josch"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3653"
+  check: 3
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Races"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8501"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Dungeon of Dead"
+date {
+  year: 1982
+}
+isbn {
+}
+isbn13 {
+}
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+number: "Book One"
+price {
+}

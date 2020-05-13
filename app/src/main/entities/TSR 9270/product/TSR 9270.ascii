@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9270"
+  synonym: "WG12"
+  reference {
+    name: "net price list"
+  }
+  world: "Greyhawk"
+}
+title: "Vale of the Mage"
+date {
+  year: 1990
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

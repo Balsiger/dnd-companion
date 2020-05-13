@@ -1,0 +1,24 @@
+template {
+  name: "TSR 3583"
+  reference {
+    name: "catalog93"
+  }
+}
+title: "Cities of Tomorrow"
+date {
+  year: 1993
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "390"
+  check: 6
+}
+isbn13 {
+}
+system: XXVC
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}

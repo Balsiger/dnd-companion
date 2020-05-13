@@ -1,0 +1,18 @@
+template {
+  name: "TSR 5305"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "AD&D Monster Tribes"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

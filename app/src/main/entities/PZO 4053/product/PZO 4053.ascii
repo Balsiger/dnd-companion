@@ -1,0 +1,48 @@
+template {
+  name: "PZO 4053"
+  category: "map pack"
+  category: "map"
+  synonym: "Pathfinder Map Pack: Boarding Action"
+  synonym: "Map Pack: Boarding Action"
+  world: "Generic"
+  description: "Dawn breaks over the waters and a salty tang seasons the breeze, promising fair winds and following seas. Whether your heroes are investigating mutinous intrigues or setting off for treasure-laden pirate islands, there\342\200\231s no need to sketch every gangway and gunwale. This Pathfinder Map Pack provides stunningly crafted 5\" \303\227 8\" map tiles that can be positioned to form a variety of modular, customizable ship decks. Inside, you\342\200\231ll find 18 richly crafted map tiles, including:\n\n\\list\n{Prow and Figurehead}\n{Cluttered Stern}\n{Port Companionway}\n{Starboard Rail}\n{Boarding Planks}\n{Narrow Forecastle}\n{Tiller Deck}\n{Cargo Grate}\n{Treasure Chest Alcove}\n\nGame Masters shouldn\342\200\231t waste their time drawing maps every time adventurers brave the deep blue sea. With Pathfinder Map Pack: Boarding Action, you\342\200\231ll be ready whenever the horizon calls!\nWet, dry, and permanent markers erase from the tiles! With revised packaging that includes a reusable box for easy storage, Map Packs have never been so useful!"
+  short_description: "Map tiles for ship action."
+}
+title: "Boarding Action"
+subtitle: "Batten Down the Hatches!"
+cartographer {
+  name: "Engle, Jason"
+}
+date {
+  year: 2015
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "713"
+}
+system: NONE
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Paizo"
+series: "Pathfinder Map Pack"
+series: "Map Pack"
+price {
+  currency: "$"
+  number: 1399
+  precision: 100
+}
+content {
+  part: BOX
+  description: "packaging"
+  number: 1
+}
+content {
+  part: MAP
+  description: "tile"
+  number: 18
+}
+layout: FULL_COLOR

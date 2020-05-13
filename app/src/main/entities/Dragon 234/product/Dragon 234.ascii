@@ -1,0 +1,182 @@
+template {
+  name: "Dragon 234"
+  world: "Generic"
+}
+title: "Dragon 234"
+author {
+  name: "Knioum, Jay"
+}
+author {
+  name: "Nossal, Jamie"
+}
+author {
+  name: "Mullin, Robert S."
+}
+author {
+  name: "Clifton, Ross Allen"
+}
+author {
+  name: "Brown, Steven"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Wiese, Robert"
+}
+author {
+  name: "Melka, Kevin"
+}
+author {
+  name: "Thauberger, Rudy"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Bunnell, John C."
+}
+author {
+  name: "Eckelberry, David"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "associate editor"
+}
+editor {
+  name: "Baldwin, Lizz"
+  job: "editorial assistant"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+cover {
+  name: "Pollak, Alan"
+}
+cover {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Ludeke, Charles"
+}
+illustrator {
+  name: "Holloway, James"
+}
+illustrator {
+  name: "Burdick, Scott"
+}
+illustrator {
+  name: "Smith, Larry"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Cook, Storn"
+}
+illustrator {
+  name: "Dollar, John"
+}
+illustrator {
+  name: "Longmier, Pete"
+}
+illustrator {
+  name: "VanTilburg, Ray"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Guss, Mathew"
+}
+illustrator {
+  name: "Pillsbury, Joe"
+}
+illustrator {
+  name: "Wagner, Edward"
+}
+illustrator {
+  name: "Hrenchuk, Bill"
+}
+illustrator {
+  name: "Cavalier, Bill"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Atnip, Dana"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1996
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXI 5"
+number: "234"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

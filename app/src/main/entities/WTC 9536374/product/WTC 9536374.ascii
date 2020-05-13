@@ -1,0 +1,109 @@
+template {
+  name: "WTC 9536374"
+  world: "Eberron"
+  description: "The \\Item{Golden Dragon}, conceived as a skyfaring warship, now serves as a\n  symbol of peace among the \\Place{Five Nations}. Even before the luxurious\n  airship embarks on its maiden voyage, nefarious pirates, thieves, and\n  saboteurs conspire to defame, steal, or destroy it. Resourceful adventurers\n  are needed to protect the ship and its passengers, but can they uncover the\n  secret enemy lurking in their midst?\n\n  \\Product{Voyage of the Golden Dragon} is a stand-alone adventure for the\n  Dungeon & Dragons game that immerses your characters in the \\Product{Eberron\n  campaign setting}. Designed to challenge 7th-level characters, it takes\n  heroes on a perilous journey from \\Place{Sharn} to \\Place{Stormreach} and\n  also serves as a launching pad for adventures the world over.\n\n  The fourth stand-alone adventure for the \\Place{Eberron} campaign setting.\n\n  This low-level stand-alone \\Place{Eberron} adventure revolves around the\n  maiden voyage of the \\Item{Golden Dragon}, an immense elemental\n  \\Item{skyship} created as a symbol of peace by the \\Place{Five Nations of\n  Khorvaire}. On the \\Item{Golden Dragon} itself and at the locations it\n  visits, the player characters must unravel plots of intrigue against the ship\n  and its important passengers. Though it is not necessary to play the previous\n  \\Place{Eberron} adventures before \\Product{Voyage of the Golden Dragon},\n  sidebars explaining how they can be linked together are included."
+}
+title: "Voyage of the Golden Dragon"
+subtitle: "Set a Course for Adventure"
+author {
+  name: "Logue, Nicolas"
+}
+author {
+  name: "Stark, Ed"
+  job: "additional design"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "proofreader"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Hill, Jonathan"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Hanson, Lisa"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Sansaver, Ryan"
+  job: "Eberron brand art director"
+}
+typographer {
+  name: "Cheung, Carmen"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3907"
+  check: 9
+}
+isbn13 {
+}
+pages: 32
+system: DND_3_5
+type: ADVENTURE
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Eberron Campaign Setting"
+layout: COLOR_COVER

@@ -1,0 +1,47 @@
+template {
+  name: "WTC 9598874"
+  world: "Eberron"
+  description: "\\Item{Ashrem\'s Legacy} has been found, and it lies in the hands of a madman.\n\nAs one of the deadliest weapons of the \\Event{Last War} races to \\Place{Sharn}, the greatest city in all the \\Place{Five Nations}, it is up to a desperate band of heroes to stop it before it causes world-shaking devastation. The fate of the world\'s fragile peace rests in the hands of the renegade knights, fortune-seekers, a thief out for vengeance, and an assassin who bends shadow and darkness to his will. But behind it all, the \\NCP{Mad Prophet Zamiel} begins his final gambit, and secrets buried for millennia will finally be revealed."
+}
+title: "Rise of the Seventh Moon"
+subtitle: "The Legacy Reborn"
+author {
+  name: "Rich Wulf"
+}
+cover {
+  name: "Straub, Philip"
+}
+date {
+  year: 2007
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4342"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4342"
+  check: 5
+}
+pages: 313
+system: DND_1ST
+type: NOVEL
+style: BOX
+producer: "WTC"
+number: "Book 3"
+series: "Heirs of Ash"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

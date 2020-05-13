@@ -1,0 +1,43 @@
+template {
+  name: "TSR 2160"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "Base rules for the DM."
+}
+title: "Dungeon Master Guide"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+date {
+  year: 1995
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0328"
+  check: 7
+}
+isbn13 {
+}
+pages: 256
+system: ADND_REVISED
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

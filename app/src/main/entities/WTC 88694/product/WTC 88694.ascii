@@ -1,0 +1,34 @@
+template {
+  name: "WTC 88694"
+  world: "Dragonlance"
+  description: "\\Product{The Kingpriest trilogy} chronicles the origins and development of a\n  noted figure from the \\Product{Dragonlance Legends} trilogy, linking this new\n  series to one of the top-selling trilogies in the entire \\Place{Dragonlance}\n  backlist. \\Place{Dragonlance} is a rich world that lends itself to revisiting\n  popular characters from prior series--an integral part of the publishing\n  program."
+}
+title: "Chosen of the Gods"
+author {
+  name: "Pierson, Chris"
+}
+date {
+  year: 2001
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1902"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume One"
+series: "The Kingpriest Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

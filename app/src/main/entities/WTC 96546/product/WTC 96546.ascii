@@ -1,0 +1,37 @@
+template {
+  name: "WTC 96546"
+  world: "Dragonlance"
+  description: "The second title in the second \\Place{Dragonlance} novel trilogy is now\n  being released for the first time ever in a trade hardcover\n  edition. Featuring the stunning art and design that graced the cover of the\n  paperback edition, the new version of this series is a follow-up to the\n  release of the \\Place{Dragonlance} novels Chronicles trilogy in hardcover in\n  2003."
+}
+title: "War of the Twins"
+author {
+  name: "Weis, Margeret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 2004
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3217"
+  check: 1
+}
+isbn13 {
+}
+pages: 400
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume 2"
+series: "Dragonlance Legends"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}

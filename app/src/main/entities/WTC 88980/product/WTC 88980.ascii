@@ -1,0 +1,34 @@
+template {
+  name: "WTC 88980"
+  world: "Generic"
+  description: "\\Product{The Silver Spell} continues a new series of adventures written\n  specifically for readers ages 8-12. Sized to fit young readers, the series\n  follows the adventures of three children who, through their heroic deeds,\n  become members of the Order of the \\Group{Knights of the Silver Dragon}. This\n  opportunity will be extended to readers of the series as well, whereby young\n  readers can become Knights of the Silver Dragon. Young readers are encouraged\n  to join and participate in the club, and in turn they will receive free\n  giveaways, special correspondence, and other benefits. The series will be\n  given extensive support through knightsofthesilverdragon.com."
+}
+title: "Silver Spell"
+leader: "The"
+author {
+  name: "Banerjee, Anjali"
+}
+date {
+  year: 2005
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3750"
+  check: 5
+}
+isbn13 {
+}
+pages: 192
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Knights of the Silver Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

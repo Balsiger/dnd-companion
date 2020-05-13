@@ -1,0 +1,35 @@
+template {
+  name: "TSR 8303"
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+}
+title: "Chronicles Trilogy Gift Set"
+author {
+  name: "Margaret Weis"
+}
+author {
+  name: "Tracy Hickman"
+}
+date {
+  year: 1993
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "172"
+  check: 8
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "all volumes"
+series: "Chronicles Trilogy"
+price {
+  currency: "$"
+  number: 1485
+  precision: 100
+}

@@ -1,0 +1,177 @@
+template {
+  name: "Dragon Annual 1998"
+  world: "Generic"
+  description: "Annual issue of 1998. "
+}
+title: "Dragon Annual 1998"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Brown, Lloyd III"
+}
+author {
+  name: "Stephens, Owen K.C."
+}
+author {
+  name: "Melka, Kevin"
+}
+author {
+  name: "Dakan, Richard \'Ricko\'"
+}
+author {
+  name: "Bartell, Steve"
+}
+author {
+  name: "Selinker, Mike"
+}
+author {
+  name: "Poirier, Ron"
+}
+author {
+  name: "Knioum, Jay"
+}
+author {
+  name: "Coleman, Loren L."
+}
+author {
+  name: "Graham, Noel"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Denning, Troy"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistant editor"
+}
+editor {
+  name: "Carlson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "Frazier, Dan"
+}
+cartographer {
+  name: "Kekumu, Linda"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Horne, David"
+}
+illustrator {
+  name: "Gregory, D. Alexander"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Schwartz, Stephen"
+}
+illustrator {
+  name: "Kooharian, David"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Vilardi, Mike"
+}
+illustrator {
+  name: "Gehring, David"
+}
+illustrator {
+  name: "Meyer, Dwaine"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+illustrator {
+  name: "Ricker, Scott"
+  job: "designer"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Dunn, John."
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising traffic manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "advertising traffic coordinator"
+}
+manager {
+  name: "Blaskowsky, Barbara"
+  job: "circulation manager"
+}
+date {
+  year: 1998
+}
+isbn {
+}
+isbn13 {
+}
+pages: 120
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIII 13 Annual"
+number: "Annual 1998"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

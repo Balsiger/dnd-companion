@@ -1,0 +1,49 @@
+template {
+  name: "TSR 8090"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Al-Qadim"
+  description: "You are a young pearl diver who is propelled into an amazing adventure when\n  you uncork an old bottle you discover at the bottom of the sea.\n\n  You are whisked far from your home in \\Place{Zakhara}, the \\Place{Land of\n  Fate}, on a magical quest to free the king of the \\Monster{sea djinn}. There\n  are many decisions you must make along the way. You are courageous and\n  clever, but can you hope to overcome the dangers that lie before you? Riches\n  and fame could be yours if you choose the correct path.\n\n  Only your choices can help you discover the \\Product{Secret of the Djinn}.\n\n  \\Product{Endless Quest} Books are action-packed stories based on exciting\n  role-playing games that allow you, the reader, to make the decisions that\n  determine the adventure\'s outcome. Read them over and over to experience new\n  paths of excitement!\n\n  \\Product{Endless Quest} Books, where you control the adventure!"
+}
+title: "Secret of the Djinn"
+author {
+  name: "Jean Rabe"
+}
+cover {
+  name: "Jeff Easley"
+}
+illustrator {
+  name: "Terry Dykstra"
+}
+date {
+  year: 1994
+  month: 5
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "864"
+  check: 9
+}
+isbn13 {
+}
+pages: 188
+system: ENDLESS_QUEST
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Three"
+series: "New Series"
+price {
+  currency: "\303\224\303\270\316\251 "
+  number: 399
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

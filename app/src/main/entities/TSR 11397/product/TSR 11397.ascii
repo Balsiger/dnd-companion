@@ -1,0 +1,69 @@
+template {
+  name: "TSR 11397"
+  world: "Ravenloft"
+  description: "\\emph{Under raging stormclouds, a lone figure stands upon the ancient walls\n                    of \\Place{Castle Ravenloft}. Lightning splits the sky, its cold light\n                    revealing a tall form wrapped in a billowing cape of shadows. Another flash\n                    exposes a face full of power and madness, contorted by a tragedy darker than\n                    the night. Far below, a party of adventurers has entered his dread domain. He\n                    smiles. Another lightning bold rips through the night, but the figure is\n                    gone. Only a howling wind fills the midnight air.\n                    domain. \\NPC{Strahd}\'s face forms a twisted smile as his dark plan\n                    unfolds. He knew they were coming, and he knows why they came, all according\n                    to his plan. He, the master of \\Place{Ravenloft}, will attend to them.\n                    The master of \\Place{Castle Ravenloft} is having guests for dinner---and\n                    you\'re invited!}\n                    Originally published in 1983, this classic adventure for four to eight\n                    characters of levels 5 to 7 mixes elements of gothic horror with AD&D fantasy\n                    for a unique experience. Updated to 2nd Edition, \\Product{Ravenloft} features\n                    a haunted castle, gypsy fortunetellers, a tragic back story, and a\n                    \\Monster{vampire} who is as powerful and intelligent as he is frightening---a\n                    menace worthy of the braves adventuring party!"
+}
+title: "Ravenloft"
+author {
+  name: "Hickman, Tracy"
+}
+author {
+  name: "Hickman, Laura"
+}
+author {
+  name: "Nesmith, Bruce"
+}
+editor {
+  name: "Cagle, Eric"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+cartographer {
+  name: "Sutherland, David"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Crabtree, James"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "art coordination"
+}
+date {
+  year: 1999
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 48
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+series: "Silver Anniversary"
+series: "RPGA"
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "separate cover"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "color"
+  number: 1073741824
+}

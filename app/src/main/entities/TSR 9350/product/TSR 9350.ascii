@@ -1,0 +1,32 @@
+template {
+  name: "TSR 9350"
+  synonym: "Entry 2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "mount an assault against the kobolds, levels 2-3"
+}
+title: "Assault on Raven\'s Ruin"
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "379"
+  check: 5
+}
+isbn13 {
+}
+system: DND_1ST
+type: ADVENTURE
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

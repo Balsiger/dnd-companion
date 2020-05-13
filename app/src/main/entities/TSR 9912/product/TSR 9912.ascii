@@ -1,0 +1,36 @@
+template {
+  name: "TSR 9912"
+  reference {
+    name: "DMA 000005"
+  }
+  description: "Now let your imagination run rampant through 136 pages featuring the best in\n  adventure games and books: the \\emph{1993 TSR Master Catalog - Collector\'s\n  Edition}.\n\n  Inside you will find:\n  \\list\n  {the history of the Dungeons & Dragons game and TSR, Inc. accompanied\n   by lavish illustrations}\n  {32 pages of unique insights into all of TSR\'s game worlds---written\n   by the designers synonymous with each---that appear only in this\n   edition}\n  {A brilliant, visual tour of TSR\'s game worlds and campaign settings}\n  {Four-color illustrations of all game and book releases for 1993}\n  {The description, on sale date, and suggested retail price for each\n   new product}\n  {And, so you won\'t miss a treasure, all product releases from the\n   past that are currently available are listed}\n\n  You get all this and more!\n\n  \\bold{Open the door to adventure!}"
+}
+title: "1993 TSR Master Catalog - Collector\'s Edition"
+author {
+  name: "TSR Staff"
+}
+date {
+  year: 1993
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "621"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: CATALOG
+style: HARDCOVER
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

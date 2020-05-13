@@ -1,0 +1,35 @@
+template {
+  name: "TSR 9275"
+  synonym: "DLA1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+}
+title: "Dragon Dawn"
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "823"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+number: "Module One"
+series: "Taladas Trilogy"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

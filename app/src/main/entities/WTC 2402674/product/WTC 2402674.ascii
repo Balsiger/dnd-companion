@@ -1,0 +1,48 @@
+template {
+  name: "WTC 2402674"
+  world: "Forgotten Realms"
+  description: "A silent city of stone houses the people of \\Place{Waterdeep}\'s past.\n                    Locking them up in crypts, mausoleums, and cages.\n                    The dead don\'t rest easy in the\n                    \\larger{City of the Dead}\n                    \\Place{Waterdeep} is an old city and many have died there. Most are entombed in the vast, sprawling \\Place{City of the Dead}, a cemetery of stone crypts and greenery that serves as a park by day ... and the haunted abode of the dead by night, where the living are slain, die of fright, or are driven mad with terror.\n                    All except one family. The \\Group{Carvers}, the clan who tends the tombs and sees to the spadework of burials ... and of trying to keep the dead at rest in their graves. Generations of Carvers have done this quite well, so the dead who walk can\'t leave the cemetery to roam the city at will.\n                    Until the day \\NPC{Sophraea Carver} makes a mistake.\n                    "
+  short_description: "The 4th book in the Ed Greenwood Presents Waterdeep series."
+}
+title: "City of the Dead"
+subtitle: "Ed Greenwood Presents Waterdeep"
+author {
+  name: "Jones, Rosemary"
+}
+cover {
+  name: "Jones, Android"
+}
+date {
+  year: 2009
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5129"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5129"
+  check: 1
+}
+pages: 305
+system: NONE
+type: NOVEL
+style: BOOKLET
+producer: "WTC"
+number: "4"
+series: "Ed Greenwood Presents Waterdeep"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

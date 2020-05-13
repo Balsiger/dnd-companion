@@ -1,0 +1,58 @@
+template {
+  name: "WTC 17620"
+  world: "Forgotten Realms"
+  description: "\\NPC{Tristan}, new-crowned king of the \\Group{Ffolk}, and \\NPC{Robyn} the\n                    druid must confront an evil that threatens their beloved \\Place{Moonshae\n                    Isles}. But they must also resolve their own relationship -- and decide if\n                    they will rule as king and queen or live forever as bitter enemies.\n                    Published in 1989, \\Product{Darkwell} was the final novel in the first\n                    trilogy ever set in the \\Place{Forgotten Realms} world. Unavailable for the\n                    past several years, this title is now being brought back into print in a\n                    newly-recovered mass market edition."
+}
+title: "Darkwell"
+subtitle: "The ultimate struggle of good and evil..."
+author {
+  name: "Niles, Douglas"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2004
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3566"
+  check: 9
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "Moonshae Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

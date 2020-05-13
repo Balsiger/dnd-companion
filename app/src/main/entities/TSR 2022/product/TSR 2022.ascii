@@ -1,0 +1,66 @@
+template {
+  name: "TSR 2022"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "\\emph{...from \\Place{Arcadia} to \\Place{Pandemonium}, from the \\Place{plane\n                    of elemental Fire} to the \\Place{Astral plane}, vast new worlds of adventure\n                    are now open to players.}\n                    A vital source book for players and DMs of all levels of experience, the\n                    \\Product{Manual of the Planes} details the manifold worlds of the known\n                    planes of existence. This book describes the inhabitants, rules, and\n                    environments of these worlds, as well as rules for movement, survival,\n                    combat, and spell use in these alien surroundings. A different style of AD&D\n                    adventures awaits!"
+}
+title: "Manual of the Planes"
+author {
+  name: "Grubb, Jeff"
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Sutherland, Dave"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+typographer {
+  name: "Lindau, Kim"
+}
+manager {
+  name: "Myers, Susan R."
+  job: "graphic design and keylining"
+}
+manager {
+  name: "Taba, Stephanie"
+  job: "graphic design and keylinging"
+}
+date {
+  year: 1987
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "399"
+  check: 2
+}
+isbn13 {
+}
+pages: 128
+system: ADND_1ST
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

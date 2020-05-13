@@ -1,0 +1,137 @@
+template {
+  name: "WTC 88581"
+  world: "Forgotten Realms"
+  description: "The ebon depths of the \\Place{Underdark} have spawned more fables and fears\n                    than any other region of \\Place{Faer\\hat{u}n}. In this lightless world, the\n                    hazards of its unforgiving wilderness are exceeded only by the perils found\n                    within the communities of races such as the \\Monster{aboleths},\n                    \\Monster{illithids}, \\Monster{duergar}, and \\Monster{drow}. Explore the\n                    labyrinthine tunnels and endless caverns of the \\Place{Realms Below} to\n                    encounter denizens and dangers of one of the most intriguing, inhospitable\n                    regions in the \\Product{Forgotten Realms} game setting.\n                    \\list\n                    {60 cities and sites of interest}\n                    {16 character races}\n                    {25 new feats}\n                    To use this accessory, you also need the \\Product{Forgotten Realms Campaign\n                    Setting}, the \\Product{Player\'s Handbook}, the \\Product{Dungeon Master\'s\n                    Guide}, and the \\Product{Monster Manual}."
+}
+title: "Underdark"
+subtitle: "Descend into the Darkest Reaches of the Realms"
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+}
+author {
+  name: "Quick, Jeff"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "additional design and development"
+}
+editor {
+  name: "Williams, Penny"
+}
+editor {
+  name: "McQuillan, Bill"
+  job: "managing editor"
+}
+cover {
+  name: "Wood, Sam"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+illustrator {
+  name: "Dubisch, Mike"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Faulkner, Matt"
+}
+illustrator {
+  name: "Kovacs, Vance"
+}
+illustrator {
+  name: "Locke, Vince"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Rams, Vinod"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Tappin, Stephen"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "art director"
+}
+typographer {
+  name: "Raper, Robert"
+  job: "graphic design"
+}
+typographer {
+  name: "Campbell, Robert"
+  job: "graphic design"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Stark, Ed"
+  job: "design manager"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Kirchoff, Mary"
+  job: "vice-president publishing"
+}
+manager {
+  name: "Durham, Martin"
+  job: "project manager"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production manager"
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3053"
+  check: 5
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 3295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

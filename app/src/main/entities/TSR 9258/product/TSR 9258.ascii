@@ -1,0 +1,73 @@
+template {
+  name: "TSR 9258"
+  synonym: "OA7"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The peninsula of \\Place{Wa} is no place to visit. The land is poor, the\n                    people wary and suspicious. Yet this quiet backwater has been the site of\n                    strange disturbances---mysterious disappearances and omens of dire events to\n                    come. Why do the animals of \\Place{Wa} mysteriously disappear, only to return\n                    a short while later? Who are the \\Group{Blue Kumi} bandits, and why are they\n                    so active? Who do the black geese fly into the \\Place{Jusofu Mountains}? And\n                    what fell creature lurks along the southern coast of \\Place{Wa}?\n                    Or does the stench of corruption emanate from the \\Group{Celestial\n                    Bureaucracy} itself? Could the danger, unchecked, grow great enough to doom\n                    all living creatures in \\Place{Kara-Tur}? Which clues will lead to the truth,\n                    and which are merely traps for the unwary...\n                    \\Product[TSR 9258]{Test of the Samurai} will take the players across the\n                    \\Place{Wa} peninsula and to the unknown land of \\Place{Qui}. They will\n                    encounter such legendary beasts as the \\Monster[Feng Huan]{feng huan}\n                    (\\Monster[Phoenix]{phoenix}) and the \\Monster[Chi\'-Lin]{chi\'-lin}\n                    (\\Monster[Unicorn]{unicorn}) as they attempt to discover the secrets of\n                    \\Place{Wa}.\n                    \\Product[TSR 9258]{Test of the Samurai} is a scenario for the \\Product[TSR\n                    2018]{Oriental Adventures} supplement to the AD&D game. It is set in\n                    \\Place{Kara-Tur}, the oriental world in the \\Place{Forgotten\n                    Realms}. Although \\Product[TSR 9258]{Test of the Samurai} follows the events\n                    of module OA6, \\Product[TSR 9257]{Ronin Challenge}, it is an independent\n                    adventure for five to eight characters of Levels 6--9."
+}
+title: "Test of the Samurai"
+author {
+  name: "Swan, Rick"
+}
+editor {
+  name: "Pickens, Jon"
+}
+cover {
+  name: "Holloway, Jim"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "MacDonald, Kathleen C."
+}
+manager {
+  name: "Parker, Roy E."
+  job: "graphic design"
+}
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Oriental Adventures"
+price {
+  currency: "\302\254\302\243 "
+  number: 650
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

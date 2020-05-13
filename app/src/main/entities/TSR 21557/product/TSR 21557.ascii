@@ -1,0 +1,39 @@
+template {
+  name: "TSR 21557"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 267"
+  }
+  world: "Forgotten Realms"
+  description: "all the books of the Icewind Dale Triloty, Collectors Edition"
+}
+title: "Icewind Dale Collector\'s Edition"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+date {
+  year: 2000
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1557"
+  check: 9
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Collector\'s Edition"
+series: "Icewind Dale Trilogy"
+price {
+  currency: "$"
+  number: 2795
+  precision: 100
+}

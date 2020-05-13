@@ -1,0 +1,31 @@
+template {
+  name: "TSR 9360"
+  synonym: "WGR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Greyhawk"
+  description: "several mini adventures"
+}
+title: "Treasures of Greyhawk"
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "366"
+  check: 3
+}
+isbn13 {
+}
+system: ADND_1ST
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

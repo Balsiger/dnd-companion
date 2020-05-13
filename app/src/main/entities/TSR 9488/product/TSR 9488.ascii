@@ -1,0 +1,85 @@
+template {
+  name: "TSR 9488"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 221"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  world: "Forgotten Realms"
+  description: "In part one of the \\Product[Randal Morn Trilogy]{Randal Morn trilogy},\n                    \\Product[TSR 8484]{The Sword of the Dales}, the legendary leader of\n                    \\Place{Daggerdale}, \\NPC{Randal Morn}, was captured by unknown assailants as\n                    he sought to regain the great weapon for which that adventure was named. A\n                    stalwart band of young and enthusiastic heroes was recruited to ride to his\n                    aid, yet all they recovered was the \\Item[The Sword of the Dales]{Sword}\n                    itself and a message: \'Seek me in \\Place[Spiderhaunt Woods]{Spiderhaunt\n                    Wood}\'. In the second part of the trilogy, \\Product[TSR 9485]{The Secret of\n                    Spiderhaunt}, those same adventurers found \\NPC[Randal Morn]{Randal} and\n                    freed him briefly, yet he was almost as quickly torn from their grasp by an\n                    agent of the evil \\Group{Zhentarim}, seeking to end the threat of \\NPC{Randal\n                    Morn}\'s return to power.\n                    In this final episode, the heroes must follow the kidnapper\'s trail and\n                    rescued \\NPC{Randal Morn} before the \\Group{Zhentarim} finish interrogating\n                    him and the axe falls upon his neck. Armed with the \\Item[The Sword of the\n                    Dales]{Sword of the Dales} and aided by a powerful magical spirit that lives\n                    within the weapon, the heroes must march into the heart of \\Group{Zhent}\n                    occupied \\Place{Dagger Falls}, free \\NPC{Randal Morn}, and save the city from\n                    utter destruction. The job is dangerous---perhaps more than the heroes can\n                    handle---yet those who would live in songs and legends cannot concern\n                    themselves with living to a ripe old age!\n                    This is the final part of a trilogy of modules that began with \\Product[TSR\n                    9484]{The Sword of the Dales} and \\Product[TSR 9485]{The Secret of\n                    Spiderhaunt}."
+}
+title: "Return of Randal Morn"
+leader: "The"
+author {
+  name: "Butler, James"
+}
+editor {
+  name: "Lassieur, Allison"
+}
+cover {
+  name: "Eagle, Bruce"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Danforth, Elizabeth T."
+}
+typographer {
+  name: "Kerkstra, Nancy J."
+}
+manager {
+  name: "Wise, David"
+  job: "project coordination"
+}
+manager {
+  name: "Ciske, Renee"
+  job: "graphic design"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0170"
+  check: 5
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+number: "3"
+series: "Daggerdale"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

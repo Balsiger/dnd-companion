@@ -1,0 +1,29 @@
+template {
+  name: "TSR 7514"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  description: "a world centuries after the complete destruction of civilization"
+}
+title: "Gamma World"
+date {
+  year: 1993
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "401"
+  check: 5
+}
+isbn13 {
+}
+system: GAMMA_WORLD
+type: CAMPAIGN_SETTING
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

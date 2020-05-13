@@ -1,0 +1,43 @@
+template {
+  name: "TSR 3123"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Birthright"
+  description: "sea power ruled by wizards"
+}
+title: "Khourane"
+author {
+  name: "Brown, Anne K."
+}
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0397"
+  check: 10
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+audience: PLAYER
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}

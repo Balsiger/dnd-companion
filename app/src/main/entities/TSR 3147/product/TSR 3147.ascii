@@ -1,0 +1,59 @@
+template {
+  name: "TSR 3147"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  world: "Birthright"
+  description: "the savage lands of the brutal Vos, laid open"
+}
+title: "Tribes of the Heartless Wastes"
+author {
+  name: "Stark, Ed"
+}
+date {
+  year: 1997
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0773"
+  check: 8
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "war"
+  number: 32
+}

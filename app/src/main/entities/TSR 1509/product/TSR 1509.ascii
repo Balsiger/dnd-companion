@@ -1,0 +1,47 @@
+template {
+  name: "TSR 1509"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  world: "Generic"
+  description: "Dragon Dice Book, book two"
+}
+title: "Army of the Dead"
+author {
+  name: "van Belkom, Edo"
+}
+date {
+  year: 1997
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0652"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: DRAGON_DICE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: DICE
+  description: "DRAGON DICE"
+  number: 1
+}

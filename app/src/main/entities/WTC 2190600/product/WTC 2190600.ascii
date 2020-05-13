@@ -1,0 +1,44 @@
+template {
+  name: "WTC 2190600"
+  synonym: "DU3"
+  world: "Generic"
+  description: "Your tabletop never looked better! With Dungeons & Dragons miniatures and this pack of customizable terrain tiles, you can add a new dimension to your D&D adventures. Easy to set up and infinitely expandable, this pack allows you to create the D&D adventures you want to play. Pick up additional packs to create larger, more elaborate encounters!"
+  short_description: "Dungeon Tiles"
+}
+title: "Caves of Carnage"
+subtitle: "Explore the Deadly Caverns of the Underdark"
+date {
+  year: 2009
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5019"
+  check: 6
+}
+isbn13 {
+}
+pages: 6
+system: DND_3_5
+type: ACCESSORY
+style: FOLDER
+producer: "WTC"
+number: "DU3"
+series: "Dungeon Tiles"
+price {
+  currency: "$"
+  number: 995
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "durable, double-sided map grids"
+  number: 6
+}
+layout: FULL_COLOR

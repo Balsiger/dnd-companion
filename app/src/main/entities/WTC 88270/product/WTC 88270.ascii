@@ -1,0 +1,59 @@
+template {
+  name: "WTC 88270"
+  world: "Dragonlance"
+  description: "The \\Event{Summer of Chaos} swept its devastation across the world of\n  \\Place{Krynn}. In its wake, foul dragon overlords of immeasurable power\n  conquered \\Place{Ansalon} and remade the lands in their own image. But\n  \\NPC{Malystryx}, the greatest and most evil of all the \\Monster{dragons}, is\n  no longer content with ruling her domain. She wants to ascend to godhood, and\n  only one band of stalwart heroes stands in her way."
+}
+title: "Eve of the Mealstrom"
+leader: "The"
+subtitle: "In an age of tyranny, one evil rises above all others."
+author {
+  name: "Rabe, Jean"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2860"
+  check: 3
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Three"
+series: "Dragon of a New Age"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

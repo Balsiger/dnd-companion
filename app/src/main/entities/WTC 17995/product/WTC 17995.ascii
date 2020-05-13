@@ -1,0 +1,61 @@
+template {
+  name: "WTC 17995"
+  world: "Dragonlance"
+  description: "First launched over a decade ago, the \\Product{Preludes} series has\n  continued to prove popular with \\Place{Dragonlance} fans. This rerelease of\n  \\Product{Tanis, The Shadow Years} showcases a new look that is also reflected\n  in the other recovers of this series. The title features cover art from lead\n  \\Place{Dragonlance} saga artist Matt Stawicki."
+}
+title: "Tanis, The Shadow Years"
+author {
+  name: "Siegel, Barbara"
+}
+author {
+  name: "Siegel, Scott"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3039"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Six"
+series: "Preludes"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

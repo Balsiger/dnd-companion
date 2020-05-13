@@ -1,0 +1,32 @@
+template {
+  name: "WTC 88167"
+  world: "Generic"
+  description: "\\large{The Blood of Ancient Battle Rises}\n                    \\emph{An eternal demonic war draws dangerously close to an end, threatening\n                    the balance of all existence. At the crux of this chaotic feud resides a\n                    legendary terror fixated upon immortality at any cost. Only the most powerful\n                    heroes can hope to defeat a force that lies beyond the influence of the\n                    gods.}\n                    \\Product{Bastion of Broken Souls} is a stand-alone adventure for the\n                    \\Product{Dungeons & Dragons} game. Designed to challenge 18th-level D&D\n                    heroes, it pits them against some of the most powerful beings in the\n                    \\Place{multiverse}.\n                    To use this accessory, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}."
+}
+title: "Bastion of Broken Souls"
+date {
+  year: 2002
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2656"
+  check: 2
+}
+isbn13 {
+}
+pages: 48
+system: DND_3RD
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

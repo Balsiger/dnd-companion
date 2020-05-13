@@ -1,0 +1,18 @@
+template {
+  name: "DMA 000040"
+  synonym: "TSRGN12"
+  reference {
+    name: "complete product listing"
+  }
+  description: "Unknown"
+}
+title: "Hex Grid Mapping Paper (2-sided)"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+}

@@ -1,0 +1,91 @@
+template {
+  name: "TSR 2127"
+  synonym: "PHBR7"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Thief, musician, clown, actor, acrobat---just a partial list of the many\n                    twists on the bard class to be found in this book! Seventeen bard kits,\n                    multitudes of abilities and powers, new magical items, new proficiencies,\n                    rules for gaining patrons and followers, over 100 bardic instruments, and\n                    much more await you within. \\Product{The Complete Bard\'s Handbook} gives you\n                    everything you need to create a bard the world will never forget!"
+}
+title: "Complete Bard\'s Handbook"
+leader: "The"
+author {
+  name: "Mobley, Blake"
+}
+author {
+  name: "Beach, Tim"
+}
+editor {
+  name: "Breault, Mike"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+illustrator {
+  name: "Heyer, Carol"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Orbik, Glen"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "360"
+  check: 4
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "7"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

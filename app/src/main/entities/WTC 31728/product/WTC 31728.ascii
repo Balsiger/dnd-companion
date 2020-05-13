@@ -1,0 +1,54 @@
+template {
+  name: "WTC 31728"
+  world: "Generic"
+  description: "\\Group{The Order of Vigilance}, erstwhile warden of the \\Item{Voidharrow} --- a malefic crystalline liquid from the heart of a dead \\Place{abyss} --- are at the precipice of cataclysm. \n\nIn their search for the true nature of the Abyssal plague sweeping the \\Place{Nentir Vale}, \\NPC{Albanon} and \\NPC{Kri Redshal} delve deeply into the mysteries. And as they learn more about the pestilential \\Item{Voidharrow}, they see the forces behind it are more powerful than they had ever dreamed... and perhaps more seductive.\n\nThe \\Monster{green dragon} \\NPC{Vestapalk}, or the creature he has become, still roams the land, an army of plague demons at his command. He was to be an instrument of the \\God{Chained God}, \\God{Tharizdun}. Destroyer, death bringer, the end he seeks is that of everything."
+  short_description: "An abyssal plague novel set in Greyhawk."
+}
+title: "Oath of Vigilance"
+subtitle: "Born of the liquid Abyss, the world knows a new affliction..."
+author {
+  name: "Wyatt, James"
+}
+editor {
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2011
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5816"
+}
+pages: 368
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "The Abyssal Plague"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

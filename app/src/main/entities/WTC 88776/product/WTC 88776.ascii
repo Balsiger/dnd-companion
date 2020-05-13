@@ -1,0 +1,61 @@
+template {
+  name: "WTC 88776"
+  world: "Forgotten Realms"
+  description: "This novel is set in the most important city of the \\Place{Forgotten Realms}\n                    setting: \\Place{Waterdeep}, city of intrigue and secrets. Its authors are\n                    considered to be among the most authoritative figures writing in the\n                    \\Place{Forgotten Realms} setting. This novel is their first collaboration."
+}
+title: "City of Splendors"
+leader: "The"
+subtitle: "A Waterdeep Novel"
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Cunningham, Elaine"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3766"
+  check: 1
+}
+isbn13 {
+}
+pages: 480
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+series: "The Cities"
+price {
+  currency: "$ "
+  number: 2495
+  precision: 100
+}

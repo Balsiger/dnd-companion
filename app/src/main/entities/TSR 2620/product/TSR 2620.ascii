@@ -1,0 +1,41 @@
+template {
+  name: "TSR 2620"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  reference {
+    name: "Dragon 233"
+  }
+  world: "Planescape"
+  description: "\\large{The Secret of Survival Ain\'t Who You Are, Berk---It\'s What You Know!}\n                    \\right{---Planewalker \\NPC{Adage}}\n                    Feeling overwhelmed by the infinite possibilities of the \\Place{multiverse}?\n                    Wondering how to role-play a \\Monster{tiefling}, what spells to memorize, and\n                    how to manipulate portals? Here\'s the dark of it: The \\Product{Planewalker\'s\n                    Handbook} is the essential manual for survival on the \\Place{planes}---a\n                    \\Product{Player\'s Handbook} for the \\Product{Planescape} setting! This\n                    160-page book, written for players and Dungeon Masters alike, builds on\n                    material from the \\Product{Planescape Campaign Setting} boxed set, presenting\n                    new information crucial to anyone playing or running an \\Product{Planescape}\n                    campaign.\n                    This definitive full-color guide features new illustrations by DiTerlizzi and\n                    contains:\n                    \\list\n                    {all the information needed to create and customize characters,\n                    including new races, archetypes, proficiencies, equipment, and a\n                    Planewalking kit designed for each character group;}\n                    {a taste of the \\Place{multiverse}: a look at each of the planes, with\n                    commentary and helpful hints by noted planewalker \\NPC{Tarhseva\n                    Longreach};}\n                    {a guide to planar travel, from portals to conduits to the Great\n                    Paths;}\n                    {tips on surviving and proifiting in \\Product{Planescape} campaigns,\n                    from dealing with specific races to the rundown on the factions of\n                    \\Place{Sigil};}\n                    {an overview on how magic really works (or doesn\'t) on the\n                    \\Place{planes};}\n                    {new spells and magical items useful in exploring (and surviving) the\n                    \\Place{planes};}\n                    {a special section on the power of belief, and how it can change the\n                    \\Place{multiverse}---including a new rules system that allows player\n                    characters to actively affect the \\Place{planes} around them!}"
+}
+title: "Planewalker\'s Handbook"
+leader: "The"
+date {
+  year: 1996
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0460"
+  check: 7
+}
+isbn13 {
+}
+pages: 160
+system: ADND_REVISED
+audience: ALL
+type: ACCESSORY
+style: SOFT_COVER
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}

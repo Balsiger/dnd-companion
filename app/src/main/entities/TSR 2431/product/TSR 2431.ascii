@@ -1,0 +1,36 @@
+template {
+  name: "TSR 2431"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Dark Sun"
+  description: "information on psionics"
+}
+title: "Will and the Way: Psionicists of Athas"
+leader: "The"
+date {
+  year: 1994
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "861"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}

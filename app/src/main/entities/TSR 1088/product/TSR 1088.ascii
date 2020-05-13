@@ -1,0 +1,109 @@
+template {
+  name: "TSR 1088"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Ravenloft"
+  description: "\\large{Time Is Meaningless in \\Place{Castle Tristenoira}}\n                    \\emph{\\Place{Forlorn} has long remained hidden in the shadows of notorious\n                    \\Place{Barovia} and \\Place{Kartakass}, yet the tiniest domain in the\n                    \\Place{lands of the core} is nearly as old as \\Place{Ravenloft} itself. This\n                    land is sick with evil, a twisted mockery of the place it once was. It is\n                    filled with creatures of despair who were drawn into the \\Place{demiplane of\n                    dread}...\n                    Within \\Place{Castle Tristenoira} lies oblivion. The crumbling keep slips in\n                    and out of time, carrying its unwary explorers across the centuries, where\n                    they may bye abandoned to the cold winds of eternity---and to the ghosts in\n                    the castle! Spirits both innocent and guilty haunt the timeless passages,\n                    whispering tales of murder and vengeance. Escape is for the lucky...or the\n                    hopelessly mad.}\n                    The \\Product{Castles Forlorn} boxed adventure set provides the Dungeon Master\n                    with a rich and complex domain in which to set a campaign of any size and\n                    duration. It includes a 96-page sourcebook, \\emph{The Weeping Land}, which\n                    reveals the complete history of the domain and the strange terrible lord who\n                    rules over it. Descriptions of the living and dead who call this lonely land\n                    home abound, as do details of the forbidding \\Place{Tristonia castle}, where\n                    adventurers may spend an evening or an age.\n                    After learning \\Place{Forlorn}\'s history of sorrow, the DM can lead player\n                    characters into \\emph{Melancholy Meetings}, a 32-page collection of\n                    encounters that provide adventure in every corner of the domain. Finally,\n                    only \\emph{Eve of Sorrows} remains, which is a 32-page assortment of\n                    mysteries and nightmares within the castle itself.\n                    This deluxe boxed adventure set complete the portrait of \\Place{Forlorn} with\n                    a highly detailed, double-sided poster map of the castle, a poster map of the\n                    domain, and a special wall poster created by award-winning artist Robh\n                    Ruppel---all in full color."
+}
+title: "Castles Forlorn"
+author {
+  name: "Smedman, Lisa"
+}
+editor {
+  name: "Wise, David"
+}
+cover {
+  name: "Knutson, Dana M."
+}
+cover {
+  name: "Fabian, Stephen"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+cartographer {
+  name: "Felegy, Cynthia"
+}
+illustrator {
+  name: "Ruppel, Robh"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Klasnich, Robert"
+}
+manager {
+  name: "Watry, Dori Jean"
+  job: "project coordinator"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphics coordinator"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordinator"
+}
+date {
+  year: 1993
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "645"
+  check: 10
+}
+isbn13 {
+}
+pages: 160
+system: ADND_2ND
+type: ADVENTURE
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Eve of Sorrows"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "The Weeping Land"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Melancholy Meetings"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "2-sided color maps"
+  number: 2
+}
+content {
+  part: POSTER
+  description: "color"
+  number: 1073741824
+}

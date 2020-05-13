@@ -1,0 +1,37 @@
+template {
+  name: "WTC 92607"
+  world: "Dragonlance"
+  description: "Now the people know that the \\Monster{dragon} minions of \\God{Takhisis},\n  \\God{Queen of Dragons}, have returned. The people of all nations prepare to\n  fight to save their homes, their lives, and their freedom. But the races have\n  long been divided by hatred and prejudice. \\Monster{Elven} warriors and\n  \\Monster{human} knights fight among themselves. It seems the battle has been\n  lost before it begins.\n\n  \\Group{The companions} are separated, torn apart by war. A full season will\n  pass before they meet again--if they meet again. As the darkness deepens, a\n  disgraced knight, a pampered \\Monster{elf}maiden, and a rattle-brained\n  \\Monster{kender} stand alone in the pale winter sunlight.\n\n  Not much in the way of heroes."
+}
+title: "Dragon of Winter Night"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 2003
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3067"
+  check: 5
+}
+isbn13 {
+}
+pages: 368
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+producer: "WTC"
+number: "Volume II"
+series: "Dragonlance Chronicles"
+price {
+  currency: "$ "
+  number: 2795
+  precision: 100
+}

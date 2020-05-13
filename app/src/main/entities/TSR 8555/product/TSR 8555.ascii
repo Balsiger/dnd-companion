@@ -1,0 +1,52 @@
+template {
+  name: "TSR 8555"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{The Business of War...}\n                    \\NPC{Zaranda Star} never intended to bring the incessant \\Place{Tethyrian}\n                    Civil War to a head. All she wanted to do was take a caravan of goods into\n                    the war-torn capitol. But then the ambitious would-be king, \\NPC{Baron\n                    Hardly}, confiscated her shipment.\n                    Little did he reckon with \\NPC{Zaranda}, retired warrior...and wizard.\n                    Marshalling a motley company of angry peasants, an adolescent mage names\n                    \\NPC{Scab}, and an \\Monster{orcish} paladin, \\NPC{Zaranda} declares her own\n                    private war.\n                    But Zaranda must reckon with the machinations of the mysterious wizard\n                    \\NPC{Nyadnar}...and the unearthly evil that lurks deep within the city of\n                    \\Place{Zazesspur}."
+}
+title: "War in Tethyr"
+author {
+  name: "Milan, Victor"
+}
+cover {
+  name: "Velez, Walter"
+}
+date {
+  year: 1995
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0184"
+  check: 5
+}
+isbn13 {
+}
+pages: 313
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Two"
+series: "Nobles"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

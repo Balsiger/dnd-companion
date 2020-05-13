@@ -1,0 +1,37 @@
+template {
+  name: "TSR 3107"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 229"
+  }
+  world: "Birthright"
+  description: "information on this domain"
+}
+title: "Tuornen"
+author {
+  name: "Gross, Dave"
+}
+date {
+  year: 1995
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0288"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

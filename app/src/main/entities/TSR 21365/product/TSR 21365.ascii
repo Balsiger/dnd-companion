@@ -1,0 +1,44 @@
+template {
+  name: "TSR 21365"
+  reference {
+    name: "net"
+  }
+  world: "Forgotten Realms"
+  description: "Widespread and many-tentacled is the evil that threatens\n                    \\Place{Faer\\hat{u}n}. Before its heart can be found, all of the \\Group{Seven\n                    Sisters} will play a part, and all too much blood will be\n                    spilled...\\Monster{drow} blood.\n                    Seven linked novellas tell seven stories of seven sisters by the creator of\n                    the \\Product{Forgotten Realms} world!"
+}
+title: "Silverfall: Stories of the Seven Sisters"
+subtitle: "Rise, and be not afraid."
+author {
+  name: "Greenwood, Ed"
+}
+cover {
+  name: "Foster, John"
+}
+date {
+  year: 1999
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1365"
+  check: 7
+}
+isbn13 {
+}
+pages: 376
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 1"
+series: "Stories of the Seven Sister"
+price {
+  currency: "$"
+  number: 1499
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,104 @@
+template {
+  name: "WTC 11831"
+  world: "Diablo II"
+  description: "Now play the Diablo II computer game crossed with the brand new D&D\n                    roleplaying game rules. With all the fury, all the excitement, and all the\n                    monsters brought to life by your own imagination. This is face-to-face\n                    roleplaying combat---smoother, faster, and meaner than ever before.\n                    Inside you\'ll find:\n                    \\list\n                    {Hundreds of monsters to battle with the all-new D&D rules!}\n                    {Level after level of thrilling adventure in the pits of hell!}\n                    {Opportunities for millions of experience points!}\n                    {All ne adventures to catch Diablo and D&D players off guard!}\n                    Suitable for all levels of play"
+}
+title: "Diablo II: to Hell and Back"
+author {
+  name: "Carl, Jason"
+}
+author {
+  name: "Eckelberry, David"
+}
+author {
+  name: "Quick, Jeff"
+}
+author {
+  name: "Redman, Rich"
+}
+editor {
+  name: "Pickens, Jon"
+}
+editor {
+  name: "Eckelberry, David"
+}
+cover {
+  name: "post, rk"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "post, rk"
+}
+illustrator {
+  name: "Roach, David"
+}
+illustrator {
+  name: "Venter, Pete"
+}
+typographer {
+  name: "Ausland, Victoria L."
+}
+typographer {
+  name: "Dorries, Erin"
+}
+manager {
+  name: "Cordell, Bruce R."
+}
+manager {
+  name: "Grubb, Jeff"
+}
+manager {
+  name: "Reid, Thomas"
+}
+manager {
+  name: "Selinker, Mike"
+}
+manager {
+  name: "Slavicsek, Bill"
+}
+manager {
+  name: "Kesterel, Gwendolyn FM"
+}
+manager {
+  name: "Wiker, JD"
+}
+manager {
+  name: "Barnett, Dee"
+}
+manager {
+  name: "Murin, Dawn"
+}
+manager {
+  name: "Ziran, Justin"
+}
+manager {
+  name: "DeLong, Chas"
+}
+date {
+  year: 2001
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1831"
+  check: 4
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+type: ADVENTURE
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,59 @@
+template {
+  name: "TSR 8564"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{Enter the \\Place{Blade Kingdoms}...}\n                    Isolated lands where grand armies fight bloodless battles in the ultimate\n                    \'princely game\', while art and science flourish under royal patronage.\n                    But war cares little for the troubles of the aristocracy. As a terrible new\n                    weapon obliterates the age of courtly battle, an intelligent but plain\n                    princes and her companions---and addled young inventor and a kleptomaniac\n                    firebird---find themselves forced into a battle for survival in a suddenly\n                    very deadly world."
+}
+title: "Council of Blades"
+leader: "The"
+author {
+  name: "Kidd, Paul"
+}
+cover {
+  name: "Velez, Walter"
+}
+date {
+  year: 1997
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0531"
+  check: 10
+}
+isbn13 {
+}
+pages: 310
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Five"
+series: "Nobles"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

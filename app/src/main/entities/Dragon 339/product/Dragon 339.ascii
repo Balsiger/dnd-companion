@@ -1,0 +1,183 @@
+template {
+  name: "Dragon 339"
+  world: "Generic"
+  description: "Issue 339 of the magazine. "
+}
+title: "Dragon 339"
+author {
+  name: "Banks, Cam"
+}
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Cole, Joshua"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Farrese, Richard"
+}
+author {
+  name: "Fehlauer, Mike"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Fleeman, Luke"
+}
+author {
+  name: "Flipse, Chris"
+}
+author {
+  name: "Greeley, Phil"
+}
+author {
+  name: "Lin, Monte"
+}
+author {
+  name: "O\'Neal, Johnny"
+}
+author {
+  name: "Reynolds, Sean K."
+}
+author {
+  name: "Schneider, F. Weseley"
+}
+author {
+  name: "Sederquist, Jon"
+}
+author {
+  name: "Sutter, James"
+}
+author {
+  name: "Vergamini, Stephanie"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "associate editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "post, rk"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Jansson, Niklas"
+}
+illustrator {
+  name: "Kaluta, Michael"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wooten, Ben"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXX 8"
+number: "339"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

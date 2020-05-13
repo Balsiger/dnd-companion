@@ -1,0 +1,50 @@
+template {
+  name: "WTC A685"
+  category: "sundering"
+  world: "Forgotten Realms"
+  description: "On the dusty plains of \\Place{Netheril}, a young \\Group{Bedine} girl spins a web of forbidden magic, obliterating a pair of assissins with a single lightning strike.\n\nOn the banks of the \\Place{Sea of Fallen Stars}, a tiny thief walks willingly into battle with a ruthless killer, a wide grin upon his face.\n\nIn the tunnels of Citadel Felbarr, a dwarfling is ambushed and strikes back with an attack well beyond his apparent stength and years.\n\nThese three seemingly unrelated commoners, growing up across far reaches of the \\Place{Forgotten Realms}, hold the fate of \\Place{Faer\303\273n}\'s most famous dark elf, \\NPC{Drizzt Do\303\232rden}, in their hands.\n\nBut that fate is far from certain. For in the shadows a cunning cabal of wizards is watching, intent on hunting Chosen - mortals blessed by the gods. These wizards know something mere commoners do not: Long-forgotten gods have begun to stir. Long-lost lands have begun to tremble. The world around them is about to change. And these wizards will do whatever it takes to turn the coming chaos to their advantage.\n\nIn this first book of the six-book Sundering series, New York Times best-selling author R.A. Salvatore launches a major world-shaping event that will revive old favorites, introduce new complications, and move his signature hero \\NPC{Drizzt} into a restored era of the Forgotten Realms."
+  short_description: "The first book in the Sundering series."
+}
+title: "Companions"
+leader: "The"
+subtitle: "The Sundering"
+author {
+  name: "Salvatore, R.A"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+date {
+  year: 2013
+  month: 8
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6522"
+  check: 9
+}
+pages: 441
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+volume: "I"
+series: "Sundering"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

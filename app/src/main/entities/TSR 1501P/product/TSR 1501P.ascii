@@ -1,0 +1,28 @@
+template {
+  name: "TSR 1501P"
+  reference {
+    name: "net"
+  }
+  world: "Generic"
+  description: "dices for the game"
+}
+title: "Dragon Dice Kicker Pack 1: Monsters & Amazons POP"
+date {
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0323"
+  check: 6
+}
+isbn13 {
+}
+system: DRAGON_DICE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$"
+  number: 7140
+  precision: 100
+}

@@ -1,0 +1,53 @@
+template {
+  name: "TSR 2409"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dark Sun"
+  description: "Prism Pentad, book three"
+}
+title: "Amber Enchantress"
+leader: "The"
+author {
+  name: "Troy Denning"
+}
+date {
+  year: 1992
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "236"
+  check: 5
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Three"
+series: "Prism Pentad"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

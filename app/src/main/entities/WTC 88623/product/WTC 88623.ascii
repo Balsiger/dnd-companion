@@ -1,0 +1,42 @@
+template {
+  name: "WTC 88623"
+  world: "Dragonlance"
+  description: "The highways and byways of \\Place{Ansalon} are being ravaged by war.\n\n  As the \\Event{War of Souls} rages, vast armies and powerful wizards vie for\n  control of \\Place{Krynn}. But despite the deeds of the mighty, it is the\n  common people who must endure the great hardships of war.\n\n  \\NPC{Bertrem} of the \\Group{Order of Aesthetics}, keeper of the \\Place{Great\n  Library of Palanthas}, gathers accounts of everyday life in \\Place{Ansalon}\n  as it is forever changed by the \\Event{War of Souls}."
+}
+title: "Bertrem\'s Guide to the War of the Souls, Volume Two"
+author {
+  name: "Brown, Steven"
+}
+author {
+  name: "Herbert, Mary H."
+}
+author {
+  name: "Perrin, Don"
+}
+author {
+  name: "Stan!"
+}
+date {
+  year: 2002
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2816"
+  check: 6
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Bertrem\'s Guide"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

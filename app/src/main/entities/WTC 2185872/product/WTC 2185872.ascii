@@ -1,0 +1,98 @@
+template {
+  name: "WTC 2185872"
+  world: "Forgotten Realms"
+  description: "In the wake of the cataclysmic event known as the \\Event{Spellplague}, promise and peril range far and wide across the land of \\Place{Faer\\hat{u}n} --- as do heroes who thrive on action and adventure. The \\Product{Forgotten Realms Player\'s Guide} presents everything a Dungeons & Dragons player needs to create and run a character in the most recent incarnation of the renowned Forgotten Realms setting or to add new options to any D&D game.\n                    This 4th Edition D&D rules supplement tells players what their characters know about the world where they were born. It includes information on the many regions where player characters originate as well as an overview of the forces and phenomena that make the world go around. There\'s plenty of game meterial inside too, including two new character races, the \\Monster{drow} and the \\Monster{genasi}; new feats, rituals, paragon paths, and epic destinies; and a new character class, the \\Class{swordmage}."
+  short_description: "A player\'s Guide to the Forgotten Realms"
+}
+title: "Forgotten Realms Player\'s Guide"
+subtitle: "New World, New Challenges"
+author {
+  name: "Schubert, Stephen"
+  job: "lead development"
+}
+author {
+  name: "Mearls, Mike"
+  job: "developer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "developer"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "additional development"
+}
+cover {
+  name: "O&#39Conner, William"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Murayama, Soe"
+  job: "additional graphic designer"
+}
+illustrator {
+  name: "Jordan, Robert"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+date {
+  year: 2008
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4929"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4929"
+  check: 8
+}
+pages: 160
+system: DND_4
+audience: PLAYER
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 2173672"
+required_requirements: "WTC 2175072"
+required_requirements: "WTC 2172072"
+required_requirements: "WTC 2182872"
+layout: FULL_COLOR

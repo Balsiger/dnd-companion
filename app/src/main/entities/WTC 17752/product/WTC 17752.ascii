@@ -1,0 +1,271 @@
+template {
+  name: "WTC 17752"
+  world: "Generic"
+  description: "Weave exciting tales of heroism filled with magic and monsters. Within these\n                    pages, you\'ll discover the tools and options you need to create detailed\n                    worlds and dynamic adventures for your players to experience in the Dungeons\n                    & Dragons roleplaying game."
+}
+title: "Dungeon Master\'s Guide"
+subtitle: "Realms of inspiration await discovery"
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Tweet, Jonathan"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Adkison, Peter D."
+  job: "additional design"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "additional design"
+}
+author {
+  name: "Noonan, David"
+  job: "additional design"
+}
+author {
+  name: "Noonan, David"
+  job: "revision"
+}
+author {
+  name: "Redman, Rich"
+  job: "revision"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "revision"
+}
+author {
+  name: "Collins, Andy"
+  job: "revision"
+}
+author {
+  name: "Redman, Rich"
+  job: "revision"
+}
+author {
+  name: "William, Skip"
+  job: "revision"
+}
+editor {
+  name: "Martin, Julia"
+}
+editor {
+  name: "Rateliff, John"
+}
+editor {
+  name: "Maxwell, Duane"
+  job: "editorial assitance"
+}
+editor {
+  name: "Quick, Jeff"
+  job: "editorial assitance"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "development and editing revision"
+}
+cover {
+  name: "Higginbotham, Henry"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Fischer, Scott"
+}
+illustrator {
+  name: "Foster, John"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Martin, David"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Snoddy, Brian"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Walker, Kevin"
+}
+illustrator {
+  name: "Adelsperger, Matt"
+  job: "D&D logo design"
+}
+illustrator {
+  name: "Floyd, Sherry"
+  job: "D&D logo design"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photographer"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+typographer {
+  name: "Ausland, Victoria"
+}
+typographer {
+  name: "Dorries, Erin"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+typographer {
+  name: "Walker, Nancy"
+}
+manager {
+  name: "Stark, Ed"
+  job: "Core D&D creative director"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of rpg R&D"
+}
+manager {
+  name: "Schinehette, Jon"
+  job: "visual creaite director"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+manager {
+  name: "Lockwood, Todd"
+  job: "conceptual artist"
+}
+manager {
+  name: "Wood, Sam"
+  job: "conceptual artist"
+}
+manager {
+  name: "Glenn, Sean"
+  job: "graphic designer"
+}
+manager {
+  name: "Floyd, Sherry"
+  job: "graphic designer"
+}
+manager {
+  name: "Dancey, Ryan S."
+  job: "brand manager"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "category manager"
+}
+manager {
+  name: "Weiner, Larry"
+  job: "project manager"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "project manager"
+}
+manager {
+  name: "Fernandez, Joe"
+  job: "digi-tech specialist"
+}
+manager {
+  name: "DeLong, Chas"
+  job: "production manager"
+}
+manager {
+  name: "Kirchhoff, Mary"
+  job: "vice president of publishing"
+}
+manager {
+  name: "Valterra, Anthony"
+  job: "category manager"
+}
+manager {
+  name: "Durham, Martin"
+  job: "production manager"
+}
+date {
+  year: 2003
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2889"
+  check: 1
+}
+isbn13 {
+}
+pages: 320
+system: DND_3_5
+type: RULEBOOK
+style: HARDCOVER
+number: "Book II"
+series: "Core Rulebook"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "playing map"
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "A"
+required_requirements: "B"
+required_requirements: "C"
+optional_requirements: "WTC 17524"
+optional_requirements: "A"
+optional_requirements: "B"
+optional_requirements: "C"

@@ -1,0 +1,46 @@
+template {
+  name: "WTC 88601"
+  world: "Forgotten Realms"
+  description: "\\large{Larajin}\n                    In a household where everyone has a secret, why should the maid be different?\n                    The unacknowledged daughter of \\NPC{Thamalon Uskevren}, \\NPC{Larajin} is a\n                    \\Monster{half-elf} who finds herself embroiled in a bitter war between\n                    \\Monster{elves} and \\Monster{humans}. In an effort to bring peace to both\n                    \\Place{Sembia} and the \\Place{Dalelands}, \\NPC{Larajin} will have to confront\n                    a twin brother she doesn\'t know and save a half-brother whose fate hangs in\n                    the balance."
+}
+title: "Heirs of Prophecy"
+author {
+  name: "Smedman, Lisa"
+}
+cover {
+  name: "Nielsen, Terese"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+date {
+  year: 2002
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2737"
+  check: 2
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "book 5"
+series: "Sembia"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

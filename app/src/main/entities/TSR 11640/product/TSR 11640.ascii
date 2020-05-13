@@ -1,0 +1,32 @@
+template {
+  name: "TSR 11640"
+  reference {
+    name: "internet"
+  }
+  world: "Generic"
+  description: "\\large{Evil Grows Beneath the Earth}\n                    \\emph{Why should anyone travel the cracked cobblestones of the \\Place{Old\n                    Road}? The fortress that once cast its shadow across the road does so no\n                    longer---some whisper that the earth swallowed the fortress whole in an age\n                    long past. Four brave adventurers resolved to discover the truth and set off\n                    down the \\Place{Old Road}, but they never returned.}\n                    \\Product{The Sunless Citadel} is a stand-alone adventure for the Dungeon &\n                    Dragons game. This carefully crafted adventure, designed to challenge\n                    1st-level D&D heroes, follows a path to a mysterious dungeon where evil has\n                    taken root, and a terrible tree and its dark shepherd plot in darkness.\n                    To use this adventure, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}.\n                    For 1st-level Characters"
+}
+title: "Sunless Citadel"
+leader: "The"
+date {
+  year: 2000
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: DND_3RD
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

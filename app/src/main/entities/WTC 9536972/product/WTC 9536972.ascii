@@ -1,0 +1,154 @@
+template {
+  name: "WTC 9536972"
+  world: "Generic"
+  description: "In ages past, \\Monster{dragons} ruled supreme. Now their distant scions, the\n                    race and individuals who carry their blood, live among the great empires of\n                    the world, where they forge their own glorious legacies. You can be among\n                    them. Embrace your draconic heritage, and the spoils of the world can be\n                    yours!\n                    This supplement for the D&D game provides detailed information on the\n                    psychology, society, culture, behavior, religion, and folklore of the\n                    dragonblooded races, including \\Monster{kobolds} and\n                    \\Monster{half-dragons}. This book introduces two new player character races:\n                    the \\Monster{dragonborn} (existing characters reborn in a new draconic form\n                    to combat and destroy the spawn of \\God{Tiamat}) and the\n                    \\Monster{spellscales} (artistic, philosophical beings with a penchant for\n                    sorcery and a thirst for new experiences). It also provides new prestige\n                    classes, feats, spells, magic items, equipment, and guidelines for crafting\n                    adventures and campaigns involving dragonblooded races.\n                    A new D&D sourcebook detailing races descended from \\Monster{dragons}.\n                    \\Product{Races of the Dragon} provides D&D players and Dungeon Masters with\n                    an in-depth look at races descended from or related to \\Monster{dragons}. In\n                    addition to exploring the fan-favorite \\Monster{kobold} race, \\Product{Races\n                    of the Dragon} introduces two new races, \\Monster{dragonborn} and\n                    \\Monster{spellscales}, and provides information on\n                    \\Monster{half-dragons}. The \\Monster{dragonborn} are a transitive race, an\n                    exciting new concept that allows players to transform from their initial race\n                    into a new one. This book also includes a wealth of cultural information and\n                    new prestige classes, feats, equipment, spells, and magic items.\n                    Gwendolyn F.M. Kestrel works for Wizards of the Coast, Inc.  as a game\n                    designer. Her previous design credits include the \\Product{Races of Eberron},\n                    \\Product{Monster Manual III}, and \\Product{Underdark} roleplaying games.\n                    Jennifer Clarke Wilkes is an editor for Wizards of the Coast, Inc. She works\n                    primarily on the Dungeons & Dragons Miniatures line but has edited various\n                    roleplaying game books. She co-authored \\Product{Savage Species} and\n                    \\Product{Sandstorm}.\n                    Kolja Raven Liquette is best known for authoring \\Product{The Waking Lands}\n                    web site. He has also published articles in Dragon Magazine. His previous\n                    publishing credits include \\Product{Weapons of Legacy}. "
+}
+title: "Races of the Dragon"
+subtitle: "The Blood of Dragons Flows through Your Veins"
+author {
+  name: "Kestrel, Gwendolyn F.M."
+}
+author {
+  name: "Wilkes, Jennifer Clarke"
+}
+author {
+  name: "Liquette, Kolja Raven"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "development"
+}
+author {
+  name: "Collins, Andy"
+  job: "development"
+}
+author {
+  name: "Watkins, Rob"
+  job: "development"
+}
+editor {
+  name: "Lyons, Michelle"
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Prescott, Steve"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Beleddin, Steven"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Frank, Carl"
+}
+illustrator {
+  name: "Frazier, Dan"
+}
+illustrator {
+  name: "Hagan, Brian"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Malidore, Chris"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG R&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "art director"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Christina"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director or RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3913"
+  check: 3
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Races"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

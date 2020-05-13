@@ -1,0 +1,42 @@
+template {
+  name: "WTC 9553374"
+  world: "Forgotten Realms"
+  description: "ARAEVIN\n                    has gained too much power too fast, and the price of what will be both\n                    blessing and curse will be higher than any mere elf can pay.\n                    SARYA\n                    has opened wounds so old and so deep no one will ever be able to close them,\n                    but the question must be asked: Should they be closed at all?\n                    CORMANTHYR\n                    is an empire lost to the mists of ancient history, but the memory of elves is\n                    long, and the glory of the forest kingdom has not been forgotten.\n                    New York Times best-selling author Richard Baker completes an epic trilogy\n                    that has redefined the elves of Faer\\hat{u}n."
+}
+title: "Final Gate"
+subtitle: "Myth Drannor Reborn?"
+author {
+  name: "Baker, Richard L. III"
+}
+cover {
+  name: "Rex, Adam"
+}
+date {
+  year: 2006
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4002"
+  check: 6
+}
+isbn13 {
+}
+pages: 342
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "The Last Mythal"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

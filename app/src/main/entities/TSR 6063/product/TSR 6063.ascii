@@ -1,0 +1,21 @@
+template {
+  name: "TSR 6063"
+  synonym: "R4"
+  reference {
+    name: "net price list"
+  }
+}
+title: "Doc\'s Island"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 500
+  precision: 100
+}

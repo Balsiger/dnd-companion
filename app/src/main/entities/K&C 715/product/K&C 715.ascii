@@ -1,0 +1,46 @@
+template {
+  name: "K&C 715"
+  description: "Issues fourty-six through fourty-nine of Knights of the Dinner Table\n  crammed between two covers!"
+}
+title: "Bundle of Trouble: Volume Fifteen"
+subtitle: "A Compilation of Knights of the Dinner Table: Issues 46 Thru 49"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+}
+author {
+  name: "Johansson, Steve"
+}
+author {
+  name: "Kenzer, David S."
+}
+cover {
+  name: "Vrbanic, George"
+}
+date {
+  year: 2005
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: COMICS
+style: BOOKLET
+producer: "K&C"
+number: "Volume Fifteen"
+series: "Knights of the Dinner Table"
+price {
+  currency: "$ "
+  number: 1199
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

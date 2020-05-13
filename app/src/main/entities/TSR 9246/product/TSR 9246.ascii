@@ -1,0 +1,33 @@
+template {
+  name: "TSR 9246"
+  synonym: "GAZ12"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "vast grassy plain"
+}
+title: "Golden Khan of Ethengar"
+leader: "The"
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "724"
+  check: 6
+}
+isbn13 {
+}
+system: DND_1ST
+type: CAMPAIGN_EXPANSION
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1000
+  precision: 100
+}

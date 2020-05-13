@@ -1,0 +1,189 @@
+template {
+  name: "WTC 1076972"
+  world: "Generic"
+  description: "\\large{All you see is not all there is.}\n\n  Devious organizations scheme for world domination, otherworldly forces\n  infiltrate our power structures, and creatures from our nightmares lurk in\n  the shadows. Working for a clandestine organization called the\n  \\Group{Hoffmann Institute}, heroes explore hidden mysteries while eluding\n  forces both human and alien that conspire to control the truth.\n\n  This book updates the classic \\Product{DARK*MATTER Campaign Setting}\n  originally designed for the \\Product{ALTERNITY} Science Fiction Roleplaying\n  Game.\n\n  This product is compatible with other d20 System roleplaying games."
+}
+title: "Dark*Matter"
+subtitle: "Supernatural Conspiracy Roleplaying"
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "additional design"
+}
+author {
+  name: "Cagle, Eric"
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "additional design"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "additional design"
+}
+author {
+  name: "Redman, Rich"
+  job: "additional design"
+}
+author {
+  name: "Reynolds, Sean K"
+  job: "additional design"
+}
+author {
+  name: "Schend, Steven"
+  job: "additional design"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "additional design"
+}
+author {
+  name: "Wiker, JD"
+  job: "additional design"
+}
+author {
+  name: "Carter, Michele"
+  job: "developer"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+author {
+  name: "Cook, Monte J."
+  job: "developer"
+}
+author {
+  name: "Reynolds, Sean K"
+  job: "developer"
+}
+author {
+  name: "Wiker, JD"
+  job: "developer"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Collins, Andy"
+}
+editor {
+  name: "Horner, Miranda"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Wood, Ashley"
+  job: "front"
+}
+cover {
+  name: "Hagler, Joshua"
+  job: "back"
+}
+cartographer {
+  name: "Perkins, Christopher"
+}
+illustrator {
+  name: "Angus, Glen Michael"
+}
+illustrator {
+  name: "Fischer, Scott"
+}
+illustrator {
+  name: "Hagler, Joshua"
+}
+illustrator {
+  name: "Matson, John"
+}
+illustrator {
+  name: "Rex, Adam"
+}
+illustrator {
+  name: "Seeley, David"
+}
+illustrator {
+  name: "Stone, Steven"
+}
+illustrator {
+  name: "Wood, Ashley"
+}
+illustrator {
+  name: "Hebron, Paul"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Hebron, Paul"
+  job: "art director"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4349"
+  check: 1
+}
+isbn13 {
+}
+pages: 160
+system: D20
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Dark*Matter"
+price {
+  currency: "$ "
+  number: 3995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "d20 Modern Roleplaying Game"
+layout: FULL_COLOR

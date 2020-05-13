@@ -1,0 +1,45 @@
+template {
+  name: "TSR 2630"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "Planescape"
+  description: "\\large{Everything you ever wanted to know about \\Monster{fiends} (but were\n                    afraid to ask).}\n                    \\emph{I\'ve seen it happen too many times. A berk finds out how much damage it\n                    takes to kill a \\Monster{fiend} and figures that\'s all he needs. Then he\n                    heads off to the \\Place{Lower Planes}---and is never heard from again. When\n                    will these leatherheads learn? The \\Monster{fiends} aren\'t just lists of\n                    numbers. They\'re creatures that think, eat, dream, breed, struggle, and\n                    evolve---in short, creatures that \\emph{live}. They\'re part of a larger\n                    society of political treachery and desperate survival, a culture of\n                    disturbing aesthetics and violent beliefs. And only a blood who studies it\n                    all has a hope of ducking the \\Monster{fiends}, defeating them---or just\n                    understanding them.}\n                    This 96-page \\Product{Planescape} accessory, written for players and Dungeon\n                    Masters of all levels, is the ultimate guide to the \\Monster{fiends} of the\n                    \\Place{Lower Planes}---the malevolent monsters that wage the \\Event{Blood\n                    War}, terrorize mortals, and befoul the \\Place{multiverse}. But whereas other\n                    guides focus on statistics and combat, \\Product{Faces of Evil} delves into\n                    the physiology and psychology of the \\Monster{fiends}, exploring the dark\n                    forces that shape every detail of their lives. How are they born? What do\n                    they eat? How to do they deal with others? And just what makes them\n                    so---well, \\emph{fiendish}?\n                    \\Product{Faces of Evil} is a must for any AD&D campaign that features these\n                    vile creatures of death and destruction."
+}
+title: "Faces of Evil: The Fiends"
+date {
+  year: 1997
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0684"
+  check: 7
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1895
+  precision: 100
+}

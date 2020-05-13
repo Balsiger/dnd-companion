@@ -1,0 +1,20 @@
+template {
+  name: "TSR 1432"
+  reference {
+    name: "net price list"
+  }
+}
+title: "Dragon Quest 3rd edition"
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+price {
+  currency: "$"
+  number: 1595
+  precision: 100
+}

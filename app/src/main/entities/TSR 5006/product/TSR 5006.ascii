@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5006"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Stalwart Men-At-Arms"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

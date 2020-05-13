@@ -1,0 +1,60 @@
+template {
+  name: "WTC 88542"
+  world: "Dragonlance"
+  description: "Towering aloof and secure, the isolated fortress offers humankind a place to\n  survive and flourish in the barren realm of \\Place{Icereach}. Even the\n  \\Monster{elven} Messenger \\NPC{Kerrick Fallabrine} has made a home there,\n  living among the \\Monster{humans} and teaching them a multitude of\n  skills. But the \\Monster{ogre} enemies are always near, and they have\n  developed a powerful weapon, a destructive magic encased within a sphere of\n  solid gold. Its existence forces the \\Monster{humans} to confront the threat\n  of extinction that lurks outside their walls.\n\n  In the second book of this epic trilogy that began with \\Product{The\n  Messenger}, Douglas Niles carries the reader into the heart of an unknown\n  realm, where the world beneath the \\Place{Icewall} trembles with threats of\n  war, slavery, and greed."
+}
+title: "Golden Orb"
+leader: "The"
+subtitle: "Brackenrock"
+author {
+  name: "Niles, Douglas"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2692"
+  check: 9
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Two"
+series: "Icewall Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

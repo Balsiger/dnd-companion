@@ -1,0 +1,181 @@
+template {
+  name: "Dragon 304"
+  world: "Generic"
+  description: "Issue 304 of the magazine. Mercanaries issue."
+}
+title: "Dragon 304"
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Dent, Greg"
+}
+author {
+  name: "Four, Johnny"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Gross, Dave"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Holian, Gary"
+}
+author {
+  name: "Hollingsworth, Brandon"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Kestrel, Gwendolyn F.M."
+}
+author {
+  name: "Mearls, Michael"
+}
+author {
+  name: "Moscatello, Rick"
+}
+author {
+  name: "Redman, Rich"
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Wyatt, James"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+cover {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+illustrator {
+  name: "Appel, Chris"
+}
+illustrator {
+  name: "Cavotta, Matthew \'Matt\'"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Gianni, Tom"
+}
+illustrator {
+  name: "Kerschl, Karl"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Nelson, James"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Wahlstrom, David"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "senior production designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2003
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 9"
+number: "304"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "cone area templates"
+  number: 1073741824
+}

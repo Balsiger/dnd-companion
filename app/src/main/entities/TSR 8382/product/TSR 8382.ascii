@@ -1,0 +1,97 @@
+template {
+  name: "TSR 8382"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  world: "Dragonlance"
+  description: "For fans of \\Product{Dragons of Summer Flame}, this is a new short-story\n  collection, featuring the brave heroes, dark villains, differing races, and\n  all varieties of dragons of one of the most popular fantasy worlds --\n  \\Place{Krynn}.\n\n  Edited by Margaret Weis and Tracy Hickman, this volume highlights familiar\n  and beloved characters (and creatures), filling in some intriguing gaps of\n  lost \\Place{Dragonlance} history."
+}
+title: "Dragons of Chaos"
+subtitle: "The Chaos War Rages"
+author {
+  name: "Cook, Sue Weinlein"
+}
+author {
+  name: "Anthony, Mark"
+}
+author {
+  name: "Baker, Linda P."
+}
+author {
+  name: "Knaak, Richard A."
+}
+author {
+  name: "Stein, Kevin T."
+}
+author {
+  name: "Lesh, Adam"
+}
+author {
+  name: "McLaren, Terri"
+}
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Pack, Janet"
+}
+author {
+  name: "O\'Donohoe, Nick"
+}
+author {
+  name: "Moore, Roger E."
+}
+author {
+  name: "Pierson, Chris"
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Perrin, Don"
+}
+author {
+  name: "Niles, Douglas"
+}
+editor {
+  name: "Weis, Margaret"
+}
+editor {
+  name: "Hickman, Tracy"
+}
+date {
+  year: 1998
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0681"
+  check: 2
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Volume 3"
+series: "Dragonlance Dragons"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

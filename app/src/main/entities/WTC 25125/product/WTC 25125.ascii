@@ -1,0 +1,76 @@
+template {
+  name: "WTC 25125"
+  synonym: ""
+  world: "Generic"
+  description: "All trade through the \\Place{Ironwall Mountains} stopped when \\Place{Stonefang Pass} fell to the \\Monster{orcs}. The ancient passage has become a haven for monsters, and something mighty stirs in the bedrock deep below. Now the \\Monster{dwarves} of the \\Group{Glintshield} clan want to reopen the pass, but they cannot do it alone...\n                    \\Product{Orcs of Stonefang Pass} is a Dungeons & Dragons adventures designed for 5th-level characters. It fits easily into any Dungeon Master\'s campaign and features an easy-to-run encounter format and a full-color, double-sided battle map. It can be played as a stand-alone adventure or as a follow-up to \\Product{The Slaying Stone}."
+  short_description: "An Adventure for Characters of 5th level."
+}
+title: "Orcs of Stonefang Pass"
+subtitle: "Rumble in the Mountains"
+editor {
+  name: "Moore, Cal"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "managing editor"
+}
+cover {
+  name: "England, Wayne"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Tardiff, Christopher"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2010
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5391"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5391"
+  check: 2
+}
+pages: 32
+system: DND_4
+type: ADVENTURE
+style: BOOKLET
+producer: "WTC"
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Adventure"
+  number: 1
+}
+content {
+  part: POSTER
+  description: "double-sided battle map"
+  number: 1
+}
+layout: FULL_COLOR

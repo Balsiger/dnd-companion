@@ -1,0 +1,91 @@
+template {
+  name: "Dungeon 23"
+  world: "Generic"
+  description: "This is issue 23 of the dungeon magazine."
+}
+title: "Dungeon 23"
+author {
+  name: "Maxwell, Randy"
+}
+author {
+  name: "Walsh, Willie"
+}
+author {
+  name: "Kane, Thomas"
+}
+author {
+  name: "Stump, Richard"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Heyer, Carol"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Jaquay, Paul"
+}
+illustrator {
+  name: "Lombardo, Jamie"
+}
+illustrator {
+  name: "Hanchette, Paul"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "MacDonald, Kathleen C."
+}
+manager {
+  name: "Ward, Jim"
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1990
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "IV 5"
+number: "23"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

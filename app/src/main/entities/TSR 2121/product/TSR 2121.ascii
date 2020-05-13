@@ -1,0 +1,123 @@
+template {
+  name: "TSR 2121"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Take your spellcasters to the limits they have never reached before! With\n                    over two hundred new spells and magical items, the \\Product{Tome of Magic}\n                    stretches the horizons of every wizard and priest in the AD&D 2nd Edition\n                    game.\n                    In these pages are new forms of wizard magic including elementalists,\n                    metamagic, and wild magic, plus expansions of existing schools. For priests,\n                    whole new spheres have be discovered---spheres of chaos, law, numbers,\n                    thought, time, war, and wards---and powerful new quest spells lie waiting to\n                    be tapped.\n                    All characters will experience the thrill of discovering new magical items\n                    such as the \\Item{claw of magic stealing}, \\Item{dimensional mine},\n                    \\Item{crystal parrot}, \\Item{ring of randomness}, and \\Item{staff of the\n                    elements}. \\Product{Tome of Magic} is an invaluable expansion for all the\n                    spellcasting classes!"
+}
+title: "Tome of Magic"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Findley, Nigel"
+}
+author {
+  name: "Herring, Anthony"
+}
+author {
+  name: "Kubasik, Christopher"
+}
+author {
+  name: "Sargant, Carl"
+}
+author {
+  name: "Swan, Rick"
+}
+editor {
+  name: "Brown, Anne K."
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Heyer, Carol"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Loveless, Roger"
+}
+illustrator {
+  name: "Sullivan, Stephen"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Cook, David \'Zeb\'"
+  job: "supervision and development"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "graphic design"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "production"
+}
+date {
+  year: 1991
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "107"
+  check: 5
+}
+isbn13 {
+}
+pages: 160
+system: ADND_2ND
+type: ACCESSORY
+style: HARDCOVER
+producer: "TSR"
+series: "Core"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

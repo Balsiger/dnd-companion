@@ -1,0 +1,76 @@
+template {
+  name: "TSR 1100"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Simplified version of the D&D game."
+}
+title: "Dragon Quest Game"
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Wise, David"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "552"
+  check: 6
+}
+isbn13 {
+}
+pages: 68
+system: DND_1ST
+type: BOARD_GAME
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2295
+  precision: 100
+}
+content {
+  part: BOARD
+  description: "mapboard"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "playing"
+  number: 172
+}
+content {
+  part: MINIATURE
+  description: "plastic"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "monster stand-ups"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "3-D doors"
+  number: 1073741824
+}

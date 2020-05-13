@@ -1,0 +1,82 @@
+template {
+  name: "TSR 2115"
+  synonym: "PHBR4"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "If you thought all \\Class{wizards} were alike, think again! The masters of\n                    magic now have a new guide to creating more interesting and imaginative\n                    \\Class{mages}, just when you thought you had them \'figured out\'. The\n                    \\Product{Complete Wizard\'s Handbook} will put a whole new twist on wizards\n                    form personality and dress codes to schools of magic to building that dream\n                    laboratory. Look out, world---you\'ll never look at a \\Class{mage} the same\n                    way again!"
+}
+title: "Complete Wizard\'s Handbook"
+leader: "The"
+author {
+  name: "Swan, Rick"
+}
+editor {
+  name: "Brown, Anne K."
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Valusek, Valerie"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Dorman, David"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "graphic design"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "838"
+  check: 2
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "4"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

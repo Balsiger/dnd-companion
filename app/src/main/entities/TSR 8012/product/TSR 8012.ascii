@@ -1,0 +1,36 @@
+template {
+  name: "TSR 8012"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+  description: "Monster Cards combine full-color illustrations with vital information on 20\n                    AD&D monsters, including 3 totally new creatures, on handy 3\'\'x 5\'\' cards."
+}
+title: "Monster Cards, Set 4"
+date {
+  year: 1982
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "TSR"
+number: "Set 4"
+series: "Monster Cards"
+price {
+  currency: "$ "
+  number: 195
+  precision: 100
+}
+content {
+  part: CARD
+  number: 20
+}
+content {
+  part: CARD
+  description: "overview"
+  number: 1073741824
+}

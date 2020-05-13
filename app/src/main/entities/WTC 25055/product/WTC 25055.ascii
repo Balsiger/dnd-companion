@@ -1,0 +1,48 @@
+template {
+  name: "WTC 25055"
+  world: "Generic"
+  description: "Select the miniature that best matches your player character with Player\'s Handbook Heroes. This package includes three player character miniatures and three unique power cards featuring brand-new class powers."
+  short_description: "Player\'s Handbook Heroes, Primal Heroes 1"
+}
+title: "Primal Heroes 1"
+subtitle: "The Character you Need. The Hero You Want to Play."
+date {
+  year: 2009
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5274"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5274"
+  check: 8
+}
+system: DND_4
+audience: PLAYER
+type: MINIATURE
+style: SMALL_BOX
+producer: "WTC"
+number: "Primal Heroes 1"
+series: "Player\'s Handbook Heroes"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "player character"
+  number: 3
+}
+content {
+  part: CARD
+  description: "class power"
+  number: 3
+}
+layout: FULL_COLOR

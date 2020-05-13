@@ -1,0 +1,29 @@
+template {
+  name: "TSR 9250"
+  synonym: "GAZ11"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "fantasy meets the Renaissance"
+}
+title: "Republic of Darokin"
+leader: "The"
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+type: CAMPAIGN_EXPANSION
+producer: "TSR"
+price {
+  currency: "$\302\254\342\200\240"
+  number: 995
+  precision: 100
+}

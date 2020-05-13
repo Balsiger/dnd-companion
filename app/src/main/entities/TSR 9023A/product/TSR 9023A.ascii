@@ -1,0 +1,24 @@
+template {
+  name: "TSR 9023A"
+  synonym: "B1"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "In Search of the Unknown"
+date {
+  year: 1979
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 550
+  precision: 100
+}

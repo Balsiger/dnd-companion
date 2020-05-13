@@ -1,0 +1,65 @@
+template {
+  name: "TSR 9359"
+  synonym: "HHQ2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "The village of \\Place{Northbank} was once a heaven for mages of all talents\n                    and a magnet for hopeful apprentices. Its wizards\' guild was a respected\n                    center for instruction, study, and research. But mysterious circumstances\n                    caused the sudden demise of the guild several years ago and resulted in the\n                    deaths of some important members. And a ghostly figure now threatens the few\n                    surviving member of the guild.\n                    \\Product{Wizards Challenge} is an Advanced Dungeons & Dragons adventure\n                    designed for a single character or a party of up to three members. It allows\n                    a wizard to be the center of the adventure and offers many role-playing\n                    opportunities such as spell research, component gathering, and forging\n                    important relationships with other wizards. This adventure is perfect for the\n                    wizard who needs experience, is looking for something more than crawling\n                    through dungeons, or is seeking a student or mentor.\n                    Is your character ready to accept the challenge? Intrigue and danger await!"
+}
+title: "Wizard\'s Challenge"
+author {
+  name: "Beach, Tim"
+}
+editor {
+  name: "Brown, Anne K."
+}
+cover {
+  name: "Olson, Erik"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "365"
+  check: 5
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "One on One Adventure"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

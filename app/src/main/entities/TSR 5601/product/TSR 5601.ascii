@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5601"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Roper & Shambling Mound"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

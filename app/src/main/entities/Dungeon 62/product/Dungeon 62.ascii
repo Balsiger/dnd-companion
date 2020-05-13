@@ -1,0 +1,106 @@
+template {
+  name: "Dungeon 62"
+  world: "Generic"
+  description: "This is issue 62 of the dungeon magazine."
+}
+title: "Dungeon 62"
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Hawvermale, Lance"
+}
+author {
+  name: "Stack, Jennifer Tittle"
+}
+author {
+  name: "Ide, Timothy"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Baichtal, John W."
+}
+editor {
+  name: "Watters, Pierce"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Vuckovich, Michelle"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Baldwin, Lizz"
+  job: "editorial assistant"
+}
+cover {
+  name: "Higginbotham, Henry"
+}
+cartographer {
+  name: "Scott, Michael"
+}
+illustrator {
+  name: "Lazzaretii, Rob"
+  job: "table of contents"
+}
+illustrator {
+  name: "post, rk"
+}
+illustrator {
+  name: "Ahlstrom, Lorelle"
+}
+illustrator {
+  name: "Ide, Timothy"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Craig, Terry"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1996
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XI 2"
+number: "62"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

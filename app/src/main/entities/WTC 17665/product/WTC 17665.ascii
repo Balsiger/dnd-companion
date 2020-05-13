@@ -1,0 +1,32 @@
+template {
+  name: "WTC 17665"
+  world: "Forgotten Realms"
+  description: "\\large{Explore a Mysterious Land of Might and Magic}\n                    Tales from beyond the \\Place{Easting Reach} are told with awed voices and\n                    hushed tones. Known to most of \\Place{Faer\\hat{u}n} as the homeland of the\n                    \\NPC{Simbul}, the \\Group{hathrans}, and the \\Group{Red Wizards}, the\n                    \\Place{Unapproachable East} is filled with dark secrets, insidious plots, and\n                    untold adventure. Discover the poeple, politics, cities, and societies of the\n                    region, along with the monsters, nefarious organizations, and other perils\n                    that await the unwary travelers in this treacherous corner of the\n                    \\Place{Forgotten Realms} game setting.\n                    \\list{12 new presige classes}\n                    {21 new spells}\n                    {19 new monsters}\n                    To use this accessory, you also need the \\Product{Forgotten Realms Campaign\n                    Setting}, the \\Product{Player\'s Handbook}, the \\Product{Dungeon Master\'s\n                    Guide}, and the \\Product{Monster Manual}."
+}
+title: "Unapproachable East"
+date {
+  year: 2003
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2881"
+  check: 6
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

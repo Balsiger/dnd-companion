@@ -1,0 +1,83 @@
+template {
+  name: "TSR 9373"
+  synonym: "FR15"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The jingle of gold and the chance to earn glory in the battlefield motivate\n                    many people to answer a call to arms. These men and women are mercenaries,\n                    willing to fight someone else\'s battle for the chance to earn a few coins or\n                    lasting fame. \\Product[TSR 9373]{Gold & Glory} describes the mercenary\n                    companies of the \\Place{Forgotten Realms} Campaign Setting. The famous and\n                    the infamous are detailed within: the \\Group{Flaming Fist}, possibly the most\n                    powerful private army on \\Place{Toril}; \\Group{The Mindulgulph Mercenary\n                    Company}, certainly the most bizarre; the honorable \\Group{Bushido}, the sly\n                    \\Group{Masquerade}, the snobbish \\Group{Order of the Blue Boar}, the\n                    hard-fighting \\Group{She-Wolves}, and many more. Many of the companies are\n                    brought to life in the 16 full-page full color portraits in this\n                    sourcebook. Gaming information, including statistics for \\Product[TSR\n                    1019]{Battlesystem} Game scenarios, is offered as well. Player characters can\n                    adventure with these mercenary corps, earning gold and glory for\n                    themselves!"
+}
+title: "Gold and Glory"
+author {
+  name: "Beach, Tim"
+}
+editor {
+  name: "Steinberg, R.U."
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Chaffee, Douglas"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Chaffee, Douglas"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1992
+  month: 12
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "334"
+  check: 5
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

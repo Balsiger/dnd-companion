@@ -1,0 +1,83 @@
+template {
+  name: "TSR 9459"
+  synonym: "ALQ8"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "Dragon 211"
+  }
+  world: "Al-Qadim"
+  description: "\\large{Journey through a perilous realm of searing sands and burning\n                    passions!}\n                    \\Place{Pit of the Ghuls}, \\Place{Genies\' Anvil}, \\Place{Vishap\'s\n                    Teeth}... the mere mention of these mystical sites fills men\'s hearts with\n                    fear and apprehension. Now the mysteries of the High Desert are revealed!\n                    \\Product{Caravans} takes player characters into \\Place{Zakhara}\'s greatest\n                    sea of sand to face its most treacherous denizens. Heroes match wits with\n                    \\Monster{djinn} and \\Monster{ins} alike---and fulfill a lover\'s obligation\n                    more than a half-century old.\n                    This sourcebox includes:\n                    \\list\n                    {A 32-page Campaign Book with notes from famed travelers of the\n                    \\Place{Hight Desert}, plus details on a wondrous magical carpet}\n                    {A 64-page Adventure Book featuring tales of honor, riches, and\n                    unrequited love}\n                    {A 8-page book of player aids}\n                    {A magnificent full-color poster depicting \\Item{Ala\'i the Hungry}, a\n                    fortune-telling carpet whose profound wisdom and wondrous powers will\n                    guide heroes on their epic adventure}\n                    Recommended for use with the \\Product{Arabian Adventures} Campaign Setting\n                    Rulebook."
+}
+title: "Caravans"
+author {
+  name: "Swan, Rick"
+}
+editor {
+  name: "Terry, C."
+}
+editor {
+  name: "Philips, Dezra D."
+}
+cover {
+  name: "Fields, Fred"
+}
+cartographer {
+  name: "III, David Sutherland"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+illustrator {
+  name: "Barnett, Dee"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+date {
+  year: 1994
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "903"
+  check: 3
+}
+isbn13 {
+}
+pages: 104
+system: ADND_2ND
+type: ADVENTURE
+style: BOX
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Campaign Guide"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Adventure Book"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Handout and Monstrous Compendium"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "color"
+  number: 6
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

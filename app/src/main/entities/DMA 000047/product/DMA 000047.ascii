@@ -1,0 +1,81 @@
+template {
+  name: "DMA 000047"
+  world: "Forgotten Realms"
+  description: "Long long time ago, when I was a young child in front of the fire, in the\n  cold starry, desert night... I remember being told about an ancient\n  prophecy.\n\n  It talked about our own people, the people of \\Group{Ma\'atar}, who in those\n  times where endangered by the shadow of \\Monster{Phaerimm}, who settled along\n  the border of our land, hidden in the \\Place{Spellguard Ruins}. It talked\n  about strangers that came from far away, whose destiny was tied to ours and\n  about how they fought against a terrible and forbidden menace.\n\n  The tribe will be decimated by the powerful forces of something that couldn\'t\n  be stopped and the leading people will die. Only one, the spirit of the\n  freedom of the tribe, will survive and will lead the people of\n  \\Place{Anauroch} to new glory in the path of the Gods.\n\n  By maybe I\'m wrong. All this was not a prophecy but a legend, and those\n  heroes became immortals by creating their own histories.\n\n  That\'s the story as it was told to me by the father of my father, and that\n  now I will tell you, and you will tell it to your children, and the children\n  or your children."
+}
+title: "Forbidden Sands of Anauroch (N.2)"
+leader: "The"
+author {
+  name: "Zeminian, Alessandro"
+}
+author {
+  name: "Verardi, Andrea"
+}
+editor {
+  name: "Zeminian, Alessandro"
+}
+editor {
+  name: "Verardi, Andrea"
+}
+cover {
+  name: "Isabella Dalla Vecchia"
+}
+cover {
+  name: "Michele Rizzardi"
+}
+cover {
+  name: "Turotti, Davide"
+}
+illustrator {
+  name: "Sonia Bernabei"
+}
+illustrator {
+  name: "Tatiana Mavaracchio"
+}
+illustrator {
+  name: "Arrigoni, Chiara"
+}
+illustrator {
+  name: "Turotti, Davide"
+}
+illustrator {
+  name: "Romeo, Enrico"
+}
+illustrator {
+  name: "Marcella Ricciardi"
+}
+manager {
+  name: "Margherita Monti"
+  job: "original translations"
+}
+manager {
+  name: "Gervasoni, Andrea"
+  job: "art direction"
+}
+manager {
+  name: "Capietti, Alberto"
+  job: "marketing direction"
+}
+date {
+  year: 2000
+}
+isbn {
+}
+isbn13 {
+}
+pages: 52
+system: NONE
+audience: ALL
+type: COMICS
+style: HARDCOVER
+number: "Number 2"
+series: "The Forbidden Sands of Anauroch"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

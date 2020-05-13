@@ -1,0 +1,53 @@
+template {
+  name: "PZO 4056"
+  category: "map"
+  category: "tiles"
+  synonym: "Pathfinder Map Pack: Camps & Shelters"
+  world: "Generic"
+  description: "Even the hardiest adventurers need to sleep, snatching moments of rest in monster-filled woods or haunted ruins. Whether your heroes are grabbing some shut-eye in a trap-filled temple or huddled around a campfire under the stars, there\'s no need to sketch every dry cave and sheltering embankment. This Pathfinder Map Pack provides stunningly illustrated 5\" \303\227 8\" map tiles that can be positioned to form a variety of modular, customizable campsites. Inside, you\'ll find 18 richly crafted map tiles, including:\n\n\\list\n{Prairie Lean-Tos}\n{Desert Bivouac}\n{Ruined Temple Refuge}\n{Stony Campsite}\n{Cave Chamber}\n{Forgotten Cabin}\n{Dungeon Resting Place}\n{Forest Clearing Camp}\n{Back-Alley Retreat}\n\nGame Masters shouldn\'t waste their time drawing maps every time adventurers need to stop for the night. With Pathfinder Map Pack: Camps & Shelters, you\'ll always be ready to ambush them in their sleep.\n\nWet, dry, and permanent markers erase from the tiles! With revised packaging that includes a reusable box for easy storage, Map Packs have never been so useful!"
+  short_description: "Color map tiles of camps and shelters"
+}
+title: "Camps & Shelters"
+subtitle: "Shelter from the Storm"
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "design"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+date {
+  year: 2015
+  month: 7
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "759"
+  check: 8
+}
+system: NONE
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Paizo"
+series: "Pathfinder Map Pack"
+series: "Map Pack"
+price {
+  currency: "$"
+  number: 1399
+  precision: 100
+}
+content {
+  part: BOX
+  description: "packaging"
+  number: 1
+}
+content {
+  part: MAP
+  description: "tile"
+  number: 18
+}
+layout: FULL_COLOR

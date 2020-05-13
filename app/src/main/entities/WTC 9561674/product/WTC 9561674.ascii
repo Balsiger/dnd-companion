@@ -1,0 +1,45 @@
+template {
+  name: "WTC 9561674"
+  world: "Forgotten Realms"
+  description: "Shadows move out of the shrinking desert, south to the rich and arrogant\n                    cities of \\Place{Sembia}.\n                    \\emph{\'Be brave, little man\', says the shadowman, and the boy thinks his\n                    voice is surprisingly soft. \'Stay with your mother. This will be over soon.\'\n                    The shadows swallow him and he is gone.}\n                    On the edge of a war that will change the face of \\Place{Faer\\hat{u}n}, the\n                    world will find that not all shadows serve \\Place{Shade}."
+}
+title: "Shadowbread"
+subtitle: "The Lady has spoken to me. It has already begun."
+author {
+  name: "Kemp, Paul S."
+}
+cover {
+  name: "Svanland, Raymond"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+date {
+  year: 2006
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4077"
+  check: 8
+}
+isbn13 {
+}
+pages: 341
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "The Twilight War"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

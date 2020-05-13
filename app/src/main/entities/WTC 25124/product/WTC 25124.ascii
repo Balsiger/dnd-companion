@@ -1,0 +1,172 @@
+template {
+  name: "WTC 25124"
+  synonym: ""
+  world: "Generic"
+  description: "Out of the \\Place{Far Realm} they came: creatures of horror and madness. As the gods rallied against the incursion, brave heroes arose with newfound powers of their own. Together they stood against this threat from beyond, just as they stand today.\n                    This companion to the \\Product{Player\'s Handbook} and \\Product{Player\'s Handbook 2} core rulebooks introduces the psionic power source --- powers of the will brought to bear against evil\'s madness. \\Product{Player\'s Handbook 3} includes four classes tied to the psionic power source: the \\Class{ardent}, the \\Class{battlemind}, the \\Class{monk}, and the \\Class{psion}. It also presents a new divine class (the \\Class{runepriest}) and a new primal class (the \\Class{seeker}).\n                    This essential book for Dungeons & Dragons players contains other exciting options: new races, powers (including skill powers for all classes), feats, paragon paths, epic destinies, equipment, superior implements, and rules for hybrid characters."
+  short_description: "Psionic, Divine, and Primal Heroes"
+}
+title: "Player\'s Handbook 3"
+subtitle: "Think You\'ve Seen It All? Think Again"
+author {
+  name: "Schaefer, Peter"
+  job: "developer"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "developer"
+}
+author {
+  name: "Collins, Andy"
+  job: "additional development"
+}
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "additional development"
+}
+editor {
+  name: "Cottrill, Tora"
+  job: "additional editing"
+}
+editor {
+  name: "Horner, Miranda"
+  job: "additional editing"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editing"
+}
+cover {
+  name: "Komarck, Michael"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O&#39Connor, William"
+}
+illustrator {
+  name: "Ortiz, Hector"
+}
+illustrator {
+  name: "Nitzsche, Shane"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Trott, Beth"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+illustrator {
+  name: "Brock, Ashley"
+  job: "image technician"
+}
+typographer {
+  name: "Tardiff, Christopher"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Durham, Martin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2010
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5390"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5390"
+  check: 5
+}
+pages: 224
+system: DND_4
+audience: PLAYER
+type: RULEBOOK
+style: HARDCOVER
+producer: "WTC"
+series: "Core Rulebook"
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

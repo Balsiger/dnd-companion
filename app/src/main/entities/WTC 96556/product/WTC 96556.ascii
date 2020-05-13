@@ -1,0 +1,34 @@
+template {
+  name: "WTC 96556"
+  world: "Dragonlance"
+  description: "\\Product{Flight of the Fallen} is the second title in a trilogy that centers\n  around \\NPC{Linsha Majere}, the grandchild of one of the central characters\n  of the entire \\Place{Dragonlance} saga. This trilogy continues to advance the\n  story of post-\\Event{War of Souls} events in the \\Place{Dragonlance} world\n  and introduces a major new villain to the setting."
+}
+title: "Flight of the Fallen"
+author {
+  name: "Herber, Mary H."
+}
+date {
+  year: 2004
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3245"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume II"
+series: "The Linsha Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

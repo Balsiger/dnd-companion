@@ -1,0 +1,76 @@
+template {
+  name: "TSR 2155"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 221"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "Generic"
+  description: "Superhuman feats of skill and daring are the stock in trade of the fearless\n                    warriors known as ninja. This 128-page accessory gives you all the\n                    information you need to role-play exotic ninja, lone wolf operatives, and\n                    other character types---new character kits, special rules, and descriptions\n                    of the ninja\'s unique weapons and equipment. \\Product{The Complete Ninja\'s\n                    Handbook} brings life to these shadowy figures of myth and legend."
+}
+title: "Complete Ninja\'s Handbook"
+leader: "The"
+author {
+  name: "Allston, Aaron"
+}
+editor {
+  name: "Young, Barbara G."
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Fields, Fred"
+}
+illustrator {
+  name: "Dorscheid, Les"
+}
+typographer {
+  name: "Isler, Tracey"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0159"
+  check: 4
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "15"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

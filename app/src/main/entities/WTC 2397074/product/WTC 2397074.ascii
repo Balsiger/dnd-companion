@@ -1,0 +1,47 @@
+template {
+  name: "WTC 2397074"
+  world: "Eberron"
+  description: "For millennia, the \\Monster{dragons} have watched the great events of the world unfold, nurturing and destroying entire nations when necessary, always guided by the \\Item{Draconic Prophecy}.\n\nBut now, the younger races are seizing their own destiny. Mere mortals have taken a hand in the \\Item{Prophecy} --- and a select few think they have found a way to harness the power of the mighty \\Monster{dragons} for their own ends:\n\nThe Dragon Forge.\n\n\\NPC{Gaven Lyrandar}, Exile and Storm Dragon, stands on the edge to two destinies: master of the Dragon Forge --- or its slave."
+  short_description: "Draconic Prophecies, Book Two"
+}
+title: "Dragon Forge"
+subtitle: "It takes power to seize power. And the dragons have power to spare."
+author {
+  name: "Wyatt, James"
+}
+cover {
+  name: "Swanland Raymond"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2009
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5105"
+  check: 2
+}
+isbn13 {
+}
+pages: 372
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book Two"
+series: "Draconic Prophecies"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

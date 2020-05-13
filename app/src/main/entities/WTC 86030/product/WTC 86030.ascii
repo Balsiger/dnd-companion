@@ -1,0 +1,61 @@
+template {
+  name: "WTC 86030"
+  world: "Dragonlance"
+  description: "The next \\Place{Dragonlance} novel in the trilogy that launched the entire\n  \\Product{Dragonlance} line, \\Product{Dragons of Winter Night} has been\n  adapted to a format specifically targeted at young readers. The novel has\n  been divided into two volumes, \\Product{The Nightmare Lands} and \\Product{To\n  the Gates of Palanthas}, that are sized to fit the young reader market. These\n  titles contain brand new cover art and interior art and are a continuation of\n  the overall young reader adaptation of the entire \\Product{Dragonlance\n  Chronicles trilogy}."
+}
+title: "Nightmare Lands"
+leader: "The"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Hickman, Tracy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3093"
+  check: 4
+}
+isbn13 {
+}
+pages: 256
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Dragonlance Young Reader Novels"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

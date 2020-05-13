@@ -1,0 +1,124 @@
+template {
+  name: "TSR 1103"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 211"
+  }
+  world: "Ravenloft"
+  description: "Welcome to Gothic \\Place{Earth}, a world almost identical to our own in the\n                    1890\'s...until the sun goes down!\n                    \\Product{Masque of the Read Death} is a new variant of the\n                    \\Product{Ravenloft} rules that allows players to explore the macabre world of\n                    the 1890\'s. From the brave cavalryman with his trusty revolver to the\n                    mysterious spiritualist and her store of secret knowledge, no one is safe\n                    from the horrors of the night. \\Product{Masque of the Read Death} contains\n                    everything you need to adventure in the fictional worlds of Edgar Allan Poe,\n                    Bram Stoker, and Arthur Conan Doyle.\n                    In this box you\'ll find:\n                    \\list\n                    {\\emph{A Guide to Gothic Earth:} A 128-page book by the author of\n                    \\Product{Van Richten\'s Guide to Ghots} and \\Product{Forbidden Lore}\n                    that gives you all the rules and information you\'ll need to run\n                    adventures on Gothic \\Place{Earth}. Included are 16 character kits, a\n                    revised spellcasting system, complete rules for firearms and\n                    explosives, and a proficiency system especially designed to reflect\n                    life in the Victorian Era.}\n                    {\\emph{Red Tide:} A chilling 32-page adventure in which PCs must face\n                    one of mankind\'s oldest enemies while exploring the gloomy waterfront\n                    of \\Place{San Francisco}.}\n                    {\\emph{Red Jasck:} The most frightening figure ever to stalk the\n                    streets of \\Place{London} is on the loose in this 32-page\n                    adventure. This time, \\NPC{Jack} takes his unique brand of terror to\n                    \\Place{Boston}.}\n                    {\\emph{Red Death:} An isolated mansion hidden in the eastern\n                    \\Place{Europe} is the setting for this 32-page drama in which the PCs\n                    must face death itself.}\n                    {A full-color, poster-sized map of \\Place{Gothic Earth}.}\n                    {A bonus full-color poster of the cover painting by renowned artist\n                    Robh Ruppel.}\n                    {A three-panel DM Screen that places all essential reference charts at\n                    your fingertips!}"
+}
+title: "Masque of the Red Death and Other Tales"
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Hensley, Shane"
+}
+author {
+  name: "McComb, Colin"
+}
+author {
+  name: "Heinrich, D. J."
+}
+editor {
+  name: "Brown, Anne K."
+}
+editor {
+  name: "Pike-Brown, Richard"
+}
+editor {
+  name: "Caspian, Jonatha Ariadne"
+}
+cover {
+  name: "Ruppel, Robh"
+}
+cover {
+  name: "Fabian, Stephen"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Hayday, Andria"
+  job: "project coordination"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "graphics coordination"
+}
+manager {
+  name: "Cooper, Peggy"
+  job: "art coordination"
+}
+manager {
+  name: "Coumbe, Tim"
+  job: "electronic prepress coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1994
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 224
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "A Guide to Gothic Earth"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Red Tide"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Red Jack"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Red Death booklet"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 2
+}
+content {
+  part: SCREEN
+  description: "DM"
+  number: 1073741824
+}

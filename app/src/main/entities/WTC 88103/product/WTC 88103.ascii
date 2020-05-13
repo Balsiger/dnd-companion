@@ -1,0 +1,24 @@
+template {
+  name: "WTC 88103"
+  world: "Star Wars"
+  description: "The \\Product{Star Wars Gamemaster Screen} is a shield that allows\n  gamemasters to hide their notes, maps, and charts from players. This new\n  screen comes packed with eight panels of the most useful tables and charts\n  from the \\Product{Star Wars Roleplaying Game} rulebook. Designed for easy\n  access and comprehensive utility, this screen will allow gamemasters to have\n  the most important information right at their fingertips at all times.  "
+}
+title: "Star Wars Gamemaster Screen"
+date {
+  year: 2001
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 8
+system: D20
+type: ACCESSORY
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

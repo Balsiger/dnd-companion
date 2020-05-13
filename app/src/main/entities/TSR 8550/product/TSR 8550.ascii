@@ -1,0 +1,50 @@
+template {
+  name: "TSR 8550"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "\\NPC{Volothamp Geddarm} (\'\\NPC{Volo}\' to his public), traveler, author,\n                    renaissance man of the \\Place{Realms}, has been known to brag on occasion,\n                    and to bet even more often. So when a discussion as to who is the greatest\n                    traveler in the \\Place{Realms} takes place in his presence, of course he is\n                    going to defend his hard-won reputation, no matter what the consequences.\n                    Soon \\NPC{Volo} and his erstwhile companion, \\NPC{Passepout}, are on a grand\n                    tour the likes of which \\Place{Toril} has never seen. From \\Place{Chult} to\n                    \\Place{Kara Tur}, from \\Place{Suzail} to the \\Place{Shining South}, even from\n                    the \\Place{Land of the Dead} to \\Place{Maztica}, \\NPC{Volo} and\n                    \\NPC{Passepout} make their way around the globe...little suspecting that this\n                    simple bet masks a dark conspiracy unlike any other."
+}
+title: "Once Around the Realms"
+author {
+  name: "Thomseon, Brian"
+}
+cover {
+  name: "Lakey, John"
+}
+cover {
+  name: "Lakey, Laura"
+}
+date {
+  year: 1995
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0119"
+  check: 5
+}
+isbn13 {
+}
+pages: 307
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

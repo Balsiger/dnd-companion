@@ -1,0 +1,73 @@
+template {
+  name: "TSR 9262"
+  synonym: "FR8"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "Dungeon delving can be delightful. Wandering the wilderness is a wonderful\n                    way to pass the time. But for the ultimate in opportunity, intrigue, and\n                    unexpected danger, try visiting the nearest village, town, or city.\n                    A city is much more than a rest stop, a watering hole, or a place to buy\n                    equipment. Any community, from the smallest hamlet to the most crowded\n                    medieval metropolis, offers adventuring possibilities that can\'t be found in\n                    any other environment. \\Product[TSR 9262]{Cities of Mystery} describes for\n                    the Dungeon Master how to create realistic, exciting, and vibrant\n                    communities---and give him the tools to make his creations come alive.\n                    Inside this folder are 12 different street layout patterns that can be\n                    combined in a multitude of ways, plus 33 buildings of various shapes and\n                    sizes that can be cut out and assembled. The components, scaled for use with\n                    25mm miniature figures, allow you to create three-dimensional city scenes for\n                    characters to explore. Also included is a 64-page book that takes you step by\n                    step through the process of defining and designing the villages, towns, and\n                    cities of your campaign world. The book contains five adventure scenarios\n                    that make use of the street layouts and fold-up buildings---ideas designed to\n                    get you started on the way of making your cities com alive."
+}
+title: "Cities of Mystery"
+author {
+  name: "Rabe, Jean"
+}
+editor {
+  name: "Mohan, Kim"
+}
+cover {
+  name: "Elmore, Larry"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Miller, Chris"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+typographer {
+  name: "Elmore, Betty"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+manager {
+  name: "Heard, Bruce"
+  job: "product management"
+}
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "city layout maps"
+  number: 4
+}
+content {
+  part: MISC
+  description: "cardboard fold-up buildings"
+  number: 33
+}

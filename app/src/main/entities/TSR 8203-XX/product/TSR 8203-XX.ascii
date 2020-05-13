@@ -1,0 +1,21 @@
+template {
+  name: "TSR 8203-XX"
+  reference {
+    name: "catalog98"
+  }
+  world: "Generic"
+  description: "1998 issues of Dungeon magazine (number of 1st month added to TSR number)"
+}
+title: "Dungeon Magazine \'98"
+date {
+  year: 1998
+}
+isbn {
+}
+isbn13 {
+}
+type: MAGAZINE
+number: "1994"
+series: "Dungeon"
+price {
+}

@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5900"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "AD&D Basic Paint Set"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

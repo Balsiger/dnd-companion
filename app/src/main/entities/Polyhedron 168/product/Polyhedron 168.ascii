@@ -1,0 +1,65 @@
+template {
+  name: "Polyhedron 168"
+  world: "Generic"
+  description: "Issue of polyhedron (together with Dungeon 109)."
+}
+title: "Polyhedron 168"
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "Looby, Paul"
+}
+editor {
+  name: "Mona, Erik"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+cover {
+  name: "Smith, Andy"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Smith, Andy"
+}
+illustrator {
+  name: "Atiye, Michael"
+  job: "colors"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art direction"
+}
+date {
+  year: 2004
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 28
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "168"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

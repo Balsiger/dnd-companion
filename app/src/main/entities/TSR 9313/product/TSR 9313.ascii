@@ -1,0 +1,64 @@
+template {
+  name: "TSR 9313"
+  synonym: "SJR3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "This \\emph{all new} AD&D Dungeon Master\'s Screen has been designed\n  especially for use with the \\Place{Spelljammer} campaign system. From basic\n  combat tables to planetary statistics, the screen provides all the special\n  tables needed to smoothly run an AD&D space campaign, placing them\n  immediately within the DM\'s reach.\n\n  In addition to the useful tables, the screen gives you:\n\n  \\list\n  {combat statistics for your favorite ships from \\Product{Lost Ships}\n   and the \\Place{Spelljammer} campaign adventures!}\n  {a 3-panel panoramic painting depicting an epic battle in\n   \\Place{Wildspace}}\n  {full color three-dimensional fold-up for space-faring ships suitable\n   for use in ship-to-ship combat}"
+}
+title: "Spelljammer DM Screen"
+author {
+  name: "LaFountain, J. Paul"
+}
+author {
+  name: "Schend, Steven E."
+}
+cover {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "LaForce, Dave \'Diesel\'"
+}
+date {
+  year: 1991
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "053"
+  check: 2
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+style: SCREEN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: GATEFOLD
+  description: "screen"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "paper ships"
+  number: 1073741824
+}
+content {
+  part: PAGE
+  description: "instruction"
+  number: 1073741824
+}

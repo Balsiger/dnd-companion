@@ -1,0 +1,71 @@
+template {
+  name: "TSR 9307"
+  synonym: "FROA1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Forgotten Realms"
+  description: "\\bold{Behold The Shining Temple of \\Place{Bishamon}!}\n                    Located above the city of \\Place{Aru} on the island nation of \\Place{Wa},\n                    this shrine is the focus of great pilgrimage. Every year, thousands of people\n                    travel here to celebrate the Ceremony of the Three Thousand Steps. For\n                    townsfolk and travelers alike, it is a time of great celebrations and\n                    revelry.\n                    For \\NPC{Benju Matsumoto}, Daimyo of \\Place{Aru}, it is a time of worry and\n                    concern. Something is wrong this year. A political rival has hired a clan of\n                    ninja to disrupt the pilgrimage and disgrace \\NPC{Matsumoto}. But the daimyo\n                    has his own ninja, and just to be safe, he decides to hire a party of\n                    adventurers to make sure everything runs smoothly.\n                    Of course, it doesn\'t..."
+}
+title: "Ninja Wars"
+author {
+  name: "Findley, Nigel"
+}
+editor {
+  name: "Connors, William W."
+}
+cover {
+  name: "Fields, Fred"
+}
+cartographer {
+  name: "Knecht, John"
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "production"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "895"
+  check: 1
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Oriental Adventures"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,49 @@
+template {
+  name: "K&C 708"
+  description: "Issues twenty-two through twenty four of Knights of the Dinner Table crammed\n  between two covers!\n\n  97 pages of classic KODT including the exicting finish to Bag Wars!"
+}
+title: "Bundle of Trouble: Volume Eight"
+subtitle: "A Compilation of Knights of the Dinner Table: Issues 22 Thru 24"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+}
+author {
+  name: "Johansson, Steve"
+}
+author {
+  name: "Kenzer, David S."
+}
+cover {
+  name: "Vrbanic, Gorge"
+}
+cover {
+  name: "Vrbanic, Jackie"
+}
+date {
+  year: 2001
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 97
+system: NONE
+audience: ALL
+type: COMICS
+style: BOOKLET
+producer: "K&C"
+number: "Volume Eight"
+series: "Knights of the Dinner Table"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

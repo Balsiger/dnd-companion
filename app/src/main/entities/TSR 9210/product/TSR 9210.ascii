@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9210"
+  synonym: "CM9"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Legacy of Blood"
+leader: "The"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}

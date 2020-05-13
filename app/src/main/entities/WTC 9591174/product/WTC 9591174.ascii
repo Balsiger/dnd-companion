@@ -1,0 +1,41 @@
+template {
+  name: "WTC 9591174"
+  world: "Forgotten Realms"
+  description: "\\large{Daughter of \\Group{House Hiloar}}\n                    \\large{\\Group{War Wizard} of \\Place{Cormyr}}\n                    \\large{Renegade}\n                    Only fools find themselves at \\Place{Winterkeep} after the first snowfall. The cold\n                    alone can kill, if you live long enough, and dangers far worse haunt the\n                    ruined keep in winter.\n                    But slavers stole her son. She would sacrifice everything to get him back. In\n                    the uncaring, frozen north, will it be enough?\n                    \\Product{Frostfell} is the next title in the \\Place{Forgotten Realms} novel series focusing on\n                    wizards, the popular D&D game iconic class."
+}
+title: "Frostfell"
+author {
+  name: "Sehestedt, Mark"
+}
+cover {
+  name: "Meyers, Duane O."
+}
+date {
+  year: 2006
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4245"
+  check: 2
+}
+isbn13 {
+}
+pages: 309
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "4"
+series: "The Wizards"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

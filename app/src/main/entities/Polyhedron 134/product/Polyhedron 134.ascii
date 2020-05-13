@@ -1,0 +1,77 @@
+template {
+  name: "Polyhedron 134"
+  world: "Generic"
+  description: "Issue 134 of Polyhedron."
+}
+title: "Polyhedron 134"
+author {
+  name: "Steve Jay"
+}
+author {
+  name: "Gibson, Ed"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "William Ronald"
+}
+author {
+  name: "Schiller, Devon"
+}
+author {
+  name: "Randy Bisig"
+}
+author {
+  name: "Matt Kelley"
+}
+author {
+  name: "Ramsey Lundock"
+}
+author {
+  name: "Laura Harvey"
+}
+editor {
+  name: "Jeff Quick"
+}
+editor {
+  name: "Sean Glenn"
+}
+manager {
+  name: "TSR, Inc."
+  job: "Commander-in-Chief"
+}
+manager {
+  name: "Ryan Dancey"
+  job: "Secretary of State"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Speaker of the House"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "Cabinet Member"
+}
+manager {
+  name: "Mark Painter"
+  job: "Cabinet Member"
+}
+date {
+  year: 1999
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "19"
+number: "1"
+series: "Polyhedron"
+price {
+}

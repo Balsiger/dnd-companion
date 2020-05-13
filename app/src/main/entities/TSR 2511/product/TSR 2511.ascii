@@ -1,0 +1,53 @@
+template {
+  name: "TSR 2511"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Mystara"
+  description: "an powerful audio CD quest"
+}
+title: "Glantri: Kingdom of Magic"
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Heard, Bruce"
+}
+date {
+  year: 1995
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0120"
+  check: 9
+}
+isbn13 {
+}
+pages: 160
+system: ADND_2ND
+type: CAMPAIGN_EXPANSION
+style: BOX
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: CD
+  description: "audio"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "handouts"
+  number: 8
+}

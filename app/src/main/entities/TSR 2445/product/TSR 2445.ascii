@@ -1,0 +1,40 @@
+template {
+  name: "TSR 2445"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  world: "Dark Sun"
+  description: "player information about wizards"
+}
+title: "Defilers and Preservers: Wizards of Athas"
+author {
+  name: "Rea, Nicky"
+}
+date {
+  year: 1996
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0383"
+  check: 10
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+audience: PLAYER
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1595
+  precision: 100
+}

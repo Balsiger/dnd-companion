@@ -1,0 +1,70 @@
+template {
+  name: "TSR 9460"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "Well met, traveler!\n                    Welcome to the latest in the popular series of guidebooks penned by\n                    \\NPC{Volothamp Geddarm}. You hold in your hands an overview of the most\n                    important inns, taverns, shops, and tourist attractions in the wester\n                    \\Place{Heartlands}, the coast of which is known as the \\Place{Sword\n                    Coast}. These lands begin south of fabled \\Place{Waterdeep} and the\n                    \\Place{Savage Frontier}, continue up to the northern borders of \\Place{Amn},\n                    and reach east as far as the desert\'s edge and \\Place{Tunland}. This perilous\n                    region sees some of the heaviest caravan traffic in all the \\Place[Forgotten\n                    Realms]{Realms}. Every merchant who enters the lands of the \\Place{Sword\n                    Coast} should have a copy of this guide ready to hand. As usual, all features\n                    and establishments covered are ranked with \\NPC[Volothamp Geddarm]{Volo}\'s\n                    handy coin, dagger, pipe, and tankard ratings system.\n                    Discover:\n                    \\list\n                    {Where pirates go to drink the night away and plot which ships and\n                    ports they\'ll next strike at,}\n                    {The best craftsfolk of the \\Place{Sword Coast},}\n                    {Where the best caravan masters can be found---and where they dare not\n                    go,}\n                    {Local legends and rumors of rich treasures not yet found and\n                    plundered,}\n                    {Haunted ruins and other places that must be seen---from a safe\n                    distance,}\n                    {Where mighty wizards and sword-swinging adventurers dwell,}\n                    {Dragon-lairs---and the dwelling places of worse monsters!}\n                    \\bold{Suitable for all levels of play.}\n                    \\bold{Special Note:} This edition of \\Product[TSR 9460]{Volo\'s Guide to the\n                    Sword Coast}, intended for travelers from beyond the borders of\n                    \\Place{Faer\\hat{u}n}, contains notes and commentary by the famous archmage\n                    and sage \\NPC{Elminster}."
+}
+title: "Volo\'s Guide to the Sword Coast"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Martin, Julia E."
+}
+cover {
+  name: "Lakey, John"
+}
+cover {
+  name: "Lakey, Laura"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Jacquays, Paul"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1994
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "904"
+  check: 1
+}
+isbn13 {
+}
+pages: 240
+system: ADND_2ND
+type: ACCESSORY
+style: PAPERBACK
+producer: "TSR"
+series: "Volo\'s Guide"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

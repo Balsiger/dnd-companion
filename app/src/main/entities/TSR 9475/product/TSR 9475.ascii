@@ -1,0 +1,66 @@
+template {
+  name: "TSR 9475"
+  synonym: "(FOR6)"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "Beautiful, powerful, mysterious, and deadly---the silver-haired \\Group{Seven\n                    Sisters} are legendary throughout the \\Place{Forgotten Realms}.\n                    One rules the city of bards, \\Place{Silverymoon}. Another is\n                    \\NPC{Elminster}\'s beloved and the infamous \\NPC[The Simbul]{Witch-Queen of\n                    Aglarond}. The third is the \\NPC[Laeral]{Lady Mage of Waterdeep}, peer and\n                    consort of \\NPC{Khelben \'Blackstaff\' Arunsun}, and the fourth is a\n                    \\Group[Harpers]{Harper} and one of the famous \\Group{Knights of Myth\n                    Drannor}. The fifth is a leader of the \\Group{Harpers} and a legendary bard\n                    in her own right, and the sixth is a dead---perhaps undead---with. And the\n                    seventh? She\'s the one who wild tales are whispered about all across\n                    \\Place{Faer\\hat{u}n} around many a fireside late at night.\n                    But who are they, really? Their very names conjure up romance, allure, and\n                    power---\\NPC{Storm Silverhand}, \\NPC[The Simbul]{the Simbul},\n                    \\NPC[Alustriel]{High Lady Alustriel}. Sages say they are among the\n                    \\Group{Chosen of Mystra}, archmages who wield magic few can dare to stand\n                    against. Yet these seven do not seek to rule the world, and they often stay\n                    quiet and hidden for generations.\n                    That hints at another thing. These seven seem immortal, never aging as the\n                    long years pass. Just who are these \\Group{Seven Sisters}, and what are their\n                    secrets?\n                    Read this tome, and learn what the \\Group{Zhentarim}, the \\Group{Red Wizards}\n                    of \\Place{Thay}, and the \\Group{Cult of the Dragon} could not, despite\n                    performing many fell deeds in the attempt. Learn the stories of these great\n                    ladies, and their aims and strivings---and browse among over a hundred new\n                    and spectacular spells! Dungeon Masters and players alike will find this\n                    volume an essential sourcebook of Realmslore, and a handy guide to\n                    archsorceresses peerless in power. "
+}
+title: "Seven Sisters"
+leader: "The"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Martin, Julia E."
+}
+cover {
+  name: "Fields, Fred"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Coumbe, Tim"
+  job: "electronic prepress coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "production"
+}
+date {
+  year: 1996
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0118"
+  check: 7
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

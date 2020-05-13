@@ -1,0 +1,126 @@
+template {
+  name: "Dungeon 72"
+  world: "Generic"
+  description: "This is issue 72 of the dungeon magazine."
+}
+title: "Dungeon 72"
+author {
+  name: "Spahn, Peter C."
+}
+author {
+  name: "Hartshorne, John A."
+}
+author {
+  name: "Carl, Jason"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Miller, Andy"
+}
+author {
+  name: "Grubb, Jeff"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistant editor"
+}
+editor {
+  name: "Carlson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "DiTerlizzi, Tony"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Delfino"
+}
+illustrator {
+  name: "Vrbanic, George"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Schwartz, Stephen"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "McDevitt, Bradley"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+manager {
+  name: "Blaskowsky, Barbara"
+  job: "circulation manager"
+}
+date {
+  year: 199
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 88
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XII 6"
+number: "72"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

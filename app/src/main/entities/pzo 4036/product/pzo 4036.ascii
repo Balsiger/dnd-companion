@@ -1,0 +1,47 @@
+template {
+  name: "pzo 4036"
+  world: "Generic"
+  description: "When the battle goes belowdecks, no Game Master wants to spend time deciding whether the next hatch leads to the galley or the bilge. Fortunately, with Paizo Publishing\'s latest GameMastery Map Pack, you don\'t have to! This line of gaming accessories provides simple and elegant tools for the busy Game Master. Inside, you\'ll find 18 captivating 5\'\' x 8\'\' map tiles that can be combined to create a complete loot-laden pirate vessel, or be used with GameMastery Flip Mat: Pirate Ship to reveal what lies below its battle-scarred decks.\n\nLocations include:\n\\list\n{Bilge}\n{Captain\'s Cabin}\n{Cargo Hold}\n{Galley}\n{Officer\342\200\231s Cabin}\n{Sailors\' Quarters}\n{Skiff}\n\nGame Masters shouldn\'t waste their time sketching maps every time their players set out upon the waves. With GameMastery Map Pack: Ship\'s Cabins, you\342\200\231ll be ready for whatever mutiny and mayhem the seas have in store!\n\nFor use with all tabletop roleplaying and miniatures games and suitable for experienced GMs and novices alike, this product fits perfectly into any Game Master\'s arsenal.\n\nWet, dry, and permanent markers erase from the tiles!"
+  short_description: "Map tiles showing ship scenes."
+}
+title: "Ship\'s Cabins"
+subtitle: "Get Belowdecks!"
+cover {
+  name: "Engle, Jason"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+date {
+  year: 2013
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "406"
+  check: 1
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Map Pack"
+series: "GameMastery"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "map tile"
+  number: 18
+}
+layout: FULL_COLOR

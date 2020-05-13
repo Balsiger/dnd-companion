@@ -1,0 +1,68 @@
+template {
+  name: "TSR 1149"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  reference {
+    name: "Dragon 240"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "Dragonlance"
+  description: "Mysteries of Wayreth Tower."
+}
+title: "Last Tower: The Legacy of Raistlin"
+leader: "The"
+author {
+  name: "Williams, Skip"
+}
+date {
+  year: 1997
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0538"
+  check: 7
+}
+isbn13 {
+}
+pages: 192
+system: SAGA
+type: ACCESSORY
+style: BOX
+series: "5th Age"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

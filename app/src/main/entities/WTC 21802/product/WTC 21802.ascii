@@ -1,0 +1,31 @@
+template {
+  name: "WTC 21802"
+  world: "Dominaria"
+  description: "In the midst of an all-out war, the ground shifts and moves. Milliions upon\n                    millions of invaders appear out of nowhere as the artificial plane of\n                    \\Place{Rath} overlays \\Place{Dominaria}, covering the natural landscape with\n                    the unnatural horros of \\Place{Phyrexia}.\n                    There is no rest for the wicked."
+}
+title: "Planeshift"
+subtitle: "The first wave is over, but the invasion rages on."
+author {
+  name: "King, Robert J"
+}
+date {
+  year: 2000
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 311
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 2"
+series: "Invasion Cycle"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

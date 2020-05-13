@@ -1,0 +1,46 @@
+template {
+  name: "KODT 33"
+  description: "Issue 33 of the Knights of the Dinner Table comics."
+}
+title: "Wild Wild Hack"
+subtitle: "Issue 33"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+}
+author {
+  name: "Johansson, Steve"
+}
+author {
+  name: "Kenzer, David S."
+}
+cover {
+  name: "Hall, Benjamin"
+}
+date {
+  year: 1999
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 40
+system: NONE
+audience: ALL
+type: COMICS
+style: BOOKLET
+producer: "K&C"
+number: "Issue 33"
+series: "Knights of the Dinner Table"
+price {
+  currency: "$ "
+  number: 1199
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

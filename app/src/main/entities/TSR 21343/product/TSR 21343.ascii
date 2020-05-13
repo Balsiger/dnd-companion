@@ -1,0 +1,45 @@
+template {
+  name: "TSR 21343"
+  reference {
+    name: "Dragon 257"
+  }
+  world: "Forgotten Realms"
+  description: "Adrift in a strange world, the \\Monster{half-demon} \\NPC{Vheod} embarks on a\n                    quest to rid his new home of a powerful \\Monster{demon lord}...but before\n                    this unspeakable evil can be destroyed, it will have to be released!\n                    Monte Cook recounts the adventures of a new kind of hero in the\n                    \\Product{Forgotten Realms} setting."
+}
+title: "Glass Prison"
+leader: "The"
+author {
+  name: "Cook, Monte J."
+}
+cover {
+  name: "Fields, Fred"
+}
+cartographer {
+  name: "Wood, Sam"
+}
+date {
+  year: 1999
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1343"
+  check: 6
+}
+isbn13 {
+}
+pages: 292
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

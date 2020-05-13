@@ -1,0 +1,240 @@
+template {
+  name: "WTC 25384"
+  synonym: ""
+  world: "Generic"
+  description: "A wide-eyed band of heroes stands before a gaping archway --- the dark maw of an ancient dungeon filled with treasures yet to be plundered. Haunting the chambers and corridors of this forlorn oubliette are vile monsters the likes of which the heroes have never faced...\n                    This Dungeons & Dragons core rulebook introduces an innovative monster stat block format that makes running monsters easier for the Dungeon Masters. \\Product{Monster Manual 3} also presents a horde of iconic monsters that fit easily into any campaign, including:\n                    \\list\n                    {New variants of existing monsters, such as the \\Monster{gnoll war fan}, the \\Monster{ogre dreadnought}, and the \\Monster{putrid slaad}.}\n                    {Updates to popular and iconic monsters from previous editions, including the \\Monster{cloaker}, the \\Monster{nalfeshnee demon}, the \\Monster{mimic}, the \\Monster{quasit}, the \\Monster{rot grub}, and the \\Monster{thrikreen}.}\n                    {Catastrophic dragons, including the \\Monster{earthquake dragon} and the \\Monster{volcanic dragon}.}\n                    {Epic threads, including \\God{Lolth} (Demon Queen of Spiders), and \\God{Imix} (Prince of Elemental Fire}, along with evil underlings and cultists.}"
+}
+title: "Monster Manual 3"
+subtitle: "Guess What\'s Coming for Dinner"
+author {
+  name: "Kestrel, Gwendolyn F.M."
+  job: "additional design"
+}
+author {
+  name: "Laird, Clifton"
+  job: "additional design"
+}
+author {
+  name: "Lee, Peter"
+  job: "additional design"
+}
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "additional design"
+}
+author {
+  name: "Sernett, Matthew"
+  job: "additional design"
+}
+author {
+  name: "Townshend, Steve"
+  job: "additional design"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "lead developer"
+}
+author {
+  name: "Radney-MacFarland, Stephen"
+  job: "developer"
+}
+author {
+  name: "Schaefer, Peter"
+  job: "developer"
+}
+author {
+  name: "Bilsland, Greg"
+  job: "developer"
+}
+author {
+  name: "Bonner, Logan"
+  job: "developer"
+}
+author {
+  name: "Wilkes, Jennifer Clarke"
+  job: "developer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "developer"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+author {
+  name: "Sims, Chris"
+  job: "developer"
+}
+editor {
+  name: "Horner, Miranda"
+}
+editor {
+  name: "Carter, Michele"
+  job: "additional editing"
+}
+editor {
+  name: "Collins, Andy"
+  job: "additional editing"
+}
+editor {
+  name: "Cottrill, Tora"
+  job: "additional editing"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "managing editor"
+}
+cover {
+  name: "Ejsing, Jesper"
+}
+illustrator {
+  name: "Dutrait, Vincent"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Felix, Jason"
+}
+illustrator {
+  name: "Gillespie, Adam"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Gist, E.M."
+}
+illustrator {
+  name: "Hinton, Woodrow III"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2010
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5490"
+  check: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5490"
+  check: 2
+}
+pages: 224
+system: DND_4
+type: MONSTER_COMPENDIUM
+style: HARDCOVER
+producer: "WTC"
+number: "3"
+series: "Monster Manual"
+price {
+  currency: "$"
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,105 @@
+template {
+  name: "WTC 20112"
+  world: "None"
+  description: "A chair smashes into \\NPC{Balthur} the \\Monster{Dwarf} \\Class{Cleric}. \\NPC{Finno} the \\Monster{Halfling} \\Class{Rogue} punches \\NPC{Xxyzzt} the \\Monster{Beholder} Barfly. Mugs of frothy ale fly in all directions. This is the \\Product{Inn-Fighting: D&D Dice Game}, a wild and wacky game of tavern brawling set in the fantastic worlds of the Dungeons & Dragons roleplaying game.\n\nThis fast-paced, noncollectable dice game for 3-6 players uses custom dice and cards. To play, you also need some kind of counters to represent Hit Points and Victory Points as the humorous melee unfolds."
+}
+title: "Inn-Fighting"
+subtitle: "It\'s a typical night at the inn. Suddenly, a brawl breaks out"
+author {
+  name: "Heinsoo, Rob"
+  job: "game design"
+}
+author {
+  name: "Decker, Jesse"
+  job: "game development"
+}
+author {
+  name: "Donais, Michael &#39Mike&#39"
+  job: "game development"
+}
+author {
+  name: "Marques, Greg"
+  job: "game development"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "rules writing"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "rules editing"
+}
+cover {
+  name: "Adorjany, Attila"
+}
+illustrator {
+  name: "Adorjany, Attila"
+  job: "card illustrations"
+}
+illustrator {
+  name: "Powell, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Martin, Michael"
+  job: "graphic design"
+}
+manager {
+  name: "Foster, Liane"
+  job: "brand management"
+}
+manager {
+  name: "McCart, Mitzi"
+  job: "production"
+}
+manager {
+  name: "Applin, Raini"
+  job: "production"
+}
+date {
+  year: 2007
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4798"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4798"
+}
+pages: 24
+system: NONE
+audience: ALL
+type: CARD_GAME
+style: SMALL_BOX
+price {
+  currency: "$"
+  number: 1499
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "rules"
+  number: 1
+}
+content {
+  part: DICE
+  description: "custom"
+  number: 6
+}
+content {
+  part: DICE
+  description: "d20"
+  number: 1
+}
+content {
+  part: CARD
+  description: "deck"
+  number: 52
+}
+layout: COLOR_COVER

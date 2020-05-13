@@ -1,0 +1,56 @@
+template {
+  name: "WTC 9594374"
+  world: "Forgotten Realms"
+  description: "\\large{The Assasin}\n                    A cold and emotionless killer for whom every soul has a price, even his own, embarks on a path to find out just how high that price can be.\n                    \\large{The Mercenary}\n                    A \\Monster[drow]{dark elf} of limitless guile dares to challenge a king, and carve for himself a place in the inhospitable \\Place{World Above}.\n                    \\NPC{Ilnezhara} and \\NPC{Tazmikella} are ancient \\Monster[dragon]{dragons} of great power, accustomed to easily manipulating the \\Monster[Human]{humans} around them, but not all \\Monster[Human]{humans} are so easily led. When they pushed \\NPC{Entreri} and \\NPC{Jarlaxle} into the heart of the \\Place{Bloodstone Lands}, not even they could have imagined the strength of the \\Monster{human} assassin\'s resolve, or the limitless expanse of the \\Monster{drow} mercenary\'s ambition."
+}
+title: "Road of the Patriarch"
+subtitle: "To Her, To Her Dying Breath, You Were the Untouchable One, the One Whose Flesh Her Dagger Could Not Penetrate"
+author {
+  name: "Salvatore R.A."
+}
+editor {
+}
+cover {
+  name: "Lockwood, Todd"
+}
+cartographer {
+  name: "Gamble, Todd Alan"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4277"
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4277"
+}
+pages: 375
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "The Sellswords"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,149 @@
+template {
+  name: "WTC 17867"
+  world: "Generic"
+  description: "\\large{Conquer the Maelstrom}\n                    Sometimes an adventure takes an aquatic turn. You might find yourself\n                    exploring an ancient city lost beneath the waves, navigating an underground\n                    river plagued by monsters, plotting a course to some stormwracked isle, or\n                    battling pirates on the high seas. Well, fear not, brave adventurer. Here is\n                    your ride to overcoming such perils!\n                    This supplement examines marine environments, from flooded dungeons and\n                    subterranean seas to mystical island and the gloomy deep. It provides rules\n                    for adapting to, navigating through, and surviving hazardous seaborne,\n                    underwater, and stormwracked conditions. This book also includes new\n                    character options (races, spells, psionic powers, feats, and prestige\n                    classes), magic items and monsters associated with sea and storms, adventure\n                    sites, and a narrative ship-to-ship combat system.\n                    The third in a series of beautifully illustrated supplements focusing on\n                    play in specific environmental climes, \\Product{Maelstrom} contains rules on\n                    play in watery environments. Not only are rules for sea campaigns offered,\n                    but rules for including water environments in land-based D&D campaigns and\n                    dungeon adventures are also covered.\n                    Included is extensive information on lakes and rivers; hazards such as\n                    exposure, storms, and waterspouts; races, including non-aquatic races\n                    associated with the sea; equipment, including detailed deck plans for ships;\n                    monsters; magic, including psionic elements; skills; feats; and more."
+}
+title: "Stormwrack"
+subtitle: "Mastering the Perils of Wind and Wave"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Carriker, Joseph D."
+}
+author {
+  name: "Clarke Wilkes, Jennifer"
+}
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+author {
+  name: "Noonan, David"
+  job: "developer"
+}
+editor {
+  name: "Rateliff, John D."
+}
+editor {
+  name: "Thompson, John"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Jarvis, Jeremy"
+}
+cartographer {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "Appel, Chris"
+}
+illustrator {
+  name: "Baker, Drew"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Hooper, Fred"
+}
+illustrator {
+  name: "Moyer, Lee"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Thomas, Joel"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wiley, Jason"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3689"
+  check: 4
+}
+isbn13 {
+}
+pages: 224
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Environment Series"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"

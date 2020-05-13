@@ -1,0 +1,94 @@
+template {
+  name: "TSR 9431"
+  synonym: "ALQ2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Al-Qadim"
+  description: "The \\Group{Assassins of \\Place{Zakhara}} strike in silence and from\n                    darkness, certain of their faith and the rightness of their cause. The\n                    slayers carry out the orders of their \\NPC{Grandfather assassin}, never\n                    questioning his wisdom or direction.\n                    \\Product{Assassin Mountain} is the DM\'s guide to the secrets and objectives\n                    of the assassins.\n                    Captured inside this Sourcebox, you\'ll find new information about the holy\n                    slayers of \\Place{Zakhara}, from their methods, tools, and secret structure\n                    to the means used to unsure the silence of their members.\n                    The adventures within pit the player characters against the slayers of the\n                    \\Group{Everlasting}, one of the most powerful and influential sects in\n                    \\Place{Zakhara}. The web of deceit and terror spun by the \\Group{Everlasting}\n                    weaves its way into the city of \\Place{Liham}, entangling the PCs and leading\n                    them to the perils of the assassins\' stronghold.\n                    \\Product{Assassin Mountain} includes:\n                    \\list\n                    {two booklets filled with source material on the holy slayers of\n                    \\Place{Zakhara} and adventures with the \\Group{Everlasting};}\n                    {six cardsheets;}\n                    {\\Product{Monstrous Compendium} pages detailing new \\Monster{genies}\n                    and other monsters; and}\n                    {a poster map of \\Place{Jabal Sarahin}, the fortress of the\n                    \\Group{Everlasting}.}\n                    Recommended for use with the \\Product{Arabian Adventures} rulebook."
+}
+title: "Assassin Mountain"
+author {
+  name: "Baur, Wolfgang H."
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Brown, Anne K."
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "III, Dave Sutherland"
+}
+cartographer {
+  name: "Knecht, John"
+}
+cartographer {
+  name: "Raab, Robin"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+}
+date {
+  year: 1993
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "564"
+  check: 10
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "Holy Slayer Sourcebook"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Assassin Mountain"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "Monstrous Compendium insert"
+  number: 4
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: CARD
+  description: "color"
+  number: 6
+}

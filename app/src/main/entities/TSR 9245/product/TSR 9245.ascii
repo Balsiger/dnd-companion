@@ -1,0 +1,37 @@
+template {
+  name: "TSR 9245"
+  synonym: "DLE3"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "all is not right in the dimenson of dragons, levels 7-10"
+}
+title: "Dragon Keep"
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "764"
+  check: 5
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

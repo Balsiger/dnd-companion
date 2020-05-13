@@ -1,0 +1,80 @@
+template {
+  name: "Polyhedron 155"
+  world: "Generic"
+  description: "January 2003 issue of polyhedron (together with Dungeon 96)."
+}
+title: "Polyhedron 155"
+subtitle: "Gene Tech"
+author {
+  name: "Stan!"
+}
+author {
+  name: "Richards, Ian"
+}
+author {
+  name: "Redman, Rich"
+}
+editor {
+  name: "Mona, Erik"
+}
+cover {
+  name: "Van Fleet, John"
+}
+illustrator {
+  name: "Stan!"
+}
+illustrator {
+  name: "Parker, Jake"
+}
+illustrator {
+  name: "Ormston, Dean"
+}
+illustrator {
+  name: "Carlisle, Jeffrey"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Noguchi, Mikael"
+}
+illustrator {
+  name: "Huddleston, Michael"
+}
+illustrator {
+  name: "Treva, Chris"
+}
+illustrator {
+  name: "Detwiler, Dennis"
+}
+illustrator {
+  name: "Hunter, Kyle"
+  job: "art direction"
+}
+date {
+  year: 2003
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 61
+system: D20
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+producer: "WTC"
+number: "155"
+series: "Polyhedron"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+layout: FULL_COLOR

@@ -1,0 +1,47 @@
+template {
+  name: "TSR 1044"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "A board/card game of conquest and intrigue."
+}
+title: "Great Khan Game"
+leader: "The"
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: ALL
+type: BOARD_GAME
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}
+content {
+  part: PLAYING_PIECE
+  description: "die-cut"
+  number: 120
+}
+content {
+  part: CARD
+  description: "playing"
+  number: 162
+}

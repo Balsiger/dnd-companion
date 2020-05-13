@@ -1,0 +1,57 @@
+template {
+  name: "WTC 96710"
+  world: "Forgotten Realms"
+  description: "This new release of the classic R.A. Salvatore novel continues the tale of\n                    Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt\'\n                    Do\'Urden}. Although this was the second title actually published about\n                    \\NPC{Drizzt}, it has now been placed in its proper chronological order as\n                    fifth in the series. Each title in \\Product{The Legend of Drizzt} series\n                    showcases the classic \\Monster{dark elf} novels in new, deluxe hardcover\n                    editions. Each title features all new cover art and new introductions written\n                    by those who have become familiar with Salvatore and \\NPC{Drizzt} over the\n                    years."
+}
+title: "Streams of Silver"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3762"
+  check: 9
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+number: "Book V"
+series: "Legend of Drizzt"
+price {
+  currency: "$ "
+  number: 2795
+  precision: 100
+}

@@ -1,0 +1,23 @@
+template {
+  name: "TSR 9181"
+  synonym: "I10"
+  reference {
+    name: "net price list"
+  }
+  world: "Ravenloft"
+}
+title: "Ravenloft II: Gryphon Hill"
+date {
+  year: 1986
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}

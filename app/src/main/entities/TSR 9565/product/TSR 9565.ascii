@@ -1,0 +1,44 @@
+template {
+  name: "TSR 9565"
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  reference {
+    name: "Dragon 239"
+  }
+  world: "Dragonlance"
+  description: "the secret behind the Saga rules system"
+}
+title: "Sage Fate Deck"
+leader: "The"
+author {
+  name: "Miller, Steve"
+}
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Brown, Steven"
+}
+date {
+  year: 1997
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1145"
+  check: 10
+}
+isbn13 {
+}
+system: SAGA
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

@@ -1,0 +1,86 @@
+template {
+  name: "Dungeon 24"
+  world: "Generic"
+  description: "This is issue 24 of the dungeon magazine."
+}
+title: "Dungeon 24"
+author {
+  name: "Dupuis, Ann"
+}
+author {
+  name: "Walsh, Willie"
+}
+author {
+  name: "Jacobs, James"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Jaquay, Paul"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Miller, David O."
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Schwartz, Stephen"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "Commset"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1990
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "IV 6"
+number: "24"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color"
+  number: 1073741824
+}

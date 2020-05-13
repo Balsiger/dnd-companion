@@ -1,0 +1,75 @@
+template {
+  name: "WTC 25519"
+  synonym: ""
+  world: "Generic"
+  description: "If you\'re a Dungeon Master looking for an intrigue-laden adventure location that fits easily into your Dungeons & Dragons campaign, this book is for you. The dwarven town of \\Place{Hammerfast} holds enough mystery and peril to keep your players entertained for sessions on end.\n                    \\Product{Hammerfast} presents a fully detailed, ready-to-use dwarven town built atop the ruins of an ancient necropolis, along with adventure hooks, encounters, and a full-color double-sided battle map."
+  short_description: "An encounter location."
+}
+title: "Hammerfast"
+subtitle: "Explore a Haunted Town Riddled With Secrets"
+author {
+}
+editor {
+  name: "Cottrill, Tora"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "managing editor"
+}
+cover {
+  name: "Kendree, Mclean"
+}
+cartographer {
+  name: "Macdonald, Sean"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "publishing production specialist"
+}
+date {
+  year: 2010
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5534"
+  check: 1
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5534"
+  check: 3
+}
+pages: 32
+system: DND_4
+type: ADVENTURE
+style: FOLDER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "adventure location"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "double sided battle map"
+  number: 1073741824
+}
+layout: COLOR_COVER

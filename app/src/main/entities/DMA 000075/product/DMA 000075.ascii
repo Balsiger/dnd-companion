@@ -1,0 +1,74 @@
+template {
+  name: "DMA 000075"
+  world: "Forgotten Realms"
+  description: "He left behind everything and everyone he knew --- all in the pursuit of\n  justice. Like others of his race, \\NPC{Drizzt Do\'Urden} was raised in the\n  endless night of the subterranean \\Place{Underdark}. But where other\n  \\Monster{dark elves} seek power, \\NPC{Drizzt} seeks justice. Those whom\n  they\'d oppress, \\NPC{Drizzt} wishes to befriend. Unwilling to submit to the\n  violence and wickedness of his people, the young warrior abandoned his\n  childhood home.\n\n  Journey to a new world. Realizing he\'d never truly be beyond the reach of his\n  people as long as he remained underground, \\NPC{Drizzt} determined to do what\n  no other of his kind had done: leave the shadows of the \\Place{Underdark} for\n  the blazing sun of the surface.\n\n  An outcast in search of a home. Now, he has begun a sojourn through a world\n  utterly unlike his own. But acceptance among the surface-dwellers will not\n  come easily --- nor without sacrifice..."
+  short_description: "The famous Drizzt trilogy in comic form."
+}
+title: "Sojourn"
+author {
+  name: "Salvatore, R.A."
+}
+author {
+  name: "Dabb, Andrew"
+  job: "script"
+}
+editor {
+  name: "Powers, Mark"
+}
+illustrator {
+  name: "Seeley, Tim"
+  job: "pencils"
+}
+illustrator {
+  name: "Lowe, John"
+  job: "inks"
+}
+illustrator {
+  name: "Atkins, Robert Q."
+  job: "inks"
+}
+illustrator {
+  name: "Rauch, John"
+  job: "inks"
+}
+illustrator {
+  name: "Englert, Mark"
+  job: "inks"
+}
+illustrator {
+  name: "Blond"
+  job: "colors"
+}
+illustrator {
+  name: "Crowley, Brian J."
+  job: "letters"
+}
+date {
+  year: 2006
+}
+isbn {
+  group: "1"
+  publisher: "932796"
+  title: "57"
+  check: 6
+}
+isbn13 {
+}
+pages: 160
+system: NONE
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "Devil\'s Due"
+number: "Book III"
+series: "The Legend of Drizzt"
+price {
+  currency: "$ "
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

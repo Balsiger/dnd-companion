@@ -1,0 +1,52 @@
+template {
+  name: "DSP 1016"
+  synonym: "Nodwick Chronicles VI"
+  description: "\\Large{Frodo\'s Not the Only Short Guy Who Got Famous for Hauling Stuff}\n\n\\NPC{Nodwick} has hit the big time in the movie \'Gamers 2: Dorkness Rising\', and he\'s bringing all of you lucky folks along for the ride! Look for this epic film from Dead Gentlemen Productions in a theater or DVD case near you sooon!\n\nIn the meaintime, join \\NPC{Nodwick} and his adventuring companions as they have their final showdown with \\NPC{Baphuma\'al} for the fate of the world! Can our heroes manage to win through in spice of being... well, them?\n\nWitness the climax that\'s been 36 comic books in the making and see why \\NPC{Nodwick} is Going Hollywood."
+  short_description: "Nodwick Chronicles VI"
+}
+title: "Nodwick Goes Hollywood"
+subtitle: "Nodwick Chronicles VI"
+author {
+  name: "Williams, Aaron"
+}
+cover {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+date {
+  year: 2007
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "933288"
+  title: "38"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "933288"
+  title: "38"
+  check: 3
+}
+pages: 160
+system: NONE
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "Do Gooder Press"
+number: "VI"
+series: "Nodwick Chronicles"
+price {
+  currency: "$"
+  number: 1599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,58 @@
+template {
+  name: "TSR 8577"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  world: "Forgotten Realms"
+  description: "\\bold{\\God{Cyric}}.\n                    One of the youngest and most powerful gods of the \\Place{Toril} pantheon.\n                    \\bold{\\God{Cyric}}.\n                    Who ascended to godhead in the \\Product{Avatar Trilogy}.\n                    \\bold{\\God{Cyric}}.\n                    Now a victim of his own sinister machinations.\n                    He has gone insane. His destructive actions have caused concern in the\n                    highest levels of the deities. It is time for the older gods to intervene and\n                    bring this upstart back into line for the good of all \\Place{Toril}.\n                    \\bold{It is time for the trial of \\God{Cyric}.}"
+}
+title: "Crucible: The Trial of Cyric the Mad"
+author {
+  name: "Denning, Troy"
+}
+cover {
+  name: "Pollack, Allan"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+date {
+  year: 1998
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0724"
+  check: 10
+}
+isbn13 {
+}
+pages: 378
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book V"
+series: "Avatar Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

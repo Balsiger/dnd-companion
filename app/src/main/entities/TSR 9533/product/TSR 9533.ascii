@@ -1,0 +1,51 @@
+template {
+  name: "TSR 9533"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 235"
+  }
+  reference {
+    name: "Dragon 234"
+  }
+  world: "Generic"
+  description: "\\emph{Once a generation, they say, a strange comet appears in the sky\n                    overhead and the gates of \\Place{Firestorm Peak} swing open. Twenty-seven\n                    years ago, your father led his band of adventurers into the mysterious\n                    mountain, never to return. Now the \\Monster{Dragon}\'s Tear once more flickers\n                    in the sky, and the glass gates on the mountainside beckon. Will you pass\n                    through to discover the secrets that await beyond the portal none has ever\n                    dared and returned?}\n                    \\Product{The Gates of Firestorm Peak} is the first adventure designed\n                    especially for use with the new rules presented in the three\n                    \\Product{Player\'s Option} books: \\Product{Combat & Tactics}, \\Product{Skills\n                    & Powers}, and \\Product{Spells & Magic}. While it can be also played using\n                    just the AD&D game core rules (the \\Product{Player\'s Handbook} and the\n                    \\Product{Dungeon Master Guide}), this adventure offers a perfect opportunity\n                    to experience all the potential of the new optional rules. One of the\n                    highlights of this package is the first \\Product{Player\'s Option} player\n                    character record sheet.\n                    To meet the challenges of \\Place{Firestorm Peak} and escape with their lives,\n                    heroic adventurers must battle dark \\Monster{dwarves} in their underground\n                    city, explore the abandoned caverns of the \\Group{Elder \\Monster{Elves}}, and\n                    deal with weird alien entities from \\Place{Beyond}. Their goal is to stop the\n                    \\NPC{Master of the \\Place{Twisted Caverns}} and his dark minions from\n                    completing his sinister plot before it\'s too late... if they can.\n                    Included in this product are a 96-page adventure book detailing the dungeon\n                    that lies beneath \\Place{Firestorm Peak}, 4 full-color poster maps detailing\n                    all the important locations in the complex, and a sheet of 56 counters for\n                    use with the tactical maps in major combats.\n                    For four to six characters of levels 5--8"
+}
+title: "Gates of Firestorm Peak"
+date {
+  year: 1996
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0435"
+  check: 6
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+series: "Player\'s Option"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: POSTER
+  description: "double-sided maps"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "monster pieces"
+  number: 1073741824
+}

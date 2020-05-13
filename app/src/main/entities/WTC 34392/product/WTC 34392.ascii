@@ -1,0 +1,53 @@
+template {
+  name: "WTC 34392"
+  description: "Sentinel Marshal \\NPC{Sabira d\'Deneith} has her work cut out for her as she searches for a killer whose methods seam eerily familiar...\n\nBlending adventure fantasy and hardboiled noir fiction, \\Product[WTC 34392]{The Shard Axe} brings the broader world of \\Place{Eberron} to the setting the immensely popular game, Dungeon & Dragons Online: Eberron Unlimited."
+  short_description: "A noir fiction set in Eberron."
+}
+title: "Shard Axe"
+leader: "The"
+subtitle: "A mission she doesn\'t want. To Protect and defend a \\Monster{dwarf} she can\'t forgive, In a city full of enemies..."
+author {
+  name: "Rockwell, Marsheila"
+}
+editor {
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 1970
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5859"
+  check: 7
+}
+pages: 339
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "Paizo"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

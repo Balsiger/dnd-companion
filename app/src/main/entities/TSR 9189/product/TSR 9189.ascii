@@ -1,0 +1,25 @@
+template {
+  name: "TSR 9189"
+  synonym: "IM2"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Wrath of Olympus"
+leader: "The"
+date {
+  year: 1987
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 800
+  precision: 100
+}

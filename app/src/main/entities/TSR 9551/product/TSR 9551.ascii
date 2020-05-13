@@ -1,0 +1,54 @@
+template {
+  name: "TSR 9551"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  world: "Dragonlance"
+  description: "examines the lifes and goals of dragons, their agends, powers and passion"
+}
+title: "Wings of Fury"
+author {
+  name: "Niles, Douglas"
+}
+date {
+  year: 1998
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0722"
+  check: 3
+}
+isbn13 {
+}
+pages: 192
+system: SAGA
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 2200
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 1073741824
+}

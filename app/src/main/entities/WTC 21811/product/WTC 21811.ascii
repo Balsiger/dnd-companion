@@ -1,0 +1,57 @@
+template {
+  name: "WTC 21811"
+  world: "Forgotten Realms"
+  description: "\\NPC{Icewind Dale}. Windswept passes and forbidding glaciers stand at the\n                    top of the world. Below them, in the cold valleys, an evil force broods: the\n                    magic of \\Item{Crenshinibon}, the \\Item{crystal shard}.\n                    Now \\Monster{dwarf}, barbarian, and \\Monster[drow]{drow elf} join to battle\n                    this evil. Tempered in the furnace of struggle, they form an unbreakable\n                    friendship.\n                    A legend is born.\n                    For the first time in one volume, here is New York Times bestselling author\n                    R.A. Salvatore\'s adventure that introduced \\NPC{Drizzt Do\'Urden}, the heroic\n                    \\Monster[drow]{dark elf}, one of the most beloved characters in fantasy\n                    literature."
+}
+title: "Icewind Dale Trilogy Collector\'s Edition"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2001
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1811"
+  check: 10
+}
+isbn13 {
+}
+pages: 1056
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "Icewind Dale Trilogy"
+price {
+  currency: "$ "
+  number: 1999
+  precision: 100
+}

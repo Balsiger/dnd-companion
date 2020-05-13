@@ -1,0 +1,56 @@
+template {
+  name: "WTC 2404874"
+  world: "Forgotten Realms"
+  description: "\\Place{Highwatch} has never been taken. The fortress has sat, undisturbed, for over a century, high above \\Place{Narfell}\'s frozen plains. The line of the \\Group{High Warden} runs unbroken down to his seventeen-year-old granddaughter, \\NPC{Hweilan}.\n                    \\large{Time to grow up, \\NPC{Hweilan inle Merah}. Time to hunt...}\n                    An enemy\'s pact with an ancient evil brings down \\Place{Highwatch} in less than a day. Only \\NPC{Hweilan} is left. An old friend offers her the chance to avenge her family\'s death -- by joining another ancient spirit, the \\NPC{Master of the Hunt}.\n                    \\large{Time to grow up. Time to choose. Understanding will come later. If you survive...}"
+  short_description: "Book I of the Chosen of Nendawen"
+}
+title: "Fall of Highwatch"
+leader: "The"
+subtitle: "To come without sacrifice to the \\Place{Heart of the Hunter} means death..."
+author {
+  name: "Sehestedt, Mark"
+}
+editor {
+  name: "Evans, Erin"
+}
+cover {
+  name: "Jones, Jamie"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2009
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5143"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5143"
+  check: 7
+}
+pages: 343
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book I"
+series: "Chosen of Nendawen"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

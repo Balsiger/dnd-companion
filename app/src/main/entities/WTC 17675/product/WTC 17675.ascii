@@ -1,0 +1,57 @@
+template {
+  name: "WTC 17675"
+  world: "Forgotten Realms"
+  description: "The Fire That Burns\n                    It can lay low a \\Monster{dragon} or heal a wounded \\Class{warrior}.\n                    It is the most sought-after magical power in all \\Place{Faer\\hat{u}n}.\n                    And it is in the reluctant hands of \\NPC{Shandril of Highmoon}, a young,\n                    orphaned kitchen-lass.\n                    Now she\'s on the run from half of the evil \\Class{sorcerers} in the land, not\n                    to mention their relentless minions. But with the help of a handsome young\n                    \\Class{wizard}, some rough-and-tumble \\Group{Knights of Myth Drannor}, and a\n                    certain old \\Monster{mage} of \\Place{Shadowdale}, she just might manage to\n                    stay alive.\n                    At least until tomorrow.\n                    A mass market edition of the all-new expanded version of Ed Greenwood\'s\n                    classic tale, including a new forward by the author.\n                    One of Ed Greenwood\'s most popular novels, \\Product{Spellfire} is being\n                    rereleased in an all-new mass market edition. This version has been\n                    completely reedited and contains added text and material that bring new\n                    excitement to the story. This edition also features new cover art and is\n                    classified as the first title in the brand-new \\Place{Forgotten Realms}\n                    series \\Product{Shandril\'s Saga}."
+}
+title: "Spellfire"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2005
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3599"
+  check: 5
+}
+isbn13 {
+}
+pages: 416
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "Shandril\'s Saga"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

@@ -1,0 +1,104 @@
+template {
+  name: "TSR 1072"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Spelljammer"
+  description: "\\large{Combat in Fantasy Space!}\n\n  The worlds of fantasy space are legion. Not all are friendly. The spider-like\n  \\Monster{Neogi} slavers, the cold and calculating \\Monster{Mind Flayers},\n  the savage \\Monster{Scro}, and others all build great ships of war to catch\n  the magical currents of space.\n\n  Now YOU can face the perils of deadly combat in the depths of void. This game\n  accessory gives you the chance to storm enemy ships or brave a barrage of\n  wizard spells that could tear your ship apart. This latest boxed set, the\n  \\Product{War Cpatain\'s Companion} (sequel to the earlier \\Place{Spelljammer}\n  boxed set, \\Product{Adventures in Space}) contains the following:\n\n  \\list\n  {\\bold{Ship-to-Ship game:} Tactical ship rules and two 22\'\'x31\'\'\n   mapsheets with an extra large hex grid.}\n  {\\bold{Three complete books:} Over 190 pages of vital information\n   designed to expand your \\Place{Spelljammer} campaign setting.}\n  {\\bold{Addtional game cards:} 6 full-sized 8 1/2\'\'x11\'\' cards: player\n   aid cards, game markers, and three new color ship cards.}\n  {\\bold{Colorful playing pieces:} 6 sheets of full-color 3-D ship\n   pieces, over 30 ships in all.}\n\n  \\bold{War Captain\'s Guide}, 96 pages.\n\n  \\list\n  {New role-playing rules, including new character skills and magical\n   items.}\n  {New section allows creative players to design their own ships.}\n  {War fleet and shipyard bases for our major campaign worlds!}\n\n  \\bold{Ship Recognition Manual}, 64 pages.\n\n  \\list\n  {Updated and expanded information on all existing ship types.}\n  {Each ship in this book is accompanied by a detailed line illustration.}\n  {Introduces over a dozen ship types for the first time anywhere!}\n\n  \\bold{Combat Among Stars}, 32 pages.\n\n  \\list\n  {Easy-to-learn ship-to-ship rules will give hours of enjoyment.}\n  {Includes ramming, boarding actions, magic use, and much more.}\n  {Optional rules for 3-D movement and advanced weapons and equipment!}"
+}
+title: "War Captain\'s Companion"
+author {
+  name: "Henson, Dale \'Slade\'"
+}
+editor {
+  name: "Pickens, Jon"
+}
+editor {
+  name: "Ratecliff, John D."
+}
+cover {
+  name: "Olson, Erik"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Diesel"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Ewell, Newton H."
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Olson, Erik"
+}
+illustrator {
+  name: "Sullivan, Stephen D."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+date {
+  year: 1992
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "343"
+  check: 4
+}
+isbn13 {
+}
+pages: 192
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "The War Captain\'s Guide"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Ship Recognition Manual"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Combat Among the Stars"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color hex maps"
+  number: 2
+}
+content {
+  part: POSTER
+  description: "color"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "stand up battle ships"
+  number: 1073741824
+}

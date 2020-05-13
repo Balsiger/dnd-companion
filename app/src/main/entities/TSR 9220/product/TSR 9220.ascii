@@ -1,0 +1,33 @@
+template {
+  name: "TSR 9220"
+  synonym: "AC11"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "a lot of enchanted labour-saving devices"
+}
+title: "Book of Wondrous Inventions"
+leader: "The"
+date {
+  year: 1987
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "497"
+  check: 2
+}
+isbn13 {
+}
+system: DND_1ST
+type: ACCESSORY
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}

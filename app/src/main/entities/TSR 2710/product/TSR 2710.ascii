@@ -1,0 +1,36 @@
+template {
+  name: "TSR 2710"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "Dragon 223"
+  }
+  reference {
+    name: "Dragon 211"
+  }
+  description: "players track down the bizarre, impossible and completely improbable"
+}
+title: "Tabloid"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+date {
+  year: 1994
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 144
+system: AMAZING_ENGINE
+type: RULES_SUPPLEMENT
+price {
+  currency: "\302\254\302\243"
+  number: 1295
+  precision: 100
+}

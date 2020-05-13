@@ -1,0 +1,59 @@
+template {
+  name: "WTC 9592574"
+  world: "Forgotten Realms"
+  description: "From the nobles in their towers to the gangs in the streets, in the city of \\Place{Selgaunt} power belongs to the bold and no one\'s position is certain. When a thieves\' guild attempts to eradicate a rival organization, something unspeakable breaks free -- and it\'s hungry.\n                    With \\Place{Selgaunt} in chaos, \\NPC{Erevis Cale} must return to the shadowy life he left behind, to protect the family that has made him one of their own from the horrors of the \\Place{Abyss}.\n                    Enter the greatest fantasy setting of our generation.\n                    Enter the world of the \\Place{Forgotten Realms}. "
+}
+title: "Shadow\'s Witness"
+subtitle: "\\NPC{Erevis Cale}, loyal servant to the \\Group{Uskevren} family, can\'t keep his secret any longer."
+author {
+  name: "Kemp, Paul S."
+}
+editor {
+}
+cover {
+  name: "Swanland, Raymond"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4259"
+  check: 2
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4259"
+  check: 6
+}
+pages: 313
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "Sembia"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

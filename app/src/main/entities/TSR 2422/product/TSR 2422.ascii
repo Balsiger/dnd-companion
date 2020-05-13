@@ -1,0 +1,44 @@
+template {
+  name: "TSR 2422"
+  synonym: "DSS2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dark Sun"
+  description: "elemental magic"
+}
+title: "Earth"
+leader: "Air, Fire and Water"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1993
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "652"
+  check: 2
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1095
+  precision: 100
+}

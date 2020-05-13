@@ -1,0 +1,83 @@
+template {
+  name: "TSR 9366"
+  synonym: "ALQ1"
+  world: "Al-Qadim"
+  description: "\\large{Who amon you dares to challenge the high seas?}\n                    Inspired by the tales of \\NPC{Sindbad}, \\Product{Golden Voyages} provides the\n                    source material and adventures needed to run a mini-campaign on the\n                    \\Place{Crowded Sea}. Detailed backgrounds, perilous locations, and wondrous\n                    NPCs populate the enchanted seas. Player characters will discover wildly\n                    different adventures as they sail from place to place.\n                    \\Product{Golden Voyages} includes: six booklets filled with mini-adventures,\n                    an overall framing adventure, expanded rules on ships and sailing, details\n                    and background concerning topography, tribes, and new locations, and plenty\n                    of maps and player handouts; Monstrous Compendium pages detailing new\n                    monsters; a custom DM screen for use in all \\Product{Al-Qadim} games; and a\n                    poster map of the \\Place{Crowded Sea}."
+}
+title: "Golden Voyages"
+author {
+  name: "Cook, David \'Zeb\'"
+}
+editor {
+  name: "Slavicsek, Bill"
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "III, Dave Sutherland"
+}
+illustrator {
+  name: "Waller, Karl"
+}
+date {
+  year: 1992
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOX
+  description: "contains the rest"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book 1: Home Port: Wherein the Tale Begins"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book 2: Al-Sartan"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book 3: Nada al-Hazan"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book 4: The Djinni\'s Claws"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book 5: The Steaming Isles"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Book 6: Map Booklet"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "monstrous compendium"
+  number: 16
+}

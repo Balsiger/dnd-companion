@@ -1,0 +1,115 @@
+template {
+  name: "WTC 9575574"
+  world: "Generic"
+  description: "The \\Product{Frostfell Rift} accessory expands the \\Product{Fantastic\n                    Locations} series of products. It contains two beautifully illustrated,\n                    double-sided battle maps scaled for Dungeons & Dragons play, as well as a\n                    16-page booklet that presents sample encounters designed for use with the\n                    maps.\n                    The battle maps feature fantastic terrain designed to create large, fluid\n                    encounters, key scenes, and exciting game sessions. Rather than simple\n                    dungeon encounters, these maps evoke the epic struggles that campaign\n                    memories are made of. Three of the maps also make ideal battlegrounds for\n                    \\Product{D&D Miniatures Game} play. Build your own warband and fight for\n                    control of \\Place{Hailstorm Tower}, the \\Place{Caves of Chaos}, or the\n                    dreaded \\Place{Frostfell Rift}."
+  short_description: "A fantastic location for an encounter."
+}
+title: "Frostfell Rift"
+leader: "The"
+subtitle: "Terrible Evil Stirs in the Cold Reaches of the World"
+author {
+  name: "Markmell, Ari"
+}
+author {
+  name: "Schubert, Stephen"
+}
+author {
+  name: "Mearls, Mike"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Izzy"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Griffith, David"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Adams, Travis M."
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Josh, Fischer"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4169"
+  check: 3
+}
+isbn13 {
+}
+pages: 16
+system: DND_3_5
+type: ADVENTURE
+style: FOLDER
+series: "Fantastic Locations"
+price {
+  currency: "$ "
+  number: 1495
+  precision: 100
+}
+content {
+  part: SHEET
+  description: "color cover"
+  number: 1073741824
+}
+content {
+  part: MAP
+  description: "full color battle map"
+  number: 2
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Miniatures Game"
+layout: COLOR_COVER

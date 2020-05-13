@@ -1,0 +1,196 @@
+template {
+  name: "Dragon 343"
+  world: "Generic"
+  description: "Issue 343 of the magazine. "
+}
+title: "Dragon 343"
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Brown, Russell"
+}
+author {
+  name: "Byers, Richard Lee"
+}
+author {
+  name: "Clough, C. Wesley"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Fehlauer, Mike"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Herold, Nicholas"
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "Hogg, Jeremy"
+}
+author {
+  name: "Hudson, Nicholas"
+}
+author {
+  name: "Leach, Paul"
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "Manley, Jake"
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "O\'Conner, William"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Sutter, James"
+}
+author {
+  name: "Thorburn, Nick"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "managing editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "O\'Conner, William"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Dogan, Omar"
+}
+illustrator {
+  name: "Du Lac, Chad"
+}
+illustrator {
+  name: "Ellis, Steve"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "O\'Conner, William"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wooten, Ben"
+}
+illustrator {
+  name: "Yanner, Kiernan"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Pozca, Drew"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXX 12"
+number: "343"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

@@ -1,0 +1,42 @@
+template {
+  name: "TSR 8256"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  world: "None"
+  description: "tale of old and new magic, legends and skepticism"
+}
+title: "Runes of Autumn"
+author {
+  name: "Larry Elmore"
+}
+author {
+  name: "Robert Elmore"
+}
+date {
+  year: 1996
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0504"
+  check: 2
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

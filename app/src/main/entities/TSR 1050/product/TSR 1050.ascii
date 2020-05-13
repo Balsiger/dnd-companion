@@ -1,0 +1,31 @@
+template {
+  name: "TSR 1050"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Dragonlance"
+  description: "The other continent of Krynn."
+}
+title: "Time of the Dragon"
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "773"
+  check: 4
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}

@@ -1,0 +1,144 @@
+template {
+  name: "WTC 9539372"
+  world: "Generic"
+  description: "\\emph{A dark shape emerges from the shadow of Castle Ravenloft. A flash of\n                    lightning reveals the sneering countenance of Count Strahd von Zarovich. His\n                    eyes burn with eternal hunger and contempt for life. From a narrow balcony,\n                    he peers out into the drizzling twilight at the few sad lights of the village\n                    below and mutters a single name:\n                    \'Ireena...\'}\n                    The \\Product{Expedition to Castle Ravenloft} campaign adventure that updates\n                    the original 1st Edition \\Place{Ravenloft} module, retaining the Gothic\n                    flavor and familiar elements while expanding and reimagining some of the\n                    locations to create a deeper, richer adventure experience.\n                    This campaign arc adventure is designed for characters of levels 6\342\200\232\303\204\303\25410\n                    and features a new, easy-to-use combat encounter format. This book also\n                    presents new magic items, feats, and prestige classes for player\n                    characters.\n                    Base on the classic adventure by Tracy and Laura Hickman."
+  short_description: "Update of the original Ravenloft module."
+}
+title: "Expedition to Castle Ravenloft"
+subtitle: "The master of Ravenloft is having guests for dinner... and you are invited."
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Wilkes, Jennifer Clarke"
+  job: "development"
+}
+author {
+  name: "Slavicsek, Bill"
+  job: "development"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+editor {
+  name: "Slavicsek, Bill"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Walker, Kev"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+cartographer {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Parillo, Lucio"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Jaques, Karin"
+  job: "art director"
+}
+illustrator {
+  name: "Kolkowsky, Mary"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Lathrop, Jennifer"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2006
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3946"
+  check: 10
+}
+isbn13 {
+}
+pages: 224
+system: DND_3_5
+type: ADVENTURE
+style: HARDCOVER
+series: "Ravenloft"
+price {
+  currency: "$ "
+  number: 3495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+layout: FULL_COLOR

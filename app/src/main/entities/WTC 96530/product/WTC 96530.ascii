@@ -1,0 +1,32 @@
+template {
+  name: "WTC 96530"
+  world: "Generic"
+  description: "\\NPC{Zendric} the wizard has been robbed and enchanted into a lifeless\n  sleep. His \\Item{spiritkeeper} is missing, and only \\NPC{Moyra},\n  \\NPC{Kellach}, and \\NPC{Driskoll} know how to find it. Deep in the\n  \\Place{Dungeons of Doom}, they must outsmart a \\Monster{zombie},\n  \\Monster{goblins}, even an \\Monster{owlbear}. But can the \\Group{Knights}\n  unlock the secret of the \\Item{spiritkeeper} in time to save their friend?\n\n  \\Product{Secret of the Spiritkeeper} launches a new series of adventures\n  written specifically for readers ages 8 and up. To ensure the appeal of these\n  titles to the proper age group, young readers were involved in the\n  development of this novel at the manuscript stage.\n\n  Sized to fit the young reader market, the series features a group of young\n  companions who, through their heroic deeds, become members of the\n  \\Group{Order of the Knights of the Silver Dragon}.\n\n  This opportunity will be extended to readers of the series as well as through\n  the Knights of the Silver Dragon Book Club. Young readers are encouraged to\n  join and participate in the club, and in turn they will receive free\n  giveaways, special correspondence, and other benefits."
+}
+title: "Secret of the Spiritkeeper"
+author {
+  name: "Forbeck, Matt"
+}
+date {
+  year: 2004
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3143"
+  check: 4
+}
+isbn13 {
+}
+pages: 192
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

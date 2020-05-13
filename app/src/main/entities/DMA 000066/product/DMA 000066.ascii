@@ -1,0 +1,29 @@
+template {
+  name: "DMA 000066"
+  world: "None"
+  description: "Combine this supplement with your January to June 2000 White Wolf Catalog\n  for our full-year listings."
+  short_description: "July to December Supplement"
+}
+title: "White Wolf Publishing 2000 Catalog"
+date {
+  year: 2000
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+producer: "White Wolf"
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

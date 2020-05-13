@@ -1,0 +1,51 @@
+template {
+  name: "PZO 4055"
+  category: "tiles"
+  category: "map"
+  synonym: "Pathfinder Map Pack: Sea Caves"
+  world: "Generic"
+  description: "Racing waterways and violent rapids get even deadlier when they plunge underground. Whether your heroes are seeking buried treasure in flooded caves or making their escape from a subterranean stronghold, there\342\200\231s no need to sketch every cavernous bend and rocky waterway. This Pathfinder Map Pack provides stunningly illustrated 5\" \303\227 8\" map tiles that can be positioned to form a variety of modular, customizable river configurations. Inside, you\342\200\231ll find 18 richly crafted map tiles, including:\n\n\\list\n{River Fork}\n{Severe Bend}\n{Rocky Narrows}\n{Sunken Rapids}\n{Underground Lake}\n{Cavernous Drain}\n{Caved-In Waterway}\n{River Confluence}\n{Fallen Boulders}\n\nGame Masters shouldn\342\200\231t waste their time drawing maps every time adventurers delve underground. With Pathfinder Map Pack: Sea Caves, you\342\200\231ll always be ready to ride the rockiest rapids!\n\nWet, dry, and permanent markers erase from the tiles! With revised packaging that includes a reusable box for easy storage, Map Packs have never been so useful!"
+  short_description: "Color map tiles of sea caves"
+}
+title: "Sea Caves"
+subtitle: "Caves and Waves!"
+author {
+  name: "Radney-MacFarland, Stephan"
+  job: "design"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+date {
+  year: 2015
+  month: 6
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "739"
+}
+system: NONE
+type: ACCESSORY
+style: SMALL_BOX
+producer: "Paizo"
+series: "Pathfinder Map Pack"
+price {
+  currency: "$"
+  number: 1399
+  precision: 100
+}
+content {
+  part: BOX
+  description: "packaging"
+  number: 1
+}
+content {
+  part: MAP
+  description: "map tile"
+  number: 18
+}
+layout: FULL_COLOR

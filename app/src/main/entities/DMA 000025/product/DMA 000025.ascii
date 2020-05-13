@@ -1,0 +1,20 @@
+template {
+  name: "DMA 000025"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "unknown"
+}
+title: "Outdoor Geomporphs, Set One: Walled City"
+date {
+  year: 1977
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+price {
+}

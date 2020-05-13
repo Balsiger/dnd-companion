@@ -1,0 +1,48 @@
+template {
+  name: "WTC 2183074"
+  world: "Generic"
+  description: "This Dungeons & Dragons Roleplaying Game accessory provides the Dungeon Master with a collection of tables and lists useful during game play. By reducing the page-flipping necessary during the game, this screen speeds play and keeps the action on track.\n                    The heavy cardstock, four-panel \\Product{Dungeon Master\'s Screen} also keeps players from seeing what\'s coming up in the adventure---use it to hide your encounters, maps, miniatures, and even dice rolls from prying eyes!"
+}
+title: "Dungeon Master\'s Screen"
+subtitle: "Keep the Action Moving"
+illustrator {
+  name: "Tsai, Francis"
+}
+date {
+  year: 2008
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4927"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4927"
+  check: 4
+}
+pages: 1
+system: DND_4
+type: ACCESSORY
+style: FOLDER
+price {
+  currency: "$"
+  number: 995
+  precision: 100
+}
+content {
+  part: SCREEN
+  description: "DM"
+  number: 1073741824
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1073741824
+}
+optional_requirements: "WTC 2155100"
+layout: FULL_COLOR

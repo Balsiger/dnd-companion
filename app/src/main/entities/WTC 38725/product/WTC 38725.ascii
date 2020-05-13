@@ -1,0 +1,54 @@
+template {
+  name: "WTC 38725"
+  world: "Forgotten Realms"
+  description: "\\NPC{Zaltys} is a girl like any other to gorw up ranging the jungles of the \\Place{Southern Lluirwood}. She\'s a crack shot with a bow and no stranger to the dangers that lurk beneath the deep forest canopy.\n\nOne an expedition with her family to harvest the forbidden \\Item{terazul flower}, a powerful drug that has gathered many a dreamer into its narcotic embrace, \\NPC{Zaltys} is about to unearth a truth long buried by the feculent loam of deception.\n\nAs the veil is lifted on the world \\NPC{Zaltys} thought she knew, a pathway to the \\Place{Underdark} promises the answers her family never gave. Venturing forth in search of truth, \\NPC{Zaltys} finds betrayal to be amuch easier quarry. But it will take more than a lode of lies to quell the venom in her veins."
+  short_description: "A Forgotten Realms novel in the Underdark."
+}
+title: "Venom in her Veins"
+subtitle: "Child of Prophecy? Harbinger of Doom?"
+author {
+  name: "Pratt, Tim"
+}
+editor {
+  name: "Robins, Fleetwood"
+}
+cover {
+  name: "Swanland, Raymond"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2012
+  month: 3
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5984"
+  check: 6
+}
+pages: 309
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$"
+  number: 700
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

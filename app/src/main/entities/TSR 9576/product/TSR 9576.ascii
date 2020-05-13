@@ -1,0 +1,45 @@
+template {
+  name: "TSR 9576"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  world: "Greyhawk"
+  description: "the Circle of Eight must be made whole again"
+}
+title: "Return of the Eight"
+author {
+  name: "Moore, Roger"
+}
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1247"
+  check: 2
+}
+isbn13 {
+}
+pages: 80
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1395
+  precision: 100
+}

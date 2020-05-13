@@ -1,0 +1,36 @@
+template {
+  name: "TSR 21569"
+  world: "Forgotten Realms"
+  description: "But his disciples want to bring him back. The blood of the god of murder\n                    runs through his children, and bad blood attracts bad people.\n                    \\Group{Shadow thieves}, \\Monster{vampires}, ninjas, and \\Monster{rockworms}\n                    run rampant on the \\Place{Sword Coast} in the action-packed novelization of\n                    the Baldur\'s Gate II computer game from BioWare and Interplay."
+}
+title: "Baldur\'s Gate II: Shadows of Amn"
+subtitle: "\\God{Bhaal} is Dead!"
+author {
+  name: "Athans, Philip"
+}
+date {
+  year: 2000
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1569"
+  check: 2
+}
+isbn13 {
+}
+pages: 245
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

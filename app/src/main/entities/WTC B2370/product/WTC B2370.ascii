@@ -1,0 +1,45 @@
+template {
+  name: "WTC B2370"
+  world: "Forgotten Realms"
+  description: "The reunited \\Group{Companions of the Hall} are once more separated - thrown to the far corners of a wa that\'s bigger, with so much more at stake, than any of them realized. They fight for the safety of \\Place{Mithral Hall}, but it\'s their own souls, and the soul of \\Place{Faer\303\273n} itself, that truly hangs in the balance.\n\n\\NPC{Regis} and \\NPC{Wulfgar} make their way through the depths of the dreaded \\Place{Underdark} to find shelter in fabled \\Place{Silverymoon} from which they can launch a series of daring new raids.\n\nNew friends have come to besieged \\Place{Mithral Hall} on a mission of mercy - if such an emotion can rest in the heart of a \\Monster{dragon}.\n\nAnd the \\Monster{orc} warlord \\NPC{Harrusk} turns his savage hordes on \\Place{Everlund} in a bold move that stretches his forces thin, but could make him master of the \\Place{North}.\n\nAs for \\NPC{Harrusk}\'s treacherous \\Monster{drow} allies, all they want is \\NPC{Drizzt} and they don\'t care how many others - \\Monster{humans}, \\Monster{dwarf}, \\Monster{elf}, and \\Monster{orc} alike - they have to kill to get him.\n\nThe world is cloaked in darkness and blood runs in rivers across the \\Place{North}, \\Monster{orc} hordes are on the march and cities fall under brutal siege, old friendships are tested and new alliances are forged, but in the end it may come down to a single \\Monster{dark elf} choosing live over death, forgiveness over vengeance, law over chaos... peace over war."
+  short_description: "The last book in the Companions Codex series."
+}
+title: "Vengeance of the Iron Dwarf"
+subtitle: "Companions Codex, Book III"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+date {
+  year: 2014
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6572"
+  check: 4
+}
+pages: 421
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+volume: "Book III"
+series: "Companions Codex"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

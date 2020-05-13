@@ -1,0 +1,33 @@
+template {
+  name: "TSR 2017"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "\\large{... All the new discoveries, plus a wealth of just uncovered secrets,\n                    between one pair of covers.}\n                    This, the latest of the AD&D game books, further defines and describes the\n                    game system. Inside are new spells, character classes, magic items, weapons,\n                    and much more for both players and Dungeon Master."
+}
+title: "Unearthed Arcana"
+date {
+  year: 1985
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "084"
+  check: 5
+}
+isbn13 {
+}
+pages: 128
+system: ADND_1ST
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

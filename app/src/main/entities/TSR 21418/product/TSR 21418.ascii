@@ -1,0 +1,39 @@
+template {
+  name: "TSR 21418"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  world: "Forgotten Realms"
+  description: "continuation of the Dark Elf chronicles"
+}
+title: "Spine of the World"
+leader: "The"
+author {
+  name: "Salvatore, R.A."
+}
+date {
+  year: 1999
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1418"
+  check: 1
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+series: "Legacy of the Drow"
+series: "Dark Elf Chronicles"
+price {
+  currency: "$"
+  number: 2399
+  precision: 100
+}

@@ -1,0 +1,112 @@
+template {
+  name: "WTC 9597874"
+  world: "Generic"
+  description: "This Dungeons & Dragons accessory contains two beautifully illustrated, double-sided battle maps scaled for D&D game play, as well as a 16-page booklet that presents sample encounters designed for use with the maps.\n                    The battle maps feature fantastic terrain designed to create large, fluid encounters, key scenes, and exciting game sessions. Rather than simple dungeon encounters, these maps evoke the epic struggles that campaign memories are made of. Three of the maps also make ideal battlegrounds for D&D \\Product{Miniatures Game} play. Build your own warband and fight for control of the Ratfang Sewers, the Marketplace, or the Thieves\' Quarter. "
+}
+title: "City of Peril"
+subtitle: "Danger Beyond the Dungeon"
+author {
+  name: "Stark, Ed"
+  job: "designer"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Horsley, Ralph"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Dorries, Erin"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "direction of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4320"
+  check: 3
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4320"
+  check: 3
+}
+pages: 16
+system: DND_3_5
+type: ACCESSORY
+style: BOOKLET
+series: "Fantastic Locations"
+price {
+  currency: "$"
+  number: 1495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "encounters"
+  number: 1
+}
+content {
+  part: MAP
+  description: "two-sided color poster"
+  number: 2
+}
+required_requirements: "WTC 17524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 96582"
+layout: COLOR_COVER

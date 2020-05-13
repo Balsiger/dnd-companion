@@ -1,0 +1,100 @@
+template {
+  name: "TSR 8538"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "From the secret annals of \\Place{Realms} history come eleven never-before\n                    published tales of valor, featuring the greatest heroes of that magical\n                    world---\\NPC{Drizzt Do\'Urden}, \\NPC{Arilyn Moonblade}, \\NPC{Adon},\n                    \\NPC{Elminster of \\Place{Shadowdale}}, \\NPC{Jander Sunstar}, and many\n                    others---told by your favorite authors, including:\n                    R.A. Salvatore\n                    Ed Greenwood\n                    Douglas Niles\n                    Troy Denning\n                    Christie Golden\n                    and others"
+}
+title: "Realms of Valor"
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Golden, Christie"
+}
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Ciencin, Scott"
+}
+author {
+  name: "Anthony, Mark"
+}
+author {
+  name: "Lowder, James"
+}
+author {
+  name: "Rabe, Jean"
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Salvatore, R.A."
+}
+author {
+  name: "Grubb, Jeff"
+}
+editor {
+  name: "Lowder, James"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+date {
+  year: 1993
+  month: 2
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "557"
+  check: 7
+}
+isbn13 {
+}
+pages: 339
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+series: "Anthology"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

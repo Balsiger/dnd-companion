@@ -1,0 +1,152 @@
+template {
+  name: "Dragon 314"
+  world: "Generic"
+  description: "Issue 314 of the magazine. Elemental Magic issue."
+}
+title: "Dragon 314"
+author {
+  name: "Campbell, Christopher"
+}
+author {
+  name: "Cook, Monte J."
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Decker, Jesse"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Harlan, Thomas"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "Kornhaber, Spencer"
+}
+author {
+  name: "Marmell, Ari"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Williams, Skip"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "senior editor"
+}
+cover {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Johnson, Scott"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Polak, Eric"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Phillippi, Michael"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Wald, Christina"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Okumura, Scott"
+  job: "graphic design assistant"
+}
+illustrator {
+  name: "Whitley, Peter"
+  job: "graphic design assistant"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "group publishing"
+}
+manager {
+  name: "Beals, Matt"
+  job: "director of production & manufacturing"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising director"
+}
+date {
+  year: 2003
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVIII 7"
+number: "314"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

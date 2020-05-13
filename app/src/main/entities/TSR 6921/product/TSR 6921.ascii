@@ -1,0 +1,55 @@
+template {
+  name: "TSR 6921"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  reference {
+    name: "Dragon 245"
+  }
+  world: "None"
+  description: "dices for the game"
+}
+title: "Super Dice Kicker Pack 1: Avengers"
+author {
+  name: "Michele Carter"
+}
+author {
+  name: "Steve Miller"
+}
+date {
+  year: 1998
+  month: 4
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0700"
+  check: 2
+}
+isbn13 {
+}
+system: MARVEL_SUPER_DICE
+audience: ALL
+type: BOOSTER_PACK
+style: BOX
+price {
+  currency: "$ "
+  number: 895
+  precision: 100
+}
+content {
+  part: DICE
+  description: "random"
+  number: 8
+}
+content {
+  part: BOOKLET
+  description: "expanded rules"
+  number: 1073741824
+}

@@ -1,0 +1,40 @@
+template {
+  name: "WTC 9569074"
+  world: "Ravenloft"
+  description: "Alone in a strange world and torn by grief, a \\Monster{vampire} accepts the\n  hospitality of the local lord.\n\n  But can the \\Monster{vampire} trust him once he discovers the land\'s dark\n  connection to his own quest for revenge?"
+}
+title: "Vampire of the Mists"
+author {
+  name: "Golden, Christie"
+}
+cover {
+  name: "Foster, John"
+}
+date {
+  year: 2006
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4124"
+  check: 3
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,53 @@
+template {
+  name: "WTC 33509"
+  description: "Rejected at birth and raised in a village of \\Monster{tiefling} misfits, \\NPC{Farideh} expects a life without friends, love, or control over her destiny. Then she makes a pact with a \\Monster{Cambion}{devil} named \\NPC{Lorcan}, and everything changes.\n\n\\large{You\342\200\231ll have the power to do as you please.}\n\n\\NPC{Lorcan} promises all she ever dreamed of and asks for nothing in return. Her twin sister \\NPC{Havilar} urges \\NPC{Farideh} to resist the \\Monster{devil}\342\200\231s sway. But \\NPC{Farideh}\342\200\231s not so sure. \\NPC{Lorcan} may be dangerous but the power he offers is exhilarating.\n\n\\large{Say you\342\200\231re mine.}\n\nIn the ruins of \\Place{Neverwinter}, \\NPC{Farideh}\342\200\231s doubts get tangled up in a devilish snare six layers deep. A \\Monster{succubus} playing \\Monster{human} pawns against an otherworldly foe sees the twins as obstacles in her path. And \\NPC{Lorcan}\342\200\231s monstrous sisters have their eyes on the city\342\200\224and on \\NPC{Farideh}. There\342\200\231s no time to question her pact with \\NPC{Lorcan} \342\200\224 it will take every ounce of \\NPC{Farideh}\342\200\231s newfound powers to get out of \\Place{Neverwinter} alive."
+  short_description: "A story about tieflings, devils, in and around the ruins of Neverwinter."
+}
+title: "Brimstone Angels"
+subtitle: "It\342\200\231s a simple thing."
+author {
+  name: "Evans, Erin M."
+}
+editor {
+}
+cover {
+  name: "Kotaki, Kekai"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 1970
+  month: 11
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5846"
+  check: 7
+}
+pages: 339
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "A Neverwinter Novel"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

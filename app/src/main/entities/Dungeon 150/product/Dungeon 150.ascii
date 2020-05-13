@@ -1,0 +1,133 @@
+template {
+  name: "Dungeon 150"
+  world: "Generic"
+  description: "Prince of Demons - Kill Bargle - Quoth the Raven - Complete Dungeon Index"
+}
+title: "Dungeon 150"
+subtitle: "Final Issue"
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Bulmahn, Jason"
+}
+author {
+  name: "Logue, Nicolas"
+}
+author {
+  name: "Reynolds, Sean K."
+}
+author {
+  name: "Schneider, F. Wesley"
+}
+author {
+  name: "Stewart, Todd"
+}
+author {
+  name: "Sutter, James Lafond"
+}
+author {
+  name: "Vaughn, Greg A."
+}
+editor {
+  name: "Jacobs, James"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Walker, Jeremy"
+  job: "assisstant editor"
+}
+editor {
+  name: "Sutter, James Lafond"
+  job: "assisstant editor"
+}
+cover {
+  name: "Reynolds, Wayne"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Dillon, Julie"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Lazzaretti, Robert"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "UDON"
+}
+illustrator {
+  name: "Ng, Joe"
+}
+illustrator {
+  name: "Vehige, Adam"
+}
+illustrator {
+  name: "Sinclair, Mark"
+}
+illustrator {
+  name: "West, Chris"
+}
+illustrator {
+  name: "Wooten, Ben"
+}
+illustrator {
+  name: "Pocza, Drew"
+  job: "art director"
+}
+typographer {
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising & marketing director"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "production director"
+}
+manager {
+  name: "Davis, James"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+date {
+  year: 2007
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 130
+system: DND_3_5
+type: MAGAZINE
+style: SOFT_COVER
+producer: "Paizo"
+volume: "21"
+number: "9"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 1099
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

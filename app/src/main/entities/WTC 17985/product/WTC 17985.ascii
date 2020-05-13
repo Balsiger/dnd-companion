@@ -1,0 +1,60 @@
+template {
+  name: "WTC 17985"
+  world: "Dragonlance"
+  description: "First launched over a decade ago, the \\Product{Preludes series} has\n  continued to prove popular with \\Place{Dragonlance} fans. This rerelease of\n  \\Product{Riverwind the Plainsman} showcases a new look that is also reflected\n  in the other recovers of this series. The title features cover art from lead\n  \\Place{Dragonlance} saga artist Matt Stawicki and is authored by popular\n  writing team Thompson & Cook."
+}
+title: "Riverwind the Plainsman"
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Cook, Tonya Carter"
+}
+editor {
+}
+editor {
+}
+cover {
+  name: "Stawicki, Matt"
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3009"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Four"
+series: "Preludes"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

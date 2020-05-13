@@ -1,0 +1,26 @@
+template {
+  name: "TSR 5611"
+  reference {
+    name: "complete product listing"
+  }
+  description: "A \\Monster{Firbolg} and a \\Monster{Boobrie} miniature."
+}
+title: "Firbold & Boobrie"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+price {
+}
+content {
+  part: MINIATURE
+  description: "figures"
+  number: 2
+}

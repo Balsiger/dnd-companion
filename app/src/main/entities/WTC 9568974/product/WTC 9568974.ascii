@@ -1,0 +1,45 @@
+template {
+  name: "WTC 9568974"
+  world: "Ravenloft"
+  description: "He sold his soul for her.\n                    But when that fatal decision leaves him horribly changed, will she be the agent of his deliverance or his damnation?"
+}
+title: "I Strahd, Memoirs of a Vampire"
+subtitle: "Reprint!"
+author {
+  name: "Elrod, Patricia Nead"
+}
+cover {
+  name: "Foster, Jon"
+}
+date {
+  year: 2006
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4123"
+  check: 5
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4123"
+}
+pages: 277
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,31 @@
+template {
+  name: "TSR 2502"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Mystara"
+  description: "audio CD adventure"
+}
+title: "Hail the Heroes"
+date {
+  year: 1994
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

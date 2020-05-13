@@ -1,0 +1,53 @@
+template {
+  name: "MM 014"
+  description: "Some narrow passages and doors.."
+}
+title: "Narrow Passages Set"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: BOX
+producer: "Dwarven Forge"
+price {
+}
+content {
+  part: MINIATURE
+  description: "Narrow Straight Passage"
+  number: 8
+}
+content {
+  part: MINIATURE
+  description: "Narrow Right Angle Passage"
+  number: 4
+}
+content {
+  part: MINIATURE
+  description: "Narrow \'T\' Shaped Passage"
+  number: 4
+}
+content {
+  part: MINIATURE
+  description: "Narrow 4-Way Passage"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "Narrow to Wide Passage Conversion"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "Narrow Swinging Doors"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "Narrow Bow Tie Connector"
+  number: 50
+}

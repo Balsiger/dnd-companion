@@ -1,0 +1,34 @@
+template {
+  name: "DMA 000052"
+  world: "None"
+  description: "\\large{Meet the Global Village Idiots}\n\n  From computer gaming and online flaming to do-coms and dot-bomgs,\n  \\Product{Livin\' La Vida Dorka} celebrates the techno-geek life and puts the\n  \'pulse\' back into \'obsessive compulsive\'. Join \\NPC{Matt}, \\NPC{Igor},\n  \\NPC{Ken} and \\NPC{Carson the muskrat} in the comic strips collected in print\n  for the first time! Straight from the pages of Interactive Week, GameSpy.com,\n  Pyramid Online and Scrye, they\'re all \'\\Product{Livin\' La Vida Dorak!}\'."
+}
+title: "Living\' La Vida Dorka"
+author {
+  name: "John Kovalic"
+}
+date {
+  year: 2002
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 152
+system: NONE
+audience: ALL
+type: COMICS
+style: PAPERBACK
+producer: "Dork Storm Press"
+number: "Volume 1"
+series: "Dork Tower"
+price {
+  currency: "Fr "
+  number: 3100
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

@@ -1,0 +1,46 @@
+template {
+  name: "TSR 11509"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "Dragon 263"
+  }
+  reference {
+    name: "Dragon 264"
+  }
+  world: "Forgotten Realms"
+  description: "The place has many names: the \\Place{Underdark}, the\n                    \\Place[Underdark]{Realms Below}, the \\Place[Underdark]{Night Below}, the\n                    \\Place[Underdark]{Lightless Lands}. This vast world beneath the surface is\n                    home to fabled races such as \\Monster[Beholder]{beholders},\n                    \\Monster[Cloaker]{cloakers}, \\Monster[Drow]{drow},\n                    \\Monster[Illithid]{illithids}, and\n                    \\Monster[Ixzan]{ixzan}. \\Place{Menzoberranzan}, the dreaded\n                    \\Place[Menzoberranzan]{City of Spiders}, is only one of the hidden cities of\n                    the \\Place{Underdark}.\n                    This 128-page book, compiled by the \\Place{Underdark}\'s most famous son,\n                    \\NPC{Drizzt Do\'Urden}, lays bare the bizarre societies that lurk in the\n                    \\Place[Underdark]{Realms Below}. It includes an overview of the major races\n                    of the \\Place{Underdark}, an \\Place{Underdark} survival guide, and details\n                    and maps of more than a dozen cities. Discover a \\Monster[Drow]{drow} city\n                    constructed entirely of calcified \\Monster[Spider]{spider} silk, a\n                    nigh-immortal \\Monster[Dwarf]{dwarven} king trapped in stone form, and a\n                    storehouse of knowledge that rivals \\Place{Candlekeep}. Learn the particulars\n                    of the alliance between \\NPC{Manshoon} and the \\Monster[Beholder]{beholders}\n                    of the \\Place{Anaurian Hive}, the ambitions of the true master of\n                    \\Place{Firedrake Bay}, and an explanation of the enduring strength of the\n                    \\Monster[Beholder]{beholder} cults along the \\Place{Lake of Steam}.\n                    With \\NPC{Drizzt Do\'Urden} as your guide, a whole new world opens up beneath\n                    your feet.\n                    Suitable for all levels of play."
+}
+title: "Drizzt Do\'Urden\'s Guide to the Underdark"
+date {
+  year: 1999
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1509"
+  check: 9
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

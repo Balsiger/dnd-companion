@@ -1,0 +1,40 @@
+template {
+  name: "TSR 2103"
+  synonym: "MC2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "A lot of monsters."
+}
+title: "Monstrous Compendium: Volume II"
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "753"
+  check: 10
+}
+isbn13 {
+}
+pages: 144
+system: ADND_2ND
+type: RULEBOOK
+style: SHEETS
+producer: "TSR"
+number: "Volume II"
+series: "Monster Manual"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: SHEET
+  number: 1073741824
+}

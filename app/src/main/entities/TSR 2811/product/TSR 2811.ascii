@@ -1,0 +1,36 @@
+template {
+  name: "TSR 2811"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Generic"
+  description: "descriptions of computers, robots, and other types of AI"
+}
+title: "Dataware"
+author {
+  name: "Wolfgang Baur"
+}
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1215"
+  check: 4
+}
+isbn13 {
+}
+pages: 96
+system: ALTERNITY
+type: ACCESSORY
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}

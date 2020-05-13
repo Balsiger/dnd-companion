@@ -1,0 +1,137 @@
+template {
+  name: "WTC 25386"
+  synonym: ""
+  world: "Generic"
+  description: "Deep within the \\Place{Elemental Chaos}, a vast and wicked maelstrom known as the \\Place{Abyss} disgorges hordes of \\Monster{demons} eager to ravage unsuspecting worlds. Their numbers defy imagining, and their appetite for destruction is insatiable. Is there anyone or anything capable of withstanding the onslaught?\n                    \\Product{Demonomicon} presents the definitive treatise on \\Monster{demons} and their vile masters, the \\Monster{demon lords}. Whether you\'re looking to introduce \\Monster{demons} into your Dungeons & Dragons campaign world or plunge your heroes into the heart of the \\Place{Abyss}, this book has something for your, including new monsters, demonic monster themes, summoning and banishment rules for \\Monster{demons}, demonic traps and hazards, and encounters."
+}
+title: "Demonomicon"
+subtitle: "Let Loose the Hords of the \\Place{Abyss}"
+author {
+  name: "Schubert, Stephen"
+  job: "developer"
+}
+author {
+  name: "Bilsland, Greg"
+  job: "additional development"
+}
+cover {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Pendergraft, Ted"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Waters, Anthony S."
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "art director"
+}
+illustrator {
+  name: "Smith, Keven"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Cortez, Leon"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Tardiff, Christopher"
+  job: "publishing production specialist"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production manager"
+}
+date {
+  year: 2010
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5492"
+  check: 2
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5492"
+  check: 6
+}
+pages: 160
+system: DND_4
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Roleplaying Game Supplement"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

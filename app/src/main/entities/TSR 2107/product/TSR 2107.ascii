@@ -1,0 +1,39 @@
+template {
+  name: "TSR 2107"
+  synonym: "MC5"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Greyhawk"
+  description: "A lot of monsters"
+}
+title: "Monstrous Compendium, Greyhawk Appendix"
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "836"
+  check: 6
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: MONSTER_COMPENDIUM
+style: SHEETS
+number: "Volume IV Greyhawk Appendix"
+series: "Monstrous Compendium"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: FOLDER
+  number: 1073741824
+}

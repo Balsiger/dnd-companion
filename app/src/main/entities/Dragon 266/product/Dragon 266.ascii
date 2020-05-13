@@ -1,0 +1,191 @@
+template {
+  name: "Dragon 266"
+  world: "Generic"
+}
+title: "Dragon 266"
+author {
+  name: "Winninger, Ray"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Wilson, Johnny"
+}
+author {
+  name: "Monkey, Doug"
+}
+author {
+  name: "Wyatt, James"
+}
+author {
+  name: "Richards, Jonathan M."
+}
+author {
+  name: "Corvello, Brian"
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Hudson, Brian P."
+}
+author {
+  name: "Berman, Steve"
+}
+author {
+  name: "Wiker, J.D."
+}
+author {
+  name: "Bishop, Jim"
+}
+author {
+  name: "Schmalz, Marc"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Quick, Jeff \'Zippy\'"
+}
+editor {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+editor {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+editor {
+  name: "Slavicsek, Bill"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistant editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "Nielsen, Terese"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+illustrator {
+  name: "Crabtree, Jim"
+}
+illustrator {
+  name: "Petersen, Eric"
+}
+illustrator {
+  name: "Venters, Pete"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Goldhawk, Andrew"
+}
+illustrator {
+  name: "Matson, John"
+}
+illustrator {
+  name: "Fisher, Scott"
+}
+illustrator {
+  name: "Dorman, Dave"
+}
+illustrator {
+  name: "Cudnohufsky, Craig"
+  job: "photos"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Pillsbury, Joe"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Wolf-Narciso, Shauna"
+  job: "senior art director"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+illustrator {
+  name: "Garfield, Susan"
+  job: "designer"
+}
+illustrator {
+  name: "Gough, Dan"
+  job: "designer"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "advertising traffifc manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Heft, Rebecca"
+  job: "circulation assistant"
+}
+date {
+  year: 1999
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XXIV 7"
+number: "266"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

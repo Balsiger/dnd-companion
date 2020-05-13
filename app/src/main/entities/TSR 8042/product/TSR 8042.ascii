@@ -1,0 +1,35 @@
+template {
+  name: "TSR 8042"
+  reference {
+    name: "net"
+  }
+  world: "None"
+  description: "this novel revisits the site of a classic AD&D game adventure"
+}
+title: "Thief in the Tomb of Horrors"
+leader: "A"
+author {
+  name: "Simon Hawke"
+}
+date {
+  year: 1997
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0674"
+  check: 10
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 1499
+  precision: 100
+}

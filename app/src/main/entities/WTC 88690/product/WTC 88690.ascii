@@ -1,0 +1,35 @@
+template {
+  name: "WTC 88690"
+  world: "Rokugan"
+  description: "Legend of the Five Rings fans played a key role in the development of the\n                    \\Product{Clan War} storyline. Author Ree Soesbee is well recognized among\n                    those fans and has been extremely instrumental in the design of the Legend of\n                    the Five Rings storyline."
+}
+title: "Dragon"
+leader: "The"
+author {
+  name: "Soesbee, Ree"
+}
+date {
+  year: 2001
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1883"
+  check: 7
+}
+isbn13 {
+}
+pages: 288
+system: LEGEND_OF_THE_FIVE_RINGS
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Sixth Scroll"
+series: "Clan War"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

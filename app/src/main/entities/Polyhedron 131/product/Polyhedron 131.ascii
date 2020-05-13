@@ -1,0 +1,92 @@
+template {
+  name: "Polyhedron 131"
+  world: "Generic"
+  description: "Issue 131 of Polyhedron."
+}
+title: "Polyhedron 131"
+author {
+  name: "Grimes, Alan"
+}
+author {
+  name: "Rich Kohl"
+}
+author {
+  name: "Miller, Brian"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Donovan, Dale A."
+}
+author {
+  name: "Mike Selinker"
+}
+author {
+  name: "Penny Williams"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Steve Kenson"
+}
+author {
+  name: "Mark T. Barnabo"
+}
+author {
+  name: "Gregory Detwiler"
+}
+author {
+  name: "Spike Y Jones"
+}
+author {
+  name: "Gibson, Ed"
+}
+author {
+  name: "Stephane Raymond"
+}
+author {
+  name: "Matt Brebner"
+}
+editor {
+  name: "Jeff Quick"
+}
+manager {
+  name: "TSR, Inc."
+  job: "The Baxter Building"
+}
+manager {
+  name: "Lisa Stevens"
+  job: "Sue Storm"
+}
+manager {
+  name: "Robert Wiese"
+  job: "Mr Fantastic"
+}
+manager {
+  name: "Woodcock, Donna"
+  job: "The Yaucy Street Gang"
+}
+manager {
+  name: "Paul Alan Timm"
+  job: "The Yaucy Street Gang"
+}
+date {
+  year: 1998
+  month: 8
+}
+isbn {
+}
+isbn13 {
+}
+pages: 48
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "18"
+number: "4"
+series: "Polyhedron"
+price {
+}

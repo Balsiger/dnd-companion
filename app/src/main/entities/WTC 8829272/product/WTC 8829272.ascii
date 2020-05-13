@@ -1,0 +1,138 @@
+template {
+  name: "WTC 8829272"
+  world: "Forgotten Realms"
+  description: "Malevolent forces conspire to ravage the lands and cities of\n                    \\Place{Faer\\hat{u}n}, and only the most valiant heroes can thwart their dark\n                    designs. If you are a player, this book helps you play heroic champions with\n                    the might and conviction to destroy the worst evils of the world. If you\'re a\n                    Dungeon Master, this book contains everything you need to create worthy\n                    challenged and rewards for your valorous heroes as they struggle to save the\n                    \\Place{Realms} from the darkness that threatens it.\n                    \\list\n                    {29 new feats}\n                    {33 new spells}\n                    {4 adventures sites}\n                    \\Product{Champions of Valor} is a comprehensive guide to playing valiant\n                    heroes in the \\Place{Forgotten Realms} setting. The counterpart to\n                    \\Product{Champions of Ruin}, \\Product{Champions of Valor} covers what it\n                    means to be valorous in the Realms. The book describes several good-aligned\n                    guilds and organizations that characters can join, as well as the benefits\n                    for doing so. In addition, the book presents an array of new spells, feats,\n                    and prestige classes appropriate for heroes of valor, and opens up new\n                    opportunities for adventure, fame, and glory for truly heroic characters."
+}
+title: "Champions of Valor"
+subtitle: "\\Place{Faer\\hat{u}n Needs Mighty Heroes, Now More Than Ever}"
+author {
+  name: "Reid, Thomas M."
+}
+author {
+  name: "Reynolds, Sean K."
+}
+author {
+  name: "Boyd, Eric L."
+  job: "additional design"
+}
+author {
+  name: "Cort\\grave{i}jo, Brian"
+  job: "additional design"
+}
+author {
+  name: "Collins, Andy"
+  job: "developer"
+}
+editor {
+  name: "Thompson, John"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "Griorello, Tom\\acute{a}s"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Engle, Jason"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Parrillo, Lucio"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Barnett, Dee"
+  job: "graphic design"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technician"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director RPG R&D"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2005
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3697"
+  check: 5
+}
+isbn13 {
+}
+pages: 160
+system: DND_3_5
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "WTC 177524"
+required_requirements: "WTC 17752"
+required_requirements: "WTC 17755"
+required_requirements: "WTC 11836"

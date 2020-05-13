@@ -1,0 +1,42 @@
+template {
+  name: "WTC 2191172"
+  world: "Generic"
+  description: "You haunt a vast and untamed wilderness, a terrifying domain of ferocious beasts and natural perils, yet you do not fear its mystery. With fierce resolve, you draw power from the spirits that preserve and sustain the world, destroying the monsters that threaten it. You are a primal creature, and evil cowers before you.\n                    This Dungeons & Dragons supplement presents never-before-seen options for primal characters, including new powers, tribal feats, paragon paths, and epic destinies designed for the barbarian, druid, shaman, and warden classes. \\Product{Primal Power} also provides information on major primal spirits, as well as builds and class features that allow you to play new versions of you favorite primal classes."
+  short_description: "Options for Barbarians, Druids, Shamans, and Wardens"
+}
+title: "Primal Powers"
+subtitle: "Take a Walk on the Wild Side"
+date {
+  year: 2009
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5023"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5023"
+  check: 2
+}
+pages: 160
+system: DND_4
+audience: ALL
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+series: "Powers"
+price {
+  currency: "$"
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: FULL_COLOR

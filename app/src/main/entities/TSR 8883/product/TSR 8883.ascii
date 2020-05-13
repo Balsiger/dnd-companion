@@ -1,0 +1,19 @@
+template {
+  name: "TSR 8883"
+  reference {
+    name: "complete product listing"
+  }
+  world: "None"
+}
+title: "Realms of Wonder"
+date {
+  year: 1983
+}
+isbn {
+}
+isbn13 {
+}
+audience: ALL
+type: CALENDAR
+price {
+}

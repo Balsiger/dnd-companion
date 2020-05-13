@@ -1,0 +1,36 @@
+template {
+  name: "TSR 3136"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Birthright"
+  description: "an evil triumvirate open a door into the ominous Shadow World"
+}
+title: "Shadow Moon"
+author {
+  name: "Stark, Ed"
+}
+date {
+  year: 1998
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1242"
+  check: 1
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}

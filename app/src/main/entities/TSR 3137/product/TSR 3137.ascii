@@ -1,0 +1,36 @@
+template {
+  name: "TSR 3137"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Birthright"
+  description: "vital tips for the success of a rule or warrior hero"
+}
+title: "Book of Regency"
+leader: "The"
+author {
+  name: "Stark, Ed"
+}
+date {
+  year: 1998
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1241"
+  check: 3
+}
+isbn13 {
+}
+pages: 128
+system: ADND_REVISED
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1995
+  precision: 100
+}

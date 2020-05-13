@@ -1,0 +1,41 @@
+template {
+  name: "WTC 88567"
+  synonym: "Marches, Silver"
+  world: "Forgotten Realms"
+  description: "Haunted by malicious dragons, hordes of orcs, and other ferocious creatures,\n                    the relentless cold and unforgiving terrain of the \\Place{Silver Marches}\n                    promise undiscovered riches and unspeakable danger to those bold enough to\n                    venture there. Complete information on the towns and settlements of the\n                    burgeoning \\Place{Silver Marches} alliance and the many hazards that threaten\n                    it highlight this detailed survey of one of the most exciting regions in the\n                    \\Place{Forgotten Realms} \\Product[WTC 11836]{game setting}.\n                    \\list{6 new prestige classes}\n                    {Indigenous monster}\n                    {Post map of the region}\n                    To use this accessory, you also need the \\Product[WTC 11836]{Forgotten Realms\n                    Campaign Setting}, the \\Product[TSR 11550]{Player\'s Handbook}, the\n                    \\Product[TSR 11551]{Dungeon Master\'s Guide}, and the \\Product[TSR\n                    11552]{Monster Manual}.\n                    "
+  short_description: "An accessory detailing the region of the Silver Marches."
+}
+title: "Silver Marches"
+subtitle: "A Vast Frontier Fraught with Endless Peril"
+date {
+  year: 2002
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2835"
+  check: 2
+}
+isbn13 {
+}
+pages: 160
+system: DND_3RD
+type: ACCESSORY
+style: SOFT_COVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 3895
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1
+}
+layout: FULL_COLOR

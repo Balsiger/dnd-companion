@@ -1,0 +1,55 @@
+template {
+  name: "TSR 8474"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{Who will be the new gods?}\n                    The \\God{God of Strife} is dead, destroyed in his attack on \\Place{Tantras},\n                    and \\NPC{Midnight} and her allies have recovered the first \\Item{Tablet of\n                    Fate}---one of a pair of artifacts that will return the gods to their former\n                    glory and save the \\Place{Realms} from the fallen deities\' wrath.\n                    To complete their quest, though, the heroes must travel across the world to\n                    \\Place{Waterdeep}, the \\Place{City of Splendors}, and even pass into the\n                    \\Place{Realms of the Dead}. But both, \\God{Cyric} and \\God{Myrkul}, \\God{God\n                    of Death}, want the \\Item{Tablets of Fate} for their own dark ends, and they\n                    will stop at nothing to capture \\NPC{Midnight}---even if it means the\n                    destruction of the \\Place{Realms}.\n                    \\Product{Waterdeep} is the third novel in the \\Product{Avatar Trilogy}, TSR\'s\n                    newest epic saga based on the \\Product{Forgotten Realms} fantasy setting."
+}
+title: "Waterdeep"
+author {
+  name: "Awlinson, Richard"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+date {
+  year: 1989
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "587"
+  check: 1
+}
+isbn13 {
+}
+pages: 341
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Three"
+series: "Avatar Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

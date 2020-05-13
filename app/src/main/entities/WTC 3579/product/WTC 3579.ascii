@@ -1,0 +1,297 @@
+template {
+  name: "WTC 3579"
+  category: "board game"
+  category: "Board Game"
+  synonym: "Scoundrels of Skullport"
+  world: "Forgotten Realms"
+  description: "Beneath the \\Place{City of Splendors} lies the sprawling dungeon of \\Place{Undermountain} and the criminal haven of \\Place{Skullport}. Now you can add one or both of these subterranean loctions to your \\Product{Lords of Waderdeep} game.\n\n\\Product{Lords of Waterdeep} is a competitive board game of fantasy intrigue. The \\em{Skullport} module adds a new resource to the game: Corruption. If you\'re willing to pay the price for accumulating Corruption, the rewards can be great. The \\em{Undermountain} module features bigger quests, richer resources, and more ways to get both.\n\n\\Product{Scoundrels of Skullport} includes new Lords, new Buildings, and new Intrigue and Quest cards. This expansion set also adds a new faction, the Gray Hands, allowing up to six players.\n\nYou must have the \\Product{Lords of Waterdeep} game to use this expansion."
+  short_description: "Expansion to the \\Product{Lords of Waterdeep} board game."
+}
+title: "Lords of Waterdeep: Scoundrels of Skullport"
+subtitle: "Waterdeep belongs to the Underworld!"
+author {
+  name: "Thompson, Rodney"
+}
+author {
+  name: "LaPille, Tom"
+}
+author {
+  name: "Sernett, Matt"
+}
+author {
+  name: "Lee, Peter"
+  job: "development"
+}
+author {
+  name: "Dupuis, Ann"
+  job: "development"
+}
+author {
+  name: "Tulach, Chris"
+  job: "development"
+}
+editor {
+  name: "Wilkes, Jennifer Clarke"
+}
+cover {
+  name: "Horsley, Ralph"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Altmann, Scott"
+}
+illustrator {
+  name: "Aparin, Alexey"
+}
+illustrator {
+  name: "Beisner, Ralph"
+}
+illustrator {
+  name: "Bradley, Noah"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Carpenter, Kai"
+}
+illustrator {
+  name: "Ceran, Milivoj"
+}
+illustrator {
+  name: "Crowe, Stephen"
+}
+illustrator {
+  name: "Crut"
+}
+illustrator {
+  name: "Dutrait, Vincent"
+}
+illustrator {
+  name: "Empty Room Studios"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Flores, Gonzalo"
+}
+illustrator {
+  name: "Foti, Tony"
+}
+illustrator {
+  name: "Guzenko, Paul"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Hubrich, Aaron"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Juta, Jason"
+}
+illustrator {
+  name: "Josic, Goran"
+}
+illustrator {
+  name: "Kollros, Mathias"
+}
+illustrator {
+  name: "Lacera, Jorge"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "MacTernan, Christine"
+}
+illustrator {
+  name: "Maniak, Slawomir"
+}
+illustrator {
+  name: "Moeller, Christopher"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Rapoza, David"
+}
+illustrator {
+  name: "Sardhina, Richard"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Stone, Sarah"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Tikos, Peter"
+}
+illustrator {
+  name: "Valenzuela, Brian"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Winters, Mark"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "senior creative director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic design"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic design"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D senior group manager"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress manager"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "D&D brand team"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D brand team"
+}
+manager {
+  name: "Feil, John"
+  job: "D&D brand team"
+}
+manager {
+  name: "Gutierre, Godot"
+  job: "production manager"
+}
+date {
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6450"
+  check: 5
+}
+pages: 16
+system: NONE
+audience: ALL
+type: BOARD_GAME
+style: BOX
+producer: "WTC"
+series: "Lords of Waterdeep"
+price {
+  currency: "$3"
+  number: 999
+  precision: 100
+}
+content {
+  part: PLAYING_PIECE
+  description: "wooded adventurer cubes, agents, corruption tokens and score markers"
+  number: 37
+}
+content {
+  part: PLAYING_PIECE
+  description: "adventuerer caravan, victory point, and control tokens"
+  number: 26
+}
+content {
+  part: CARD
+  description: "intrigue, quest, and Lord of Waterdeep"
+  number: 116
+}
+content {
+  part: PLAYING_PIECE
+  description: "building tiles"
+  number: 24
+}
+content {
+  part: BOARD
+  description: "cardstock player mat"
+  number: 1
+}
+content {
+  part: BOARD
+  description: "game board"
+  number: 3
+}
+content {
+  part: BOOKLET
+  description: "rulebook"
+  number: 1
+}
+content {
+  part: BOX
+  description: "storage tray"
+  number: 1
+}
+layout: FULL_COLOR

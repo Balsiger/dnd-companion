@@ -1,0 +1,190 @@
+template {
+  name: "Dragon Annual 1999"
+  world: "Generic"
+  description: "Annual issue of 1999. "
+}
+title: "Dragon Annual 1999"
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Miller, Andy"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Costa, Thomas \'Tom\' M."
+}
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Kenson, Stephen"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Brown, Lloyd III"
+}
+author {
+  name: "Johannesen, Jeremy"
+}
+author {
+  name: "Backer, Richard"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Denning, Troy"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Wilson, Johnny L."
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editor"
+}
+editor {
+  name: "Perkins, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "assistant editor"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "editorial assistant"
+}
+cover {
+  name: "Zug, Mark"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+illustrator {
+  name: "Blackburn, Jolly R."
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Gianni, Thomas"
+}
+illustrator {
+  name: "Calero, Dennis"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Ricker, Scott"
+}
+illustrator {
+  name: "Critchlow, Carl"
+}
+illustrator {
+  name: "Peterson, Eric"
+}
+illustrator {
+  name: "Barger, Ryan"
+}
+illustrator {
+  name: "Angus, Glen Michael"
+}
+illustrator {
+  name: "Wood, Ashley"
+}
+illustrator {
+  name: "Venters, Pete"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Narciso, Shauna Wolf"
+  job: "senior art director"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+illustrator {
+  name: "Garfield, Susan"
+  job: "designer"
+}
+illustrator {
+  name: "Gough, Dan"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Dunn, John."
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "advertising traffic coordinator"
+}
+manager {
+  name: "Heft, Rebecca"
+  job: "circulation assistant"
+}
+date {
+  year: 1999
+}
+isbn {
+}
+isbn13 {
+}
+pages: 144
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXIV 13"
+number: "Annual 1999"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

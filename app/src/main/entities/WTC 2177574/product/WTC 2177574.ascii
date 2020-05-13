@@ -1,0 +1,58 @@
+template {
+  name: "WTC 2177574"
+  world: "Eberron"
+  description: "A prominent aristocrat and his entire family are murdered in the heart of the capital city. \\NPC{Soneste}, a young inquisitive famous for solving two high-profile cases, is called in to track down the killer. The eyes of her realm are upon her, demanding swift and certain justice.\n\n\\NPC{Tallis} could have been a war hero, but fate dealt him a different hand. He survives on the streets, a wanted man in the land to which he devoted his life, unable to give up the fight. Even if it means hunting down the worst of the worst in \\Place{Karrnath}."
+}
+title: "Darkwood Mask"
+leader: "The"
+subtitle: "\\Place{Karnath}. A cold and unforgiving land."
+author {
+  name: "LaSala, Jeff"
+}
+editor {
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2008
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4970"
+  check: 8
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4970"
+}
+pages: 344
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "4"
+series: "The Inquisitives"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

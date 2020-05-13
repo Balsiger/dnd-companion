@@ -1,0 +1,95 @@
+template {
+  name: "Dungeon 30"
+  world: "Generic"
+  description: "This is issue 30 of the dungeon magazine."
+}
+title: "Dungeon 30"
+author {
+  name: "Maxwell, Randy"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Howery, David"
+}
+author {
+  name: "Walsh, Willie"
+}
+author {
+  name: "Kurtz, Steven"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Moore, Roger E."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Holloway, Jim"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Klasnich, Robert"
+}
+illustrator {
+  name: "Widing, Ken"
+}
+illustrator {
+  name: "Miller, David O."
+}
+illustrator {
+  name: "Holloway, Jim"
+}
+illustrator {
+  name: "Smith, Larry"
+  job: "art director"
+}
+typographer {
+  name: "TSR Graphic Arts Services"
+}
+manager {
+  name: "Wards, James M."
+  job: "publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1991
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 72
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "V 6"
+number: "30"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 375
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "map and characters"
+  number: 1073741824
+}

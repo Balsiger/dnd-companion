@@ -1,0 +1,43 @@
+template {
+  name: "WTC 17678"
+  world: "Forgotten Realms"
+  description: "\\bold{\\NPC{Arvin}}\n                    A \\class{mind-mage} of growing power sets off on a secret journey to the\n                    barony of\n                    \\bold{\\Place{Sespech}}\n                    A \\Monster{human} realm crawling with \\Monster{yuan-ti}, where he encounters\n                    \\bold{\\NPC{Karell}}\n                    A \\Monster{yuan-ti} half-blood who in turn has her \\Monster{serpent}\'s eyes\n                    set on\n                    \\bold{\\NPC{Dmetrio}}\n                    Scion of the powerful \\Group{Extaminos} family who is said to hold the fabled\n                    \\bold{\\Item{Circled Serpent}}\n                    An ancient artifact of such immense power, if could well destroy the world.\n                    \\Product{Viper\'s Kiss} is the second title in a new trilogy exploring the\n                    political intrigues of the \\Monster{yuan-ti} race, the details of which have\n                    been little explored in previous \\Place{Forgotten Realms} products."
+}
+title: "Viper\'s Kiss"
+author {
+  name: "Smedman, Lisa"
+}
+cover {
+  name: "Swanland, Raymond"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+date {
+  year: 2005
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3616"
+  check: 9
+}
+isbn13 {
+}
+pages: 306
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book II"
+series: "House of Serpents"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

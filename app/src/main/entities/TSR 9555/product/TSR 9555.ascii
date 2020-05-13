@@ -1,0 +1,33 @@
+template {
+  name: "TSR 9555"
+  reference {
+    name: "net"
+  }
+  world: "Ravenloft"
+  description: "an adventure anthology"
+}
+title: "Children of the Night: Ghosts"
+author {
+  name: "Kargat, The"
+}
+date {
+  year: 1997
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0752"
+  check: 5
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}

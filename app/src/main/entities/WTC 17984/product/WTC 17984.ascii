@@ -1,0 +1,58 @@
+template {
+  name: "WTC 17984"
+  world: "Dragonlance"
+  description: "The third and final title in the \\Product{Dhamon Saga} is now available in\n  mass market format. This title ties up the story of a character first\n  introduced in popular \\Place{Dragonlance} saga author Jean Rabe\'s\n  \\Product{Dragons of a New Age} trilogy."
+}
+title: "Redepmtion"
+author {
+  name: "Rabe, Jean"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3006"
+  check: 3
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Three"
+series: "Dhamon Saga"
+price {
+  currency: "$ "
+  number: 799
+  precision: 100
+}

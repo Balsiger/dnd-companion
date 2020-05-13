@@ -1,0 +1,43 @@
+template {
+  name: "WTC 17882"
+  world: "Generic"
+  description: "Frigid cold and ice sweep across the realm at the height of summer. Arctic\n  monsters prowl the flash-frozen landscape. To unlock the mystery, a small\n  band of heroes must traverse the depths of a ruined, ice-clogged city that\n  now houses only unearthly creatures and deadly traps.\n\n  Will they find the key to salvation."
+}
+title: "Plague of Ice"
+author {
+  name: "T.H. Lain"
+}
+cover {
+  name: "Sam Wood"
+}
+cover {
+  name: "Matthew Mitchel"
+}
+date {
+  year: 2003
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2953"
+  check: 7
+}
+isbn13 {
+}
+pages: 178
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 7"
+series: "D&D 3rd Edition Introduction Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

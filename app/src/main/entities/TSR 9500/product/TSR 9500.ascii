@@ -1,0 +1,59 @@
+template {
+  name: "TSR 9500"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  world: "Red Steel"
+  description: "untamed lands, with short adventures"
+}
+title: "Savage Baronies"
+author {
+  name: "Beach, Tim"
+}
+author {
+  name: "Heard, Bruce"
+}
+date {
+  year: 1995
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0123"
+  check: 3
+}
+isbn13 {
+}
+pages: 96
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: CD
+  description: "audio"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: SHEET
+  description: "handouts"
+  number: 8
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 2
+}

@@ -1,0 +1,108 @@
+template {
+  name: "Dungeon 69"
+  world: "Generic"
+  description: "This is issue 69 of the dungeon magazine."
+}
+title: "Dungeon 69"
+author {
+  name: "Kuhl, Jason"
+}
+author {
+  name: "Richards, Johnathan M."
+}
+author {
+  name: "Pomeroy, Christopher"
+}
+author {
+  name: "Boyd, Eric L."
+}
+editor {
+  name: "Watters, Pierce"
+  job: "executive editor"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Diesel"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "Perkins, Chris"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Diesel"
+}
+illustrator {
+  name: "Morales Rags"
+}
+illustrator {
+  name: "Schwartz, Stephen"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising manager"
+}
+date {
+  year: 1997
+  month: 7
+}
+isbn {
+}
+isbn13 {
+}
+pages: 80
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XII 3"
+number: "69"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

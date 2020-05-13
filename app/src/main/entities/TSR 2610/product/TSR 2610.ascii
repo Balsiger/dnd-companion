@@ -1,0 +1,48 @@
+template {
+  name: "TSR 2610"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Planescape"
+  description: "You\'ve never seen a skull like this one, cutter---it\'s made of a silvery\n                    metal, with rainbow hues cascading over its shiny surface. Local bashers call\n                    it a \\Item{mimir}. Toss it into the air, and ask it questions: What is\n                    Ecstasy? Do \\Monster{fiends} patrol the \\Place{Outlands}? The floating skull\n                    clicks softly, scouring its enchanted vaults for the answers. Then its\n                    bone-box opens, driven by ancient pistons, and it begins to speak...\n                    A \\Product{Planescape} accessory for player characters of all levels, the\n                    \\Product{Player\'s Primer} provides a look at the \\Place{Outlands}, which\n                    surrounds the great city of \\Place{Sigil}---the gateway to all the\n                    \\Place{Outer Planes}. IN this box, a cutter\'ll find:\n                    \\list\n                    {An audio compact disc that represents the \\Item{mimir}, a new magical\n                    item offering a strange and thrilling tour of the\n                    \\Place{Outlands}. More than 40 CD tracks allow players to hear what\n                    their characters would her when consulting this handy (some say\n                    dangerous) oracle.}\n                    {A 32-page guide to the most important sites and features of the\n                    \\Place{Outlands}.}\n                    {A full-color poster map of the \\Place{Outlands} with never-before-seen\n                    maps of gate-towns.}\n                    \\large{The land\'s full of wonder \\emph{and} danger, berk. Get the chant from\n                    the \\Product{Player\'s Primer}---and stay alive!}"
+}
+title: "Player\'s Primer to the Outlands"
+leader: "A"
+date {
+  year: 1995
+  month: 5
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: CD
+  description: "Audio"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

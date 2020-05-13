@@ -1,0 +1,24 @@
+template {
+  name: "DMA 000062"
+  description: "A female dwarf and a male dwarven king."
+}
+title: "Dwarves"
+date {
+  year: 1995
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "TSR"
+price {
+}
+content {
+  part: MINIATURE
+  description: "pewter"
+  number: 2
+}

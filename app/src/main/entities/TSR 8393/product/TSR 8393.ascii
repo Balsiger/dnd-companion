@@ -1,0 +1,50 @@
+template {
+  name: "TSR 8393"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  reference {
+    name: "Dragon 247"
+  }
+  reference {
+    name: "Dragon 248"
+  }
+  world: "Dragonlance"
+  description: "For generations the baser clans of \\Place{Thorbardin} have raged against\n  \\Place{Hylar}, ancestral rulers of the vast underground realm. Now, the\n  finest \\Place{Hylar} army has marched away to face the \\Group{Knights of\n  Takhisis} -- and the dark \\Monster{dwarves} see their opportunity.\n\n  Besieged in the \\Place{Life Tree} that is their fortress city, the\n  \\Group{Hylar} struggle to survive. Magic and madness threaten from all sides\n  as \\NPC{Theiwar}, \\NPC{Daergar}, and \\NPC{Klar} press the onslaught with\n  bloodthirsty frenzy.\n\n  The forces of Chaos join the battle against all \\Monster{dwarvenkind}. And\n  hopes grow dim as the \\Group{Hylar} face ultimate betrayal and confront the\n  \\Monster{specter} of \\Place{Torbardin}\'s ultimate doom.\n\n  This exciting new novel by popular \\Place{Dragonlance} author Douglas Niles\n  tells the tale of the legendary \\Monster{dwarven} kingdom during the\n  \\Event{Chaos War}, the backdrop for The New York Times best-selling novel,\n  \\Product{Dragons of Summer Flame}."
+}
+title: "Last Thane"
+leader: "The"
+subtitle: "Dark \\Monster{dwarves}...darker schemes...and rising chaos."
+author {
+  name: "Niles, Douglas"
+}
+date {
+  year: 1998
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1172"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+producer: "TSR"
+number: "Book 1"
+series: "The Chaos War Series"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

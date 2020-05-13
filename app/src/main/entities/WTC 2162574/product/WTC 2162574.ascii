@@ -1,0 +1,50 @@
+template {
+  name: "WTC 2162574"
+  world: "Forgotten Realms"
+  description: "They built it to be a stronghold in the monster-ridden wilds. Lone, unassailable, the shield of the Southern Lands.\n                    Until the men and women who held the fortress vanished. The replacement regiment finds no trace of their comrades --- only lonely, silent \\Place{Neversfall}, left behind to wath the plains of \\Place{Veldorn}.\n                    \\emph{Only the citadel knows the dangerous games being played in its shadow.}\n                    Errata: On page 288, you may notice that the chapters skip from 20 to 29, and on page 295, they begin renumbering with Chapter 24. These are mistakes made when chapters were deleted and replaced in editing. Nothing is missing from the story or in the wrong place. We apologize for the confusion."
+}
+title: "Neversfall"
+subtitle: "Crouched in the shade of an ancient forest, Neversfall sees everything."
+author {
+  name: "Gentry, Ed"
+}
+cover {
+  name: "Seidman, David"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+date {
+  year: 2007
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4782"
+  check: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4782"
+  check: 9
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "1"
+series: "The Citadels"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

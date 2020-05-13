@@ -1,0 +1,57 @@
+template {
+  name: "WTC 96448"
+  world: "Forgotten Realms"
+  description: "When the gods are banished from the heavens, they must travel through\n                    \\Place{Faer\\hat{u}n} in the guise of mortals.\n                    When four companions, last survivors of the \\Group{Company of the Lynx}, find\n                    themselves in possession of a mysterious amulet, they must escape death at\n                    the hand of \\God{Bane}, \\God{god of murder}.\n                    When magic itself runs wild, no one can say that the most innocent of spells\n                    will not destroy the world."
+}
+title: "Shadowdale"
+author {
+  name: "Ciencin, Scott"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3105"
+  check: 1
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book I"
+series: "Avatar Series"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

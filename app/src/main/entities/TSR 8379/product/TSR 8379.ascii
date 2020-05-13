@@ -1,0 +1,47 @@
+template {
+  name: "TSR 8379"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 241"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  world: "Dragonlance"
+  description: "a new tale of the coming of age and initiation into magic of Raistlin"
+}
+title: "Soulforge"
+leader: "The"
+author {
+  name: "Margaret Weis"
+}
+date {
+  year: 1998
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0645"
+  check: 6
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2395
+  precision: 100
+}

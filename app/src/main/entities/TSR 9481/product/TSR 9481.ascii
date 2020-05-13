@@ -1,0 +1,42 @@
+template {
+  name: "TSR 9481"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  world: "Lankhmar"
+  description: "Elad Edals is back, intermedia to high level"
+}
+title: "Avengers in Lankhmar"
+author {
+  name: "Henson, Dale \'Slade\'"
+}
+date {
+  year: 1995
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0160"
+  check: 8
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

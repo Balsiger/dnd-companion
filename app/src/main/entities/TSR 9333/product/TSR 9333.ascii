@@ -1,0 +1,85 @@
+template {
+  name: "TSR 9333"
+  synonym: "FMA-1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog91W"
+  }
+  world: "Forgotten Realms"
+  description: "On the Night of Wailing, when the creatures of Viperhand came to life, when\n                    the great \\Place[Maztica]{Maztican} gods \\God{Ootal} and \\God{Zaltec}\n                    battled, the great \\Item{Cloak of One Plume}---a magical item of great power\n                    and a token of great authority---was believed lost forever.\n                    Such was not the case.\n                    Rumors fly that the \\Item{Cloak} was rescued that night, and hidden away in a\n                    safe location. Now a petty noble of \\Place{New Amn} plans to recover it, and\n                    is looking for brave young souls who can bring it back to him. But other\n                    players are involved in the chase, trying to recover the lost \\Item{Cloak}.\n                    \\Product[TSR 9333]{Fires of Zatal} spans the great continent of\n                    \\Place{Maztica} from the new colony of \\Place{Helmsport} to the valley of\n                    \\Place{Nexal}, at the foot of \\Place{Mt. Zatal} itself. It is the first\n                    adventure for the new \\Place{Maztica} campaign setting in the\n                    \\Place[Forgotten Realms]{Realms}; DMs wishing to run this need the\n                    \\Place{Maztica} Campaign Boxed Set. This module servers as an introduction to\n                    this new world of adventure, a land of wise and save empires and growing,\n                    monstrous threats.\n                    Welcome to \\Place{Maztica}. This is not the \\Place[Forgotten Realms]{Realms}\n                    you\'re familiar with!"
+}
+title: "Fires of Zatal"
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Beach, Tim"
+}
+editor {
+  name: "Danforth, Elizabeth T."
+}
+cover {
+  name: "Fields, Fred"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+illustrator {
+  name: "Frank, Ken"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+manager {
+  name: "Feggestad, Sarah"
+  job: "production"
+}
+date {
+  year: 1991
+  month: 9
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "139"
+  check: 3
+}
+isbn13 {
+}
+pages: 64
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+number: "2"
+series: "Maztica"
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,49 @@
+template {
+  name: "WTC A6852"
+  world: "Forgotten Realms"
+  description: "As the chaos of hte Sundering ragtes around her, young warlock \\NPC{Farideh} faces a more personal turmoil wrought by a deal she made with a devil years ago. Hoping to protect her twin sister, she leaves everything she holds dear to assist a wizard in a scheme that pits the devils of the \\Place{Nine Hells} against the gods above.\n\nBut when \\NPC{Farideh} casts the spell to enter the wizard\'s remove mountaintop fortress, she picks up a stowaway - a \\Group{Harper} agent named \\NPC{Dahl} who isn\'t so inclined to follow devilish demands. \\NPC{Dahl} attemps to escape only to run into a village of oadd people, lurking behind an impenetrable wall.\n\nForced to gaze into the villager\'s souls, \\NPC{Farideh} points out the ones who seem different, only to watch as the wizard\'s guards cart them off to fates unknown. Are these villagers or prisoners? Are they blessed or doomed by the gods? As the wizard\'s guess game proves more and more diabolical, \\NPC{Farideh} resolves to unravel his secrets - even if it means she\'ll lose heor own soul to the \\Place{Nine Hells}.\n\nIn this third book of the Sundering series kicked of by R.A. Salvatore and the dark elf \\NPC{Drizzt}, SCRIBE award-winning author Erin M. Evans thrusts her signature character \\NPC{Farideh} into a mealstrom of devilish politics and magical intrigue that will have far-reaching implications for the future of the \\Place{Forgotten Realms}."
+  short_description: "The third book int the Sundering series."
+}
+title: "Adversary"
+leader: "The"
+subtitle: "The Sundering"
+author {
+  name: "Evans, Erin M."
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+date {
+  year: 2014
+  month: 5
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6375"
+  check: 1
+}
+pages: 506
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "The Sundering"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

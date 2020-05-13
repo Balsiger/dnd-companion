@@ -1,0 +1,27 @@
+template {
+  name: "TSR 9317"
+  synonym: "WGS1"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog91S"
+  }
+  world: "Greyhawk"
+}
+title: "Five Shall be One"
+date {
+  year: 1991
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: UNKNOWN
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

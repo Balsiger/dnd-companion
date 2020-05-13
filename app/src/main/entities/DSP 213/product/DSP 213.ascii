@@ -1,0 +1,46 @@
+template {
+  name: "DSP 213"
+  world: "None"
+  description: "Us...and them...and after all, we\'re only ordinary fen...\n\n  Join the Dork Tower gang as they take to the streets of Mud Bay one more\n  time, looking for love (and their purple shiny dice) in all the wrong places!\n  Will \\NPC{Matt} and \\NPC{Gilly} find peace of mind, or even each other? Will\n  \\NPC{Kayleigh} find a way to make life even worse for them? Will \\NPC{Igor}\n  find a clue? Pick up John Kovalic\'s seventh Dork Tower collection, and find\n  out yourself!"
+}
+title: "The Dork Side of the Goon"
+subtitle: "Shine On, You Crazy Fanboy!"
+author {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Mackintosh, Jeff"
+  job: "interior design and layout"
+}
+date {
+  year: 2004
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "930964"
+  title: "85"
+  check: 4
+}
+isbn13 {
+}
+pages: 176
+system: NONE
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "Dork Storm Press"
+number: "Volume VII"
+series: "The Collected Dork Tower"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

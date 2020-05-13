@@ -1,0 +1,33 @@
+template {
+  name: "TSR 3567"
+  synonym: "25CR2"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "the good, bad and the ugly of the planet Earth in the 25th Century"
+}
+title: "Earth in the 25th Century"
+date {
+  year: 1993
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "879"
+  check: 10
+}
+isbn13 {
+}
+system: XXVC
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

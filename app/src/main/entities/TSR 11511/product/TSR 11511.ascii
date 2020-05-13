@@ -1,0 +1,25 @@
+template {
+  name: "TSR 11511"
+  reference {
+    name: "net"
+  }
+  world: "Dominaria"
+  description: "reference and utility for the trading card game"
+}
+title: "Interactive Encyclopedia"
+author {
+  name: "Salt Mine Creative"
+}
+date {
+  year: 1999
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: SOFTWARE
+price {
+}

@@ -1,0 +1,158 @@
+template {
+  name: "Dragon 282"
+  world: "Generic"
+  description: "Issue 282 of the magazine. This is the april\'s issue."
+}
+title: "Dragon 282"
+author {
+  name: "Michael G. Ryan"
+}
+author {
+  name: "Jeff Vogel"
+}
+author {
+  name: "Mike Selinker"
+}
+author {
+  name: "Michael Dean"
+}
+author {
+  name: "Robin D. Laws"
+}
+author {
+  name: "Tony Moseley"
+}
+author {
+  name: "Phil Masters"
+}
+author {
+  name: "Jonathan M. Richards"
+}
+author {
+  name: "Cunningham, Elaine"
+}
+author {
+  name: "Monte Cook"
+}
+author {
+  name: "Greenwood, Ed"
+}
+author {
+  name: "Stephen Kenson"
+}
+author {
+  name: "Robin D. Laws"
+}
+author {
+  name: "Mike McVey"
+}
+author {
+  name: "Skip Williams"
+}
+author {
+  name: "Ray Winninger"
+}
+author {
+  name: "Gary Gygax"
+}
+editor {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Matthew Sernett"
+}
+cover {
+  name: "Phil Fogio"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Peter Bergting"
+}
+illustrator {
+  name: "Peter Delgado Jr."
+}
+illustrator {
+  name: "Michael Sutfin"
+}
+illustrator {
+  name: "Tony Moseley"
+}
+illustrator {
+  name: "John Kovalic"
+}
+illustrator {
+  name: "McLachlan, Brian"
+}
+illustrator {
+  name: "Riche, Darrell"
+}
+illustrator {
+  name: "Ron Spencer"
+}
+illustrator {
+  name: "Mike May"
+}
+illustrator {
+  name: "Scott Fischer"
+}
+illustrator {
+  name: "Cramer, Dennis"
+}
+illustrator {
+  name: "Phil Foglio"
+}
+manager {
+  name: "John Wilson"
+  job: "800-pound gorilla"
+}
+manager {
+  name: "Pewter Whitley"
+  job: "zeta male"
+}
+manager {
+  name: "Pierce Watters"
+  job: "sea monkey"
+}
+manager {
+  name: "Bob Henning"
+  job: "howler monkey"
+}
+manager {
+  name: "John Dunn"
+  job: "brass monkey"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "zookeeper"
+}
+date {
+  year: 2001
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+pages: 114
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXV"
+number: "282"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

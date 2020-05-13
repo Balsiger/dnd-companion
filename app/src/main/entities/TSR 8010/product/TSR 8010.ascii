@@ -1,0 +1,23 @@
+template {
+  name: "TSR 8010"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+}
+title: "Monster Cards Set 2"
+date {
+  year: 1982
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_1ST
+audience: UNKNOWN
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 195
+  precision: 100
+}

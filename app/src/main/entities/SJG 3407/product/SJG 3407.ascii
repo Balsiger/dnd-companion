@@ -1,0 +1,79 @@
+template {
+  name: "SJG 3407"
+  world: "Generic"
+  description: "(Just don\'t ask 150% more what.)\n\n  The twisted geniuses behind the first \\Product{Munchkin Monster Manual} are\n  back! The \\Product{Munchkin Monster Manual 2.5} contains 3\'905 monsters---of\n  which only 3\'872 are \\Monster{orcs}---including such fell nasties as\n  \\Monster{Auntie Paladin}, the \\Monster{Misplacer Beast}, and the dreaded\n  \\Monster{Thing With a Name So Long There\'s No Room for a Picture in the\n  Book}. It also has new monster templates, guidelines for updating your\n  \\Product{Munchkin} campaigns to the 2.5 rules, and the wit for which the\n  \\Product{Munchking RPG} has become (in)famous.\n\n  More creatures to slay... more treasure to plunder... more levels to\n  gain... the \\Product{Munchkin Monster Manual 2.5} has it all!"
+}
+title: "Munchkin Monster Manual 2.5"
+subtitle: "Contains 150% more than the first volume!"
+author {
+  name: "Mangrum, John W."
+}
+editor {
+  name: "Hackard, Andrew"
+}
+editor {
+  name: "Bernard, Kimara"
+}
+editor {
+  name: "Hackard, Andrew"
+  job: "managing editor"
+}
+cover {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Reed, Philip"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+typographer {
+  name: "Fernandex, Alex"
+  job: "page design"
+}
+manager {
+  name: "Chapman, Monique"
+  job: "project administration"
+}
+manager {
+  name: "Witt, Justin De"
+  job: "production art"
+}
+manager {
+  name: "Hackard, Andrew"
+  job: "art direction"
+}
+manager {
+  name: "Stephens, Monica"
+  job: "print buyer"
+}
+manager {
+  name: "Jepson, Ross"
+  job: "sales management"
+}
+manager {
+  name: "Vetromile, Andy"
+  job: "errata coordination"
+}
+date {
+  year: 2004
+}
+isbn {
+  group: "1"
+  publisher: "55634"
+  title: "722"
+  check: 7
+}
+isbn13 {
+}
+pages: 48
+system: D20
+type: MONSTER_COMPENDIUM
+style: HARDCOVER
+series: "Munchkin"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

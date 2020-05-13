@@ -1,0 +1,103 @@
+template {
+  name: "Dungeon 46"
+  world: "Generic"
+  description: "This is issue 46 of the dungeon magazine."
+}
+title: "Dungeon 46"
+author {
+  name: "James, Ted"
+}
+author {
+  name: "Zuvich, Thomas"
+}
+author {
+  name: "Kurtz, Steve"
+}
+author {
+  name: "Maxwell, Randy"
+}
+author {
+  name: "Aberg, Peter"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Burdick, Scott"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "DiTerlizzi, Tony"
+}
+illustrator {
+  name: "Miller, David O."
+}
+illustrator {
+  name: "Williams, L.A."
+}
+illustrator {
+  name: "Nelson, Mark"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+typographer {
+  name: "Isler, Tracy"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "advertising"
+}
+date {
+  year: 1994
+  month: 3
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "VIII 4"
+number: "46"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "map"
+  number: 1073741824
+}

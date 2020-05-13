@@ -1,0 +1,40 @@
+template {
+  name: "TSR 8071"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  world: "Ravenloft"
+}
+title: "King of the Dead"
+author {
+  name: "Gene DeWeese"
+}
+date {
+  year: 1996
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0483"
+  check: 6
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Thirteen"
+series: "Ravenloft Books"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

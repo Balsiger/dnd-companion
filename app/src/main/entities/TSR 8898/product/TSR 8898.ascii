@@ -1,0 +1,31 @@
+template {
+  name: "TSR 8898"
+  reference {
+    name: "catalog98"
+  }
+  world: "Dominaria"
+  description: "annual art calendar"
+}
+title: "Magic: The Gathering 1999 Calendar"
+author {
+  name: "Lizz Baldwin"
+}
+date {
+  year: 1998
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1192"
+  check: 1
+}
+isbn13 {
+}
+pages: 24
+system: MAGIC_THE_GATHERING
+audience: ALL
+type: CALENDAR
+style: BOOKLET
+price {
+}

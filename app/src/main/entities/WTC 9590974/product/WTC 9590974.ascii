@@ -1,0 +1,47 @@
+template {
+  name: "WTC 9590974"
+  world: "Eberron"
+  description: "Three heroes know the danger. In the \\Place{City of Towers}, a tormented\n  mystic and a soldier-wizard try to thwart a monstrous scheme. In the\n  \\Place{Shadow Marches}, a disgraced warrior summons an ancient sect to\n  battle.\n\n  As a \\Monster{dragon} rises, can their struggle succeed? Or will they fall to\n  madness and the music of the \\Product{Killing Song}...."
+}
+title: "Killing Song"
+leader: "The"
+subtitle: "Sealed away for ages, a forgotten horror reaches out for new power."
+author {
+  name: "Bassingthwaite, Don"
+}
+cover {
+  name: "Komarck, Michael"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+date {
+  year: 2006
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4243"
+  check: 6
+}
+isbn13 {
+}
+pages: 343
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book 3"
+series: "The Dragon Below"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

@@ -1,0 +1,34 @@
+template {
+  name: "TSR 2018"
+  reference {
+    name: "net price list"
+  }
+  world: "Generic"
+  description: "\\emph{...The mysterious and exotic Orient, land of spices and warlords, has\n                    at last opened her gates to the West.}\n                    For beginners or experts, players or DMs, this book holds all the information\n                    on oriental character classes, races, spells, magical items, weapons,\n                    fighting styles, and monsters. The world of \\Class{samurai} and \\Class{ninja}\n                    awaits!"
+}
+title: "Oriental Adventures"
+date {
+  year: 1985
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "099"
+  check: 3
+}
+isbn13 {
+}
+pages: 144
+system: ADND_1ST
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

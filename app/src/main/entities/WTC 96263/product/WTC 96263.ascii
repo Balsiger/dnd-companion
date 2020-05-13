@@ -1,0 +1,38 @@
+template {
+  name: "WTC 96263"
+  world: "None"
+  description: "Break your game wide open with MLB Showdown booster packs. Each 9-card pack\n  includes sluggers to add pop to your lineup, aces to bring the heat to your\n  opponents, and strategies to show off your managerial genius.\n\n  Become a legitimate playoff contender today.\n\n  This booster pack contains 7 random player game cards and 2 random strategy\n  game cards. It doesn\'t include rules. You can get the rules and a playmat in\n  an MLB Showdown Starter Game. Each player must have an MLB Showdown team to\n  play."
+}
+title: "MLB Showdown 2003 Booster Pack"
+date {
+  year: 2003
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7430"
+  title: "0667"
+  check: 4
+}
+isbn13 {
+}
+pages: 9
+system: MLB_SHOWDOWN_2003
+audience: ALL
+type: BOOSTER_PACK
+style: CARDS_STYLE
+price {
+  currency: "$ "
+  number: 299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "random player"
+  number: 7
+}
+content {
+  part: CARD
+  description: "random strategy"
+  number: 2
+}

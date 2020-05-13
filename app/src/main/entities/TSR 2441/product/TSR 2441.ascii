@@ -1,0 +1,51 @@
+template {
+  name: "TSR 2441"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 218"
+  }
+  world: "Dark Sun"
+  description: "incorporate the changes wrought by the Prism Pentad novels"
+}
+title: "Beyond the Prism Pentad"
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+  year: 1995
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0308"
+  check: 2
+}
+isbn13 {
+}
+pages: 32
+system: ADND_2ND
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 2
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

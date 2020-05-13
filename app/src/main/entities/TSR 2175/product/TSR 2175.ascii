@@ -1,0 +1,49 @@
+template {
+  name: "TSR 2175"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "catalog98"
+  }
+  reference {
+    name: "Dragon 242"
+  }
+  reference {
+    name: "Dragon 243"
+  }
+  reference {
+    name: "Dragon 244"
+  }
+  world: "Generic"
+  description: "A lot of spells, from \\Spell{Monster Summoning I} to \\Spell{Sprites}."
+}
+title: "Wizard\'s Spell Compendium, Volume Three"
+date {
+  year: 1998
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0791"
+  check: 6
+}
+isbn13 {
+}
+pages: 288
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+number: "Volume Three"
+series: "Wizard\'s Spell Compendium"
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

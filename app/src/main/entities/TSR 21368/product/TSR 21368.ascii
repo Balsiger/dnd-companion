@@ -1,0 +1,36 @@
+template {
+  name: "TSR 21368"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "\\Place{Darken Wood}... even the name brings dread to humans. But it is home\n  to \\Place{Ansalon}\'s \\Monster{centaur} tribes, where they have dwelt for ages\n  in peace under the \\NPC{Forestmaster}\'s watchful eye.\n\n  Now, ten years after the \\Product{Summer of Chaos}, strife is tearing the\n  centaurs apart. A mad chieftain seeks to overthrow his enemies, and an even\n  darker presence is changing the forest itself.\n\n  \\NPC{Trephas}, a brave young \\Class{warrior}, sets out for \\Place{Solace} to\n  seek aid agasint these enemies. He finds more than he bargained for in\n  \\NPC{Caramon Majere}, Hero of the Lance, and his spitfire daughter\n  \\NPC{Dezra}.\n\n  Acclaimed \\Place{Dragonlance} author Chris Pierson tells a tale of\n  \\Place{Ansalon}\'s most mysterious race, the fabled centaurs."
+}
+title: "Dezra\'s Quest"
+author {
+  name: "Pierson, Chris"
+}
+date {
+  year: 1999
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1368"
+  check: 1
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+series: "Bridges of Time"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}

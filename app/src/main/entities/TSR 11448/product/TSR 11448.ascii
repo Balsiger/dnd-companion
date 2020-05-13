@@ -1,0 +1,35 @@
+template {
+  name: "TSR 11448"
+  reference {
+    name: "net"
+  }
+  world: "Generic"
+  description: "\\large{Discover the Ultimate Hoard}\n\n  \\list\n  {Issues 1 to 250 of \\Product{Dragon Magazine}, plus the seven original\n   \\Product{The Strategic Review} issues---over 20 years of engaging\n   articles, informative features, cartoons, game inserts, and\n   world-class fantasy art}\n  {Advanced search options (all, any, phrase, and near) enable you to\n   search the entire archive for articles and key words with a few easy\n   keystrokes}\n  {Use the \\Product{Dragon Magazine Arhive} browser to \'flip through\'\n   any issue you choose---it\'s all at your fingertips}\n  {Bookmark your favorite passages, or cut and paste key excerpts to\n   create personal reference pages}\n  {All images and text can be enlarged or reduced to create custom\n   views, and every page is printable}\n  {It\'s the ultimate resource for AD&D players and DMs}\n\n  The \\Product{Dragon Magazine Arhive} CD-ROM is partially Macintosh\n  compatible: Our proprietary browser is PC compatible, but all files are in\n  PDF format, and can be read with Adobe Acrobat Reader"
+}
+title: "Dragon Magazine Archive"
+author {
+  name: "Saltmine Creative"
+}
+date {
+  year: 1999
+  month: 9
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1448"
+  check: 3
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: ALL
+type: SOFTWARE
+style: MEDIUM_BOX
+series: "CD-ROM"
+price {
+}
+content {
+  part: CD
+  number: 1073741824
+}

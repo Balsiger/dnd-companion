@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5029"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Umber Hulk & Dungeon Treasure"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

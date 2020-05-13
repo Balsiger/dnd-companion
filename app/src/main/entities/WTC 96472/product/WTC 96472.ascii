@@ -1,0 +1,34 @@
+template {
+  name: "WTC 96472"
+  world: "Dragonlance"
+  description: "This attractive new rerelease of \\Product{The Legend of Huma} debuts a new\n  look for the \\Product{Heroes} series. Each title in the series reflects the\n  new series design and feature entirely new cover art. This title is the only\n  \\Place{Dragonlance} novel not written by Margaret Weis & Tracy Hickman to hit\n  the New York Times best-seller list."
+}
+title: "Legend of Huma"
+leader: "The"
+author {
+  name: "Knaak, Richard A."
+}
+date {
+  year: 2004
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3137"
+  check: 10
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+series: "Heroes"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

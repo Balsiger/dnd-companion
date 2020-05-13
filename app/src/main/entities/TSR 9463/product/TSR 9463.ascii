@@ -1,0 +1,73 @@
+template {
+  name: "TSR 9463"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Generic"
+  description: "At last, gaming screens for players, too!\n                    The \\Product{Thief\'s Screen} speeds up game play by taking the most\n                    frequently used character-specific information from the AD&D game\n                    \\Product{Player\'s Handbook}, \\Product{Complete Thief\'s Handbook}, and\n                    \\Product{Complete Bard\'s Handbook} and making it instantly accessible. Now\n                    the details players need on the spot to play any rogue classes---including\n                    thieves and bards---can be right at their fingertips. The screen folds in a\n                    neat triangle that sits on the table top in front of players for at-a-glance\n                    reference.\n                    Also enclosed are eight additional pages of valuable reference material that\n                    can be slipped into character folders. These pages feature an extensive\n                    \\Product{Player\'s Handbook} and \\Product{Tome of Magic} spell and\n                    spell-statistics list for bard characters, and other handy tables and charts.\n                    \\emph{Suitable for all levels of play}."
+}
+title: "Thief\'s Screen"
+author {
+  name: "Willams, Skip"
+}
+author {
+  name: "Cook, David \'Zeb\'"
+}
+author {
+  name: "Martin, Julia"
+}
+editor {
+  name: "Schend, Steven"
+}
+cover {
+  name: "Easley, Jeff"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+date {
+  year: 1994
+  month: 7
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "831"
+  check: 2
+}
+isbn13 {
+}
+pages: 4
+system: ADND_2ND
+audience: PLAYER
+type: ACCESSORY
+style: SCREEN
+producer: "TSR"
+series: "Screen"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: SCREEN
+  number: 1073741824
+}
+content {
+  part: PAGE
+  description: "valuable material"
+  number: 4
+}

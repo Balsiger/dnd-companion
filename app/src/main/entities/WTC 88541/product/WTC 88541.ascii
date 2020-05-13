@@ -1,0 +1,56 @@
+template {
+  name: "WTC 88541"
+  world: "Forgotten Realms"
+  description: "New York Times bestselling author R. A. Salvatores\' \\Product{Cleric Quintet}\n                    novels, now in a trade paperback collector\'s edition\n                    R.A. Salvatore\'s \\Product{The Cleric Quintet Collector\'s Edition} tells the\n                    tale of the scholar-priest \\NPC{Cadderly}, who is plucked from the halls of\n                    the \\Place{Edificant Library} to fulfill a heroic quest across the land of\n                    \\Place{Faer\\hat{u}n}. This one-volume collection includes all five of the\n                    original novels, complete and unabridged, with a new introduction by the\n                    author.\n                    \'Salvatore shows . . . intelligence in using the classic elements, a pleasant\n                    dry wit and a narrative gift.\'\n                    \\right{-- Publishers Weekly}"
+}
+title: "Cleric Quintet Collector\'s Edition"
+leader: "The"
+author {
+  name: "Salvatore R.A."
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 1
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3690"
+  check: 8
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+series: "Cleric Quintet"
+price {
+  currency: "$ "
+  number: 1995
+  precision: 100
+}

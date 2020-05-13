@@ -1,0 +1,56 @@
+template {
+  name: "TSR 1144"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 231"
+  }
+  reference {
+    name: "Dragon 232"
+  }
+  world: "Lankhmar"
+  description: "All thats needed for Lankhmar."
+}
+title: "New Adventures of Fafhrd and the Gray Mouser"
+leader: "The"
+author {
+  name: "Hensley, Shane"
+}
+date {
+  year: 1996
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0417"
+  check: 8
+}
+isbn13 {
+}
+pages: 192
+system: ADND_REVISED
+type: CAMPAIGN_SETTING
+style: BOX
+price {
+  currency: "$"
+  number: 2500
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 4
+}
+content {
+  part: POSTER
+  number: 3
+}
+content {
+  part: CARD
+  description: "player reference"
+  number: 6
+}

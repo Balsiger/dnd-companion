@@ -1,0 +1,157 @@
+template {
+  name: "Dungeon 83"
+  world: "Generic"
+  description: "This is issue 83 of the dungeon magazine."
+}
+title: "Dungeon 83"
+author {
+  name: "Wide, Cameron"
+}
+author {
+  name: "Leati, Tito"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Wiker, JD"
+}
+author {
+  name: "Athans, Philip"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Thomasson, Chris"
+  job: "associate editor"
+}
+editor {
+  name: "Haddock, Eric"
+  job: "assistant editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "assistant editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "editorial consultant"
+}
+cover {
+  name: "Sasso, Marc"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+cartographer {
+  name: "Zipse, Craig"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Dow, Travers"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Wood, Ashley"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "art director"
+}
+illustrator {
+  name: "Whitley, Peter"
+  job: "consulting art director"
+}
+illustrator {
+  name: "JIE-23"
+  job: "designer"
+}
+illustrator {
+  name: "Jackson, Mark"
+  job: "designer"
+}
+illustrator {
+  name: "Francisco, Kim"
+  job: "designer"
+}
+illustrator {
+  name: "Dalton, Rob"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Noritake, Wendy"
+  job: "publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production manager"
+}
+manager {
+  name: "Maas, Bobbi"
+  job: "assistant production manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "circulation assistant"
+}
+manager {
+  name: "Fiorito, Stacie"
+  job: "editorial intern"
+}
+manager {
+  name: "Chung, Alice"
+  job: "advertis intern"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising director"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XIV 5"
+number: "83"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

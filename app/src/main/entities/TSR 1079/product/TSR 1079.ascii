@@ -1,0 +1,114 @@
+template {
+  name: "TSR 1079"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Ravenloft"
+  description: "\\large{The Horror Continues...}\n                    \\emph{A new era in horror role-playing began with the introduction of the\n                    \\Place{Ravenloft} boxed set. Combining the best elements of fantasy\n                    adventures with spine-tingling techniques of gothic horror, the\n                    \\Place{Ravenloft} game became an instant sensation. Now the time has come to\n                    learn more about the secrets of the lands in the \\Place{demiplane of\n                    dread}.\n                    \\Product{Forbidden Lore} brings you five books, each containing a wealth of\n                    material designed to make your \\Place{Ravenloft} game adventures more\n                    terrifying than ever before. Brush away the centuries-old dust, sweep aside\n                    the cobwebs, and look upon long-forgotten knowledge.}\n                    \\Product{Forbidden Lore} contains:\n                    \\list\n                    {\\emph{Dark Recesses:} This book details psionics, the powers of the\n                    mind, and their place in the \\Place{demiplane of dread}}\n                    {\\emph{Nova Arcanum:} New spells and magical lore from the darkes of\n                    \\Place{Ravenloft}\'s lords---\\NPC{Strahd Von Zarovich}}\n                    {\\emph{Oaths of Evil:} Expanded rules for curses and tips on how to\n                    make them an important part of any \\Place{Ravenloft} adventure.}\n                    {\\emph{Cruptic Allegiances:} An in-depth look at the secret societies\n                    hidden within the lands of \\Place{Ravenloft}. Some serve the lords of\n                    darkness, while others battle them at every turn.}\n                    {\\emph{The Waking Dream:} For centuries, the \\Group{Vistani} have been\n                    the masters of prophecy and fortune telling. This book reveals their\n                    secrets and shows how to be use the \\Group{Vistani} techniques in\n                    \\Place{Ravenloft} adventures.}\n                    {\\emph{The Tarokka:} Agenuine deck of 54 \\Group{Vistani}\n                    fortune-telling cards and complete instructions for their use in the\n                    game.}\n                    {\\emph{The Dikesha:} A set of runic dice used to predict the future,\n                    from the mysterious land of \\Place{Har\'Akir}.}"
+}
+title: "Forbidden Lore"
+author {
+  name: "Connors, William W."
+}
+author {
+  name: "Nesmith, Bruce"
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+cover {
+  name: "Fabian, Stephen"
+}
+cartographer {
+  name: "III, David C. Sutherland"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+illustrator {
+  name: "Klasnich, Bob"
+}
+typographer {
+  name: "Zamagne, Tracey"
+}
+manager {
+  name: "Parker, Roy E."
+  job: "graphic design"
+}
+date {
+  year: 1992
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "354"
+  check: 10
+}
+isbn13 {
+}
+pages: 160
+system: ADND_2ND
+type: ACCESSORY
+style: BOX
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "The Waking Dream"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Cryptic Allegiances"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Nova Arcanum"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Dark Recesses"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "Oaths of Evil"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}
+content {
+  part: DICE
+  number: 5
+}
+content {
+  part: CARD
+  number: 54
+}

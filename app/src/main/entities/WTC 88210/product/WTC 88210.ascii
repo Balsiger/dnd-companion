@@ -1,0 +1,59 @@
+template {
+  name: "WTC 88210"
+  world: "Dragonlance"
+  description: "The \\Event{Summer of Chaos} has ended. \\Place{Ansalon}\'s nightmare has only\n  just begun.\n\n  The gods have departed the world, heralding a new \\Event{Age of Mortals}. But\n  before the dust of war can settle, vast shadows cover the\n  land. \\Monster{Dragons} have come to \\Place{Ansalon}, larger and more\n  powerful than any ever seen, and they will wreak havoc on nations still\n  trembling from war. As the lands themselves begin to change under the dire\n  magic of the new \\Monster{dragon} overlords, new heroes arise to lead the\n  fight for freedom.\n\n  The first book in a rerelease of a key trilogy in the \\Place{Dragonlance}\n  saga, this trilogy covers key events that take place between \\Product{Dragons\n  of Summer Flame} and the bestselling \\Product{War of Souls trilogy}. With\n  all-new artwork and cover designs, these books tie in with \\Product{The\n  Dhamon Saga}."
+}
+title: "Dawning of a New Age"
+leader: "The"
+author {
+  name: "Rabe, Jean"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2002
+  month: 6
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2842"
+  check: 5
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume One"
+series: "Dragons of a New Age Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

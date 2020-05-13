@@ -1,0 +1,492 @@
+template {
+  name: "WTC A9218"
+  category: "monster"
+  category: "manual"
+  category: "core"
+  category: "rulebook"
+  category: "Rulebook"
+  world: "Generic"
+  description: "The \\Product{Monster Manual} presents a horde of classic Dungeons & Dragons creatures, including \\Monster{dragons}, \\Monster{giants}, \\Monster{mind flayers}, and \\Monster{beholders} --- a monstrous feast for Dungeon Masters ready to challenge their palyers and populate their adventures.\n\nThe monsters contained herein are culled from the D&D game\'s illustrious history, with eay-to-use game statistics and thrilling stories to feed your imagination."
+  short_description: "A menagerie of deadly monsters for the world\'s greatest roleplaying game."
+}
+title: "Monster Manual"
+subtitle: "The A To Z Fantasy Bestiary"
+author {
+  name: "Perkins, Christopher"
+  job: "Lead"
+}
+author {
+  name: "Sims, Chris"
+  job: "stat block development"
+}
+author {
+  name: "Thompson, Rodney"
+  job: "stat block development"
+}
+author {
+  name: "Lee, Peter"
+  job: "stat block development"
+}
+author {
+  name: "Schwalb, Robert J."
+  job: "story development"
+}
+author {
+  name: "Sernett, Matt"
+  job: "story development"
+}
+author {
+  name: "Townshend, Steve"
+  job: "story development"
+}
+author {
+  name: "Wyatt, James"
+  job: "story development"
+}
+author {
+  name: "Cordell, Bruce R."
+  job: "additional contributor"
+}
+author {
+  name: "Mohan, Kim"
+  job: "additional contributor"
+}
+author {
+  name: "Dupuis, Chris"
+  job: "additional contributor"
+}
+author {
+  name: "LaPille, Tom"
+  job: "additional contributor"
+}
+author {
+  name: "Horner, Miranda"
+  job: "additional contributor"
+}
+author {
+  name: "Wilkes, Jennifer Clarke"
+  job: "additional contributor"
+}
+author {
+  name: "Winter, Steve"
+  job: "additional contributor"
+}
+author {
+  name: "Youngs, Chris"
+  job: "additional contributor"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "additional contributor"
+}
+author {
+  name: "Olson, Tom"
+  job: "additional contributor"
+}
+author {
+  name: "Salvatore, R.A."
+  job: "additional contributor"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+cover {
+  name: "Swanland, Raymond"
+}
+illustrator {
+  name: "Babbey, Tom"
+}
+illustrator {
+  name: "Bader, Daren"
+}
+illustrator {
+  name: "Balmet, John-Paul"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Berube, Michael"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Bradley, Christopher"
+}
+illustrator {
+  name: "Briclot, Aleksi"
+}
+illustrator {
+  name: "Burburan, Filip"
+}
+illustrator {
+  name: "Burdett, Christopher"
+}
+illustrator {
+  name: "Burley, Sam"
+}
+illustrator {
+  name: "Burns, Mike"
+}
+illustrator {
+  name: "Burt, Wesley"
+}
+illustrator {
+  name: "Ceran, Milivoj"
+}
+illustrator {
+  name: "Chevrier, Jedd"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "Cook, Adam Danger"
+}
+illustrator {
+  name: "Dillon, Julie"
+}
+illustrator {
+  name: "Dorman, Dave"
+}
+illustrator {
+  name: "Ejsing, Jesper"
+}
+illustrator {
+  name: "Elmasli, Emrah"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Faille, Michael"
+}
+illustrator {
+  name: "Gas, Toma Feizo"
+}
+illustrator {
+  name: "Fiegenschuh, Emily"
+}
+illustrator {
+  name: "Giorello, Tomas"
+}
+illustrator {
+  name: "Gist, E.M."
+}
+illustrator {
+  name: "Grant West, Lars"
+}
+illustrator {
+  name: "Hekaton, E.W."
+}
+illustrator {
+  name: "jD"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Horlsey, Ralph"
+}
+illustrator {
+  name: "Huggins, Kurt"
+}
+illustrator {
+  name: "Devon, Zelda"
+}
+illustrator {
+  name: "Hurwitz, Lake"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Kovacs, Vance"
+}
+illustrator {
+  name: "Landerman, Daniel"
+}
+illustrator {
+  name: "Look, Lindsey"
+}
+illustrator {
+  name: "Ljunggren, Daniel"
+}
+illustrator {
+  name: "L\303\274bke, Raphael"
+}
+illustrator {
+  name: "Lunter, Titus"
+}
+illustrator {
+  name: "Maniak, Slawomir"
+}
+illustrator {
+  name: "Mar, Andrew"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Moeller, Christopher"
+}
+illustrator {
+  name: "Molnar, Mark"
+}
+illustrator {
+  name: "Nelor, Marco"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Nelson, Mark A."
+}
+illustrator {
+  name: "Ortiz, Hector"
+}
+illustrator {
+  name: "Pancoast, Ryan"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Pfeilschiefter, Kate"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "Riche, Darrel"
+}
+illustrator {
+  name: "Rogers, Ned"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Sandner, Jasper"
+}
+illustrator {
+  name: "Sass, Mike"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Shkipin, Ilya"
+}
+illustrator {
+  name: "Sinek, Carmen"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Stegg, Annie"
+}
+illustrator {
+  name: "Stella, Zack"
+}
+illustrator {
+  name: "Stewart, Matt"
+}
+illustrator {
+  name: "Swanland, Raymond"
+}
+illustrator {
+  name: "Sweet, Justin"
+}
+illustrator {
+  name: "Stokes, Anne"
+}
+illustrator {
+  name: "Tapia, Matias"
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Turkel, Autumn Rain"
+}
+illustrator {
+  name: "Van Der Haegen, Cyril"
+}
+illustrator {
+  name: "Vargo, David"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Wood, Sam"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Yum, Min"
+}
+illustrator {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Gelon, Dan"
+  job: "art director"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "art director"
+}
+illustrator {
+  name: "Kolkowsky, Mari"
+  job: "art director"
+}
+illustrator {
+  name: "Rapier, Melissa"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna Wolf"
+  job: "art director"
+}
+illustrator {
+  name: "Heiss, Bree"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic deisgner"
+}
+illustrator {
+  name: "Craig, Barry"
+  job: "graphic deisgner"
+}
+manager {
+  name: "Bilsland, Greg"
+  job: "producer"
+}
+manager {
+  name: "Shinkle, Neil"
+  job: "project manager"
+}
+manager {
+  name: "Graham, Kim"
+  job: "project manager"
+}
+manager {
+  name: "Hay, John"
+  job: "project manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production services"
+}
+manager {
+  name: "Dumas, Brian"
+  job: "production services"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production services"
+}
+manager {
+  name: "Gershman, David"
+  job: "production services"
+}
+manager {
+  name: "Knannlein, Matt"
+  job: "production services"
+}
+manager {
+  name: "Williams, Anita"
+  job: "production services"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "brand and marketing"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "brand and marketing"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand and marketing"
+}
+manager {
+  name: "Hilary, Ross"
+  job: "brand and marketing"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "brand and marketing"
+}
+manager {
+  name: "Lundstrom, Kim"
+  job: "brand and marketing"
+}
+manager {
+  name: "Kidd, Trevor"
+  job: "brand and marketing"
+}
+date {
+  year: 2014
+  month: 9
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6561"
+  check: 8
+}
+pages: 352
+system: DND_NEXT
+type: RULEBOOK
+style: HARDCOVER
+producer: "WTC"
+number: "2"
+series: "Core Rulebook"
+price {
+  currency: "$4"
+  number: 995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

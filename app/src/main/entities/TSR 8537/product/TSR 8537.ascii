@@ -1,0 +1,64 @@
+template {
+  name: "TSR 8537"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "The \\Item{holy hammer} of the \\Group{Church of \\God{Tyr}} was captured by\n                    the evil god \\God{Bane} two decades ago. While \\God{Bane} was destroyed, the\n                    relic vanished. The legacy of recovering the lost item was granted to a\n                    paladin before his birth.\n                    Now the young warrior must fulfill his destiny and return the enchanted\n                    hammer to the forces of good in the land of the \\Place{Moonsea}. Danger,\n                    deception, and loyal friends will accompany him on his fateful journey.\n                    \\Product{Pool of Twilight} is a continuation of the best-selling\n                    \\Product{Pool of Radiance} and \\Product{Pools of Darkness} series, based on\n                    the \\Place{Forgotten Realms} world of TSR, Inc. and the award-winning\n                    computer games by SSI."
+}
+title: "Pool of Twilight"
+author {
+  name: "Ward, James M."
+}
+author {
+  name: "Brown, Anne K."
+}
+cover {
+  name: "Fields, Fred"
+}
+date {
+  year: 1993
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "582"
+  check: 8
+}
+isbn13 {
+}
+pages: 312
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book Three"
+series: "Pool Series"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

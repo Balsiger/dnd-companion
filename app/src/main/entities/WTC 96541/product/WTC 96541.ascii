@@ -1,0 +1,40 @@
+template {
+  name: "WTC 96541"
+  world: "Forgotten Realms"
+  description: "From the burning sands of \\Place{Anauroch} to the limitless labyrinth of the\n                    \\Place{Underdark}, an epic quest for the very essence of the \\God{Spider\n                    Queen} takes one startling turn after another. Powerful forces are at work to\n                    find answers to where \\God{Lolth} has gone. She may return as something\n                    greater than she was, or she may have gone from her \\Monster{drow} children\n                    forever, leaving them to their own devices in a chilling Condemnation.\n                    \\bold{THe War of the \\God{Spider Queen} explodes.}\n                    The third novel in an epic six-part series form the fertile imaginations of\n                    R.A. Salvatore and a select group of the newest, most exciting authors in the\n                    genre. Join them as they shine a light into the blackest recesses of the\n                    \\Place{Forgotten Realms} world, only to deepen the shadows within."
+}
+title: "Condemnation"
+author {
+  name: "Baker, Richard L. III"
+}
+cover {
+  name: "Brom"
+}
+date {
+  year: 2003
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3202"
+  check: 3
+}
+isbn13 {
+}
+pages: 375
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book III"
+series: "War of the Spider Queen"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

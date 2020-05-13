@@ -1,0 +1,54 @@
+template {
+  name: "TSR 9539"
+  reference {
+    name: "internet"
+  }
+  reference {
+    name: "Dragon 236"
+  }
+  reference {
+    name: "Dragon 237"
+  }
+  reference {
+    name: "Dragon 238"
+  }
+  reference {
+    name: "Dragon 246"
+  }
+  world: "Generic"
+  description: "\\large{Evil Denizens of the Depths: the \\Monster{Sahuagin}.}\n                    The \\Monster{Sahuagin} are known by many names. Some call them the\n                    \\Monster{Devil Men of the Deep}; to others, they are simply the \\Monster{Sea\n                    Devils}. This deadly race of aquatic beings has remained a mystery to\n                    surfacedwellers---until now. This fully illustrated 96-page accessory details\n                    the highly organized structure of \\Monster{sahuagin} society, offers insight\n                    into the workings of the predatory \\Monster{sahuagin} mind, and examines the\n                    worship of \\God{Sekolah}, the dark \\Monster{sahuagin} deity.\n                    \\Product{The Sea Devils} also includes a full description of a typical\n                    \\Monster{sahuagin} village easily usable in any campaign setting, new spells\n                    that are granted to \\Monster{sahuagin} priestesses, and a color poster\n                    detailing the \\Monster{sahuagin} in all their variety.\n                    This book is the second in a series of accessories that focuses on some of\n                    the most popular monsters in the AD&D game. DMs and players alike should also\n                    look for \\Product{Evil Tide}, \\Product{Night of the Shark}, and \\Product{Sea\n                    of Blood}, a trilogy of \\Product{Monstrous Arcana} adventures centered around\n                    \\Monster{sahuagin}."
+}
+title: "Sea Devils"
+leader: "The"
+date {
+  year: 1997
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0643"
+  check: 10
+}
+isbn13 {
+}
+pages: 96
+system: ADND_REVISED
+type: ACCESSORY
+style: SOFT_COVER
+producer: "TSR"
+series: "Monstrous Arcana"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "color map"
+  number: 1073741824
+}

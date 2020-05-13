@@ -1,0 +1,45 @@
+template {
+  name: "TSR 11743"
+  synonym: "WTC 86727"
+  reference {
+    name: "net"
+  }
+  world: "Greyhawk"
+  description: "At gaming tables everywhere, the future of the \\Place{Greyhawk} setting\n  turns on the rolls of dice and the actions of thousands of Dungeons & Dragons\n  players.\n\n  This comprehensive sourcebook contains everything you need to get started in\n  the RPGA Network\'s exciting Living Greyhawk shared world campaign.\n\n  Inside you\'ll find descriptions of dozens of nations and scores of deities,\n  as well as hundreds of adventure hooks to get heores immersed in the dangers\n  of the world. In the Living Greyhawk campaign, you determine the fate of the\n  \\Place{Flanaess}. It\'s your world!"
+}
+title: "Living Greyhawk Gazetteer"
+subtitle: "Make the world your own!"
+author {
+  name: "Holian, Gary"
+}
+author {
+  name: "Mona, Erik"
+}
+author {
+  name: "Reynolds, Sean K"
+}
+author {
+  name: "Weining, Frederick"
+}
+date {
+  year: 2000
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1743"
+  check: 1
+}
+isbn13 {
+}
+pages: 192
+system: DND_3RD
+type: CAMPAIGN_SETTING
+style: SOFT_COVER
+producer: "RPGA"
+price {
+  currency: "$"
+  number: 2695
+  precision: 100
+}

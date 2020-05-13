@@ -1,0 +1,33 @@
+template {
+  name: "TSR 3565"
+  synonym: "25CR1"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "details the richest and most important planet in the inner solar system"
+}
+title: "Mars on the 25th Century"
+date {
+  year: 1993
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "864"
+  check: 1
+}
+isbn13 {
+}
+system: XXVC
+type: ACCESSORY
+price {
+  currency: "$ "
+  number: 995
+  precision: 100
+}

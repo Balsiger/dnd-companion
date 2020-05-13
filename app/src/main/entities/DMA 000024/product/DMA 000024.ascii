@@ -1,0 +1,21 @@
+template {
+  name: "DMA 000024"
+  reference {
+    name: "complete product listing"
+  }
+  world: "Generic"
+  description: "unknown"
+}
+title: "D&D"
+date {
+  year: 1974
+}
+isbn {
+}
+isbn13 {
+}
+system: DND_1ST
+audience: UNKNOWN
+style: BOX
+price {
+}

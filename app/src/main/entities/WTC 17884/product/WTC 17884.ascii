@@ -1,0 +1,57 @@
+template {
+  name: "WTC 17884"
+  world: "Forgotten Realms"
+  description: "Exiled from her home, the beautiful \\Monster{dark elf} \\NPC{Liriel Baenre}\n                    wanders the surface world with her companion \\NPC{Fyodor}. But even far from\n                    the dark haunts of \\Place{Menzoberranzan}, she is not safe from the vengeance\n                    of her archenemy. Even as she and her friend sail the dangerous seas of the\n                    \\Place{Sword Coast}, a \\Monster{drow} \\Class{priestess} plots a terrible fate\n                    for them.\n                    And in the depths of the earth, the spider queen \\God{Lolth} weaves her own\n                    webs of terror and treachery.\n                    This rerelease showcases a new look for the \\Product{Starlight & Shadows}\n                    series, complete with all new cover art and design. The recover of this title\n                    precedes a brand-new concluding title to the series, \\Product{Windwalker}."
+}
+title: "Tangled Webs"
+author {
+  name: "Cunningham, Elaine"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2959"
+  check: 6
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book 2"
+series: "Starlight & Shadows"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

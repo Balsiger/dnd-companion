@@ -1,0 +1,44 @@
+template {
+  name: "TSR 9401"
+  synonym: "TM4"
+  reference {
+    name: "net price list"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "A fantasy city can be a vast sprawling, mazelike place. Main streets turn\n                    into blind alleys. Thriving markets adjoin crime-infested slums. The wise\n                    traveler avoids problems by consulting his Trail Map.\n                    TM4 maps out not only the grand city of \\Place{Waterdeep}, but also the other\n                    cities featured in the \\Product[Avatar Trilogy]{Avatar trilogy}:\n                    \\Place{Shadowdale}, fabled home of \\NPC[Elminster]{Elminster the Sage}, and\n                    \\Place{Tantras}, a bustling port on the \\Place{Dragon Reach}.\n                    All maps are full color, printed on a 36\'\' by 75\'\' sheet suitable for use in\n                    gaming or as a wall poster."
+}
+title: "City of Waterdeep Trail Map"
+leader: "The"
+author {
+  name: "Staff, TSR"
+}
+date {
+  year: 1989
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+type: ACCESSORY
+style: MAP
+producer: "TSR"
+series: "Trail Map"
+price {
+  currency: "$ "
+  number: 595
+  precision: 100
+}
+content {
+  part: MISC
+  description: "envelope"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "huge map"
+  number: 1073741824
+}

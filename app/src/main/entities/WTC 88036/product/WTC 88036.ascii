@@ -1,0 +1,142 @@
+template {
+  name: "WTC 88036"
+  world: "Generic"
+  description: "\\large{Wield Power Granted by the Gods}\n                    Legends tell of brave champions whose unwavering faith earned them the favor\n                    of the gods. Empowered by the might and magic of their deity, these devoted\n                    characters transcend the realm of mere heroes.\n                    This supplement for the D&D game provides everything you need to create\n                    divinely inspired characters of any class. Along with new base classes,\n                    prestige classes, feats, spells, magic items, and relics, \\Product{Complete\n                    Divine} also provides guidelines for incorporating religion---from mysterious\n                    cults to powerful theocracies---into your campaign.\n                    To use this supplement, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, \\Product{Dungeon Matser\'s Guide}, and \\Product{Monster Manual}.\n                    A player needs only the \\Product{Player\'s Handbook}."
+}
+title: "Complete Divine"
+subtitle: "A Player\'s Guide to Divine Magic for All Classes"
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Donais, Michael \'Mike\'"
+  job: "lead development"
+}
+author {
+  name: "Baker, Richard L. III"
+  job: "development"
+}
+author {
+  name: "Collins, Andy"
+  job: "development"
+}
+editor {
+  name: "Watson, Ross"
+}
+editor {
+  name: "Kestrel, Gwendolyn F.M"
+  job: "managing editor"
+}
+cover {
+  name: "Higginbotham, Henry"
+}
+cartographer {
+  name: "Gamble, Todd"
+}
+illustrator {
+  name: "Anderson, Kyle J."
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Dornaus, Cris"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+}
+illustrator {
+  name: "Crabapple-McClain, Dennis"
+}
+illustrator {
+  name: "Mimura, Raven"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Roller, Scott"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Spencer, Ron"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Jordan, Bob"
+  job: "image technician"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "art director"
+}
+typographer {
+  name: "Murin, Dawn"
+  job: "graphic design"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Stark, Ed"
+  job: "design manager"
+}
+manager {
+  name: "Finch, Andrew"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+date {
+  year: 2004
+  month: 5
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3272"
+  check: 4
+}
+isbn13 {
+}
+pages: 192
+system: DND_3_5
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+series: "Player\'s Guide"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

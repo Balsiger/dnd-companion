@@ -1,0 +1,58 @@
+template {
+  name: "WTC 96452"
+  world: "Forgotten Realms"
+  description: "Who betrayed his friends \\God{Midnight} and \\God{Kelemvor} and sought to\n                    destroy them.\n                    Who ascended to godhood and now spreads his lies and intrigues into every\n                    corner of \\Place{Faer\\hat{u}n}.\n                    Who is the \\God{Lord of Murder}, the \\God{Prince of Lies}--and insane."
+}
+title: "Crucible: The Trial of Cyric the Mad"
+subtitle: "Cyric the Mad"
+author {
+  name: "Denning, Troy"
+}
+editor {
+}
+editor {
+}
+cover {
+}
+cover {
+}
+cartographer {
+}
+cartographer {
+}
+illustrator {
+}
+illustrator {
+}
+typographer {
+}
+typographer {
+}
+manager {
+}
+manager {
+}
+date {
+  year: 2003
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3117"
+  check: 5
+}
+isbn13 {
+}
+pages: 384
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+number: "Book V"
+series: "Avatar Series"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

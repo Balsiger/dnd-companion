@@ -1,0 +1,67 @@
+template {
+  name: "TSR 9486"
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Forgotten Realms"
+  description: "You hold in your hands the fourth popular---nay, indispensable!---travel\n                    guide penned by the indefatigable, all-seeing \\NPC[Volothamp\n                    Geddarm]{Volo}. The tireless traveler has seen the sights of the beautiful\n                    \\Place[Cormyr]{Forest Kingdom}, and he offers this pouch-sized tome so your\n                    own visit to the fabled realm of shining knights may be a carefree\n                    success. Many of the finest establishments and most striking sights and\n                    landmarks of \\Place{Cormyr} are featured here, ranked with the handy coin,\n                    dagger, pipe, and tankard ratings system. No visitor to \\Place{Cormyr} should\n                    be without this peerless guidebook.\n                    Discover:\n                    \\list\n                    {Where to dine one the best \\Monster[Wyvern]{wyvern} tail in all\n                    \\Place{Cormyr},}\n                    {The rules of the games most favored by \\Group{Purple Dragons} at\n                    play,}\n                    {State secrets about the \\Group[War Wizards]{war wizards} of \\Place{Cormyr},}\n                    {Where the elusive \\Monster[Ghost Stag]{ghost stag} prances---and all about\n                    the exclusive royal hunting lodge from which a lucky few guests hunt it,}\n                    {The lyrics of \\Place{Cormyr}\'s most popular drinking song,}\n                    {Where \\God{Tempus} speaks directly to warriors,}\n                    {And what powerful magic the mysterious \\Group{Sword Heralds} have\n                    left behind for only the wisest, boldest adventurers!}\n                    \\bold{For all levels of play.}\n                    Special Note: This edition of \\Product[TSR 9486]{Volo\'s Guide to Cormyr},\n                    intended for travelers from beyond the borders of \\Place{Faer\\hat{u}n},\n                    contains notes, commentary, and substantial revisions by the famous sage and\n                    archmage \\NPC{Elminster} of \\Place{Shadowdale}."
+}
+title: "Volo\'s Guide to Cormyr"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Martin, Julia E."
+}
+cover {
+  name: "Lakey, John"
+}
+cover {
+  name: "Lakey, Laura"
+}
+cartographer {
+  name: "Kauth, Dennis"
+}
+illustrator {
+  name: "Valucek, Valerie A."
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Barnett, Dee"
+  job: "production"
+}
+date {
+  year: 1995
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0151"
+  check: 9
+}
+isbn13 {
+}
+pages: 240
+system: ADND_REVISED
+type: ACCESSORY
+style: PAPERBACK
+producer: "TSR"
+series: "Volo\'s Guide"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

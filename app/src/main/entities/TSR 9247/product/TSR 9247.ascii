@@ -1,0 +1,76 @@
+template {
+  name: "TSR 9247"
+  synonym: "FRE1"
+  reference {
+    name: "net price list"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{The Gods walk the \\Place[Forgotten Realms]{Realms}.}\n                    Cast out from their heavenly domain, the gods of the \\Place{Forgotten Realms}\n                    wander the land as mortals---extremely powerful mortals, to be certain, but\n                    mortals nonetheless. They seek the lost \\Item{Tablets of Fate}, key to their\n                    return. But as the good and evil gods of the \\Place[Forgotten Realms]{Realms}\n                    bring their fight down to earth, the people and lands are caught in\n                    between. Nature itself revolts: Strange creatures stalk the countryside, and\n                    even magic becomes unpredictable.\n                    When a band of adventurers are hired by a young apprentice to rescue her\n                    sorceress-mentor, little to they realize the size of the stakes they will\n                    soon be playing for. Caught up in a power struggle that will determine the\n                    fate of the \\Place[Forgotten Realms]{Realms} themselves, the first step is to\n                    find the only mortal who may know what\'s going on---the legendary sage\n                    \\NPC{Elminster}. And that means going to \\Place{Shadowdale}.\n                    \\Product[TSR 9247]{Shadowdale} is the first of a three-part series of modules\n                    for the Advanced Dungeons & Dragons 2nd Edition roleplaying game. Set in the\n                    popular \\Place{Forgotten Realms} game world, this module features the same\n                    setting and many of the same characters of the first novel of the\n                    \\Product{Avatar Trilogy}, \\Product[TSR 9247]{Shadowdale}, by Richard\n                    Awlinson. This AD&D 2nd Edition adventure is for four to six characters of\n                    levels 5--8."
+}
+title: "Shadowdale"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Mortika, Christopher"
+}
+editor {
+  name: "Haring, Scott"
+}
+editor {
+  name: "Boomgarden, Karen S."
+}
+cover {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+typographer {
+  name: "Elmore, Betty"
+}
+manager {
+  name: "Lowder, Jim"
+  job: "avatar trilogy coordination"
+}
+manager {
+  name: "Hanchette, Paul"
+  job: "keylining"
+}
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "720"
+  check: 3
+}
+isbn13 {
+}
+pages: 48
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+number: "Module One"
+series: "Avatar Trilogy"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

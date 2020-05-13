@@ -1,0 +1,28 @@
+template {
+  name: "TSR 2146"
+  synonym: "CGR3"
+  reference {
+    name: "catalogue94"
+  }
+  world: "Al-Qadim"
+  description: "Sha\'irs player characters."
+}
+title: "Complete Sha\'ir\'s Handbook"
+leader: "The"
+date {
+  year: 1994
+  month: 4
+}
+isbn {
+}
+isbn13 {
+}
+system: ADND_2ND
+audience: PLAYER
+type: RULES_SUPPLEMENT
+producer: "TSR"
+price {
+  currency: "\302\254\302\243"
+  number: 1099
+  precision: 100
+}

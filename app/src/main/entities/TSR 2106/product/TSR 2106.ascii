@@ -1,0 +1,73 @@
+template {
+  name: "TSR 2106"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Forgotten Realms"
+  description: "The coming of the Avatars and the \\Event{Time of Troubles} caused tremendous\n                    changes in the \\Place{Forgotten Realms}. Areas of dead magic and wild magic\n                    have appeared; character classes have been altered; new magical spells have\n                    been discovered; old gods have been slain and new ones arisen. All the\n                    changes and updates are incorporated into this one essential volume for\n                    \\Place{Forgotten Realms} players and dungeon masters alike. Get new\n                    information on specialty priests, currency, new weapons, and treasure. Take a\n                    detailed tour of the major cities of the \\Place[Heartlands]{heartland}, from\n                    the \\Place{Sword Coast} to the \\Place{Dragon Reach}, including the\n                    \\Place{Moonsea}, the \\Place[Dales]{Dalelands}, \\Place{Cormyr}, and\n                    \\Place{Sembia}. The most popular and intriguing fantasy world ever published\n                    gets even better with this fantastic supplement."
+}
+title: "Forgotten Realms Adventures"
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Winter, Steve"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Fabian, Stephen"
+}
+illustrator {
+  name: "Dameron, Ned"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Caldwell, Clyde"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+typographer {
+  name: "O\'Keefe, Gaye"
+}
+date {
+  year: 1990
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "828"
+  check: 5
+}
+isbn13 {
+}
+pages: 155
+system: ADND_2ND
+type: ACCESSORY
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$"
+  number: 2000
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

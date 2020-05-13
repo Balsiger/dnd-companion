@@ -1,0 +1,78 @@
+template {
+  name: "TSR 2019"
+  reference {
+    name: "complete product listing"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "\\emph{...In the impenetrable darkness of the underearth, unimagined terrors\n                    and uncountable treasures await.}\n                    For beginners, advanced players, and DMs, this book opens up grand new vistas\n                    in the realms of the underdark, that little-known region of dungeons and\n                    caverns far beneath the sunlit world of everyday existence. The worlds of\n                    subterranean adventure await."
+}
+title: "Dungeoneer\'s Survival Guide"
+author {
+  name: "Niles, Douglas"
+}
+editor {
+  name: "Breault, Mike"
+}
+cover {
+  name: "Easley, Jeff"
+}
+cartographer {
+  name: "Sutherland, Dave"
+}
+illustrator {
+  name: "Chaffee, Douglas"
+}
+illustrator {
+  name: "Harper, Greg"
+}
+illustrator {
+  name: "Roslof, Jim"
+}
+illustrator {
+  name: "Easley, Jeff"
+}
+illustrator {
+  name: "Sutherland, Dave"
+}
+typographer {
+  name: "Vanderbilt, Carolyn"
+}
+manager {
+  name: "O\'Malley, Coleen"
+  job: "keylining"
+}
+manager {
+  name: "Szopinski, Gloria"
+}
+date {
+  year: 1986
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "272"
+  check: 4
+}
+isbn13 {
+}
+pages: 128
+system: ADND_1ST
+audience: ALL
+type: RULEBOOK
+style: HARDCOVER
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

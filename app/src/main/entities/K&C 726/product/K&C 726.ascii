@@ -1,0 +1,63 @@
+template {
+  name: "K&C 726"
+  description: "Hoody hoo! This new perfectbound trade paperback contains all three issues worth of classic strips from Knights of the Dinner Table #87 to #89, crammed between two covers!\n\nEach Bundle of Trouble collection stores easily on your bookshelf, and lets you avoid digging back issues out of comic storage boxes or piles of gaming material! Each Bundle of Trouble is also the perfect way for you to get your hands on their hard-to-find or out-of-print strips from past issues of Knights of the Dinner Table - the longest running, multiple award winning comic magazine on the subject of games and gamers.\n\nDon\'t miss this hilarious and hysterical slice of (fantasy) life and a wonderful celebration of the gaming culture!"
+  short_description: "Issues 87 - 89 of Knights of the Dinner Table"
+}
+title: "Bundle of Trouble Volume of Twenty-Six"
+subtitle: "Issues Eighty-Seven Through Eighty-Nine of Knights of the Dinner Table Crammed Between Two Covers!"
+author {
+  name: "Blackburn, Jolly R."
+}
+author {
+  name: "Jelke, Brian"
+}
+author {
+  name: "Johansson, Steve"
+}
+author {
+  name: "Kenzer, David S."
+}
+editor {
+}
+cover {
+  name: "Vrbanic, George"
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2009
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "59459"
+  title: "099"
+}
+isbn13 {
+}
+pages: 96
+system: NONE
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "K&C"
+number: "26"
+series: "Knights of the Dinner Table"
+series: "Bundle of Trouble"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: BOOK
+  description: "Book"
+  number: 1073741824
+}
+layout: COLOR_COVER

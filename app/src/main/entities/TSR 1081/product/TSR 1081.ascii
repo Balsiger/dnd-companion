@@ -1,0 +1,68 @@
+template {
+  name: "TSR 1081"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "Three mini-adventures about undeads."
+}
+title: "Haunted Tower"
+leader: "The"
+author {
+  name: "Martin, Julia E."
+}
+date {
+  year: 1992
+  month: 10
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "410"
+  check: 4
+}
+isbn13 {
+}
+pages: 48
+system: DND_1ST
+type: ADVENTURE
+style: BOX
+producer: "TSR"
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "3-D game props"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  number: 3
+}
+content {
+  part: MAP
+  number: 3
+}
+content {
+  part: COUNTER
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "stand-ups"
+  number: 1073741824
+}
+content {
+  part: MISC
+  description: "tiles"
+  number: 1073741824
+}

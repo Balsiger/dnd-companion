@@ -1,0 +1,174 @@
+template {
+  name: "Dragon 340"
+  world: "Generic"
+  description: "Issue 340 of the magazine. "
+}
+title: "Dragon 340"
+author {
+  name: "Baur, Shelly"
+}
+author {
+  name: "Campbell, Craig"
+}
+author {
+  name: "Ciscell, Galen"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Farrese, Richard"
+}
+author {
+  name: "Fehlauer, Mike"
+}
+author {
+  name: "Fiegel, Mike L."
+}
+author {
+  name: "Maclean, Hal"
+}
+author {
+  name: "Marks, Greg"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Morton, E.W."
+}
+author {
+  name: "Schneider, F. Weseley"
+}
+author {
+  name: "Sutter, James"
+}
+author {
+  name: "Tulach, Chris"
+}
+author {
+  name: "Upchurch, Wil"
+}
+author {
+  name: "Wissel, Christopher"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bulmahn, Jason"
+  job: "associate editor"
+}
+editor {
+  name: "McArtor, Mike"
+  job: "assistant editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+  job: "assistant editor"
+}
+cover {
+  name: "post, rk"
+}
+illustrator {
+  name: "Bergting, Peter"
+}
+illustrator {
+  name: "Bircham, David"
+}
+illustrator {
+  name: "Burlew, Rich"
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Fowler, Tom"
+}
+illustrator {
+  name: "Jansson, Niklas"
+}
+illustrator {
+  name: "Laubenstein, Jeff"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Wadpole, Tyler"
+}
+illustrator {
+  name: "Widermann, Eva"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "senior art director"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "graphic designer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "publisher"
+}
+manager {
+  name: "Alvarez, Jeff"
+  job: "director of operations"
+}
+manager {
+  name: "Frost, Joshua J."
+  job: "advertising director"
+}
+manager {
+  name: "O\'Bbrien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation manager"
+}
+manager {
+  name: "Redman, Rich"
+  job: "for wizards of the coast"
+}
+manager {
+  name: "Stark, Ed"
+  job: "for wizards of the coast"
+}
+date {
+  year: 2006
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 98
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXX 9"
+number: "340"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}

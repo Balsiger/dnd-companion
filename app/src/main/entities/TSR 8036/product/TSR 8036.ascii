@@ -1,0 +1,41 @@
+template {
+  name: "TSR 8036"
+  reference {
+    name: "complete product listing"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "None"
+}
+title: "Dragon\'s Tomb"
+leader: "The"
+author {
+  name: "Heinrich, D.J."
+}
+date {
+  year: 1993
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "592"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: DND_1ST
+audience: ALL
+type: NOVEL
+number: "Volume Two"
+series: "Penhalion Trilogy"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

@@ -1,0 +1,28 @@
+template {
+  name: "WTC 17943"
+  world: "None"
+  description: "The world of \\Place{Shobu} is bursting with shield-bashing creatures and\n  mind-warping spells. Bust open a Starter Set. Tough it out like\n  \\Place{Shobu}. Never give up, and rule the DUEL!\n\n  Look at all you get!\n\n  \\list\n  {Two 20-card training decks that can be combined into one tournament deck.\n   Decks may contain duplicate cards.}\n  {1 Dreamweave Duel Masters mini-comic!}\n  {1 exclusive Duel Masters Rothus, the Traveler premium card!}\n  {1 quick-start guide illustrated by Shigenobu Matsumoto}\n  {1 rulebook}\n  {2 Duel Masters playmats}\n  {1 D-MAX membership offer}\n  {1 bonus pack of booster cards!}"
+}
+title: "Duel Masters Starter Set"
+subtitle: "The Game Begins Here!"
+date {
+  year: 2004
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3450"
+  check: 6
+}
+isbn13 {
+}
+system: DUEL_MASTER
+audience: ALL
+type: CARDS_TYPE
+style: BOX
+price {
+  currency: "$ "
+  number: 999
+  precision: 100
+}

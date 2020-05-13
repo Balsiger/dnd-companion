@@ -1,0 +1,49 @@
+template {
+  name: "DSP 209"
+  world: "None"
+  description: "Give in to the Glory that is Geeks with \\Product{Heart of Dorkness}, the\n  third collection of John Kovalic\'s award winning \\Product{Dork Tower} comic\n  books. From goths, gamers and Trekkers to Renaissance Fairies and mundanes,\n  Dork Tower covers the world of Dorkness like nobody else! So have another\n  heaping helping of geekdom that anybody can enjoy as the Dork Tower gang\n  tries to discover the \\Product{Heart of Dorkness}!"
+}
+title: "Heart of Dork Ness"
+subtitle: "Midnight in the Garden of Lawful Good and Chaotic Evil"
+author {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Reed, Phil"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Williams, Aaron"
+  job: "interior design and layout"
+}
+date {
+  year: 2002
+  month: 4
+}
+isbn {
+  group: "1"
+  publisher: "930964"
+  title: "43"
+  check: 9
+}
+isbn13 {
+}
+pages: 160
+system: NONE
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "Dork Storm Press"
+number: "Volume III"
+series: "The Collected Dork Tower"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

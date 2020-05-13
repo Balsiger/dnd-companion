@@ -1,0 +1,50 @@
+template {
+  name: "WTC 9780786943449"
+  world: "Generic"
+  description: "Deep beneath the earth\n                    and sky, a world of dark dungeons and dense shadows hides from the light of\n                    day. Within this realm of endless night, \\Monster{shadow dragons} prowl,\n                    \\Monster{dread wraiths} rise from shallow graves, and a \\Monster{mind flayer\n                    lich} hatches diabolical plans against the world above.\n                    \\large{Be Afraid}\n                    Marge the dungeon with the battlefield when you collect all 60 miniatures in\n                    the \\Product{Night Below} set. Use a mix of adventuring heroes, undead\n                    horrors, and other powerful monsters to compete against your friends in fast,\n                    head-to-head combat, or to create exciting D&D adventures."
+}
+title: "Night Below Booster Pack"
+subtitle: "The Dwell in Eternal Darkness"
+date {
+  year: 2008
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4344"
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4344"
+  check: 9
+}
+system: DND_3_5
+audience: ALL
+type: MINIATURE
+style: MEDIUM_BOX
+number: "8"
+series: "D&D Miniatures"
+price {
+  currency: "$ "
+  number: 1499
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "randomized, pre-painted plastic"
+  number: 8
+}
+content {
+  part: CARD
+  description: "stat"
+  number: 8
+}
+content {
+  part: SHEET
+  description: "checklist"
+  number: 1
+}
+layout: FULL_COLOR

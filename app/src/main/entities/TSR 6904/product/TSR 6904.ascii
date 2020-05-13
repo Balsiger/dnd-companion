@@ -1,0 +1,24 @@
+template {
+  name: "TSR 6904"
+  synonym: "MSL4"
+  reference {
+    name: "catalog91W"
+  }
+  world: "Generic"
+  description: "STYGIAN tries to conquer Earth"
+}
+title: "Stygian Knight"
+date {
+  year: 1991
+  month: 12
+}
+isbn {
+}
+isbn13 {
+}
+system: MARVEL_SUPER_HEROES
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}

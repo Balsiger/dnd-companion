@@ -1,0 +1,126 @@
+template {
+  name: "WTC 9568572"
+  world: "Forgotten Realms"
+  description: "Beyond the pristine facade of the Temple of \\God{Mystra}, a sinister\n                    conspiracy threatens the future of \\Place{Cormyr}. Profane acts within the\n                    temple hearken to a mounting threat in the \\Place{Vast Swamp}. Adventurers\n                    must cross into the Plane of Shadow to unlock the truth about this growing\n                    darkness in time to thwart an attack against \\Place{Cormyr} and the goddess\n                    of magic herself.\n                    This \\Place{Forgotten Realms} campaign adventure is designed for characters\n                    of level 4-7. It can be played stand-alone or as the first adventure in a\n                    three-part series. Each encounter contains special tactical information for\n                    the Dungeon Master and expanded map features for ease of play."
+  short_description: "An adventure for characters of level 4-7."
+}
+title: "Cormyr: The Tearing of the Weave"
+subtitle: "Delve Into Darkness, Bring the Truth to Light"
+author {
+  name: "Baker, Richard L. III"
+}
+author {
+  name: "Cordell, Bruce R."
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Sernett, Matthew"
+}
+author {
+  name: "Wyatt, James"
+}
+editor {
+  name: "Thompson, John"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editing manager"
+}
+cover {
+  name: "O\'Connor, William"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+cartographer {
+  name: "Isaac, Nick"
+  job: "tactical map design"
+}
+illustrator {
+  name: "O\'Connor, William"
+}
+illustrator {
+  name: "Pavelec, Jim"
+}
+illustrator {
+  name: "Dien, Chris"
+}
+illustrator {
+  name: "Longstreet, Stacy"
+  job: "senior art director D&D"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "Forgotten Realms art director"
+}
+illustrator {
+  name: "Raper, Robert"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+typographer {
+  name: "Lokotz, Angelika"
+  job: "graphic production specialist"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "design manager"
+}
+manager {
+  name: "Decker, Jesse"
+  job: "development manager"
+}
+manager {
+  name: "Slavicsek, Bill"
+  job: "director of RPG R&D"
+}
+manager {
+  name: "Fischer, Josh"
+  job: "production manager"
+}
+manager {
+  name: "Crews, Randall"
+  job: "production manager"
+}
+date {
+  year: 2007
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "4119"
+  check: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "4119"
+  check: 3
+}
+pages: 160
+system: DND_3_5
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+required_requirements: "Player\'s Handbook"
+required_requirements: "Dungeon Master\'s Guide"
+required_requirements: "Monster Manual"
+required_requirements: "Forgotten Realms Campaign Setting"
+required_requirements: "D&D Miniatures"
+layout: FULL_COLOR

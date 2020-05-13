@@ -1,0 +1,162 @@
+template {
+  name: "Dragon 222"
+  world: "Generic"
+}
+title: "Dragon 222"
+author {
+  name: "Stark, Ed"
+}
+author {
+  name: "Culotta, Paul F."
+}
+author {
+  name: "Betancourt, John Gregory"
+}
+author {
+  name: "Swan, Rick"
+}
+author {
+  name: "Niles, Douglas"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Vuckovich, Michelle"
+}
+author {
+  name: "Ashley, Belinda G."
+}
+author {
+  name: "Burst, Steven"
+}
+author {
+  name: "Nossal, Jamie"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+author {
+  name: "Joness, Spike Y."
+}
+author {
+  name: "Zelinski, Peter C."
+}
+author {
+  name: "Baur, Wolfgang H."
+}
+author {
+  name: "Detwiler, Gregory W."
+}
+author {
+  name: "Gross, Dave"
+}
+editor {
+  name: "Watters, Pierce B."
+  job: "editor-in-chief"
+}
+editor {
+  name: "Bryant, Anthony J."
+  job: "editor"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Young, Barbara G."
+  job: "fiction editor"
+}
+editor {
+  name: "Vuckovich, Michelle"
+  job: "editorial assistant"
+}
+cover {
+  name: "Mac, Hung"
+}
+illustrator {
+  name: "Klasnich, Robert"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Kohl, Charles"
+  job: "photography"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Baxa, Thomas M."
+}
+illustrator {
+  name: "Lessl, Bob"
+}
+illustrator {
+  name: "Burr, Dan"
+}
+illustrator {
+  name: "Dollar, John"
+}
+illustrator {
+  name: "Guss, Matthew"
+}
+illustrator {
+  name: "Kennedy, Rhett"
+}
+illustrator {
+  name: "Carter, Jon"
+}
+illustrator {
+  name: "Cavalier, Bill"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate editor"
+}
+manager {
+  name: "Isler, Tracey"
+  job: "production"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+manager {
+  name: "Rick, Cindy"
+  job: "US advertising"
+}
+manager {
+  name: "Wildman, Carolyn"
+  job: "UK correspondent and UK advertising"
+}
+date {
+  year: 1995
+  month: 10
+}
+isbn {
+}
+isbn13 {
+}
+pages: 122
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XX 5"
+number: "222"
+series: "Dragon"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

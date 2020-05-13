@@ -1,0 +1,45 @@
+template {
+  name: "DMA 000050"
+  world: "Middle Earth"
+  description: "\\large{Das Hobbit Kochbuch}\n\n  Als \\NPC{Beregil von Gondor} im Jahr 175 des 4. Zeitalters von\n  \\Place{Mittelerde} ins \\Place{Auenland} kommt, um dort von der\n  \'Erz\\umlaut{a}hlung der Jahre\', der wahren Geschiche N\\acute{u}menors und der\n  Erhebung \\NPC{Saurons}, eine Abschrift f\\umlaut{u}r die Bibliothek von\n  \\Place{Minas Tirith} zu erstellen, macht er eine f\\umlaut{u}r ihn\n  erstaunliche Entdeckung:\n\n  \'Die \\Monster{Hobbits} leven in solch einer unbe\\umlaut{u}mmerten Art und\n  Weise und sind so sher mit sich selbst besch\\umlaut{a}ftigt, wie ich es bis\n  heute bei keinem anderen Volk von \\Place{Mittelerde} und dar\\umlaut{u}ber\n  hinaus je gesehen habe. Eigentlich kreisen ihre Gedanken nur im eines: die\n  n\\umlaut{a}chste Mahlzeit und was man davor noch schnell zu sich nehmen\n  kann.\'\n\n  So beginnt der Reisende damit, die Rezepturen und die Tischsitten der\n  \\Monster{Hobbits} aufzuschreiben, die dazu dienen sollen, uns \\umlaut{u}ber\n  das Volk der \\Monster{Halblinge} mehr zu erz\\umlaut{a}hlen, als wir bislang\n  wussten. Lesen Sie nun, was er gesammelt hat:\n\n  \\list\n  {alles \\umlaut{u}ber die Br\\umlaut{a}uche und Sitten der \\Monster{Hobbits}}\n  {\\umlaut{u}ber 40 leich nachzukochende Rezepte aus dem \\Place{Auenland}: vom\n   Haferobstbrei \\umlaut{u}ber Maggot\'sche Pilze, Wildschweinbraten mit\n   Honigkruste und Kirschbrotkuchen bis hin zur Biersuppe}\n  {alles \\umlaut{u}ber das Rauchen von Pfeifen und das Blasen von Kringeln\n   u.v.m.}\n\n  \\large{Begleiten Sie uns auf eine kulinarische Reise in die Welt der\n  \\Monster{Hobbits!}}"
+}
+title: "Rezepte aus dem Auenland"
+author {
+  name: "Uli B\\umlaut{o}ckmann"
+}
+author {
+  name: "Stefan Servos"
+  job: "redaktionelle Beratung"
+}
+editor {
+  name: "Petra Hundacker"
+}
+cover {
+  name: "Herbert Menzel"
+}
+illustrator {
+  name: "Herbert Menzel"
+}
+date {
+  year: 2002
+}
+isbn {
+  group: "3"
+  publisher: "89880"
+  title: "127"
+  check: 6
+}
+isbn13 {
+}
+pages: 130
+system: NONE
+audience: ALL
+type: COOKBOOK
+style: SOFT_COVER
+producer: "Heel"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

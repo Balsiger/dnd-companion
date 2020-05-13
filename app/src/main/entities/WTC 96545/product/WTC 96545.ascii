@@ -1,0 +1,38 @@
+template {
+  name: "WTC 96545"
+  world: "Dragonlance"
+  description: "Writing team Thompson & Cook once again explore the history of the ancient\n  \\Place{Dragonlance} world in \\Product{The Wizard\'s Fate}, the next title in\n  their latest trilogy. Considered the historical specialists of the\n  \\Place{Dragonlance} world, the authors take the story to a colorful and\n  violent era of its history that has not been previously chronicled in any\n  novel."
+}
+title: "Wizard\'s Fate"
+leader: "The"
+author {
+  name: "Thompson, Paul B."
+}
+author {
+  name: "Cook, Tonya Carter"
+}
+date {
+  year: 2004
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3214"
+  check: 7
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Volume Two"
+series: "The Ergoth Trilogy"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

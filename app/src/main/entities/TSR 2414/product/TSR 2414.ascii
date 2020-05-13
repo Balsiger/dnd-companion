@@ -1,0 +1,54 @@
+template {
+  name: "TSR 2414"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93W"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Dark Sun"
+  description: "Prism Pentad, book four"
+}
+title: "Obsidian Oracle"
+leader: "The"
+author {
+  name: "Troy Denning"
+}
+date {
+  year: 1993
+  month: 6
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "603"
+  check: 4
+}
+isbn13 {
+}
+pages: 352
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Four"
+series: "Prism Pentad"
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

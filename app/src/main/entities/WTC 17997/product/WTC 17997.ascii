@@ -1,0 +1,34 @@
+template {
+  name: "WTC 17997"
+  world: "None"
+  description: "This concluding title to \\Product{The Four Winds Saga} explores a different\n                    character\'s perspective on the events taking place in the series. The overall\n                    storyline is based on the \\Product{Gold Edition} set for the \\Product{Legend\n                    of the Five Rings} trading card game released by AEG. The ending of this\n                    title will actually be decided by the \\Product{Legend of the Five Rings}\n                    readers and fans in a tournament during the Summer of 2003, allowing players\n                    to have direct impact on novel content."
+}
+title: "Wind of Truth"
+author {
+  name: "Soesbee, Ree"
+}
+date {
+  year: 2003
+  month: 12
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "3045"
+  check: 4
+}
+isbn13 {
+}
+pages: 288
+system: LEGEND_OF_THE_FIVE_RINGS
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Fourth Scroll"
+series: "The Four Winds Saga"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

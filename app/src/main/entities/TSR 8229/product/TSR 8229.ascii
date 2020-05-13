@@ -1,0 +1,51 @@
+template {
+  name: "TSR 8229"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "None"
+}
+title: "Book of Stones"
+author {
+  name: "L. Dean James"
+}
+date {
+  year: 1993
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "639"
+  check: 5
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+series: "Sorcerer\'s Stone Trilogy"
+price {
+  currency: "$ "
+  number: 450
+  precision: 100
+}

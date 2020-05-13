@@ -1,0 +1,49 @@
+template {
+  name: "DSP 207"
+  world: "None"
+  description: "Lurking in the dork shadows, you\'ll find Matt, Igor, Ken, Gilly the Perky\n  Goth and Carson the Muskrat. Whether you\'re a goth, a gamer, an SF fan, a\n  comics fanboy, a computer wonk or a mundane, you\'ll recognize them all! DOrk\n  Tower is the worldwide hit amongst geeks and non-geeks alike! Make\n  \\Product{Dork Shadows} the brightest spot in your comics collection! Meet the\n  characters from John Kovalic\'s Dork Tower in the second sellout\n  collection...and welcome the world of Dorkness!"
+}
+title: "Dork Shadows"
+subtitle: "Give In to the Dork Side"
+author {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Kovalic, John"
+}
+cover {
+  name: "Reed, Phil"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Williams, Aaron"
+  job: "interior design and layout"
+}
+date {
+  year: 2002
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "930964"
+  title: "41"
+  check: 2
+}
+isbn13 {
+}
+pages: 160
+system: SPECIAL
+audience: ALL
+type: COMICS
+style: SOFT_COVER
+producer: "Dork Storm Press"
+number: "Volume II"
+series: "The Collected Dork Tower"
+price {
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

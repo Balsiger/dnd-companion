@@ -1,0 +1,41 @@
+template {
+  name: "WTC 88662"
+  world: "Star Wars"
+  description: "Through training and meditation, you hone your skills as a warrior and\n  mediator. Armed with a \\Item{lightsaber} and the power of the Force, you\n  stand against the darkness of the \\Group{Sith} and the tyranny of the\n  \\NPC{Yuuzhan Vong}. Only with the Force as your ally can you overcome the\n  temptations of the dark side and bring peace and justice to the galaxy.\n\n  This sourcebook features:\n\n  \\list\n  {New \\Group{Jedi} skills, feats, equipment, vehicles, and starships}\n  {Advice on playing and Gamemastering \\Group{Jedi} heroes}\n  {The history of the \\Group{Jedi} and the \\Group{Jedi} Code}\n  {New prestige classes, including the \\Class{Force warrior} and\n   \\Class{Jedi healer}}\n  {Force-using creatures, aliens, and character archetypes}\n  {Discussions of \\Group{Jedi} traditions throughout the various eras,\n   including game statistics for dozens of characters}\n  "
+}
+title: "Power of the Jedi Sourcebook"
+subtitle: "You must learn the ways of the force..."
+author {
+  name: "Stephens, Owen K. C."
+}
+author {
+  name: "Grubb, Jeff"
+}
+author {
+  name: "Mikaelian, Michael"
+}
+author {
+  name: "Maliszewski, James"
+}
+date {
+  year: 2002
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "2781"
+  check: 10
+}
+isbn13 {
+}
+pages: 160
+system: D20
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$ "
+  number: 2695
+  precision: 100
+}

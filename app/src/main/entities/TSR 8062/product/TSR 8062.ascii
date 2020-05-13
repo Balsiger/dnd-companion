@@ -1,0 +1,42 @@
+template {
+  name: "TSR 8062"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog93S"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Ravenloft"
+  description: "memoires of the infamous vampire lord"
+}
+title: "I, Strahd"
+author {
+  name: "P. N. Elrod"
+}
+date {
+  year: 1993
+  month: 9
+}
+isbn {
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 1695
+  precision: 100
+}

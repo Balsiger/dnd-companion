@@ -1,0 +1,30 @@
+template {
+  name: "DMA 000044"
+  world: "Generic"
+  description: "This is a fast-play introduction to the Alternity game. It includes basic\n                    rule information for players and dungeon masters, as well as am introductory\n                    adventure \\Product{Cauldron Station}."
+}
+title: "Gamemaster Guide/Player\'s Handbook, Fast-Play Rules"
+author {
+  name: "Richard Baker"
+}
+author {
+  name: "Slavicsek, Bill"
+}
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: ALTERNITY
+audience: ALL
+type: RULEBOOK
+style: BOOKLET
+price {
+  currency: "$ "
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

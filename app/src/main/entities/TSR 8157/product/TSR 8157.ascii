@@ -1,0 +1,43 @@
+template {
+  name: "TSR 8157"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  world: "None"
+}
+title: "Immortal Game"
+author {
+  name: "Niles, Douglas"
+}
+date {
+  year: 1996
+  month: 2
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0478"
+  check: 10
+}
+isbn13 {
+}
+pages: 288
+system: NONE
+audience: ALL
+type: NOVEL
+number: "Book Three"
+series: "Quest Triad"
+price {
+  currency: "$ "
+  number: 399
+  precision: 100
+}

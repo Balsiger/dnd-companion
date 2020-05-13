@@ -1,0 +1,28 @@
+template {
+  name: "TS 026-SML"
+  synonym: ""
+  description: "Small set of flaming wreckage."
+  short_description: "Small set of flaming wreckage."
+}
+title: "Flaming Wreckage - Small Set"
+subtitle: "Flaming Wreckage"
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: PACK
+producer: "Litko"
+price {
+}
+content {
+  part: MINIATURE
+  description: "Small flaming wreckage"
+  number: 7
+}
+layout: BLACK_AND_WHITE

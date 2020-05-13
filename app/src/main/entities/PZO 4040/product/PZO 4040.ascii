@@ -1,0 +1,41 @@
+template {
+  name: "PZO 4040"
+  world: "Generic"
+  description: "Climb on, come aboard, find your seat, or mount up on your path to adventure. Deeds worthy of legend rarely happen on a hero\'s doorstep, so head out on the road to greatness. Whether your heroes are traveling cross-country or just around the corner, no Game Master wants to spend time drawing steeds and wagon beds. Fortunately, with Paizo Publishing\'s latest GameMastery Map Pack, you don?t have to! This line of gaming accessories provides simple and elegant tools for the busy Game Master.\n\nInside, you\'ll find 18 captivating 5\'\'x8\'\' map tiles that can be combined into a variety of vehicles or cut apart to provide flat tokens for a whole host of mounts, war machines, and more, including:\n\\list\n{Carts}\n{Carriage}\n{Common Mounts}\n{Chariots}\n{Caravan Wagon}\n{Ice Sleds}\n{Gliders}\n{Monstrous Mounts}\n{Keelboat}\n{Steam Giant}\n\nGame Masters shouldn\'t waste their time sketching maps every time their players mount up or hop a caravan. With GameMastery Map Pack: Vehicles, you\'ll always be ready wherever adventure takes you!\n\nWet, dry, and permanent markers erase from the tiles!"
+  short_description: "Map tiles for vehicles."
+}
+title: "Vehicles"
+subtitle: "Adventures Don\'t Happen at Home!"
+cartographer {
+  name: "Engle, Jason"
+}
+date {
+  year: 2013
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "471"
+  check: 9
+}
+pages: 18
+system: NONE
+type: ACCESSORY
+style: SHEETS
+producer: "Paizo"
+series: "GameMastery"
+series: "GameMastery Map Pack"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: CARD
+  description: "map"
+  number: 18
+}
+layout: FULL_COLOR

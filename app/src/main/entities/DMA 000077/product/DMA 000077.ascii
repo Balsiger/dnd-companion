@@ -1,0 +1,43 @@
+template {
+  name: "DMA 000077"
+  description: "The Spring 2007 products of Paizo Publishing."
+}
+title: "Spring Catalog 2007"
+subtitle: "Paizo Publishing"
+author {
+}
+editor {
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 32
+system: NONE
+audience: ALL
+type: CATALOG
+style: BOOKLET
+producer: "Paizo"
+price {
+  currency: "$"
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

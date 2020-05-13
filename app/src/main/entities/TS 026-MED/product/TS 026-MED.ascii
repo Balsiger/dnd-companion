@@ -1,0 +1,28 @@
+template {
+  name: "TS 026-MED"
+  synonym: ""
+  description: "Medium Set of flaming wreckage."
+  short_description: "Medium Set of flaming wreckage."
+}
+title: "Flaming Wreckage - Medium Set"
+subtitle: "Flaming Wreckage"
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: PACK
+producer: "Litko"
+price {
+}
+content {
+  part: MINIATURE
+  description: "Medium Flaming Wreckage"
+  number: 5
+}
+layout: BLACK_AND_WHITE

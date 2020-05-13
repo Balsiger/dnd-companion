@@ -1,0 +1,39 @@
+template {
+  name: "WTC 11843"
+  synonym: "WTC 88237"
+  world: "Generic"
+  description: "\\emph{Years ago, brave heroes put the denizens of the \\Place{Temple of\n                    Elemental Evil} to the sword. Now, dark forces whisper again in the shadows\n                    of the once-deserted temple---forces far more insidious and dangerous than\n                    any sane person could dream. Evil has risen again to threaten the village of\n                    \\Place{Hommlet}.}\n                    Characters battle the power of darkness in \\Place{Hommlet} and beyond,\n                    forging their way through hundreds of dire encounters before reaching the\n                    fiery finale. Designed as the backbone of a full campaign, \\Product{Return to\n                    the Temple of Elemental Evil} takes characters from 4th level to as high as\n                    14th level.\n                    This deluxe adventure builds on the groundwork of the original \\Place{Temple\n                    of Elemental Evil} (published in 1985), as well as other classic\n                    adventures. However, none of those products are necessary to enjoy this\n                    one.\n                    To use this adventure, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide} and the \\Product{Monster\n                    Manual}. A player only needs the \\Product{Player\'s Handbook}."
+}
+title: "Return to the Temple of Elemental Evil"
+subtitle: "Evil Never Dies"
+date {
+  year: 2001
+  month: 7
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1843"
+  check: 8
+}
+isbn13 {
+}
+pages: 208
+system: DND_3RD
+type: ADVENTURE
+style: SOFT_COVER
+producer: "TSR"
+price {
+  currency: "$ "
+  number: 2995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "color maps"
+  number: 1073741824
+}

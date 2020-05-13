@@ -1,0 +1,44 @@
+template {
+  name: "TSR 2500"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  world: "Mystara"
+  description: "campaign setting for novice players"
+}
+title: "Mystara Karameikos: Kingdom of Adventure"
+date {
+  year: 1994
+  month: 8
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "853"
+  check: 3
+}
+isbn13 {
+}
+system: ADND_2ND
+type: CAMPAIGN_SETTING
+price {
+  currency: "$"
+  number: 3000
+  precision: 100
+}
+content {
+  part: CD
+  description: "audio"
+  number: 1073741824
+}
+content {
+  part: BOOKLET
+  description: "adventure"
+  number: 1073741824
+}

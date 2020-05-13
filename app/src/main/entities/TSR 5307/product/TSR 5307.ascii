@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5307"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "Gen Con RPGA Set 1"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}

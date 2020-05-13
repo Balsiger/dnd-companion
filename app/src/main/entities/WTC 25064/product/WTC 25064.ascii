@@ -1,0 +1,43 @@
+template {
+  name: "WTC 25064"
+  category: "miniature"
+  category: "boster"
+  category: "random"
+  category: "monster"
+  world: "Generic"
+  description: "The new Monster Manual-themed set features 40 D&D monsters from multiple sources --- just what every Dungeon Master or D&D enthusiast needs to create riveting adventures and exciting encounters at all levels of play."
+  short_description: "A booster pack with 1 visible and 4 randmon miniatures."
+}
+title: "Monster Manual: Legendary Evils"
+subtitle: "Boss Monsters, Unleashed!"
+cover {
+  name: "Lyon, Howard"
+}
+date {
+  year: 2009
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "5300"
+  check: 4
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5300"
+  check: 4
+}
+system: DND_4
+type: MINIATURE
+style: SMALL_BOX
+producer: "WTC"
+series: "Monster Manual Miniatures"
+price {
+  currency: "$"
+  number: 2199
+  precision: 100
+}
+layout: FULL_COLOR

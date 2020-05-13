@@ -1,0 +1,97 @@
+template {
+  name: "Dungeon 45"
+  world: "Generic"
+  description: "This is issue 45 of the dungeon magazine."
+}
+title: "Dungeon 45"
+author {
+  name: "Kurtz, Steve"
+}
+author {
+  name: "Baichtal, John W."
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Shell, J. Bradley"
+}
+author {
+  name: "Baker, Richard L. III"
+}
+editor {
+  name: "Mohan, Kim"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Young, Barbara G."
+}
+editor {
+  name: "Baur, Wolfgang H."
+  job: "associate editor"
+}
+editor {
+  name: "Donovan, Dale A."
+  job: "editorial assistant"
+}
+cover {
+  name: "Nelson, Mark"
+}
+cartographer {
+  name: "Diesel"
+}
+illustrator {
+  name: "Williams, L.A."
+}
+illustrator {
+  name: "Kosowicz, Ken"
+}
+illustrator {
+  name: "Schwartz, Steve"
+}
+illustrator {
+  name: "Wann, Karen L."
+}
+illustrator {
+  name: "Pavlet, Terry"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+typographer {
+  name: "Isler, Tracy"
+}
+manager {
+  name: "Thomsen, Brian"
+  job: "associate publisher"
+}
+manager {
+  name: "Winters, Janet L."
+  job: "subscriptions"
+}
+date {
+  year: 1994
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_2ND
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "VIII 3"
+number: "45"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 395
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

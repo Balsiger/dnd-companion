@@ -1,0 +1,28 @@
+template {
+  name: "TSR 3112"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  world: "Birthright"
+  description: "story of Emperor Michael Roele"
+}
+title: "Iron Throne"
+leader: "The"
+date {
+  year: 1995
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

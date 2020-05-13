@@ -1,0 +1,45 @@
+template {
+  name: "CSB024"
+  description: "For use with the current version of the world\'s most popular RPG or many other games. Zone Effects are great for marking the area of a continuous effect or a sustained power. Scales up or down easily to mark larger or smaller zones and does not occupy squares on a battlemap. No more having to mark up the battlemap only to erase it when the effect is removed. Sold in a pack of four and models are supplied in sky blue resin.\n"
+  short_description: "A set of 4 sky blue zone effect markers."
+}
+title: "Zone Effects- Electro Force in Sky Blue Resin"
+subtitle: "Terraform Battlefield Terrain"
+author {
+}
+editor {
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2011
+  month: 6
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: SMALL_BOX
+producer: "Armorcast"
+series: "Zone Effects"
+price {
+  currency: "$ "
+  number: 600
+  precision: 100
+}
+content {
+  part: MINIATURE
+  description: "zone effect marker"
+  number: 4
+}
+layout: FULL_COLOR

@@ -1,0 +1,45 @@
+template {
+  name: "TSR 8236"
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 211"
+  }
+  world: "None"
+  description: "futuristic combat in the virtual reality of cyberspace"
+}
+title: "Hidden War"
+leader: "The"
+author {
+  name: "Michael Armstrong"
+}
+date {
+  year: 1994
+  month: 11
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "921"
+  check: 1
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+price {
+  currency: "$ "
+  number: 495
+  precision: 100
+}

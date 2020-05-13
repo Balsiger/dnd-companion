@@ -1,0 +1,108 @@
+template {
+  name: "WTC 38850"
+  synonym: "DN4"
+  world: "Generic"
+  description: "Your tabletop never looked better! With this pack of customizable terrain tiles, you can add a new dimension to your Dungeon & Dragons adventures. Easy to set up and infinitely expandable, this pack allows you to create the adventures you want to play. Pick up additional packs to create large, more elaborate encounters."
+  short_description: "Dungeon Tiles around the elemental chaos."
+}
+title: "Cathedral of Chaos"
+subtitle: "Elemental terrain and magical traps galore!"
+author {
+  name: "Lee, Peter"
+  job: "dungeon tiles designer"
+}
+editor {
+}
+cover {
+}
+cartographer {
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Schindehette, Jon"
+  job: "D&D senior creative art director"
+}
+typographer {
+}
+manager {
+  name: "Tapp, Gretchen"
+  job: "senior product engineer"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "D&D R&D senior producer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D R&D group manager"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "D&D brand team"
+}
+manager {
+  name: "Chase, Kierin"
+  job: "D&D brand team"
+}
+manager {
+  name: "Tommervik, Laura"
+  job: "D&D brand team"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "D&D brand team"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "D&D brand team"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "D&D bd team"
+}
+date {
+  year: 2012
+  month: 3
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5990"
+  check: 7
+}
+pages: 6
+system: NONE
+type: ACCESSORY
+style: FOLDER
+producer: "WTC"
+number: "DN4"
+series: "Dungeon Tiles"
+price {
+  currency: "$"
+  number: 1195
+  precision: 100
+}
+content {
+  part: FOLDER
+  description: "cover"
+  number: 1
+}
+content {
+  part: CARD
+  description: "durable, double-sided card stock sheets"
+  number: 6
+}
+layout: FULL_COLOR

@@ -1,0 +1,40 @@
+template {
+  name: "TSR 21429"
+  reference {
+    name: "net"
+  }
+  world: "Dragonlance"
+  description: "In the fiery siege of the ciy of \\Place{Hope\'s End} the young \\Class{mage}\n  \\NPC{Raistlin} must leave behind his ideals to save himself and his\n  brother. Yet as \\NPC{Raistlin} and \\NPC{Caramon} train as mercenaries, far\n  away another soul is forged in the heat of battle. Another path is chosen,\n  and a future \\Monster{dragon} highlord begins her rise to power.\n\n  She is \\NPC{Kitiara Uth Matar}, the twins\' half sister.\n\n  \\Product{Brothers in Arms} is the much-anticipated sequel to \\Product{The\n  Soulforge}, the 1998 best-selling \\Place{Dragonlance} novel."
+}
+title: "Brothers in Arms"
+subtitle: "The Innocence of Youth Lost in War"
+author {
+  name: "Weis, Margaret"
+}
+author {
+  name: "Perrin, Don"
+}
+date {
+  year: 1999
+  month: 8
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1429"
+  check: 7
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "TSR"
+number: "Volume Two"
+series: "The Raistlin Chronicles"
+price {
+  currency: "$ "
+  number: 699
+  precision: 100
+}

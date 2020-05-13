@@ -1,0 +1,62 @@
+template {
+  name: "TSR 3119"
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "Dragon 226"
+  }
+  reference {
+    name: "Dragon 227"
+  }
+  world: "Birthright"
+  description: "details on geography, history, and NPCs"
+}
+title: "Binsada"
+author {
+  name: "Varney, Allen"
+}
+date {
+  year: 1996
+  month: 3
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0375"
+  check: 9
+}
+isbn13 {
+}
+pages: 32
+system: ADND_REVISED
+audience: PLAYER
+type: ACCESSORY
+style: BOOKLET
+price {
+  currency: "$ "
+  number: 795
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "looseleaf handouts"
+  number: 6
+}
+content {
+  part: CARD
+  description: "war"
+  number: 110
+}
+content {
+  part: POSTER
+  description: "map"
+  number: 1073741824
+}

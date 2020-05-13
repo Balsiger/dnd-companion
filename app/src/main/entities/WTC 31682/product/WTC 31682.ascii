@@ -1,0 +1,47 @@
+template {
+  name: "WTC 31682"
+  synonym: ""
+  world: "Forgotten Realms"
+  description: "The madness of the Rage\n                    changed the face of the world.\n                    \\Monster{Dragons} lost their thrones, treasures and knowledge of the Great Game.\n                    But now the Rage is over.\n                    \\bold{We are the rightful lords of all \\Place{Faer\\hat{u}n}."
+  short_description: "Closing of the Brotherhood of the Griffon Trilogy."
+}
+title: "Spectral Blade"
+leader: "The"
+subtitle: "And Then We Remembered..."
+author {
+  name: "Byers, Richard Lee"
+}
+cover {
+  name: "Kotaki, Kekai"
+}
+date {
+  year: 2011
+  month: 6
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "5798"
+  check: 9
+}
+pages: 369
+system: NONE
+audience: PLAYER
+type: NOVEL
+style: PAPERBACK
+producer: "WTC"
+number: "Book III"
+series: "Brotherhood of the Griffon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}
+layout: COLOR_COVER

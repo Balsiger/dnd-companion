@@ -1,0 +1,148 @@
+template {
+  name: "Dungeon 95"
+  world: "Generic"
+  description: "This is issue 95 of the dungeon magazine, together with the\n   \\Product{Polyhedron 154} issue."
+}
+title: "Dungeon 95"
+author {
+  name: "Brown, Russell"
+}
+author {
+  name: "Jacobs, James"
+}
+author {
+  name: "MacPhee, Chad"
+}
+author {
+  name: "Mearls, Mike"
+}
+author {
+  name: "Oppedisano, Greg"
+}
+author {
+  name: "Shell, J. Bradley"
+}
+author {
+  name: "Sernett, Matthew"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Mona, Erik"
+  job: "contributing editor"
+}
+editor {
+  name: "Fiorito, Stacie A."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+cover {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Achberger, Rick"
+}
+illustrator {
+  name: "Ballard, Lee"
+}
+illustrator {
+  name: "Beet"
+}
+illustrator {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "Lucaks, Chuck"
+}
+illustrator {
+  name: "Rams, Vinod"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Whitley, Peter"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Henry, Ben"
+}
+illustrator {
+  name: "Hunter, Kyle S."
+  job: "art director"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "advertising sales director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffice manager"
+}
+date {
+  year: 2002
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 99
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XVI 5"
+number: "95"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: SHEET
+  description: "Monster Tokens #8"
+  number: 1073741824
+}
+layout: FULL_COLOR

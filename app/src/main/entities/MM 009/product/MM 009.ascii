@@ -1,0 +1,63 @@
+template {
+  name: "MM 009"
+  description: "The deluxe room pieces."
+}
+title: "Deluxe Room Set"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+audience: ALL
+type: MINIATURE
+style: BOX
+producer: "Dwarven Forge"
+price {
+}
+content {
+  part: MINIATURE
+  description: "Wall Piece with Torch Holder"
+  number: 6
+}
+content {
+  part: MINIATURE
+  description: "\'Unlit\' Torches"
+  number: 6
+}
+content {
+  part: MINIATURE
+  description: "\'Lit and Smoking\' Torches"
+  number: 6
+}
+content {
+  part: MINIATURE
+  description: "Corner Wall"
+  number: 6
+}
+content {
+  part: MINIATURE
+  description: "Straight Wall"
+  number: 5
+}
+content {
+  part: MINIATURE
+  description: "Floor"
+  number: 11
+}
+content {
+  part: MINIATURE
+  description: "Swinging Door"
+  number: 2
+}
+content {
+  part: MINIATURE
+  description: "Swiveling \'Secret\' Door Wall"
+  number: 1073741824
+}
+content {
+  part: MINIATURE
+  description: "Bow Tie Connector"
+  number: 50
+}

@@ -1,0 +1,85 @@
+template {
+  name: "TSR 2131"
+  synonym: "PHBR8"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalogue96"
+  }
+  reference {
+    name: "catalog92"
+  }
+  reference {
+    name: "catalog95"
+  }
+  reference {
+    name: "catalog96"
+  }
+  reference {
+    name: "catalog93"
+  }
+  world: "Generic"
+  description: "The glorious world of \\Monster{elvenkind} shines from these pages! Detailed\n                    herin are their societies, rituals, and myths---and their physiology and\n                    psychology. Descriptions of every kind of elf abound. Rounding out this\n                    information are 11 new kits; new optional rules and suggestions for running\n                    \\Monster{elven} cmapaigns; and special \\Monster{elven} equipment, spells, and\n                    magical items. Forget what you thought you knew about\n                    \\Monster{elves}---\\Product{The Complete Book of \\Monster{Elves}} sheds new\n                    light on this mysterious race!"
+}
+title: "Complete Book of Elves"
+leader: "The"
+author {
+  name: "McComb, Colin"
+}
+editor {
+  name: "Watry, Dori Jean"
+}
+illustrator {
+  name: "Brom"
+}
+illustrator {
+  name: "Elmore, Larry"
+}
+illustrator {
+  name: "Lakey, John"
+}
+illustrator {
+  name: "Lakey, Laura"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Raab, Robin"
+}
+typographer {
+  name: "O\'Keefe, Geye"
+}
+manager {
+  name: "Winter, Steve"
+  job: "overseen and advice"
+}
+date {
+  year: 1993
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 128
+system: ADND_2ND
+audience: PLAYER
+type: RULES_SUPPLEMENT
+style: SOFT_COVER
+producer: "TSR"
+number: "8"
+series: "Player\'s Handbook"
+price {
+  currency: "$"
+  number: 1800
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

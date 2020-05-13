@@ -1,0 +1,71 @@
+template {
+  name: "Polyhedron Europe 8"
+  world: "Generic"
+  description: "Issue 8 of the RPGA magazine for Europe, Asia Pacific and Africa."
+}
+title: "Polyhedron"
+author {
+  name: "Mark Peoples"
+}
+author {
+  name: "van Dam, Ann"
+}
+author {
+  name: "Steve \'Taz\' Cansdale"
+}
+author {
+  name: "Jonathon Scott"
+}
+author {
+  name: "Preece, Anthony"
+}
+author {
+  name: "Ian \'Twin\' Richards"
+}
+author {
+  name: "Wes Nicholson"
+}
+author {
+  name: "Baylis, Chris"
+}
+editor {
+  name: "Ian \'Twin\' Richards"
+}
+editor {
+  name: "Iain Lowson"
+}
+editor {
+  name: "Steve \'Taz\' Cansdale"
+}
+cover {
+  name: "Havas Interactive"
+}
+manager {
+  name: "Ian \'Twin\' Richards"
+}
+manager {
+  name: "Ian Revill"
+}
+manager {
+  name: "Louise Richards"
+}
+date {
+  year: 2000
+}
+isbn {
+}
+isbn13 {
+}
+pages: 68
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+number: "Europe 8"
+series: "Polyhedron"
+price {
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

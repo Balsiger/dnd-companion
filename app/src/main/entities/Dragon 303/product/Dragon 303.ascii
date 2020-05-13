@@ -1,0 +1,173 @@
+template {
+  name: "Dragon 303"
+  world: "Generic"
+  description: "Issue 303 of the magazine. Gladiators issue."
+}
+title: "Dragon 303"
+author {
+  name: "Cagle, Eric"
+}
+author {
+  name: "Collins, Andy"
+}
+author {
+  name: "Four, Johnny"
+}
+author {
+  name: "Gygax, Gary"
+}
+author {
+  name: "Hitchcock, Tim"
+}
+author {
+  name: "Horowitz, Clifford"
+}
+author {
+  name: "Liquette, Kolja"
+}
+author {
+  name: "Mearls, Michael"
+}
+author {
+  name: "Poisso, Dean"
+}
+author {
+  name: "Laws, Robin"
+}
+author {
+  name: "Veltrum, Glen"
+}
+author {
+  name: "Williams, Skip"
+}
+author {
+  name: "Wilson, Johnny"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Monka, Erik"
+  job: "living greyhawk editor"
+}
+editor {
+  name: "Sernett, Matthew"
+  job: "associate editor"
+}
+editor {
+  name: "Magelssen, Stacie"
+  job: "associate editor"
+}
+editor {
+  name: "Williams, Penny"
+  job: "editorial assistant"
+}
+cover {
+  name: "Lockwood, Todd"
+}
+illustrator {
+  name: "Day, David"
+}
+illustrator {
+  name: "Foglio, Phil"
+}
+illustrator {
+  name: "Grenier, Todd"
+}
+illustrator {
+  name: "Harris, Todd"
+}
+illustrator {
+  name: "Kovalic, John"
+}
+illustrator {
+  name: "Laubenstein, Jeff"
+}
+illustrator {
+  name: "Moseley, Tony"
+}
+illustrator {
+  name: "Reynolds, Wayne"
+}
+illustrator {
+  name: "Sass, Mike"
+}
+illustrator {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Thompson, Derek"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Chido, Lisa"
+  job: "art director"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny L."
+  job: "group publishing"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Beals, Matt"
+  job: "prepress manager"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffic coordinator"
+}
+date {
+  year: 2003
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 106
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XXVII 8"
+number: "303"
+series: "Dragon"
+price {
+  currency: "$ "
+  number: 599
+  precision: 100
+}
+content {
+  part: BOOKLET
+  description: "magazine"
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "battle map"
+  number: 1073741824
+}

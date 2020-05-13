@@ -1,0 +1,33 @@
+template {
+  name: "TSR 3574"
+  synonym: "25CR6"
+  reference {
+    name: "catalogue93"
+  }
+  reference {
+    name: "catalogue94"
+  }
+  reference {
+    name: "catalog93"
+  }
+  description: "a compendium of mutant creatures"
+}
+title: "No Humans Allowed"
+date {
+  year: 1993
+}
+isbn {
+  group: "1"
+  publisher: "56076"
+  title: "387"
+  check: 6
+}
+isbn13 {
+}
+system: XXVC
+type: ACCESSORY
+price {
+  currency: "$"
+  number: 1500
+  precision: 100
+}

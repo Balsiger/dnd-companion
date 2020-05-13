@@ -1,0 +1,140 @@
+template {
+  name: "Dungeon 96"
+  world: "Generic"
+  description: "This is issue 96 of the dungeon magazine, together with the\n   \\Product{Polyhedron 155} issue."
+}
+title: "Dungeon 96"
+author {
+  name: "Brunner, Frank"
+}
+author {
+  name: "Chandler, Caine"
+}
+author {
+  name: "Harris, Robert"
+}
+author {
+  name: "Pett, Richard L.J."
+}
+author {
+  name: "Wilson, Johnny L."
+}
+author {
+  name: "Woon, Hank"
+}
+editor {
+  name: "Thomasson, Chris"
+}
+editor {
+  name: "Mona, Erik"
+  job: "contributing editor"
+}
+editor {
+  name: "Fiorito, Stacie A."
+  job: "contributing editor"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "contributing editor"
+}
+cover {
+  name: "Sasso, Marc"
+}
+illustrator {
+  name: "Andrasofszky, Kalman"
+}
+illustrator {
+  name: "Henry, Ben"
+}
+illustrator {
+  name: "Hunter, Kyle"
+}
+illustrator {
+  name: "MacDougall, Larry"
+}
+illustrator {
+  name: "Mayerick, Val"
+}
+illustrator {
+  name: "Rex, Adam"
+}
+illustrator {
+  name: "Swekel, Arnie"
+}
+illustrator {
+  name: "Thompson, Derek"
+}
+illustrator {
+  name: "Wayshak, Jonathan"
+}
+illustrator {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Williams, Aaron"
+}
+illustrator {
+  name: "Zipse, Craig"
+}
+illustrator {
+  name: "Hunter, Kyle S."
+  job: "art director"
+}
+illustrator {
+  name: "Perkins, Christopher"
+  job: "designer"
+}
+illustrator {
+  name: "Cummins, Theresa"
+  job: "designer"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "group publisher"
+}
+manager {
+  name: "Dunn, John"
+  job: "production director"
+}
+manager {
+  name: "Cummins, Theresa"
+  job: "production designer"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "circulation director"
+}
+manager {
+  name: "Wilson, Johnny"
+  job: "advertising sales director"
+}
+manager {
+  name: "Miesner, Dawnelle"
+  job: "ad traffice manager"
+}
+date {
+  year: 2003
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+pages: 89
+system: DND_3RD
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "XVI 6"
+number: "96"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

@@ -1,0 +1,34 @@
+template {
+  name: "TSR 3150"
+  reference {
+    name: "net"
+  }
+  world: "Birthright"
+  description: "the young queen of Aduria begins a new dynasty"
+}
+title: "Aquitania"
+author {
+  name: "Lynn Abbey"
+}
+date {
+  year: 1997
+  month: 11
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "0768"
+  check: 1
+}
+isbn13 {
+}
+pages: 336
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 1999
+  precision: 100
+}

@@ -1,0 +1,55 @@
+template {
+  name: "PZO 4007"
+  world: "Generic"
+  description: "Why go to the trouble of using miniatures only to push them around an empty table? Paizo\'s \\Product{GameMastery Map Packs} contain full-color gridded maps for use with RPGs and miniatures games. The map cards in this set depict a variety of locales perfect for getting a good night\'s sleep---or for ambushing unsuspecting player characters! Each pack includes:\n\n\\list{Abandoned Barn}{Mountain Cave}{Mushroom Glade}{Desert Oasis}{Pavilion Tent}{Ruined Outpost}{Snow Fort}{Swamp Island}{Wooded Glen}\n\n\\Product{GameMastery Map Packs} provide everything you need to stay a step ahead of your players. Use this product to build campsite encounters that perfectly fit your campaign. Additional map packs explore other locales of interest to fantasy gamers.\n\nThis \\Product{Map Pack} contains 18 full-color 8\'\'x5\'\' map cards suitable for use with the \\Product{GameMastery Compleat Encounters} or any standard gaming miniatures. "
+}
+title: "Map Pack: Campsites"
+subtitle: "Who\'s Got First Watch"
+author {
+}
+editor {
+}
+cover {
+}
+cartographer {
+  name: "Macourek, Corey"
+}
+illustrator {
+}
+typographer {
+}
+manager {
+}
+date {
+  year: 2007
+  month: 1
+}
+isbn {
+  group: "1"
+  publisher: "60125"
+  title: "024"
+  check: 10
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "024"
+  check: 7
+}
+system: NONE
+type: ACCESSORY
+style: CARDS_STYLE
+producer: "Paizo"
+series: "GameMastery Map Pack"
+price {
+  currency: "$"
+  number: 1295
+  precision: 100
+}
+content {
+  part: CARD
+  description: "Map"
+  number: 18
+}
+layout: FULL_COLOR

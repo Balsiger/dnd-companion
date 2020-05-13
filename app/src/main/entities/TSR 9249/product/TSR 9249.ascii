@@ -1,0 +1,76 @@
+template {
+  name: "TSR 9249"
+  synonym: "FRE3"
+  reference {
+    name: "catalogue93"
+  }
+  world: "Forgotten Realms"
+  description: "\\large{Who will be the new gods?}\n                    The \\God[Bhaal]{God of Strife} is dead, destroyed in his attack on\n                    \\Place{Tantras}, and \\NPC{Midnight} and the player characters have recovered\n                    the first \\Item[Tablets of Fate]{Tablet of Fate}---one of a pair of\n                    mysterious artifacts that will return the gods to their former glory and save\n                    the \\Place[Forgotten Realms]{Realms} from the fallen deities\' wrath.\n                    But the quest isn\'t over! To find the other \\Item[Tablets of Fate]{Tablet of\n                    Fate}, your heroes must travel across \\Place{Faer\\hat{u}n} to\n                    \\Place{Waterdeep}, the \\Place[Waterdeep]{City of Splendors}. But both\n                    \\NPC{Midnight}\'s former ally, \\NPC{Cyric}, and \\God{Myrkul}, the\n                    \\God[Myrkul]{Lord of the Dead}, want the tables for their own dark ends, and\n                    they will stop at nothing to capture \\NPC{Midnight}---even if it means the\n                    destruction of the \\Place[Forgotten Realms]{Realms}!\n                    \\Product[TSR 9249]{Waterdeep} is the third of a three-part series of\n                    adventures for the Advanced Dungeons & Dragons 2nd Edition role-playing game,\n                    but it can also stand alone. Set in the popular \\Place{Forgotten Realms} game\n                    world, this adventure is loosely based on Richard Awlinson\'s \\Product[TSR\n                    8474]{Waterdeep}, the third novel in the \\Product{Avatar Trilogy}. This\n                    adventure is designed for four to six player characters of levels 6 to 9."
+}
+title: "Waterdeep"
+author {
+  name: "Greenwood, Ed"
+}
+editor {
+  name: "Varney, Allen"
+}
+editor {
+  name: "Mohan, Kim"
+}
+cover {
+  name: "Caldwell, Clyde"
+}
+cartographer {
+  name: "LaForce, Dave \'Diesel\'"
+}
+illustrator {
+  name: "Nunis, Allen"
+}
+typographer {
+  name: "Lokotz, Angelika"
+}
+manager {
+  name: "Lowder, Jim"
+  job: "avatar trilogy coordination"
+}
+manager {
+  name: "Tabat, Stephanie"
+  job: "keylining"
+}
+date {
+  year: 1989
+}
+isbn {
+  group: "0"
+  publisher: "88038"
+  title: "757"
+  check: 2
+}
+isbn13 {
+}
+pages: 48
+system: ADND_2ND
+type: ADVENTURE
+style: BOOKLET
+producer: "TSR"
+number: "Module Three"
+series: "Avatar Trilogy"
+price {
+  currency: "$ "
+  number: 695
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+content {
+  part: POSTER
+  description: "full-color map"
+  number: 1073741824
+}
+content {
+  part: GATEFOLD
+  description: "cover"
+  number: 1073741824
+}

@@ -1,0 +1,114 @@
+template {
+  name: "Dungeon 107"
+  world: "Generic"
+  description: "This is issue 107 of the dungeon magazine, together with the\n   \\Product{Polyhedron 166} issue."
+}
+title: "Dungeon 107"
+author {
+  name: "Brown, Russell"
+}
+author {
+  name: "Noonan, David"
+}
+author {
+  name: "Wilber, James"
+}
+editor {
+  name: "Mona, Erik"
+  job: "editor-in-chief"
+}
+editor {
+  name: "Jacobs, James"
+  job: "associate editor"
+}
+cover {
+  name: "Nelson, Mark"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "West, Christopher"
+}
+illustrator {
+  name: "Hou, Andrew"
+}
+illustrator {
+  name: "Tsang, Arnold"
+}
+illustrator {
+  name: "UDON Studios"
+}
+illustrator {
+  name: "Hunter, Kyle Stanley"
+}
+illustrator {
+  name: "Glenn, Sean"
+  job: "art director"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "publisher"
+}
+manager {
+  name: "Beals, Matt"
+  job: "production director"
+}
+manager {
+  name: "O\'Brien, Kelly"
+  job: "prepress manager"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "circulation manager"
+}
+manager {
+  name: "Stewart, Rob"
+  job: "advertising sales director"
+}
+manager {
+  name: "Stevens, Lisa"
+  job: "chief executive officer"
+}
+manager {
+  name: "Strohm, Keith"
+  job: "vice president"
+}
+manager {
+  name: "Franklin, Mary"
+  job: "director of marketing"
+}
+manager {
+  name: "Wertz, Vic"
+  job: "technical director"
+}
+manager {
+  name: "Head, Robert"
+  job: "webmaster"
+}
+date {
+  year: 2004
+  month: 2
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: DND_3_5
+audience: ALL
+type: MAGAZINE
+style: SOFT_COVER
+volume: "18 2"
+number: "107"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 699
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}
+layout: FULL_COLOR

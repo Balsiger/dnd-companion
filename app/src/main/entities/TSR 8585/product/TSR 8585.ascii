@@ -1,0 +1,41 @@
+template {
+  name: "TSR 8585"
+  reference {
+    name: "net"
+  }
+  reference {
+    name: "catalog98"
+  }
+  world: "Forgotten Realms"
+}
+title: "Silent Blade"
+leader: "The"
+author {
+  name: "Salvatore, R. A."
+}
+date {
+  year: 1998
+  month: 10
+}
+isbn {
+  group: "0"
+  publisher: "7869"
+  title: "1180"
+  check: 8
+}
+isbn13 {
+}
+pages: 320
+system: NONE
+audience: ALL
+type: NOVEL
+style: HARDCOVER
+price {
+  currency: "$"
+  number: 2395
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1073741824
+}

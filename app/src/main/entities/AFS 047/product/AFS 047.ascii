@@ -1,0 +1,28 @@
+template {
+  name: "AFS 047"
+  synonym: ""
+  description: "Two stands for flying figures."
+  short_description: "Two stands for flying figures."
+}
+title: "Figure Flight Stand, 1 inch circle bases"
+subtitle: "Figure Flight Stand"
+date {
+  year: 2010
+  month: 1
+}
+isbn {
+}
+isbn13 {
+}
+system: NONE
+type: MINIATURE
+style: PACK
+producer: "Litko"
+price {
+}
+content {
+  part: MINIATURE
+  description: "flight stand"
+  number: 2
+}
+layout: BLACK_AND_WHITE

@@ -1,0 +1,108 @@
+template {
+  name: "Dungeon 65"
+  world: "Generic"
+  description: "This is issue 65 of the dungeon magazine."
+}
+title: "Dungeon 65"
+author {
+  name: "Crook, Jeff"
+}
+author {
+  name: "Baichtal, John W."
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Doyle, Lisa"
+}
+author {
+  name: "Kuhl, Jason"
+}
+author {
+  name: "Beattie, Paul Hamilton"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Gross, Dave"
+  job: "associate editor"
+}
+editor {
+  name: "Decker, Jesse"
+  job: "editorial assistant"
+}
+cover {
+  name: "Guay, Rebecca"
+}
+cartographer {
+  name: "Lazzaretti, Rob"
+}
+cartographer {
+  name: "Perkins, Chris"
+}
+illustrator {
+  name: "Daniele, Stephen A."
+}
+illustrator {
+  name: "Guay, Rebecca"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Dykstra, Terry"
+}
+illustrator {
+  name: "Vrbanic, George"
+}
+illustrator {
+  name: "Smith, Larry W."
+  job: "art director"
+}
+manager {
+  name: "Watters, Pierce"
+  job: "publisher"
+}
+manager {
+  name: "Mangelson, Roger"
+  job: "production manager"
+}
+manager {
+  name: "Smitha, Judy"
+  job: "advertising traffic manager"
+}
+manager {
+  name: "Henning, Bob"
+  job: "advertising sales manager"
+}
+manager {
+  name: "Whiting, Sharon"
+  job: "subscriptions"
+}
+date {
+  year: 1997
+  month: 11
+}
+isbn {
+}
+isbn13 {
+}
+pages: 76
+system: ADND_REVISED
+audience: ALL
+type: MAGAZINE
+style: BOOKLET
+volume: "XI 5"
+number: "65"
+series: "Dungeon"
+price {
+  currency: "$"
+  number: 495
+  precision: 100
+}
+content {
+  part: BOOKLET
+  number: 1073741824
+}

@@ -1,0 +1,72 @@
+template {
+  name: "pzo 3024"
+  category: "face cards"
+  category: "cards"
+  world: "Generic"
+  description: "Give life to your NPCs with the Rise of the Runelords Face Cards! More than 50 key characters fill this gorgeously illustrated deck designed for use with the smash-hit Rise of the Runelords Adventure Path, but suitable for use in any fantasy roleplaying game! Each card includes the character\342\200\231s name, role in the Rise of the Runelords Adventure Path, space to record key details, and artwork by Paizo\342\200\231s finest illustrators. These Face Cards bring the cast of the original Adventure Path to your tabletop and let your players look into the face of the enemy!"
+  short_description: "54 full-color face cards."
+}
+title: "Rise of the Runelords Face Cards"
+subtitle: "54 Full-Color Face Cards for any fantasy roleplaying game"
+author {
+  name: "Jacobs, James"
+  job: "card text"
+}
+author {
+  name: "Mona, Erik"
+  job: "card text"
+}
+author {
+  name: "Schneider, F. Wesley"
+  job: "card text"
+}
+illustrator {
+  name: "Frasier, Crystal"
+  job: "graphic desinger"
+}
+illustrator {
+  name: "Robinson, Sarah"
+  job: "art director"
+}
+illustrator {
+  name: "Macourek, Corey"
+  job: "card design"
+}
+manager {
+  name: "Mona, Erik"
+  job: "publisher"
+}
+date {
+  year: 2014
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "60125"
+  title: "442"
+  check: 9
+}
+pages: 54
+system: NONE
+type: CARDS_TYPE
+style: SMALL_BOX
+producer: "Paizo"
+series: "Face Cards"
+price {
+  currency: "$1"
+  number: 99
+  precision: 100
+}
+content {
+  part: BOX
+  description: "packaging"
+  number: 1
+}
+content {
+  part: CARD
+  description: "face card"
+  number: 54
+}
+layout: FULL_COLOR

@@ -1,0 +1,17 @@
+template {
+  name: "TSR 5826"
+  reference {
+    name: "complete product listing"
+  }
+}
+title: "AD&D Basic Adhesive Set"
+date {
+}
+isbn {
+}
+isbn13 {
+}
+audience: UNKNOWN
+type: MINIATURE
+price {
+}
