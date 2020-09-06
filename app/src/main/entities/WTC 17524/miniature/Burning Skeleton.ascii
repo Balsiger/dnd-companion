@@ -8,3 +8,4 @@ race: "Burning Skeleton"
 type: "Undead"
 subtype: "Skeleton"
 size: MEDIUM
+subtype: "Humanoid"

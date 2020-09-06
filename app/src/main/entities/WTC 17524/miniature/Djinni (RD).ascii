@@ -9,3 +9,4 @@ type: "Elemental"
 subtype: "Air"
 subtype: "Genie"
 subtype: "Flying"
+size: LARGE

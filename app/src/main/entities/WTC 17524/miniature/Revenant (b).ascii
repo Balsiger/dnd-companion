@@ -8,3 +8,4 @@ race: "Revenant"
 type: "Undead"
 size: MEDIUM
 number_affix: "b"
+subtype: "Humanoid"

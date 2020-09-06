@@ -7,3 +7,4 @@ number: 51
 type: "Undead"
 size: MEDIUM
 subtype: "Humanoid"
+subtype: "Incorporeal"

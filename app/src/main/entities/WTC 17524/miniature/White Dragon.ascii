@@ -8,3 +8,5 @@ race: "White Dragon"
 type: "Dragon"
 size: LARGE
 subtype: "Chromatic"
+subtype: "Flying"
+subtype: "Tall"

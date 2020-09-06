@@ -5,5 +5,7 @@ set: "Player\'s Handbook Heroes 2"
 rarity: UNIQUE
 number: 9
 type: "Humanoid"
+subtype: "Tall"
 race: "Human"
 class: "Wizard"
+size: MEDIUM

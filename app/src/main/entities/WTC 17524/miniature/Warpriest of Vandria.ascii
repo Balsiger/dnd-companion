@@ -8,3 +8,5 @@ type: "Humanoid"
 race: "Elf"
 class: "Cleric"
 size: MEDIUM
+subtype: "Male"
+subtype: "Sword"

@@ -7,4 +7,5 @@ number: 23
 race: "Peryton"
 type: "Monstrosity"
 subtype: "Winged"
+subtype: "Tall"
 size: MEDIUM

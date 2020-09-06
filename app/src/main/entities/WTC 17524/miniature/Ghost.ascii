@@ -8,3 +8,4 @@ race: "Ghost"
 type: "Undead"
 size: MEDIUM
 subtype: "Humanoid"
+subtype: "Incorporeal"

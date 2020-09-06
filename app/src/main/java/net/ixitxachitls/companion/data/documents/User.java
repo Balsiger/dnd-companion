@@ -276,8 +276,12 @@ public class User extends Document<User> {
                 .stream()
                 .map(MiniatureLocation::read)
                 .collect(Collectors.toList())) {
-          locations.put(location.getName(), location);
-          locationOrder.add(location);
+          if (!locations.containsKey(location.getName())) {
+            locations.put(location.getName(), location);
+            locationOrder.add(location);
+          } else {
+            Status.toast("Location " + location.getName() + " already read, ignored.");
+          }
         }
 
         hiddenSets.addAll(data.getList(FIELD_MINIATURE_HIDDEN_SETS, Collections.emptyList()));

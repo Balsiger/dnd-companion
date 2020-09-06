@@ -1,0 +1,11 @@
+template {
+  name: "Tarkanan Assassin"
+}
+set: "Eberron: Rising from the Last War"
+rarity: COMMON
+number: 8
+type: "Humanoid"
+race: "Human"
+class: "Rogue"
+subtype: "Tarkanan"
+size: MEDIUM

@@ -9,3 +9,4 @@ type: "Construct"
 subtype: "Humanoid"
 subtype: "Living Construct"
 size: HUGE
+subtype: "Titan"

@@ -96,11 +96,15 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
   }
 
   public void finishLoading(String text) {
-    actions.finishLoading(text);
+    runOnUiThread(() -> {
+      actions.finishLoading(text);
+    });
   }
 
   public void incrementProgress() {
-    actions.incrementProgress();
+    runOnUiThread(() -> {
+      actions.incrementProgress();
+    });
   }
 
   public void logDialogEvent(String name) {

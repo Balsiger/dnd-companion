@@ -5,6 +5,8 @@ set: "War Drums"
 rarity: UNCOMMON
 number: 15
 type: "Humanoid"
+subtype: "Female"
+subtype: "Sword"
 race: "Human"
 class: "Fighter"
 size: MEDIUM

@@ -7,3 +7,4 @@ number: 15
 type: "Monstrosity"
 subtype: "Shapechanger"
 size: MEDIUM
+subtype: "Humanoid"

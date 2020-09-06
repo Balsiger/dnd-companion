@@ -9,3 +9,5 @@ race: "Elf"
 class: "Cleric"
 size: MEDIUM
 subtype: "Invisible"
+subtype: "Female"
+subtype: "Bow"

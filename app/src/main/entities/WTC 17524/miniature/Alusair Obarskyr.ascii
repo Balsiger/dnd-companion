@@ -5,6 +5,8 @@ set: "Aberrations"
 rarity: RARE
 number: 1
 type: "Humanoid"
+subtype: "Female"
+subtype: "Sword"
 race: "Human"
 class: "Fighter"
 size: MEDIUM

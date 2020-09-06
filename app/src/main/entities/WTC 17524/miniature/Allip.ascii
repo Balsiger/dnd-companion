@@ -7,3 +7,5 @@ number: 36
 race: "Allip"
 type: "Undead"
 size: MEDIUM
+subtype: "Humanoid"
+subtype: "Incorporeal"

@@ -1,0 +1,13 @@
+template {
+  name: "Karnathi Skeleton (Axe)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 15
+race: "Karnathi Skeleton"
+type: "Undead"
+subtype: "Skeleton"
+subtype: "Living Construct"
+subtype: "Humanoid"
+subtype: "Axe"
+size: MEDIUM

@@ -4,6 +4,6 @@ template {
 set: "Monster Menagerie"
 rarity: UNCOMMON
 number: 25
-race: "Displacer Beat"
+race: "Displacer Beast"
 type: "Monstrosity"
 size: LARGE

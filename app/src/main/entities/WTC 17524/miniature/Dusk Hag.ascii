@@ -1,0 +1,10 @@
+template {
+  name: "Dusk Hag"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 20
+race: "Dusk Hag"
+type: "Fey"
+subtype: "Hag"
+size: MEDIUM

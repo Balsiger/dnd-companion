@@ -10,3 +10,4 @@ race: "Bugbear"
 class: "Fighter"
 class: "Rogue"
 size: MEDIUM
+subtype: "Mace"

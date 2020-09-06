@@ -1,0 +1,11 @@
+template {
+  name: "Warforged (Mace)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 14
+race: "Warforged"
+type: "Construct"
+subtype: "Humanoid"
+subtype: "Living Construct"
+size: MEDIUM

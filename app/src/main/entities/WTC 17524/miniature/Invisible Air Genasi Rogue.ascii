@@ -8,4 +8,5 @@ race: "Air Genasi"
 type: "Humanoid"
 subtype: "Air"
 subtype: "Invisible"
+subtype: "Genasi"
 size: MEDIUM

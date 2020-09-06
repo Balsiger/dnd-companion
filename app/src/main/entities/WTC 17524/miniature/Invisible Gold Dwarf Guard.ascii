@@ -1,5 +1,5 @@
 template {
-  name: "Inivislble Gold Dwarf Guard"
+  name: "Invisible Gold Dwarf Guard"
 }
 set: "Elemental Evil"
 rarity: ULTRA_RARE
@@ -7,3 +7,4 @@ number: 47
 race: "Dwarf"
 type: "Humanoid"
 size: MEDIUM
+subtype: "Axe"

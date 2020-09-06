@@ -1,0 +1,14 @@
+template {
+  name: "Karnathi Skeleton"
+}
+set: "Eberron: Rising from the Last War"
+rarity: COMMON
+number: 2
+race: "Karnathi Skeleton"
+type: "Undead"
+subtype: "Skeleton"
+subtype: "Living Construct"
+subtype: "Humanoid"
+subtype: "Sword"
+size: MEDIUM
+

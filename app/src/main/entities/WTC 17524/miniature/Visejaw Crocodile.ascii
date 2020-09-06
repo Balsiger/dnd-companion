@@ -8,4 +8,5 @@ race: "Crocodile"
 type: "Beast"
 subtype: "Animal"
 subtype: "Reptile"
+subtype: "Crocodile"
 size: LARGE

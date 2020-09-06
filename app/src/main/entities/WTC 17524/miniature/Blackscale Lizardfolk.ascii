@@ -6,5 +6,5 @@ rarity: UNCOMMON
 number: 32
 type: "Humanoid"
 subtype: "Reptile"
-subtype: "Lizardfolk"
+race: "Lizardfolk"
 size: LARGE

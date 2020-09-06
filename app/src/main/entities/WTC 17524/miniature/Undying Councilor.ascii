@@ -1,0 +1,9 @@
+template {
+  name: "Undying Councilor"
+}
+set: "Eberron: Rising from the Last War"
+rarity: RARE
+number: 34
+type: "Humanoid"
+subtype: "Undead"
+size: MEDIUM

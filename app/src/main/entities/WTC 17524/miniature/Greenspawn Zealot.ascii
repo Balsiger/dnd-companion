@@ -7,4 +7,5 @@ number: 32
 race: "Greenspawn"
 type: "Monstrosity"
 subtype: "Dragonspawn"
+subtype: "Humanoid"
 size: MEDIUM

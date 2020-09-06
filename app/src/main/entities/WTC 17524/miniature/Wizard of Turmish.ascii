@@ -5,6 +5,7 @@ set: "Unhallowed"
 rarity: RARE
 number: 27
 type: "Humanoid"
+subtype: "Tall"
 race: "Human"
 class: "Wizard"
 size: MEDIUM

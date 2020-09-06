@@ -5,5 +5,5 @@ set: "Monster Menagerie"
 rarity: COMMON
 number: 1
 type: "Dragon"
-size: SMALL
+size: TINY
 subtype: "Lesser"

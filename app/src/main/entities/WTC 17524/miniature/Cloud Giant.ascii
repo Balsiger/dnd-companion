@@ -4,6 +4,6 @@ template {
 set: "Giants of Legend"
 rarity: UNCOMMON
 number: 62
-race: "Clout Giant"
+race: "Cloud Giant"
 type: "Giant"
 size: HUGE

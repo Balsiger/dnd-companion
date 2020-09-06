@@ -8,3 +8,4 @@ type: "Monstrosity"
 race: "Krasis"
 subtype: "Humanoid"
 size: LARGE
+subtype: "Tall"

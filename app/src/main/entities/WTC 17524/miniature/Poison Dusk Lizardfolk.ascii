@@ -6,6 +6,6 @@ rarity: UNCOMMON
 number: 40
 type: "Humanoid"
 subtype: "Reptile"
-subtype: "Lizardfolk"
+race: "Lizardfolk"
 class: "Ranger"
-size: MEDIUM
+size: SMALL

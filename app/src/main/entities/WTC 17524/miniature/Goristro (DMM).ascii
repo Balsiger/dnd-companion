@@ -7,5 +7,6 @@ number: 31
 race: "Goristro"
 type: "Fiend"
 subtype: "Demon"
+subtype: "Tall"
 size: HUGE
 

@@ -1,0 +1,10 @@
+template {
+  name: "Dwarf Magewright"
+}
+set: "Eberron: Rising from the Last War"
+rarity: COMMON
+number: 10
+type: "Humanoid"
+race: "Dwarf"
+class: "Wizard"
+size: MEDIUM

@@ -6,4 +6,5 @@ rarity: RARE
 number: 36
 race: "Devourer"
 type: "Fiend"
+subtype: "Tall"
 size: LARGE

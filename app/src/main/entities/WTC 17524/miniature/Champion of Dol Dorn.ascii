@@ -8,3 +8,4 @@ race: "Dwarf"
 type: "Humanoid"
 class: "Cleric"
 size: MEDIUM
+subtype: "Sword"

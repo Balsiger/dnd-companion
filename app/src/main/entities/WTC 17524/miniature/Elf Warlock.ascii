@@ -6,3 +6,5 @@ rarity: UNIQUE
 type: "Humanoid"
 race: "Elf"
 size: MEDIUM
+subtype: "Female"
+subtype: "Sword"

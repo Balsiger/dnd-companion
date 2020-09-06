@@ -7,3 +7,4 @@ number: 20
 type: "Humanoid"
 race: "Gnoll"
 size: MEDIUM
+subtype: "Unarmed"

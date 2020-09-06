@@ -7,3 +7,4 @@ number: 7
 race: "Dwarf"
 type: "Humanoid"
 size: MEDIUM
+subtype: "Sword"

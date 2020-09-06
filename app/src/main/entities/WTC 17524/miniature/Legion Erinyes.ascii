@@ -7,4 +7,5 @@ number: 23
 race: "Erinyes"
 type: "Fiend"
 subtype: "Devil"
+subtype: "Tall"
 size: MEDIUM

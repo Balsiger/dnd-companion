@@ -6,5 +6,5 @@ rarity: ULTRA_RARE
 number: 6
 race: "Human"
 type: "Humanoid"
-size: MEDIUM
+size: SMALL
 subtype: "Invisible"

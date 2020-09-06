@@ -9,3 +9,4 @@ type: "Humanoid"
 subtype: "Dragon"
 size: MEDIUM
 subtype: "Invisible"
+subtype: "Metallic"

@@ -8,3 +8,4 @@ race: "Gulgar"
 type: "Monstrosity"
 subtype: "Earth"
 size: LARGE
+subtype: "Humanoid"

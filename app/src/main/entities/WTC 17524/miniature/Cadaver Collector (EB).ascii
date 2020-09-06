@@ -1,0 +1,9 @@
+template {
+  name: "Cadaver Collector (EB)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: RARE
+number: 41
+race: "Cadaver Collector"
+type: "Construct"
+size: LARGE

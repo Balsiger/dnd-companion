@@ -5,6 +5,7 @@ set: "Underdark"
 rarity: COMMON
 number: 5
 type: "Humanoid"
+subtype: "Shield"
 race: "Dwarf"
 class: "Fighter"
 size: MEDIUM

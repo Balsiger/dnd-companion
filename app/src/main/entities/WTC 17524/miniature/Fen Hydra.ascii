@@ -6,5 +6,6 @@ rarity: RARE
 number: 55
 race: "Hydra"
 type: "Monstrosity"
+subtype: "Tall"
 subtype: "Reptile"
 size: LARGE

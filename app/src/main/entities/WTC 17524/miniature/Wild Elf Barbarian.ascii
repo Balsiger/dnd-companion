@@ -8,3 +8,5 @@ type: "Humanoid"
 race: "Elf"
 class: "Barbarian"
 size: MEDIUM
+subtype: "Male"
+subtype: "Bow"

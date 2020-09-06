@@ -1,0 +1,11 @@
+template {
+  name: "Shifter Rogue"
+}
+set: "Eberron: Rising from the Last War"
+rarity: COMMON
+number: 3
+race: "Shifter"
+type: "Humanoid"
+subtype: "Shapechanger"
+class: "Rogue"
+size: MEDIUM

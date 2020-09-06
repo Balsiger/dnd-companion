@@ -8,3 +8,4 @@ type: "Humanoid"
 race: "Dwarf"
 subtype: "Invisible"
 size: MEDIUM
+subtype: "Sword"

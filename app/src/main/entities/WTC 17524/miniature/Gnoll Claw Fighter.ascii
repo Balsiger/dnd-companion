@@ -8,3 +8,4 @@ type: "Humanoid"
 race: "Gnoll"
 class: "Barbarian"
 size: MEDIUM
+subtype: "Unarmed"

@@ -8,3 +8,5 @@ type: "Humanoid"
 race: "Elf"
 class: "Druid"
 size: MEDIUM
+subtype: "Male"
+subtype: "Polearm"

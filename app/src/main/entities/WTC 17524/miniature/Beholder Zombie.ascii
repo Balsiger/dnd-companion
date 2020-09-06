@@ -6,4 +6,5 @@ rarity: UNCOMMON
 number: 29
 race: "Zombie"
 type: "Undead"
+subtype: "Beholder"
 size: LARGE

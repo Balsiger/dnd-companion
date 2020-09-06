@@ -8,3 +8,4 @@ type: "Humanoid"
 race: "Human"
 class: "Rogue"
 size: LARGE
+subtype: "Mounted"

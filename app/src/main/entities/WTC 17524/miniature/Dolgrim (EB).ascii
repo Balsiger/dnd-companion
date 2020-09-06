@@ -1,0 +1,10 @@
+template {
+  name: "Dolgrim (EB)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: COMMON
+number: 13
+race: "Dolgrim"
+type: "Aberration"
+class: "Fighter"
+size: MEDIUM

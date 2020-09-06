@@ -7,3 +7,5 @@ number: 40
 race: "Skeleton"
 type: "Undead"
 size: MEDIUM
+subtype: "Humanoid"
+subtype: "Axe"

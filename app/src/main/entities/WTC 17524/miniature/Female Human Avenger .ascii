@@ -7,3 +7,5 @@ number: 4
 type: "Humanoid"
 race: "Human"
 class: "Fighter"
+subtype: "Female"
+subtype: "Sword"

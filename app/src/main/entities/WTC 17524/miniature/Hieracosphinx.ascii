@@ -7,3 +7,4 @@ number: 31
 race: "Hieracosphinx"
 type: "Monstrosity"
 size: LARGE
+subtype: "Sphinx"

@@ -9,3 +9,4 @@ race: "Human"
 size: MEDIUM
 subtype: "Invisible"
 class: "Fighter"
+subtype: "Female"

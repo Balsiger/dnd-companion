@@ -1,0 +1,9 @@
+template {
+  name: "Kalaraq Quori"
+}
+set: "Eberron: Rising from the Last War"
+rarity: RARE
+number: 36
+race: "Quori"
+type: "Aberration"
+size: MEDIUM

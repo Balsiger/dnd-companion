@@ -31,9 +31,12 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.annotation.concurrent.Immutable;
+
 /**
  * A location miniatures can be stored in.
  */
+@Immutable
 public class MiniatureLocation extends NestedDocument
     implements Comparable<MiniatureLocation> {
 
@@ -42,8 +45,8 @@ public class MiniatureLocation extends NestedDocument
   private static final String FIELD_COLOR = "color";
 
   private final List<MiniatureFilter> filters;
-  private String name;
-  private int color;
+  private final String name;
+  private final int color;
 
   public MiniatureLocation() {
     this("", new ArrayList<>(), 0);
@@ -59,20 +62,12 @@ public class MiniatureLocation extends NestedDocument
     return color;
   }
 
-  public void setColor(int color) {
-    this.color = color;
-  }
-
   public List<MiniatureFilter> getFilters() {
     return Collections.unmodifiableList(filters);
   }
 
   public String getName() {
     return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
   }
 
   public void add(MiniatureFilter filter) {
@@ -96,6 +91,14 @@ public class MiniatureLocation extends NestedDocument
 
   public void remove(MiniatureFilter filter) {
     filters.remove(filter);
+  }
+
+  public MiniatureLocation withColor(int color) {
+    return new MiniatureLocation(name, filters, color);
+  }
+
+  public MiniatureLocation withName(String name) {
+    return new MiniatureLocation(name, filters, color);
   }
 
   @Override

@@ -6,5 +6,6 @@ rarity: RARE
 number: 8
 race: "Guardian Naga"
 type: "Monstrosity"
+subtype: "Tall"
 subtype: "Reptile"
 size: LARGE

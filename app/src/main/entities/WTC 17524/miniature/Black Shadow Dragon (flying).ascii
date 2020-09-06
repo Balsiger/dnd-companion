@@ -8,3 +8,4 @@ race: "Black Shadow Dragon"
 type: "Dragon"
 size: LARGE
 subtype: "Planar"
+subtype: "Flying"

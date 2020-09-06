@@ -8,4 +8,5 @@ race: "Phoenix"
 type: "Monstrosity"
 subtype: "Winged"
 subtype: "Fire"
+subtype: "Tall"
 size: MEDIUM

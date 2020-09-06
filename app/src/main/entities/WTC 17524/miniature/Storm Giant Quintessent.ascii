@@ -8,4 +8,5 @@ race: "Storm Giant"
 type: "Giant"
 subtype: "Cold"
 subtype: "Storm"
+subtype: "Tall"
 size: HUGE

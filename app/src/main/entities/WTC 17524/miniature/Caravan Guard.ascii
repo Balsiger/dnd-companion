@@ -6,6 +6,8 @@ rarity: COMMON
 number: 1
 type: "Humanoid"
 race: "Human"
+subtype: "Male"
 class: "Fighter"
 size: MEDIUM
 subtype: "Shield"
+subtype: "Polearm"

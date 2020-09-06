@@ -1,0 +1,10 @@
+template {
+  name: "Leonin Swiftclaw"
+}
+set: "Mythic Odysseys of Theros"
+rarity: COMMON
+number: 10
+race: "Leonin"
+type: "Humanoid"
+size: MEDIUM
+subtype: "Axe"

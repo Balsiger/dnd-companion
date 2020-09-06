@@ -8,4 +8,5 @@ race: "Werewolf"
 type: "Humanoid"
 subtype: "Shapechanger"
 subtype: "Lycanthrope"
+subtype: "Tall"
 size: MEDIUM

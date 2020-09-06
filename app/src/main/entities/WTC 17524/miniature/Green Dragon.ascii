@@ -6,5 +6,7 @@ rarity: RARE
 number: 40
 race: "Green Dragon"
 type: "Dragon"
+subtype: "Flying"
 size: LARGE
 subtype: "Chromatic"
+subtype: "Tall"

@@ -6,4 +6,5 @@ rarity: RARE
 number: 45
 race: "Hook Horror"
 type: "Monstrosity"
-subtype: ""
+subtype: "Tall"
+subtype: "Humanoid"

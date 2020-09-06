@@ -8,3 +8,4 @@ race: "Gynosphinx"
 type: "Monstrosity"
 subtype: "Winged"
 size: LARGE
+subtype: "Sphinx"

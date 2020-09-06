@@ -7,3 +7,6 @@ number: 16
 race: "Skeleton"
 type: "Undead"
 size: MEDIUM
+subtype: "Humanoid"
+subtype: "Sword"
+subtype: "Shield"

@@ -8,3 +8,5 @@ type: "Humanoid"
 class: "Fighter"
 race: "Human"
 size: MEDIUM
+subtype: "Male"
+subtype: "Axe"

@@ -5,6 +5,7 @@ set: "Guildmaster\'s Guide to Ravnica"
 rarity: UNCOMMON
 number: 24
 type: "Humanoid"
+subtype: "Tall"
 race: "Centaur"
 class: "Druid"
 size: MEDIUM

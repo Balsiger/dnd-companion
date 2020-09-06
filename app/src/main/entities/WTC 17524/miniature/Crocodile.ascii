@@ -7,4 +7,5 @@ number: 30
 race: "Crocodile"
 type: "Beast"
 subtype: "Animal"
+subtype: "Crocodile"
 size: LARGE

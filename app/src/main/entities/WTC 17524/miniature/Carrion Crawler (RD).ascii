@@ -6,3 +6,4 @@ rarity: UNCOMMON
 number: 27
 race: "Carrion Crawler"
 type: "Monstrosity"
+size: LARGE

@@ -8,3 +8,4 @@ type: "Humanoid"
 race: "Dwarf"
 class: "Fighter"
 size: MEDIUM
+subtype: "Crossbow"

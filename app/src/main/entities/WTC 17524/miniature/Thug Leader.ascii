@@ -6,6 +6,7 @@ rarity: UNCOMMON
 number: 15
 race: "Human"
 type: "Humanoid"
+subtype: "Crossbow"
 size: MEDIUM
 class: "Fighter"
-
+subtype: "Male"

@@ -215,15 +215,15 @@ public class AdventureView extends LinearLayout {
     categoryTabs = view.findViewById(R.id.category_tabs);
     categoryTabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
       @Override
+      public void onTabReselected(TabLayout.Tab tab) {}
+
+      @Override
       public void onTabSelected(TabLayout.Tab tab) {
         selectedCategory(tab.getPosition());
       }
 
       @Override
       public void onTabUnselected(TabLayout.Tab tab) {}
-
-      @Override
-      public void onTabReselected(TabLayout.Tab tab) {}
     });
 
     itemsPager = view.findViewById(R.id.items_pager);
@@ -520,17 +520,19 @@ public class AdventureView extends LinearLayout {
         encounter = Optional.of(CompanionApplication.get().encounters()
             .getOrInitialize(campaign.get().getEncounterId()));
 
-        List<ViewViewPager.StaticViewPagerAdapter.Entry> itemGroups = new ArrayList<>();
-        for (Encounter.ItemGroup group : encounter.get().getItemGroups()) {
-          EncounterItemGroupView view = new EncounterItemGroupView(getContext());
-          view.setup(campaign.get(), encounter.get(), group.getDescription(), group.getItems());
-          itemGroups.add(new ViewViewPager.StaticViewPagerAdapter.Entry(group.getTitle(), view));
-        }
-        itemsPager.setAdapter(new ViewViewPager.StaticViewPagerAdapter(itemGroups));
+        if (itemsPager.getVisibility() == VISIBLE) {
+          List<ViewViewPager.StaticViewPagerAdapter.Entry> itemGroups = new ArrayList<>();
+          for (Encounter.ItemGroup group : encounter.get().getItemGroups()) {
+            EncounterItemGroupView view = new EncounterItemGroupView(getContext());
+            view.setup(campaign.get(), encounter.get(), group.getDescription(), group.getItems());
+            itemGroups.add(new ViewViewPager.StaticViewPagerAdapter.Entry(group.getTitle(), view));
+          }
+          itemsPager.setAdapter(new ViewViewPager.StaticViewPagerAdapter(itemGroups));
 
-        for (Monster monster : encounter.get().getMonsters()) {
-          MonsterChipView chip = new MonsterChipView(getContext(), monster);
-          creatures.addView(chip);
+          for (Monster monster : encounter.get().getMonsters()) {
+            MonsterChipView chip = new MonsterChipView(getContext(), monster);
+            creatures.addView(chip);
+          }
         }
       }
     } else {

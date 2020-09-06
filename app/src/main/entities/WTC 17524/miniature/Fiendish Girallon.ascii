@@ -7,4 +7,5 @@ number: 47
 race: "Girallon"
 type: "Fiend"
 subtype: "Animal"
+subtype: "Tall"
 size: LARGE

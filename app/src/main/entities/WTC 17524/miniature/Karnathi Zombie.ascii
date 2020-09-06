@@ -1,0 +1,9 @@
+template {
+  name: "Karnathi Zombie"
+}
+set: "Eberron: Rising from the Last War"
+rarity: COMMON
+number: 9
+type: "Undead"
+race: "Zombie"
+size: MEDIUM

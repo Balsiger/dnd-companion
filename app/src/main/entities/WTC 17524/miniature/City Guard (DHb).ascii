@@ -5,6 +5,8 @@ set: "Dragon Heist"
 rarity: COMMON
 number: 4
 type: "Humanoid"
+subtype: "Male"
+subtype: "Sword"
 race: "Human"
 class: "Fighter"
 size: MEDIUM

@@ -7,4 +7,5 @@ number: 30
 race: "Bat"
 type: "Beast"
 subtype: "Familiar"
-size: SMALL
+size: TINY
+

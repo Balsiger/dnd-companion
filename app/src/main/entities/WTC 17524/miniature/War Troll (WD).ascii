@@ -7,3 +7,4 @@ number: 42
 type: "Giant"
 race: "Troll"
 size: LARGE
+subtype: "Tall"

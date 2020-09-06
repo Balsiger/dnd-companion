@@ -7,3 +7,4 @@ number: 7
 type: "Humanoid"
 race: "Dwarf"
 size: MEDIUM
+subtype: "Mace"

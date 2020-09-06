@@ -7,4 +7,5 @@ number: 41
 race: "Mezzoloth"
 type: "Fiend"
 subtype: "Demon"
+subtype: "Tall"
 size: MEDIUM

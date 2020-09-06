@@ -7,4 +7,5 @@ number: 24
 race: "Crucian"
 type: "Monstrosity"
 subtype: "Reptile"
+subtype: "Humanoid"
 size: MEDIUM

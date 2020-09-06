@@ -9,4 +9,6 @@ type: "Humanoid"
 size: MEDIUM
 class: "Fighter"
 number_affix: "i"
-
+subtype: "Male"
+subtype: "Sword"
+subtype: "Shield"

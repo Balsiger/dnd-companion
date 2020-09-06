@@ -6,3 +6,5 @@ rarity: RARE
 number: 37
 type: "Humanoid"
 race: "Gnoll"
+subtype: "Flail"
+size: MEDIUM

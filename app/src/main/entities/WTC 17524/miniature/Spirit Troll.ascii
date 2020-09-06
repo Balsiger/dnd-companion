@@ -5,5 +5,6 @@ set: "Volo's & Mordenkainen's Foes"
 rarity: RARE
 number: 44
 type: "Giant"
+subtype: "Troll"
 race: "Spirit Troll"
 size: LARGE

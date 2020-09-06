@@ -7,4 +7,5 @@ number: 33
 race: "Earth Titan"
 type: "Giant"
 subtype: "Earth"
+subtype: "Titan"
 size: HUGE

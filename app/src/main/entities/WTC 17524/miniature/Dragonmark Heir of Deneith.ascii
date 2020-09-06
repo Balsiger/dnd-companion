@@ -9,3 +9,4 @@ race: "Human"
 class: "Fighter"
 size: MEDIUM
 subtype: "Shield"
+subtype: "Female"

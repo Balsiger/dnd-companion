@@ -8,3 +8,4 @@ race: "Roper"
 type: "Monstrosity"
 subtype: "Earth"
 size: LARGE
+subtype: "Tall"

@@ -9,3 +9,4 @@ type: "Humanoid"
 class: "Ranger"
 class: "Barbarian"
 size: MEDIUM
+subtype: "Bow"

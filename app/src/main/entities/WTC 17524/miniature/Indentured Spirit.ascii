@@ -8,3 +8,4 @@ race: "Indentured Spirit"
 type: "Undead"
 size: MEDIUM
 subtype: "Humanoid"
+subtype: "Incorporeal"

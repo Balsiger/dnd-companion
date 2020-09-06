@@ -8,3 +8,4 @@ type: "Humanoid"
 race: "Human"
 class: "Paladin"
 size: LARGE
+subtype: "Mounted"

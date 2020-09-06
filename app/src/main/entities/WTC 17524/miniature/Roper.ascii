@@ -7,4 +7,5 @@ number: 58
 race: "Roper"
 type: "Monstrosity"
 subtype: "Earth"
+subtype: "Tall"
 size: LARGE

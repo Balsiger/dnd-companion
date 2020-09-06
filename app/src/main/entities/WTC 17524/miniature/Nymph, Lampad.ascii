@@ -1,0 +1,10 @@
+template {
+  name: "Nymph, Lampad"
+}
+set: "Mythic Odysseys of Theros"
+rarity: COMMON
+number: 5
+race: "Nymph"
+type: "Fey"
+size: MEDIUM
+subtype: "Humanoid"

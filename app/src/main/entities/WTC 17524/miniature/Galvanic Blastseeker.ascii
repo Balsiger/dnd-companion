@@ -5,6 +5,7 @@ set: "Guildmaster\'s Guide to Ravnica"
 rarity: RARE
 number: 39
 type: "Humanoid"
+subtype: "Tall"
 race: "Human"
 class: "Wizard"
 size: MEDIUM

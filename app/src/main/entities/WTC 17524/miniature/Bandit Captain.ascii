@@ -5,6 +5,8 @@ set: "Storm King's Thunder"
 rarity: UNCOMMON
 number: 14
 type: "Humanoid"
+subtype: "Male"
+subtype: "Sword"
 race: "Human"
 size: MEDIUM
 class: "Fighter"

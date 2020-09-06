@@ -1,0 +1,10 @@
+template {
+  name: "Lady Vol (EB)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: RARE
+number: 33
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"
+subtype: "Tall"

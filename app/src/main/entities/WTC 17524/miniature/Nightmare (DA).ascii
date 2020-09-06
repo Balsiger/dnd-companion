@@ -8,3 +8,4 @@ race: "Nightmare"
 type: "Fiend"
 subtype: "Mount"
 size: LARGE
+subtype: "Tall"

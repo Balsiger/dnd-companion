@@ -1,0 +1,10 @@
+emplate {
+  name: "Aphemia, the Dissonant Song"
+}
+set: "Mythic Odysseys of Theros"
+rarity: RARE
+number: 35
+race: "Harpy"
+type: "Monstrosity"
+size: LARGE
+subtype: "Humanoid"

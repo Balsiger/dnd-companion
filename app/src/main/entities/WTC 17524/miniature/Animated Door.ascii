@@ -6,4 +6,5 @@ rarity: UNCOMMON
 number: 24
 type: "Construct"
 subtype: "Door"
+subtype: "Tall"
 size: MEDIUM

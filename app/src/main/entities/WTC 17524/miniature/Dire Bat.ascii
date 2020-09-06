@@ -8,3 +8,4 @@ race: "Dire Bat"
 type: "Beast"
 subtype: "Dire"
 size: LARGE
+subtype: "Tall"

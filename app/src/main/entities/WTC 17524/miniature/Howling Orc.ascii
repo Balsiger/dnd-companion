@@ -7,3 +7,4 @@ number: 52
 type: "Humanoid"
 race: "Orc"
 size: MEDIUM
+subtype: "Axe"

@@ -1,0 +1,9 @@
+template {
+  name: "Clawfoot Raptor"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 23
+type: "Beast"
+race: "Clawfoot"
+size: MEDIUM

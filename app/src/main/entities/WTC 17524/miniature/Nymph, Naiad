@@ -1,0 +1,10 @@
+template {
+  name: "Nymph, Naiad"
+}
+set: "Mythic Odysseys of Theros"
+rarity: UNCOMMON
+number: 15
+race: "Nymph"
+type: "Fey"
+size: MEDIUM
+subtype: "Humanoid"

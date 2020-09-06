@@ -8,4 +8,5 @@ race: "Storm Titan"
 type: "Elemental"
 subtype: "Aquatic"
 subtype: "Giant"
+subtype: "Titan"
 size: HUGE

@@ -8,3 +8,4 @@ race: "Chasme"
 type: "Fiend"
 subtype: "Demon"
 subtype: "Flying"
+size: LARGE

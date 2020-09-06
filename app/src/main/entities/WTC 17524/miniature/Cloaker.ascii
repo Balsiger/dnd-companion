@@ -1,0 +1,9 @@
+template {
+  name: "Cloaker"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 26
+race: "Cloaker"
+type: "Aberration"
+size: LARGE

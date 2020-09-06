@@ -1,0 +1,10 @@
+template {
+  name: "Night Hag (MOT)"
+}
+set: "Mythic Odysseys of Theros"
+rarity: COMMON
+number: 9
+race: "Night Hag"
+type: "Fet"
+size: MEDIUM
+subtype: "Hag"

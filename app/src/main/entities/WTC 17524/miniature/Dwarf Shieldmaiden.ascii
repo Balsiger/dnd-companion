@@ -5,5 +5,6 @@ set: "Dungeons of Dread"
 rarity: UNCOMMON
 number: 33
 type: "Humanoid"
+subtype: "Shield"
 race: "Dwarf"
 size: MEDIUM

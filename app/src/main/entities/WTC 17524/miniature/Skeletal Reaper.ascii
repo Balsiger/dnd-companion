@@ -7,3 +7,5 @@ number: 58
 race: "Skeleton"
 type: "Undead"
 size: MEDIUM
+subtype: "Humanoid"
+subtype: "Polearm"

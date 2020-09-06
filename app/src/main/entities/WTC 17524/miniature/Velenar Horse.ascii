@@ -1,0 +1,9 @@
+template {
+  name: "Valenar Horse"
+}
+set: "Eberron: Rising from the Last War"
+rarity: RARE
+number: 42
+race: "Valenar Horse"
+type: "Fey"
+size: LARGE

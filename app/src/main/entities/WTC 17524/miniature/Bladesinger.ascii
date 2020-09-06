@@ -8,3 +8,5 @@ race: "Elf"
 type: "Humanoid"
 class: "Fighter"
 size: MEDIUM
+subtype: "Female"
+subtype: "Sword"

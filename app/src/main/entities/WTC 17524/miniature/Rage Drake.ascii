@@ -4,7 +4,7 @@ template {
 set: "Desert of Desolation"
 rarity: RARE
 number: 53
-race: "Rake Drake"
+race: "Rage Drake"
 type: "Dragon"
 subtype: "Reptile"
 subtype: "Drake"

@@ -9,3 +9,4 @@ type: "Undead"
 subtype: "Incorporeal"
 size: MEDIUM
 subtype: "Humanoid"
+subtype: "Tall"

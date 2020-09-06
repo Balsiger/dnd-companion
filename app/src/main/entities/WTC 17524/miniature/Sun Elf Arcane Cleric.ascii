@@ -8,3 +8,4 @@ type: "Humanoid"
 race: "Elf"
 class: "Cleric"
 size: MEDIUM
+subtype: "Female"

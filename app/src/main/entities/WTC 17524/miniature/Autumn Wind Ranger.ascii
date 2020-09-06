@@ -7,3 +7,5 @@ number: 37
 race: "Elf"
 type: "Humanoid"
 size: MEDIUM
+subtype: "Female"
+subtype: "Bow"

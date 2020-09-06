@@ -1,0 +1,10 @@
+template {
+  name: "Dwarf Artificer (EB)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: COMMON
+number: 7
+type: "Humanoid"
+race: "Dwarf"
+class: "Sorcerer"
+size: MEDIUM

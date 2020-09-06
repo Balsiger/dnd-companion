@@ -6,3 +6,4 @@ rarity: UNCOMMON
 number: 25
 type: "Giant"
 race: "Troll"
+size: LARGE

@@ -8,3 +8,5 @@ race: "Brass Dragon"
 type: "Dragon"
 size: MEDIUM
 subtype: "Metallic"
+subtype: "Tall"
+subtype: "Very Tall"

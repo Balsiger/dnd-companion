@@ -7,3 +7,5 @@ number: 60
 type: "Humanoid"
 race: "Elf"
 size: MEDIUM
+subtype: "Male"
+subtype: "Bow"

@@ -10,3 +10,5 @@ subtype: "Female"
 subtype: "Hellrider"
 class: "Fighter"
 size: MEDIUM
+subtype: "Female"
+subtype: "Sword"

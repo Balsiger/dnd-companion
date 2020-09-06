@@ -1,5 +1,5 @@
 template {
-  name: "Royal Guard"
+name: "Royal Guard"
 }
 set: "Underdark"
 rarity: COMMON
@@ -8,3 +8,5 @@ type: "Humanoid"
 race: "Human"
 class: "Fighter"
 size: MEDIUM
+subtype: "Male"
+subtype: "Polearm"

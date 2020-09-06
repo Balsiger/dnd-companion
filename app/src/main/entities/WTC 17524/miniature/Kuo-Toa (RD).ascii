@@ -6,3 +6,4 @@ rarity: COMMON
 number: 9
 type: "Humanoid"
 race: "Kuo-Toa"
+size: MEDIUM

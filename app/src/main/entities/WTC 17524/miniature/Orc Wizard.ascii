@@ -8,3 +8,4 @@ type: "Humanoid"
 race: "Orc"
 class: "Wizard"
 size: MEDIUM
+subtype: "Staff"

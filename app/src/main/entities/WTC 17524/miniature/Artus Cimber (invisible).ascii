@@ -4,6 +4,7 @@ template {
 set: "Tomb of Annihilation"
 rarity: ULTRA_RARE
 type: "Humanoid"
+subtype: "Male"
 race: "Human"
 class: "Fighter"
 size: MEDIUM

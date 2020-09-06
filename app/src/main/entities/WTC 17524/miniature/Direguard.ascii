@@ -8,3 +8,5 @@ race: "Direguard"
 type: "Undead"
 subtype: "Skeleton"
 size: MEDIUM
+subtype: "Humanoid"
+subtype: "Sword"

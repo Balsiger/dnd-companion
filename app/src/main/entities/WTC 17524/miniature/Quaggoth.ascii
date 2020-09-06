@@ -6,3 +6,4 @@ rarity: UNCOMMON
 number: 17
 race: "Quaggoth"
 type: "Humanoid"
+size: MEDIUM

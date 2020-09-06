@@ -1,0 +1,11 @@
+template {
+  name: "Shifter Artificer"
+}
+set: "Eberron: Rising from the Last War"
+rarity: COMMON
+number: 11
+type: "Humanoid"
+race: "Shifter"
+class: "Sorcerer"
+subtype: "Artificer"
+size: MEDIUM

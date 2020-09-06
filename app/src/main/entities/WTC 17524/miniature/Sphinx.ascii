@@ -6,4 +6,5 @@ rarity: RARE
 number: 8
 race: "Sphinx"
 type: "Monstrosity"
+subtype: "Sphinx"
 size: LARGE

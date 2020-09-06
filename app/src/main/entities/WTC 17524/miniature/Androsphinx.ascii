@@ -8,3 +8,4 @@ race: "Androsphinx"
 type: "Monstrosity"
 subtype: "Winged"
 size: LARGE
+subtype: "Sphinx"

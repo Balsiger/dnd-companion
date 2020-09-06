@@ -7,4 +7,5 @@ number: 48
 race: "Blazing Skeleton"
 type: "Undead"
 subtype: "Skeleton"
+subtype: "Humanoid"
 size: MEDIUM

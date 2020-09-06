@@ -10,4 +10,5 @@ subtype: "Air"
 subtype: "Archon"
 subtype: "Good"
 subtype: "Lawful"
+subtype: "Tall"
 size: MEDIUM

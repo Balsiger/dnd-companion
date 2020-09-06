@@ -1,0 +1,10 @@
+template {
+  name: "Gray Render (EB)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 27
+race: "Gray Render"
+type: "Monstrosity"
+subtype: "Tall"
+size: LARGE

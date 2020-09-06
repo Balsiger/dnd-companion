@@ -7,3 +7,4 @@ number: 17
 type: "Humanoid"
 race: "Elf"
 class: "Druid"
+size: MEDIUM

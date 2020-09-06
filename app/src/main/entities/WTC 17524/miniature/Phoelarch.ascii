@@ -8,3 +8,4 @@ race: "Phoelarch"
 type: "Monstrosity"
 subtype: "Fire"
 size: MEDIUM
+subtype: "Humanoid"

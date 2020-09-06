@@ -7,6 +7,7 @@ number: 42
 race: "Dragonspawn"
 type: "Monstrosity"
 subtype: "Dragonspawn"
+subtype: "Humanoid"
 subtype: "Dragon"
 class: "Rogue"
 size: MEDIUM

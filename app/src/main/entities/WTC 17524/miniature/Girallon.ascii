@@ -8,3 +8,4 @@ race: "Girallon"
 type: "Monstrosity"
 subtype: "Humanoid"
 size: LARGE
+subtype: "Tall"

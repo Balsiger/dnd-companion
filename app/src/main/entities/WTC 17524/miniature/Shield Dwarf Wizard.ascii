@@ -7,3 +7,4 @@ number: 8
 type: "Humanoid"
 race: "Dwarf"
 size: MEDIUM
+subtype: "Staff"

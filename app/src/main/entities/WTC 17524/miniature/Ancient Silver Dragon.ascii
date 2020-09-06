@@ -4,5 +4,6 @@ template {
 set: "Elemental Evil"
 rarity: UNIQUE
 type: "Dragon"
-size: HUGE
+size: GARGANTUAN
+number: 45
 subtype: "Metallic"

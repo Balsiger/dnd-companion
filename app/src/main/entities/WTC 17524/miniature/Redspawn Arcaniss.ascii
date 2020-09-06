@@ -5,6 +5,7 @@ set: "Unhallowed"
 rarity: UNCOMMON
 number: 56
 race: "Redspawn"
-type: "Humanoid"
+type: "Monstrosity"
+subtype: "Humanoid"
 subtype: "Dragonspawn"
 size: MEDIUM

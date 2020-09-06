@@ -7,5 +7,6 @@ number: 49
 race: "Earth Genasi"
 type: "Humanoid"
 subtype: "Earth"
+subtype: "Genasi"
 size: MEDIUM
 subtype: "Invisible"

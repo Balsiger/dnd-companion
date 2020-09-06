@@ -8,3 +8,4 @@ race: "Bladeling"
 type: "Monstrosity"
 subtype: "Lawful"
 size: MEDIUM
+subtype: "Humanoid"

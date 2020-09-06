@@ -7,3 +7,4 @@ number: 37
 type: "Humanoid"
 race: "Orc"
 size: MEDIUM
+subtype: "Spear"

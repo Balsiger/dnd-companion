@@ -9,4 +9,5 @@ number_affix: "B"
 race: "Horse"
 type: "Beast"
 subtype: "Animal"
+subtype: "Tall"
 size: LARGE

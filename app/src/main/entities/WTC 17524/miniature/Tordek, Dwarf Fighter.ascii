@@ -5,6 +5,7 @@ set: "Harbinger"
 rarity: UNCOMMON
 number: 13
 type: "Humanoid"
+subtype: "Shield"
 race: "Dwarf"
 class: "Fighter"
 size: MEDIUM

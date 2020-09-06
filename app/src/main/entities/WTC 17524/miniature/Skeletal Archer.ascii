@@ -7,3 +7,5 @@ number: 50
 race: "Skeleton"
 type: "Undead"
 size: MEDIUM
+subtype: "Humanoid"
+subtype: "Bow"

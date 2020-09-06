@@ -1,0 +1,9 @@
+template {
+  name: "Shambling Mound (EB)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: RARE
+number: 43
+race: "Shambling Mound"
+type: "Plant"
+size: LARGE

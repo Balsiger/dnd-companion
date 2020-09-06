@@ -7,3 +7,4 @@ number: 52
 type: "Humanoid"
 race: "Gnoll"
 size: MEDIUM
+subtype: "Bow"

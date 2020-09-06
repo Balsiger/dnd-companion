@@ -8,3 +8,4 @@ race: "Elf"
 type: "Humanoid"
 size: MEDIUM
 subtype: "Invisible"
+subtype: "Sword"

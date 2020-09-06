@@ -7,3 +7,5 @@ number: 12
 race: "Skeleton"
 type: "Undead"
 size: MEDIUM
+subtype: "Humanoid"
+subtype: "Sword"

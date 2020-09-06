@@ -8,3 +8,5 @@ race: "Specter"
 type: "Undead"
 size: MEDIUM
 subtype: "Humanoid"
+subtype: "Incorporeal"
+subtype: "Tall"

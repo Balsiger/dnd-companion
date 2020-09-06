@@ -8,4 +8,5 @@ race: "Hellstinger Scorpion"
 type: "Fiend"
 subtype: "Animal"
 subtype: "Oversized"
+subtype: "Scorpion"
 size: LARGE

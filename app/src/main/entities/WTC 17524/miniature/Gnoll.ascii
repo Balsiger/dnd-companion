@@ -7,3 +7,4 @@ number: 51
 type: "Humanoid"
 race: "Gnoll"
 size: MEDIUM
+subtype: "Axe"

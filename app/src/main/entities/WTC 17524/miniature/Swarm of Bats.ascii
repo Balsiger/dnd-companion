@@ -9,4 +9,5 @@ type: "Beast"
 subtype: "Animal"
 subtype: "Swarm"
 subtype: "Flying"
+subtype: "Tall"
 size: LARGE

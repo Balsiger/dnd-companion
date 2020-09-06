@@ -1,0 +1,13 @@
+template {
+  name: "The Lord of Blades"
+}
+set: "Eberron: Rising from the Last War"
+rarity: RARE
+number: 37
+race: "Warforged"
+type: "Construct"
+subtype: "Humanoid"
+subtype: "Living Construct"
+class: "Fighter"
+class: "Sorcerer"
+size: MEDIUM

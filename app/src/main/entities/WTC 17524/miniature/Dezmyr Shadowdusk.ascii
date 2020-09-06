@@ -8,3 +8,6 @@ race: "Human"
 type: "Humanoid"
 size: MEDIUM
 class: "Fighter"
+subtype: "Shield"
+subtype: "Male"
+subtype: "Sword"

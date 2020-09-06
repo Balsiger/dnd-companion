@@ -1,0 +1,11 @@
+template {
+  name: "Human Artificer"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 22
+type: "Humanoid"
+race: "Human"
+class: "Sorcerer"
+subtype: "Artificer"
+size: MEDIUM

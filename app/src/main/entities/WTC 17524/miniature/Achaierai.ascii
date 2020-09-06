@@ -8,4 +8,5 @@ race: "Achaierai"
 type: "Fiend"
 subtype: "Evil"
 subtype: "Extraplanar"
+subtype: "Tall"
 size: LARGE

@@ -1,0 +1,11 @@
+template {
+  name: "Shifter Druid"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 19
+race: "Shifter"
+type: "Humanoid"
+subtype: "Shapechanger"
+class: "Druid"
+size: MEDIUM

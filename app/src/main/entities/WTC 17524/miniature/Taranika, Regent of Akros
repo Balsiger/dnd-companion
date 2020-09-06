@@ -1,0 +1,11 @@
+template {
+  name: "Taranika, Regent of Akros"
+}
+set: "Mythic Odysseys of Theros"
+rarity: RARE
+number: 38
+race: "Human"
+type: "Humanoid"
+size: MEDIUM
+class: "Fighter"
+subtype: "Chain"

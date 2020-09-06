@@ -6,4 +6,5 @@ rarity: COMMON
 number: 2
 race: "Sprite"
 type: "Fey"
+subtype: "Flying"
 size: SMALL

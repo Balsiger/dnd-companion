@@ -7,3 +7,5 @@ number: 52
 type: "Undead"
 race: "Skeleton"
 size: MEDIUM
+subtype: "Humanoid"
+subtype: "Axe"

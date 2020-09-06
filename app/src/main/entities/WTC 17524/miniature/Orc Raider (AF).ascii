@@ -9,3 +9,5 @@ race: "Orc"
 class: "Rogue"
 class: "Barbarian"
 size: MEDIUM
+subtype: "Sword"
+subtype: "Shield"

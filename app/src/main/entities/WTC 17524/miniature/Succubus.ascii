@@ -8,4 +8,5 @@ race: "Succubus"
 type: "Fiend"
 subtype: "Devil"
 subtype: "Shapechanger"
+subtype: "Tall"
 size: MEDIUM

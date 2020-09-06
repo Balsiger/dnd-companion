@@ -7,5 +7,5 @@ number: 18
 race: "Flesh Golem"
 type: "Construct"
 subtype: "Golem"
-size: LARGE
+size: MEDIUM
 number_affix: "i"

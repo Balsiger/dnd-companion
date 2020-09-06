@@ -9,3 +9,5 @@ type: "Dragon"
 subtype: "Reptile"
 size: LARGE
 subtype: "Lesser"
+subtype: "Flying"
+subtype: "Tall"

@@ -8,3 +8,4 @@ type: "Humanoid"
 race: "Dwarf"
 class: "Sorcerer"
 size: MEDIUM
+subtype: "Mace"

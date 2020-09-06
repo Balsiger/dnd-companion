@@ -7,5 +7,8 @@ number: 38
 race: "Black Dragon"
 type: "Dragon"
 subtype: "Aquatic"
+subtype: "Tall"
+subtype: "Very Tall"
+subtype: "Flying"
 size: MEDIUM
 subtype: "Chromatic"

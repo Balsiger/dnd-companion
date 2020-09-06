@@ -1,0 +1,9 @@
+template {
+  name: "Iron Defender (EB)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: COMMON
+number: 4
+race: "Iron Defender"
+type: "Construct"
+size: MEDIUM

@@ -5,6 +5,7 @@ set: "Archfiends"
 rarity: COMMON
 number: 2
 type: "Humanoid"
+subtype: "Male"
 race: "Human"
 class: "Fighter"
 size: MEDIUM

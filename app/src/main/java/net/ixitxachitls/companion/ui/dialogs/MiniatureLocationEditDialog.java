@@ -54,6 +54,7 @@ public class MiniatureLocationEditDialog
   private static final String ARG_LOCATION = "location";
 
   private String originalName;
+  private String originalLocation;
   private MiniatureLocation location;
 
   // UI.
@@ -64,15 +65,17 @@ public class MiniatureLocationEditDialog
   private Wrapper<View> noColor;
 
   private void setColor(int color) {
-    location.setColor(color);
+    location = location.withColor(color);
 
     update();
   }
 
   @Override
   public void save() {
-    location.setName(locationInput.getText());
-    me().replaceLocation(originalName, location);
+    if (!originalLocation.equals(locationInput.getText())) {
+      location = location.withName(locationInput.getText());
+      me().replaceLocation(originalName, location);
+    }
 
     super.save();
   }
@@ -93,8 +96,10 @@ public class MiniatureLocationEditDialog
     Optional<MiniatureLocation> location = me().getLocation(originalName);
     if (location.isPresent()) {
       this.location = location.get();
+      this.originalLocation = location.get().getName();
     } else {
       this.location = new MiniatureLocation();
+      this.originalLocation = "";
     }
 
     locationInput = view.findViewById(R.id.location);

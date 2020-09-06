@@ -6,4 +6,5 @@ rarity: RARE
 number: 48
 race: "Gray Render"
 type: "Monstrosity"
+subtype: "Tall"
 size: LARGE

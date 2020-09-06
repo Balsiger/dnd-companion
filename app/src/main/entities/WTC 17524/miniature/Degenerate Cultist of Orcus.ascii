@@ -5,6 +5,8 @@ set: "Against the Giants"
 rarity: COMMON
 number: 4
 type: "Humanoid"
+subtype: "Male"
 race: "Human"
 size: MEDIUM
 class: "Fighter"
+subtype: "Club"

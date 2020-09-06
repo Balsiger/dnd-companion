@@ -8,3 +8,4 @@ race: "Shadow Demon"
 type: "Fiend"
 subtype: "Demon"
 subtype: "Flying"
+size: MEDIUM

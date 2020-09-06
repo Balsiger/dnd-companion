@@ -1,0 +1,9 @@
+template {
+  name: "Living Spell Cloud Kill"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 29
+race: "Living Spell"
+type: "Ooze"
+size: LARGE

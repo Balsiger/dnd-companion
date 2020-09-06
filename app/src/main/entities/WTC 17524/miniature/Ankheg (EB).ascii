@@ -1,0 +1,9 @@
+template {
+  name: "Ankheg (EB)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 31
+race: "Ankheg"
+type: "Monstrosity"
+size: LARGE

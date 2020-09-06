@@ -9,3 +9,5 @@ race: "Human"
 size: MEDIUM
 subtype: "Invisible"
 class: "Fighter"
+subtype: "Male"
+subtype: "Polearm"

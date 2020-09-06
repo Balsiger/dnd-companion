@@ -5,6 +5,7 @@ set: "Player\'s Handbook Heroes"
 rarity: UNIQUE
 number: 13
 type: "Humanoid"
+subtype: "Shield"
 race: "Dwarf"
 class: "Paladin"
 size: MEDIUM

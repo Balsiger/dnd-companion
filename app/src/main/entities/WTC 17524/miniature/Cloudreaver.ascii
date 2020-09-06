@@ -5,6 +5,8 @@ set: "War of the Dragon Queen"
 rarity: COMMON
 number: 44
 type: "Humanoid"
+subtype: "Male"
+subtype: "Sword"
 race: "Human"
 class: "Fighter"
 size: MEDIUM

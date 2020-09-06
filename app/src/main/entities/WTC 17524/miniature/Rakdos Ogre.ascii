@@ -7,3 +7,4 @@ number: 28
 race: "Ogre"
 type: "Giant"
 size: LARGE
+subtype: "Tall"

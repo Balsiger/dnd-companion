@@ -9,3 +9,4 @@ subtype: "Goblinoid"
 race: "Bugbear"
 class: "Barbarian"
 size: MEDIUM
+subtype: "Axe"

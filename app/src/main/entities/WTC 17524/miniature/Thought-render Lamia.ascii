@@ -1,0 +1,10 @@
+template {
+  name: "Thought-render Lamia"
+}
+set: "Mythic Odysseys of Theros"
+rarity: UNCOMMON
+number: 31
+race: "Lamia"
+type: "Monstrosity"
+size: LARGE
+subtype: "Humanoid"

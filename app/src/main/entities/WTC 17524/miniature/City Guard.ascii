@@ -5,6 +5,8 @@ set: "Giants of Legend"
 rarity: COMMON
 number: 23
 type: "Humanoid"
+subtype: "Male"
 race: "Human"
 class: "Fighter"
 size: MEDIUM
+subtype: "Polearm"

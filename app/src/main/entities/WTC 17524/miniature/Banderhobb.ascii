@@ -6,4 +6,5 @@ rarity: UNCOMMON
 number: 25
 race: "Banderhobb"
 type: "Monstrosity"
-size: MEDIUM
+subtype: "Tall"
+size: LARGE

@@ -5,6 +5,7 @@ set: "Blood War"
 rarity: COMMON
 number: 29
 type: "Humanoid"
+subtype: "Male"
 race: "Human"
 class: "Fighter"
 size: MEDIUM

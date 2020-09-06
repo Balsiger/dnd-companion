@@ -5,6 +5,7 @@ set: "Angelfire"
 rarity: COMMON
 number: 31
 type: "Humanoid"
+subtype: "Shield"
 race: "Dwarf"
 class: "Fighter"
 size: MEDIUM

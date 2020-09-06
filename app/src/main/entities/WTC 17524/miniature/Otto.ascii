@@ -9,3 +9,4 @@ type: "Dragon"
 size: LARGE
 subtype: "Invisible"
 subtype: "Lesser"
+subtype: "Flying"

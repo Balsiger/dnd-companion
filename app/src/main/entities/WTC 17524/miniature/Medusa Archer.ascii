@@ -7,3 +7,4 @@ number: 37
 race: "Medusa"
 type: "Monstrosity"
 size: MEDIUM
+subtype: "Humanoid"

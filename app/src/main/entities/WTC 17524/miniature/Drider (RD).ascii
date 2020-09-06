@@ -7,3 +7,4 @@ number: 26
 race: "Drider"
 type: "Monstrosity"
 subtype: "Spider"
+size: LARGE

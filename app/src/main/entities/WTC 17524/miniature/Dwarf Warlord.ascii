@@ -7,3 +7,4 @@ number: 1
 type: "Humanoid"
 race: "Dwarf"
 size: MEDIUM
+subtype: "Axe"

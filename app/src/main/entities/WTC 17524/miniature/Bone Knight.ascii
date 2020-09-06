@@ -1,0 +1,11 @@
+template {
+  name: "Bone Knight"
+}
+set: "Eberron: Rising from the Last War"
+rarity: RARE
+number: 38
+race: "Human"
+type: "Humanoid"
+class: "Fighter"
+subtype: "Sword"
+size: MEDIUM

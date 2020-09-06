@@ -1,0 +1,11 @@
+template {
+  name: "Centaur Ranger"
+}
+set: "Mythic Odysseys of Theros"
+rarity: UNCOMMON
+number: 17
+race: "Centaur"
+type: "Humanoid"
+size: MEDIUM
+class: "Ranger"
+subtype: "Halberd"

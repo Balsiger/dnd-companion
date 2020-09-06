@@ -8,3 +8,5 @@ race: "Red Dragon"
 type: "Dragon"
 size: LARGE
 subtype: "Chromatic"
+subtype: "Tall"
+subtype: "Flying"

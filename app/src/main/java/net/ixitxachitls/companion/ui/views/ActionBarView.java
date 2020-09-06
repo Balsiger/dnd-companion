@@ -128,6 +128,7 @@ public class ActionBarView extends LinearLayout {
   }
 
   private void refreshProgress() {
+
     if (progressGroups.isEmpty()) {
       progressText.text("");
       progress.setVisibility(GONE);

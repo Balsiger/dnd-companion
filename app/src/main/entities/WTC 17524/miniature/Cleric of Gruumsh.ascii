@@ -8,3 +8,5 @@ race: "Orc"
 type: "Humanoid"
 class: "Cleric"
 size: MEDIUM
+subtype: "Spear"
+subtype: "Tall"

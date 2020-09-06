@@ -7,3 +7,4 @@ number: 70
 race: "Minotaur"
 type: "Monstrosity"
 size: LARGE
+subtype: "Tall"

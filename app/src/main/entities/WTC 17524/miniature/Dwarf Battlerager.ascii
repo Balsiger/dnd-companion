@@ -8,3 +8,4 @@ type: "Humanoid"
 race: "Dwarf"
 class: "Barbarian"
 size: MEDIUM
+subtype: "Mace"

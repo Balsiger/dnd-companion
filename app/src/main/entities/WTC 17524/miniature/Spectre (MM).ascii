@@ -7,3 +7,5 @@ number: 7
 race: "Spectre"
 type: "Undead"
 size: MEDIUM
+subtype: "Incorporeal"
+subtype: "Tall"

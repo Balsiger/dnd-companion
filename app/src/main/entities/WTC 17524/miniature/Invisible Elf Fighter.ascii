@@ -9,3 +9,4 @@ race: "Elf"
 class: "Fighter"
 size: MEDIUM
 subtype: "Invisible"
+subtype: "Mace"

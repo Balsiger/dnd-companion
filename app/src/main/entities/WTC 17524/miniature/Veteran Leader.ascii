@@ -6,5 +6,7 @@ rarity: UNCOMMON
 number: 14
 race: "Human"
 type: "Humanoid"
-size: HUGE
+size: MEDIUM
 class: "Fighter"
+subtype: "Sword"
+subtype: "Male"

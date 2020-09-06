@@ -9,3 +9,4 @@ race: "Orc"
 class: "Barbarian"
 class: "Fighter"
 size: MEDIUM
+subtype: "Axe"

@@ -7,4 +7,6 @@ number: 46
 race: "Spectral Magelord"
 type: "Undead"
 subtype: "Spirit"
+subtype: "Humanoid"
+subtype: "Incorporeal"
 size: MEDIUM

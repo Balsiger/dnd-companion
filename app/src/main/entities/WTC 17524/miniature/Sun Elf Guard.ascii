@@ -7,3 +7,5 @@ number: 9
 type: "Humanoid"
 race: "Elf"
 size: MEDIUM
+subtype: "Male"
+subtype: "Spear"

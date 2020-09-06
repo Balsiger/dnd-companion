@@ -7,3 +7,4 @@ number: 30
 race: "Lamia"
 type: "Monstrosity"
 size: MEDIUM
+subtype: "Humanoid"

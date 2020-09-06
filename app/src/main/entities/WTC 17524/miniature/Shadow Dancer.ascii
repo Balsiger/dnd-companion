@@ -6,5 +6,6 @@ rarity: UNCOMMON
 number: 23
 race: "Human"
 class: "Shadowdancer"
+class: "Rogue"
 size: MEDIUM
 subtype: "Humanoid"

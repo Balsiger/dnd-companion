@@ -7,3 +7,4 @@ number: 34
 race: "Troll"
 type: "Giant"
 size: LARGE
+subtype: "Tall"

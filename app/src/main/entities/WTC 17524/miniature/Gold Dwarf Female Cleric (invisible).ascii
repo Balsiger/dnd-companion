@@ -8,3 +8,5 @@ type: "Humanoid"
 race: "Dwarf"
 class: "Cleric"
 size: MEDIUM
+subtype: "Axe"
+

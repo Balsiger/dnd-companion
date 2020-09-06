@@ -6,4 +6,5 @@ rarity: UNCOMMON
 number: 16
 type: "Humanoid"
 race: "Drow"
-size: SMALL
+size: MEDIUM
+

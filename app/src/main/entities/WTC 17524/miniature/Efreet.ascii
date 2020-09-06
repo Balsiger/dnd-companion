@@ -9,3 +9,5 @@ type: "Elemental"
 subtype: "Genie"
 subtype: "Fire"
 subtype: "Flying"
+size: LARGE
+subtype: "Tall"

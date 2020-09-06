@@ -6,4 +6,5 @@ rarity: RARE
 number: 50
 race: "Death Titan"
 type: "Giant"
+subtype: "Titan"
 size: HUGE

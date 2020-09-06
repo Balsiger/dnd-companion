@@ -6,4 +6,5 @@ rarity: UNCOMMON
 number: 30
 race: "Murial"
 type: "Monstrosity"
+subtype: "Tall"
 size: LARGE

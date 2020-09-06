@@ -5,6 +5,7 @@ set: "Against the Giants"
 rarity: UNCOMMON
 number: 20
 type: "Humanoid"
+subtype: "Shield"
 race: "Dwarf"
 class: "Cleric"
 size: MEDIUM

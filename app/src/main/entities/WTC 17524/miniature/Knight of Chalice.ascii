@@ -8,3 +8,6 @@ type: "Humanoid"
 race: "Elf"
 class: "Paladin"
 size: MEDIUM
+subtype: "Male"
+subtype: "Sword"
+subtype: "Shield"

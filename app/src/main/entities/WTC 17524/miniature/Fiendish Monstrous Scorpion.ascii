@@ -8,4 +8,5 @@ race: "Fiendish Monstrous Scorpion"
 type: "Fiend"
 subtype: "Oversized"
 subtype: "Animal"
+subtype: "Scorpion"
 size: LARGE

@@ -8,3 +8,4 @@ type: "Humanoid"
 race: "Orc"
 class: "Barbarian"
 size: MEDIUM
+subtype: "Axe"

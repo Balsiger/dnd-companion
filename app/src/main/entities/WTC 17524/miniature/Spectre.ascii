@@ -7,3 +7,5 @@ number: 42
 race: "Spectre"
 type: "Undead"
 size: MEDIUM
+subtype: "Humanoid"
+subtype: "Incorporeal"

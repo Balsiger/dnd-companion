@@ -1,0 +1,10 @@
+template {
+  name: "Changeling"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 18
+race: "Changeling"
+type: "Humanoid"
+subtype: "Shapechanger"
+size: MEDIUM

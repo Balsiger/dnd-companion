@@ -5,6 +5,7 @@ set: "Dragon Eye"
 rarity: UNCOMMON
 number: 1
 type: "Humanoid"
+subtype: "Shield"
 race: "Dwarf"
 class: "Cleric"
 size: MEDIUM

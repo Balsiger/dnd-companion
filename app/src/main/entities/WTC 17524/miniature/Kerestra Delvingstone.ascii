@@ -4,6 +4,7 @@ template {
 set: "Waterdeep: Dungeon of the Mad Mage"
 rarity: RARE
 number: 38
-race: "Undead"
-type: "Humanoid"
+race: "Vampire"
+type: "Undead"
+subtype: "Humanoid"
 size: MEDIUM

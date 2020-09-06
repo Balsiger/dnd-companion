@@ -7,4 +7,5 @@ number: 36
 race: "Half-Dragon"
 type: "Dragon"
 subtype: "Humanoid"
+subtype: "Chromatic"
 size: MEDIUM

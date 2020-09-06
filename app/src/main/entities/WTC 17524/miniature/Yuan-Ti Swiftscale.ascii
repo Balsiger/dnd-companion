@@ -6,5 +6,6 @@ rarity: UNIQUE
 type: "Humanoid"
 subtype: "Serpent"
 subtype: "Reptile"
+subtype: "Tall"
 race: "Yuan-Ti"
 size: MEDIUM

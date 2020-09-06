@@ -8,3 +8,5 @@ race: "Boneshard Skeleton"
 type: "Undead"
 subtype: "Skeleton"
 size: MEDIUM
+subtype: "Humanoid"
+subtype: "Sword"

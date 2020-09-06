@@ -6,4 +6,6 @@ rarity: RARE
 number: 24
 race: "Harpy"
 type: "Monstrosity"
+subtype: "Humanoid"
+subtype: "Tall"
 size: MEDIUM

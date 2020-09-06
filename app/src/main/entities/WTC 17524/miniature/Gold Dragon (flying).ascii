@@ -8,3 +8,5 @@ race: "Gold Dragon"
 type: "Dragon"
 size: LARGE
 subtype: "Metallic"
+subtype: "Flying"
+subtype: "Tall"

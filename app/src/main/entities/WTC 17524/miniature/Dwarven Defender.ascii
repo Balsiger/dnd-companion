@@ -5,6 +5,7 @@ set: "Dragon Eye"
 rarity: RARE
 number: 2
 type: "Humanoid"
+subtype: "Shield"
 race: "Dwarf"
 class: "Fighter"
 size: MEDIUM

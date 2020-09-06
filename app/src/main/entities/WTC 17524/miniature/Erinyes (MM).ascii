@@ -8,4 +8,5 @@ race: "Erinyes"
 type: "Fiend"
 subtype: "Devil"
 subtype: "Flying"
+subtype: "Tall"
 size: MEDIUM

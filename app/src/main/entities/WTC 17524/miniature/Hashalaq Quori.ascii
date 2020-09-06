@@ -1,0 +1,9 @@
+template {
+  name: "Hashalaq Quori"
+}
+set: "Eberron: Rising from the Last War"
+rarity: RARE
+number: 35
+race: "Quori"
+type: "Aberration"
+size: MEDIUM

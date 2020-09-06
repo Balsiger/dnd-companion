@@ -5,6 +5,7 @@ set: "Aberrations"
 rarity: COMMON
 number: 7
 type: "Humanoid"
+subtype: "Shield"
 race: "Dwarf"
 class: "Fighter"
 size: MEDIUM

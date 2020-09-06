@@ -9,3 +9,5 @@ race: "Human"
 size: MEDIUM
 subtype: "Shield"
 class: "Fighter"
+subtype: "Female"
+subtype: "Sword"

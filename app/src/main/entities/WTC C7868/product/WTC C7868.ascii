@@ -1,0 +1,143 @@
+template {
+  name: "WTC C7868"
+  world: "Forgotten Realms"
+  description: "Let \\NPC{Laeral Silverhand} --- Open Lord of \\Place{Waterdeep}, centries-old archmage, and daughter of the goddess of magic --- guide you on your path to adventure."
+  short_description: "Dice and miscellany for the world's greatest roleplaying game."
+}
+title: "Laeral Silverhand's Explorer's Kit"
+subtitle: "Explore the Realms!"
+date {
+  year: 2020
+  month: 3
+}
+author {
+  name: "Lee, Adam"
+  job: "story design"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "graphic design"
+}
+illustrator {
+  name: "Narcisco, Shauna"
+  job: "graphic design"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic design"
+}
+editor {
+  name: "Schneider, F. Wesley"
+}
+
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Cearly, Clint"
+}
+illustrator {
+  name: "Chevrier, Jedo"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "JD"
+}
+illustrator {
+  name: "Rahn, Chris"
+}
+illustrator {
+  name: "Larian Studios"
+}
+illustrator {
+  name: "Matyas, Brian"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "Unit Image"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Winters, Mark"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+cartographer {
+  name: "Engle, Jason A."
+}
+cartographer {
+  name: "Schley, Mike"
+}
+manager {
+  name: "Benham, Bill"
+  job: "production"
+}
+manager {
+  name: "Callaway, Cyndy"
+  job: "production"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production"
+}
+manager {
+  name: "Tovar, Dan"
+  job: "production"
+}
+manager {
+  name: "Lindsay, Christopher"
+  job: "brand"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "brand"
+}
+manager {
+  name: "Vo, Anna"
+  job: "brand"
+}
+pages: 0
+system: DND_5E
+audience: DM
+type: ACCESSORY
+style: BOX
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: Dice
+  number: 11
+  description: "two d20s, one d12, two d10s, one d8, four d6s, one d4"
+}
+content {
+  part: CARD
+  number: 20
+  description: "illustrated, double-sided cards detailing \\NPC{Laeral}'s expert insights on key charaters, locations, and lore from across the \\Place{Forgotten Realms}."
+}
+content {
+  part: BOX
+  number: 1
+  description: "durable, felt-inlined box that functions as two dice trays"
+}
+content {
+  part: MAP
+  number: 1
+  description: "foldout double-sided map of the \\Place{Sword Coast} and the city of \\Place{Waterdeep}"
+}
+layout: FULL_COLOR

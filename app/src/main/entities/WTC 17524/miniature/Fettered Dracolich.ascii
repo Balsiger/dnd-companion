@@ -7,4 +7,5 @@ number: 17
 race: "Dracolich"
 type: "Undead"
 subtype: "Dragon"
+subtype: "Tall"
 size: LARGE

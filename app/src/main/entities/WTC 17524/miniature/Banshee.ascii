@@ -7,3 +7,5 @@ number: 21
 race: "Banshee"
 type: "Undead"
 subtype: "Humanoid"
+subtype: "Incorporeal"
+size: MEDIUM

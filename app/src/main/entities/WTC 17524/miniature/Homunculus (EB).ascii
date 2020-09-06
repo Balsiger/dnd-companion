@@ -1,0 +1,9 @@
+template {
+  name: "Homunculus (EB)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 17
+race: "Homunculus"
+type: "Construct"
+size: MEDIUM

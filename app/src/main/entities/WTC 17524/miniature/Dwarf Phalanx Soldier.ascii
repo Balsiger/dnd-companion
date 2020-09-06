@@ -5,6 +5,7 @@ set: "Death Knell"
 rarity: UNCOMMON
 number: 5
 type: "Humanoid"
+subtype: "Shield"
 race: "Dwarf"
 class: "Fighter"
 size: MEDIUM

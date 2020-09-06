@@ -8,3 +8,4 @@ race: "Wemic"
 type: "Monstrosity"
 class: "Barbarian"
 size: LARGE
+subtype: "Humanoid"

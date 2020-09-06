@@ -8,3 +8,4 @@ type: "Humanoid"
 race: "Human"
 size: MEDIUM
 class: "Fighter"
+subtype: "Female"

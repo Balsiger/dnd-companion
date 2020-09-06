@@ -9,3 +9,5 @@ type: "Humanoid"
 class: "Ranger"
 class: "Sorcerer"
 size: MEDIUM
+subtype: "Male"
+subtype: "Bow"

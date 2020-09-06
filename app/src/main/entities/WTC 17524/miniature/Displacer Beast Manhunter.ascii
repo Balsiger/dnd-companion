@@ -4,6 +4,6 @@ template {
 set: "Unhallowed"
 rarity: RARE
 number: 37
-race: "Displacer Beat"
+race: "Displacer Beast"
 type: "Monstrosity"
 size: LARGE

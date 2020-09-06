@@ -6,4 +6,6 @@ rarity: COMMON
 number: 3
 race: "Will-o\'-Wisp"
 type: "Undead"
+subtype: "Tall"
+subtype: "Flying"
 size: SMALL

@@ -5,6 +5,7 @@ set: "Tomb of Annihilation"
 rarity: UNCOMMON
 number: 22
 type: "Humanoid"
+subtype: "Male"
 race: "Human"
 class: "Fighter"
 size: MEDIUM

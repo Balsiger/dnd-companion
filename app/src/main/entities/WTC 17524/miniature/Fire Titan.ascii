@@ -9,3 +9,4 @@ type: "Elemental"
 subtype: "Fire"
 subtype: "Giant"
 size: HUGE
+subtype: "Titan"

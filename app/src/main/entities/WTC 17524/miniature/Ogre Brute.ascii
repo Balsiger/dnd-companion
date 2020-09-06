@@ -8,3 +8,4 @@ type: "Giant"
 race: "Ogre"
 class: "Barbarian"
 size: LARGE
+subtype: "Tall"

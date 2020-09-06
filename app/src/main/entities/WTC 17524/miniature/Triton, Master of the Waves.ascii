@@ -1,0 +1,9 @@
+template {
+  name: "Triton, Master of the Waves"
+}
+set: "Mythic Odysseys of Theros"
+rarity: UNCOMMON
+number: 22
+race: "Triton"
+type: "Humanoid"
+size: MEDIUM

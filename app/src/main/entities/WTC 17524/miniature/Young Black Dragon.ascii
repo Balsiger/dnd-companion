@@ -8,3 +8,4 @@ race: "Black Dragon"
 type: "Dragon"
 size: LARGE
 subtype: "Chromatic"
+subtype: "Flying"

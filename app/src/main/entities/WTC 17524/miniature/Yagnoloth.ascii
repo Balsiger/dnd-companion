@@ -7,4 +7,5 @@ number: 28
 race: "Yagnoloth"
 type: "Fiend"
 subtype: "Yugoloth"
+subtype: "Tall"
 size: LARGE

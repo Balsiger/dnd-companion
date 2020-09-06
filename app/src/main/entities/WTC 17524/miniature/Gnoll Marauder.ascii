@@ -7,3 +7,6 @@ number: 31
 type: "Humanoid"
 race: "Gnoll"
 size: MEDIUM
+subtype: "Spear"
+subtype: "Shield"
+

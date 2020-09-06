@@ -8,3 +8,5 @@ type: "Humanoid"
 subtype: "Goblinoid"
 race: "Bugbear"
 size: MEDIUM
+subtype: "Mace"
+subtype: "Shield"

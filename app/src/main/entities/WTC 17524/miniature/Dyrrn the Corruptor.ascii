@@ -1,0 +1,11 @@
+template {
+  name: "Dyrrn the Corruptor"
+}
+set: "Eberron: Rising from the Last War"
+rarity: RARE
+number: 40
+race: "Daelkyr"
+type: "Outsider"
+subtype: "Evil"
+subtype: "Extraplanar"
+size: MEDIUM

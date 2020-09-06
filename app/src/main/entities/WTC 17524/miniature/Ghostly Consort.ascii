@@ -8,3 +8,4 @@ race: "Ghostly Consort"
 type: "Undead"
 size: MEDIUM
 subtype: "Humanoid"
+subtype: "Incorporeal"

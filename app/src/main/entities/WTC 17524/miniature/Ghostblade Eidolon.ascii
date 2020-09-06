@@ -1,0 +1,10 @@
+template {
+  name: "Ghostblade Eidolon"
+}
+set: "Mythic Odysseys of Theros"
+rarity: UNCOMMON
+number: 18
+race: "Eidolon"
+type: "Construct"
+size: MEDIUM
+subtype: "Sword"

@@ -8,4 +8,5 @@ type: "Fiend"
 subtype: "Evil"
 subtype: "Extraplanar"
 subtype: "Lawful"
+subtype: "Tall"
 size: LARGE

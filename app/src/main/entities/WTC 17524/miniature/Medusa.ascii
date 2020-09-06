@@ -7,3 +7,4 @@ number: 49
 race: "Medusa"
 type: "Monstrosity"
 size: MEDIUM
+subtype: "Humanoid"

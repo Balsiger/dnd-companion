@@ -5,6 +5,8 @@ set: "Guildmaster\'s Guide to Ravnica"
 rarity: RARE
 number: 40
 type: "Humanoid"
+subtype: "Male"
+subtype: "Sword"
 race: "Human"
 class: "Fighter"
 size: MEDIUM

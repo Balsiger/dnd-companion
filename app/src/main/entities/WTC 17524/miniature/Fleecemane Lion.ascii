@@ -1,0 +1,10 @@
+template {
+  name: "Fleecemane Lion"
+}
+set: "Mythic Odysseys of Theros"
+rarity: UNCOMMON
+number: 26
+race: "Lion"
+type: "Beast"
+size: LARGE
+subtype: "Animal"

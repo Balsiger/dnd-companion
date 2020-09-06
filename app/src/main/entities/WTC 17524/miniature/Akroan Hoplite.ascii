@@ -1,0 +1,12 @@
+template {
+  name: "Akroan Hoplite"
+}
+set: "Mythic Odysseys of Theros"
+rarity: COMMON
+number: 2
+race: "Human"
+type: "Humanoid"
+size: MEDIUM
+class: "Fighter"
+subtype: "Sword"
+subtype: "Shield"

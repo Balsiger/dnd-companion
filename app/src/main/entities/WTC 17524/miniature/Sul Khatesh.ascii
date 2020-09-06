@@ -1,0 +1,10 @@
+template {
+  name: "Sul Khatesh"
+}
+set: "Eberron: Rising from the Last War"
+rarity: RARE
+number: 44
+race: "Overlord"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

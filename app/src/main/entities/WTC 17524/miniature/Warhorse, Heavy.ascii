@@ -7,4 +7,5 @@ number: 13
 race: "Horse"
 type: "Beast"
 subtype: "Animal"
+subtype: "Tall"
 size: LARGE

@@ -1,0 +1,10 @@
+template {
+  name: "Basilisk (MOT)"
+}
+set: "Mythic Odysseys of Theros"
+rarity: COMMON
+number: 6
+race: "Basilisk"
+type: "Monstrosity"
+size: MEDIUM
+subtype: "Reptile"

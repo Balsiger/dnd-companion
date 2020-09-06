@@ -7,3 +7,4 @@ number: 36
 type: "Humanoid"
 race: "Orc"
 size: MEDIUM
+subtype: "Bow"

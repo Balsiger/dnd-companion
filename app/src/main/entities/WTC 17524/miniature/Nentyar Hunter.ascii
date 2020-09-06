@@ -4,7 +4,7 @@ template {
 set: "Underdark"
 rarity: UNCOMMON
 number: 20
-race: "Human"
+race: "Volodni"
 type: "Plant"
 class: "Ranger"
 size: MEDIUM

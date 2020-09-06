@@ -1,0 +1,11 @@
+template {
+  name: "Half-Ogre (b)"
+}
+set: "Eberron: Rising from the Last War"
+rarity: UNCOMMON
+number: 25
+number_affix: "b"
+race: "Half-Ogre"
+type: "Giant"
+subtype: "Ogre"
+size: LARGE

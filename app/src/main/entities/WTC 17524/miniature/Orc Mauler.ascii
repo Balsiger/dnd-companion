@@ -9,3 +9,5 @@ race: "Orc"
 class: "Fighter"
 class: "Barbarian"
 size: MEDIUM
+subtype: "Mace"
+subtype: "Shield"

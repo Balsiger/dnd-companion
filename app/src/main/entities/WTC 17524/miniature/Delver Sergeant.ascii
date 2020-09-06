@@ -5,6 +5,7 @@ set: "Night Below"
 rarity: COMMON
 number: 5
 type: "Humanoid"
+subtype: "Female"
 race: "Human"
 class: "Fighter"
 size: MEDIUM

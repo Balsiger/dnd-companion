@@ -8,4 +8,5 @@ race: "Giant Scorpion"
 type: "Beast"
 subtype: "Oversized"
 subtype: "Animal"
+subtype: "Scorpion"
 size: LARGE

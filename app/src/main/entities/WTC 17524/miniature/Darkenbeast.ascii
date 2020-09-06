@@ -7,4 +7,5 @@ number: 37
 race: "Darkenbeast"
 type: "Monstrosity"
 subtype: "Winged"
+subtype: "Tall"
 size: MEDIUM
