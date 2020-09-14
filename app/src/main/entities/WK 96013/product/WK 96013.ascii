@@ -1,0 +1,76 @@
+template {
+  name: "WK 96013"
+  world: "Generic"
+  description: "There is magic in the air and spells are brewing! Spell assistance has arrived to help you on your greatest adventure yet with the latest addition to the D&D Icons of the Realms product line. This new collection of pre-painted fontasy templats is a great way to check the effective area of spells on your tabletop!"
+  short_description: "Spell templates for the tabletop."
+}
+title: "Halaster's Tumultuous Templates"
+subtitle: "Spell Effects"
+date {
+  year: 2020
+  month: 2
+}
+pages: 0
+system: DND_5E
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "WizK!ds"
+price {
+  currency: "$"
+  number: 5995
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for fireball & delayed blast fireball"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for spirit guardian (angelic)"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for spirit guardian (fey)"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for spirit guardian (fiend)"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for burning hands"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for faerie fire"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for web"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for moonbean"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for hypnotic pattern"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for fear"
+}
+layout: FULL_COLOR
+series: "Icons of the Realms"
+series: "Spell Effects"

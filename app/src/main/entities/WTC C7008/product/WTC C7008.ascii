@@ -1,0 +1,220 @@
+template {
+  name: "WTC C7008"
+  world: "Forgotten Realms"
+  description: "\\large{Defeat the \\Monster{Dragon} of \\Place{Icespire Peak}\\par Dungeons & Dragons is a cooperative storytelling game that harnesses your imagination and invites you to explore a fantastic world of adventure, where heroes battle monsters, find treasures, and overcome epic quests. This box contains the essentials you need to run a D&D game with one Dungeon Master and ont to five adventurers."
+  short_description: "Everything you need to create characters and play new adventures in this introduction to the world's greatest roleplaying game."
+}
+title: "Essentials Kit"
+subtitle: "Unleash Your Imagination!"
+date {
+  year: 2020
+  month: 9
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "rulebook designer"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "adventure designer"
+}
+author {
+  name: "Baker, Richard"
+  job: "additional adventure design"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "adventure developer"
+}
+author {
+  name: "Lee, Adam"
+  job: "narrative designer"
+}
+author {
+  name: "Levitch, Ari"
+  job: "narrative designer"
+}
+author {
+  name: "Welch, Kate"
+  job: "game designer"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+  job: "adenture editor"
+}
+editor {
+  name: "Schneider, F. Wesley"
+}
+cover {
+  name: "Rutkowski, Grzegorz"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Burdett, Christiopher"
+}
+illustrator {
+  name: "Burt, Wesley"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "Debas, Olga"
+}
+illustrator {
+  name: "Ejsin, Jesper"
+}
+illustrator {
+  name: "Elliot, Craig"
+}
+illustrator {
+  name: "Giorello, Tomás"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Melmigh, Suzanne"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Stella, Zack"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+manager {
+  name: "Tovar, Dan"
+  job: "producer"
+}
+manager {
+  name: "Price, Mark"
+  job: "product concept"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production services"
+}
+manager {
+  name: "Yee, Kevin"
+  job: "production services"
+}
+manager {
+  name: "Gershman, David"
+  job: "production services"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production services"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "senior director global brand strategy"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "director licensing & publishing"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "licensing manager"
+}
+manager {
+  name: "Carroll, Bart"
+  job: "digital marketing manager"
+}
+manager {
+  name: "Tito, Gret"
+  job: "senior communications manager"
+}
+manager {
+  name: "Vo, Anna"
+  job: "manager global brand marketing"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand manager"
+}
+manager {
+  name: "Green, Pelham"
+  job: "associate brand manager"
+}
+manager {
+  name: "Benham, Bill"
+  job: "project manager"
+}
+pages: 128
+system: DND_5E
+audience: DM
+type: ADVENTURE
+style: BOX
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2499
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+  description: "Adventure booklet"
+}
+content {
+  part: BOOK
+  number: 1
+  description: "Rule booklet"
+}
+content {
+  part: MAP
+  number: 1
+  description: "double sided poster map"
+}
+content {
+  part: SCREEN
+  number: 1
+  description: "Dungeon Master's screen"
+}
+content {
+  part: SHEET
+  number: 6
+  description: "blank character sheets"
+}
+content {
+  part: DICE
+  number: 11
+  description: "polyhedral dice"
+}
+content {
+  part: CARD
+  number: 81
+  description: "describing matic items, sidekicks, and more"
+}
+layout: FULL_COLOR

@@ -1,0 +1,101 @@
+template {
+  name: "WK 96012"
+  world: "Generic"
+  description: "There is magic in the air and spells are brewing! Spell assistance has arrived to help you on your greatest adventure yet with the latest addition to the D&D Icons of the Realms product line. This new collection of pre-painted miniatures is sure to bring life to the tabletop or make a great collectible for you collection."
+  short_description: "Spell templates for the tabletop."
+}
+title: "Mighty Conjurations"
+subtitle: "Spell Effects"
+date {
+  year: 2020
+  month: 2
+}
+pages: 0
+system: DND_5E
+audience: ALL
+type: MINIATURE
+style: SMALL_BOX
+producer: "WizK!ds"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for create bonfire"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for flaming sphere"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for rope trick"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for healing spirit (beast)"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for healing spirit (fey)"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for maximilian's earthen grasp"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for morendkainen's sword"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for arcane eye"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for guardian of faith"
+}
+content {
+  part: MINIATURE
+  number: 6
+  description: "Template for bones of the earth"
+}
+content {
+  part: MINIATURE
+  number: 4
+  description: "Template for dancing lights"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for morendkainen's faithful hound"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for leomund's secret chest"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for forcecage (cage)"
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Template for forcecage (box)"
+}
+layout: FULL_COLOR
+series: "Icons of the Realms"
+series: "Spell Effects"

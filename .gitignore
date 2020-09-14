@@ -48,3 +48,4 @@ captures/
 .externalNativeBuild
 
 firestore/
+/screenshots/

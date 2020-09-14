@@ -1,0 +1,237 @@
+template {
+  name: "WTC C7248"
+  world: "Generic"
+  description: "\\large{Grab Your Pencils and Lose Your Mind!}\\par I've made a dungeon, Morty. Well, it's more than a dungeon, it's a Preakin' masterpiece packed full of Rickness --- monsters, treasure, meeseeks, bugbear, butts, you name it!\\par Since I made it, no one has ever survived this dungeon.\\bold{It's a meat grinder, Morty}. I made it to chew up the Jerrys of the world. Now all you mouth breathers in this dimension can experience my adventure-writing ingenuity!\\par So get all your friends, and get there, Morty! \\bold{Oh, and don't lose your butt.}"
+  short_description: "A D&D adventure with Rick and Morty"
+}
+title: "Dungeons & Dragons vs Rick and Morty"
+subtitle: "It's Time for Rick to Roll!!!"
+date {
+  year: 2019
+  month: 11
+}
+author {
+  name: "Welch, Kate"
+  job: "lead designer"
+}
+author {
+  name: "Hartman, Ryan"
+  job: "adventure designer and rulebook commenter"
+}
+author {
+  name: "Lee, Adam"
+  job: "adventure designer and rulebook commenter"
+}
+author {
+  name: "Levitch, Ari"
+  job: "adventure designer and rulebook commenter"
+}
+author {
+  name: "Zub, Jim"
+  job: "adventure designer and rulebook commenter"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "adventure developer"
+}
+editor {
+  name: "Schneider, F. Wesley"
+}
+editor {
+  name: "Crawford, Jeremy"
+}
+editor {
+  name: "Dillon, Dan"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+cover {
+  name: "Little, Troy"
+}
+illustrator {
+  name: "Belsile, Eic"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Gallegos, Randy"
+}
+illustrator {
+  name: "Little, Troy"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Pancoast, Ryan"
+}
+illustrator {
+  name: "Sardhina, Richard"
+}
+illustrator {
+  name: "Sikhipin, Ilya"
+}
+illustrator {
+  name: "Stawicki, Matt"
+}
+illustrator {
+  name: "Turkel, Autumn Rain"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna"
+  job: "art director"
+}
+illustrator {
+  name: "Whitters, Richard"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+cartographer {
+  name: "Welch, Kate"
+}
+cartographer {
+  name: "Whitter, Richard"
+}
+manager {
+  name: "Benham, Ben"
+  job: "playtest coordinator"
+}
+manager {
+  name: "Dan Tovar"
+  job: "producer"
+}
+manager {
+  name: "Benham, Bill"
+  job: "project manager"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production services"
+}
+manager {
+  name: "Carter, Michele"
+  job: "production services"
+}
+manager {
+  name: "Yee, Kevin"
+  job: "production services"
+}
+manager {
+  name: "Gershman, David"
+  job: "production services"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production services"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "VP, franchise & global brand strategy"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "director of licensing & publishing"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "franchise creative director manager"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "licensing manager"
+}
+manager {
+  name: "Carroll, Bart"
+  job: "marketing and communications"
+}
+manager {
+  name: "Green, Pelham"
+  job: "marketing and communications"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "marketing and communications"
+}
+manager {
+  name: "Tito, Greg"
+  job: "marketing and communications"
+}
+manager {
+  name: "Vo, Anna"
+  job: "marketing and communications"
+}
+manager {
+  name: "Lindsay, Christopher"
+  job: "product specialist"
+}
+manager {
+  name: "Dillon, Dan"
+  job: "game designer"
+}
+manager {
+  name: "Yochum, Trish"
+  job: "senior graphic designer"
+}
+manager {
+  name: "Heleotis, Lee"
+  job: "associate producer"
+}
+pages: 128
+system: DND_5E
+audience: DM
+type: ADVENTURE
+style: BOX
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2999
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+  description: "64 page rule booklet"
+}
+content {
+  part: BOOK
+  number: 1
+  description: "64 page adventure booklet"
+}
+content {
+  part: SCREEN
+  number: 1
+  description: "dungeon master screen"
+}
+content {
+  part: SHEET
+  number: 5
+  description: "pregenerated character sheets"
+}
+content {
+  part: DICE
+  number: 11
+  description: "polyhedral"
+}
+layout: FULL_COLOR

@@ -1,0 +1,566 @@
+template {
+  name: "WTC C7875"
+  world: "Forgotten Realms"
+  description: "The world's most popular roleplaying game meets the world's most popular trading card game in this campaign sourcebook, detailing the MAGIC: The Gathering world of \\Place{Theros} for use in Dungeons & Dragons.\\par Legends walk the lands of \\Place{Theros}, a realm shaped by deities and the deed of heroes. From the temples of omen-speaking oracles to the five realms of the \\Place{Underworld}, the champions of the gods vie for immortal favor and place among the world's living myths.\\par Chose a supernatural gift that sets you on the path of destiny, alighn yourself with one of \\Place{Thero}'s fifteen gods, and carve a tale of odysseys and ordeals across the domains of mortals, gods, and the death."
+  short_description: "Clash with the gods of \\Place{Theros}} in this campaign sourcebook for the world's greatest roleplaying game."
+}
+title: "Mythic Odysseys of Theros"
+subtitle: "Challenge the Gods"
+date {
+  year: 2020
+  month: 7
+}
+author {
+  name: "Schneider, F. Wesley"
+  job: "lead designer"
+}
+author {
+  name: "Wyatt, James"
+  job: "lead designer"
+}
+author {
+  name: "Levitch, Ari"
+  job: "designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "designer"
+}
+author {
+  name: "Baker, Kate"
+  job: "designer"
+}
+author {
+  name: "Benham, Bill"
+  job: "designer"
+}
+author {
+  name: "Black, Orion D."
+  job: "designer"
+}
+author {
+  name: "Compton, John"
+  job: "designer"
+}
+author {
+  name: "Digges, Kelly"
+  job: "designer"
+}
+author {
+  name: "Introcaso, James"
+  job: "designer"
+}
+author {
+  name: "Lee, Adam"
+  job: "designer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "designer"
+}
+author {
+  name: "Price, Jessica"
+  job: "designer"
+}
+author {
+  name: "Robbins, Morgan"
+  job: "designer"
+}
+author {
+  name: "Scott, Amber"
+  job: "designer"
+}
+author {
+  name: "Vaughn, Greg A."
+  job: "designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "rule developer"
+}
+author {
+  name: "Dillon, Dan"
+  job: "rule developer"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "rule developer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "rule developer"
+}
+author {
+  name: "Dommermuth, Brady"
+  job: "theros world designer"
+}
+author {
+  name: "Beyer, Doug"
+  job: "theros world designer"
+}
+author {
+  name: "Digges, Kelly"
+  job: "theros world designer"
+}
+author {
+  name: "Fleischer, Ethan"
+  job: "theros world designer"
+}
+author {
+  name: "Helland, Jenna"
+  job: "theros world designer"
+}
+author {
+  name: "Ingvarsson, Taylor"
+  job: "theros world designer"
+}
+author {
+  name: "Jarvis, Jeremy"
+  job: "theros world designer"
+}
+author {
+  name: "Lee, Adam"
+  job: "theros world designer"
+}
+author {
+  name: "Lührs, Alison"
+  job: "theros world designer"
+}
+author {
+  name: "Murin, Dawn"
+  job: "theros world designer"
+}
+author {
+  name: "Sheppard, Cynthia"
+  job: "theros world designer"
+}
+author {
+  name: "Vallas, Andrew"
+  job: "theros world designer"
+}
+author {
+  name: "Whitters, Richard"
+  job: "theros world designer"
+}
+author {
+  name: "Wyatt, James"
+  job: "theros world designer"
+}
+editor {
+  name: "Bourne, Misty"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Rose, Hannah"
+}
+editor {
+  name: "Ross, Jessica"
+}
+editor {
+  name: "Feredinos, Demitrios"
+  job: "cultural consultant"
+}
+editor {
+  name: "Annelli, Jay"
+  job: "lore consultant"
+}
+cover {
+  name: "Rainville, Jason"
+}
+cover {
+  name: "Tong, Kevin"
+}
+illustrator {
+  name: "Argyle, Steve"
+}
+illustrator {
+  name: "Baga, Volkan"
+}
+illustrator {
+  name: "Barger, Ryan"
+}
+illustrator {
+  name: "Belledin, Steven"
+}
+illustrator {
+  name: "Bradley, Noah"
+}
+illustrator {
+  name: "Burdett, Christopher"
+}
+illustrator {
+  name: "Burley, Sam"
+}
+illustrator {
+  name: "Chan, Jason"
+}
+illustrator {
+  name: "Choi, Yongjae"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "De Ro, Jonas"
+}
+illustrator {
+  name: "Deharme, Bastien L."
+}
+illustrator {
+  name: "Deschamps, Eric"
+}
+illustrator {
+  name: "Ejsing, Jesper"
+}
+illustrator {
+  name: "Elasmli, Emrah"
+}
+illustrator {
+  name: "Felix, Jason"
+}
+illustrator {
+  name: "Fong, Evyn"
+}
+illustrator {
+  name: "Graciano, Lucas"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Hamm, Nils"
+}
+illustrator {
+  name: "Han, Yeong-Hao"
+}
+illustrator {
+  name: "Horley-Orlandelli, Alex"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Jones, Jaime"
+}
+illustrator {
+  name: "Kieryluk, Igor"
+}
+illustrator {
+  name: "Kollros, Mathias"
+}
+illustrator {
+  name: "Kopinski, Karl"
+}
+illustrator {
+  name: "Koroglu, Yigit"
+}
+illustrator {
+  name: "Lee, Ryan Alexander"
+}
+illustrator {
+  name: "Ljunggren, Daniel"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+}
+illustrator {
+  name: "Lunter, Titus"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Maniak, Slawomir"
+}
+illustrator {
+  name: "Marinski, Dimitar"
+}
+illustrator {
+  name: "McKinnon, Seb"
+}
+illustrator {
+  name: "Minguez, Victor Adame"
+}
+illustrator {
+  name: "Mohrbacher, Peter"
+}
+illustrator {
+  name: "Murai, William"
+}
+illustrator {
+  name: "Nielsen, Terese"
+}
+illustrator {
+  name: "Paick, James"
+}
+illustrator {
+  name: "Palumbo, David"
+}
+illustrator {
+  name: "Pancoast, Ryan"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Park, Jung"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "Radekc, Andrea"
+}
+illustrator {
+  name: "Rahn, Chris"
+}
+illustrator {
+  name: "Rallis, Chris"
+}
+illustrator {
+  name: "Rigney, Brad"
+}
+illustrator {
+  name: "Rowan, Sam"
+}
+illustrator {
+  name: "Ryman, James"
+}
+illustrator {
+  name: "Sandner, Jasper"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Sheppard, Cynthia"
+}
+illustrator {
+  name: "Stanko, John"
+}
+illustrator {
+  name: "Stella, Zack"
+}
+illustrator {
+  name: "Steward, Matt"
+}
+illustrator {
+  name: "Stone, Chase"
+}
+illustrator {
+  name: "Swanland, Raymond"
+}
+illustrator {
+  name: "Tan, Wisnu"
+}
+illustrator {
+  name: "Thacker, John"
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Valeza, Brian"
+}
+illustrator {
+  name: "Van Der Haegen, Cyril"
+}
+illustrator {
+  name: "Velinov, Svetlin"
+}
+illustrator {
+  name: "Villeneuve, Magali"
+}
+illustrator {
+  name: "Vitale, Raoul"
+}
+illustrator {
+  name: "Voss, Johannes"
+}
+illustrator {
+  name: "Walker, Kev"
+}
+illustrator {
+  name: "Wang, Jack"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Yee, Ryan"
+}
+illustrator {
+  name: "Yum, Min"
+}
+illustrator {
+  name: "Zapata, Mames"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "senior graphic designer"
+}
+illustrator {
+  name: "Falcone, Tristan"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Adelsperger, Matt"
+  job: "additional art director"
+}
+illustrator {
+  name: "Jarvis, Jeremy"
+  job: "additional art director"
+}
+illustrator {
+  name: "Digges, Kelly"
+  job: "additional art director"
+}
+illustrator {
+  name: "Murin, Dawn"
+  job: "additional art director"
+}
+illustrator {
+  name: "Vallas, Andrew"
+  job: "additional art director"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+illustrator {
+  name: "Gershman, David"
+  job: "art administration"
+}
+cartographer {
+  name: "De Ro, Jonas"
+}
+cartographer {
+  name: "Dyson Logos"
+}
+manager {
+  name: "Dan Tovar"
+  job: "senior producer"
+}
+manager {
+  name: "Benham, Bill"
+  job: "producer"
+}
+manager {
+  name: "Hawkey, Robert"
+  job: "producer"
+}
+manager {
+  name: "Heleotis, Lea"
+  job: "producer"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "product engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "franchise & global brand strategy"
+}
+manager {
+  name: "Winninger, Ray"
+  job: "executive producer"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "director of licensing & publishing"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "licensing manager"
+}
+manager {
+  name: "Carroll, Bart"
+  job: "marketing and communications"
+}
+manager {
+  name: "Green, Pelham"
+  job: "marketing and communications"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "marketing and communications"
+}
+manager {
+  name: "Narciso, Shauna"
+  job: "marketing and communications"
+}
+manager {
+  name: "Penrose, Lysa"
+  job: "marketing and communications"
+}
+manager {
+  name: "Tanji, Emi"
+  job: "marketing and communications"
+}
+manager {
+  name: "Tito, Greg"
+  job: "marketing and communications"
+}
+manager {
+  name: "Vo, Anna"
+  job: "marketing and communications"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D IP development"
+}
+manager {
+  name: "Whitters, Richard"
+  job: "D&D IP development"
+}
+manager {
+  name: "Wood, Shawn"
+  job: "D&D IP development"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand manager"
+}
+pages: 256
+system: DND_5E
+audience: DM
+type: SOURCEBOOK
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

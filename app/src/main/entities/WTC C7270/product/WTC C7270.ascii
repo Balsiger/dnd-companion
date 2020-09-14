@@ -1,0 +1,307 @@
+template {
+  name: "WTC C7270"
+  world: "Generic"
+  description: "A war brews on a continent that has withstood more than its fair share of conflict. The \\Place{Dwendalian Empire} and the \\Place{Kryn Dynasty} are carving up the lands around them, and only the greatest heroes would dare stand between them. Somewhere in the far corners of this war-torn landscape are secrets that could end this conflict and usher in a new age of peace --- or burn the world to a cinder.\\par Create a band of heroes and embark on a journey across the continent of \\Place{Wildemount}, the setting for season 2 of the hit series Critical Role. Within this book, you'll find new character options, a heroic chronicle to help you craft your character's backstory, four different starting adventures, and everything a Dungeon Master needs to breathe life into a \\Place{Wildemount}-base campaign."
+  short_description: "Create your own Critical Role campaigns with this sourcebook for the world's greatest roleplaying game."
+}
+title: "Explorer's Guide to Wildemount"
+subtitle: "How Do You Want to Do This?"
+date {
+  year: 2020
+  month: 3
+}
+author {
+  name: "Mercer, Matthew"
+  job: "lead writer"
+}
+author {
+  name: "Haeck, James J."
+  job: "writer"
+}
+author {
+  name: "Introcaso, James"
+  job: "writer"
+}
+author {
+  name: "Lockey, Chris"
+  job: "writer"
+}
+editor {
+  name: "Perkins, Christopher"
+  job: "managing editor"
+}
+editor {
+  name: "Grey, Scott Fitzgerald"
+}
+editor {
+  name: "Rose, Hannah"
+}
+editor {
+  name: "Schneider, F. Wesley"
+}
+cover {
+  name: "Kerschl, Karl"
+}
+illustrator {
+  name: "Amundsen, Even"
+}
+illustrator {
+  name: "Baumann, Jonah"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Bittencourt, Dan"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Burt, Wesley"
+}
+illustrator {
+  name: "Cearly, Clint"
+}
+illustrator {
+  name: "Chevrier, Jedd"
+}
+illustrator {
+  name: "Chippy"
+}
+illustrator {
+  name: "Christensen, David René"
+}
+illustrator {
+  name: "CoubleOfKooks"
+}
+illustrator {
+  name: "Cueto, Joma"
+}
+illustrator {
+  name: "Danner, Alayna"
+}
+illustrator {
+  name: "Davis, Kent"
+}
+illustrator {
+  name: "Dawes, Nikki"
+}
+illustrator {
+  name: "Defois, Axel"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Lithen, Linda"
+}
+illustrator {
+  name: "Mahon, Jessica"
+}
+illustrator {
+  name: "Mar, Andrew"
+}
+illustrator {
+  name: "Medeiros, Marcela"
+}
+illustrator {
+  name: "Michel, Robson"
+}
+illustrator {
+  name: "Montes, Goñi"
+}
+illustrator {
+  name: "Nordsol, Irina"
+}
+illustrator {
+  name: "Oakley, Stephen"
+}
+illustrator {
+  name: "Olausson, Robin"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Prima, Livia"
+}
+illustrator {
+  name: "Ravenna, Jenn"
+}
+illustrator {
+  name: "Robles, Nick"
+}
+illustrator {
+  name: "Santos, Caio E."
+}
+illustrator {
+  name: "Sladke, David"
+}
+illustrator {
+  name: "Valeza, Brian"
+}
+illustrator {
+  name: "Veltkamp, Anna"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Wuzyk, Zuzanna"
+}
+illustrator {
+  name: "Zee, Anna"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Falcone, Tristan"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+illustrator {
+  name: "Gershman, David"
+  job: "art administrator"
+}
+cartographer {
+  name: "Rue, Deven"
+}
+manager {
+  name: "Benham, Bill"
+  job: "producer"
+}
+manager {
+  name: "Heleotic, Lea"
+  job: "producer"
+}
+manager {
+  name: "Tovar, Dan"
+  job: "producer"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "product engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+manager {
+  name: "Stewart, Nathan"
+  job: "franchise & global brand strategy"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "director of licensing & publishing"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "licensing manager"
+}
+manager {
+  name: "Carroll, Bart"
+  job: "marketing and communications"
+}
+manager {
+  name: "Green, Pelham"
+  job: "marketing and communications"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "marketing and communications"
+}
+manager {
+  name: "Narciso, Shauna"
+  job: "marketing and communications"
+}
+manager {
+  name: "Tanji, Emi"
+  job: "marketing and communications"
+}
+manager {
+  name: "Tito, Greg"
+  job: "marketing and communications"
+}
+manager {
+  name: "Vo, Anna"
+  job: "marketing and communications"
+}
+manager {
+  name: "Lee, Adam"
+  job: "D&D IP development"
+}
+manager {
+  name: "Levitch, Ari"
+  job: "D&D IP development"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D IP development"
+}
+manager {
+  name: "Whitters, Richard"
+  job: "D&D IP development"
+}
+manager {
+  name: "Wood, Shawn"
+  job: "D&D IP development"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand manager"
+}
+manager {
+  name: "Benham, Bill"
+  job: "playtest coordination"
+}
+pages: 256
+system: DND_5E
+audience: DM
+type: SOURCEBOOK
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: MAP
+  number: 1
+  description: "poser map"
+}
+layout: FULL_COLOR

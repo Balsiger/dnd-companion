@@ -121,7 +121,7 @@ price {
   precision: 100
 }
 content {
-  part: Dice
+  part: DICE
   number: 11
   description: "two d20s, one d12, two d10s, one d8, four d6s, one d4"
 }
