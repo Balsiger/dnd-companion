@@ -15,25 +15,47 @@
       },
       "oauth_client": [
         {
+          "client_id": "394355712566-gai7cdt9r5m88htkkgr858ll7c4ndlou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.ixitxachitls.companion",
+            "certificate_hash": "63cf8c40a6fa98a27a0587da0817e0480344c3a9"
+          }
+        },
+        {
+          "client_id": "394355712566-ie9275u46v1rsu7mkt8tj45oni7mpg3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.ixitxachitls.companion",
+            "certificate_hash": "c487b6eed08cd87ef6b1e283f6bab2bbed03dffd"
+          }
+        },
+        {
+          "client_id": "394355712566-g960hikfvdr1t3stsud0a1d1qmjkhkpu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.ixitxachitls.companion",
+            "certificate_hash": "7ca69755e0fbf58287e3e6a17303bb16ecdf2411"
+          }
+        },
+        {
           "client_id": "394355712566-2j6nni6s2lu4bi757b45i1d0gcov163s.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCXpmc4R75J6Y1TBnrFC_kUJzavsMMFGuo"
+          "current_key": "AIzaSyB-XmTA1FpuXFb0Xv4cRm_AmQmll_hBnVY"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394355712566-2j6nni6s2lu4bi757b45i1d0gcov163s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
