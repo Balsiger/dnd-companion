@@ -1,0 +1,9 @@
+template {
+  name: "Tomb Tapper"
+}
+set: "Rime of the Frostmaiden"
+rarity: RARE
+number: 42
+race: "Tomb Tapper"
+type: "Construct"
+size: HUGE

@@ -1,0 +1,12 @@
+template {
+  name: "Human Trapper"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 15
+type: "Humanoid"
+race: "Human"
+class: "Ranger"
+subtype: "Male"
+subtype: "Bow"
+size: MEDIUM

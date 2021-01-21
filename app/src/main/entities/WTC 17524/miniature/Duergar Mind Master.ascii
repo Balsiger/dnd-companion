@@ -1,0 +1,9 @@
+template {
+  name: "Duergar Mind Master"
+}
+set: "Rime of the Frostmaiden"
+rarity: COMMON
+number: 6
+type: "Humanoid"
+race: "Duergar"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Kobold Mountaineer"
+}
+set: "Rime of the Frostmaiden"
+rarity: COMMON
+number: 12
+type: "Humanoid"
+race: "Kobold"
+size: SMALL

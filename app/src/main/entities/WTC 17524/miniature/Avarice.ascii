@@ -1,0 +1,10 @@
+template {
+  name: "Avarice"
+}
+set: "Rime of the Frostmaiden"
+rarity: RARE
+number: 39
+race: "Tiefling"
+type: "Humanoid"
+class: "Wizard"
+size: MEDIUM

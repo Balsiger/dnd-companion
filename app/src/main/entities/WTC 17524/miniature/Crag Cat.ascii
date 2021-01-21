@@ -1,0 +1,8 @@
+template {
+  name: "Crag Cat"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 25
+type: "Monstrosity"
+size: LARGE

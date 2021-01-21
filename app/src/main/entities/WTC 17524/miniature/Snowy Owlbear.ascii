@@ -1,0 +1,9 @@
+template {
+  name: "Snowy Owlbear"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 28
+type: "Monstrosity"
+race: "Owlbear"
+size: LARGE

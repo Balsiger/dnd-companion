@@ -1,0 +1,10 @@
+template {
+  name: "Frost Salamander"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 33
+race: "Frost Salamander"
+type: "Elemental"
+subtype: "cold"
+size: HUGE

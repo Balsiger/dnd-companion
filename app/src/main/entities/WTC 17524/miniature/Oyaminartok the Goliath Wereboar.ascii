@@ -1,0 +1,12 @@
+template {
+  name: "Oyaminartok the Goliath Wereboar"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 26
+type: "Humanoid"
+race: "Wereboar"
+subtype: "Shapechanger"
+subtype: "Goliath"
+subtype: "Boar"
+size: LARGE

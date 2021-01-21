@@ -1,0 +1,11 @@
+template {
+  name: "Orog Ranger"
+}
+set: "Rime of the Frostmaiden"
+rarity: COMMON
+number: 7
+type: "Humanoid"
+race: "Orc"
+class: "Fighter"
+subtype: "Axe"
+size: MEDIUM

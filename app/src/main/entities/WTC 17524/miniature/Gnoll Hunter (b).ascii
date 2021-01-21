@@ -1,0 +1,11 @@
+template {
+  name: "Gnoll Hunter (b)"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 24
+number_affix: "b"
+type: "Humanoid"
+race: "Gnoll"
+size: MEDIUM
+subtype: "Bow"

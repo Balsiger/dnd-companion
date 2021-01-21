@@ -1,0 +1,10 @@
+template {
+  name: "Night Hag (RF)"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 23
+race: "Night Hag"
+type: "Fey"
+subtype: "Hag"
+size: MEDIUM

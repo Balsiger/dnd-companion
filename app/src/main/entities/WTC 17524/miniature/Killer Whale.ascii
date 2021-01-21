@@ -1,0 +1,9 @@
+template {
+  name: "Killer Whale"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 30
+race: "Whale"
+type: "Animal"
+size: HUGE

@@ -1,0 +1,10 @@
+template {
+  name: "Frost Giant (RF)"
+}
+set: "Rime of the Frostmaiden"
+rarity: RARE
+number: 44
+race: "Frost Giant"
+type: "Giant"
+subtype: "Cold"
+size: HUGE

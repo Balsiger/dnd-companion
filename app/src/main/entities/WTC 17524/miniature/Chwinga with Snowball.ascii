@@ -1,0 +1,9 @@
+template {
+  name: "Chwinga with Snowball"
+}
+set: "Rime of the Frostmaiden"
+rarity: COMMON
+number: 3
+type: "Elemental"
+race: "Chwinga"
+size: SMALL

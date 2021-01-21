@@ -1,0 +1,11 @@
+template {
+  name: "Gnome Ceremorph"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 22
+type: "Aberration"
+race: "Gnome Ceremorph"
+subtype: "Gnome"
+subtype: "Mind Flayer"
+size: SMALL

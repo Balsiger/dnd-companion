@@ -1,0 +1,11 @@
+template {
+  name: "Vellynne Harpell"
+}
+set: "Rime of the Frostmaiden"
+rarity: RARE
+number: 41
+race: "Human"
+type: "Humanoid"
+class: "Wizard"
+subtype: "Female"
+size: MEDIUM

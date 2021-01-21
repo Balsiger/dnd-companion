@@ -1,0 +1,9 @@
+template {
+  name: "Knucklehead Trout"
+}
+set: "Rime of the Frostmaiden"
+rarity: COMMON
+number: 9
+type: "Animal"
+race: "Knucklehead Trout"
+size: SMALL

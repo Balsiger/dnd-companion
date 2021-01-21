@@ -1,0 +1,10 @@
+template {
+  name: "Nass Lantomir"
+}
+set: "Rime of the Frostmaiden"
+rarity: RARE
+number: 38
+race: "Human"
+type: "Humanoid"
+class: "Wizard"
+size: MEDIUM

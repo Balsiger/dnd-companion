@@ -1,0 +1,11 @@
+template {
+  name: "Flind Trapper"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 18
+type: "Humanoid"
+race: "Gnoll"
+class: "Fighter"
+size: MEDIUM
+subtype: "Flail"

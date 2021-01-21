@@ -1,0 +1,11 @@
+template {
+  name: "Kobold Vampire Spawn"
+}
+set: "Rime of the Frostmaiden"
+rarity: COMMON
+number: 13
+type: "Humanoid"
+race: "Vampire Spawn"
+subtype: "Undead"
+subtype: "Kobold"
+size: SMALL

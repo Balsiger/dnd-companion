@@ -1,0 +1,12 @@
+template {
+  name: "Reghed Nomad with Spear"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 14
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+subtype: "Male"
+subtype: "Spear"
+size: MEDIUM

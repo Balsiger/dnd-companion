@@ -1,0 +1,12 @@
+template {
+  name: "Reghed Nomad with Cage"
+}
+set: "Rime of the Frostmaiden"
+rarity: COMMON
+number: 1
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+subtype: "Male"
+subtype: "Sword"
+size: MEDIUM

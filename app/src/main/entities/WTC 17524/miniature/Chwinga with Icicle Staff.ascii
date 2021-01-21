@@ -1,0 +1,9 @@
+template {
+  name: "Chwinga with Icicle Staff"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 16
+type: "Elemental"
+race: "Chwinga"
+size: SMALL

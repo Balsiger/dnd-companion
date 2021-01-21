@@ -1,0 +1,9 @@
+template {
+  name: "Winter's Womb"
+}
+set: "Rime of the Frostmaiden"
+rarity: RARE
+number: 36
+race: "Auril (Third Form)"
+type: "Elemental"
+size: MEDIUM

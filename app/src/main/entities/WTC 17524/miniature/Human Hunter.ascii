@@ -1,0 +1,12 @@
+template {
+  name: "Human Hunter"
+}
+set: "Rime of the Frostmaiden"
+rarity: COMMON
+number: 2
+type: "Humanoid"
+race: "Human"
+class: "Ranger"
+subtype: "Male"
+subtype: "Sword"
+size: LARGE

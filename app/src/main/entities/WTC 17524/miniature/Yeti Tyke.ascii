@@ -1,0 +1,9 @@
+template {
+  name: "Yeti Tyke"
+}
+set: "Rime of the Frostmaiden"
+rarity: COMMON
+number: 5
+type: "Monstrosity"
+race: "Yeti"
+size: SMALL

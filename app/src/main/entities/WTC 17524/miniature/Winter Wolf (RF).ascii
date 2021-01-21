@@ -1,0 +1,10 @@
+template {
+  name: "Winter Wolf (RF)"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 29
+race: "Wolf"
+type: "Monstrosity"
+subtype: "Animal"
+size: LARGE

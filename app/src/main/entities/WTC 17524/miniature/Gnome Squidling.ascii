@@ -1,0 +1,11 @@
+template {
+  name: "Gnome Squidling"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 21
+type: "Aberration"
+race: "Gnome Squidling"
+subtype: "Gnome"
+subtype: "Mind Flayer"
+size: SMALL

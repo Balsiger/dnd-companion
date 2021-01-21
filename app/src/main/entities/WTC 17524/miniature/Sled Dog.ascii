@@ -1,0 +1,10 @@
+template {
+  name: "Sled Dog"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 19
+type: "Animal"
+race: "Dog"
+size: MEDIUM
+

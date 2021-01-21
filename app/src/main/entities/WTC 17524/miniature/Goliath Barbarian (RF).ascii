@@ -1,0 +1,10 @@
+template {
+  name: "Goliath Barbarian"
+}
+set: "Rime of the Frostmaiden"
+rarity: COMMON
+number: 8
+type: "Humanoid"
+race: "Goliath"
+class: "Barbarian"
+size: MEDIUM

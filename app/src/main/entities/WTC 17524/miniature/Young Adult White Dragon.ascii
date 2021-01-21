@@ -1,0 +1,10 @@
+template {
+  name: "Young Adult White Dragon"
+}
+set: "Rime of the Frostmaiden"
+rarity: RARE
+number: 43
+race: "White Dragon"
+type: "Dragon"
+subtype: "Chromatic"
+size: HUGE

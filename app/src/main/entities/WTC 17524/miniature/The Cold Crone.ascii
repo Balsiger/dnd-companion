@@ -1,0 +1,9 @@
+template {
+  name: "The Cold Crone"
+}
+set: "Rime of the Frostmaiden"
+rarity: RARE
+number: 34
+race: "Auril (First Form)"
+type: "Monstrosity"
+size: MEDIUM

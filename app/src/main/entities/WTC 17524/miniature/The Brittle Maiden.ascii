@@ -1,0 +1,9 @@
+template {
+  name: "The Brittle Maiden"
+}
+set: "Rime of the Frostmaiden"
+rarity: RARE
+number: 35
+race: "Auril (Second Form)"
+type: "Elemental"
+size: MEDIUM

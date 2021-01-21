@@ -1,0 +1,12 @@
+template {
+  name: "Tekeli-Li"
+}
+set: "Rime of the Frostmaiden"
+rarity: RARE
+number: 40
+race: "Gnoll Vampire"
+type: "Undead"
+subtype: "Shapechanger"
+subtype: "Vampire"
+subtype: "Gnoll"
+size: MEDIUM

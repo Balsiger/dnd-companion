@@ -97,13 +97,17 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
 
   public void finishLoading(String text) {
     runOnUiThread(() -> {
-      actions.finishLoading(text);
+      if (actions != null) {
+        actions.finishLoading(text);
+      }
     });
   }
 
   public void incrementProgress() {
     runOnUiThread(() -> {
-      actions.incrementProgress();
+      if (actions != null) {
+        actions.incrementProgress();
+      }
     });
   }
 
@@ -186,11 +190,15 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
   }
 
   public void startLoading(String text, int count) {
-    actions.startLoading(text, count);
+    if (actions != null) {
+      actions.startLoading(text, count);
+    }
   }
 
   public void startLoading(String text) {
-    actions.startLoading(text);
+    if (actions != null) {
+      actions.startLoading(text);
+    }
   }
 
   @Override
@@ -209,13 +217,12 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
     setTitle(getString(R.string.app_name));
+    actions = findViewById(R.id.actions);
 
     View container = findViewById(R.id.activity_main);
     // Setup the status first, in case any fragment wants to log something.
     status = (StatusView) container.findViewById(R.id.status);
     Status.setView(status);
-
-    actions = findViewById(R.id.actions);
 
     CompanionFragments.get().show();
   }
@@ -273,7 +280,7 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
   }
 
   @Override
-  protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
 
     switch (requestCode) {
@@ -315,6 +322,8 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
     // Log the user in.
     List<AuthUI.IdpConfig> providers = Arrays.asList(new AuthUI.IdpConfig.GoogleBuilder().build());
 
+    analytics = FirebaseAnalytics.getInstance(this);
+
     // Create and launch sign-in intent
     startActivityForResult(AuthUI.getInstance()
         .createSignInIntentBuilder()
@@ -323,7 +332,6 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
 
     super.onCreate(state);
 
-    analytics = FirebaseAnalytics.getInstance(this);
     create();
   }
 }

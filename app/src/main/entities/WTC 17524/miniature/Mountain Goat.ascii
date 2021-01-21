@@ -1,0 +1,9 @@
+template {
+  name: "Mountain Goat"
+}
+set: "Rime of the Frostmaiden"
+rarity: COMMON
+number: 10
+type: "Animal"
+race: "Mountain Goat"
+size: MEDIUM

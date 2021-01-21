@@ -1,0 +1,9 @@
+template {
+  name: "Reindeer"
+}
+set: "Rime of the Frostmaiden"
+rarity: UNCOMMON
+number: 27
+type: "Animal"
+race: "Reindeer"
+size: LARGE
