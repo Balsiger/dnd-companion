@@ -37,6 +37,7 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Templates;
+import net.ixitxachitls.companion.data.TemplatesStore;
 import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
@@ -45,7 +46,10 @@ import net.ixitxachitls.companion.data.documents.Encounters;
 import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.templates.AdventureTemplate;
+import net.ixitxachitls.companion.data.templates.SpellTemplate;
+import net.ixitxachitls.companion.data.templates.values.SpellGroup;
 import net.ixitxachitls.companion.data.values.Item;
+import net.ixitxachitls.companion.ui.dialogs.SpellDialog;
 import net.ixitxachitls.companion.ui.views.CloudImageView;
 import net.ixitxachitls.companion.ui.views.ImageDropTarget;
 import net.ixitxachitls.companion.ui.views.MonsterChipView;
@@ -77,6 +81,8 @@ public class AdventureView extends LinearLayout {
   private LinearLayout categoryText;
   private TabLayout categoryTabs;
   private ViewPager itemsPager;
+  private TextWrapper<TextView> spellsTitle;
+  private LinearLayout spells;
   private LinearLayout creatures;
   private LinearLayout characters;
 
@@ -100,6 +106,8 @@ public class AdventureView extends LinearLayout {
   public void hideDetails() {
     categoryTabs.setVisibility(GONE);
     categoryText.setVisibility(GONE);
+    spellsTitle.invisible();
+    spells.setVisibility(GONE);
     creatures.setVisibility(GONE);
     itemsPager.setVisibility(GONE);
     characters.setVisibility(GONE);
@@ -118,6 +126,8 @@ public class AdventureView extends LinearLayout {
   public void showDetails() {
     categoryTabs.setVisibility(VISIBLE);
     categoryText.setVisibility(VISIBLE);
+    spellsTitle.visible();
+    spells.setVisibility(VISIBLE);
     creatures.setVisibility(VISIBLE);
     itemsPager.setVisibility(VISIBLE);
     characters.setVisibility(VISIBLE);
@@ -126,8 +136,10 @@ public class AdventureView extends LinearLayout {
   public void updateCampaign(Campaign campaign) {
     this.campaign = Optional.of(campaign);
 
-    productImage.setImage("products/" + Adventures.extractShortId(campaign.getAdventureId()),
-        R.drawable.noun_book_1411063);
+    if (!campaign.getAdventureId().isEmpty()) {
+      productImage.setImage("products/" + Adventures.extractShortId(campaign.getAdventureId()),
+          R.drawable.noun_book_1411063);
+    }
     adventure.onClick(this::selectAdventure);
     encounterView.onClick(this::selectEncounter);
     updateAdventure(Templates.get().getAdventureTemplates()
@@ -227,6 +239,8 @@ public class AdventureView extends LinearLayout {
     });
 
     itemsPager = view.findViewById(R.id.items_pager);
+    spells = view.findViewById(R.id.spells);
+    spellsTitle = TextWrapper.wrap(view.findViewById(R.id.spells_title));
     creatures = view.findViewById(R.id.creatures);
     characters = view.findViewById(R.id.characters);
 
@@ -263,15 +277,15 @@ public class AdventureView extends LinearLayout {
 
   private void selectEncounter() {
     if (campaign.isPresent()) {
-      Optional<AdventureTemplate> adventure =
-          Templates.get().getAdventureTemplates().get(campaign.get().getAdventureId());
+      Optional<AdventureTemplate> adventure = Templates.get().getAdventureTemplates()
+          .get(Adventures.extractShortId(campaign.get().getAdventureId()));
       if (adventure.isPresent()) {
         ListSelectDialog dialog = ListSelectDialog.newInstance(R.string.select_encounter,
             ImmutableList.of(campaign.get().getEncounterId()),
             adventure.get().getEncounters().stream()
                 .map(t -> new ListSelectDialog.Entry(formatEncounterName(t.getId(),
                     t.getName()),
-                    Encounters.createId(adventure.get().getId(), t.getId())))
+                    Encounters.createId(campaign.get().getAdventureId(), t.getId())))
                 .collect(Collectors.toList()), R.color.campaign);
         dialog.setSelectListener(this::selectedEncounter);
         dialog.display();
@@ -500,7 +514,15 @@ public class AdventureView extends LinearLayout {
          updateEncounter(Optional.empty());
        }
     } else {
-      adventure.text(campaign.isPresent() ? campaign.get().getAdventureId() : "");
+      if (campaign.isPresent()) {
+        if (campaign.get().getAdventureId().isEmpty()) {
+          adventure.text("<Select Adventure>");
+        } else {
+          adventure.text(campaign.get().getAdventureId());
+        }
+      } else {
+        adventure.text("<No Campaign found>");
+      }
       updateEncounter(Optional.empty());
     }
   }
@@ -515,7 +537,29 @@ public class AdventureView extends LinearLayout {
       categoryTabs.getTabAt(0).select();
       showReadAloud();
 
+      spells.removeAllViews();
       creatures.removeAllViews();
+
+      TemplatesStore<SpellTemplate> spellTemplates = Templates.get().getSpellTemplates();
+      for (SpellGroup group : encounterTemplate.get().getSpellGroups()) {
+        spells.addView(TextWrapper.wrap(new TextView(getContext()))
+            .text(group.getName() + " (" + Strings.numeral(group.getCasterLevel()) + ", "
+                + Strings.signed(group.getAbilityBonus()) + ")").get());
+        for (String spell : group.getSpells()) {
+          Optional<SpellTemplate> template = spellTemplates.get(spell);
+          String text = "";
+          String name = template.isPresent() ? template.get().getName() : spell;
+          String description = template.isPresent() ?
+              template.get().getShortDescription() : "(spell not found)";
+          spells.addView(TextWrapper.wrap(new TextView(getContext()))
+              .text(name + " - " + description)
+              .onClick(() -> {
+            SpellDialog.newInstance(name, group.getCasterLevel(),
+                group.getAbilityBonus(), group.getSpellClass()).display();
+          }).get());
+        }
+      }
+
       if (campaign.isPresent()) {
         encounter = Optional.of(CompanionApplication.get().encounters()
             .getOrInitialize(campaign.get().getEncounterId()));
@@ -538,7 +582,8 @@ public class AdventureView extends LinearLayout {
     } else {
       description.text("");
       encounterView.text(campaign.isPresent() ?
-          Encounters.extractShortId(campaign.get().getEncounterId()) : "");
+          (campaign.get().getEncounterId().isEmpty() ? "<Select Encounter>" :
+              Encounters.extractShortId(campaign.get().getEncounterId())) : "");
       locations.text("");
       categoryText.removeAllViews();
       creatures.removeAllViews();

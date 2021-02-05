@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The subject\342\200\232\303\204\303\264s outline appears blurred, shifting and wavering. This distortion grants the subject concealment (20% miss chance).  A see invisibility spell does not counteract the blur effect, but a true seeing spell does.  Opponents that cannot see the subject ignore the spell\342\200\232\303\204\303\264s effect (though fighting an unseen opponent carries penalties of its own; see page 151).  The subject of a blur spell."
+  short_description: "Attacks miss subject 20% of the time."
 }
 school: ILLUSION
 subschool: GLAMER
@@ -26,25 +27,17 @@ level {
   level: 2
 }
 components: VERBOSE
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Creature touched"
+special_range: TOUCHtarget: "Creature touched"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

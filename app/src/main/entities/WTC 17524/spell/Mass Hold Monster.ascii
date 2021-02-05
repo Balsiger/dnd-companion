@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like hold person, except that it affects multiple creatures and holds any living creature that fails its Will save."
+  short_description: "As hold monster, but all within 30 ft."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -23,20 +24,8 @@ level {
   spell_class: WIZARD
   level: 9
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One or more creatures, no two of which can be more than 30 ft apart"
+  standard_actions: 1
+}target: "One or more creatures, no two of which can be more than 30 ft apart"
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Grasses, weeds, bushes, and even trees wrap, twist, and entwine about creatures in the area or those that enter the area, holding them fast and causing them to become entangled. The creature can break free and move half its normal speed by using a full-round action to make a DC 20 Strength check or a DC 20 Escape Artist check. A creature that succeeds on a Reflex save is not entangled but can still move at only half speed through the area. Each round on your turn, the plants once again attempt to entangle all creatures that have avoided or escaped entanglement.  Note: The DM may alter the effects of the spell somewhat, based on the nature of the entangling plants."
+  short_description: "Plants entangle everyone in 40-ft.-radius."
 }
 school: TRANSMUTATION
 summary: "Make natural growth entwine creatures in a 40 ft spread up to [[400 + (10 * $level)]] ft away for $level minutes (D). Ref DC $dc to avoid, but still move at half speed only. Break free and move half for DC 20 Str or DC 20 Escape Artist."
@@ -27,25 +28,18 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: LONG
-range {
-}
-effect {
-  distance {
-  }
-}
 area: "Plants in a 40-ft-radius spread"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Reflex partial; see text"
+spell_resistance: "No"

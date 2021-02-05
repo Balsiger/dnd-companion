@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like hold person, except that it affects an animal instead of a humanoid."
+  short_description: "Paralyzes one animal for 1 round/level."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -28,20 +29,8 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One animal"
+  standard_actions: 1
+}target: "One animal"
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

@@ -12,7 +12,7 @@ template {
   }
   world: "Generic"
   description: "This abjuration grants a creature limited protection from damage of whichever one of five energy types you select: acid, cold, electricity, fire, or sonic. The subject gains energy resistance 10 against the energy type chosen, meaning that each time the creature is subjected to such damage (whether from a natural or magical source), that damage is reduced by 10 points before being applied to the creature\'s hit points. The value of the energy resistance granted increases to 20 points at 7th level and to a maximum of 30 points at 11th level. The spell protects the recipient\'s equipment as well.  \n\n\\Spell{Resist energy} absorbs only damage. The subject could still suffer unfortunate side effects, such as drowning in acid (since drowning damage comes from lack of oxygen) or becoming encased in ice. \n\n\\em{Note:} \\Spell{Resist energy} overlaps (and does not stack with) \\Spell{protection from energy}. If a character is warded by protection from energy and resist energy, the protection spell absorbs damage until its power is exhausted."
-  short_description: "Ignores first [[range($level, 1: 10,  7: 20, 11: 30]] points of damage/attack from specified energy type. "
+  short_description: "Ignores 10 (or more) points of damage/attack from"
 }
 school: ABJURATION
 subschool: NONE
@@ -47,24 +47,12 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Creature touched"
+special_range: TOUCHtarget: "Creature touched"
 duration {
   duration_description: "/1"
-  duration {
   }
-  additional_duration {
-  }
-}
 saving_throw: "fortitude negates (harmless)"
 spell_resistance: "yes (harmless)"

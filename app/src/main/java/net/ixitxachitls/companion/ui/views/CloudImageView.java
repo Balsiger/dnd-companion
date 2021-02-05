@@ -68,12 +68,12 @@ public class CloudImageView extends LinearLayout {
     image = Wrapper.<ImageView>wrap(view, R.id.image).onDoubleTap(this::reload)
         .onClick(this::enlarged);
     progressBar = view.findViewById(R.id.progress);
-    progressBar.setIndeterminate(true);
 
     addView(view);
   }
 
   public void setImage(@DrawableRes int drawable) {
+    progressBar.setIndeterminate(true);
     image.get().setImageDrawable(getContext().getDrawable(drawable));
   }
 

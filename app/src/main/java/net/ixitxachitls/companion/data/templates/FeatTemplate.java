@@ -43,7 +43,7 @@ public class FeatTemplate extends StoredTemplate<Template.FeatTemplateProto> {
   ;
 
   public FeatTemplate(Template.FeatTemplateProto proto, String name) {
-    super(name);
+    super(proto.getTemplate(), name);
     this.proto = proto;
   }
 

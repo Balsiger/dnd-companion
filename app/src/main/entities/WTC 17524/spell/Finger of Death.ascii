@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You can slay any one living creature within range. The target is entitled to a Fortitude saving throw to survive the attack. If the save is successful, the creature instead takes 3d6 points of damage +1 point per caster level (maximum +25). The subject might die from damage even if it succeeds on its saving throw."
+  short_description: "Kills one subject."
 }
 school: NECROMANCY
 summary: "One living creature within [[25 + (($level / 2) * 5)]] ft For DC $dc for 3d6 + [[min(25, $level)]] or dies."
@@ -27,22 +28,13 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "One living creature"
 duration {
   duration_description: "Instantaneous"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Fortitude partial"
+spell_resistance: "Yes"

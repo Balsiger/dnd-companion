@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The subject contracts a disease selected from the table below, which strikes immediately (no incubation period). The DC noted is for the subsequent saves (use contagion\342\200\232\303\204\303\264s normal save DC for the initial saving throw).  Disease DC Damage Blinding sickness 16 1d4 Str1 Cackle fever 16 1d6 Wis Filth fever 12 1d3 Dex and 1d3 Con Mindfire 12 1d4 Int Red ache 15 1d6 Str Shakes 13 1d8 Dex Slimy doom 14 1d4 Con 1 Each time a victim takes 2 or more points of Strength damage from blinding sickness, he or she must make another Fortitude save (using the disease\342\200\232\303\204\303\264s save DC) or be permanently blinded.  See the Dungeon Master\342\200\232\303\204\303\264s Guide for descriptions of each disease, as well as for the general effects of disease."
+  short_description: "Infects subject with chosen disease."
 }
 school: NECROMANCY
 summary: "Touch, infect with disease, striking immediately, Fort DC [[10 + $ability + switch($class, Cleric|Destruction|Druid: 3, Sorcerer|Wizard: 4)]] negates. "
@@ -35,22 +36,14 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "Living creature touched"
 duration {
   duration_description: "Instantaneous"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Fortitude negates"
+spell_resistance: "Yes"
+

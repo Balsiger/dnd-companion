@@ -34,6 +34,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.ui.views.wrappers.AbstractTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -132,7 +133,8 @@ public class ImageDropTarget extends LinearLayout implements View.OnDragListener
         false);
     this.image = Wrapper.<ImageView>wrap(view, R.id.icon);
     this.image.get().setImageDrawable(icon);
-    this.text = TextWrapper.wrap(view, R.id.text).text(text).noWrap();
+    this.text = TextWrapper.wrap(view, R.id.text).text(text).noWrap()
+        .align(AbstractTextWrapper.Align.CENTER);
     addView(view);
 
     if (image.get().getBackgroundTintList() == null) {

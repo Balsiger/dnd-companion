@@ -286,6 +286,9 @@ message DurationProto {
   int32 hours = 3;
   int32 days = 4;
   int32 years = 5;
+  int32 standard_actions = 6;
+  int32 swift_actions = 7;
+  int32 free_actions = 8;
 }
 
 message DateProto {

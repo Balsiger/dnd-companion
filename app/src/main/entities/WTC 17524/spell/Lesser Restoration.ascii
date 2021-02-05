@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "Lesser restoration dispels any magical effects reducing one of the subject\'s ability scores (such as ray of enfeeblement) or cures 1d4 points of temporary ability damage to one of the subject\'s ability scores (such as from a shadow\'s touch or from poison). It also eliminates any fatigue suffered by the character, and improves an exhausted condition to fatigued. It does not restore permanent ability drain."
+  short_description: "Dispels magical ability penalty or repairs 1d4 ability damage."
 }
 school: CONJURATION
 subschool: HEALING
@@ -28,22 +29,10 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  rounds: 3
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Creature touched"
+special_range: TOUCHtarget: "Creature touched"
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}

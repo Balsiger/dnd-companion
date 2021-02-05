@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like silent image, except that minor image includes some minor sounds but not understandable speech."
+  short_description: "As silent image, plus some sound."
 }
 school: ILLUSION
 subschool: FIGMENT
@@ -25,20 +26,8 @@ level {
   spell_class: WIZARD
   level: 2
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
+  standard_actions: 1
+}duration {
   duration_description: "Concentration +  2 rounds"
-  duration {
   }
-  additional_duration {
-  }
-}

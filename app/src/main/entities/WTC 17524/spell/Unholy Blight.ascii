@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You call up unholy power to smite your enemies. The power takes the form of a cold, cloying miasma of greasy darkness.  Only good and neutral (not evil) creatures are harmed by the spell.  The spell deals 1d8 points of damage per two caster levels (maximum 5d8) to a good creature (or 1d6 per caster level, maximum 10d6, to a good outsider) and causes it to be sickened for 1d4 rounds. A successful Will save reduces damage to half and negates the sickened effect. The effects cannot be negated by remove disease or heal, but remove curse is effective.  The spell deals only half damage to creatures who are neither evil nor good, and they are not sickened. Such a creature can reduce the damage in half again (down to one-quarter) with a successful Will save."
+  short_description: "Damages and sickens good creatures."
 }
 school: EVOACATION
 summary: "In a 20 ft spread you spread a cold, colying miasma of greasy darkness, dealing [[min(5, $level / 2)]]d8 damage to good creatures or [[min(10, $level)]]d6 to good outsiders and sickens them for 1d4 rounds, Will DC [[10 + $ability + 4]] for half damage and no sickness; only half damage to neutral characters, with a Will DC [[10 + $ability + 4]] for quarter."
@@ -19,22 +20,10 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: MEDIUM
-range {
-}
-effect {
-  distance {
-  }
-}
-area: "20-ft-radius spread"
+special_range: MEDIUMarea: "20-ft-radius spread"
 duration {
   duration_description: "Instantaneous (1d4 rounds)"
-  duration {
   }
-  additional_duration {
-  }
-}

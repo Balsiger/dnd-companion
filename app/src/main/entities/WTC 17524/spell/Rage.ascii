@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Each affected creature gains a +2 morale bonus to Strength and Constitution, a +1 morale bonus on Will saves, and a \342\200\232\303\204\303\2542 penalty to AC. The effect is otherwise identical with a barbarian\'s rage (see page 25), except that the subjects aren\'t fatigued at the end of the rage."
+  short_description: "Gives +2 to Str and Con, +1 on Will saves, –2 to AC."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -28,24 +29,12 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: MEDIUM
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One willing living creature per three levels, no two of which may be more than 30 ft apart"
+special_range: MEDIUMtarget: "One willing living creature per three levels, no two of which may be more than 30 ft apart"
 duration {
   duration_description: "Concentration +  1 round/level"
-  duration {
-  }
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

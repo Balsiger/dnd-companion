@@ -11,6 +11,7 @@ template {
   }
   world: "Generic"
   description: "\\Spell{Mass bear\342\200\232\303\204\303\264s endurance} works like \\Spell{bear\342\200\232\303\204\303\264s endurance}, except that it affects multiple creatures."
+  short_description: "As bear’s endurance, affects one subject/level."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -30,21 +31,9 @@ level {
   spell_class: WIZARD
   level: 6
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One creature/level, no two of which can be more than 30 ft apart"
+special_range: CLOSEtarget: "One creature/level, no two of which can be more than 30 ft apart"
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

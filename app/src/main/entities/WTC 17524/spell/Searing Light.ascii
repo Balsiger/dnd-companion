@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Focusing divine power like a ray of the sun, you project a blast of light from your open palm. You must succeed on a ranged touch attack to strike your target. A creature struck by this ray of light takes 1d8 points of damage per two caster levels (maximum 5d8). An undead creature takes 1d6 points of damage per caster level (maximum 10d6), and an undead creature particularly vulnerable to bright light, such as a vampire, takes 1d8 points of damage per caster level (maximum 10d8). A construct or inanimate object takes only 1d6 points of damage per two caster levels (maximum 5d6)."
+  short_description: "Ray deals 1d8/two levels damage, more against undead."
 }
 school: EVOACATION
 summary: "ranged touch [[100 + (10 * $level)]] ft, [[min(5, $level / 2)]d8 damage, undead [[min(10, $level)]]d6, undead vulnerable to light [[min(10, $level)]]d8, construct or object [[min(5, $level)]]d6"
@@ -22,22 +23,12 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: MEDIUM
-range {
-}
-effect {
-  distance {
-  }
+special_range: MEDIUMeffect {
   description: "Ray effect"
 }
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}

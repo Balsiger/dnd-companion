@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like mass inflict light wounds, except that it deals 4d8 points of damage +1 point per caster level (maximum +40)."
+  short_description: "Deals 4d8 damage +1/level to many creatures."
 }
 school: NECROMANCY
 summary: "$undefined$"
@@ -17,19 +18,7 @@ level {
   spell_class: CLERIC
   level: 8
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
+  standard_actions: 1
+}duration {
   }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}

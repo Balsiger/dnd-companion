@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You imbue a suit of armor or a shield with an enhancement bonus of +1 per four caster levels (maximum +5 at 20th level).  An outfit of regular clothing counts as armor that grants no AC bonus for the purpose of this spell."
+  short_description: "Armor or shield gains +1 enhancement per four levels."
 }
 school: TRANSMUTATION
 summary: "Touch, $level hours, [[min(5, $level/4)]] enhancement bonus to AC."
@@ -27,23 +28,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Armor or shield touched"
+special_range: TOUCHtarget: "Armor or shield touched"
 duration {
   duration {
     hours: 1
   }
   levels: "level"
-  additional_duration {
   }
-}

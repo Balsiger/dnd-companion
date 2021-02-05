@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell causes those within the area to turn on each other rather than attack their foes. Each affected creature has a 50% chance to attack the nearest target each round. (Roll to determine each creature\'s behavior every round at the beginning of its turn.) A creature that does not attack its nearest neighbor is free to act normally for that round.  Creatures forced by a song of discord to attack their fellows employ all methods at their disposal, choosing their deadliest spells and most advantageous combat tactics. They do not, however, harm targets that have fallen unconscious."
+  short_description: "Forces targets to attack each other."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -21,23 +22,13 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: MEDIUM
-range {
-}
-effect {
-  distance {
-  }
-}
-area: "Creatures within a 20-ft-radius spread"
+special_range: MEDIUMarea: "Creatures within a 20-ft-radius spread"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
   }
-}

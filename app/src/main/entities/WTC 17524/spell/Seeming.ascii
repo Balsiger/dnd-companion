@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like disguise self, except that you can change the appearance of other people as well. Affected creatures resume their normal appearances if slain.  Unwilling targets can negate the spell\'s effect on them by making Will saves or with spell resistance."
+  short_description: "Changes appearance of one person per two levels."
 }
 school: ILLUSION
 subschool: GLAMER
@@ -27,23 +28,13 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One creature per two levels, no two of which can be more than 30 ft apart"
+special_range: CLOSEtarget: "One creature per two levels, no two of which can be more than 30 ft apart"
 duration {
   duration {
     hours: 12
-  }
-  additional_duration {
   }
   flags: "(D)"
   description: "(D)"

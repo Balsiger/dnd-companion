@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like silent image, except that the figment includes visual, auditory, olfactory, and thermal components, and the figment follows a script determined by you. The figment follows that script without your having to concentrate on it.  The illusion can include intelligible speech if you wish. For instance, you could create the illusion of several orcs playing cards and arguing, culminating in a fistfight.  Material Component: A bit of fleece and several grains of sand."
+  short_description: "As major image, but no concentration required."
 }
 school: ILLUSION
 subschool: FIGMENT
@@ -25,23 +26,13 @@ level {
   spell_class: WIZARD
   level: 5
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
+  standard_actions: 1
+}duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

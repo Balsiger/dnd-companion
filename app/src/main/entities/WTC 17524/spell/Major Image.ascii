@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like silent image, except that sound, smell, and thermal illusions are included in the spell effect. While concentrating, you can move the image within the range.  The image disappears when struck by an opponent unless you cause the illusion to react appropriately."
+  short_description: "As silent image, plus sound, smell and thermal effects."
 }
 school: ILLUSION
 subschool: FIGMENT
@@ -25,20 +26,8 @@ level {
   spell_class: WIZARD
   level: 3
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
+  standard_actions: 1
+}duration {
   duration_description: "Concentration +  3 rounds"
-  duration {
   }
-  additional_duration {
-  }
-}

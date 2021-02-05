@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You transmute as many as three pebbles, which can be no larger than sling bullets, so that they strike with great force when thrown or slung. If hurled, they have a range increment of 20 feet. If slung, treat them as sling bullets (range increment 50 feet). The spell gives them a +1 enhancement bonus on attack and damage rolls.  The user of the stones makes a normal ranged attack. Each stone that hits deals 1d6+1 points of damage (including the spell\'s enhancement bonus), or 2d6+2 points against undead."
+  short_description: "Three stones gain +1 on attack, deal 1d6 +1 damage."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -27,22 +28,10 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Up to three pebbles touched"
+special_range: TOUCHtarget: "Up to three pebbles touched"
 duration {
   duration_description: "30 minutes or until discharged"
-  duration {
   }
-  additional_duration {
-  }
-}

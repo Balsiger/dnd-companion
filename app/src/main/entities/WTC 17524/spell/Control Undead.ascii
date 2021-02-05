@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell enables you to command undead creatures for a short period of time. You command them by voice and they understand you, no matter what language you speak. Even if vocal communication is impossible (in the area of a silence spell, for instance), the controlled undead do not attack you. At the end of the spell, the subjects revert to their normal behavior. Intelligent undead creatures remember that you controlled them.  Material Component: A small piece of bone and a small piece of raw meat."
+  short_description: "Undead don’t attack you while under your command."
 }
 school: NECROMANCY
 summary: "Command [[2 * $level]] HD of undead creature no more than 30 ft apart by voice."
@@ -23,23 +24,16 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "Up to 2 HD/level of undead creatures, no two of which can be more than 30 ft apart"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "Will negates"
+spell_resistance: "Yes"

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like a fly spell, except you can fly at a speed of 40 feet (30 feet if wearing medium or heavy armor, or if carrying a medium or heavy load) with average maneuverability. When using this spell for long-distance movement, you can hustle without taking nonlethal damage (a forced march still requires Constitution checks). This means you can cover 64 miles in an eight-hour period of flight (or 48 miles at a speed of 30 feet). See page 164 for more on overland movement."
+  short_description: "You fly at a speed of 40 ft. and can hustle over long distances."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -22,23 +23,13 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "You"
+special_range: PERSONALtarget: "You"
 duration {
   duration {
     hours: 1
   }
   levels: "level"
-  additional_duration {
   }
-}

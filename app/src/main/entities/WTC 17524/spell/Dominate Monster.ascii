@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like dominate person, except that the spell is not restricted by creature type."
+  short_description: "As dominate person, but any creature."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -22,20 +23,9 @@ level {
   spell_class: WIZARD
   level: 9
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  rounds: 1
 }
 target: "One creature"
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

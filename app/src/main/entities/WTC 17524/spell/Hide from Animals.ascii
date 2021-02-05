@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Animals cannot see, hear, or smell the warded creatures. Even extraordinary or supernatural sensory capabilities, such as blindsense, blindsight, scent, and tremorsense, cannot detect or locate warded creatures. Animals simply act as though the warded creatures are not there. Warded creatures could stand before the hungriest of lions and not be molested or even noticed. If a warded character touches an animal or attacks any creature, even with a spell, the spell ends for all recipients."
+  short_description: "Animals can’t perceive one subject/level."
 }
 school: ABJURATION
 summary: "$undefined$"
@@ -22,25 +23,15 @@ level {
 }
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One creature touched/level"
+special_range: TOUCHtarget: "One creature touched/level"
 duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

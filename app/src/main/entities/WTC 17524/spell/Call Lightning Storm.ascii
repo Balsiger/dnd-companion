@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like call lightning, except that each bolt deals 5d6 points of electricity damage (or 5d10 if created outdoors in a stormy area), and you may call a maximum of 15 bolts."
+  short_description: "As call lightning, but 5d6 damage per bolt."
 }
 school: EVOACATION
 summary: "$undefined$"
@@ -17,20 +18,11 @@ level {
   spell_class: DRUID
   level: 5
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: LONG
-range {
-}
-effect {
-  distance {
-  }
-}
 duration {
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Reflex half"
+spell_resistance: "Yes"

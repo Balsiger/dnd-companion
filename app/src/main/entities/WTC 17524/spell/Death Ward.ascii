@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The subject is immune to all death spells, magical death effects, energy drain, and any negative energy effects (such as from inflict spells or chill touch).  This spell doesn\'t remove negative levels that the subject has already gained, nor does it affect the saving throw necessary 24 hours after gaining a negative level.  Death ward does not protect against other sorts of attacks, such as hit point loss, poison, or petrification, even if those attacks might be lethal."
+  short_description: "Grants immunity to death spells and negative energy effects."
 }
 school: NECROMANCY
 summary: "For $level min grant touched living target immunity to all death spells, magical death effects, energy drain and negative energy effects."
@@ -31,23 +32,16 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "Living creature touched"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

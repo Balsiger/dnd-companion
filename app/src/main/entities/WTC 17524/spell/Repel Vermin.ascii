@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "An invisible barrier holds back vermin. A vermin with Hit Dice of less than onethird your level cannot penetrate the barrier. A vermin with Hit Dice of one-third your level or more can penetrate the barrier if it succeeds on a Will save. Even so, crossing the barrier deals the vermin 2d6 points of damage, and pressing against the barrier causes pain, which deters most vermin."
+  short_description: "Insects, spiders, and other vermin stay 10 ft. away."
 }
 school: ABJURATION
 summary: "$undefined$"
@@ -31,24 +32,14 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
-}
-area: "10-ft-radius emanation centered on you"
+  standard_actions: 1
+}area: "10-ft-radius emanation centered on you"
 duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

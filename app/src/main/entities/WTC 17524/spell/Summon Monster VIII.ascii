@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions  like summon monster I, except that  you can summon one creature from  the 8th-level list,  1d3 creatures of  the same kind  from the 7th-level list, or  1d4+1 creatures of the same kind  from a lowerlevel list. Fiendish monstrous spider,  Huge CE Fiendish snake, giant  constrictor CE 7th Level Celestial elephant LG Avoral  (guardinal) NG Celestial baleen whale1 NG Djinni (genie) CG  Elemental, Huge (any) N Invisible stalker  N Slaad, red CN Devil, bone  LE Fiendish megaraptor  LE Fiendish monstrous scorpion,  Huge NE Babau (demon)  CE Fiendish giant octopus1  CE Fiendish girallon  CE 8th Level Celestial dire bear LG Celestial  cachalot whale1 NG Celestial triceratops NG Lillend CG Elemental, greater (any) N Slaad, blue CN Fiendish giant squid1 LE Hellcat LE Fiendish  monstrous centipede, NE Colossal Fiendish  dire tiger CE Fiendish  monstrous spider,  CE  Gargantuan Fiendish  tyrannosaurus CE  Vrock (demon)  CE  9th Level  Couatl  LG Leonal  (guardinal)  NG  Celestial roc  CG Elemental,  elder (any)  N Slaad,  green CN  Devil, barbed  LE  Fiendish dire shark1 NE  Fiendish monstrous scorpion,  NE Gargantuan Night hag  NE Bebilith (demon) CE Fiendish monstrous spider, Colossal  CE Hezrou (demon) CE 1 May be summoned only into an aquatic or watery environment."
+  short_description: "Calls extraplanar creature to fight for you."
 }
 school: CONJURATION
 subschool: SUMMONING
@@ -25,20 +26,10 @@ level {
   spell_class: WIZARD
   level: 8
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  rounds: 1
+}effect {
   description: "One or more summoned creatures no two of which can be more than 30 ft apart"
 }
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

@@ -39,7 +39,7 @@ public class MiniatureTemplate extends StoredTemplate<Template .MiniatureTemplat
   private final Template.MiniatureTemplateProto proto;
 
   public MiniatureTemplate(String name, Template.MiniatureTemplateProto proto) {
-    super(name);
+    super(proto.getTemplate(), name);
     this.proto = proto;
   }
 

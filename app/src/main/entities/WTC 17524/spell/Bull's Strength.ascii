@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The subject becomes stronger. The spell grants a +4 enhancement bonus to Strength, adding the usual benefits to melee attack rolls, melee damage rolls, and other uses of the Strength modifier.  Arcane Material Component: A few hairs, or a pinch of dung, from a bull."
+  short_description: "Subject gains +4 to Str for 1 min./level."
 }
 school: TRANSMUTATION
 summary: "Touched creature gets +4 to Str for $level mins."
@@ -39,23 +40,15 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL_DEVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Creature touched"
+special_range: TOUCHtarget: "Creature touched"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

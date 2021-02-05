@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Calling upon the divine power of your patron, you imbue yourself with strength and skill in combat. Your base attack bonus becomes equal to your character level (which may give you additional attacks), you gain a +6 enhancement bonus to Strength, and you gain 1 temporary hit point per caster level."
+  short_description: "You gain attack bonus, +6 to Str, and 1 hp/level."
 }
 school: EVOACATION
 summary: "$level rounds, gain base attack bonus of $level, +6 enhancement bonus to Strengh, $level temporary hit points."
@@ -23,23 +24,16 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "You"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "No"

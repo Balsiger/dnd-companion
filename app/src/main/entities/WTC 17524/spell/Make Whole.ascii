@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like mending, except that make whole completely repairs an object made of any substance, even one with multiple breaks, to be as strong as new.  The spell does not restore the magical abilities of a broken magic item made whole, and it cannot mend broken magic rods, staffs, or wands. The spell does not repair items that have been warped, burned, disintegrated, ground to powder, melted, or vaporized, nor does it affect creatures (including constructs)."
+  short_description: "Repairs an object."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -16,21 +17,9 @@ level {
   spell_class: CLERIC
   level: 2
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One object of up to 10 cu. ft/level"
+special_range: CLOSEtarget: "One object of up to 10 cu. ft/level"
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

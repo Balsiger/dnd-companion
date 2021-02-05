@@ -1004,6 +1004,36 @@ message AdventureTemplateProto {
       repeated ItemLookupProto item = 3;
     }
     repeated Treasure treasure = 13;
+
+    message SpellGroup {
+      string name = 1;
+      string description = 2;
+      int32 caster_level = 3;
+      int32 ability_bonus = 4;
+      SpellClass spell_class = 6;
+
+      message SpellReference {
+        string name = 1;
+
+        enum MetaMagic {
+          UNKNOWN = 0;
+
+          // PHB.
+          EMPOWERED = 1;
+          ENLARGED = 2;
+          EXTENDED = 3;
+          HEIGHTENED = 4;
+          MAXIMIZED = 5;
+          QUICKENED = 6;
+          SILENT = 7;
+          STILL = 8;
+          WIDENED = 9;
+        }
+        repeated MetaMagic meta_magic = 2;
+      }
+      repeated SpellReference spell = 5;
+    }
+    repeated SpellGroup spell_group = 14;
   }
   repeated Encounter encounter = 5;
 }

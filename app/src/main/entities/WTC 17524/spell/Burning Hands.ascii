@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "A cone of searing flame shoots from your fingertips. Any creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4). Flammable materials, such as cloth, paper, parchment, and thin wood burn if the flames touch them. A character can extinguish burning items as a full-round action."
+  short_description: "1d4/level fire damage (max 5d4)."
 }
 school: EVOACATION
 summary: "[[min($level, 5)]]d4 fire damage in 15 ft cone, Ref $dc for half"
@@ -27,21 +28,12 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  standard_actions: 1
 }
 area: "Cone-shaped burst"
 duration {
   duration_description: "Instantaneous"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Reflex half"
+spell_resistance: "Yes"

@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.data.templates;
 
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.data.templates.values.SpellGroup;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -44,7 +45,7 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
   private final List<EncounterTemplate> encounters = new ArrayList<>();
 
   public AdventureTemplate(Template.AdventureTemplateProto proto) {
-    super(proto.getTemplate().getId());
+    super(proto.getTemplate(), proto.getTemplate().getId());
 
     this.proto = proto;
   }
@@ -218,6 +219,11 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
       return proto.getCreatureList().stream()
           .map(c -> new CreatureInitializer(c.getName(), c.getReason(), c.getTacticsList()))
           .collect(Collectors.toList());
+    }
+
+    public List<SpellGroup> getSpellGroups() {
+      return proto.getSpellGroupList().stream()
+          .map(c -> SpellGroup.fromProto(c)).collect(Collectors.toList());
     }
 
     public class ItemGroupInitializer {

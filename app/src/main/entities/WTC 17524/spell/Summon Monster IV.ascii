@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like summon monster I, except that you can summon one creature from the 4th-level list, 1d3 creatures of the same kind from the 3rd-level list, or 1d4+1 creatures of the same kind from a lowerlevel list."
+  short_description: "Calls extraplanar creature to fight for you."
 }
 school: CONJURATION
 subschool: SUMMONING
@@ -29,20 +30,10 @@ level {
   spell_class: WIZARD
   level: 4
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  rounds: 1
+}effect {
   description: "One or more summoned creatures no two of which can be more than 30 ft apart"
 }
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

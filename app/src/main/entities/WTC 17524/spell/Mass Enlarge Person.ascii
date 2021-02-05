@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like enlarge person, except that it affects multiple creatures."
+  short_description: "Enlarges several creatures."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -21,20 +22,9 @@ level {
   spell_class: WIZARD
   level: 4
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  standard_actions: 1
 }
 target: "One humanoid creature/level, no two of which can be more than 30 ft apart"
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "Fortitude negates"
+spell_resistance: "Yes"

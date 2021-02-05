@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Any opponent attempting to strike or otherwise directly attack the warded creature, even with a targeted spell, must attempt a Will save. If the save succeeds, the opponent can attack normally and is unaffected by that casting of the spell. If the save fails, the opponent can\'t follow through with the attack, that part of its action is lost, and it can\'t directly attack the warded creature for the duration of the spell. Those not attempting to attack the subject remain unaffected. This spell does not prevent the warded creature from being attacked or affected by area or effect spells. The subject cannot attack without breaking the spell but may use nonattack spells or otherwise act. This allows a warded cleric to heal wounds, for example, or to cast a bless spell, perform an augury, summon creatures, and so on."
+  short_description: "Opponents can’t attack you, and you can’t attack."
 }
 school: ABJURATION
 summary: "Touch, $level rounds or until attacking, unless Will DC $dc enemies cannot attack (attack wasted)."
@@ -23,23 +24,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Creature touched"
+special_range: TOUCHtarget: "Creature touched"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
   }
-}

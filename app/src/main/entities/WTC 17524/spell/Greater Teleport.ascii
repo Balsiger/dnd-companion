@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like teleport, except that there is no range limit and there is no chance you arrive off target. In addition, you need not have seen the destination, but in that case you must have at least a reliable description of the place to which you are teleporting (such as a detailed description from someone else or a particularly precise map). If you attempt to teleport with insufficient information (or with misleading information), you disappear and simply reappear in your original location. Interplanar travel is not possible."
+  short_description: "As teleport, but no range limit and no off-target arrival."
 }
 school: CONJURATION
 subschool: TELEPORTATION
@@ -26,19 +27,8 @@ level {
   spell_class: TRAVEL
   level: 7
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "None and Will negates (object)"
+spell_resistance: "No and Yes (object)"

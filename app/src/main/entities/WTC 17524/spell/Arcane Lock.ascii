@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "An \\Spell{arcane lock} spell cast upon a door, chest, or portal magically locks it. You can freely pass your own arcane lock without affecting it; otherwise, a door or object secured with this spell can be opened only by breaking in or with a successful \\Spell{dispel magic} or \\Spell{knock} spell. Add 10 to the normal DC to break open a door or portal affected by this spell. (A \\Spell{knock} spell does not remove an \\Spell{arcane lock}; it only suppresses the effect for 10 minutes.)"
+  short_description: "Magically locks a portal or chest."
 }
 school: ABJURATION
 summary: "touch, [[$level * 30]] sq ft, can only be opened with a successfull \\Spell{Dispel Magic} or \\Spell{Knock} or by breaking down the door (+10 bonus for door)."
@@ -28,22 +29,12 @@ material {
   use: "use"
   component: "gold dust worth 25 gp"
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "The door, chest, or portal touched, up to 30 sq. ft/level in size"
+special_range: TOUCHtarget: "The door, chest, or portal touched, up to 30 sq. ft/level in size"
 duration {
   duration_description: "Permanent"
-  duration {
   }
-  additional_duration {
-  }
-}
+saving_throw: "None"
+spell_resistance: "No"

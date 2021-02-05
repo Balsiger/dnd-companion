@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn\342\200\232\303\204\303\264t use oxygen. A continual flame can be covered and hidden but not smothered or quenched.  Light spells counter and dispel darkness spells of an equal or lower level.  Material Component: You sprinkle ruby dust (worth 50 gp) on the item that is to carry the flame."
+  short_description: "Makes a permanent, heatless torch."
 }
 school: EVOACATION
 summary: "$undefined$"
@@ -28,23 +29,16 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: TOUCH
-range {
-}
 effect {
-  distance {
-  }
   description: "Magical heatless flame"
 }
 target: "Object touched"
 duration {
   duration_description: "Permanent"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "No"

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You utter a single word of power that instantly causes one creature of your choice to become stunned, whether the creature can hear the word or not. The duration of the spell depends on the target\'s current hit point total. Any creature that currently has 151 or more hit points is unaffected by power word stun.  Hit Points Duration 50 or less 4d4 rounds 51\342\200\232\303\204\303\254100 2d4 rounds 101\342\200\232\303\204\303\254150 1d4 rounds"
+  short_description: "Stuns creature with 150 hp or less."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -27,22 +28,10 @@ level {
   level: 8
 }
 components: VERBOSE
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One creature with 150 hp or less"
+special_range: CLOSEtarget: "One creature with 150 hp or less"
 duration {
   duration_description: "See Text"
-  duration {
   }
-  additional_duration {
-  }
-}

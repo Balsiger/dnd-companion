@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You bring forth a great feast, including a magnificent table, chairs, service, and food and drink. The feast takes 1 hour to consume, and the beneficial effects do not set in until this hour is over. Every creature partaking of the feast is cured of all diseases, sickness, and nausea; becomes immune to poison for 12 hours; and gains 1d8 temporary hit points +1 point per two caster levels (maximum +10) after imbibing the nectar-like beverage that is part of the feast. The ambrosial food that is consumed grants each creature that partakes a +1 morale bonus on attack rolls and Will saves and immunity to fear effects for 12 hours.  If the feast is interrupted for any reason, the spell is ruined and all effects of the spell are negated."
+  short_description: "Food for one creature/level cures and grants combat bonuses."
 }
 school: CONJURATION
 subschool: CREATION
@@ -24,22 +25,12 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  minutes: 10
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
+special_range: CLOSEeffect {
   description: "Feast for one creature/level"
 }
 duration {
   duration_description: "One hour plus 12 hours"
-  duration {
   }
-  additional_duration {
-  }
-}

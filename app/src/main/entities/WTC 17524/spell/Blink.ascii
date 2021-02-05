@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Like a blink dog (see the Monster Manual), you \342\200\232\303\204\303\272blink\342\200\232\303\204\303\271 back and forth between the Material Plane and the Ethereal Plane. You look as though you\342\200\232\303\204\303\264re winking in and out of reality very quickly and at random.  Blinking has several effects, as follows.  Physical attacks against you have a 50% miss chance, and the Blind-Fight feat doesn\342\200\232\303\204\303\264t help opponents, since you\342\200\232\303\204\303\264re ethereal and not merely invisible. If the attack is capable of striking ethereal creatures, the miss chance is only 20% (for concealment). If the attacker can see invisible creatures, the miss chance is also only 20%.  (For an attacker who can both see and strike ethereal creatures, there is no miss chance.) Likewise, your own attacks have a 20% miss chance, since you sometimes go ethereal just as you are about to strike.  Any individually targeted spell has a 50% chance to fail against you while you\342\200\232\303\204\303\264re blinking unless your attacker can target invisible, ethereal creatures. Your own spells have a 20% chance to activate just as you go ethereal, in which case they typically do not affect the Material Plane.  While blinking, you take only half damage from area attacks (but full damage from those that extend onto the Ethereal Plane). You strike as an invisible creature (with a +2 bonus on attack rolls), denying your target any Dexterity bonus to AC. You take only half damage from falling, since you fall only while you are material.  While blinking, you can step through (but not see through) solid objects. For each 5 feet of solid material you walk through, there is a 50% chance that you become material. If this occurs, you are shunted off to the nearest open space and take 1d6 points of damage per 5 feet so traveled. You can move at only three-quarters speed (because movement on the Ethereal Plane is at half speed, and you spend about half your time there and half your time material.)  Since you spend about half your time on the Ethereal Plane, you can see and even attack ethereal creatures. You interact with ethereal creatures roughly the same way you interact with material ones. For instance, your spells against ethereal creatures are 20% likely to activate just as you go material and be lost.  An ethereal creature is invisible, incorporeal, and capable of moving in any direction, even up or down. As an incorporeal creature, you can move through solid objects, including living creatures.  An ethereal creature can see and hear the Material Plane, but everything looks gray and insubstantial. Sight and hearing on the Material Plane are limited to 60 feet. Force effects (such as magic missile and wall of force) and abjurations affect you normally.  Their effects extend onto the Ethereal Plane from the Material Plane, but not vice versa. An ethereal creature can\342\200\232\303\204\303\264t attack material creatures, and spells you cast while ethereal affect only other ethereal things. Certain material creatures or objects have attacks or effects that work on the Ethereal Plane (such as the basilisk and its gaze attack. Treat other ethereal creatures and objects as material."
+  short_description: "You randomly vanish and reappear for 1 round/level."
 }
 school: TRANSMUTATION
 summary: "Randomly vanish and reappear for $level rounds (D), gives you 50% miss chance (20% if can hit ethereal), 20% miss chance yourself, half damage from area attacks, strike as invisible (+2 attack, no Dex to AC), half damage from falling, step through solid object (50% per 5 ft of becoming solid, 1d6 damage per 5 ft), can see and attack ethereal creature"
@@ -26,25 +27,17 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "You"
+special_range: PERSONALtarget: "You"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like inflict light wounds, except that you deal 3d8 points of damage +1 point per caster level (maximum +15)."
+  short_description: "Touch attack, 3d8 damage +1/level (max +15)."
 }
 school: NECROMANCY
 summary: "Deal 3d8 + [[min(15, $level)]] damage with a successful touch attack (or heal undead)."
@@ -16,19 +17,7 @@ level {
   spell_class: CLERIC
   level: 3
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
+  standard_actions: 1
+}duration {
   }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}

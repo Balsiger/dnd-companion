@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You forge a telepathic bond among yourself and a number of willing creatures, each of which must have an Intelligence score of 3 or higher. Each creature included in the link is linked to all the others. The creatures can communicate telepathically through the bond regardless of language. No special power or influence is established as a result of the bond. Once the bond is formed, it works over any distance (although not from one plane to another).  If desired, you may leave yourself out of the telepathic bond forged. This decision must be made at the time of casting.  Rary\'s telepathic bond can be made permanent with a permanency spell, though it only bonds two creatures per casting of permanency.  Material Component: Pieces of eggshell from two different kinds of creatures."
+  short_description: "Link lets allies communicate."
 }
 school: DIVINATION
 summary: "$undefined$"
@@ -23,25 +24,15 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "You plus one willing creature per three levels, no two of which can be more than 30 ft apart"
+special_range: CLOSEtarget: "You plus one willing creature per three levels, no two of which can be more than 30 ft apart"
 duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Shield creates an invisible, tower shieldsized mobile disk of force that hovers in front of you. It negates magic missile attacks directed at you. The disk also provides a +4 shield bonus to AC. This bonus applies against incorporeal touch attacks, since it is a force effect. The shield has no armor check penalty or arcane spell failure chance. Unlike with a normal tower shield, you can\'t use the shield spell for cover."
+  short_description: "Invisible disc gives +4 to AC, blocks magic missiles."
 }
 school: ABJURATION
 summary: "personal, $level min (D), AC +4 shield, blocks \\Spell{Magic Missile}"
@@ -23,25 +24,15 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "You"
+special_range: PERSONALtarget: "You"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

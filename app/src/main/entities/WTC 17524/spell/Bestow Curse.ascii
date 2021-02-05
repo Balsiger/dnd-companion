@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You place a curse on the subject. Choose one of the following three effects. \\list {-6 decrease to an ability score (minimum 1).}  {-4 penalty on attack rolls, saves, ability checks, and skill checks.}  {Each turn, the target has a 50% chance to act normally; otherwise, it takes no action.}  You may also invent your own curse, but it should be no more powerful than those described above, and the DM has final say on the curse\'s effect.  The \\Spell{curse} bestowed by this spell cannot be dispelled, but it can be removed with a \\Spell{break enchantment}, \\Spell{limited wish}, \\Spell{miracle}, \\Spell{remove curse}, or \\Spell{wish} spell.  \\Spell{Bestow curse} counters \\Spell{remove curse}."
+  short_description: "–6 to an ability score; –4 on attack rolls, saves, and checks; or 50% chance of losing each action."
 }
 school: NECROMANCY
 summary: "Touch, curse subject unless Will DC [[10 + $ability + switch($class, Cleric: 3, default: 4)]] (permanently -6 on ability; -4 attack, saves, checks; or 50% chance of losing each action). "
@@ -26,22 +27,12 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Creature touched"
+special_range: TOUCHtarget: "Creature touched"
 duration {
   duration_description: "Permanent"
-  duration {
   }
-  additional_duration {
-  }
-}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

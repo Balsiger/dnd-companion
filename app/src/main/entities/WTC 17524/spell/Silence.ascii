@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Upon the casting of this spell, complete silence prevails in the affected area. All sound is stopped: Conversation is impossible, spells with verbal components cannot be cast, and no noise whatsoever issues from, enters, or passes through the area.  The spell can be cast on a point in space, but the effect is stationary unless cast on a mobile object. The spell can be centered on a creature, and the effect then radiates from the creature and moves as it moves.  An unwilling creature can attempt a Will save to negate the spell and can use spell resistance, if any. Items in a creature\'s possession or magic items that emit sound receive the benefits of saves and spell resistance, but unattended objects and points in space do not. This spell provides a defense against sonic or language-based attacks, such as command, a harpy\'s captivating song, a horn of blasting, and the like."
+  short_description: "Negates sound in 15-ft. radius."
 }
 school: ILLUSION
 subschool: GLAMER
@@ -23,25 +24,15 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: LONG
-range {
-}
-effect {
-  distance {
-  }
-}
-area: "20-ft-radius emanation centered on a creature, object, or point in space"
+special_range: LONGarea: "20-ft-radius emanation centered on a creature, object, or point in space"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

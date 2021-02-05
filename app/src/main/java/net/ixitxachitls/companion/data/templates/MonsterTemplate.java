@@ -48,7 +48,7 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
   private final Template.MonsterTemplateProto proto;
 
   protected MonsterTemplate(String name, Template.MonsterTemplateProto proto) {
-    super(name);
+    super(proto.getTemplate(), name);
     this.proto = proto;
   }
 

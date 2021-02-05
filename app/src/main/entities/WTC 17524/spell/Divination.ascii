@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Similar to augury but more powerful, a divination spell can provide you with a useful piece of advice in reply to a question concerning a specific goal, event, or activity that is to occur within one week.  The advice can be as simple as a short phrase, or it might take the form of a cryptic rhyme or omen.  For example, suppose the question is \342\200\232\303\204\303\272Will we do well if we venture into the ruined temple of Erythnul?\342\200\232\303\204\303\271 The DM knows that a terrible troll guarding 10,000 gp and a +1 shield lurks near the entrance but estimates that your party could beat the troll after a hard fight. Therefore the divination response might be: \342\200\232\303\204\303\272Ready oil and open flame light your way to wealth.\342\200\232\303\204\303\271 In all cases, the DM controls what information you receive. If your party doesn\342\200\232\303\204\303\264t act on the information, the conditions may change so that the information is no longer useful. (For example, the troll could move away and take the treasure with it.)  The base chance for a correct divination is 70% + 1% per caster level, to a maximum of 90%. The DM adjusts the chance if unusual circumstances require it (if, for example, unusual precautions against divination spells have been taken). If the dice roll fails, you know the spell failed, unless specific magic yielding false information is at work.  As with augury, multiple divinations about the same topic by the same caster use the same dice result as the first divination spell and yield the same answer each time.  Material Component: Incense and a sacrificial offering appropriate to your religion, together worth at least 25 gp."
+  short_description: "rovides useful advice for specific proposed actions."
 }
 school: DIVINATION
 summary: "$undefined$"
@@ -23,22 +24,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  minutes: 1
 }
 special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "You"
 duration {
   duration_description: "Instantaneous"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "No"

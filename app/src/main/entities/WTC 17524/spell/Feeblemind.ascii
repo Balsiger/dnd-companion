@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "If the target creature fails a Will saving throw, its Intelligence and Charisma scores each drop to 1, giving it roughly the intellect of a lizard. The affected creature is unable to use Intelligence- or Charismabased skills, cast spells, understand language, or communicate coherently.  Still, it knows who its friends are and can follow them and even protect them. The subject remains in this state until a heal, limited wish, miracle, or wish spell is used to cancel the effect of the feeblemind. A creature that can cast arcane spells, such as a sorcerer or a wizard, takes a \342\200\232\303\204\303\2544 penalty on its saving throw.  Material Component: A handful of clay, crystal, glass, or mineral spheres."
+  short_description: "Subject’s Int and Cha drop to 1."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -25,22 +26,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: MEDIUM
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "One creature"
 duration {
   duration_description: "Instantaneous"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Will negates; see text"
+spell_resistance: "Yes"

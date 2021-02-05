@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like charm person, except that it affects a creature of the animal type. See the Monster Manual for more information on creature types."
+  short_description: "Makes one animal your friend."
 }
 school: ENCHANTMENT
 subschool: CHARM
@@ -22,20 +23,9 @@ level {
   spell_class: RANGER
   level: 1
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  standard_actions: 1
 }
 target: "One animal"
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

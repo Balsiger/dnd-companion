@@ -5,6 +5,7 @@ template {
   category: "bull rush"
   world: "Forgotten Realms"
   description: "You cause a wave of visible resembling a crashing ocean wave to appear and immediately impact a single target. If the target fails its saving throw, it takes 1d4 + 1 hit points damage and must make an opposed Strength check to avoid a bull rush. The wave of force has a Strength of 18, is Medium-size, and is considered charging for the purpose of this check, and always moves the target the maximum distance possible. If the wave of force fails the opposed Strength check, the target is not moved. If the target makes its saving throw, it takes 1 point of damage and avoids the bull rush attempt. "
+  short_description: "This spell initiates a bull rush against all creatures within 10 feet."
 }
 school: EVOACATION
 subschool: CALLING
@@ -27,19 +28,12 @@ focus {
   component: "a drop of water"
 }
 casting_time {
+  standard_actions: 1
 }
 special_range: MEDIUM
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "One creature"
 duration {
   duration_description: "Instantaneous"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Fortitude partial"
+spell_resistance: "Yes"

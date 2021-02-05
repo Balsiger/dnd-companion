@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like heal, except as noted above. The maximum number of hit points restored to each creature is 250."
+  short_description: "As heal, but with several subjects."
 }
 school: CONJURATION
 subschool: HEALING
@@ -22,21 +23,9 @@ level {
   spell_class: HEALING
   level: 9
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One or more creatures, no two of which can be more than 30 ft apart"
+special_range: CLOSEtarget: "One or more creatures, no two of which can be more than 30 ft apart"
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "A misty vapor arises around you. It is stationary once created. The vapor obscures all sight, including darkvision, beyond 5 feet. A creature 5 feet away has concealment (attacks have a 20% miss chance).  Creatures farther away have total concealment (50% miss chance, and the attacker cannot use sight to locate the target).  A moderate wind (11+ mph), such as from a gust of wind spell, disperses the fog in 4 rounds. A strong wind (21+ mph) disperses the fog in 1 round. A fireball, flame strike, or similar spell burns away the fog in the explosive or fiery spell\'s area. A wall of fire burns away the fog in the area into which it deals damage.  This spell does not function underwater."
+  short_description: "Fog surrounds you."
 }
 school: CONJURATION
 subschool: CREATION
@@ -39,15 +40,9 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  standard_actions: 1
+}effect {
   description: "Cloud spreads in 20-ft radius from you 20 ft high"
 }
 duration {
@@ -55,6 +50,4 @@ duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
   }
-}

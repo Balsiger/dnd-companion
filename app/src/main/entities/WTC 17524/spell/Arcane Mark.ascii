@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell allows you to inscribe your personal rune or mark, which can consist of no more than six characters. The writing can be visible or invisible. An arcane mark spell enables you to etch the rune upon any substance (even stone or metal) without harm to the material upon which it is placed. If an invisible mark is made, a detect magic spell causes it to glow and be visible, though not necessarily understandable. See invisibility, true seeing, a gem of seeing, or a robe of eyes likewise allows the user to see an invisible arcane mark. A read magic spell reveals the words, if any. The mark cannot be dispelled, but it can be removed by the caster or by an erase spell. If an arcane mark is placed on a living being, normal wear gradually causes the effect to fade in about a month.  \\Spell{Arcane mark} must be cast on an object prior to casting \\Spell{Drawmij\342\200\232\303\204\303\264s instant summons} on the same object (see that spell description for details)."
+  short_description: "Inscribes a personal rune (visible or invisible)."
 }
 school: UNIVERSAL
 summary: "permanent, inscrive personal rune or mark"
@@ -21,21 +22,13 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  standard_actions: 1
+}effect {
   description: "One personal rune or mark fitting within 1 sq ft"
 }
 duration {
   duration_description: "Permanent"
-  duration {
   }
-  additional_duration {
-  }
-}
+saving_throw: "None"
+spell_resistance: "No"

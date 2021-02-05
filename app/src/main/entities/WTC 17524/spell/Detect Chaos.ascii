@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like detect evil, except that it detects the auras of chaotic creatures, clerics of chaotic deities, chaotic spells, and chaotic magic items, and you are vulnerable to an overwhelming chaotic aura if you are lawful."
+  short_description: "Reveals chaotic creatures, spells, or objects."
 }
 school: DIVINATION
 summary: "$undefined$"
@@ -16,19 +17,8 @@ level {
   spell_class: CLERIC
   level: 1
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "None"
+spell_resistance: "No"

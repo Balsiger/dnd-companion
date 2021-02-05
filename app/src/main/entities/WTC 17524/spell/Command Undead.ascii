@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell allows you some degree of control over an undead creature. Assuming the subject is intelligent, it perceives your words and actions in the most favorable way (treat its attitude as friendly). It will not attack you while the spell lasts. You can try to give the subject orders, but you must win an opposed Charisma check to convince it to do anything it wouldn\342\200\232\303\204\303\264t ordinarily do. (Retries are not allowed.) An intelligent commanded undead never obeys suicidal or obviously harmful orders, but it might be convinced that something very dangerous is worth doing (see charm person).  A nonintelligent undead creature (such as a skeleton or zombie) gets no saving throw against this spell. When you control a mindless being, you can communicate only basic commands, such as \342\200\232\303\204\303\272come here,\342\200\232\303\204\303\271 \342\200\232\303\204\303\272go there,\342\200\232\303\204\303\271 \342\200\232\303\204\303\272fight,\342\200\232\303\204\303\271 \342\200\232\303\204\303\272stand still,\342\200\232\303\204\303\271 and so on.  Nonintelligent undead won\342\200\232\303\204\303\264t resist suicidal or obviously harmful orders.  Any act by you or your apparent allies that threatens the commanded undead (regardless of its Intelligence) breaks the spell.  Your commands are not telepathic. The undead creature must be able to hear you.  Material Component: A shred of raw meat and a splinter of bone."
+  short_description: "Undead creature obeys your commands."
 }
 school: NECROMANCY
 summary: "$undefined$"
@@ -23,23 +24,16 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "One undead creature"
 duration {
   duration {
     days: 1
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "Will negates; see text"
+spell_resistance: "Yes"

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You can make your voice (or any sound that you can normally make vocally) seem to issue from someplace else, such as from another creature, a statue, from behind a door, down a passage, etc. You can speak in any language you know. With respect to such voices and sounds, anyone who hears the sound and rolls a successful save recognizes it as illusory (but still hears it). Focus: A parchment rolled up into a small cone."
+  short_description: "Throws voice for 1 min./level."
 }
 school: ILLUSION
 subschool: FIGMENT
@@ -27,16 +28,10 @@ level {
 }
 components: VERBOSE
 components: FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
+special_range: CLOSEeffect {
   description: "Intelligible sound usually speech"
 }
 duration {
@@ -44,8 +39,6 @@ duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

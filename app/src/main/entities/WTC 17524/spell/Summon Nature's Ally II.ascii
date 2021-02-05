@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like summon nature\'s ally I, except that you can summon one 2nd-level creature or 1d3 1st-level creatures of the same kind."
+  short_description: "Calls creature to fight."
 }
 school: CONJURATION
 subschool: SUMMONING
@@ -21,20 +22,10 @@ level {
   spell_class: RANGER
   level: 2
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  rounds: 1
+}effect {
   description: "One or more creatures no two of which can be more than 30 ft apart"
 }
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

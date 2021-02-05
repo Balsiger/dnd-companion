@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell imbues an area with negative energy. Each Charisma check made to turn undead within this area takes a \342\200\232\303\204\303\2543 profane penalty, and every undead creature entering a desecrated area gains a +1 profane bonus on attack rolls, damage rolls, and saving throws. An undead creature created within or summoned into such an area gains +1 hit points per HD.  If the desecrated area contains an altar, shrine, or other permanent fixture dedicated to your deity or aligned higher power, the modifiers given above are doubled (\342\200\232\303\204\303\2546 profane penalty on turning checks, +2 profane bonus and +2 hit points per HD for undead in the area). Furthermore, anyone who casts animate dead within this area may create as many as double the normal amount of undead (that is, 4 HD per caster level rather than 2 HD per caster level).  If the area contains an altar, shrine, or other permanent fixture of a deity, pantheon, or higher power other than your patron, the desecrate spell instead curses the area, cutting off its connection with the associated deity or power. This secondary function, if used, does not also grant the bonuses and penalties relating to undead, as given above.  Desecrate counters and dispels consecrate.  Material Component: A vial of unholy water and 25 gp worth (5 pounds) of silver dust, all of which must be sprinkled around the area."
+  short_description: "Fills area with negative energy, making undead stronger."
 }
 school: EVOACATION
 summary: "20 ft radius, [[2 * $level]] hours, fills area with negative energy, -3 profane penalty or turn checks, undead get +1 profane bonus to attack, damage, saves, +1 hp per HD; double if altar of your diety there"
@@ -25,23 +26,16 @@ components: VERBOSE
 components: SOMATIC
 components: MATERIAL
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
 area: "20-ft-radius emanation"
 duration {
   duration {
     hours: 2
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "Yes"

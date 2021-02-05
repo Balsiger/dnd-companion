@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You create a nonmagical, unattended object of nonliving, vegetable matter\342\200\232\303\204\303\256linen clothes, a hemp rope, a wooden ladder, and so forth. The volume of the item created cannot exceed 1 cubic foot per caster level.  You must succeed on an appropriate skill check to make a complex item, such as Craft (bowmaking) check to make straight arrow shafts.  Attempting to use any created object as a material component causes the spell to fail.  Material Component: A tiny piece of matter of the same sort of item you plan to create with minor creation\342\200\232\303\204\303\256a bit of twisted hemp to create rope, and so forth."
+  short_description: "Creates one cloth or wood object."
 }
 school: CONJURATION
 subschool: CREATION
@@ -24,15 +25,9 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  minutes: 1
+}effect {
   description: "Unattended nonmagical object of nonliving plant matter up to 1 cu ft/level"
 }
 duration {
@@ -40,8 +35,6 @@ duration {
     hours: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

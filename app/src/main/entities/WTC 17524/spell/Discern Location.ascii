@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "A discern location spell is among the most powerful means of locating creatures or objects. Nothing short of a mind blank spell or the direct intervention of a deity keeps you from learning the exact location of a single individual or object. Discern location circumvents normal means of protection from scrying or location. The spell reveals the name of the creature or object\342\200\232\303\204\303\264s location (place, name, business name, building name, or the like), community, county (or similar political division), country, continent, and the plane of existence where the target lies.  To find a creature with the spell, you must have seen the creature or have some item that once belonged to it. To find an object, you must have touched it at least once."
+  short_description: "Reveals exact location of creature or object."
 }
 school: DIVINATION
 summary: "$undefined$"
@@ -31,22 +32,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  minutes: 1
 }
 special_range: UNLIMITED
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "One creature or object"
 duration {
   duration_description: "Instantaneous"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "No"

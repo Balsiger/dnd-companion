@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Imbuing you with negative energy, this spell allows you to paralyze a single living humanoid for the duration of the spell with a successful melee touch attack.  Additionally, the paralyzed subject exudes a carrion stench that causes all living creatures (except you) in a 10-foot-radius spread to become sickened (Fortitude negates). A neutralize poison spell removes the effect from a sickened creature, and creatures immune to poison are unaffected by the stench.  Material Component: A small scrap of cloth taken from clothing worn by a ghoul, or a pinch of earth from a ghoul\342\200\232\303\204\303\264s lair."
+  short_description: "Paralyzes one subject, which exudes stench that makes those nearby sickened."
 }
 school: NECROMANCY
 summary: "Touch, 1d6 +2 rounds, Fort DC $dc or be paralyzed and exude carrion stench that causes sickened in 10 ft (Fort DC $dc negates)."
@@ -23,22 +24,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "Living humanoid touched"
 duration {
   duration_description: "1d6 + 2 rounds"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Fortitude negates"
+spell_resistance: "Yes"

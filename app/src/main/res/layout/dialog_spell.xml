@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017-2020 Peter Balsiger
+  ~ All rights reserved
+  ~
+  ~ This file is part of the Roleplay Companion.
+  ~
+  ~ The Tabletop Companion is free software; you can redistribute it and/or
+  ~ modify it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ The Tabletop Companion is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with the Player Companion; if not, write to the Free Software
+  ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="debug"
+        android:text="... name ..."
+        android:textColor="@color/spell"
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/school"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:text="... school ..."
+      android:theme="@style/LargeText" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... level ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="Components: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/components"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dm"
+        android:text="... components ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="Casting Time: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/casting_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dm"
+        android:text="... casting time .."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Range: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... range ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Effect: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... effect ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Target: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... duration ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... duration ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saving Throw: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/saving_throw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... saving throw ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spell Resistance:  "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/spell_resistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... spell resistance ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="References: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/references"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... references ..."
+        android:theme="@style/LargeText" />
+
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/dm_incomplete"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:text="... incomplete ..."
+      android:textColor="@color/red"
+      android:theme="@style/LargeText" />
+
+  <TextView
+      android:id="@+id/label_contents"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="5dp"
+      android:text="Contents:"
+      android:textStyle="bold"
+      android:theme="@style/LargeText" />
+
+  <HorizontalScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

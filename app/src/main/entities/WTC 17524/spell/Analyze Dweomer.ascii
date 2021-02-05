@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "You discern all spells and magical properties present in a number of creatures or objects. Each round, you may examine a single creature or object that you can see as a free action. In the case of a magic item, you learn its functions, how to activate its functions (if appropriate), and how many charges are left (if it uses charges). In the case of an object or creature with active spells cast upon it, you learn each spell, its effect, and its caster level.  An attended object may attempt a Will save to resist this effect if its holder so desires. If the save succeeds, you learn nothing about the object except what you can discern by looking at it. An object that makes its save cannot be affected by any other analyze dweomer spells for 24 hours.  \\Spell{Analyze dweomer} does not function when used on an artifact (see the Dungeon Master\342\200\232\303\204\303\264s Guide for details on artifacts)."
+  short_description: "Reveals magical aspects of subject."
 }
 school: DIVINATION
 summary: "$undefined$"
@@ -33,25 +34,17 @@ material {
   component: "tiny lens of ruby or sapphire (1500 gp)"
   component: "a small golden loop"
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One object or creature per caster level"
+special_range: CLOSEtarget: "One object or creature per caster level"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None or Will negates; see text"
+spell_resistance: "No"

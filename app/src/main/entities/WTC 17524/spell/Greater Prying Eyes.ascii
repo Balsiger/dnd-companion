@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like prying eyes, except that the eyes can see all things as they actually are, just as if they had true seeing with a range of 120 feet. Thus, they can navigate darkened areas at full normal speed. Also, a greater prying eye\'s maximum Spot modifier is +25 instead of +15."
+  short_description: "As prying eyes, but eyes have true seeing."
 }
 school: DIVINATION
 summary: "$undefined$"
@@ -21,19 +22,8 @@ level {
   spell_class: WIZARD
   level: 8
 }
-focus {
-}
 casting_time {
+  minutes: 1
 }
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "None"
+spell_resistance: "No"

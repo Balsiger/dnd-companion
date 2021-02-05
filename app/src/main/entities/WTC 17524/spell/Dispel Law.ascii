@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like dispel evil, except that you are surrounded by flickering, yellow, chaotic energy, and the spell affects lawful creatures and spells rather than evil ones."
+  short_description: "+4 bonus against attacks."
 }
 school: ABJURATION
 summary: "$undefined$"
@@ -21,19 +22,8 @@ level {
   spell_class: CLERIC
   level: 5
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "See text"
+spell_resistance: "See text"

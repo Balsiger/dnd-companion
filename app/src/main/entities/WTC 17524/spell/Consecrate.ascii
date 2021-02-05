@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell blesses an area with positive energy. Each Charisma check made to turn undead within this area gains a +3 sacred bonus. Every undead creature entering a consecrated area suffers minor disruption, giving it a \342\200\232\303\204\303\2541 penalty on attack rolls, damage rolls, and saves. Undead cannot be created within or summoned into a consecrated area.  If the consecrated area contains an altar, shrine, or other permanent fixture dedicated to your deity, pantheon, or aligned higher power, the modifiers given above are doubled (+6 sacred bonus on turning checks, \342\200\232\303\204\303\2542 penalties for undead in the area). You cannot consecrate an area with a similar fixture of a deity other than your own patron.  If the area does contain an altar, shrine, or other permanent fixture of a deity, pantheon, or higher power other than your patron, the consecrate spell instead curses the area, cutting off its connection with the associated deity or power. This secondary function, if used, does not also grant the bonuses and penalties relating to undead, as given above. Consecrate counters and dispels desecrate.  Material Component: A vial of holy water and 25 gp worth (5 pounds) of silver dust, all of which must be sprinkled around the area."
+  short_description: "Fills area with positive energy, making undead weaker."
 }
 school: EVOACATION
 summary: "$undefined$"
@@ -21,23 +22,16 @@ components: VERBOSE
 components: SOMATIC
 components: MATERIAL
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
 area: "20-ft-radius emanation"
 duration {
   duration {
     hours: 2
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "No"

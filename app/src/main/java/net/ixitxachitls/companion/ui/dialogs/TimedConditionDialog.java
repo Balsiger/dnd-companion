@@ -230,7 +230,7 @@ public class TimedConditionDialog extends Dialog {
     }
 
     if (!rounds.getText().isEmpty()) {
-      return Duration.rounds(extractInt(rounds));
+      return Duration.rounds(extractInt(rounds), 0, 0, 0);
     }
 
     return Duration.time(

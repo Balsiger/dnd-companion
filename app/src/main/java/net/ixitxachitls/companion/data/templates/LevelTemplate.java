@@ -55,7 +55,7 @@ public class LevelTemplate extends StoredTemplate<Template.LevelTemplateProto> {
   }
 
   public LevelTemplate(Template.LevelTemplateProto proto, String name, int maxHp) {
-    super(name);
+    super(proto.getTemplate(), name);
     this.proto = proto;
     this.maxHp = maxHp;
   }

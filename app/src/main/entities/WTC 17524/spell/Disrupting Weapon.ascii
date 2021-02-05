@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell makes a melee weapon deadly to undead. Any undead creature with HD equal to or less than your caster level must succeed on a Will save or be destroyed utterly if struck in combat with this weapon. Spell resistance does not apply against the destruction effect."
+  short_description: "Melee weapon destroys undead."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -18,23 +19,16 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "One melee weapon"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "Will negates (harmless); see text"
+spell_resistance: "Yes (harmless, object)"

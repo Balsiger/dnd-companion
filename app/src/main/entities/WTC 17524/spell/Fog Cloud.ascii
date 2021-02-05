@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "A bank of fog billows out from the point you designate. The fog obscures all sight, including darkvision, beyond 5 feet. A creature within 5 feet has concealment (attacks have a 20% miss chance). Creatures farther away have total concealment (50% miss chance, and the attacker can\342\200\232\303\204\303\264t use sight to locate the target).  A moderate wind (11+ mph) disperses the fog in 4 rounds; a strong wind (21+ mph) disperses the fog in 1 round.  The spell does not function underwater."
+  short_description: "Fog obscures vision."
 }
 school: CONJURATION
 subschool: CREATION
@@ -31,16 +32,11 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: MEDIUM
-range {
-}
 effect {
-  distance {
-  }
   description: "Fog spreads in 20-ft radius 20 ft high"
 }
 duration {
@@ -48,6 +44,6 @@ duration {
     minutes: 10
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "No"

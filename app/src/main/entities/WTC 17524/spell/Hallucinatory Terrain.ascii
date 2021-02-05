@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You make natural terrain look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Structures, equipment, and creatures within the area are not hidden or changed in appearance.  Material Component: A stone, a twig, and a bit of green plant."
+  short_description: "Makes one type of terrain appear like another (field into forest, or the like)."
 }
 school: ILLUSION
 subschool: GLAMER
@@ -28,25 +29,15 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  minutes: 10
 }
-special_range: LONG
-range {
-}
-effect {
-  distance {
-  }
-}
-area: "One 30-ft cube/level (S)"
+special_range: LONGarea: "One 30-ft cube/level (S)"
 duration {
   duration {
     hours: 2
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

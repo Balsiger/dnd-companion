@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like sleep, except that it affects 10 HD of creatures."
+  short_description: "Puts 10 HD of creatures to sleep."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -26,20 +27,9 @@ level {
   spell_class: WIZARD
   level: 3
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

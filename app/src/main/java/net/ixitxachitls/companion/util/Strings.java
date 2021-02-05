@@ -155,6 +155,22 @@ public class Strings {
     return "+" + number;
   }
 
+  public static String numeral(int number) {
+    if (number == 1) {
+      return "1st";
+    }
+
+    if (number == 2) {
+      return "2nd";
+    }
+
+    if (number == 3) {
+      return "3rd";
+    }
+
+    return number + "th";
+  }
+
   public static String spaces(int length) {
     return SPACES.substring(0, length);
   }
@@ -168,5 +184,9 @@ public class Strings {
         .map(word -> word.isEmpty() ? word : Character.toTitleCase(word.charAt(0)) +
             word.substring(1).toLowerCase())
         .collect(Collectors.joining(" "));
+  }
+
+  public static String plural(int number, String singular, String plural) {
+    return number + " " + (number == 1 ? singular : plural);
   }
 }

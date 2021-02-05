@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like circle of death, except that it destroys undead creatures as noted above.  Material Component: The powder of a crushed diamond worth at least 500 gp."
+  short_description: "Destroys 1d4 HD/level undead (max 20d4)."
 }
 school: NECROMANCY
 summary: "$undefined$"
@@ -27,20 +28,8 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL_DEVINE_FOCUS
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
-}
-area: "Several undead creatures within a 40-ft-radius burst"
+  standard_actions: 1
+}area: "Several undead creatures within a 40-ft-radius burst"
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

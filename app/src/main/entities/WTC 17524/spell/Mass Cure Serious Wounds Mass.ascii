@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like mass cure light wounds, except that it cures 3d8 points of damage +1 point per caster level (maximum +35)."
+  short_description: "Cures 3d8 damage +1/level for many creatures."
 }
 school: CONJURATION
 subschool: HEALING
@@ -22,19 +23,7 @@ level {
   spell_class: DRUID
   level: 8
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
+  standard_actions: 1
+}duration {
   }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Magic fang gives one natural weapon of the subject a +1 enhancement bonus on attack and damage rolls. The spell can affect a slam attack, fist, bite, or other natural weapon. (The spell does not change an unarmed strike\'s damage from nonlethal damage to lethal damage.)  Magic fang can be made permanent with a permanency spell."
+  short_description: "One natural weapon of subject creature gets +1 on attack and damage rolls."
 }
 school: TRANSMUTATION
 summary: "For $level min touched creature gains +1 enhancement to attack and damage for one natural weapon."
@@ -23,23 +24,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Living creature touched"
+special_range: TOUCHtarget: "Living creature touched"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
   }
-}

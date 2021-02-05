@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Pyrotechnics turns a fire into either a burst of blinding fireworks or a thick cloud of choking smoke, depending on the version you choose. Fireworks: The fireworks are a flashing, fiery, momentary burst of glowing, colored aerial lights. This effect causes creatures within 120 feet of the fire source to become blinded for 1d4+1 rounds (Will negates). These creatures must have line of sight to the fire to be affected. Spell resistance can prevent blindness.  Smoke Cloud: A writhing stream of smoke billows out from the source, forming a choking cloud. The cloud spreads 20 feet in all directions and lasts for 1 round per caster level. All sight, even darkvision, is ineffective in or through the cloud. All within the cloud take \342\200\232\303\204\303\2544 penalties to Strength and Dexterity (Fortitude negates). These effects last for 1d4+1 rounds after the cloud dissipates or after the creature leaves the area of the cloud. spell resistance does not apply. Material Component: The spell uses one fire source, which is immediately extinguished. A fire so large that it exceeds a 20foot cube is only partly extinguished.  Magical fires are not extinguished, although a fire-based creature (such as a fire elemental) used as a source takes 1 point of damage per caster level."
+  short_description: "Turns fire into blinding light or choking smoke."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -27,21 +28,9 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: LONG
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One fire source, up to a 20-ft cube duration 1d4+1 rounds, or 1d4+1 rounds after creatures leave the smoke cloud"
+special_range: LONGtarget: "One fire source, up to a 20-ft cube duration 1d4+1 rounds, or 1d4+1 rounds after creatures leave the smoke cloud"
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

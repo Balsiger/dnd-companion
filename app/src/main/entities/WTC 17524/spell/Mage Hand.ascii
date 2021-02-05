@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You point your finger at an object and can lift it and move it at will from a distance.  As a move action, you can propel the object as far as 15 feet in any direction, though the spell ends if the distance between you and the object ever exceeds the spell\'s range."
+  short_description: "5-pound telekinesis."
 }
 school: TRANSMUTATION
 summary: "While concentrating move objects up to 5 lb within 15 ft as move actions."
@@ -23,22 +24,10 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One nonmagical, unattended object weighing up to 5 lb."
+special_range: CLOSEtarget: "One nonmagical, unattended object weighing up to 5 lb."
 duration {
   duration_description: "Concentration"
-  duration {
   }
-  additional_duration {
-  }
-}

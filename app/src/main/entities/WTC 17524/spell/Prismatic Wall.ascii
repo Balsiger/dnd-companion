@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Prismatic wall creates a vertical, opaque wall\342\200\232\303\204\303\256a shimmering, multicolored plane of light that protects you from all forms of attack. The wall flashes with seven colors, each of which has a distinct power and purpose. The wall is immobile, and you can pass through and remain near the wall without harm. However, any other creature with less than 8 HD that is within 20 feet of the wall is blinded for 2d4 rounds by the colors if it looks at the wall. The wall\'s maximum proportions are 4 feet wide per caster level and 2 feet high per caster level. A prismatic wall spell cast to materialize in a space occupied by a creature is disrupted, and the spell is wasted.  Each color in the wall has a special effect. The accompanying table shows the seven colors of the wall, the order in which they appear, their effects on creatures trying to attack you or pass through the wall, and the magic needed to negate each color.  The wall can be destroyed, color by color, in consecutive order, by various magical effects; however, the first color must be brought down before the second can be affected, and so on. A rod of cancellation or a Mordenkainen\'s disjunction spell destroys a prismatic wall, but an antimagic field fails to penetrate it. Dispel magic and greater dispel magic cannot dispel the wall or anything beyond it. Spell resistance is effective against a prismatic wall, but the caster level check must be repeated for each color present.  Prismatic wall can be made permanent with a permanency spell."
+  short_description: "Wall’s colors have array of effects."
 }
 school: ABJURATION
 summary: "Create vertical wall up to [[$level*4]] ft wide and [[2*$level]] high within [[25+(5*($level/2))]] ft for [[10*$level]] min (D), you can pass but other blinded within 20 ft (&lt; 8 HD) for 2d4 rounds. Colors: red (stops nonmagical ranged, 20 fire dmg (Ref DC $dc half)), orange (stops magical ranged, 40 acid dmg (Ref DC $dc half)), yellow (stops poisons, gases, petrification, 80 electricity dmg (Ref DC $dc half)), green (stops breath weapons, poison Fort DC $dc for 1d6 Con or killed), blue (stops divination and mental attacks, For DC $dc or petrified), indigo (stops all spells, Will DC $dc or \\SpellRef{Insanity}), violet (energy field destroys all objects and effects, Will DC $dc or sent to other plane)."
@@ -22,16 +23,10 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
+special_range: CLOSEeffect {
   description: "Wall 4 ft/level wide 2 ft/level high"
 }
 duration {
@@ -39,8 +34,6 @@ duration {
     minutes: 10
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

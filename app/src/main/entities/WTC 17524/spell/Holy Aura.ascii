@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "A brilliant divine radiance surrounds the subjects, protecting them from attacks, granting them resistance to spells cast by evil creatures, and causing evil creatures to become blinded when they strike the subjects. This abjuration has four effects.  First, each warded creature gains a +4 deflection bonus to AC and a +4 resistance bonus on saves. Unlike protection from evil, this benefit applies against all attacks, not just against attacks by evil creatures.  Second, each warded creature gains spell resistance 25 against evil spells and spells cast by evil creatures.  Third, the abjuration blocks possession and mental influence, just as protection from evil does. Finally, if an evil creature succeeds on a melee attack against a warded creature, the offending attacker is blinded (Fortitude save negates, as blindness/deafness, but against holy aura\'s save DC).  Focus: A tiny reliquary containing some sacred relic, such as a scrap of cloth from a saint\'s robe or a piece of parchment from a holy text. The reliquary costs at least 500 gp."
+  short_description: "+4 to AC, +4 resistance, and SR 25 against evil spells."
 }
 school: ABJURATION
 summary: "$undefined$"
@@ -24,24 +25,14 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: FOCUS
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One creature/level in a 20-ftradius burst centered on you"
+  standard_actions: 1
+}target: "One creature/level in a 20-ftradius burst centered on you"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

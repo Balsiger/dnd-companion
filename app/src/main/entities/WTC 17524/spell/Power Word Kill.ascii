@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You utter a single word of power that instantly kills one creature of your choice, whether the creature can hear the word or not. Any creature that currently has 101 or more hit points is unaffected by power word kill."
+  short_description: "Kills one creature with 100 hp or less."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -28,22 +29,10 @@ level {
   level: 9
 }
 components: VERBOSE
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One living creature with 100 hp or less"
+special_range: CLOSEtarget: "One living creature with 100 hp or less"
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}

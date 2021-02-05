@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You sense the direction of a well-known or clearly visualized object. The spell locates such objects as apparel, jewelry, furniture, tools, weapons, or even a ladder. You can search for general items such as a stairway, a sword, or a jewel, in which case you locate the nearest one of its kind if more than one is within range. Attempting to find a certain item, such as a particular piece of jewelry, requires a specific and accurate mental image; if the image is not close enough to the actual object, the spell fails. You cannot specify a unique item (such as \342\200\232\303\204\303\272Baron Vulden\'s signet ring\342\200\232\303\204\303\271) unless you have observed that particular item firsthand (not through divination).  The spell is blocked by even a thin sheet of lead. Creatures cannot be found by this spell. Polymorph any object fools it.  Arcane Focus: A forked twig."
+  short_description: "Senses direction toward object (specific or type)."
 }
 school: DIVINATION
 summary: "$level min, sense direction of well-known object within [[400 + (40 * $level)]] ft"
@@ -35,23 +36,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: FOCUS_DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: LONG
-range {
-}
-effect {
-  distance {
-  }
-}
-area: "Circle, centered on you, with a radius of 400 ft + 40 ft/level"
+special_range: LONGarea: "Circle, centered on you, with a radius of 400 ft + 40 ft/level"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
   }
-}

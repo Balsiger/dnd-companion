@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like detect evil, except that it detects the auras of lawful creatures, clerics of lawful deities, lawful spells, and lawful magic items, and you are vulnerable to an overwhelming lawful aura if you are chaotic."
+  short_description: "Reveals lawful creatures, spells, or objects."
 }
 school: DIVINATION
 summary: "60 ft, concentration (D), detect the auras of lawful creatures."
@@ -16,19 +17,8 @@ level {
   spell_class: CLERIC
   level: 1
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "None"
+spell_resistance: "No"

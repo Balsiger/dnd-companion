@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "By means of read magic, you can decipher magical inscriptions on objects\342\200\232\303\204\303\256books, scrolls, weapons, and the like\342\200\232\303\204\303\256that would otherwise be unintelligible. This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed scroll. Furthermore, once the spell is cast and you have read the magical inscription, you are thereafter able to read that particular writing without recourse to the use of read magic. You can read at the rate of one page (250 words) per minute. The spell allows you to identify a glyph of warding with a DC 13 Spellcraft check, a greater glyph of warding with a DC 16 Spellcraft check, or any symbol spell with a Spellcraft check (DC 10 + spell level). Read magic can be made permanent with a permanency spell.  Focus: A clear crystal or mineral prism."
+  short_description: "Read scrolls and spellbooks."
 }
 school: DIVINATION
 summary: "[[10 * $level]] min, read scrolls and spellbooks."
@@ -38,23 +39,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "You"
+special_range: PERSONALtarget: "You"
 duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  additional_duration {
   }
-}

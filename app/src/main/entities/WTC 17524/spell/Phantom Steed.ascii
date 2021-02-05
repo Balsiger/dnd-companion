@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You conjure a Large, quasi-real, horselike creature. The steed can be ridden only by you or by the one person for whom you specifically created the mount. A phantom steed has a black head and body, gray mane and tail, and smoke-colored, insubstantial hooves that make no sound. It has what seems to be a saddle, bit, and bridle. It does not fight, but animals shun it and refuse to attack it.  The mount has an AC of 18 (\342\200\232\303\204\303\2541 size, +4 natural armor, +5 Dex) and 7 hit points +1 hit point per caster level. If it loses all its hit points, the phantom steed disappears. A phantom steed has a speed of 20 feet per caster level, to a maximum of 240 feet. It can bear its rider\'s weight plus up to 10 pounds per caster level.  These mounts gain certain powers according to caster level. A mount\'s abilities include those of mounts of lower caster levels. Thus, a mount created by a 12thlevel caster has the 8th, 10th, and 12th caster level abilities.  8th level The mount can ride over; sandy, muddy, or even swampy ground without difficulty or decrease in speed.  10th level The mount can use water walk; at will (as the spell, no action required to activate this ability).  12th level The mount can use air walk at; will (as the spell, no action required to activate this ability) for up to 1 round at a time, after which it falls to the ground.  14th level The mount can fly at its speed; (average maneuverability)."
+  short_description: "Magic horse appears for 1 hour/level."
 }
 school: CONJURATION
 subschool: CREATION
@@ -27,15 +28,9 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  minutes: 10
+}effect {
   description: "One quasi-real horselike creature"
 }
 duration {
@@ -43,8 +38,6 @@ duration {
     hours: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

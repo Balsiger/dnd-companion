@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The warded creature is immune to the effects of one specified spell for every four levels you have. The spells must be of 4th level or lower. The warded creature effectively has unbeatable spell resistance regarding the specified spell or spells. Naturally, that immunity doesn\'t protect a creature from spells for which spell resistance doesn\'t apply. Spell immunity protects against spells, spell-like effects of magic items, and innate spell-like abilities of creatures. It does not protect against supernatural or extraordinary abilities, such as breath weapons or gaze attacks.  Only a particular spell can be protected against, not a certain domain or school of spells or a group of spells that are similar in effect. Thus, a creature given immunity to lightning bolt is still vulnerable to shocking grasp or chain lightning.  A creature can have only one spell immunity or greater spell immunity spell in effect on it at a time."
+  short_description: "Subject is immune to one spell per four levels."
 }
 school: ABJURATION
 summary: "Touched creture is immune to one 4th level or lower spell for [[10 * $level]] min."
@@ -27,23 +28,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Creature touched"
+special_range: TOUCHtarget: "Creature touched"
 duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  additional_duration {
   }
-}

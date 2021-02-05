@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The warded creature gains resistance to ranged weapons. The subject gains damage reduction 10/magic against ranged weapons. (This spell doesn\'t grant you the ability to damage creatures with similar damage reduction.) Once the spell has prevented a total of 10 points of damage per caster level (maximum 100 points), it is discharged.  Focus: A piece of shell from a tortoise or a turtle."
+  short_description: "Subject immune to most ranged attacks."
 }
 school: ABJURATION
 summary: "For $level hours (or until dischared) the touched creature gains damage reduction 10/magic against ranged weapons, preventing up to [[min(100, 10 * $level)]] damage."
@@ -23,22 +24,10 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Creature touched"
+special_range: TOUCHtarget: "Creature touched"
 duration {
   duration_description: "One hour/level or until discharged"
-  duration {
   }
-  additional_duration {
-  }
-}

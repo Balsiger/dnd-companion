@@ -38,7 +38,7 @@ public class WorldTemplate extends StoredTemplate<Template.WorldTemplateProto> {
   private final Calendar calendar;
 
   protected WorldTemplate(String name, Calendar calendar) {
-    super(name);
+    super(Template.TemplateProto.getDefaultInstance(), name);
 
     this.calendar = calendar;
   }

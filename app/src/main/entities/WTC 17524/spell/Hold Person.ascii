@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The subject becomes paralyzed and freezes in place. It is aware and breathes normally but cannot take any actions, even speech.  Each round on its turn, the subject may attempt a new saving throw to end the effect. (This is a full-round action that does not provoke attacks of opportunity.)  A winged creature who is paralyzed cannot flap its wings and falls. A swimmer can\'t swim and may drown.  Arcane Focus: A small, straight piece of iron."
+  short_description: "Paralyzes one humanoid for 1 round/level."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -33,25 +34,15 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: FOCUS_DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: MEDIUM
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One humanoid creature"
+special_range: MEDIUMtarget: "One humanoid creature"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

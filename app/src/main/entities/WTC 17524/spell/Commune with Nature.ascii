@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You become one with nature, attaining knowledge of the surrounding territory.  You instantly gain knowledge of as many as three facts from among the following subjects: the ground or terrain, plants, minerals, bodies of water, people, general animal population, presence of woodland creatures, presence of powerful unnatural creatures, or even the general state of the natural setting. For example, you could determine the location of any powerful undead creatures, the location of all major sources of safe drinking water, and the location of any buildings (which register as blind spots).  In outdoor settings, the spell operates in a radius of 1 mile per caster level. In natural underground settings\342\200\232\303\204\303\256caves, caverns, and the like\342\200\232\303\204\303\256the radius is limited to 100 feet per caster level. The spell does not function where nature has been replaced by construction or settlement, such as in dungeons and towns."
+  short_description: "Learn about terrain for 1 mile/level."
 }
 school: DIVINATION
 summary: "$undefined$"
@@ -26,22 +27,13 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  minutes: 10
 }
 special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "You"
 duration {
   duration_description: "Instantaneous"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "No"

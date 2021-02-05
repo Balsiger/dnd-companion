@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Each round, you concentrate on one subject, who must be within range. You know if the subject deliberately and knowingly speaks a lie by discerning disturbances in its aura caused by lying. The spell does not reveal the truth, uncover unintentional inaccuracies, or necessarily reveal evasions. Each round, you may concentrate on a different subject."
+  short_description: "Reveals deliberate falsehoods."
 }
 school: DIVINATION
 summary: "$undefined$"
@@ -23,22 +24,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "One creature/level, no two of which can be more than 30 ft apart"
 duration {
   duration_description: "Concentration"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Will negates"
+spell_resistance: "No"

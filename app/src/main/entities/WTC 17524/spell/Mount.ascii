@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You summon a light horse or a pony (your choice) to serve you as a mount. The steed serves willingly and well. The mount comes with a bit and bridle and a riding saddle.  Material Component: A bit of horse hair."
+  short_description: "Summons riding horse for 2 hours/level."
 }
 school: CONJURATION
 subschool: SUMMONING
@@ -24,16 +25,10 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  rounds: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
+special_range: CLOSEeffect {
   description: "One mount"
 }
 duration {
@@ -41,8 +36,6 @@ duration {
     hours: 2
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

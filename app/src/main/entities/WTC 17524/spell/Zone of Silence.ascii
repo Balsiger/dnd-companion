@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "By casting zone of silence, you manipulate sound waves in your immediate vicinity so that you and those within the spell\'s area can converse normally, yet no one outside can hear your voices or any other noises from within, including languagedependent or sonic spell effects (such as command or shout). This effect is centered on you and moves with you. Anyone who enters the zone immediately becomes subject to its effects, but those who leave are no longer affected. Note, however, that a successful Spot check to read lips can still reveal what\'s said inside a zone of silence."
+  short_description: "Keeps eavesdroppers from overhearing conversations."
 }
 school: ILLUSION
 subschool: GLAMER
@@ -19,25 +20,15 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  rounds: 1
 }
-special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
-area: "5-ft-radius emanation centered on you"
+special_range: PERSONALarea: "5-ft-radius emanation centered on you"
 duration {
   duration {
     hours: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

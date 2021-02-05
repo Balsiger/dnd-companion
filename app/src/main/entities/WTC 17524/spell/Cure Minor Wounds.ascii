@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like cure light wounds, except that it cures only 1 point of damage."
+  short_description: "Cures 1 point of damage."
 }
 school: CONJURATION
 subschool: HEALING
@@ -19,19 +20,8 @@ level {
 level {
   spell_class: DRUID
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "Will half (harmless); see text"
+spell_resistance: "Yes (harmless); see text"

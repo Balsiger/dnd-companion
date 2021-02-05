@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell combines several elements to create a powerful protection from scrying and direct observation. When casting the spell, you dictate what will and will not be observed in the spell\'s area. The illusion created must be stated in general terms.  Thus, you could specify the illusion of yourself and another character playing chess for the duration of the spell, but you could not have the illusory chess players take a break, make dinner, and then resume their game. You could have a crossroads appear quiet and empty even while an army is actually passing through the area. You could specify that no one be seen (including passing strangers), that your troops be undetected, or even that every fifth person or unit should be visible.  Once the conditions are set, they cannot be changed.  Attempts to scry the area automatically detect the image stated by you with no save allowed. Sight and sound are appropriate to the illusion created. A band of people standing in a meadow could be concealed as an empty meadow with birds chirping, for instance. Direct observation may allow a save (as per a normal illusion), if there is cause to disbelieve what is seen. Certainly onlookers in the area would become suspicious if a marching army disappeared at one point to reappear at another. Even entering the area does not cancel the illusion or necessarily allow a save, assuming that hidden beings take care to stay out of the way of those affected by the illusion."
+  short_description: "Illusion hides area from vision, scrying."
 }
 school: ILLUSION
 subschool: GLAMER
@@ -27,22 +28,12 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  minutes: 10
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-area: "30-ft cube/level (S)"
+special_range: CLOSEarea: "30-ft cube/level (S)"
 duration {
   duration {
     hours: 24
   }
-  additional_duration {
   }
-}

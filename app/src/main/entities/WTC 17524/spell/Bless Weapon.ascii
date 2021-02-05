@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This transmutation makes a weapon strike true against evil foes. The weapon is treated as having a +1 enhancement bonus for the purpose of bypassing the damage reduction of evil creatures or striking evil incorporeal creatures (though the spell doesn\342\200\232\303\204\303\264t grant an actual enhancement bonus). The weapon also becomes good, which means it can bypass the damage reduction of certain creatures, particularly evil outsiders. (This effect overrides and suppresses any other alignment the weapon might have.) Individual arrows or bolts can be transmuted, but affected projectile weapons (such as bows) don\342\200\232\303\204\303\264t confer the benefit to the projectiles they shoot.  In addition, all critical hit rolls against evil foes are automatically successful, so every threat is a critical hit. This last effect does not apply to any weapon that already has a magical effect related to critical hits, such as a keen weapon or a vorpal sword."
+  short_description: "Weapon strikes true against evil foes."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -18,23 +19,16 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "Weapon touched"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
   }
-}
+saving_throw: "None"
+spell_resistance: "No"

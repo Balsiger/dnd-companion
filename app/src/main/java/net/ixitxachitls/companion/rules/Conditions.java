@@ -248,7 +248,7 @@ public class Conditions {
       .description("The creature is unable to act normally. A dazed creature can take no "
           + "actions, but has no penalty to AC. A dazed condition typically lasts 1 round.")
       .adjustment("No action (but no AC penalty)")
-      .duration(Duration.rounds(1))
+      .duration(Duration.rounds(1, 0, 0, 0))
       .predefined()
       .icon(R.drawable.icons8_confused_48)
       .build();

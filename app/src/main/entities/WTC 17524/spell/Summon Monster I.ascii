@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell summons an extraplanar creature (typically an outsider, elemental, or magical beast native to another plane). It appears where you designate and acts immediately, on your turn. It attacks your opponents to the best of its ability. If you can communicate with the creature, you can direct it not to attack, to attack particular enemies, or to perform other actions.  The spell conjures one of the creatures from the 1st-level list on the accompanying Summon Monster table. You choose which kind of creature to summon, and you can change that choice each time you cast the spell. Information on these creatures can be found in the Monster Manual.  A summoned monster cannot summon or otherwise conjure another creature, nor can it use any teleportation or planar travel abilities. Creatures cannot be summoned into an environment that cannot support them. For instance, a celestial porpoise may only be summoned in an aquatic environment.  When you use a summoning spell to summon an air, chaotic, earth, evil, fire, good, lawful, or water creature, it is a spell of that type. For example, a summon monster I is a lawful and evil spell when cast to summon a fiendish dire rat. Arcane Focus: A tiny bag and a small (not necessarily lit) candle."
+  short_description: "Calls extraplanar creature to fight for you."
 }
 school: CONJURATION
 subschool: SUMMONING
@@ -32,16 +33,10 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: FOCUS_DIVINE_FOCUS
-focus {
-}
 casting_time {
+  rounds: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
+special_range: CLOSEeffect {
   description: "One summoned creature"
 }
 duration {
@@ -49,8 +44,6 @@ duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

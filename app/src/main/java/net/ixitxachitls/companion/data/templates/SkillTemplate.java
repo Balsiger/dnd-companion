@@ -35,7 +35,7 @@ public class SkillTemplate extends StoredTemplate<Template.SkillTemplateProto> {
   private final Template.SkillTemplateProto proto;
 
   public SkillTemplate(Template.SkillTemplateProto proto, String name) {
-    super(name);
+    super(proto.getTemplate(), name);
     this.proto = proto;
   }
 

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You must succeed on a melee touch attack.  Your touch deals 1d6 points of damage per two caster levels (maximum 10d6). You gain temporary hit points equal to the damage you deal. However, you can\'t gain more than the subject\'s current hit points +10, which is enough to kill the subject.  The temporary hit points disappear 1 hour later."
+  short_description: "Touch deals 1d6/two levels damage; caster gains damage as hp."
 }
 school: NECROMANCY
 summary: "Touch, [[min(10, $level / 2)]]d6 damage, gained as temporary hp, disappear after 1 hour."
@@ -22,22 +23,10 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Living creature touched"
+special_range: TOUCHtarget: "Living creature touched"
 duration {
   duration_description: "Instantaneous/1 hour"
-  duration {
   }
-  additional_duration {
-  }
-}

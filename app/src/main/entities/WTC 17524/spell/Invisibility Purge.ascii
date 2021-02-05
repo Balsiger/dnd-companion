@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You surround yourself with a sphere of power with a radius of 5 feet per caster level that negates all forms of invisibility.  Anything invisible becomes visible while in the area."
+  short_description: "Dispels invisibility within 5 ft./level."
 }
 school: EVOACATION
 summary: "$level min (D),[[5 * $level]] ft sphere negating all forms of invisibility."
@@ -18,25 +19,15 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "You"
+special_range: PERSONALtarget: "You"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

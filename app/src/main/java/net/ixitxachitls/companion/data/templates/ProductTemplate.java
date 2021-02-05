@@ -44,7 +44,7 @@ public class ProductTemplate extends StoredTemplate<Template.ProductTemplateProt
   private final Template.ProductTemplateProto proto;
 
   public ProductTemplate(Template.ProductTemplateProto proto) {
-    super(proto.getTemplate().getName());
+    super(proto.getTemplate(), proto.getTemplate().getName());
 
     this.proto = proto;
   }

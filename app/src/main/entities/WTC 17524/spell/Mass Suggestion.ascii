@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like suggestion, except that it can affect more creatures. The same suggestion applies to all these creatures."
+  short_description: "As suggestion, plus one subject/level."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -28,21 +29,9 @@ level {
   spell_class: WIZARD
   level: 6
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: MEDIUM
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One creature/level, no two of which can be more than 30 ft apart"
+special_range: MEDIUMtarget: "One creature/level, no two of which can be more than 30 ft apart"
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

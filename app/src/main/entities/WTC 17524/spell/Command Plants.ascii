@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell allows you some degree of control over one or more plant creatures.  Affected plant creatures can understand you, and they perceive your words and actions in the most favorable way (treat their attitude as friendly). They will not attack you while the spell lasts. You can try to give a subject orders, but you must win an opposed Charisma check to convince it to do anything it wouldn\342\200\232\303\204\303\264t ordinarily do.  (Retries are not allowed.) A commanded plant never obeys suicidal or obviously harmful orders, but it might be convinced that something very dangerous is worth doing (see charm person).  You can affect a number of plant creatures whose combined level or HD do not exceed twice your level."
+  short_description: "Sway the actions of one or more plant creatures."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -25,23 +26,16 @@ level {
   level: 3
 }
 components: VERBOSE
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "Up to 2 HD/level of plant creatures, no two of which can be more than 30 ft apart"
 duration {
   duration {
     days: 1
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "Will negates"
+spell_resistance: "Yes"

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like ethereal jaunt, except that you and other willing creatures joined by linked hands (along with their equipment) become ethereal. Besides yourself, you can bring one creature per three caster levels to the Ethereal Plane.  Once ethereal, the subjects need not stay together.  When the spell expires, all affected creatures on the Ethereal Plane return to material existence."
+  short_description: "Travel to Ethereal Plane with companions."
 }
 school: TRANSMUTATION
 summary: "For $level minutes you and [[$level/3]] touched creature become ethereal."
@@ -24,25 +25,18 @@ level {
   spell_class: WIZARD
   level: 9
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "You and one other touched creature per three levels"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "Yes"

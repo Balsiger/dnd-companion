@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You turn ammunition (such as arrows, bolts, shuriken, and stones) into fiery projectiles. Each piece of ammunition deals an extra 1d6 points of fire damage to any target it hits. A flaming projectile can easily ignite a flammable object or structure, but it won\342\200\232\303\204\303\264t ignite a creature it strikes. Material Component: A drop of oil and a small piece of flint."
+  short_description: "Arrows deal +1d6 fire damage."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -24,23 +25,16 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "Fifty projectiles, all of which must be in contact with each other at the time of casting"
 duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "No"

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell withers a single plant of any size.  An affected plant creature takes 1d6 points of damage per level (maximum 15d6) and may attempt a Fortitude saving throw for half damage. A plant that isn\342\200\232\303\204\303\264t a creature (such as a tree or shrub) doesn\342\200\232\303\204\303\264t receive a save and immediately withers and dies. This spell has no effect on the soil or surrounding plant life."
+  short_description: "Withers one plant or deals 1d6/level damage to plant creature."
 }
 school: NECROMANCY
 summary: "$undefined$"
@@ -27,21 +28,12 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
 duration {
   duration_description: "Instantaneous"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Fortitude half; see text"
+spell_resistance: "Yes"

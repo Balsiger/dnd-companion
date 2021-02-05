@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like summon monster I, except you can summon one creature from the 6th-level list, 1d3 creatures of the same kind from the 5th-level list, or 1d4+1 creatures of the same kind from a lower-level list. Summon Monster 1st Level Celestial dog LG Celestial owl LG Celestial giant fire beetle NG Celestial porpoise1 NG Celestial badger CG Celestial monkey CG Fiendish dire rat LE Fiendish raven LE Fiendish monstrous centipede, NE Medium Fiendish monstrous scorpion, NE Small Fiendish hawk CE Fiendish monstrous spider, Small CE Fiendish octopus1 CE Fiendish snake, Small viper CE 2nd Level Celestial giant bee LG Celestial giant bombardier beetle NG Celestial riding dog NG Celestial eagle CG Lemure (devil) LE Fiendish squid1 LE Fiendish wolf LE Fiendish monstrous centipede, NE Large Fiendish monstrous scorpion, NE Medium Fiendish shark, Medium1 NE Fiendish monstrous spider, CE Medium Fiendish snake, Medium viper CE 3rd Level Celestial black bear LG Celestial bison NG Celestial dire badger CG Celestial hippogriff CG Elemental, Small (any) N Fiendish ape LE Fiendish dire weasel LE Hell hound LE Fiendish snake, constrictor LE Fiendish boar NE Fiendish dire bat NE Fiendish monstrous centipede, NE Huge Fiendish crocodile CE Dretch (demon) CE"
+  short_description: "Calls extraplanar creature to fight for you."
 }
 school: CONJURATION
 subschool: SUMMONING
@@ -29,20 +30,10 @@ level {
   spell_class: WIZARD
   level: 6
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  rounds: 1
+}effect {
   description: "One or more summoned creatures no two of which can be more than 30 ft apart"
 }
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

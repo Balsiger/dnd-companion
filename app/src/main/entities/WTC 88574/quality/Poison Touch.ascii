@@ -11,5 +11,6 @@ template {
   }
   world: "Forgotten Realms"
   description: "Rhuallith delivers poison (Fortitude save DC 19) with a successful touch attack. The initial and secondary damage is the same (1d3 points of Strength damage). She can elect not to secrete poison. Secreted poison cannot be harvested or saved for any purpose."
+  short_description: "Touch deals 1d10 Con damage, repeats in 1 min."
 }
 type: EXTRAORDINARY

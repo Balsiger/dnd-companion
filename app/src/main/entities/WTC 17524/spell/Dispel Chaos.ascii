@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like dispel evil, except that you are surrounded by constant, blue, lawful energy, and the spell affects chaotic creatures and spells rather than evil ones."
+  short_description: "+4 bonus against attacks."
 }
 school: ABJURATION
 summary: "Surrounds you wiht constant, blue, lawful energy add give you a +4 deflection bonus to AC vs. chaotic creature; can banish chaotic creature from another plane with successful touch attack (Will DC $dc negates), ending the spell; you can also dispell any one enchantment spell cast by a chaotic creature or a chaotic spell, also ending the spell."
@@ -25,19 +26,8 @@ level {
   spell_class: PALADIN
   level: 4
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "See text"
+spell_resistance: "Seet text"

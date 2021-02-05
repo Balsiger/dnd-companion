@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like hold person, except as noted above."
+  short_description: "As hold person, but all within 30 ft."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -23,20 +24,8 @@ level {
   spell_class: WIZARD
   level: 7
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One or more humanoid creatures, no two of which can be more than 30 ft apart"
+  standard_actions: 1
+}target: "One or more humanoid creatures, no two of which can be more than 30 ft apart"
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

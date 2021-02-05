@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You instill courage in the subject, granting it a +4 morale bonus against fear effects for 10 minutes. If the subject is under the influence of a fear effect when receiving the spell, that effect is suppressed for the duration of the spell.  Remove fear counters and dispels cause fear."
+  short_description: "Suppresses fear or gives +4 on saves against fear for one subject + one per four levels."
 }
 school: ABJURATION
 summary: "$undefined$"
@@ -22,22 +23,12 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One creature plus one additional creature per four levels, no two of which can be more than 30 ft apart"
+special_range: CLOSEtarget: "One creature plus one additional creature per four levels, no two of which can be more than 30 ft apart"
 duration {
   duration {
     minutes: 10
   }
-  additional_duration {
   }
-}

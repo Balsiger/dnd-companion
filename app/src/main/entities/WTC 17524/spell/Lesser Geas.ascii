@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "A lesser geas places a magical command on a creature to carry out some service or to refrain from some action or course of activity, as desired by you. The creature must have 7 or fewer Hit Dice and be able to understand you. While a geas cannot compel a creature to kill itself or perform acts that would result in certain death, it can cause almost any other course of activity. The geased creature must follow the given instructions until the geas is completed, no matter how long it takes.  If the instructions involve some openended task that the recipient cannot complete through his own actions (such as \342\200\232\303\204\303\272Wait here\342\200\232\303\204\303\271 or \342\200\232\303\204\303\272Defend this area against attack\342\200\232\303\204\303\271), the spell remains in effect for a maximum of one day per caster level. A clever recipient can subvert some instructions: For example, if you order the recipient to protect you from all harm, it might place you in a nice, safe dungeon for the duration of the spell.  If the subject is prevented from obeying the lesser geas for 24 hours, it takes a \342\200\232\303\204\303\2542 penalty to each of its ability scores. Each day, another \342\200\232\303\204\303\2542 penalty accumulates, up to a total of \342\200\232\303\204\303\2548. No ability score can be reduced to less than 1 by this effect. The ability score penalties are removed 24 hours after the subject resumes obeying the lesser geas.  A lesser geas (and all ability score penalties) can be ended by break enchantment, limited wish, remove curse, miracle, or wish. Dispel magic does not affect a lesser geas."
+  short_description: "Commands subject of 7 HD or less."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -29,24 +30,15 @@ level {
   level: 4
 }
 components: VERBOSE
-focus {
-}
 casting_time {
+  rounds: 1
 }
 special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "One living creature with 7 HD or less"
 duration {
   duration_description: "One day/level or until discharged"
-  duration {
-  }
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates"
+spell_resistance: "Yes"

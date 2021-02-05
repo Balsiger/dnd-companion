@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Bless fills your allies with courage. Each ally gains a +1 morale bonus on attack rolls and on saving throws against fear effects.  Bless counters and dispels bane."
+  short_description: "Allies gain +1 on attack rolls and saves against fear."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -25,15 +26,8 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  standard_actions: 1
 }
 area: "The caster and all allies within a 50ft burst, centered on the caster"
 duration {
@@ -41,6 +35,6 @@ duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
   }
-}
+saving_throw: "None"
+spell_resistance: "Yes (harmless)"

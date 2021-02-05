@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "You fire a small orb of acid at the target.  You must succeed on a ranged touch attack to hit your target. The orb deals 1d3 points of acid damage."
+  short_description: "Orb deals 1d3 acid damage."
 }
 school: CONJURATION
 subschool: CREATION
@@ -23,22 +24,15 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
 effect {
-  distance {
-  }
   description: "One missile of acid"
 }
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}
+saving_throw: "None"
+spell_resistance: "No"

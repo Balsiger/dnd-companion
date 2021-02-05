@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Calling upon the venomous powers of natural predators, you infect the subject with a horrible poison by making a successful melee touch attack. The poison deals 1d10 points of temporary Constitution damage immediately and another 1d10 points of temporary Constitution damage 1 minute later. Each instance of damage can be negated by a Fortitude save (DC 10 + 1/2 your caster level + your Wis modifier)."
+  short_description: "Touch deals 1d10 Con damage, repeats in 1 min."
 }
 school: NECROMANCY
 summary: "Touch, 1d10/1d10 Con damage unless Fort DC [[10 + $ability + switch($class, Druid: 3, default: 4)]]."
@@ -23,22 +24,10 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Living creature touched"
+special_range: TOUCHtarget: "Living creature touched"
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}

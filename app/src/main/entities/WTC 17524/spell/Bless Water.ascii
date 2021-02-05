@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This transmutation imbues a flask (1 pint) of water with positive energy, turning it into holy water (page 128).  Material Component: 5 pounds of powdered silver (worth 25 gp)."
+  short_description: "Makes holy water."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -24,22 +25,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  minutes: 1
 }
 special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "Flask of water touched"
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}
+saving_throw: "Will negates (object)"
+spell_resistance: "Yes (object)"

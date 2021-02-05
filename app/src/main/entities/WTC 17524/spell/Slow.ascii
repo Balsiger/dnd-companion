@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "An affected creature moves and attacks at a drastically slowed rate. A slowed creature can take only a single move action or standard action each turn, but not both (nor may it take full-round actions). Additionally, it takes a \342\200\232\303\204\303\2541 penalty on attack rolls, AC, and Reflex saves. A slowed creature moves at half its normal speed (round down to the next 5-foot increment), which affects the creature\'s jumping distance as normal for decreased speed. Multiple slow effects don\'t stack. Slow counters and dispels haste.  Material Component: A drop of molasses."
+  short_description: "One subject/level takes only one action/round, –2 to AC, –2 on attack rolls."
 }
 school: TRANSMUTATION
 summary: "[[25 + (5 * ($level / 2))]] ft, $level rounds, slow $level creatures, Will DC $dc negates, slowed only single move or standard action, -1 attack, AC, Reflex, move half speel."
@@ -27,23 +28,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One creature/level, no two of which can be more than 30 ft apart"
+special_range: CLOSEtarget: "One creature/level, no two of which can be more than 30 ft apart"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
   }
-}

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like summon monster I, except that you can summon one creature from the 7th-level list, 1d3 creatures of the same kind from the 6th-level list, or 1d4+1 creatures of the same kind from a lowerlevel list. Fiendish snake, Large viper CE Fiendish wolverine CE 4th Level Archon, lantern LG Celestial giant owl LG Celestial giant eagle CG Celestial lion CG Mephit (any) N Fiendish dire wolf LE Fiendish giant wasp LE Fiendish giant praying mantis NE Fiendish shark, Large1 NE Yeth hound NE Fiendish monstrous spider, Large CE Fiendish snake, Huge viper CE Howler CE 5th Level Archon, hound LG Celestial brown bear LG Celestial giant stag beetle NG Celestial sea cat1 NG Celestial griffon CG Elemental, Medium (any) N Achaierai LE Devil, bearded LE Fiendish deinonychus LE Fiendish dire ape LE Fiendish dire boar NE Fiendish shark, Huge NE Fiendish monstrous scorpion, NE Large Shadow mastiff NE Fiendish dire wolverine CE Fiendish giant crocodile CE Fiendish tiger CE 6th Level Celestial polar bear LG Celestial orca whale1 NG Bralani (eladrin) CG Celestial dire lion CG Elemental, Large (any) N Janni (genie) N Chaos beast CN Devil, chain LE Xill LE Fiendish monstrous centipede, NE Gargantuan Fiendish rhinoceros NE Fiendish elasmosaurus1 CE"
+  short_description: "Calls extraplanar creature to fight for you."
 }
 school: CONJURATION
 subschool: SUMMONING
@@ -25,20 +26,10 @@ level {
   spell_class: WIZARD
   level: 7
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  rounds: 1
+}effect {
   description: "One or more summoned creatures no two of which can be more than 30 ft apart"
 }
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

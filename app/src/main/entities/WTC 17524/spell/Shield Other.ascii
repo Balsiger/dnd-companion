@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell wards the subject and creates a mystic connection between you and the subject so that some of its wounds are transferred to you. The subject gains a +1 deflection bonus to AC and a +1 resistance bonus on saves. Additionally, the subject takes only half damage from all wounds and attacks (including that dealt by special abilities) that deal hit point damage. The amount of damage not taken by the warded creature is taken by you. Forms of harm that do not involve hit points, such as charm effects, temporary ability damage, level draining, and death effects, are not affected. If the subject suffers a reduction of hit points from a lowered Constitution score, the reduction is not split with you because it is not hit point damage. When the spell ends, subsequent damage is no longer divided between the subject and you, but damage already split is not reassigned to the subject.  If you and the subject of the spell move out of range of each other, the spell ends.  Focus: A pair of platinum rings (worth at least 50 gp each) worn by both you and the warded creature."
+  short_description: "You take half of subject’s damage."
 }
 school: ABJURATION
 summary: "$undefined$"
@@ -27,25 +28,15 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One creature"
+special_range: CLOSEtarget: "One creature"
 duration {
   duration {
     hours: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

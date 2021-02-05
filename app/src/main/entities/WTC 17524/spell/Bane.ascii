@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "\\Spell{Bane} fills your enemies with fear and doubt. Each affected creature takes a \342\200\232\303\204\303\2541 penalty on attack rolls and a \342\200\232\303\204\303\2541 penalty on saving throws against fear effects.  \\Spell{Bane} counters and dispels \\Spell{bless}."
+  short_description: "Enemies take –1 on attack rolls and saves against fear."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -22,22 +23,14 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
-}
-area: "All enemies within 50 ft"
+  standard_actions: 1
+}area: "All enemies within 50 ft"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
   }
-}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

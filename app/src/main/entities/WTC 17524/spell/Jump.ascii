@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The subject gets a +10 enhancement bonus on Jump checks. The enhancement bonus increases to +20 at caster level 5th, and to +30 (the maximum) at caster level 9th.  Material Component: A grasshopper\'s hind leg, which you break when the spell is cast."
+  short_description: "Subject gets bonus on Jump checks."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -31,25 +32,15 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Creature touched"
+special_range: TOUCHtarget: "Creature touched"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

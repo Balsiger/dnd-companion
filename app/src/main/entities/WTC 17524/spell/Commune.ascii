@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You contact your deity or agents thereof and ask questions that can be answered by a simple yes or no. (A cleric of no particular deity contacts a philosophically allied deity.) You are allowed one such question per caster level. The answers given are correct within the limits of the entity\'s knowledge. \'Unclear\' is a legitimate answer, because powerful beings of the Outer Planes are not necessarily omniscient. In cases where a oneword answer would be misleading or contrary to the deity\'s interests, the DM should give a short phrase (five words or less) as an answer instead.  The spell, at best, provides information to aid character decisions. The entities contacted structure their answers to further their own purposes. If you lag, discuss the answers, or go off to do anything else, the spell ends.  Material Component: Holy (or unholy) water and incense.  XP Cost: 100 XP."
+  short_description: "Deity answers one yes-or-no question/level."
 }
 school: DIVINATION
 summary: "After casting for 10 minutes, ask a single Yes or No question to your deity."
@@ -21,23 +22,16 @@ components: SOMATIC
 components: MATERIAL
 components: DIVINE_FOCUS
 components: EXPERIENCE_POINTS
-focus {
-}
 casting_time {
+  minutes: 10
 }
 special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "You"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "No"

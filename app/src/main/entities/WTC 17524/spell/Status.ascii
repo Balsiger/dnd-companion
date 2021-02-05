@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "When you need to keep track of comrades who may get separated, status allows you to mentally monitor their relative positions and general condition. You are aware of direction and distance to the creatures and any conditions affecting them: unharmed, wounded, disabled, staggered, unconscious, dying, nauseated, panicked, stunned, poisoned, diseased, confused, or the like. Once the spell has been cast upon the subjects, the distance between them and the caster does not affect the spell as long as they are on the same plane of existence. If a subject leaves the plane, or if it dies, the spell ceases to function for it."
+  short_description: "Monitors condition, position of allies."
 }
 school: DIVINATION
 summary: "$undefined$"
@@ -18,23 +19,13 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  rounds: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One living creature touched per three levels"
+special_range: TOUCHtarget: "One living creature touched per three levels"
 duration {
   duration {
     hours: 1
   }
   levels: "level"
-  additional_duration {
   }
-}

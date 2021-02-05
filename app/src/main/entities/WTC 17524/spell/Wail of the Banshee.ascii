@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You emit a terrible scream that kills creatures that hear it (except for yourself).  Creatures closest to the point of origin are affected first."
+  short_description: "Kills one creature/level."
 }
 school: NECROMANCY
 summary: "$undefined$"
@@ -27,22 +28,10 @@ level {
   level: 9
 }
 components: VERBOSE
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-area: "One living creature/level within a 40-ft-radius spread"
+special_range: CLOSEarea: "One living creature/level within a 40-ft-radius spread"
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}

@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like spell immunity, except the immunity applies to spells of 8th level or lower.  A creature can have only one spell immunity or greater spell immunity spell in effect on it at a time."
+  short_description: "As spell immunity, but up to 8th-level spells."
 }
 school: ABJURATION
 summary: "$undefined$"
@@ -17,19 +18,8 @@ level {
   spell_class: CLERIC
   level: 8
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

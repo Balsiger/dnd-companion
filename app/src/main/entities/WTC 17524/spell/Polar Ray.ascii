@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "A blue-white ray of freezing air and ice springs from your hand. You must succeed on a ranged touch attack with the ray to deal damage to a target. The ray deals 1d6 points of cold damage per caster level (maximum 25d6).  Focus: A small, white ceramic cone or prism."
+  short_description: "Ranged touch attack deals 1d6/level cold damage."
 }
 school: EVOACATION
 summary: "$undefined$"
@@ -24,22 +25,12 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
+special_range: CLOSEeffect {
   description: "Ray effect"
 }
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}

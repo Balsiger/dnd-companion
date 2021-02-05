@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The subject feels an undeniable urge to dance and begins doing so, complete with foot shuffling and tapping. The spell effect makes it impossible for the subject to do anything other than caper and prance in place. The effect imposes a \342\200\232\303\204\303\2544 penalty to Armor Class and a \342\200\232\303\204\303\25410 penalty on Reflex saves, and it negates any AC bonus granted by a shield the target holds. The dancing subject provokes attacks of opportunity each round on its turn."
+  short_description: "Forces subject to dance."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -27,22 +28,10 @@ level {
   level: 8
 }
 components: VERBOSE
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Living creature touched"
+special_range: TOUCHtarget: "Living creature touched"
 duration {
   duration_description: "1d4 + 1 rounds"
-  duration {
   }
-  additional_duration {
-  }
-}

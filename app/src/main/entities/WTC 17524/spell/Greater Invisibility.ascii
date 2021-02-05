@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like invisibility, except that it doesn\'t end if the subject attacks."
+  short_description: "As invisibility, but subject can attack and stay invisible."
 }
 school: ILLUSION
 subschool: GLAMER
@@ -28,15 +29,8 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
+  standard_actions: 1
 }
 target: "You or creature touched"
 duration {
@@ -44,8 +38,8 @@ duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless) or Yes (harmless, object)"

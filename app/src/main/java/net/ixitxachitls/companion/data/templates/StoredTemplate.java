@@ -24,9 +24,13 @@ package net.ixitxachitls.companion.data.templates;
 import com.google.protobuf.MessageLite;
 
 import net.ixitxachitls.companion.data.Entry;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
+import net.ixitxachitls.companion.util.Strings;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -34,13 +38,53 @@ import java.util.stream.Collectors;
  * An entry that cannot be changed once created.
  */
 public abstract class StoredTemplate<P extends MessageLite> extends Entry<P> {
-  public StoredTemplate(String name) {
+  private final Template.TemplateProto template;
+
+  public StoredTemplate(Template.TemplateProto template, String name) {
     super(name);
+
+    this.template = template;
   }
 
   protected static Set<String> extractProductIds(Template.TemplateProto template) {
     return template.getReferenceList().stream()
         .map(Value.ReferenceProto::getName)
         .collect(Collectors.toSet());
+  }
+
+  public List<String> getReferences() {
+    return template.getReferenceList().stream()
+        .map(r -> formatReference(r))
+        .collect(Collectors.toList());
+  }
+
+  protected static String formatReference(Value.ReferenceProto reference) {
+    Optional<ProductTemplate> product =
+        Templates.get().getProductTemplates().get(reference.getName());
+    String name;
+    if (product.isPresent()) {
+      name = product.get().getTitle() + " (" + reference.getName() + ")";
+    } else {
+      name = reference.getName();
+    }
+
+    String pages = "";
+    if (reference.getPagesCount() > 1) {
+      pages = " pages " + Strings.SPACE_JOINER.join(reference.getPagesList().stream()
+          .map(p -> formatRange(p))
+          .collect(Collectors.toList()));
+    } else if (reference.getPagesCount() > 0) {
+      pages = " page " + formatRange(reference.getPages(0));
+    }
+
+    return name + pages;
+  }
+
+  protected static String formatRange(Value.RangeProto range) {
+    if (range.getHigh() == range.getLow()) {
+      return String.valueOf(range.getLow());
+    }
+
+    return range.getLow() + "_" + range.getHigh();
   }
 }

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like cause fear, except that it causes all targeted creatures of less than 6 HD to become frightened.  Material Component: A bit of bone from an undead skeleton, zombie, ghoul, ghast, or mummy."
+  short_description: "Panics creatures of less than 6 HD."
 }
 school: NECROMANCY
 summary: "For [[$level]] rounds [[$level / 3]] creatures with less than 6 HD become frigthened  ft, Will $dc or frightened (flee, attack, saves, skills, ability checks -2), Will DC $dc for shaken (attack, saves, skills, ability checks -2) for 1 round."
@@ -29,22 +30,10 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: MEDIUM
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One living creature per three levels, no two of which can be more than 30 ft apart"
+special_range: MEDIUMtarget: "One living creature per three levels, no two of which can be more than 30 ft apart"
 duration {
   duration_description: "1 round/level or 1 round"
-  duration {
   }
-  additional_duration {
-  }
-}

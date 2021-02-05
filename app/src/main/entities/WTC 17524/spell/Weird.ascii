@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like phantasmal killer, except it can affect more than one creature.  Only the affected creatures see the phantasmal creatures attacking them, though you see the attackers as shadowy shapes.  If a subject\'s Fortitude save succeeds, it still takes 3d6 points of damage and is stunned for 1 round. The subject also takes 1d4 points of temporary Strength damage."
+  short_description: "As phantasmal killer, but affects all within 30 ft."
 }
 school: ILLUSION
 subschool: PHANTASM
@@ -23,20 +24,8 @@ level {
   spell_class: WIZARD
   level: 9
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Any number of creatures, no two of which can be more than 30 ft apart"
+  standard_actions: 1
+}target: "Any number of creatures, no two of which can be more than 30 ft apart"
 duration {
-  duration {
   }
-  additional_duration {
-  }
-}

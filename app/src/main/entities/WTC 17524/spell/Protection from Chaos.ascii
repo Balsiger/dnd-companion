@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like protection from evil, except that the deflection and resistance bonuses apply to attacks from chaotic creatures, and chaotic summoned creatures cannot touch the subject."
+  short_description: "+2 to AC and saves, counter mind control, hedge out elementals and outsiders."
 }
 school: ABJURATION
 summary: "$undefined$"
@@ -33,19 +34,7 @@ level {
   spell_class: WIZARD
   level: 1
 }
-focus {
-}
 casting_time {
-}
-range {
-}
-effect {
-  distance {
+  standard_actions: 1
+}duration {
   }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}

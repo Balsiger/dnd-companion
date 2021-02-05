@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like cure light wounds, except that it cures 2d8 points of damage +1 point per caster level (maximum +10)."
+  short_description: "Cures 2d8 damage +1/level (max +10)."
 }
 school: CONJURATION
 subschool: HEALING
@@ -37,19 +38,8 @@ level {
   spell_class: RANGER
   level: 3
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "Will half (harmless); see text"
+spell_resistance: "Yes (harmless); see text"

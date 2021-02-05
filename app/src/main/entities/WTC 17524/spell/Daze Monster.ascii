@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like daze, but daze monster can affect any one living creature of any type. Creatures of 7 or more HD are not affected."
+  short_description: "Living creature of 6 HD or less loses next action."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -26,21 +27,12 @@ level {
   spell_class: WIZARD
   level: 2
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: MEDIUM
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "One living creature of 6 HD or less"
 duration {
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Will negates"
+spell_resistance: "Yes"

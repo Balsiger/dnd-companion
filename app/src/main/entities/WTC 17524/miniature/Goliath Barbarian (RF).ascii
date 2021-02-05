@@ -1,5 +1,5 @@
 template {
-  name: "Goliath Barbarian"
+  name: "Goliath Barbarian (RF)"
 }
 set: "Rime of the Frostmaiden"
 rarity: COMMON

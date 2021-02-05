@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Ghost sound allows you to create a volume of sound that rises, recedes, approaches, or remains at a fixed place. You choose what type of sound ghost sound creates when casting it and cannot thereafter change the sound\342\200\232\303\204\303\264s basic character.  The volume of sound created depends on your level. You can produce as much noise as four normal humans per caster level (maximum twenty humans). Thus, talking, singing, shouting, walking, marching, or running sounds can be created. The noise a ghost sound spell produces can be virtually any type of sound within the volume limit. A horde of rats running and squeaking is about the same volume as eight humans running and shouting. A roaring lion is equal to the noise from sixteen humans, while a roaring dire tiger is equal to the noise from twenty humans.  Ghost sound can enhance the effectiveness of a silent image spell.  Ghost sound can be made permanent with a permanency spell.  Material Component: A bit of wool or a small lump of wax."
+  short_description: "Figment sounds."
 }
 school: ILLUSION
 subschool: FIGMENT
@@ -25,16 +26,11 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
 effect {
-  distance {
-  }
   description: "Illusory sounds"
 }
 duration {
@@ -42,8 +38,8 @@ duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will disbelief (it interacted with)"
+spell_resistance: "No"

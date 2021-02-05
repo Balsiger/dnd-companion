@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You gain intuitive insight into the workings of traps. You can use the Search skill to detect traps just as a rogue can. In addition, you gain an insight bonus equal to one-half your caster level (maximum +10) on Search checks made to find traps while the spell is in effect.  Note that find traps grants no ability to disable the traps that you may find."
+  short_description: "Notice traps as a rogue does."
 }
 school: DIVINATION
 summary: "$undefined$"
@@ -18,23 +19,16 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "You"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "No"

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You reach into the subject\'s mind and modify as many as 5 minutes of its memories in one of the following ways.  Eliminate all memory of an event the subject actually experienced. This spell cannot negate charm, geas/quest, suggestion, or similar spells.  Allow the subject to recall with perfect clarity an event it actually experienced.  For instance, it could recall every word from a 5-minute conversation or every detail from a passage in a book.  Change the details of an event the subject actually experienced. Implant a memory of an event the subject never experienced.  Casting the spell takes 1 round. If the subject fails to save, you proceed with the spell by spending as much as 5 minutes (a period of time equal to the amount of memory time you want to modify) visualizing the memory you wish to modify in the subject. If your concentration is disturbed before the visualization is complete, or if the subject is ever beyond the spell\'s range during this time, the spell is lost.  A modified memory does not necessarily affect the subject\'s actions, particularly if it contradicts the creature\'s natural inclinations. An illogical modified memory, such as the subject recalling how much it enjoyed drinking poison, is dismissed by the creature as a bad dream or a memory muddied by too much wine.  More useful applications of modify memory include implanting memories of friendly encounters with you (inclining the subject to act favorably toward you), changing the details of orders given to the subject by a superior, or causing the subject to forget that it ever saw you or your party. The DM reserves the right to decide whether a modified memory is too nonsensical to significantly affect the subject."
+  short_description: "Changes 5 minutes of subject’s memories."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -20,22 +21,10 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One living creature"
+special_range: CLOSEtarget: "One living creature"
 duration {
   duration_description: "Permanent"
-  duration {
   }
-  additional_duration {
-  }
-}

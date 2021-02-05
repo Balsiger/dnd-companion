@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You instantly recall any one spell of 5th level or lower that you have used during the past 24 hours. The spell must have been actually cast during that period. The recalled spell is stored in your mind as through prepared in the normal fashion. If the recalled spell requires material components, you must provide them. The recovered spell is not usable until the material components are available.  Mordenkainen\'s Magnificent"
+  short_description: "Wizard only. Recalls spell of 5th level or lower."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -18,22 +19,10 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "You"
+special_range: PERSONALtarget: "You"
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}

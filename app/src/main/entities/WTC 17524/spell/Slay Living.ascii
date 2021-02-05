@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You can slay any one living creature. You must succeed on a melee touch attack to touch the subject, and it can avoid death with a successful Fortitude save. If it succeeds, it instead takes 3d6 points of damage +1 point per caster level. (Of course, the subject might die from damage even if it succeeds on its save.)"
+  short_description: "Touch attack kills subject."
 }
 school: NECROMANCY
 summary: "Touch, subject killed unless Fort DC [[10 + 5 + $ability] for 3d6 +$level damage."
@@ -23,22 +24,10 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Living creature touched"
+special_range: TOUCHtarget: "Living creature touched"
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}

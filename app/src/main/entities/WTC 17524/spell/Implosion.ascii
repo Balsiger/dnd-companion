@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You create a destructive resonance in a corporeal creature\'s body. For each round you concentrate, you cause one creature to collapse in on itself, killing it. (This effect, being instantaneous, cannot be dispelled.)  You can target a particular creature only once with each casting of the spell. Implosion has no effect on creatures in gaseous form or on incorporeal creatures."
+  short_description: "Kills one creature/round."
 }
 school: EVOACATION
 summary: "One corporeal creature per round within [[25 + (($level / 2) * 5)]] ft Fort [[19 + $ability]] or collapse on itself and killed."
@@ -22,22 +23,10 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One corporeal creature/round"
+special_range: CLOSEtarget: "One corporeal creature/round"
 duration {
   duration_description: "Concentration"
-  duration {
   }
-  additional_duration {
-  }
-}

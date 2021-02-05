@@ -41,7 +41,7 @@ public class QualityTemplate extends StoredTemplate<Template .QualityTemplatePro
   private final Template.QualityTemplateProto proto;
 
   public QualityTemplate(Template.QualityTemplateProto proto, String name) {
-    super(name);
+    super(proto.getTemplate(), name);
     this.proto = proto;
   }
 

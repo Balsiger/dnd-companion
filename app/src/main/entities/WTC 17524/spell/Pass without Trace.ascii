@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The subject or subjects can move through any type of terrain\342\200\232\303\204\303\256mud, snow, dust, or the like\342\200\232\303\204\303\256and leave neither footprints nor scent. Tracking the subjects is impossible by nonmagical means."
+  short_description: "One subject/level leaves no tracks."
 }
 school: TRANSMUTATION
 summary: "For $level hours (D) $level creature(s) touched cannot be tracked."
@@ -23,25 +24,15 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One creature/level touched"
+special_range: TOUCHtarget: "One creature/level touched"
 duration {
   duration {
     hours: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "Aid grants the target a +1 morale bonus on attack rolls and saves against fear effects, plus temporary hit points equal to 1d8 + caster level (to a maximum of 1d8+10 tem-porary hit points at caster level 10th)."
+  short_description: "+1 on attack rolls and saves against fear, 1d8 temporary hp +1/level (max +10)."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -29,23 +30,15 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: DIVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Living creature touched"
+special_range: TOUCHtarget: "Living creature touched"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  additional_duration {
   }
-}
+saving_throw: "None"
+spell_resistance: "Yes (harmless)"

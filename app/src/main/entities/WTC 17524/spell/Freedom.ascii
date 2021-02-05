@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The subject is freed from spells and effects that restrict its movement, including binding, entangle, grappling, imprisonment, maze, paralysis, petrification, pinning, sleep, slow, stunning, temporal stasis, and web. To free a creature from imprisonment or maze, you must know its name and background, and you must cast this spell at the spot where it was entombed or banished into the maze."
+  short_description: "Releases creature from imprisonment."
 }
 school: ABJURATION
 summary: "$undefined$"
@@ -22,22 +23,13 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: CLOSE
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "One creature"
 duration {
   duration_description: "Instantaneous"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes"

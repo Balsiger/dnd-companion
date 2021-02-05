@@ -2,6 +2,7 @@ template {
   name: "False Vision"
   world: "Generic"
   description: "Any divination (scrying) spell used to view anything within the area of this spell instead receives a false image (as the major image spell), as defined by you at the time of casting. As long as the duration lasts, you can concentrate to change the image as desired. While you aren\342\200\232\303\204\303\264t concentrating, the image remains static.  Arcane Material Component: The ground dust of a piece of jade worth at least 250 gp, which is sprinkled into the air when the spell is cast."
+  short_description: "Fools scrying with an illusion."
 }
 school: ILLUSION
 subschool: GLAMER
@@ -25,25 +26,18 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
 area: "40-ft-radius emanation"
 duration {
   duration {
     hours: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

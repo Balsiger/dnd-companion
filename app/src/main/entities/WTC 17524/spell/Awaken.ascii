@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "You awaken a tree or animal to humanlike sentience. To succeed, you must make a Will save (DC 10 + the animal\342\200\232\303\204\303\264s current HD, or the HD the tree will have once awakened).  The \\Spell[awaken]{awakened} animal or tree is friendly toward you. You have no special empathy or connection with a creature you awaken, although it serves you in specific tasks or endeavors if you communicate your desires to it.  An \\Spell[awaken]{awakened} tree has characteristics as if it were an animated object (see the Monster Manual), except that it gains the plant type and its Intelligence, Wisdom, and Charisma scores are each 3d6. An awakened plant gains the ability to move its limbs, roots, vines, creepers, and so forth, and it has senses similar to a human\342\200\232\303\204\303\264s.  An \\Spell[awaken]{awakened} animal gets 3d6 Intelligence, +1d3 Charisma, and +2 HD. Its type becomes magical beast (augmented animal). An awakened animal can\342\200\232\303\204\303\264t serve as an animal companion, familiar, or special mount.  An \\Spell[awaken]{awakened} tree or animal can speak one language that you know, plus one additional language that you know per point of Intelligence bonus (if any)."
+  short_description: "Animal or tree gains human intellect."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -24,22 +25,12 @@ material {
   use: "xp"
   component: "250 XP"
 }
-focus {
-}
 casting_time {
+  hours: 24
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Animal or tree touched"
+special_range: TOUCHtarget: "Animal or tree touched"
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

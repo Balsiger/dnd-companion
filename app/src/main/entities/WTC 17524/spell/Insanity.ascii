@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The affected creature suffers from a continuous confusion effect, as the spell.  Remove curse does not remove insanity.  Greater restoration, heal, limited wish, miracle, or wish can restore the creature."
+  short_description: "Subject suffers continuous confusion."
 }
 school: ENCHANTMENT
 subschool: COMPULSION
@@ -24,22 +25,10 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: MEDIUM
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "One living creature"
+special_range: MEDIUMtarget: "One living creature"
 duration {
   duration_description: "Instantaneous"
-  duration {
   }
-  additional_duration {
-  }
-}

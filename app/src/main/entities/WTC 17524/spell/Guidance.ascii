@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell imbues the subject with a touch of divine guidance. The creature gets a +1 competence bonus on a single attack roll, saving throw, or skill check. It must choose to use the bonus before making the roll to which it applies."
+  short_description: "+1 on one attack roll, saving throw, or skill check."
 }
 school: DIVINATION
 summary: "Creature touched gets divine guidance for one minute for a +1 to a single attack, save or skill check (chosen before roll)."
@@ -20,22 +21,13 @@ level {
 }
 components: VERBOSE
 components: SOMATIC
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
 target: "Creature touched"
 duration {
   duration_description: "One minute or until discharged"
-  duration {
-  }
-  additional_duration {
-  }
 }
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes"

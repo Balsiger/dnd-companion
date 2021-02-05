@@ -72,7 +72,7 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
                          Weight weight, int hp, Substance substance, Container container,
                          Appearances appearances, boolean monetary,
                          Template.ItemTemplateProto proto) {
-    super(name);
+    super(proto.getTemplate(), name);
 
     this.synonyms = synonyms;
     this.description = description;
@@ -220,12 +220,6 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     }
 
     return Optional.of(Distance.fromProto(proto.getWeapon().getReach()));
-  }
-
-  public List<String> getReferences() {
-    return proto.getTemplate().getReferenceList().stream()
-        .map(r -> formatReference(r))
-        .collect(Collectors.toList());
   }
 
   public RandomDuration getRemoveDuration() {
@@ -453,36 +447,6 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
       case UNKNOWN:
         return 0;
     }
-  }
-
-  private String formatRange(Value.RangeProto range) {
-    if (range.getHigh() == range.getLow()) {
-      return String.valueOf(range.getLow());
-    }
-
-    return range.getLow() + "_" + range.getHigh();
-  }
-
-  private String formatReference(Value.ReferenceProto reference) {
-    Optional<ProductTemplate> product =
-        Templates.get().getProductTemplates().get(reference.getName());
-    String name;
-    if (product.isPresent()) {
-      name = product.get().getTitle() + " (" + reference.getName() + ")";
-    } else {
-      name = reference.getName();
-    }
-
-    String pages = "";
-    if (reference.getPagesCount() > 1) {
-      pages = " pages " + Strings.SPACE_JOINER.join(reference.getPagesList().stream()
-          .map(p -> formatRange(p))
-          .collect(Collectors.toList()));
-    } else if (reference.getPagesCount() > 0) {
-      pages = " page " + formatRange(reference.getPages(0));
-    }
-
-    return name + pages;
   }
 
   public static ItemTemplate createEmpty(String name) {

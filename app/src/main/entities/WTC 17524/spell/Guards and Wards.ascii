@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This powerful spell is primarily used to defend your stronghold. The ward protects 200 square feet per caster level. The warded area can be as much as 20 feet high, and shaped as you desire. You can ward several stories of a stronghold by dividing the area among them; you must be somewhere within the area to be warded to cast the spell. The spell creates the following magical effects within the warded area.  Fog: Fog fills all corridors, obscuring all sight, including darkvision, beyond 5 feet.  A creature within 5 feet has concealment (attacks have a 20% miss chance). Creatures farther away have total concealment (50% miss chance, and the attacker cannot use sight to locate the target). Saving Throw: None.  spell resistance No.; Arcane Locks: All doors in the warded area are arcane locked.  saving throw None.; spell resistance No.; Webs: Webs fill all stairs from top to bottom. These strands are identical with those created by the web spell, except that they regrow in 10 minutes if they are burned or torn away while the guards and wards spell lasts.  saving throw Reflex; negates; see text for web. Spell Resistance: No. Confusion: Where there are choices in direction\342\200\232\303\204\303\256such as a corridor intersection or side passage\342\200\232\303\204\303\256a minor confusion-type effect functions so as to make it 50% probable that intruders believe they are going in the opposite direction from the one they actually chose. This is an enchantment, mind-affecting effect. Saving Throw: None.  spell resistance Yes.; Lost Doors: One door per caster level is covered by a silent image to appear as if it were a plain wall.  saving throw Will disbelief (if interacted with). Spell Resistance:; No.  In addition, you can place your choice of one of the following five magical effects.  1. Dancing lights in four corridors. You can designate a simple program that causes the lights to repeat as long as the guards and wards spell lasts.  saving throw None.; spell resistance No.; 2. A magic mouth in two places. Saving Throw: None. spell resistance No.; 3. A stinking cloud in two places. The vapors appear in the places you designate; they return within 10 minutes if dispersed by wind while the guards and wards spell lasts.  saving throw Fortitude negates; see; text for stinking cloud.  spell resistance No.; 4. A gust of wind in one corridor or room.  saving throw Fortitude negates. Spell; Resistance: Yes. 5. A suggestion in one place. You select an area of up to 5 feet square, and any creature who enters or passes through the area receives the suggestion mentally. Saving Throw: Will negates.  spell resistance Yes.; The whole warded area radiates strong magic of the abjuration school. A dispel magic cast on a specific effect, if successful, removes only that effect. A successful Mordenkainen\342\200\232\303\204\303\264s disjunction destroys the entire guards and wards effect.  Material Component: Burning incense, a small measure of brimstone and oil, a knotted string, and a small amount of blood.  Focus: A small silver rod."
+  short_description: "Array of magic effects protect area."
 }
 school: ABJURATION
 summary: "Casting time 30 min, [[2 * $level]] hours (D), up to [[200 * $level]] sq. ft (S), creates fog (5 ft concealment, &gt;5 total concealment), doors \\Spell{Arcane Lock}ed, webs fill all stairs (regrows in 10 min), confusion effect 50% likely to go in another direction than thought, $level doors seem plain wall, plus one of \\SpellRef{Dancing Lights} 4 corridors, \\SpellRef{Magic Mouth} 2 places, \\PlaceRef{Stinking Cloud} 2 places, \\SpellRef{Gust of Wind} 1 place, \\SpellRef{Suggestion} 1 place."
@@ -24,25 +25,18 @@ components: VERBOSE
 components: SOMATIC
 components: MATERIAL
 components: FOCUS
-focus {
-}
 casting_time {
+  minutes: 30
 }
 special_range: ANYWHERE_WITHIN_AREA_WARDED
-range {
-}
-effect {
-  distance {
-  }
-}
 area: "Up to 200 sq. ft/level (S)"
 duration {
   duration {
     hours: 2
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "See text"
+spell_resistance: "See text"

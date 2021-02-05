@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "This spell functions like dispel magic, except that the maximum caster level on your dispel check is +20 instead of +10.  Additionally, greater dispel magic has a chance to dispel any effect that remove curse can remove, even if dispel magic can\342\200\232\303\204\303\264t dispel that effect."
+  short_description: "As dispel magic, but up to +20 on check."
 }
 school: ABJURATION
 summary: "one spellcaster, creature, object, [[100 + (10 * $level)]] ft, 20-ft burst, cancel magical spells and effects (caster level check, max +20)"
@@ -33,19 +34,8 @@ level {
   spell_class: WIZARD
   level: 6
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-range {
-}
-effect {
-  distance {
-  }
-}
-duration {
-  duration {
-  }
-  additional_duration {
-  }
-}
+saving_throw: "None"
+spell_resistance: "No"

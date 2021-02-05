@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The subject gains a +8 resistance bonus on saving throws against spells and spell-like abilities (but not against supernatural and extraordinary abilities).  Material Component: A diamond of at least 500 gp value, which must be crushed and sprinkled over the targets.  Focus: One 1,000 gp diamond per creature to be granted the protection. Each subject must carry one such gem for the duration of the spell. If a subject loses the gem, the spell ceases to affect him."
+  short_description: "Confers +8 resistance bonus."
 }
 school: ABJURATION
 summary: "$undefined$"
@@ -28,23 +29,13 @@ components: VERBOSE
 components: SOMATIC
 components: MATERIAL
 components: FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Up to one creature touched per four levels"
+special_range: TOUCHtarget: "Up to one creature touched per four levels"
 duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  additional_duration {
   }
-}

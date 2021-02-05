@@ -219,11 +219,6 @@ public class Encounter extends Document<Encounter> implements Item.Owner {
         .setNested(FIELD_ITEMS_GROUPS, itemGroups);
   }
 
-  private static String __createId(String campaignId, String adventureId, String encounterId) {
-    return campaignId + "/" + Adventures.PATH + "/" + adventureId + "/"
-        + Encounters.PATH + "/" + encounterId;
-  }
-
   public static Encounter create(CompanionContext context, String encounterId) {
     Encounter encounter = Document.createWithId(FACTORY, context, encounterId);
 

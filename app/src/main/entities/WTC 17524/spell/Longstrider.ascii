@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "This spell increases your base land speed by 10 feet. (This adjustment counts as an enhancement bonus.) It has no effect on other modes of movement, such as burrow, climb, fly, or swim.  Material Component: A pinch of dirt."
+  short_description: "Your speed increases by 10 ft."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -27,25 +28,15 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: PERSONAL
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "You"
+special_range: PERSONALtarget: "You"
 duration {
   duration {
     hours: 1
   }
   levels: "level"
-  additional_duration {
-  }
   flags: "(D)"
   description: "(D)"
 }

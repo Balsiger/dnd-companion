@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "\\Spell{Acid fog} creates a billowing mass of misty vapors similar to that produced by a \\Spell{solid fog} spell. In addition to slowing creatures down and obscuring sight, this spell\'s vapors are highly acidic. Each round on your turn, starting when you cast the spell, the fog deals 2d6 points of acid damage to each creature and object within it."
+  short_description: "Fog deals acid damage."
 }
 school: CONJURATION
 subschool: CREATION
@@ -36,16 +37,11 @@ material {
   component: "powdered peas (pinch)"
   component: "powdered animal hoof"
 }
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
 special_range: MEDIUM
-range {
-}
 effect {
-  distance {
-  }
   description: "20 ft spread Fog"
 }
 duration {
@@ -53,6 +49,6 @@ duration {
     rounds: 1
   }
   levels: "level"
-  additional_duration {
-  }
 }
+saving_throw: "None"
+spell_resistance: "No"

@@ -9,6 +9,7 @@ template {
   }
   world: "Generic"
   description: "The transmuted creatures can breathe water freely. Divide the duration evenly among all the creatures you touch.  The spell does not make creatures unable to breathe air.  Arcane Material Component: A short reed or piece of straw."
+  short_description: "Subjects can breathe underwater."
 }
 school: TRANSMUTATION
 summary: "$undefined$"
@@ -35,23 +36,13 @@ level {
 components: VERBOSE
 components: SOMATIC
 components: MATERIAL_DEVINE_FOCUS
-focus {
-}
 casting_time {
+  standard_actions: 1
 }
-special_range: TOUCH
-range {
-}
-effect {
-  distance {
-  }
-}
-target: "Living creatures touched"
+special_range: TOUCHtarget: "Living creatures touched"
 duration {
   duration {
     hours: 2
   }
   levels: "level"
-  additional_duration {
   }
-}
