@@ -23,10 +23,13 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Melee weapon touched"
+special_range: TOUCH
+target: "Melee weapon touched"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

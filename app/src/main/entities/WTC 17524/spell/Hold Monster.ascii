@@ -36,6 +36,7 @@ components: SOMATIC
 components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
-}target: "One living creature"
-duration {
-  }
+}
+target: "One living creature"
+saving_throw: "Will negates; see text"
+spell_resistance: "Yes"

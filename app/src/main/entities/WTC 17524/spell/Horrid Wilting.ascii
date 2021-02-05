@@ -31,7 +31,10 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: LONGtarget: "Living creatures, no two of which can be more than 60 ft apart"
+special_range: LONG
+target: "Living creatures, no two of which can be more than 60 ft apart"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "Fortitude half"
+spell_resistance: "Yes"

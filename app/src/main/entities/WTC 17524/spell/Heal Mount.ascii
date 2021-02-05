@@ -23,7 +23,10 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Your mount touched"
+special_range: TOUCH
+target: "Your mount touched"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

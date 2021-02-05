@@ -29,7 +29,10 @@ components: DIVINE_FOCUS
 casting_time {
   hours: 24
 }
-special_range: TOUCHarea: "40-ft radius emanating from the touched point"
+special_range: TOUCH
+area: "40-ft radius emanating from the touched point"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "See text"
+spell_resistance: "See text"
