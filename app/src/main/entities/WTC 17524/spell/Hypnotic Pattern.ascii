@@ -33,9 +33,13 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMeffect {
+special_range: MEDIUM
+effect {
   description: "Colorful lights in a 10-ft-radius spread"
 }
 duration {
   duration_description: "Concentration +  2 rounds"
-  }
+}
+saving_throw: "Will negates"
+spell_resistance: "Yes"
+

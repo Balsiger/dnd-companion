@@ -32,9 +32,12 @@ components: SOMATIC
 casting_time {
   rounds: 1
 }
-special_range: CLOSEarea: "Several living creatures, no two of which may be more than 30 ft apart"
+special_range: CLOSE
+area: "Several living creatures, no two of which may be more than 30 ft apart"
 duration {
   duration_description: "2d4 rounds"
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates"
+spell_resistance: "Yes"

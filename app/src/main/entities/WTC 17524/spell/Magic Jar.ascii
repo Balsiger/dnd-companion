@@ -27,7 +27,10 @@ components: FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "One creature"
+special_range: MEDIUM
+target: "One creature"
 duration {
   duration_description: "One hour/level or until you return to your body"
-  }
+}
+saving_throw: "Will negates; see text"
+spell_resistance: "Yes"

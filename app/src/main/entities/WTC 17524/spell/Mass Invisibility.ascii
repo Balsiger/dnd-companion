@@ -29,6 +29,7 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: LONGtarget: "Any number of creatures, no two of which can be more than 180 ft apart"
-duration {
-  }
+special_range: LONG
+target: "Any number of creatures, no two of which can be more than 180 ft apart"
+saving_throw: "Will negates (harmless) or Will negates (harmless, object)"
+spell_resistance: "Yes (harmlesss) or Yes (harmless, object)"

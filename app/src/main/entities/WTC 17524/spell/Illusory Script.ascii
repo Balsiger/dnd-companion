@@ -33,7 +33,8 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "One touched object weighing no more than 10 lb."
+special_range: TOUCH
+target: "One touched object weighing no more than 10 lb."
 duration {
   duration {
     days: 1
@@ -42,3 +43,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates; see text"
+spell_resistance: "Yes"

@@ -27,5 +27,5 @@ casting_time {
   standard_actions: 1
 }
 special_range: CLOSEtarget: "One or more creatures, no two of which can be more than 30 ft apart"
-duration {
-  }
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

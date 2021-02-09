@@ -39,10 +39,13 @@ components: FOCUS_DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: LONGarea: "Circle, centered on you, with a radius of 400 ft + 40 ft/level"
+special_range: LONG
+area: "Circle, centered on you, with a radius of 400 ft + 40 ft/level"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

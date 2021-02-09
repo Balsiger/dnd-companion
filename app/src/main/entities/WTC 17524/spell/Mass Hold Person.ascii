@@ -26,6 +26,7 @@ level {
 }
 casting_time {
   standard_actions: 1
-}target: "One or more humanoid creatures, no two of which can be more than 30 ft apart"
-duration {
-  }
+}
+target: "One or more humanoid creatures, no two of which can be more than 30 ft apart"
+saving_throw: "Will negates; see text"
+spell_resistance: "Yes"

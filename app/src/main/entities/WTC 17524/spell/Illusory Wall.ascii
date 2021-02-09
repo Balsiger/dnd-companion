@@ -27,9 +27,12 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "Image 1 ft by 10 ft by 10 ft"
 }
 duration {
   duration_description: "Permanent"
-  }
+}
+saving_throw: "Will disbelief (if interacted with)"
+spell_resistance: "No"

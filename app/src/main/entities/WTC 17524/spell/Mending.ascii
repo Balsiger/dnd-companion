@@ -32,7 +32,10 @@ components: VERBOSE
 components: SOMATIC
 casting_time {
   standard_actions: 1
-}target: "One object of up to 1 lb."
+}
+target: "One object of up to 1 lb."
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "Will negates (harmless, object)"
+spell_resistance: "Yes (harmless, object)"

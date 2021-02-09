@@ -32,7 +32,8 @@ components: MATERIAL
 casting_time {
   minutes: 10
 }
-special_range: LONGarea: "One 30-ft cube/level (S)"
+special_range: LONG
+area: "One 30-ft cube/level (S)"
 duration {
   duration {
     hours: 2
@@ -41,3 +42,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will disbelief (if interacted with)"
+spell_resistance: "No"

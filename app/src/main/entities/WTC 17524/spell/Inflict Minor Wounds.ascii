@@ -18,5 +18,6 @@ level {
 }
 casting_time {
   standard_actions: 1
-}duration {
-  }
+}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

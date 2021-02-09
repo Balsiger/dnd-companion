@@ -25,6 +25,9 @@ level {
 casting_time {
   minutes: 10
 }
-special_range: CLOSEduration {
+special_range: CLOSE
+duration {
   duration_description: "See Text"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

@@ -22,7 +22,8 @@ components: SOMATIC
 casting_time {
   minutes: 10
 }
-special_range: TOUCHtarget: "Tree touched"
+special_range: TOUCH
+target: "Tree touched"
 duration {
   duration {
     days: 1
@@ -31,3 +32,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

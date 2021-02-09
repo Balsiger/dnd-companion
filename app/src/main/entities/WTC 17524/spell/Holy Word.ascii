@@ -26,7 +26,10 @@ level {
 components: VERBOSE
 casting_time {
   standard_actions: 1
-}area: "Nongood creatures in a 40-ft-radius spread centered on you"
+}
+area: "Nongood creatures in a 40-ft-radius spread centered on you"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None or Will negates; see text"
+spell_resistance: "Yes"

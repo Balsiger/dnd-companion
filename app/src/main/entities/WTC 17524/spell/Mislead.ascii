@@ -39,7 +39,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "You/one illusory double"
 }
 duration {
@@ -51,3 +52,5 @@ duration {
     rounds: 3
   }
 }
+saving_throw: "None or Will disbelief (if interacted with); see text"
+spell_resistance: "No"

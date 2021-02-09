@@ -21,7 +21,8 @@ components: FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "Extradimensional mansion up to three 10-ft cubes/level (S)"
 }
 duration {
@@ -32,3 +33,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

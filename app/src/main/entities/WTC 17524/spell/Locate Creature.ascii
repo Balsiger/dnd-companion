@@ -30,9 +30,14 @@ components: SOMATIC
 components: MATERIAL
 casting_time {
   standard_actions: 1
-}duration {
+}
+duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"
+saving_throw: "None"
+spell_resistance: "No"

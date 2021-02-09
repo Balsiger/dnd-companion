@@ -31,10 +31,13 @@ level {
 components: VERBOSE
 casting_time {
   standard_actions: 1
-}target: "One or more creatures, no two of which can be more than 30 ft apart"
+}
+target: "One or more creatures, no two of which can be more than 30 ft apart"
 duration {
   duration {
     days: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

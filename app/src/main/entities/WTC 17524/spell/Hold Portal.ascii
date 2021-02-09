@@ -25,7 +25,8 @@ components: VERBOSE
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "One portal, up to 20 sq. ft/level"
+special_range: MEDIUM
+target: "One portal, up to 20 sq. ft/level"
 duration {
   duration {
     minutes: 1
@@ -34,3 +35,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

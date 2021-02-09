@@ -37,7 +37,8 @@ components: FOCUS_DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "One humanoid creature"
+special_range: MEDIUM
+target: "One humanoid creature"
 duration {
   duration {
     rounds: 1
@@ -46,3 +47,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates; see text"
+spell_resistance: "Yes"

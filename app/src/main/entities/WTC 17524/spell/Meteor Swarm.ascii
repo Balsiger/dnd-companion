@@ -27,7 +27,10 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: LONGarea: "Four 40-ft-radius spreads; see text"
+special_range: LONG
+area: "Four 40-ft-radius spreads; see text"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None or Reflex half; see text"
+spell_resistance: "Yes"

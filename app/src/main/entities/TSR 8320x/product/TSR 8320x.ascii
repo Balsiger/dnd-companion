@@ -3,7 +3,7 @@ template {
   reference {
     name: "complete product listing"
   }
-  world: "Dragonlance"
+  world: "Dragonlance"proto
   description: "the set of the Legends trilogy"
 }
 title: "Legends Trilogy"
@@ -28,3 +28,5 @@ number: "all volumes"
 series: "Legends Trilogy"
 price {
 }
+
+

@@ -23,9 +23,12 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMarea: "Living creatures within a 10-ftradius burst"
+special_range: MEDIUM
+area: "Living creatures within a 10-ftradius burst"
 duration {
   duration_description: "Concentration +  1 round/level"
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates"
+spell_resistance: "Yes"

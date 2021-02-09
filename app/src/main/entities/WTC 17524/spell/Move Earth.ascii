@@ -32,7 +32,10 @@ components: MATERIAL
 casting_time {
   minutes: 30
 }
-special_range: LONGarea: "Dirt in an area up to 750 ft square and up to 10 ft deep (S)"
+special_range: LONG
+area: "Dirt in an area up to 750 ft square and up to 10 ft deep (S)"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

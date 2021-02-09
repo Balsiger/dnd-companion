@@ -22,7 +22,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: PERSONALtarget: "You"
+special_range: PERSONAL
+target: "You"
 duration {
   duration {
     minutes: 1
@@ -31,3 +32,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

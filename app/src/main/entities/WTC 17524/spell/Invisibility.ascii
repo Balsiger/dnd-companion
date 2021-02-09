@@ -36,7 +36,8 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: PERSONAL_OR_TOUCHtarget: "You or a creature or object weighing no more than 100 lb./level"
+special_range: PERSONAL_OR_TOUCH
+target: "You or a creature or object weighing no more than 100 lb./level"
 duration {
   duration {
     minutes: 1
@@ -45,3 +46,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates (harmless) or Will negates (harmless, object)"
+spell_resistance: "Yes (harmlesss) or Yes (harmless, object)"

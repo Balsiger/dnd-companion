@@ -35,7 +35,10 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   hours: 1
 }
-special_range: TOUCHtarget: "One touched object"
+special_range: TOUCH
+target: "One touched object"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

@@ -28,9 +28,12 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "Phantom watchdog"
 }
 duration {
   duration_description: "1 hour/caster level or until discharged, then 1 round/caster level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"
