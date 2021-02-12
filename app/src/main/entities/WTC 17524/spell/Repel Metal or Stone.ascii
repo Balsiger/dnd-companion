@@ -22,7 +22,8 @@ components: VERBOSE
 components: SOMATIC
 casting_time {
   standard_actions: 1
-}area: "60-ft line from you"
+}
+area: "60-ft line from you"
 duration {
   duration {
     rounds: 1
@@ -31,3 +32,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

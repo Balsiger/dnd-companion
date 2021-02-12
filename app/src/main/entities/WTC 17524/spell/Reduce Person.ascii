@@ -27,7 +27,8 @@ components: MATERIAL
 casting_time {
   rounds: 1
 }
-special_range: CLOSEtarget: "One humanoid creature"
+special_range: CLOSE
+target: "One humanoid creature"
 duration {
   duration {
     minutes: 1
@@ -36,3 +37,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Fortitude negates"
+spell_resistance: "Yes"

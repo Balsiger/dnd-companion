@@ -27,5 +27,6 @@ components: SOMATIC
 components: MATERIAL
 casting_time {
   rounds: 3
-}duration {
-  }
+}
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

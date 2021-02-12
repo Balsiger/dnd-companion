@@ -31,7 +31,8 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMarea: "Up to one 10-ft cube per two levels (S)"
+special_range: MEDIUM
+area: "Up to one 10-ft cube per two levels (S)"
 duration {
   duration {
     rounds: 1
@@ -40,3 +41,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None; see text"
+spell_resistance: "No"

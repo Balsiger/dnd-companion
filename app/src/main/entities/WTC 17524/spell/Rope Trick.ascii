@@ -27,7 +27,8 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "One touched piece of rope from 5 ft to 30 ft long"
+special_range: TOUCH
+target: "One touched piece of rope from 5 ft to 30 ft long"
 duration {
   duration {
     hours: 1
@@ -36,3 +37,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

@@ -20,5 +20,7 @@ level {
 }
 casting_time {
   minutes: 10
-}duration {
-  }
+}
+saving_throw: "None; see text"
+spell_resistance: "Yes (harmless)"
+

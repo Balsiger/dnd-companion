@@ -25,7 +25,8 @@ components: VERBOSE
 components: SOMATIC
 casting_time {
   standard_actions: 1
-}area: "60-ft line-shaped emanation from you"
+}
+area: "60-ft line-shaped emanation from you"
 duration {
   duration {
     minutes: 1
@@ -34,3 +35,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"
