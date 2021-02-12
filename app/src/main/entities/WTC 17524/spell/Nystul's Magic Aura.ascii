@@ -36,7 +36,8 @@ components: FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "One touched object weighing up to 5 lb./level"
+special_range: TOUCH
+target: "One touched object weighing up to 5 lb./level"
 duration {
   duration {
     days: 1
@@ -45,3 +46,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None; see text"
+spell_resistance: "No"

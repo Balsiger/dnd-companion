@@ -31,7 +31,10 @@ components: VERBOSE
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Living creature touched"
+special_range: TOUCH
+target: "Living creature touched"
 duration {
   duration_description: "1d4 + 1 rounds"
-  }
+}
+saving_throw: "None"
+spell_resistance: "Yes"
