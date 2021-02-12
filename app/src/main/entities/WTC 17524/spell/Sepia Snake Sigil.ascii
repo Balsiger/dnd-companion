@@ -33,7 +33,10 @@ components: MATERIAL
 casting_time {
   minutes: 10
 }
-special_range: TOUCHtarget: "One touched book or written work"
+special_range: TOUCH
+target: "One touched book or written work"
 duration {
   duration_description: "Permanent or until discharged until released or 1d4 days +  one day/level"
-  }
+}
+saving_throw: "Relfex negates"
+spell_resistance: "No"

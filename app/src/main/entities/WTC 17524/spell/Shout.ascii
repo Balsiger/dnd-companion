@@ -29,7 +29,10 @@ level {
 components: VERBOSE
 casting_time {
   standard_actions: 1
-}area: "Cone-shaped burst"
+}
+area: "Cone-shaped burst"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "Fortitude partial or Reflex negates (object); see text"
+spell_resistance: "Yes (object)"

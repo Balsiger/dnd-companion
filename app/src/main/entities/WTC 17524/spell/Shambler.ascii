@@ -27,7 +27,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMeffect {
+special_range: MEDIUM
+effect {
   description: "Three or more shambling mounds no two of which can be more than 30 ft apart"
 }
 duration {
@@ -35,3 +36,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

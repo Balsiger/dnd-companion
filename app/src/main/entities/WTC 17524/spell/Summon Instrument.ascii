@@ -21,7 +21,8 @@ components: VERBOSE
 components: SOMATIC
 casting_time {
   rounds: 1
-}effect {
+}
+effect {
   description: "One summoned handheld musical instrument"
 }
 duration {
@@ -32,3 +33,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

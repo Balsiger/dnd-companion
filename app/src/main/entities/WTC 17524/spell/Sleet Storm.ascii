@@ -33,10 +33,13 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: LONGarea: "Cylinder (40-ft radius, 20 ft high)"
+special_range: LONG
+area: "Cylinder (40-ft radius, 20 ft high)"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

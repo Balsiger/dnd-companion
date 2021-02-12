@@ -23,9 +23,12 @@ components: FOCUS
 casting_time {
   minutes: 10
 }
-special_range: TOUCHtarget: "Wooden quarterstaff touched"
+special_range: TOUCH
+target: "Wooden quarterstaff touched"
 duration {
   duration_description: "Permanent until Discharged"
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates (object)"
+spell_resistance: "Yes (object)"

@@ -40,7 +40,10 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Stone or stone object touched, up to 10 cu. ft + 1 cu. ft/level"
+special_range: TOUCH
+target: "Stone or stone object touched, up to 10 cu. ft + 1 cu. ft/level"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

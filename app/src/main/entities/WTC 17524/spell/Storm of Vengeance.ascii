@@ -27,7 +27,8 @@ components: SOMATIC
 casting_time {
   rounds: 1
 }
-special_range: LONGeffect {
+special_range: LONG
+effect {
   description: "360-ft-radius storm cloud"
 }
 duration {
@@ -35,3 +36,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "See text"
+spell_resistance: "Yes"

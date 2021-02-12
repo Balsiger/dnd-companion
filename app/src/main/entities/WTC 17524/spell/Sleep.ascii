@@ -33,10 +33,13 @@ components: MATERIAL
 casting_time {
   rounds: 1
 }
-special_range: MEDIUMarea: "One or more living creatures within a 10-ft-radius burst"
+special_range: MEDIUM
+area: "One or more living creatures within a 10-ft-radius burst"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

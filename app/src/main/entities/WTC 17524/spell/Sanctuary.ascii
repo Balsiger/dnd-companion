@@ -27,10 +27,13 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Creature touched"
+special_range: TOUCH
+target: "Creature touched"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates"
+spell_resistance: "No"

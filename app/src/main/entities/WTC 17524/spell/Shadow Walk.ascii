@@ -31,7 +31,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Up to one touched creature/level"
+special_range: TOUCH
+target: "Up to one touched creature/level"
 duration {
   duration {
     hours: 1
@@ -40,3 +41,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates"
+spell_resistance: "Yes"

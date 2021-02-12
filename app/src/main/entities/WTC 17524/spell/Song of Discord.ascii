@@ -25,10 +25,13 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMarea: "Creatures within a 20-ft-radius spread"
+special_range: MEDIUM
+area: "Creatures within a 20-ft-radius spread"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negate"
+spell_resistance: "Yes"

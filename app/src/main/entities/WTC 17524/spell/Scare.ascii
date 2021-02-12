@@ -33,7 +33,10 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "One living creature per three levels, no two of which can be more than 30 ft apart"
+special_range: MEDIUM
+target: "One living creature per three levels, no two of which can be more than 30 ft apart"
 duration {
   duration_description: "1 round/level or 1 round"
-  }
+}
+saving_throw: "Will partial"
+spell_resistance: "Yes"

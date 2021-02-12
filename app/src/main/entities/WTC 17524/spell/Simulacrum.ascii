@@ -28,9 +28,12 @@ components: MATERIAL
 components: EXPERIENCE_POINTS
 casting_time {
   hours: 12
-}effect {
+}
+effect {
   description: "One duplicate creature"
 }
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

@@ -28,7 +28,10 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEarea: "10-ft square/level; see text"
+special_range: CLOSE
+area: "10-ft square/level; see text"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

@@ -29,9 +29,12 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "Colorful lights in a 20-ft-radius spread"
 }
 duration {
   duration_description: "Concentration +  2 rounds"
-  }
+}
+saving_throw: "None"
+spell_resistance: "Yes"

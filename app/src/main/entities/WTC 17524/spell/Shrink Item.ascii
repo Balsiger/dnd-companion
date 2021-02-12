@@ -26,10 +26,13 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "One touched object of up to 2 cu. ft/level"
+special_range: TOUCH
+target: "One touched object of up to 2 cu. ft/level"
 duration {
   duration {
     days: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates (object)"
+spell_resistance: "Yes (object)"
