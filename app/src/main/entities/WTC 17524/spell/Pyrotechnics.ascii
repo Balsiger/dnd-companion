@@ -31,6 +31,7 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: LONGtarget: "One fire source, up to a 20-ft cube duration 1d4+1 rounds, or 1d4+1 rounds after creatures leave the smoke cloud"
-duration {
-  }
+special_range: LONG
+target: "One fire source, up to a 20-ft cube duration 1d4+1 rounds, or 1d4+1 rounds after creatures leave the smoke cloud"
+saving_throw: "Will negates or Fortitude negates; see text"
+spell_resistance: "Yes or No; see text"

@@ -28,7 +28,8 @@ level {
 }
 casting_time {
   standard_actions: 1
-}effect {
+}
+effect {
   description: "Figment that cannot extend beyond a 20-ft cube + one 10-ft cube/level (S)"
 }
 duration {
@@ -36,3 +37,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will disbelief (if interacted with)"
+spell_resistance: "No"

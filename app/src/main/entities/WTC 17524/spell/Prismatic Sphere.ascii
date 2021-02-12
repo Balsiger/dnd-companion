@@ -32,8 +32,9 @@ level {
 components: VERBOSE
 casting_time {
   standard_actions: 1
-}effect {
+}
+effect {
   description: "10-ft-radius sphere centered on you"
 }
-duration {
-  }
+saving_throw: "See text"
+spell_resistance: "See text"

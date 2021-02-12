@@ -28,7 +28,8 @@ level {
 }
 casting_time {
   standard_actions: 1
-}duration {
+}
+duration {
   duration {
     minutes: 1
   }
@@ -36,3 +37,5 @@ casting_time {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will disbelieft (if interacted with)"
+spell_resistance: "No"

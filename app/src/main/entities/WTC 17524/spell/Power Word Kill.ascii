@@ -32,7 +32,10 @@ components: VERBOSE
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEtarget: "One living creature with 100 hp or less"
+special_range: CLOSE
+target: "One living creature with 100 hp or less"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "Yes"

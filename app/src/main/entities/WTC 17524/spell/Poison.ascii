@@ -27,7 +27,10 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Living creature touched"
+special_range: TOUCH
+target: "Living creature touched"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "Fortitude negates; see text"
+spell_resistance: "Yes"

@@ -25,7 +25,10 @@ components: VERBOSE
 components: SOMATIC
 casting_time {
   standard_actions: 1
-}area: "Cone-shaped burst"
+}
+area: "Cone-shaped burst"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "See text"
+spell_resistance: "Yes"

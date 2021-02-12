@@ -28,10 +28,13 @@ components: SOMATIC
 components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
-}area: "All allies and foes within a 40-ft radius burst centered on you"
+}
+area: "All allies and foes within a 40-ft radius burst centered on you"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "Yes"

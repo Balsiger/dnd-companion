@@ -26,7 +26,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "Wall 4 ft/level wide 2 ft/level high"
 }
 duration {
@@ -37,3 +38,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "See text"
+spell_resistance: "See text"

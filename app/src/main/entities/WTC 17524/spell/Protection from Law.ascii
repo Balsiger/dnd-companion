@@ -32,5 +32,7 @@ level {
 }
 casting_time {
   standard_actions: 1
-}duration {
-  }
+}
+saving_throw: "Will negates (harmless)"
+spell_resistance: "No; see text"
+

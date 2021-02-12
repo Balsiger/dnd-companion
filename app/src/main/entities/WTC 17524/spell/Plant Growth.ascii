@@ -31,7 +31,10 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: SEE_TEXT_RANGEarea: "See text"
+special_range: SEE_TEXT_RANGE
+area: "See text"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

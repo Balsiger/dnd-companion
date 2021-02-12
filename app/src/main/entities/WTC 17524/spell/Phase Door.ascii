@@ -29,9 +29,12 @@ level {
 components: VERBOSE
 casting_time {
   standard_actions: 1
-}effect {
+}
+effect {
   description: "Ethereal 5 ft by 8 ft opening 10 ft deep + 5 ft deep per three levels"
 }
 duration {
   duration_description: "One Usage per two levels"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

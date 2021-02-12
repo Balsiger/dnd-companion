@@ -26,9 +26,12 @@ components: VERBOSE
 components: SOMATIC
 casting_time {
   standard_actions: 1
-}area: "See text"
+}
+area: "See text"
 duration {
   duration {
     hours: 1
   }
-  }
+}
+saving_throw: "See text"
+spell_resistance: "No"

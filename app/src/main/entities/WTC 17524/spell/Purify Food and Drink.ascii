@@ -23,7 +23,10 @@ components: VERBOSE
 components: SOMATIC
 casting_time {
   standard_actions: 1
-}target: "1 cu. ft/level of contaminated food and water"
+}
+target: "1 cu. ft/level of contaminated food and water"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "Will negates (object)"
+spell_resistance: "Yes (object)"
