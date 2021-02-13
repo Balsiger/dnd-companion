@@ -36,9 +36,12 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMeffect {
+special_range: MEDIUM
+effect {
   description: "Opaque sheet of flame up to 20 ft long/level or a ring of fire with a radius of up to 5 ft per two levels either form 20 ft high"
 }
 duration {
   duration_description: "Concentration +  1 round/level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "Yes"

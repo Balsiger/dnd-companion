@@ -31,7 +31,10 @@ components: VERBOSE
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEarea: "One living creature/level within a 40-ft-radius spread"
+special_range: CLOSE
+area: "One living creature/level within a 40-ft-radius spread"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "Fortitude negates"
+spell_resistance: "Yes"

@@ -28,7 +28,8 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMeffect {
+special_range: MEDIUM
+effect {
   description: "Anchored plane of ice up to one 10-ft square/level or hemisphere of ice with a radius of up to 3 ft + 1 ft/level"
 }
 duration {
@@ -36,4 +37,6 @@ duration {
     minutes: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "Reflex negates; see text"
+spell_resistance: "Yes"

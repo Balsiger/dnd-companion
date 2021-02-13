@@ -28,7 +28,8 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "Wall whose area is up to one 10-ft square/level"
 }
 duration {
@@ -39,3 +40,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

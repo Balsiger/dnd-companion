@@ -39,10 +39,13 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Living creatures touched"
+special_range: TOUCH
+target: "Living creatures touched"
 duration {
   duration {
     hours: 2
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

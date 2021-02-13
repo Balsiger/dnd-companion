@@ -44,7 +44,8 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMeffect {
+special_range: MEDIUM
+effect {
   description: "Wall up to 10 ft/level long and 5 ft/level high (S)"
 }
 duration {
@@ -52,4 +53,6 @@ duration {
     rounds: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "None; see text"
+spell_resistance: "Yes"

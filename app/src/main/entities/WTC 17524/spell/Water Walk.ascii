@@ -28,7 +28,8 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "One touched creature/level"
+special_range: TOUCH
+target: "One touched creature/level"
 duration {
   duration {
     minutes: 10
@@ -37,3 +38,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

@@ -28,7 +28,8 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMeffect {
+special_range: MEDIUM
+effect {
   description: "Webs in a 20-ft-radius spread"
 }
 duration {
@@ -39,3 +40,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Reflex negates; see text"
+spell_resistance: "No"

@@ -26,7 +26,10 @@ level {
 components: VERBOSE
 casting_time {
   standard_actions: 1
-}area: "Nonchaotic creatures in a 40-ftradius spread centered on you"
+}
+area: "Nonchaotic creatures in a 40-ftradius spread centered on you"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None or Will negates; see text"
+spell_resistance: "Yes"

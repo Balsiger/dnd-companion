@@ -28,7 +28,8 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: LONGeffect {
+special_range: LONG
+effect {
   description: "Cyclone 10 ft wide at base 30 ft wide at top and 30 ft tall"
 }
 duration {
@@ -39,3 +40,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Reflex negates; see text"
+spell_resistance: "Yes"

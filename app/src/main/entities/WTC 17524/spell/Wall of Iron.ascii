@@ -28,9 +28,12 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMeffect {
+special_range: MEDIUM
+effect {
   description: "Iron wall whose area is up to one 5-ft square/level"
 }
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "See text"
+spell_resistance: "No"

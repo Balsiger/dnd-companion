@@ -26,6 +26,7 @@ level {
 }
 casting_time {
   standard_actions: 1
-}target: "Any number of creatures, no two of which can be more than 30 ft apart"
-duration {
-  }
+}
+target: "Any number of creatures, no two of which can be more than 30 ft apart"
+saving_throw: "Will disbelief (if interacted with); then Fortitude partial; see text"
+spell_resistance: "Yes"
