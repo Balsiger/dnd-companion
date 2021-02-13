@@ -27,7 +27,8 @@ components: SOMATIC
 components: FOCUS
 casting_time {
   standard_actions: 1
-}target: "One creature/level in a 20-ftradius burst centered on you"
+}
+target: "One creature/level in a 20-ftradius burst centered on you"
 duration {
   duration {
     rounds: 1
@@ -36,3 +37,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "See text"
+spell_resistance: "Yes (harmless)"

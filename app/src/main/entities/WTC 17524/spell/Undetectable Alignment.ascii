@@ -30,9 +30,12 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEtarget: "One creature or object"
+special_range: CLOSE
+target: "One creature or object"
 duration {
   duration {
     hours: 24
   }
-  }
+}
+saving_throw: "Will negates (object)"
+spell_resistance: "Yes (object)"

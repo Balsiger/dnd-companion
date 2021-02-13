@@ -30,6 +30,7 @@ components: SOMATIC
 components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
-}area: "Several undead creatures within a 40-ft-radius burst"
-duration {
-  }
+}
+area: "Several undead creatures within a 40-ft-radius burst"
+saving_throw: "Will negates"
+spell_resistance: "Yes"
