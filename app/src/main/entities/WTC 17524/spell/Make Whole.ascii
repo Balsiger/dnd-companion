@@ -20,6 +20,9 @@ level {
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEtarget: "One object of up to 10 cu. ft/level"
-duration {
-  }
+special_range: CLOSE
+target: "One object of up to 10 cu. ft/level"
+saving_throw: "None"
+spell_resistance: "No"
+saving_throw: "None"
+spell_resistance: "No"

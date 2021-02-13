@@ -24,7 +24,10 @@ components: DIVINE_FOCUS
 casting_time {
   minutes: 10
 }
-special_range: TOUCHtarget: "Dead creature touched"
+special_range: TOUCH
+target: "Dead creature touched"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None; see text "
+spell_resistance: "Yes (harmless)"

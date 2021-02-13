@@ -24,5 +24,6 @@ level {
 }
 casting_time {
   standard_actions: 1
-}duration {
-  }
+}
+saving_throw: "Will disbelief (if interacted with); varies; see text"
+spell_resistance: "Yes; see text"

@@ -28,7 +28,10 @@ components: FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: LONGarea: "See text"
+special_range: LONG
+area: "See text"
 duration {
   duration_description: "Instantaneous or 1 round/level"
-  }
+}
+saving_throw: "Reflex half; see text"
+spell_resistance: "Yes"

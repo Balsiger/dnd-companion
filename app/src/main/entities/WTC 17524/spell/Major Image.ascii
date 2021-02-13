@@ -28,6 +28,9 @@ level {
 }
 casting_time {
   standard_actions: 1
-}duration {
+}
+duration {
   duration_description: "Concentration +  3 rounds"
-  }
+}
+saving_throw: "Will disbelief (if interacted with)"
+spell_resistance: "No"

@@ -22,7 +22,8 @@ components: SOMATIC
 components: MATERIAL
 casting_time {
   minutes: 3
-}effect {
+}
+effect {
   description: "An ironwood object weighing up to 5 lb/level"
 }
 duration {
@@ -33,3 +34,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

@@ -31,9 +31,12 @@ components: SOMATIC
 components: MATERIAL
 casting_time {
   minutes: 10
-}effect {
+}
+effect {
   description: "One symbol"
 }
 duration {
   duration_description: "See Text"
-  }
+}
+saving_throw: "Fortitude negates"
+spell_resistance: "Yes"

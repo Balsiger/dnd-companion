@@ -30,7 +30,8 @@ components: VERBOSE
 components: SOMATIC
 casting_time {
   minutes: 10
-}effect {
+}
+effect {
   description: "One quasi-real horselike creature"
 }
 duration {
@@ -41,3 +42,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

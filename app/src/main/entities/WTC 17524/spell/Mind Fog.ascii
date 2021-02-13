@@ -32,9 +32,12 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMeffect {
+special_range: MEDIUM
+effect {
   description: "Fog spreads in 20-ft radius 20 ft high"
 }
 duration {
   duration_description: "30 minutes and 2d6 rounds"
-  }
+}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

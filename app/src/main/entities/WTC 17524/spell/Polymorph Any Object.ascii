@@ -31,7 +31,10 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEtarget: "One creature, or one nonmagical object of up to 100 cu. ft/level"
+special_range: CLOSE
+target: "One creature, or one nonmagical object of up to 100 cu. ft/level"
 duration {
   duration_description: "See Text"
-  }
+}
+saving_throw: "Fortitude negates (object); see text"
+spell_resistance: "Yes (object)"

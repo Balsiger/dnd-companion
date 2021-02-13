@@ -31,9 +31,12 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   minutes: 10
 }
-special_range: SEE_TEXT_RANGEtarget: "One creature"
+special_range: SEE_TEXT_RANGE
+target: "One creature"
 duration {
   duration {
     rounds: 1
   }
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

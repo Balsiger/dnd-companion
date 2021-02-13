@@ -33,7 +33,8 @@ components: MATERIAL
 casting_time {
   hours: 10
 }
-special_range: CLOSEtarget: "One location (up to a 10-ft cube/level) or one object"
+special_range: CLOSE
+target: "One location (up to a 10-ft cube/level) or one object"
 duration {
   duration {
     hours: 2
@@ -42,3 +43,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates; see text"
+spell_resistance: "Yes"

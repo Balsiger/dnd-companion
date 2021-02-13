@@ -32,9 +32,12 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "One willing living creature per three levels, no two of which may be more than 30 ft apart"
+special_range: MEDIUM
+target: "One willing living creature per three levels, no two of which may be more than 30 ft apart"
 duration {
   duration_description: "Concentration +  1 round/level"
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "Yes"

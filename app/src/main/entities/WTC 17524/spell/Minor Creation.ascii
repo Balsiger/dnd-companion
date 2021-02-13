@@ -27,7 +27,8 @@ components: SOMATIC
 components: MATERIAL
 casting_time {
   minutes: 1
-}effect {
+}
+effect {
   description: "Unattended nonmagical object of nonliving plant matter up to 1 cu ft/level"
 }
 duration {
@@ -38,3 +39,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

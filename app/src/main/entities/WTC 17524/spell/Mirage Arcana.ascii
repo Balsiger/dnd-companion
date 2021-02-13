@@ -30,9 +30,12 @@ components: VERBOSE
 components: SOMATIC
 casting_time {
   standard_actions: 1
-}area: "One 20-ft cube/level (S)"
+}
+area: "One 20-ft cube/level (S)"
 duration {
   duration_description: "Concentration +  1 hour/level"
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

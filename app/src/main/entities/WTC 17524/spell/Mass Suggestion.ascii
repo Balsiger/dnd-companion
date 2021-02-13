@@ -32,6 +32,7 @@ level {
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "One creature/level, no two of which can be more than 30 ft apart"
-duration {
-  }
+special_range: MEDIUM
+target: "One creature/level, no two of which can be more than 30 ft apart"
+saving_throw: "Will negates"
+spell_resistance: "Yes"

@@ -27,7 +27,10 @@ components: EXPERIENCE_POINTS
 casting_time {
   standard_actions: 1
 }
-special_range: SEE_TEXT_RANGEarea: "See text"
+special_range: SEE_TEXT_RANGE
+area: "See text"
 duration {
   duration_description: "See Text"
-  }
+}
+saving_throw: "See text"
+spell_resistance: "Yes"

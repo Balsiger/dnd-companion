@@ -31,7 +31,10 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Up to three pebbles touched"
+special_range: TOUCH
+target: "Up to three pebbles touched"
 duration {
   duration_description: "30 minutes or until discharged"
-  }
+}
+saving_throw: "Will negates (harmless, object)"
+spell_resistance: "Yes (harmless, object"

@@ -23,7 +23,10 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "One nonmagical ferrous object (or the volume of the object within 3 ft of the touched point) or one ferrous creature"
+special_range: TOUCH
+target: "One nonmagical ferrous object (or the volume of the object within 3 ft of the touched point) or one ferrous creature"
 duration {
   duration_description: "See Text"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

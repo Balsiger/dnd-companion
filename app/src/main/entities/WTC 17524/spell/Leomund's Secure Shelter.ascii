@@ -33,7 +33,8 @@ components: FOCUS
 casting_time {
   minutes: 10
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "20-ft-square structure"
 }
 duration {
@@ -44,3 +45,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

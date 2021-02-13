@@ -31,10 +31,13 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Armor or shield touched"
+special_range: TOUCH
+target: "Armor or shield touched"
 duration {
   duration {
     hours: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates (harmless, object)"
+spell_resistance: "Yes (harmless, object)"

@@ -29,5 +29,6 @@ level {
 }
 casting_time {
   minutes: 10
-}duration {
-  }
+}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

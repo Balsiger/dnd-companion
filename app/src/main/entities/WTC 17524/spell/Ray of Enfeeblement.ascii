@@ -26,7 +26,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "Ray effect"
 }
 duration {
@@ -34,4 +35,6 @@ duration {
     minutes: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "Yes"

@@ -27,7 +27,10 @@ components: DIVINE_FOCUS
 casting_time {
   minutes: 10
 }
-special_range: TOUCHtarget: "Creature touched"
+special_range: TOUCH
+target: "Creature touched"
 duration {
   duration_description: "Permanent"
-  }
+}
+saving_throw: "None"
+spell_resistance: "Yes"

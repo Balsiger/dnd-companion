@@ -22,10 +22,13 @@ components: SOMATIC
 casting_time {
   rounds: 1
 }
-special_range: TOUCHtarget: "One living creature touched per three levels"
+special_range: TOUCH
+target: "One living creature touched per three levels"
 duration {
   duration {
     hours: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

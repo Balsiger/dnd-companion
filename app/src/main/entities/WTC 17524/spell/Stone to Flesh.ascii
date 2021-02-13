@@ -27,7 +27,10 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "One petrified creature or a cylinder of stone from 1 ft to 3 ft in diameter and up to 10 ft long"
+special_range: MEDIUM
+target: "One petrified creature or a cylinder of stone from 1 ft to 3 ft in diameter and up to 10 ft long"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "Fortitude negates (object); see text"
+spell_resistance: "Yes"

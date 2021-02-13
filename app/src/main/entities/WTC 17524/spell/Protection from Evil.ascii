@@ -40,7 +40,8 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Creature touched"
+special_range: TOUCH
+target: "Creature touched"
 duration {
   duration {
     minutes: 1
@@ -49,3 +50,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates (harmless)"
+spell_resistance: "No; see text"

@@ -27,7 +27,11 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "Up to five creatures, no two of which can be more than 15 ft apart"
+special_range: MEDIUM
+target: "Up to five creatures, no two of which can be more than 15 ft apart"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "Yes"
+

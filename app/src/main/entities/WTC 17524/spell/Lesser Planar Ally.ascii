@@ -26,9 +26,14 @@ components: EXPERIENCE_POINTS
 casting_time {
   minutes: 10
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "One called elemental or outsider of 6 HD or less"
 }
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"
+saving_throw: "None"
+spell_resistance: "No"

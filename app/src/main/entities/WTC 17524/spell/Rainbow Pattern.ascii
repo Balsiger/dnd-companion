@@ -34,7 +34,8 @@ components: FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMeffect {
+special_range: MEDIUM
+effect {
   description: "Colorful lights with a 20-ftradius spread"
 }
 duration {
@@ -42,3 +43,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates"
+spell_resistance: "Yes"

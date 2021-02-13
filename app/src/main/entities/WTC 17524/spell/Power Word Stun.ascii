@@ -31,7 +31,10 @@ components: VERBOSE
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEtarget: "One creature with 150 hp or less"
+special_range: CLOSE
+target: "One creature with 150 hp or less"
 duration {
   duration_description: "See Text"
-  }
+}
+saving_throw: "None"
+spell_resistance: "Yes"

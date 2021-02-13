@@ -32,7 +32,8 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMeffect {
+special_range: MEDIUM
+effect {
   description: "One shadow duplicate"
 }
 duration {
@@ -43,3 +44,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will disbelief (if interacted with)"
+spell_resistance: "No"

@@ -31,6 +31,7 @@ components: SOMATIC
 components: MATERIAL
 casting_time {
   standard_actions: 1
-}area: "10-ft-radius emanation around thecreature or object touched"
-duration {
-  }
+}
+area: "10-ft-radius emanation around thecreature or object touched"
+saving_throw: "Will negates (harmless) or Will negates (harmless, object)"
+spell_resistance: "Yes (harmlesss) or Yes (harmless, object)"

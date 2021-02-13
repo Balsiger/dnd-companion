@@ -23,7 +23,10 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "One 20-ft cube/level (S) or one fire-based magic item"
+special_range: MEDIUM
+target: "One 20-ft cube/level (S) or one fire-based magic item"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None or Will negates (object)"
+spell_resistance: "No or Yes (object)"

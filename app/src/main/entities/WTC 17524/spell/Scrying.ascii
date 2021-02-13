@@ -41,7 +41,8 @@ components: FOCUS
 casting_time {
   hours: 1
 }
-special_range: SEE_TEXT_RANGEeffect {
+special_range: SEE_TEXT_RANGE
+effect {
   description: "Magical sensor"
 }
 duration {
@@ -49,4 +50,6 @@ duration {
     minutes: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

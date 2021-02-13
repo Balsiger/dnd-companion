@@ -27,7 +27,10 @@ components: DIVINE_FOCUS
 casting_time {
   rounds: 3
 }
-special_range: TOUCHtarget: "Touched nonmagical circle of vine, rope, or thong with a 2 ft diameter + 2 ft/level"
+special_range: TOUCH
+target: "Touched nonmagical circle of vine, rope, or thong with a 2 ft diameter + 2 ft/level"
 duration {
   duration_description: "Until triggered or broken"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

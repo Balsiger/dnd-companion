@@ -31,7 +31,8 @@ components: SOMATIC
 components: MATERIAL
 casting_time {
   standard_actions: 1
-}effect {
+}
+effect {
   description: "20-ft-radius sphere centered on your location"
 }
 duration {
@@ -42,3 +43,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

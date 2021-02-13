@@ -22,7 +22,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEtarget: "One creature or object/level, no two of which can be more than 30 ft apart"
+special_range: CLOSE
+target: "One creature or object/level, no two of which can be more than 30 ft apart"
 duration {
   duration {
     hours: 1
@@ -31,3 +32,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates (object)"
+spell_resistance: "Yes (object)"

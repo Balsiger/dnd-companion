@@ -35,5 +35,5 @@ duration {
   }
   levels: "level"
 }
-saving_throw: "Will negates"
+saving_throw: "Will negates (see text)"
 spell_resistance: "Yes"

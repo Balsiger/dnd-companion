@@ -27,7 +27,10 @@ components: SOMATIC
 components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
-}area: "Line from your hand"
+}
+area: "Line from your hand"
 duration {
   duration_description: "1 round/level or until all beams are exhausted"
-  }
+}
+saving_throw: "Reflex negates and Reflex half; see text"
+spell_resistance: "Yes"

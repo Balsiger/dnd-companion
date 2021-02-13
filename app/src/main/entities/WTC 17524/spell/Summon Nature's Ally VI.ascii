@@ -20,8 +20,9 @@ level {
 }
 casting_time {
   rounds: 1
-}effect {
+}
+effect {
   description: "One or more creatures no two of which can be more than 30 ft apart"
 }
-duration {
-  }
+saving_throw: "None"
+spell_resistance: "No"

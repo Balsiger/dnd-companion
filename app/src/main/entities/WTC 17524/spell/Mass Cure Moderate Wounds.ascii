@@ -29,5 +29,6 @@ level {
 }
 casting_time {
   standard_actions: 1
-}duration {
-  }
+}
+saving_throw: "Will half (harmless) or Will half; see text"
+spell_resistance: "Yes (harmless) or Yes; see text"

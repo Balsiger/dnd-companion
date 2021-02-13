@@ -35,7 +35,8 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "One object touched of up to 100 lb./level"
+special_range: TOUCH
+target: "One object touched of up to 100 lb./level"
 duration {
   duration {
     hours: 8
@@ -43,3 +44,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates (object)"
+spell_resistance: "Yes (object)"

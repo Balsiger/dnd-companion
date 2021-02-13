@@ -20,5 +20,6 @@ level {
 }
 casting_time {
   standard_actions: 1
-}duration {
-  }
+}
+saving_throw: "Will half"
+spell_resistance: "Yes"

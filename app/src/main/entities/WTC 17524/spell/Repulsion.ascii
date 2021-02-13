@@ -35,7 +35,8 @@ components: FOCUS_DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: UP_TO_TEN_FEET_PER_LEVELarea: "Up to 10-ft-radius/level emanation centered on you"
+special_range: UP_TO_TEN_FEET_PER_LEVEL
+area: "Up to 10-ft-radius/level emanation centered on you"
 duration {
   duration {
     rounds: 1
@@ -44,3 +45,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates"
+spell_resistance: "Yes"

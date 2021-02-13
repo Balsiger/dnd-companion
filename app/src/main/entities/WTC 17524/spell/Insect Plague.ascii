@@ -28,7 +28,8 @@ components: DIVINE_FOCUS
 casting_time {
   rounds: 1
 }
-special_range: LONGeffect {
+special_range: LONG
+effect {
   description: "One swarm of locusts per three levels each of which must be adjacent to at least one other swarm"
 }
 duration {
@@ -36,4 +37,6 @@ duration {
     minutes: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

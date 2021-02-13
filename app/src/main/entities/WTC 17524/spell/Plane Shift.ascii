@@ -32,7 +32,10 @@ components: FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Creature touched, or up to eight willing creatures joining hands"
+special_range: TOUCH
+target: "Creature touched, or up to eight willing creatures joining hands"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

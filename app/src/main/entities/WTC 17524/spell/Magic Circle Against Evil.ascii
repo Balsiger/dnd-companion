@@ -40,10 +40,13 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHarea: "10-ft-radius emanation from touched creature"
+special_range: TOUCH
+area: "10-ft-radius emanation from touched creature"
 duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates (harmless)"
+spell_resistance: "No; see text"

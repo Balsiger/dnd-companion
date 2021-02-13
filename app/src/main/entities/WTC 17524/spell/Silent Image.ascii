@@ -32,9 +32,12 @@ components: FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: LONGeffect {
+special_range: LONG
+effect {
   description: "Visual figment that cannot extend beyond four 10-ft cubes + one 10-ft cube/level (S)"
 }
 duration {
   duration_description: "Concentration"
-  }
+}
+saving_throw: "Will disbelief *if interacted with)"
+spell_resistance: "No"

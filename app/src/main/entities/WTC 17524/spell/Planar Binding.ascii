@@ -26,6 +26,7 @@ components: VERBOSE
 components: SOMATIC
 casting_time {
   minutes: 10
-}target: "Up to three elementals or outsiders, totaling no more than 12 HD, no two of which can be more than 30 ft apart when they appear"
-duration {
-  }
+}
+target: "Up to three elementals or outsiders, totaling no more than 12 HD, no two of which can be more than 30 ft apart when they appear"
+saving_throw: "Will negates"
+spell_resistance: "No and Yes; see text"

@@ -26,7 +26,8 @@ components: SOMATIC
 components: MATERIAL
 casting_time {
   minutes: 1
-}effect {
+}
+effect {
   description: "Ten or more levitating eyes"
 }
 duration {
@@ -37,3 +38,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

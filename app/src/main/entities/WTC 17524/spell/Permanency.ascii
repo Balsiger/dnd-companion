@@ -27,7 +27,10 @@ components: EXPERIENCE_POINTS
 casting_time {
   rounds: 2
 }
-special_range: SEE_TEXT_RANGEarea: "See text"
+special_range: SEE_TEXT_RANGE
+area: "See text"
 duration {
   duration_description: "Permanent"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

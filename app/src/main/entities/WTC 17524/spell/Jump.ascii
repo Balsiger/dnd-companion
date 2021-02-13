@@ -35,7 +35,8 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Creature touched"
+special_range: TOUCH
+target: "Creature touched"
 duration {
   duration {
     minutes: 1
@@ -44,3 +45,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

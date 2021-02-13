@@ -36,7 +36,10 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: LONGarea: "80-ft-radius burst"
+special_range: LONG
+area: "80-ft-radius burst"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "Reflex partial; see text"
+spell_resistance: "Yes"

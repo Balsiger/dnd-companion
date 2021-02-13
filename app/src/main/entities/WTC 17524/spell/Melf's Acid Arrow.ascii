@@ -30,9 +30,12 @@ components: FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: LONGeffect {
+special_range: LONG
+effect {
   description: "One arrow of acid"
 }
 duration {
   duration_description: "One round +  1 round per three levels"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

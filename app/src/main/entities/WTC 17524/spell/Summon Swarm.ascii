@@ -36,9 +36,12 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   rounds: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "One swarm of bats rats or spiders"
 }
 duration {
   duration_description: "Concentration +  2 rounds"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

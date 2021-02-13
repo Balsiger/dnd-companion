@@ -24,7 +24,10 @@ components: FOCUS
 casting_time {
   minutes: 10
 }
-special_range: TOUCHtarget: "One freestanding structure"
+special_range: TOUCH
+target: "One freestanding structure"
 duration {
   duration_description: "Up to 1 round/level"
-  }
+}
+saving_throw: "None; see text"
+spell_resistance: "Yes"

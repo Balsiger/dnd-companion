@@ -31,9 +31,12 @@ components: SOMATIC
 casting_time {
   minutes: 10
 }
-special_range: CLOSEarea: "30-ft cube/level (S)"
+special_range: CLOSE
+area: "30-ft cube/level (S)"
 duration {
   duration {
     hours: 24
   }
-  }
+}
+saving_throw: "None or Will disbelief (if interacted with); see text"
+spell_resistance: "No"

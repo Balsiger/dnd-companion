@@ -27,7 +27,8 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "One willing creature or object (up to a 2-ft cube/level) touched)"
+special_range: TOUCH
+target: "One willing creature or object (up to a 2-ft cube/level) touched)"
 duration {
   duration {
     days: 1
@@ -36,3 +37,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None or Will negates (object)"
+spell_resistance: "No or Yes (object)"

@@ -19,7 +19,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "One willing animal of Small, Medium, Large, or Huge size"
+special_range: TOUCH
+target: "One willing animal of Small, Medium, Large, or Huge size"
 duration {
   duration {
     hours: 1
@@ -28,3 +29,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

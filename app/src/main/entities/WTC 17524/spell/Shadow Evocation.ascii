@@ -38,3 +38,5 @@ effect {
 duration {
   duration_description: "See Text"
 }
+saving_throw: "Will disbelief (if interacted with)"
+spell_resistance: "Yes"

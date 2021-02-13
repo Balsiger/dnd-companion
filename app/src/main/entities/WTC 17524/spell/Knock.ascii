@@ -25,7 +25,10 @@ components: VERBOSE
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "One door, box, or chest with an area of up to 10 sq. ft/level"
+special_range: MEDIUM
+target: "One door, box, or chest with an area of up to 10 sq. ft/level"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

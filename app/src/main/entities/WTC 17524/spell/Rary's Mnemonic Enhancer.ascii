@@ -24,7 +24,10 @@ components: FOCUS
 casting_time {
   minutes: 10
 }
-special_range: PERSONALtarget: "You"
+special_range: PERSONAL
+target: "You"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

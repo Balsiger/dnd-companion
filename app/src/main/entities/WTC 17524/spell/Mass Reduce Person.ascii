@@ -24,6 +24,7 @@ level {
 }
 casting_time {
   rounds: 1
-}target: "One humanoid creature/level, no two of which can be more than 30 ft apart"
-duration {
-  }
+}
+target: "One humanoid creature/level, no two of which can be more than 30 ft apart"
+saving_throw: "Fortitude negates"
+spell_resistance: "Yes"

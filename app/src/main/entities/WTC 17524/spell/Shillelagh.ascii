@@ -23,10 +23,13 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "One touched nonmagical oak club or quarterstaff"
+special_range: TOUCH
+target: "One touched nonmagical oak club or quarterstaff"
 duration {
   duration {
     minutes: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates (object)"
+spell_resistance: "Yes (object)"

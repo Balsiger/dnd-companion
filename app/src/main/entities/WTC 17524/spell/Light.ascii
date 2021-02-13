@@ -34,7 +34,8 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Object touched"
+special_range: TOUCH
+target: "Object touched"
 duration {
   duration {
     minutes: 10
@@ -43,3 +44,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"

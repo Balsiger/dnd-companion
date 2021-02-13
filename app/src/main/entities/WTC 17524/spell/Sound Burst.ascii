@@ -28,7 +28,10 @@ components: FOCUS_DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEarea: "10-ft-radius spread"
+special_range: CLOSE
+area: "10-ft-radius spread"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "Fortitude partial"
+spell_resistance: "Yes"

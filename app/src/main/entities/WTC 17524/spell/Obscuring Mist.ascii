@@ -42,7 +42,8 @@ components: VERBOSE
 components: SOMATIC
 casting_time {
   standard_actions: 1
-}effect {
+}
+effect {
   description: "Cloud spreads in 20-ft radius from you 20 ft high"
 }
 duration {
@@ -50,4 +51,6 @@ duration {
     minutes: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

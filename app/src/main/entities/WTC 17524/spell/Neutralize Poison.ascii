@@ -40,10 +40,13 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Creature or object of up to 1 cu. ft/level touched"
+special_range: TOUCH
+target: "Creature or object of up to 1 cu. ft/level touched"
 duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates (harmless, object)"
+spell_resistance: "Yes (harmless, object)"

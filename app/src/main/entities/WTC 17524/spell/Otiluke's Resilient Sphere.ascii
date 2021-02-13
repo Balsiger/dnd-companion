@@ -28,7 +28,8 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "1-ft-diameter/level sphere centered around a creature"
 }
 duration {
@@ -39,3 +40,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Reflex negates"
+spell_resistance: "Yes"

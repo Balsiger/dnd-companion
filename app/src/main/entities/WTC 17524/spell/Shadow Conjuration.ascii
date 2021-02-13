@@ -31,9 +31,12 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: SEE_TEXT_RANGEeffect {
+special_range: SEE_TEXT_RANGE
+effect {
   description: "See text"
 }
 duration {
   duration_description: "See Text"
-  }
+}
+saving_throw: "Will disbelief (if interacted with); varies; see text"
+spell_resistance: "Yes; see text"
