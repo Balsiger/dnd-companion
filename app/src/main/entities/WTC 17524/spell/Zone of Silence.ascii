@@ -23,7 +23,8 @@ components: SOMATIC
 casting_time {
   rounds: 1
 }
-special_range: PERSONALarea: "5-ft-radius emanation centered on you"
+special_range: PERSONAL
+area: "5-ft-radius emanation centered on you"
 duration {
   duration {
     hours: 1
@@ -32,3 +33,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "No"
