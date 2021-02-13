@@ -31,7 +31,8 @@ components: FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "Intelligible sound usually speech"
 }
 duration {
@@ -42,3 +43,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will disbelief (if interacted with)"
+spell_resistance: "No"

@@ -31,9 +31,12 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: LONGtarget: "One or more creatures, no two of which can be more than 30 ft apart"
+special_range: LONG
+target: "One or more creatures, no two of which can be more than 30 ft apart"
 duration {
   duration_description: "Concentration +  1 hour/level"
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "Will negates; see text"
+spell_resistance: "Yes; see text"

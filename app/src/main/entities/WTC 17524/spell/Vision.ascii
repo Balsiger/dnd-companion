@@ -27,5 +27,6 @@ components: MATERIAL
 components: EXPERIENCE_POINTS
 casting_time {
   standard_actions: 1
-}duration {
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"
