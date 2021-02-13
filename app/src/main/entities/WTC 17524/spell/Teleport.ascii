@@ -30,7 +30,10 @@ components: VERBOSE
 casting_time {
   standard_actions: 1
 }
-special_range: PERSONAL_AND_TOUCHtarget: "You and touched objects or other touched willing creatures"
+special_range: PERSONAL_AND_TOUCH
+target: "You and touched objects or other touched willing creatures"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None and Will negates (object)"
+spell_resistance: "No and Yes (object)"

@@ -32,7 +32,10 @@ components: MATERIAL_DEVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMarea: "Up to two 10-ft cubes/level (S)"
+special_range: MEDIUM
+area: "Up to two 10-ft cubes/level (S)"
 duration {
   duration_description: "Permanent"
-  }
+}
+saving_throw: "See text"
+spell_resistance: "No"

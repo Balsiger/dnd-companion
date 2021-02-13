@@ -27,10 +27,13 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: PERSONALtarget: "You"
+special_range: PERSONAL
+target: "You"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

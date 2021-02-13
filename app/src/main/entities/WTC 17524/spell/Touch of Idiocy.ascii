@@ -28,10 +28,13 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Living creature touched"
+special_range: TOUCH
+target: "Living creature touched"
 duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  }
+}
+saving_throw: "No"
+spell_resistance: "Yes"

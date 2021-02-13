@@ -25,6 +25,7 @@ level {
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "One touched object of up to 50 lb./level and 3 cu. ft/level"
-duration {
-  }
+special_range: TOUCH
+target: "One touched object of up to 50 lb./level and 3 cu. ft/level"
+saving_throw: "Will negates (object)"
+spell_resistance: "Yes (object)"

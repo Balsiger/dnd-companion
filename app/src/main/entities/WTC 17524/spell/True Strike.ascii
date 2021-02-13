@@ -26,7 +26,10 @@ components: FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: PERSONALtarget: "You"
+special_range: PERSONAL
+target: "You"
 duration {
   duration_description: "See Text"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

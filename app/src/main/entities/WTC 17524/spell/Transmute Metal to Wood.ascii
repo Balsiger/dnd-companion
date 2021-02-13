@@ -23,7 +23,10 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: LONGarea: "All metal objects within a 40-ftradius burst"
+special_range: LONG
+area: "All metal objects within a 40-ftradius burst"
 duration {
   duration_description: "Instantaneous"
-  }
+}
+saving_throw: "None"
+spell_resistance: "Yes (object; see text)"

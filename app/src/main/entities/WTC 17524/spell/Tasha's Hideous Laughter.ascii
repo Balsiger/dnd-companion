@@ -33,10 +33,13 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEtarget: "One creature; see text"
+special_range: CLOSE
+target: "One creature; see text"
 duration {
   duration {
     rounds: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "Will negates"
+spell_resistance: "Yes"

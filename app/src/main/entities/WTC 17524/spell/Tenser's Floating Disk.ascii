@@ -28,7 +28,8 @@ components: MATERIAL
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEeffect {
+special_range: CLOSE
+effect {
   description: "3-ft-diameter disk of force"
 }
 duration {
@@ -36,4 +37,6 @@ duration {
     hours: 1
   }
   levels: "level"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

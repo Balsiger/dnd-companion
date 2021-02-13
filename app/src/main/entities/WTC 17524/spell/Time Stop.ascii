@@ -29,7 +29,10 @@ components: VERBOSE
 casting_time {
   standard_actions: 1
 }
-special_range: PERSONALtarget: "You"
+special_range: PERSONAL
+target: "You"
 duration {
   duration_description: "1d4 + 1 rounds (apparent time)"
-  }
+}
+saving_throw: "None"
+spell_resistance: "No"

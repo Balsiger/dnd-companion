@@ -19,7 +19,8 @@ components: VERBOSE
 components: MATERIAL
 casting_time {
   minutes: 10
-}effect {
+}
+effect {
   description: "5-ft-radius circle that teleports those who activate it"
 }
 duration {
@@ -30,3 +31,5 @@ duration {
   flags: "(D)"
   description: "(D)"
 }
+saving_throw: "None"
+spell_resistance: "Yes"
