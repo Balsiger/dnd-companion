@@ -10,7 +10,7 @@ template {
     name: "Dragon 270"
   }
   world: "Forgotten Realms"
-  description: "The \\Class{bards} of \\Place{Waterdeep} remember the past. Or do they? Even\n                    as they sing their ballads, a mysterious spell is changing their\n                    memories. \\NPC{Danilo Thann}, \\Group{Harper} and would-be \\Class{bard}, sets\n                    out to uncover the mystery. In this quest, his closest companion is his\n                    deadliest enemy, the rogue \\Monster{elf} \\NPC{Elaith Craulnober}.\n                    At stake is not merely the future of \\Place{Faer\\hat{u}n} but also its\n                    past."
+  description: "The \\Class{bards} of \\Place{Waterdeep} remember the past. Or do they? Even as they sing their ballads, a mysterious spell is changing their memories. \\NPC{Danilo Thann}, \\Group{Harper} and would-be \\Class{bard}, sets out to uncover the mystery. In this quest, his closest companion is his deadliest enemy, the rogue \\Monster{elf} \\NPC{Elaith Craulnober}. At stake is not merely the future of \\Place{Faer\\hat{u}n} but also its past."
 }
 title: "Elfsong"
 author {

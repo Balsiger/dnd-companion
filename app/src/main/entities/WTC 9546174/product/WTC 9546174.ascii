@@ -1,7 +1,7 @@
 template {
   name: "WTC 9546174"
   world: "Dragonlance"
-  description: "\\Event{The Battle of the Run} is over, but for \\NPC{Barreth Forlo} victory\n  is bitter.\n\n  With only a \\Monster{dragon}\'s scale to aid them, \\NPC{Barreth} and his\n  friends must find his missing wife before it\'s too late. A strange evil is\n  stirring and a foul ritual has begun.\n\n  And \\NPC{Forlo}\'s unborn child lies at the heart of it.\n\n  Explore the legendary continent of \\Place{Taladas}, where barbarian chiefs\n  struggle for survival against power-mad sorcerers in the uneasy aftermath of\n  the \\Event{War of Souls}."
+  description: "\\Event{The Battle of the Run} is over, but for \\NPC{Barreth Forlo} victory\nis bitter. With only a \\Monster{dragon}\'s scale to aid them, \\NPC{Barreth} and his friends must find his missing wife before it\'s too late. A strange evil is stirring and a foul ritual has begun. And \\NPC{Forlo}\'s unborn child lies at the heart of it. Explore the legendary continent of \\Place{Taladas}, where barbarian chiefs struggle for survival against power-mad sorcerers in the uneasy aftermath of the \\Event{War of Souls}."
 }
 title: "Trail of the Black Wyrm"
 author {

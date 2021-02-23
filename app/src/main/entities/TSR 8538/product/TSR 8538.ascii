@@ -22,7 +22,7 @@ template {
     name: "catalog96"
   }
   world: "Forgotten Realms"
-  description: "From the secret annals of \\Place{Realms} history come eleven never-before\n                    published tales of valor, featuring the greatest heroes of that magical\n                    world---\\NPC{Drizzt Do\'Urden}, \\NPC{Arilyn Moonblade}, \\NPC{Adon},\n                    \\NPC{Elminster of \\Place{Shadowdale}}, \\NPC{Jander Sunstar}, and many\n                    others---told by your favorite authors, including:\n                    R.A. Salvatore\n                    Ed Greenwood\n                    Douglas Niles\n                    Troy Denning\n                    Christie Golden\n                    and others"
+  description: "From the secret annals of \\Place{Realms} history come eleven never-before published tales of valor, featuring the greatest heroes of that magical world---\\NPC{Drizzt Do\'Urden}, \\NPC{Arilyn Moonblade}, \\NPC{Adon}, \\NPC{Elminster of \\Place{Shadowdale}}, \\NPC{Jander Sunstar}, and many others---told by your favorite authors, including: R.A. Salvatore Ed Greenwood Douglas Niles Troy Denning Christie Golden and others"
 }
 title: "Realms of Valor"
 author {

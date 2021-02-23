@@ -1,7 +1,7 @@
 template {
   name: "DMA 000044"
   world: "Generic"
-  description: "This is a fast-play introduction to the Alternity game. It includes basic\n                    rule information for players and dungeon masters, as well as am introductory\n                    adventure \\Product{Cauldron Station}."
+  description: "This is a fast-play introduction to the Alternity game. It includes basic rule information for players and dungeon masters, as well as am introductory adventure \\Product{Cauldron Station}."
 }
 title: "Gamemaster Guide/Player\'s Handbook, Fast-Play Rules"
 author {

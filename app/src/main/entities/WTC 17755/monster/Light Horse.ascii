@@ -2,7 +2,7 @@ template {
   name: "Light Horse"
   base: "horse"
   synonym: "Horse, Light"
-  description: "The statistics presented here describe smaller breeds of working horses such as quarter horses and Arabians as well as wild horses. These animals are usually ready for useful work by age two. A light horse cannot fight while carrying a rider.\n\n\\bold{Carrying Capacity:} A light load for a light horse is up to 150 pounds; a medium load, 151-300 pounds; and a heavy load, 301-450 pounds. A light horse can drag 2,250 pounds."
+  description: "The statistics presented here describe smaller breeds of working horses such as quarter horses and Arabians as well as wild horses. These animals are usually ready for useful work by age two. A light horse cannot fight while carrying a rider. bold{Carrying Capacity:} A light load for a light horse is up to 150 pounds; a medium load, 151-300 pounds; and a heavy load, 301-450 pounds. A light horse can drag 2,250 pounds."
   short_description: "A smaller breed of horse."
 }
 hit_dice {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 96208"
   world: "Dragonlance"
-  description: "The third title published in the \\Product{Dragonlance} line is now being\n  released in a trade hardcover edition for the first time ever. Featuring the\n  stunning art and design that graced the cover of the paperback edition, this\n  new version is the final edition in the hardcover release of the entire\n  \\Product{Chronicles} trilogy. This release also continues the planned release\n  of all the core \\Product{Dragonlance} titles from Weis & Hickman in trade\n  hardcover, allowing fans and collectors alike the first-ever chance to obtain\n  the entire set in hardcover."
+  description: "The third title published in the \\Product{Dragonlance} line is now being released in a trade hardcover edition for the first time ever. Featuring the stunning art and design that graced the cover of the paperback edition, this ew version is the final edition in the hardcover release of the entire Product{Chronicles} trilogy. This release also continues the planned release of all the core \\Product{Dragonlance} titles from Weis & Hickman in trade hardcover, allowing fans and collectors alike the first-ever chance to obtain the entire set in hardcover."
 }
 title: "Dragons of Spring Dawning"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 17980"
   world: "Forgotten Realms"
-  description: "The shadows grow long on the mean streets of \\Place{Selgaunt}.\n                    The sun sets on one man\'s serivce to \\Place{Sembia}\'s merchant lords.\n                    The day\'s end finds \\NPC{Erevis Cale} serving a new master, one who is beyond\n                    the petty accumulation of wealth.\n                    After all, what is gold to one who trades in souls?"
+  description: "The shadows grow long on the mean streets of \\Place{Selgaunt}. The sun sets on one man\'s serivce to \\Place{Sembia}\'s merchant lords. The day\'s end finds \\NPC{Erevis Cale} serving a new master, one who is beyond the petty accumulation of wealth. After all, what is gold to one who trades in souls?"
 }
 title: "Twilight Falling"
 author {

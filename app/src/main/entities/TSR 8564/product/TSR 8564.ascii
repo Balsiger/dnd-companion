@@ -19,7 +19,7 @@ template {
     name: "Dragon 239"
   }
   world: "Forgotten Realms"
-  description: "\\large{Enter the \\Place{Blade Kingdoms}...}\n                    Isolated lands where grand armies fight bloodless battles in the ultimate\n                    \'princely game\', while art and science flourish under royal patronage.\n                    But war cares little for the troubles of the aristocracy. As a terrible new\n                    weapon obliterates the age of courtly battle, an intelligent but plain\n                    princes and her companions---and addled young inventor and a kleptomaniac\n                    firebird---find themselves forced into a battle for survival in a suddenly\n                    very deadly world."
+  description: "\\large{Enter the \\Place{Blade Kingdoms}...} Isolated lands where grand armies fight bloodless battles in the ultimate \'princely game\', while art and science flourish under royal patronage. But war cares little for the troubles of the aristocracy. As a terrible new weapon obliterates the age of courtly battle, an intelligent but plain princes and her companions---and addled young inventor and a kleptomaniac firebird---find themselves forced into a battle for survival in a suddenly very deadly world."
 }
 title: "Council of Blades"
 leader: "The"

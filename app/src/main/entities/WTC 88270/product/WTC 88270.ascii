@@ -1,7 +1,7 @@
 template {
   name: "WTC 88270"
   world: "Dragonlance"
-  description: "The \\Event{Summer of Chaos} swept its devastation across the world of\n  \\Place{Krynn}. In its wake, foul dragon overlords of immeasurable power\n  conquered \\Place{Ansalon} and remade the lands in their own image. But\n  \\NPC{Malystryx}, the greatest and most evil of all the \\Monster{dragons}, is\n  no longer content with ruling her domain. She wants to ascend to godhood, and\n  only one band of stalwart heroes stands in her way."
+  description: "The \\Event{Summer of Chaos} swept its devastation across the world of Place{Krynn}. In its wake, foul dragon overlords of immeasurable power conquered \\Place{Ansalon} and remade the lands in their own image. But PC{Malystryx}, the greatest and most evil of all the \\Monster{dragons}, is o longer content with ruling her domain. She wants to ascend to godhood, and only one band of stalwart heroes stands in her way."
 }
 title: "Eve of the Mealstrom"
 leader: "The"

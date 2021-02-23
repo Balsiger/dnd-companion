@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "All beings other than outsiders that hear the creature's howling for an hour or longer are subject to its effect, though it does not help the howler in combat.  Anyone within hearing range of a howler for a full hour must succeed on a DC 12 Will save or take 1 point of Wisdom damage. The save DC is Charisma-based. The save must be repeated for each hour of exposure. This is a sonic mind-affecting effect."
+  description: "All beings other than outsiders that hear the creature's howling for an hour or longer are subject to its effect, though it does not help the howler in combat.\n\nAnyone within hearing range of a howler for a full hour must succeed on a DC 12 Will save or take 1 point of Wisdom damage. The save DC is Charisma-based. The save must be repeated for each hour of exposure. This is a sonic mind-affecting effect."
 }
 type: EXTRAORDINARY

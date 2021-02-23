@@ -1,7 +1,7 @@
 template {
   name: "PZO 4024"
   world: "Generic"
-  description: "GameMastery Map Pack: Lairs contains 18 full-color 5 x 8-inch map tiles, stunningly crafted by cartographer Corey Macourek, that combine to form a variety of monster lairs and beast habitats.\n\nLocations include:\n\n\\list\n{Cavern Lair}\n{Villain Secret Lair}\n{Urban Lair}\n{Wilderness Lair}\n{Ruined Lair}\n\nFor use with all tabletop roleplaying and miniatures games and usable by experienced GMs and novices alike, this product fits perfectly into any Game Master's arsenal.\n"
+  description: "GameMastery Map Pack: Lairs contains 18 full-color 5 x 8-inch map tiles, stunningly crafted by cartographer Corey Macourek, that combine to form a variety of monster lairs and beast habitats.\n\nLocations include: list\n{Cavern Lair}\n{Villain Secret Lair}\n{Urban Lair}\n{Wilderness Lair}\n{Ruined Lair}\n\nFor use with all tabletop roleplaying and miniatures games and usable by experienced GMs and novices alike, this product fits perfectly into any Game Master's arsenal.\n"
 }
 title: "Lairs"
 subtitle: "Trespassers Will Be Eaten!"

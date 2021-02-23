@@ -1,7 +1,7 @@
 template {
   name: "WTC 9647474"
   world: "None"
-  description: "\\NPC{Yumi Suzuki}\'s mom is acting really weird. When \\NPC{Yumi} brings home\n                    a stray kitten, her animal-loving mom is furious. \\NPC{Mrs. Suzuki} normally\n                    hates pizza but has been eating it every night. What\'s the deal? Has\n                    \\NPC{Yumi}\'s real mom been kidnapped by aliens? Has a robot taken over her\n                    brain? \\NPC{Nova}, \\NPC{Yumi}\'s best friend, tells her that the mysterious\n                    dare might help her find answers. So \\NPC{Yumi} gives it a try, and what she\n                    discovers is a big surprise."
+  description: "\\NPC{Yumi Suzuki}\'s mom is acting really weird. When \\NPC{Yumi} brings home a stray kitten, her animal-loving mom is furious. \\NPC{Mrs. Suzuki} normally hates pizza but has been eating it every night. What\'s the deal? Has \\NPC{Yumi}\'s real mom been kidnapped by aliens? Has a robot taken over her brain? \\NPC{Nova}, \\NPC{Yumi}\'s best friend, tells her that the mysterious dare might help her find answers. So \\NPC{Yumi} gives it a try, and what she discovers is a big surprise."
 }
 title: "Yumi Talks the Talk"
 subtitle: "Talk to an animal in its own language. Would you dare?"

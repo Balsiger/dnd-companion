@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "\\Group{Rose Knight} \\NPC{Linsha Majere}, working undercover for the\n  \\Group{Solamnics\' Clandestine Circle}, earns a place as the elite bodyguard\n  of \\NPC{Hogan Bight}, the mysterious lord governor of \\Place{Sanction}. She\n  quickly learns the governor is not the only one who needs protection in a\n  city threatened by an active volcano about to erupt, a death ship filled with\n  an unknown plague, the ever-watchful \\Group{Legion of Steel}, and the\n  subversive \\Group{Knights of Neraka}. But who will protect \\NPC{Linsha} from\n  her own heart?"
+  description: "\\Group{Rose Knight} \\NPC{Linsha Majere}, working undercover for the Group{Solamnics\' Clandestine Circle}, earns a place as the elite bodyguard of \\NPC{Hogan Bight}, the mysterious lord governor of \\Place{Sanction}. She quickly learns the governor is not the only one who needs protection in a city threatened by an active volcano about to erupt, a death ship filled with an unknown plague, the ever-watchful \\Group{Legion of Steel}, and the subversive \\Group{Knights of Neraka}. But who will protect \\NPC{Linsha} from her own heart?"
 }
 title: "Clandestine Circle"
 leader: "The"

@@ -1,7 +1,7 @@
 template {
   name: "Dragon 357"
   world: "Generic"
-  description: "Wilderness Demonomicon: \\God{Demogorgon} Defiled Monsters Feathers\n   and Fur \\NPC{Sememmon} Ecology of the \\Monster{Titan}"
+  description: "Wilderness Demonomicon: \\God{Demogorgon} Defiled Monsters Feathers and Fur \\NPC{Sememmon} Ecology of the \\Monster{Titan}"
 }
 title: "Dragon 357"
 subtitle: "Dragons"

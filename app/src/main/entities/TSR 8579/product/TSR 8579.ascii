@@ -17,7 +17,7 @@ template {
     name: "Dragon 245"
   }
   world: "Forgotten Realms"
-  description: "Is it just a myth? Or does it still stand...somewhere in the most ancient\n                    corners of \\Place{Faer\\hat{u}n}?\n                    An interpid human explorer sets out to find the truth and what starts as an\n                    archaeological expedition soon becomes a race against time as an undying\n                    avenger is determined to protect the secrets of the ancient, xenophobic elven\n                    empire of \\Place{Cormanthyr}.\n                    Lost Empires is a bold new series that uncovers the secrets of the lost,\n                    ancient \\Place{Forgotten Realms} world."
+  description: "Is it just a myth? Or does it still stand...somewhere in the most ancient corners of \\Place{Faer\\hat{u}n}? An interpid human explorer sets out to find the truth and what starts as an archaeological expedition soon becomes a race against time as an undying avenger is determined to protect the secrets of the ancient, xenophobic elven empire of \\Place{Cormanthyr}. Lost Empires is a bold new series that uncovers the secrets of the lost, ancient \\Place{Forgotten Realms} world."
 }
 title: "Lost Library of Cormanthyr"
 leader: "The"

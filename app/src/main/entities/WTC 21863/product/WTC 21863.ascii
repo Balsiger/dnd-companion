@@ -2,7 +2,7 @@ template {
   name: "WTC 21863"
   synonym: "WTC 88186"
   world: "Forgotten Realms"
-  description: "\\emph{Seven scourges---five long gone, one of the day, and one soon to\n                    come---open the door no man can close. Out come the armies of the dead and\n                    the legions of the devil made by itself, to sweep all \\Place{Cormyhr} away in\n                    ruin, unless those long dead rise to stand against them}\n                    \\right{---The Prohecies of \\NPC{Alaundo}}\n                    The \\Place{realm} has endured a thousand years and more.\n                    For all that time, an \\Group{Obarskyr} has sat upon the \\Item{Purple Throne}.\n                    But under the tearing talons of dark magic, fell foes, and a \\Monster{dragon}\n                    more vicious than any ever encountered,  how much longer can the royal family\n                    of \\Place{Cormyr} endure?\n                    Or the kingdom hersel?"
+  description: "\\emph{Seven scourges---five long gone, one of the day, and one soon to come---open the door no man can close. Out come the armies of the dead and the legions of the devil made by itself, to sweep all \\Place{Cormyhr} away in ruin, unless those long dead rise to stand against them} \\right{---The Prohecies of \\NPC{Alaundo}} The \\Place{realm} has endured a thousand years and more. For all that time, an \\Group{Obarskyr} has sat upon the \\Item{Purple Throne}. But under the tearing talons of dark magic, fell foes, and a \\Monster{dragon} more vicious than any ever encountered,\n\nhow much longer can the royal family of \\Place{Cormyr} endure? Or the kingdom hersel?"
 }
 title: "Death of the Dragon"
 author {

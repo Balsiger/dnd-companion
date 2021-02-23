@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Remove blindness/deafness cures blindness or deafness (your choice), whether the effect is normal or magical in nature. The spell does not restore ears or eyes that have been lost, but it repairs them if they are damaged.  Remove blindness/deafness counters and dispels blindness/deafness."
+  description: "Remove blindness/deafness cures blindness or deafness (your choice), whether the effect is normal or magical in nature. The spell does not restore ears or eyes that have been lost, but it repairs them if they are damaged.\n\nRemove blindness/deafness counters and dispels blindness/deafness."
   short_description: "Cures normal or magical conditions."
 }
 school: CONJURATION

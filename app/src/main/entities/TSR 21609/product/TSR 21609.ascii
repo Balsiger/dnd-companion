@@ -10,7 +10,7 @@ template {
     name: "Dragon 268"
   }
   world: "Dragonlance"
-  description: "Now the people know that the \\Monster{dragon} minions of \\God{Takhisis},\n  \\God{Queen of Dragons}, have returned. The people of all nations prepare to\n  fight to save their homes, their lives, and their freedom. But the races have\n  long been divided by hatred and prejudice. \\Monster[elf]{Elven}\n  \\Class{warriors} and \\Monster{human} \\Class{knights} fight among\n  themselves. It seems the battle has been lost before it begins.\n\n  The companions are separated, torn apart by war. A full season will pass\n  before they meet again--if they meet again. As the darkness deepens, a\n  disgraced \\Class{knight}, a pampered \\Monster[elf]{elfmaiden}, and a\n  rattle-brained \\Monster{kender} stand alone in the pale winter sunlight.\n\n  Not much in the way of heroes."
+  description: "Now the people know that the \\Monster{dragon} minions of \\God{Takhisis}, \\God{Queen of Dragons}, have returned. The people of all nations prepare to\nfight to save their homes, their lives, and their freedom. But the races have\nlong been divided by hatred and prejudice. \\Monster[elf]{Elven} Class{warriors} and \\Monster{human} \\Class{knights} fight among themselves. It seems the battle has been lost before it begins. The companions are separated, torn apart by war. A full season will pass before they meet again--if they meet again. As the darkness deepens, a disgraced \\Class{knight}, a pampered \\Monster[elf]{elfmaiden}, and a rattle-brained \\Monster{kender} stand alone in the pale winter sunlight. ot much in the way of heroes."
 }
 title: "Dragons of Winter Night"
 author {

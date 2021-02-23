@@ -1,7 +1,7 @@
 template {
   name: "WTC 88619"
   world: "Forgotten Realms"
-  description: "One \\Monster{Dark Elf}.\n                    Two Enchanted Blades.\n                    One Unknown Enemy.\n                    And a Horde of Invaders.\n                    It\'s been a long time since \\NPC{Drizzt Do\'Urden} has had to fight\n                    alone. When a ravaging mob of vicious \\Monster{orcs} overruns the\n                    \\Place{North} and his friends are washed away in its evil tide, he must take\n                    matters into his own deadly hands.\n                    An all-new trilogy takes \\NPC{Drizzt} to the edge . . . and beyond."
+  description: "One \\Monster{Dark Elf}. Two Enchanted Blades. One Unknown Enemy. And a Horde of Invaders. It\'s been a long time since \\NPC{Drizzt Do\'Urden} has had to fight alone. When a ravaging mob of vicious \\Monster{orcs} overruns the \\Place{North} and his friends are washed away in its evil tide, he must take matters into his own deadly hands. An all-new trilogy takes \\NPC{Drizzt} to the edge . . . and beyond."
 }
 title: "Thousand Orcs"
 leader: "The"

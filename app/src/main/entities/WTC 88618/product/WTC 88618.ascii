@@ -1,7 +1,7 @@
 template {
   name: "WTC 88618"
   world: "None"
-  description: "The forest grows out of control. The mountains erupt. The seas boil. The\n                    swamps spew acid, and the plains turn to desert. Yet, amidst the turmoil\n                    there is civilization, brutal and unforgiving. Pit fighters battle to the\n                    death before tremendous crowds, making some rich, while others lose\n                    everything in one stroke of a sword.\n                    The games must continue.\n                    So must the struggle for survival."
+  description: "The forest grows out of control. The mountains erupt. The seas boil. The swamps spew acid, and the plains turn to desert. Yet, amidst the turmoil there is civilization, brutal and unforgiving. Pit fighters battle to the death before tremendous crowds, making some rich, while others lose everything in one stroke of a sword. The games must continue. So must the struggle for survival."
 }
 title: "Onslaught"
 subtitle: "The land is in upheaval."

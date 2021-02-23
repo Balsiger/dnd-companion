@@ -1,7 +1,7 @@
 template {
   name: "WTC 33510"
   world: "Forgotten Realms"
-  description: "Overwhelmed by inner turmoil, the child \\NPC{Hweilan} struggled to master her fear in the forests of the \\Place{Feywild}. There, she embraced her destiny --- The Hand of Nendawen, the spirit of the Hunt.\n\n\\large{Now She\'s a Warrior, with one Mission --- Kill \\NPC{Jagen Ghen}.\n\nArmed with her father\'s bow, her mother\'s wisdom, and her own burning desire for justice, the woman \\NPC{Hweilan Inle Merah} will avenge her family\'s brutal murder, or die trying.\n\nBut there\'s something about her, something even Nendawen doesn\'t realize... And what will become of her when the battle is done?"
+  description: "Overwhelmed by inner turmoil, the child \\NPC{Hweilan} struggled to master her fear in the forests of the \\Place{Feywild}. There, she embraced her destiny --- The Hand of Nendawen, the spirit of the Hunt. large{Now She\'s a Warrior, with one Mission --- Kill \\NPC{Jagen Ghen}.\n\nArmed with her father\'s bow, her mother\'s wisdom, and her own burning desire for justice, the woman \\NPC{Hweilan Inle Merah} will avenge her family\'s brutal murder, or die trying.\n\nBut there\'s something about her, something even Nendawen doesn\'t realize... And what will become of her when the battle is done?"
   short_description: "Last book of the Chosen of Nendawen trilogy."
 }
 title: "Cry of the Ghost Wolf"

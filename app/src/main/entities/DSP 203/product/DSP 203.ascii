@@ -1,7 +1,7 @@
 template {
   name: "DSP 203"
   world: "None"
-  description: "Release your inner nerd with \\Product{Dork Covenant}, the first collection\n  of the hilarious, critically acclaimed fan-favorite Dork Tower comic book!\n  From dragon-filled dungeons to star treks, from comic book conventions to\n  internet naughtiness, Dork Tower is the comic that put the \'cult\' back into\n  sub-culture! So join Matt, Igor, Ken, Gilly the Perky Goth and Carson the\n  Muskrat in their uproariously dorky adventures!"
+  description: "Release your inner nerd with \\Product{Dork Covenant}, the first collection of the hilarious, critically acclaimed fan-favorite Dork Tower comic book! From dragon-filled dungeons to star treks, from comic book conventions to internet naughtiness, Dork Tower is the comic that put the \'cult\' back into sub-culture! So join Matt, Igor, Ken, Gilly the Perky Goth and Carson the Muskrat in their uproariously dorky adventures!"
 }
 title: "Dork covenant"
 subtitle: "It\'s All Geek to Me!"

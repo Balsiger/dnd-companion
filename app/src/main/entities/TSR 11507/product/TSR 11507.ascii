@@ -7,7 +7,7 @@ template {
     name: "Dragon 264"
   }
   world: "Ravenloft"
-  description: "Once again, the undead arise to terrify AD&D game characters everywhere with\n                    the aid of this, the second in a series of works detailing the most dreadful\n                    and evil creatures imaginable.\n                    This compilation contains the complete texts of \\Product{Van Richten\'s Guide\n                    to Ghosts}, \\Product{Van Richten\'s Guide to the Lich}, and \\Product{Van\n                    Richten\'s Guide to the Ancient Dead}, updated and usable in any AD&D\n                    campaign."
+  description: "Once again, the undead arise to terrify AD&D game characters everywhere with the aid of this, the second in a series of works detailing the most dreadful and evil creatures imaginable. This compilation contains the complete texts of \\Product{Van Richten\'s Guide to Ghosts}, \\Product{Van Richten\'s Guide to the Lich}, and \\Product{Van Richten\'s Guide to the Ancient Dead}, updated and usable in any AD&D campaign."
 }
 title: "Van Richten\'s Monster Hunter\'s Compendium, Volume Two"
 date {

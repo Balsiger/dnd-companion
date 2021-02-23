@@ -1,7 +1,7 @@
 template {
   name: "WTC 9597274"
   world: "Forgotten Realms"
-  description: "Eldritch and forgotten arcana wait within its vaults. Twisted accidents of\n                    magic prowl its halls. Sinister forces lure the unsuspecting deeper into\n                    death or madness. Its victims don\'t remember how they got there. No one\n                    remembers how to get out.\n                    Now it\'s her turn."
+  description: "Eldritch and forgotten arcana wait within its vaults. Twisted accidents of magic prowl its halls. Sinister forces lure the unsuspecting deeper into death or madness. Its victims don\'t remember how they got there. No one remembers how to get out. ow it\'s her turn."
   short_description: "Book one of the Dungeons series."
 }
 title: "Depths of Madness"

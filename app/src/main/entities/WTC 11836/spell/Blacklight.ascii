@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "You create an area of total darkness. The darkness is impenetrable to normal vision and darkvision, but you can see normally within the blacklit area. Creatures outside the spell's area, even you, cannot see through it.\n\nYou can cast the spell on a point in space, but the effect is stationary unless you cast it cast on a mobile object. You can cast the spell on a creature, and the effect then radiates from the creature and moves as it moves. Unattended objects and points in space do not get saving throws or benefit from spell resistance.\n\n\\Spell{Blacklight} counters or dispels any light spell of equal or lower level, such as \\Spell{daylight}. The 3rd-level cleric Spell \\Spell{daylight} counters or dispels \\Spell{blacklight}."
+  description: "You create an area of total darkness. The darkness is impenetrable to normal vision and darkvision, but you can see normally within the blacklit area. Creatures outside the spell's area, even you, cannot see through it.\n\nYou can cast the spell on a point in space, but the effect is stationary unless you cast it cast on a mobile object. You can cast the spell on a creature, and the effect then radiates from the creature and moves as it moves. Unattended objects and points in space do not get saving throws or benefit from spell resistance. Spell{Blacklight} counters or dispels any light spell of equal or lower level, such as \\Spell{daylight}. The 3rd-level cleric Spell \\Spell{daylight} counters or dispels \\Spell{blacklight}."
   short_description: "Create an area of total darkness you can see in (but not through)."
 }
 school: EVOCATION

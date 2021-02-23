@@ -1,7 +1,7 @@
 template {
   name: "WTC 2179072"
   world: "Generic"
-  description: "In a land ravaged by monsters and tyrants, you stand as a champion of the faith, a beacon of light in a dark world. With weapons and spells, you battle evil and chaos. With unmatched conviction, you strike a blow that echoes throughout the heavens.\n                    This Dungeons & Dragons supplement presents never-before-seen options for divine characters, including new powers, feats, paragon paths, and epic destinies designed for the avenger, cleric, invoker, and paladin classes. \\Product{Divine Power} also provides rules for divine domains, as well as builds and class features that allow you to play new versions of your favorite divine class."
+  description: "In a land ravaged by monsters and tyrants, you stand as a champion of the faith, a beacon of light in a dark world. With weapons and spells, you battle evil and chaos. With unmatched conviction, you strike a blow that echoes throughout the heavens. This Dungeons & Dragons supplement presents never-before-seen options for divine characters, including new powers, feats, paragon paths, and epic destinies designed for the avenger, cleric, invoker, and paladin classes. \\Product{Divine Power} also provides rules for divine domains, as well as builds and class features that allow you to play new versions of your favorite divine class."
   short_description: "Options for Avengers, Clerics, Invokers, and Paladins"
 }
 title: "Divine Power"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 96708"
   world: "Dragonlance"
-  description: "The paperback edition of the opening title in a new trilogy from\n  \\Place{Dragonlance} setting co-creator Margaret Weis takes up where the\n  \\Product{War of Souls} series left off with the central character\n  \\NPC{Mina}. While following her story, this new trilogy also explores the\n  chaos that is post-war \\Place{Krynn}. This is Weis\'s first solo trilogy in\n  the \\Place{Dragonlance} world."
+  description: "The paperback edition of the opening title in a new trilogy from Place{Dragonlance} setting co-creator Margaret Weis takes up where the Product{War of Souls} series left off with the central character PC{Mina}. While following her story, this new trilogy also explores the chaos that is post-war \\Place{Krynn}. This is Weis\'s first solo trilogy in the \\Place{Dragonlance} world."
 }
 title: "Amber and Ashes"
 author {

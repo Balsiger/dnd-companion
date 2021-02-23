@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Driving sleet blocks all sight (even darkvision) within it and causes the ground in the area to be icy. A creature can walk within or through the area of sleet at half normal speed with a DC 10 Balance check.  Failure means it can\'t move in that round, while failure by 5 or more means it falls (see the Balance skill for details).  The sleet extinguishes torches and small fires. Arcane Material Component: A pinch of dust and a few drops of water."
+  description: "Driving sleet blocks all sight (even darkvision) within it and causes the ground in the area to be icy. A creature can walk within or through the area of sleet at half normal speed with a DC 10 Balance check.\n\nFailure means it can\'t move in that round, while failure by 5 or more means it falls (see the Balance skill for details).\n\nThe sleet extinguishes torches and small fires. Arcane Material Component: A pinch of dust and a few drops of water."
   short_description: "Hampers vision and movement."
 }
 school: CONJURATION

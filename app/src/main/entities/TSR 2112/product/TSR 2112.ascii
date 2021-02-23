@@ -8,7 +8,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "Whether you\'re a novice DM getting ready to referee your first AD&D game or\n                    an old pro who\'s running an established campaign, there is something for you\n                    in the \\Product{Campaign Sourcebook and Catacomb Guide}. We\'ve included\n                    dozens of helpful tips to help you better organize your games, design\n                    adventures, and make your NPCs come to life. In addition, we\'ve included a\n                    number of settings for unusual dungeons. In short, there\'s something for\n                    everybody in this exciting addition to the AD&D game system."
+  description: "Whether you\'re a novice DM getting ready to referee your first AD&D game or an old pro who\'s running an established campaign, there is something for you in the \\Product{Campaign Sourcebook and Catacomb Guide}. We\'ve included dozens of helpful tips to help you better organize your games, design adventures, and make your NPCs come to life. In addition, we\'ve included a number of settings for unusual dungeons. In short, there\'s something for everybody in this exciting addition to the AD&D game system."
 }
 title: "Campaign Sourcebook and Catacombs Guide"
 author {

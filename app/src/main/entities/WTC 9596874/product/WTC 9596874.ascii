@@ -1,7 +1,7 @@
 template {
   name: "WTC 9596874"
   world: "Forgotten Realms"
-  description: "Shadows crawl west to consume everything in their path, including a nation of merchants.\n                    \\emph{The \\Monster{archdevil} cocked his head with curiosity and the unholy storm of dark energy gathering about him subsided to a simmer.\n                    \'Enough, father,\' \\NPC{PMagadon} said.}\n                    In the midst of a war that will change the face of \\Place{Faer\\hat{u}n}, the eyes of the world will seek out light in the darkest of shadows.}"
+  description: "Shadows crawl west to consume everything in their path, including a nation of merchants. \\emph{The \\Monster{archdevil} cocked his head with curiosity and the unholy storm of dark energy gathering about him subsided to a simmer. \'Enough, father,\' \\NPC{PMagadon} said.} In the midst of a war that will change the face of \\Place{Faer\\hat{u}n}, the eyes of the world will seek out light in the darkest of shadows.}"
 }
 title: "Shadowstorm"
 subtitle: "Make the Book Whole. The Storm will Follow."

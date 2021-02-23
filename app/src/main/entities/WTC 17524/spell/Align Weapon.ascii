@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Align weapon makes a weapon good, evil, lawful, or chaotic, as you choose. A weapon that is aligned can bypass the damage reduction of certain creatures, usually outsiders of the opposite alignment. This spell has no effect on a weapon that already has an alignment, such as a holy sword.  You can't cast this spell on a natural weapon, such as an unarmed strike.  When you make a weapon good, evil, lawful, or chaotic, align weapon is a good, evil, lawful, or chaotic spell, respectively."
+  description: "Align weapon makes a weapon good, evil, lawful, or chaotic, as you choose. A weapon that is aligned can bypass the damage reduction of certain creatures, usually outsiders of the opposite alignment. This spell has no effect on a weapon that already has an alignment, such as a holy sword.\n\nYou can't cast this spell on a natural weapon, such as an unarmed strike.\n\nWhen you make a weapon good, evil, lawful, or chaotic, align weapon is a good, evil, lawful, or chaotic spell, respectively."
   short_description: "Weapon becomes good, evil, lawful, or chaotic."
 }
 school: TRANSMUTATION

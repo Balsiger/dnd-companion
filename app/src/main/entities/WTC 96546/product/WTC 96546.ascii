@@ -1,7 +1,7 @@
 template {
   name: "WTC 96546"
   world: "Dragonlance"
-  description: "The second title in the second \\Place{Dragonlance} novel trilogy is now\n  being released for the first time ever in a trade hardcover\n  edition. Featuring the stunning art and design that graced the cover of the\n  paperback edition, the new version of this series is a follow-up to the\n  release of the \\Place{Dragonlance} novels Chronicles trilogy in hardcover in\n  2003."
+  description: "The second title in the second \\Place{Dragonlance} novel trilogy is now being released for the first time ever in a trade hardcover edition. Featuring the stunning art and design that graced the cover of the paperback edition, the new version of this series is a follow-up to the release of the \\Place{Dragonlance} novels Chronicles trilogy in hardcover in 2003."
 }
 title: "War of the Twins"
 author {

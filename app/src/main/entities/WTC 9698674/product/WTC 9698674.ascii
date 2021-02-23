@@ -1,7 +1,7 @@
 template {
   name: "WTC 9698674"
   world: "Dragonlance"
-  description: "This collection of tales is edited by the creators of the\n  \\Place{Dragonlance} mythology. \\Product{The Reign of Istar} contains a number\n  of short stories by popular \\Place{Dragonlance} authors as well as a novella\n  by Weis and Hickman."
+  description: "This collection of tales is edited by the creators of the Place{Dragonlance} mythology. \\Product{The Reign of Istar} contains a number of short stories by popular \\Place{Dragonlance} authors as well as a novella by Weis and Hickman."
 }
 title: "Reign of Istar"
 leader: "The"

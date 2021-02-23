@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "\\Place{Darken Wood}... even the name brings dread to humans. But it is home\n  to \\Place{Ansalon}\'s \\Monster{centaur} tribes, where they have dwelt for ages\n  in peace under the \\NPC{Forestmaster}\'s watchful eye.\n\n  Now, ten years after the \\Product{Summer of Chaos}, strife is tearing the\n  centaurs apart. A mad chieftain seeks to overthrow his enemies, and an even\n  darker presence is changing the forest itself.\n\n  \\NPC{Trephas}, a brave young \\Class{warrior}, sets out for \\Place{Solace} to\n  seek aid agasint these enemies. He finds more than he bargained for in\n  \\NPC{Caramon Majere}, Hero of the Lance, and his spitfire daughter\n  \\NPC{Dezra}.\n\n  Acclaimed \\Place{Dragonlance} author Chris Pierson tells a tale of\n  \\Place{Ansalon}\'s most mysterious race, the fabled centaurs."
+  description: "\\Place{Darken Wood}... even the name brings dread to humans. But it is home to \\Place{Ansalon}\'s \\Monster{centaur} tribes, where they have dwelt for ages in peace under the \\NPC{Forestmaster}\'s watchful eye. ow, ten years after the \\Product{Summer of Chaos}, strife is tearing the\ncentaurs apart. A mad chieftain seeks to overthrow his enemies, and an even darker presence is changing the forest itself. PC{Trephas}, a brave young \\Class{warrior}, sets out for \\Place{Solace} to seek aid agasint these enemies. He finds more than he bargained for in PC{Caramon Majere}, Hero of the Lance, and his spitfire daughter PC{Dezra}. Acclaimed \\Place{Dragonlance} author Chris Pierson tells a tale of Place{Ansalon}\'s most mysterious race, the fabled centaurs."
 }
 title: "Dezra\'s Quest"
 author {

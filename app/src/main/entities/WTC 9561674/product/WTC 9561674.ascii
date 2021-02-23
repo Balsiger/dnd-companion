@@ -1,7 +1,7 @@
 template {
   name: "WTC 9561674"
   world: "Forgotten Realms"
-  description: "Shadows move out of the shrinking desert, south to the rich and arrogant\n                    cities of \\Place{Sembia}.\n                    \\emph{\'Be brave, little man\', says the shadowman, and the boy thinks his\n                    voice is surprisingly soft. \'Stay with your mother. This will be over soon.\'\n                    The shadows swallow him and he is gone.}\n                    On the edge of a war that will change the face of \\Place{Faer\\hat{u}n}, the\n                    world will find that not all shadows serve \\Place{Shade}."
+  description: "Shadows move out of the shrinking desert, south to the rich and arrogant cities of \\Place{Sembia}. \\emph{\'Be brave, little man\', says the shadowman, and the boy thinks his voice is surprisingly soft. \'Stay with your mother. This will be over soon.\' The shadows swallow him and he is gone.} On the edge of a war that will change the face of \\Place{Faer\\hat{u}n}, the world will find that not all shadows serve \\Place{Shade}."
 }
 title: "Shadowbread"
 subtitle: "The Lady has spoken to me. It has already begun."

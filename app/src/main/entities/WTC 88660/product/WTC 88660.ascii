@@ -1,7 +1,7 @@
 template {
   name: "WTC 88660"
   world: "Forgotten Realms"
-  description: "\\Product{The Ogre\'s Pact} is the first novel in a trilogy that deals with\n                    the \\Monster{giants} of the \\Place{Forgotten Realms}\n                    setting. \\Monster{Giants} are little written about, and this trilogy, written\n                    by New York Times best-selling author Troy Denning, was the first to detail\n                    them. This edition features new cover art."
+  description: "\\Product{The Ogre\'s Pact} is the first novel in a trilogy that deals with the \\Monster{giants} of the \\Place{Forgotten Realms} setting. \\Monster{Giants} are little written about, and this trilogy, written by New York Times best-selling author Troy Denning, was the first to detail them. This edition features new cover art."
 }
 title: "Ogre\'s Pact"
 leader: "The"

@@ -14,7 +14,7 @@ template {
     name: "catalog96"
   }
   world: "Generic"
-  description: "\\emph{\'Future generations will marvel at us, as the present age marvels at\n                    us now.\'}\n                    \\right{---\\NPC{Pericles}, the \\Place{Atheninan} statesman}\n                    Their names were \\NPC{Achilles}, \\NPC{Odysseus}, \\NPC{Jason}, \\NPC{Heracles},\n                    and \\NPC{Alexander}. Their deeds pitted them against monsters, \\Monster{men},\n                    and the known world. They were \\Group{Greeks}, and theirs was the \\Event{age\n                    of heroes}. \\Product{Age of Heroes} transforms this epic time of myth and\n                    history into an exciting AD&D setting, with details on spells, magical items,\n                    new character kits, maps, pictures of ancient \\Place{Greek} life, and a\n                    starting adventure.\n                    The challenge has gone out---let only the heroes heed the call."
+  description: "\\emph{\'Future generations will marvel at us, as the present age marvels at us now.\'} \\right{---\\NPC{Pericles}, the \\Place{Atheninan} statesman} Their names were \\NPC{Achilles}, \\NPC{Odysseus}, \\NPC{Jason}, \\NPC{Heracles}, and \\NPC{Alexander}. Their deeds pitted them against monsters, \\Monster{men}, and the known world. They were \\Group{Greeks}, and theirs was the \\Event{age of heroes}. \\Product{Age of Heroes} transforms this epic time of myth and history into an exciting AD&D setting, with details on spells, magical items, new character kits, maps, pictures of ancient \\Place{Greek} life, and a starting adventure. The challenge has gone out---let only the heroes heed the call."
 }
 title: "Age of Heroes"
 author {

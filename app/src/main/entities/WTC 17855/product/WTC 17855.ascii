@@ -1,7 +1,7 @@
 template {
   name: "WTC 17855"
   world: "Generic"
-  description: "A ship lies wrecked on an ice-bound coast. Desperate to recover a magic item\n  from its cargo, a wizard enlists the help of the \\Group{Thieves\' Guild}. They\n  soon discover that the shipwreck was no accident. The artifact\'s trail leads\n  to frozen wilderness, savage brigands, and foes no one expected.\n\n  The heroes can fulfill their contract... but can they survive the\n  consequences?"
+  description: "A ship lies wrecked on an ice-bound coast. Desperate to recover a magic item from its cargo, a wizard enlists the help of the \\Group{Thieves\' Guild}. They soon discover that the shipwreck was no accident. The artifact\'s trail leads to frozen wilderness, savage brigands, and foes no one expected. The heroes can fulfill their contract... but can they survive the consequences?"
 }
 title: "Treachery\'s Wake"
 author {

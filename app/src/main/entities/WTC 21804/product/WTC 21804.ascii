@@ -1,7 +1,7 @@
 template {
   name: "WTC 21804"
   world: "Dragonlance"
-  description: "Sequestered in the blackness of the dreaded \\Place{Tower of High Sorcery} in\n  \\Place{Palanthas}, surrounded by nameless creatures of evil, \\NPC{Raistlin\n  Majere} weaves a plan to conquer the darkness---to bring it under his\n  control.\n\n  \\NPC{Crysania}, a beautiful and devoted \\Class{cleric} of \\God{Paladine},\n  tries to use her faith to lead \\NPC{Raistlin} from the darkness. She is blind\n  to his shadowed designs, and he draws her slowly into his neatly woven trap.\n\n  Made aware of \\NPC{Raistlin}\'s plan, a distraught \\NPC{Caramon} travels back\n  in time to the doomed city of \\Place{Istar} in the days before the\n  \\Event{Cataclysm}. There, together with the ever-present \\Monster{kender}\n  \\NPC{Tasslehoff}, \\NPC{Caramon} will make his stand to save\n  \\NPC{Raistlin}\'s soul.\n\n  Or so he believes."
+  description: "Sequestered in the blackness of the dreaded \\Place{Tower of High Sorcery} in \\Place{Palanthas}, surrounded by nameless creatures of evil, \\NPC{Raistlin Majere} weaves a plan to conquer the darkness---to bring it under his control. PC{Crysania}, a beautiful and devoted \\Class{cleric} of \\God{Paladine},\ntries to use her faith to lead \\NPC{Raistlin} from the darkness. She is blind to his shadowed designs, and he draws her slowly into his neatly woven trap. Made aware of \\NPC{Raistlin}\'s plan, a distraught \\NPC{Caramon} travels back in time to the doomed city of \\Place{Istar} in the days before the Event{Cataclysm}. There, together with the ever-present \\Monster{kender} PC{Tasslehoff}, \\NPC{Caramon} will make his stand to save PC{Raistlin}\'s soul. Or so he believes."
 }
 title: "Time of the Twins"
 author {

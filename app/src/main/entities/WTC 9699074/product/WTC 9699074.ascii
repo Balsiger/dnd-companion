@@ -1,7 +1,7 @@
 template {
   name: "WTC 9699074"
   world: "Forgotten Realms"
-  description: "\\bold{Once he led the revolutionaries against a tyrannical lord.\n                    Once he had a beautifu wife.\n                    Once he was a hero.}\n                    But that was before he got caught, beaten down, nearly killed, and sold into\n                    slavery.\n                    Now he has nothing but hate and the chains of his bondage: the only weapons\n                    he has with which to escape.\n                    The first title in a new \\Place{Forgotten Realms} series focusing on the\n                    popular Dungeons & Dragons game character class of \\Class{Fighters}. Each\n                    title will feature characters with a different exotic style of fighting."
+  description: "\\bold{Once he led the revolutionaries against a tyrannical lord. Once he had a beautifu wife. Once he was a hero.} But that was before he got caught, beaten down, nearly killed, and sold into slavery. Now he has nothing but hate and the chains of his bondage: the only weapons he has with which to escape. The first title in a new \\Place{Forgotten Realms} series focusing on the popular Dungeons & Dragons game character class of \\Class{Fighters}. Each title will feature characters with a different exotic style of fighting."
 }
 title: "Master of Chains"
 subtitle: "The Fighters"

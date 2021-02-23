@@ -1,7 +1,7 @@
 template {
   name: "WTC 17856"
   world: "Forgotten Realms"
-  description: "Beautiful as she is deadly, \\NPC{Liriel Baenre} flits through the shadows\n                    of \\Place{Menzoberranzan}, city of the \\Monster{dark elves}. Amid treachery\n                    and murder that are the \\Monster{drow}\'s daily fare, she feels something\n                    calling to her ... something beyond this dusky world far removed from the\n                    sun. Yet as she ventures toward the surface and the lands of light, enemies\n                    pursue her unceasingly.\n                    And one enemy may offer her the only hope of salvation."
+  description: "Beautiful as she is deadly, \\NPC{Liriel Baenre} flits through the shadows of \\Place{Menzoberranzan}, city of the \\Monster{dark elves}. Amid treachery and murder that are the \\Monster{drow}\'s daily fare, she feels something calling to her ... something beyond this dusky world far removed from the sun. Yet as she ventures toward the surface and the lands of light, enemies pursue her unceasingly. And one enemy may offer her the only hope of salvation."
 }
 title: "Daughter of the Drow"
 author {

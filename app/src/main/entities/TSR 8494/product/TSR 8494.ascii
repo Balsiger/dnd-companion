@@ -19,7 +19,7 @@ template {
     name: "catalog93"
   }
   world: "Forgotten Realms"
-  description: "The \\Group{Ffolk} have forsaken their goddess, the \\God{Earthmother}, and\n                    have turned to new gods to protect them. Now, capricious and malevolent, one\n                    of the new lords has turned the worship of the \\Group{Ffolk} against them. It\n                    falls to the royal daughters of High King \\NPC{Tristan Kendrick} to confront\n                    the evil that now threatens their land.\n                    Douglas Niles is the author of the immensely popular \\Product{Maztica} and\n                    \\Product{Moonshae} Trilogies. The \\Product{Druidhome Trilogy} is the\n                    much-anticipated sequel to the \\Product{Moonshae Trilogy}."
+  description: "The \\Group{Ffolk} have forsaken their goddess, the \\God{Earthmother}, and have turned to new gods to protect them. Now, capricious and malevolent, one of the new lords has turned the worship of the \\Group{Ffolk} against them. It falls to the royal daughters of High King \\NPC{Tristan Kendrick} to confront the evil that now threatens their land. Douglas Niles is the author of the immensely popular \\Product{Maztica} and \\Product{Moonshae} Trilogies. The \\Product{Druidhome Trilogy} is the much-anticipated sequel to the \\Product{Moonshae Trilogy}."
 }
 title: "Prophet of Moonshae"
 author {

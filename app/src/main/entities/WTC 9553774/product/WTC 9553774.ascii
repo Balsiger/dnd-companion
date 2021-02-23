@@ -1,7 +1,7 @@
 template {
   name: "WTC 9553774"
   world: "Eberron"
-  description: "For years, rumors have spoken of Ashrem\'s Legacy, a device beyond\n  imagination. Some say it was a weapon, some a portal to other worlds. But in\n  Cyre, on the Day of Mourning, Ashrem and his Legacy vanished in the\n  destruction.\n\n  Now a young thief on the streets of Wroat has stumbled upon a clue that may\n  lead to the lost Legacy. To stay alive, she and the crew of The Mourning Dawn\n  must find Ashrem\'s Legacy, for if they fail, Eberron will plunge into another\n  century of war."
+  description: "For years, rumors have spoken of Ashrem\'s Legacy, a device beyond imagination. Some say it was a weapon, some a portal to other worlds. But in Cyre, on the Day of Mourning, Ashrem and his Legacy vanished in the destruction. ow a young thief on the streets of Wroat has stumbled upon a clue that may lead to the lost Legacy. To stay alive, she and the crew of The Mourning Dawn must find Ashrem\'s Legacy, for if they fail, Eberron will plunge into another century of war."
 }
 title: "Voyage of the Morning Dawn"
 author {

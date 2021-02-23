@@ -10,7 +10,7 @@ template {
     name: "catalog96"
   }
   world: "Forgotten Realms"
-  description: "\\large{The King is dead, long live the king.}\n                    Meet \\NPC{Pinch}, a man of many titles: scoundrel, thief, criminal\n                    extraordinaire...heir to the throne?\n                    \\NPC{Manferic II}, \\NPC{Pinch}\'s guardian and the formerl rule of\n                    \\Place{Ankhapur}, has died without a direct heir. By ancient law, the crown\n                    will pass to the relative \'chosen by the cup\', a family relic, in a ceremony\n                    whereby the rightful heir is selected and pretenders and other rejected\n                    candidates meet their deaths.\n                    \\Place{Pinch}\'s outlaw days have prepared him for life on the mean\n                    streets...but is he ready for the dangers that lurk in courtly hallways,\n                    among royal relatives and dagger-bearing shadows?"
+  description: "\\large{The King is dead, long live the king.} Meet \\NPC{Pinch}, a man of many titles: scoundrel, thief, criminal extraordinaire...heir to the throne? \\NPC{Manferic II}, \\NPC{Pinch}\'s guardian and the formerl rule of \\Place{Ankhapur}, has died without a direct heir. By ancient law, the crown will pass to the relative \'chosen by the cup\', a family relic, in a ceremony whereby the rightful heir is selected and pretenders and other rejected candidates meet their deaths. \\Place{Pinch}\'s outlaw days have prepared him for life on the mean streets...but is he ready for the dangers that lurk in courtly hallways, among royal relatives and dagger-bearing shadows?"
 }
 title: "King Pinch"
 author {

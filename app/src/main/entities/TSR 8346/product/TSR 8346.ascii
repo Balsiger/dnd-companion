@@ -23,7 +23,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "A \\Monster{kender} becomes a \\Class{Solamnic Knight} (almost).\n\n  An \\Monster{ogre} emerges as an unlikely savior of the \\Monster{dwarven}\n  race.\n\n  And \\Class{gladiators} compete in the bloodsport of \\Place{Istar}.\n\n  Together with a novella by Margaret Weis and Tracy Hickman, these and more\n  short stories, penned by Richard A. Knaak, Michael Williams, and others of\n  the original \\Place{Dragonlance} Saga creative team -- tell wondrous tales of\n  \\Place{Krynn} in the legendary time of the Kingpriest."
+  description: "A \\Monster{kender} becomes a \\Class{Solamnic Knight} (almost). An \\Monster{ogre} emerges as an unlikely savior of the \\Monster{dwarven} race. And \\Class{gladiators} compete in the bloodsport of \\Place{Istar}. Together with a novella by Margaret Weis and Tracy Hickman, these and more short stories, penned by Richard A. Knaak, Michael Williams, and others of the original \\Place{Dragonlance} Saga creative team -- tell wondrous tales of Place{Krynn} in the legendary time of the Kingpriest."
 }
 title: "Reign of Istar"
 leader: "The"

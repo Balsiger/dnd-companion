@@ -1,7 +1,7 @@
 template {
   name: "DSP 210"
   world: "None"
-  description: "\\Product{Understanding Gamers} collects critically acclaimed, fan-favorite\n  strips from John Kovalic\'s Dork Tower, along with the origins award-nominated\n  Dork Tower #18 comic book and the Dork Tower Lord of the Rings Special! From\n  film fandom to the league of extraordinary gentlegamers, from the Internet to\n  inner geeks, Dork Tower puts the \'fan\' back into \'fanatical obsessive\'!\n\n  What\'s not to understand?"
+  description: "\\Product{Understanding Gamers} collects critically acclaimed, fan-favorite strips from John Kovalic\'s Dork Tower, along with the origins award-nominated Dork Tower #18 comic book and the Dork Tower Lord of the Rings Special! From film fandom to the league of extraordinary gentlegamers, from the Internet to inner geeks, Dork Tower puts the \'fan\' back into \'fanatical obsessive\'! What\'s not to understand?"
 }
 title: "Understanding Gamers"
 subtitle: "The Game\'s the Thing"

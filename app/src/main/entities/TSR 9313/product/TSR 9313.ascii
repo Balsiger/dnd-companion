@@ -11,7 +11,7 @@ template {
     name: "catalog93"
   }
   world: "Spelljammer"
-  description: "This \\emph{all new} AD&D Dungeon Master\'s Screen has been designed\n  especially for use with the \\Place{Spelljammer} campaign system. From basic\n  combat tables to planetary statistics, the screen provides all the special\n  tables needed to smoothly run an AD&D space campaign, placing them\n  immediately within the DM\'s reach.\n\n  In addition to the useful tables, the screen gives you:\n\n  \\list\n  {combat statistics for your favorite ships from \\Product{Lost Ships}\n   and the \\Place{Spelljammer} campaign adventures!}\n  {a 3-panel panoramic painting depicting an epic battle in\n   \\Place{Wildspace}}\n  {full color three-dimensional fold-up for space-faring ships suitable\n   for use in ship-to-ship combat}"
+  description: "This \\emph{all new} AD&D Dungeon Master\'s Screen has been designed especially for use with the \\Place{Spelljammer} campaign system. From basic combat tables to planetary statistics, the screen provides all the special tables needed to smoothly run an AD&D space campaign, placing them\nimmediately within the DM\'s reach.\n\nIn addition to the useful tables, the screen gives you: list {combat statistics for your favorite ships from \\Product{Lost Ships} and the \\Place{Spelljammer} campaign adventures!} {a 3-panel panoramic painting depicting an epic battle in Place{Wildspace}} {full color three-dimensional fold-up for space-faring ships suitable for use in ship-to-ship combat}"
 }
 title: "Spelljammer DM Screen"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 17734"
   world: "Real"
-  description: "The \\Product{MLB Showdown} sports card game is your ticket to the Major\n  Leagues, where you can be the manager of your own baseball team. First,\n  assemble and field your own all-star lineup. Then use real stats and\n  strategies to lead your squad to one nine-inning gem after another.\n\n  The \\Product{MLB Showdown 2002 two-player Starter Set} comes equipped with\n  everything you and a friend need to start throwing heat and swinging for the\n  bleachers!\n\n  \\list\n  {Two 15-card teams}\n  {One 20-sided die}\n  {Playmat with Quick-Play Rules}\n  {Complete Rulebook with Advanced and Expert Rules}"
+  description: "The \\Product{MLB Showdown} sports card game is your ticket to the Major Leagues, where you can be the manager of your own baseball team. First, assemble and field your own all-star lineup. Then use real stats and\nstrategies to lead your squad to one nine-inning gem after another.\n\nThe \\Product{MLB Showdown 2002 two-player Starter Set} comes equipped with everything you and a friend need to start throwing heat and swinging for the bleachers! list {Two 15-card teams} {One 20-sided die} {Playmat with Quick-Play Rules} {Complete Rulebook with Advanced and Expert Rules}"
 }
 title: "MLB Showdown 2002 Two Player Starter Set"
 date {

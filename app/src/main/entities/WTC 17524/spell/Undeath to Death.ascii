@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like circle of death, except that it destroys undead creatures as noted above.  Material Component: The powder of a crushed diamond worth at least 500 gp."
+  description: "This spell functions like circle of death, except that it destroys undead creatures as noted above.\n\nMaterial Component: The powder of a crushed diamond worth at least 500 gp."
   short_description: "Destroys 1d4 HD/level undead (max 20d4)."
 }
 school: NECROMANCY

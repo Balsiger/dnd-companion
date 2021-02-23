@@ -1,7 +1,7 @@
 template {
   name: "WTC 21811"
   world: "Forgotten Realms"
-  description: "\\NPC{Icewind Dale}. Windswept passes and forbidding glaciers stand at the\n                    top of the world. Below them, in the cold valleys, an evil force broods: the\n                    magic of \\Item{Crenshinibon}, the \\Item{crystal shard}.\n                    Now \\Monster{dwarf}, barbarian, and \\Monster[drow]{drow elf} join to battle\n                    this evil. Tempered in the furnace of struggle, they form an unbreakable\n                    friendship.\n                    A legend is born.\n                    For the first time in one volume, here is New York Times bestselling author\n                    R.A. Salvatore\'s adventure that introduced \\NPC{Drizzt Do\'Urden}, the heroic\n                    \\Monster[drow]{dark elf}, one of the most beloved characters in fantasy\n                    literature."
+  description: "\\NPC{Icewind Dale}. Windswept passes and forbidding glaciers stand at the top of the world. Below them, in the cold valleys, an evil force broods: the magic of \\Item{Crenshinibon}, the \\Item{crystal shard}. Now \\Monster{dwarf}, barbarian, and \\Monster[drow]{drow elf} join to battle this evil. Tempered in the furnace of struggle, they form an unbreakable friendship. A legend is born. For the first time in one volume, here is New York Times bestselling author R.A. Salvatore\'s adventure that introduced \\NPC{Drizzt Do\'Urden}, the heroic \\Monster[drow]{dark elf}, one of the most beloved characters in fantasy literature."
 }
 title: "Icewind Dale Trilogy Collector\'s Edition"
 leader: "The"

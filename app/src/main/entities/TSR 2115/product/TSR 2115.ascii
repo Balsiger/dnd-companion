@@ -20,7 +20,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "If you thought all \\Class{wizards} were alike, think again! The masters of\n                    magic now have a new guide to creating more interesting and imaginative\n                    \\Class{mages}, just when you thought you had them \'figured out\'. The\n                    \\Product{Complete Wizard\'s Handbook} will put a whole new twist on wizards\n                    form personality and dress codes to schools of magic to building that dream\n                    laboratory. Look out, world---you\'ll never look at a \\Class{mage} the same\n                    way again!"
+  description: "If you thought all \\Class{wizards} were alike, think again! The masters of magic now have a new guide to creating more interesting and imaginative \\Class{mages}, just when you thought you had them \'figured out\'. The \\Product{Complete Wizard\'s Handbook} will put a whole new twist on wizards form personality and dress codes to schools of magic to building that dream laboratory. Look out, world---you\'ll never look at a \\Class{mage} the same way again!"
 }
 title: "Complete Wizard\'s Handbook"
 leader: "The"

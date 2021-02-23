@@ -1,7 +1,7 @@
 template {
   name: "WTC 1076972"
   world: "Generic"
-  description: "\\large{All you see is not all there is.}\n\n  Devious organizations scheme for world domination, otherworldly forces\n  infiltrate our power structures, and creatures from our nightmares lurk in\n  the shadows. Working for a clandestine organization called the\n  \\Group{Hoffmann Institute}, heroes explore hidden mysteries while eluding\n  forces both human and alien that conspire to control the truth.\n\n  This book updates the classic \\Product{DARK*MATTER Campaign Setting}\n  originally designed for the \\Product{ALTERNITY} Science Fiction Roleplaying\n  Game.\n\n  This product is compatible with other d20 System roleplaying games."
+  description: "\\large{All you see is not all there is.}\n\nDevious organizations scheme for world domination, otherworldly forces\ninfiltrate our power structures, and creatures from our nightmares lurk in the shadows. Working for a clandestine organization called the Group{Hoffmann Institute}, heroes explore hidden mysteries while eluding forces both human and alien that conspire to control the truth. This book updates the classic \\Product{DARK*MATTER Campaign Setting} originally designed for the \\Product{ALTERNITY} Science Fiction Roleplaying Game. This product is compatible with other d20 System roleplaying games."
 }
 title: "Dark*Matter"
 subtitle: "Supernatural Conspiracy Roleplaying"

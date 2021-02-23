@@ -7,7 +7,7 @@ template {
     name: "complete product listing"
   }
   world: "Generic"
-  description: "\\emph{...from \\Place{Arcadia} to \\Place{Pandemonium}, from the \\Place{plane\n                    of elemental Fire} to the \\Place{Astral plane}, vast new worlds of adventure\n                    are now open to players.}\n                    A vital source book for players and DMs of all levels of experience, the\n                    \\Product{Manual of the Planes} details the manifold worlds of the known\n                    planes of existence. This book describes the inhabitants, rules, and\n                    environments of these worlds, as well as rules for movement, survival,\n                    combat, and spell use in these alien surroundings. A different style of AD&D\n                    adventures awaits!"
+  description: "\\emph{...from \\Place{Arcadia} to \\Place{Pandemonium}, from the \\Place{plane of elemental Fire} to the \\Place{Astral plane}, vast new worlds of adventure are now open to players.} A vital source book for players and DMs of all levels of experience, the \\Product{Manual of the Planes} details the manifold worlds of the known planes of existence. This book describes the inhabitants, rules, and environments of these worlds, as well as rules for movement, survival, combat, and spell use in these alien surroundings. A different style of AD&D adventures awaits!"
 }
 title: "Manual of the Planes"
 author {

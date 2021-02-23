@@ -1,7 +1,7 @@
 template {
   name: "WTC 95407"
   world: "Forgotten Realms"
-  description: "\\emph{With each kill, I grow wiser, and with added wisdom, I grow stronger.}\n                    \\bold{The Assassin}\n                    For a man like \\NPC{Artemis Entreri}, lives hold little value.\n                    \\bold{The \\Monster{Drow}}\n                    For the \\Monster{dark elf} mercenary \\NPC{Jarlaxle}, the only currency is\n                    power.\n                    The malevolent \\Item{Crystal Shard}\'s influence on \\NPC{Jarlaxle} intensifies\n                    until even his own drow agents grow fearful of its terrifying\n                    intentions. When \\Group{Bregan D\'aerthe} itself begins to turn on him, the\n                    mercenary will be forced to find a savior in the assassin he\'s come to\n                    enslave."
+  description: "\\emph{With each kill, I grow wiser, and with added wisdom, I grow stronger.} \\bold{The Assassin} For a man like \\NPC{Artemis Entreri}, lives hold little value. \\bold{The \\Monster{Drow}} For the \\Monster{dark elf} mercenary \\NPC{Jarlaxle}, the only currency is power. The malevolent \\Item{Crystal Shard}\'s influence on \\NPC{Jarlaxle} intensifies until even his own drow agents grow fearful of its terrifying intentions. When \\Group{Bregan D\'aerthe} itself begins to turn on him, the mercenary will be forced to find a savior in the assassin he\'s come to enslave."
 }
 title: "Servant of the Shard"
 author {

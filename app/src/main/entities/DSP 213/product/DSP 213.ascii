@@ -1,7 +1,7 @@
 template {
   name: "DSP 213"
   world: "None"
-  description: "Us...and them...and after all, we\'re only ordinary fen...\n\n  Join the Dork Tower gang as they take to the streets of Mud Bay one more\n  time, looking for love (and their purple shiny dice) in all the wrong places!\n  Will \\NPC{Matt} and \\NPC{Gilly} find peace of mind, or even each other? Will\n  \\NPC{Kayleigh} find a way to make life even worse for them? Will \\NPC{Igor}\n  find a clue? Pick up John Kovalic\'s seventh Dork Tower collection, and find\n  out yourself!"
+  description: "Us...and them...and after all, we\'re only ordinary fen... Join the Dork Tower gang as they take to the streets of Mud Bay one more time, looking for love (and their purple shiny dice) in all the wrong places! Will \\NPC{Matt} and \\NPC{Gilly} find peace of mind, or even each other? Will PC{Kayleigh} find a way to make life even worse for them? Will \\NPC{Igor} find a clue? Pick up John Kovalic\'s seventh Dork Tower collection, and find out yourself!"
 }
 title: "The Dork Side of the Goon"
 subtitle: "Shine On, You Crazy Fanboy!"

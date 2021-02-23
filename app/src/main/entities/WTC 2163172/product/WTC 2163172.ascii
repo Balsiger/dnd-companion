@@ -1,7 +1,7 @@
 template {
   name: "WTC 2163172"
   world: "Forgotten Realms"
-  description: "He was a fearsome necromancer who ruled over this part of the \\Place{Moonsea} hundreds of years ago, and survives as an undead \\Monster{lich} who commands the dead of the barrowfields as his slaves.\n                    Too many things that should lie dead and buried under stone rise and walk the \\Place{Highfells} once their tombs are breached.\n                    No one is to open a tomb anywhere within land claimed by \\NPC{Hulburg}, and it is considered high treason to collect anything of value buried in a barrow.\n                    It\'s one of the few laws the \\Group{Harmachs} enforce without mercy.\n                    But someone is robbing them anyway."
+  description: "He was a fearsome necromancer who ruled over this part of the \\Place{Moonsea} hundreds of years ago, and survives as an undead \\Monster{lich} who commands the dead of the barrowfields as his slaves. Too many things that should lie dead and buried under stone rise and walk the \\Place{Highfells} once their tombs are breached. No one is to open a tomb anywhere within land claimed by \\NPC{Hulburg}, and it is considered high treason to collect anything of value buried in a barrow. It\'s one of the few laws the \\Group{Harmachs} enforce without mercy. But someone is robbing them anyway."
   short_description: "Book I of the Blades of the Moonsea trilogy."
 }
 title: "Swordmage"

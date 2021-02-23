@@ -8,7 +8,7 @@ template {
     name: "catalog98"
   }
   world: "Dragonlance"
-  description: "\\NPC{Crysania}, high \\Class{priestess} of the \\Place{Temple of Paladine}, is\n  blind to the beauty of the world but not to the joy of her faith. Lately,\n  though, her communion with the \\God{god of light} has become distant. Now a\n  mysterious stone has come into her possession. Its power compels her to\n  undertake a perilous quest, accompanied by a strange band of companions.\n\n  Together they endure the burning heat of \\Place{Krynn}\'s most violent summer\n  as they struggle toward their destination: the \\Place{Temple at Neraka}.\n\n  If they reach it, their world will be transformed forever.\n\n  This novel, set in the time of the \\Event{Chaos War}, brings to life the\n  story of \\NPC{Crysania}, a Revered Daughter of \\God{Paladine}, and\n  \\NPC{Dalamar}, the \\Monster[drow]{dark elf}."
+  description: "\\NPC{Crysania}, high \\Class{priestess} of the \\Place{Temple of Paladine}, is blind to the beauty of the world but not to the joy of her faith. Lately,\nthough, her communion with the \\God{god of light} has become distant. Now a\nmysterious stone has come into her possession. Its power compels her to undertake a perilous quest, accompanied by a strange band of companions. Together they endure the burning heat of \\Place{Krynn}\'s most violent summer as they struggle toward their destination: the \\Place{Temple at Neraka}. If they reach it, their world will be transformed forever. This novel, set in the time of the \\Event{Chaos War}, brings to life the story of \\NPC{Crysania}, a Revered Daughter of \\God{Paladine}, and PC{Dalamar}, the \\Monster[drow]{dark elf}."
 }
 title: "Tears of the Night Sky"
 subtitle: "A journey into peril."

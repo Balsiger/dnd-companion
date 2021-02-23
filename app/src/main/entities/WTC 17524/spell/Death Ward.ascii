@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The subject is immune to all death spells, magical death effects, energy drain, and any negative energy effects (such as from inflict spells or chill touch).  This spell doesn\'t remove negative levels that the subject has already gained, nor does it affect the saving throw necessary 24 hours after gaining a negative level.  Death ward does not protect against other sorts of attacks, such as hit point loss, poison, or petrification, even if those attacks might be lethal."
+  description: "The subject is immune to all death spells, magical death effects, energy drain, and any negative energy effects (such as from inflict spells or chill touch).\n\nThis spell doesn\'t remove negative levels that the subject has already gained, nor does it affect the saving throw necessary 24 hours after gaining a negative level.\n\nDeath ward does not protect against other sorts of attacks, such as hit point loss, poison, or petrification, even if those attacks might be lethal."
   short_description: "Grants immunity to death spells and negative energy effects."
 }
 school: NECROMANCY

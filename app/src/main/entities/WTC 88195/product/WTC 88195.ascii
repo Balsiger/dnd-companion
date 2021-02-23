@@ -1,7 +1,7 @@
 template {
   name: "WTC 88195"
   world: "Rokugan"
-  description: "\\Group{The Crab} have defended the \\Place{Emerald Empire} against\n                    \\Place{Shadowlands} hordes for a millennium and beyond. Nothing will drive\n                    them from the \\Place{Carpenter\'s Wall}.\n                    Nothing but the destruction of the \\Place{empire} itself.\n                    Plague has gripped the land, dangling \\Place{Rokugan} by a thread. The\n                    defenders of the empire must now become its saviors by doing the unthinkable:\n                    Joining the enemy."
+  description: "\\Group{The Crab} have defended the \\Place{Emerald Empire} against \\Place{Shadowlands} hordes for a millennium and beyond. Nothing will drive them from the \\Place{Carpenter\'s Wall}. Nothing but the destruction of the \\Place{empire} itself. Plague has gripped the land, dangling \\Place{Rokugan} by a thread. The defenders of the empire must now become its saviors by doing the unthinkable: Joining the enemy."
 }
 title: "Crab"
 leader: "The"

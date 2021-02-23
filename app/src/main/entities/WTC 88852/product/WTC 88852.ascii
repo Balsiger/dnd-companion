@@ -1,7 +1,7 @@
 template {
   name: "WTC 88852"
   world: "Forgotten Realms"
-  description: "This stunning new release of the classic R.A. Salvatore novel continues the\n                    tale of the origins of Salvatore\'s signature \\Monster{dark elf} character\n                    \\NPC{Drizzt Do\'Urden} and is the first-ever release of this \\Place{Forgotten\n                    Realms} novel title in hardcover. Each title in \\Product{The Legend of\n                    Drizzt} series showcases the classic \\Monster{dark elf} novels in new, deluxe\n                    hardcover editions."
+  description: "This stunning new release of the classic R.A. Salvatore novel continues the tale of the origins of Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt Do\'Urden} and is the first-ever release of this \\Place{Forgotten Realms} novel title in hardcover. Each title in \\Product{The Legend of Drizzt} series showcases the classic \\Monster{dark elf} novels in new, deluxe hardcover editions."
 }
 title: "Exile"
 author {

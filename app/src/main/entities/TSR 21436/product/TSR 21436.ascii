@@ -7,7 +7,7 @@ template {
     name: "Dragon 264"
   }
   world: "Forgotten Realms"
-  description: "The seer \\NPC{Alaundo} prophesied that seven scourges would sweep\n                    \\Place{Cormyr} away in ruin. For centuries the royal family has stood watch\n                    against that day and devoted their lives to the protection of the\n                    \\Place{realm}.\n                    But in a time when their ancient guardians slumber and their most loyal\n                    servants disappear, when a terrible evil prepares to sweep down upon their\n                    throne---\n                    Who will protect the royal family."
+  description: "The seer \\NPC{Alaundo} prophesied that seven scourges would sweep \\Place{Cormyr} away in ruin. For centuries the royal family has stood watch against that day and devoted their lives to the protection of the \\Place{realm}. But in a time when their ancient guardians slumber and their most loyal servants disappear, when a terrible evil prepares to sweep down upon their throne--- Who will protect the royal family."
 }
 title: "Beyond the High Road"
 author {

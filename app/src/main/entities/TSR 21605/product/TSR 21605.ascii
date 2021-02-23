@@ -10,7 +10,7 @@ template {
     name: "Dragon 268"
   }
   world: "Forgotten Realms"
-  description: "\\NPC{Cadderly} must leave his home to combat the evil unleashed by the\n                    \\Item{Chaos Curse}. To counter \\Place{Castle Trinity}\'s plans for conquest,\n                    the \\Class{cleric} and his friends enter the beautiful forest of\n                    \\Place{Shilmista}. But among the trees and glades of the forest,\n                    \\NPC{Cadderly} must battle a monstrous evil."
+  description: "\\NPC{Cadderly} must leave his home to combat the evil unleashed by the \\Item{Chaos Curse}. To counter \\Place{Castle Trinity}\'s plans for conquest, the \\Class{cleric} and his friends enter the beautiful forest of \\Place{Shilmista}. But among the trees and glades of the forest, PC{Cadderly} must battle a monstrous evil."
 }
 title: "In Sylvan Shadows"
 author {

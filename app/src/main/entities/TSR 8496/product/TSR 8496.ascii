@@ -19,7 +19,7 @@ template {
     name: "catalog96"
   }
   world: "Forgotten Realms"
-  description: "Restored to his throne, King \\NPC{Tristan Kendrick} must confront the\n                    fearful costs of his rescue from the \\Place{Coral Kingdom}. One of his\n                    daughters suffers tragically from the curse of an evil god, while the other\n                    must face a decision that will chart the destiny of the kingdom.\n                    At the same time, near the heart of \\Place{Gwynneth}, a new peril stirs...\n                    Douglas Niles is the author of the immensely popular \\Product{Maztica} and\n                    \\Product{Moonshae} Trilogies. The \\Product{Druidhome Trilogy} is the\n                    much-anticipated sequel to the \\Product{Moonshae Trilogy}."
+  description: "Restored to his throne, King \\NPC{Tristan Kendrick} must confront the fearful costs of his rescue from the \\Place{Coral Kingdom}. One of his daughters suffers tragically from the curse of an evil god, while the other must face a decision that will chart the destiny of the kingdom. At the same time, near the heart of \\Place{Gwynneth}, a new peril stirs... Douglas Niles is the author of the immensely popular \\Product{Maztica} and \\Product{Moonshae} Trilogies. The \\Product{Druidhome Trilogy} is the much-anticipated sequel to the \\Product{Moonshae Trilogy}."
 }
 title: "Druid Queen"
 leader: "The"

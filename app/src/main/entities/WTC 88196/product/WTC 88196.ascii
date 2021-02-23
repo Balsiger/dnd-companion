@@ -1,7 +1,7 @@
 template {
   name: "WTC 88196"
   world: "Dominaria"
-  description: "The end is near!\n                    \\Place{Phyrexian} plagues and shock troops have taken their toll. The final\n                    stage of the invasion has begun, and the dark lord \\NPC{Yawgmoth} himself\n                    plans to cross over into \\Place{Dominaria} to claim his prize. With time\n                    running out, the battered heroes\' last hope to save their home lies in an\n                    ancient, untested weapon, a jumble of artifacts known as the \\Item{Legacy}.\n                    Bear witness to the apocalypse."
+  description: "The end is near! \\Place{Phyrexian} plagues and shock troops have taken their toll. The final stage of the invasion has begun, and the dark lord \\NPC{Yawgmoth} himself plans to cross over into \\Place{Dominaria} to claim his prize. With time running out, the battered heroes\' last hope to save their home lies in an ancient, untested weapon, a jumble of artifacts known as the \\Item{Legacy}. Bear witness to the apocalypse."
 }
 title: "Apocalypse"
 author {

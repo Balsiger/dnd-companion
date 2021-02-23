@@ -1,6 +1,6 @@
 template {
   name: "DSP 1014"
-  description: "This fourth tome in the \\NPC{Nodwick} saga starts with the birth of a new\n  sear word and pretty much goes downhill from there. In these pages you\'ll\n  find the power of profanity, the perils of omniscience, the rescue of a fair\n  maiden, earsplitting Broadway musical numbers, a parody of the biggest\n  fantasy movie trilogy ever, and a fish story that\'ll make you wish you owned\n  a horned helmet!\n\n  \\NPC{Nodwick} is the critically-acclaimed fantasy humor comic book that\n  presents the adventures of the world\'s most favorite henchman as he toils for\n  a somewhat inept (but well-meaning) bad of adventurers."
+  description: "This fourth tome in the \\NPC{Nodwick} saga starts with the birth of a new\nsear word and pretty much goes downhill from there. In these pages you\'ll find the power of profanity, the perils of omniscience, the rescue of a fair maiden, earsplitting Broadway musical numbers, a parody of the biggest fantasy movie trilogy ever, and a fish story that\'ll make you wish you owned a horned helmet! PC{Nodwick} is the critically-acclaimed fantasy humor comic book that presents the adventures of the world\'s most favorite henchman as he toils for a somewhat inept (but well-meaning) bad of adventurers."
 }
 title: "Obligatory Dragon on the Cover"
 subtitle: "...and the Obligatory Fantasy Map on the Back"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 17756"
   world: "Forgotten Realms"
-  description: "This slip-covered gift set contains the four New York Times best-selling\n                    titles that make up the \\Product{Paths of Darkness series}: \\Product{The\n                    Silent Blade}, \\Product{The Spine of the World}, \\Product{Servant of the\n                    Shard}, and \\Product{Sea of Swords}. Each of these titles center around\n                    R.A. Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt\n                    Do\'Urden}."
+  description: "This slip-covered gift set contains the four New York Times best-selling titles that make up the \\Product{Paths of Darkness series}: \\Product{The Silent Blade}, \\Product{The Spine of the World}, \\Product{Servant of the Shard}, and \\Product{Sea of Swords}. Each of these titles center around R.A. Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt Do\'Urden}."
 }
 title: "Paths of Darnkess Gift Set"
 author {

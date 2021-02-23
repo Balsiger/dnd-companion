@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell causes an object to radiate shadowy illumination out to a 20-foot radius. All creatures in the area gain concealment (20% miss chance). Even creatures that can normally see in such conditions (such as with darkvision or lowlight vision) have the miss chance in an area shrouded in magical darkness. Normal lights (torches, candles, lanterns, and so forth) are incapable of brightening the area, as are light spells of lower level (such as light or dancing lights). Higher level light spells (such as daylight) are not affected by darkness.\n\nIf darkness is cast on a small object that is then placed inside or under a lightproof covering, the spell's effect is blocked until the covering is removed.\n\n\\Spell{Darkness} counters or dispels any light spell of equal or lower spell level."
+  description: "This spell causes an object to radiate shadowy illumination out to a 20-foot radius. All creatures in the area gain concealment (20% miss chance). Even creatures that can normally see in such conditions (such as with darkvision or lowlight vision) have the miss chance in an area shrouded in magical darkness. Normal lights (torches, candles, lanterns, and so forth) are incapable of brightening the area, as are light spells of lower level (such as light or dancing lights). Higher level light spells (such as daylight) are not affected by darkness.\n\nIf darkness is cast on a small object that is then placed inside or under a lightproof covering, the spell's effect is blocked until the covering is removed. Spell{Darkness} counters or dispels any light spell of equal or lower spell level."
   short_description: "20-ft. radius of supernatural shadow."
 }
 school: EVOCATION

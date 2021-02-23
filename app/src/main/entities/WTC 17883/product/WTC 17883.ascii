@@ -1,7 +1,7 @@
 template {
   name: "WTC 17883"
   world: "None"
-  description: "Amid the titanic clash between \\NPC{Phage} and \\NPC{Akroma}, all\n                    \\Place{Dominaria} shuddered. Now, out of the destruction and chaos a new\n                    force arises, and \\NPC{Kamahl} must face his greatest foe: \\NPC{Karoma}. Her\n                    arms spread to the very clouds, and her robes trail like rays of sunlight.\n                    She is the destroyer.\n                    She is the answer."
+  description: "Amid the titanic clash between \\NPC{Phage} and \\NPC{Akroma}, all \\Place{Dominaria} shuddered. Now, out of the destruction and chaos a new force arises, and \\NPC{Kamahl} must face his greatest foe: \\NPC{Karoma}. Her arms spread to the very clouds, and her robes trail like rays of sunlight. She is the destroyer. She is the answer."
 }
 title: "Scourge"
 subtitle: "The battle rages on!"

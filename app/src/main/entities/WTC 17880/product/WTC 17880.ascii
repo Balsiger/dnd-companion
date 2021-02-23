@@ -1,7 +1,7 @@
 template {
   name: "WTC 17880"
   world: "Dragonlance"
-  description: "Before the \\Product{War of the Lance}, carefree \\Monster{kender}\n  \\NPC{Tasslehoff Burrfoot} is enjoying the company of his friends at the\n  \\Place{Inn of the Last Home} when a bounty hunter arrives and charges him\n  with desertion for violating the \\Monster{kender} laws of prearranged\n  marriage. But \\NPC{Tasslehoff}\'s intended has pulled a disappearing act\n  of her own. The race is on to see who gets dragged to the altar first in a\n  tale of adventure replete with magic, monsters, and mayhem."
+  description: "Before the \\Product{War of the Lance}, carefree \\Monster{kender} PC{Tasslehoff Burrfoot} is enjoying the company of his friends at the Place{Inn of the Last Home} when a bounty hunter arrives and charges him with desertion for violating the \\Monster{kender} laws of prearranged marriage. But \\NPC{Tasslehoff}\'s intended has pulled a disappearing act of her own. The race is on to see who gets dragged to the altar first in a tale of adventure replete with magic, monsters, and mayhem."
 }
 title: "Kendermore"
 author {

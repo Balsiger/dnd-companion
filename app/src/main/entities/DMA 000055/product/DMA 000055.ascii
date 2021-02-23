@@ -1,7 +1,7 @@
 template {
   name: "DMA 000055"
   world: "Generic"
-  description: "Powerful forces of magic are at work as you try to solve the Wizard\'s\n  mysterious puzzles. Prove how logical you are by termining how many anti-ogre\n  potions he has to hand out, which disguises each of five squires is wearing,\n  and what emblems adorn the shields of the finest knights of\n  \\Place{Camelot}. The Wizard challenges you to come up with these answers and\n  more."
+  description: "Powerful forces of magic are at work as you try to solve the Wizard\'s mysterious puzzles. Prove how logical you are by termining how many anti-ogre potions he has to hand out, which disguises each of five squires is wearing, and what emblems adorn the shields of the finest knights of Place{Camelot}. The Wizard challenges you to come up with these answers and more."
 }
 title: "Wizard\'s Book of Puzzles"
 leader: "The"

@@ -16,7 +16,7 @@ template {
     name: "Dragon 224"
   }
   world: "Generic"
-  description: "A lot of magical items from \\Item{Theories on Converging Transitions\n                    (Spellbook)} to \\Item{Zweiback of Zymurgy}"
+  description: "A lot of magical items from \\Item{Theories on Converging Transitions (Spellbook)} to \\Item{Zweiback of Zymurgy}"
 }
 title: "Encyclopedia Magica, Volume IV"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 17731"
   world: "Real"
-  description: "The \\Product{MLB Showdown} sports card game is your ticket to the Major\n  Leagues, where you can be the manager of your own baseball team. First,\n  assemble and field your own all-star lineup. Then use real stats and\n  strategies to lead your squad to one nine-inning gem after another.\n\n  The \\Product{MLB Showdown 2002} booster packs come with 9 MLB Showdown\n  cards."
+  description: "The \\Product{MLB Showdown} sports card game is your ticket to the Major Leagues, where you can be the manager of your own baseball team. First, assemble and field your own all-star lineup. Then use real stats and strategies to lead your squad to one nine-inning gem after another. The \\Product{MLB Showdown 2002} booster packs come with 9 MLB Showdown cards."
 }
 title: "MLB Showdown 2002 Booster Pack"
 date {

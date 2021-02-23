@@ -1,7 +1,7 @@
 template {
   name: "WTC 9538274"
   world: "Generic"
-  description: "\\Monster{Goblins} set upon the quiet town of \\Place{Barrow\'s Edge}, and the\n                    community cries out for heroes to save them. What has turned the secretive\n                    and reclusive goblins into bloodthirsty raiders? Who is the mysterious new\n                    leader of the tribe? The truth lies deep within the \\Place{Howling Caves}....\n                    \\Product{Scourge of the Howling Horde} is a stand-alone adventure designed\n                    for a group of 1st-level characters. Perfect for new players or seasoned\n                    players, it features an easy-to-use encounter format and includes useful DM\n                    advice for beginning and experienced Dungeon Masters."
+  description: "\\Monster{Goblins} set upon the quiet town of \\Place{Barrow\'s Edge}, and the community cries out for heroes to save them. What has turned the secretive and reclusive goblins into bloodthirsty raiders? Who is the mysterious new leader of the tribe? The truth lies deep within the \\Place{Howling Caves}.... \\Product{Scourge of the Howling Horde} is a stand-alone adventure designed for a group of 1st-level characters. Perfect for new players or seasoned players, it features an easy-to-use encounter format and includes useful DM advice for beginning and experienced Dungeon Masters."
   short_description: "A first level adventure."
 }
 title: "Scourge of the Howling Horde"

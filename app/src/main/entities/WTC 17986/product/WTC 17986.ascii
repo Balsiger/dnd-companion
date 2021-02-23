@@ -1,7 +1,7 @@
 template {
   name: "WTC 17986"
   world: "Forgotten Realms"
-  description: "Alone on the battlefield.\n                    Surrounded by death.\n                    Cornered by enemies.\n                    And ready to die.\n                    \\NPC{Drizzt Do\'Urden} has become an \\Monster{orc}\'s worst nightmare: a lone\n                    \\Monster{drow} with nothing to lose and nowhere to run. As the \\Place{North}\n                    spirals into chaos and war, one \\Monster{dark elf} has decided to take it\n                    personally, and it will take an army to stop him.\n                    \\Product{The Hunter\'s blades} have been drawn, and \\NPC{Drizzt} will never\n                    be the same."
+  description: "Alone on the battlefield. Surrounded by death. Cornered by enemies. And ready to die. \\NPC{Drizzt Do\'Urden} has become an \\Monster{orc}\'s worst nightmare: a lone \\Monster{drow} with nothing to lose and nowhere to run. As the \\Place{North} spirals into chaos and war, one \\Monster{dark elf} has decided to take it personally, and it will take an army to stop him. \\Product{The Hunter\'s blades} have been drawn, and \\NPC{Drizzt} will never be the same."
 }
 title: "Lone Drow"
 leader: "The"

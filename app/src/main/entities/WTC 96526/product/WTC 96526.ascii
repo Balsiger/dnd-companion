@@ -1,7 +1,7 @@
 template {
   name: "WTC 96526"
   world: "Dragonlance"
-  description: "The first title in the second \\Place{Dragonlance} novel trilogy is now being\n  released for the first time ever in a trade hardcover edition. Featuring the\n  stunning art and design that graced the cover of the paperback edition, this\n  new version is a follow-up to the release of the \\Place{Dragonlance} novels\n  \\Product{Chronicles} trilogy in hardcover in 2003."
+  description: "The first title in the second \\Place{Dragonlance} novel trilogy is now being released for the first time ever in a trade hardcover edition. Featuring the stunning art and design that graced the cover of the paperback edition, this ew version is a follow-up to the release of the \\Place{Dragonlance} novels Product{Chronicles} trilogy in hardcover in 2003."
 }
 title: "Time of the Twins"
 author {

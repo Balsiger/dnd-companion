@@ -2,7 +2,7 @@ template {
   name: "WTC 25127"
   synonym: ""
   world: "Forgotten Realms"
-  description: "\\emph{Not even the mightiest mage, working spells that remain utterly reliable, can hope to prevail against dozens of tireless, ruthless undead who suffer no pain and can be distracted by nothing.}\n                    Every creature on \\Place{Faerun} has its dark mirror in the undead -- from the \\Monster{ghosts} of ancient warriors to the rune-scribed \\Monster{skeletons} of \\Monster{dragons}. And in a world with as rich and bloody a history as the \\Place{Forgotten Realms}, they are legion -- outshining the living in variety and number.\n                    Here are a dozen of the most terrifying tales of the haunted Realms.\n                    "
+  description: "\\emph{Not even the mightiest mage, working spells that remain utterly reliable, can hope to prevail against dozens of tireless, ruthless undead who suffer no pain and can be distracted by nothing.} Every creature on \\Place{Faerun} has its dark mirror in the undead -- from the \\Monster{ghosts} of ancient warriors to the rune-scribed \\Monster{skeletons} of \\Monster{dragons}. And in a world with as rich and bloody a history as the \\Place{Forgotten Realms}, they are legion -- outshining the living in variety and number. Here are a dozen of the most terrifying tales of the haunted Realms. "
   short_description: "The Haunted Lands Anthology"
 }
 title: "Realms of the Dead"

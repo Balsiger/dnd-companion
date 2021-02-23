@@ -1,7 +1,7 @@
 template {
   name: "WTC 2191172"
   world: "Generic"
-  description: "You haunt a vast and untamed wilderness, a terrifying domain of ferocious beasts and natural perils, yet you do not fear its mystery. With fierce resolve, you draw power from the spirits that preserve and sustain the world, destroying the monsters that threaten it. You are a primal creature, and evil cowers before you.\n                    This Dungeons & Dragons supplement presents never-before-seen options for primal characters, including new powers, tribal feats, paragon paths, and epic destinies designed for the barbarian, druid, shaman, and warden classes. \\Product{Primal Power} also provides information on major primal spirits, as well as builds and class features that allow you to play new versions of you favorite primal classes."
+  description: "You haunt a vast and untamed wilderness, a terrifying domain of ferocious beasts and natural perils, yet you do not fear its mystery. With fierce resolve, you draw power from the spirits that preserve and sustain the world, destroying the monsters that threaten it. You are a primal creature, and evil cowers before you. This Dungeons & Dragons supplement presents never-before-seen options for primal characters, including new powers, tribal feats, paragon paths, and epic destinies designed for the barbarian, druid, shaman, and warden classes. \\Product{Primal Power} also provides information on major primal spirits, as well as builds and class features that allow you to play new versions of you favorite primal classes."
   short_description: "Options for Barbarians, Druids, Shamans, and Wardens"
 }
 title: "Primal Powers"

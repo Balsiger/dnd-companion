@@ -1,7 +1,7 @@
 template {
   name: "WTC 88466"
   world: "Star Wars"
-  description: "Miniatures are a hobby within the hobby of roleplaying games. Crafted in\n  intricate detail from raw metal, miniatures are a convenient way for gamers\n  to keep track of characters and monsters as they play through adventures.\n\n  A game without heroes is not a Dungeons & Dragons game at all. This boxed set\n  gives you five of the good guys and is the perfect way to start your\n  miniatures collection. Featuring a wide array of races and classes, D&D\n  heroes are sculpted by the finest artists in the industry and will add depth\n  of play to any D&D game."
+  description: "Miniatures are a hobby within the hobby of roleplaying games. Crafted in intricate detail from raw metal, miniatures are a convenient way for gamers to keep track of characters and monsters as they play through adventures. A game without heroes is not a Dungeons & Dragons game at all. This boxed set gives you five of the good guys and is the perfect way to start your miniatures collection. Featuring a wide array of races and classes, D&D heroes are sculpted by the finest artists in the industry and will add depth of play to any D&D game."
 }
 title: "Heroes II"
 date {

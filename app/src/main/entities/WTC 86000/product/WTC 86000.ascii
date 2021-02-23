@@ -1,7 +1,7 @@
 template {
   name: "WTC 86000"
   world: "Dragonlance"
-  description: "An all-new young reader adaptation of the very first \\Product{Dragonlance}\n  novel.\n\n  For the first time ever, the \\Product{Dragonlance} novel that started the\n  entire series, \\Product{Dragons of Autumn Twilight}, has been made available\n  in a format specifically targeted at young readers. The novel has been\n  divided into two volumes, \\Product{A Rumor of Dragons} and \\Product{Night of\n  the Dragons}, that are sized to fit the young reader market. These titles\n  contain brand new cover art and interior art and are the first in a series of\n  young reader titles that will be adapted from the remaining novels in the\n  \\Product{Dragonlance Chronicles} trilogy."
+  description: "An all-new young reader adaptation of the very first \\Product{Dragonlance}\nnovel.\n\nFor the first time ever, the \\Product{Dragonlance} novel that started the entire series, \\Product{Dragons of Autumn Twilight}, has been made available in a format specifically targeted at young readers. The novel has been divided into two volumes, \\Product{A Rumor of Dragons} and \\Product{Night of the Dragons}, that are sized to fit the young reader market. These titles contain brand new cover art and interior art and are the first in a series of young reader titles that will be adapted from the remaining novels in the Product{Dragonlance Chronicles} trilogy."
 }
 title: "Rumor of Dragons"
 leader: "A"

@@ -1,6 +1,6 @@
 template {
   name: "WTC 88246"
-  description: "All the dice needed to play the Dungeons & Dragons roleplaying game in one\n  box.\n\n  The \\Product{d20 Dice} product contains a complete set of polyhedron dice\n  including a 4-sided die, a 6-sided die, an 8-sided die, a 10-sided die, a\n  12-sided die, and a 20-sided die. These dice are used when playing the\n  Dungeons & Dragons roleplaying game, the Star Wars Roleplaying Game, or any\n  d20 roleplaying game. Also included are Fast-Play Rules for the Dungeons &\n  Dragons roleplaying game and the Star Wars Roleplaying Game. These Fast-Play\n  Rules will help jumpstart any new gamer wanting to learn about roleplaying\n  games."
+  description: "All the dice needed to play the Dungeons & Dragons roleplaying game in one\nbox.\n\nThe \\Product{d20 Dice} product contains a complete set of polyhedron dice including a 4-sided die, a 6-sided die, an 8-sided die, a 10-sided die, a 12-sided die, and a 20-sided die. These dice are used when playing the Dungeons & Dragons roleplaying game, the Star Wars Roleplaying Game, or any d20 roleplaying game. Also included are Fast-Play Rules for the Dungeons & Dragons roleplaying game and the Star Wars Roleplaying Game. These Fast-Play Rules will help jumpstart any new gamer wanting to learn about roleplaying games."
 }
 title: "d20 Dice"
 date {

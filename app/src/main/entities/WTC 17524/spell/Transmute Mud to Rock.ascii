@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell transforms normal mud or quicksand of any depth into soft stone (sandstone or a similar mineral) permanently. Any creature in the mud is allowed a Reflex save to escape before the area is hardened to stone. Transmute mud to rock counters and dispels transmute rock to mud.  Arcane Material Component: Sand, lime, and water."
+  description: "This spell transforms normal mud or quicksand of any depth into soft stone (sandstone or a similar mineral) permanently. Any creature in the mud is allowed a Reflex save to escape before the area is hardened to stone. Transmute mud to rock counters and dispels transmute rock to mud.\n\nArcane Material Component: Sand, lime, and water."
   short_description: "Transforms two 10-ft. cubes per level."
 }
 school: TRANSMUTATION

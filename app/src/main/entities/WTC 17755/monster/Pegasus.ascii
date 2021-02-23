@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The \\Monster{Pegasus} is a magnificent winged horse that sometimes serves the cause of good. \n\nTypical \\Monster{pegasus} stands 6 feet hight at the shoulder, weights 1\'500 pounds, and has a wingspan of 20 feet. Rumors tell of some specimens that are brown or black instead of white. \n\n\\Monster[Pegasus]{Pegasi} cannot speak, but they understand common."
+  description: "The \\Monster{Pegasus} is a magnificent winged horse that sometimes serves the cause of good. \n\nTypical \\Monster{pegasus} stands 6 feet hight at the shoulder, weights 1\'500 pounds, and has a wingspan of 20 feet. Rumors tell of some specimens that are brown or black instead of white.\n\nMonster[Pegasus]{Pegasi} cannot speak, but they understand common."
 }
 size {
   size: LARGE

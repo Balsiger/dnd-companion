@@ -33,7 +33,7 @@ casting_time {
 }
 area: "One 20-ft cube/level (S)"
 duration {
-  duration_description: "Concentration +  1 hour/level"
+  duration_description: "Concentration +\n\n1 hour/level"
   flags: "(D)"
   description: "(D)"
 }

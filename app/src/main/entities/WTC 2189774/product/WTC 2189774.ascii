@@ -1,7 +1,7 @@
 template {
   name: "WTC 2189774"
   world: "Forgotten Realms"
-  description: "The \\Group{Knights of Myth Drannor} have come far from the pastoral comfort of their home in \\Place{Espar}. Chartered by the king and knighted by the queen, they have earned the name of adventurers.\n                    But do they have what it takes to be heroes? The noble knights thus far have defeated both dark magic and treachery, but true heroes do more than stumble across victory. True heroes are relentless in the pursuit of evil -- the true hero\'s sword never sleeps.\n                    Join master storyteller Ed Greenwood, the creator of the Forgotten Realms world, as he brings the tales of the Knights of Myth Drannor to its thrilling conclusion.\n                    "
+  description: "The \\Group{Knights of Myth Drannor} have come far from the pastoral comfort of their home in \\Place{Espar}. Chartered by the king and knighted by the queen, they have earned the name of adventurers. But do they have what it takes to be heroes? The noble knights thus far have defeated both dark magic and treachery, but true heroes do more than stumble across victory. True heroes are relentless in the pursuit of evil -- the true hero\'s sword never sleeps. Join master storyteller Ed Greenwood, the creator of the Forgotten Realms world, as he brings the tales of the Knights of Myth Drannor to its thrilling conclusion. "
   short_description: "The Knights of Myth Drannor, Book III"
 }
 title: "Sword Never Sleeps"

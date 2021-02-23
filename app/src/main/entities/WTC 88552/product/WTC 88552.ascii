@@ -1,7 +1,7 @@
 template {
   name: "WTC 88552"
   world: "None"
-  description: "Ancient troves of artifacts await discovery. The origins of potent spells\n                    rest lost between the pages of archaic tomes. The evolution of monstrous\n                    beasts lies outside of a researcher\'s grasp---until now. At last,\n                    long-forgotten and expertly hidden secrets will be revealed."
+  description: "Ancient troves of artifacts await discovery. The origins of potent spells rest lost between the pages of archaic tomes. The evolution of monstrous beasts lies outside of a researcher\'s grasp---until now. At last, long-forgotten and expertly hidden secrets will be revealed."
 }
 title: "Secrets of Magic"
 leader: "The"

@@ -22,7 +22,7 @@ template {
     name: "catalog96"
   }
   world: "Ravenloft"
-  description: "A shriek rings out over the tents and boardwalks of \\Place{Carnival\n  l\'Morai}, followed by a plea for help from \\NPC{Marie}, a blind\n  juggler. Other performers arrive at the young woman\'s wagon to find her\n  covered in blood. On the bed beside her lies the swordswallower, impaled upon\n  his own blade.\n\n  \\NPC{Marie} and her friends have few clues to track down the murderer---until\n  they find the next body and the next... Their quest to capture the killer\n  reveals horrors undreamed of, even for a troop of freakish performers trapped\n  in the heart of the \\Place{Dark Domains}.\n\n  \\Product{Carnival of Fear} is the sixth in an open-ended series of Gothic\n  horror tales dealing with the masters and monsters of the \\Product{Ravenloft}\n  dark fantasy setting."
+  description: "A shriek rings out over the tents and boardwalks of \\Place{Carnival l\'Morai}, followed by a plea for help from \\NPC{Marie}, a blind juggler. Other performers arrive at the young woman\'s wagon to find her\ncovered in blood. On the bed beside her lies the swordswallower, impaled upon\nhis own blade. PC{Marie} and her friends have few clues to track down the murderer---until they find the next body and the next... Their quest to capture the killer reveals horrors undreamed of, even for a troop of freakish performers trapped in the heart of the \\Place{Dark Domains}. Product{Carnival of Fear} is the sixth in an open-ended series of Gothic horror tales dealing with the masters and monsters of the \\Product{Ravenloft} dark fantasy setting."
 }
 title: "Carnival of Fear"
 author {

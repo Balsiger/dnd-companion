@@ -17,7 +17,7 @@ template {
     name: "Dragon 238"
   }
   world: "Dragonlance"
-  description: "\\Product{The Warriors} series details the exploits of the heroes and\n  villains of the \\Event{War of the Lance}."
+  description: "\\Product{The Warriors} series details the exploits of the heroes and villains of the \\Event{War of the Lance}."
 }
 title: "Lord Soth"
 author {

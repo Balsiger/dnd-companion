@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "None"
-  description: "\\Place{Terisiare} lies in ruins. Nations have fallen, \\Monster{goblins} raid\n                    the land, and an oppressive faith throttles the city-states. Now deep within\n                    the walls of the \\Place{Conclave of Mages}, \\NPC{Jodah} must decide if\n                    unlocking his own immense power is worth taking a step into the dark lands.\n                    The epic of the \\Event{Ice Age} begins."
+  description: "\\Place{Terisiare} lies in ruins. Nations have fallen, \\Monster{goblins} raid the land, and an oppressive faith throttles the city-states. Now deep within the walls of the \\Place{Conclave of Mages}, \\NPC{Jodah} must decide if unlocking his own immense power is worth taking a step into the dark lands. The epic of the \\Event{Ice Age} begins."
 }
 title: "Gathering Dark"
 leader: "The"

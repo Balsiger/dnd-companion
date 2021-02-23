@@ -1,7 +1,7 @@
 template {
   name: "WTC 88696"
   world: "Rokugan"
-  description: "The last book in the \\Product{Clan War} series, \\Product{The Lion} will\n                    generate a great deal of interest. All the great clan heroes from the six\n                    previous books play critical roles in this novel. This book provides an\n                    exciting conclusion that is eagerly anticipated by fans of the popular\n                    series."
+  description: "The last book in the \\Product{Clan War} series, \\Product{The Lion} will generate a great deal of interest. All the great clan heroes from the six previous books play critical roles in this novel. This book provides an exciting conclusion that is eagerly anticipated by fans of the popular series."
 }
 title: "Lion"
 leader: "The"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 88599"
   world: "Dragonlance"
-  description: "Consumed by grief and haunted by nightmares, \\NPC{Davyn} has given up on\n  himself and his friends. But he cannot deny his destiny for long.\n\n  \\NPC{Shemnara} rekindles \\NPC{Davyn}\'s hope with a new vision. If \\NPC{Davyn}\n  can enlist the help of the dreaded \\NPC{Dragon Knight}, \\NPC{Nearra} may\n  survive. Only \\NPC{Oddvar}, the shifty \\Place{Theiwar}, has ever entered the\n  \\NPC{Knight}\'s home and lived to tell the tale. But even a \\Place{Theiwar}\'s\n  secrets can be bought, for the right price. Soon, with old friends, new\n  allies, and \\NPC{Oddvar} by his side, \\NPC{Davyn} enters the cursed\n  keep. \\NPC{Nearra}\'s fate rests in his hands. And all he has to do is make it\n  out... alive."
+  description: "Consumed by grief and haunted by nightmares, \\NPC{Davyn} has given up on\nhimself and his friends. But he cannot deny his destiny for long. PC{Shemnara} rekindles \\NPC{Davyn}\'s hope with a new vision. If \\NPC{Davyn} can enlist the help of the dreaded \\NPC{Dragon Knight}, \\NPC{Nearra} may survive. Only \\NPC{Oddvar}, the shifty \\Place{Theiwar}, has ever entered the PC{Knight}\'s home and lived to tell the tale. But even a \\Place{Theiwar}\'s secrets can be bought, for the right price. Soon, with old friends, new allies, and \\NPC{Oddvar} by his side, \\NPC{Davyn} enters the cursed keep. \\NPC{Nearra}\'s fate rests in his hands. And all he has to do is make it out... alive."
 }
 title: "Dragon Knight"
 author {

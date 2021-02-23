@@ -10,7 +10,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "\\emph{...In the impenetrable darkness of the underearth, unimagined terrors\n                    and uncountable treasures await.}\n                    For beginners, advanced players, and DMs, this book opens up grand new vistas\n                    in the realms of the underdark, that little-known region of dungeons and\n                    caverns far beneath the sunlit world of everyday existence. The worlds of\n                    subterranean adventure await."
+  description: "\\emph{...In the impenetrable darkness of the underearth, unimagined terrors and uncountable treasures await.} For beginners, advanced players, and DMs, this book opens up grand new vistas in the realms of the underdark, that little-known region of dungeons and caverns far beneath the sunlit world of everyday existence. The worlds of subterranean adventure await."
 }
 title: "Dungeoneer\'s Survival Guide"
 author {

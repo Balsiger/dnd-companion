@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You create a destructive resonance in a corporeal creature\'s body. For each round you concentrate, you cause one creature to collapse in on itself, killing it. (This effect, being instantaneous, cannot be dispelled.)  You can target a particular creature only once with each casting of the spell. Implosion has no effect on creatures in gaseous form or on incorporeal creatures."
+  description: "You create a destructive resonance in a corporeal creature\'s body. For each round you concentrate, you cause one creature to collapse in on itself, killing it. (This effect, being instantaneous, cannot be dispelled.)\n\nYou can target a particular creature only once with each casting of the spell. Implosion has no effect on creatures in gaseous form or on incorporeal creatures."
   short_description: "Kills one creature/round."
 }
 school: EVOCATION

@@ -1,7 +1,7 @@
 template {
   name: "WTC 96929"
   world: "Eberron"
-  description: "A chance rescue brings bitter rivals together. With a mysterious ally, the\n  two warriors embark on a mission of vengeance, but the enemy waiting for them\n  in the depths of the \\Place{Shadow Marches} is far mor sinister than they\'ve\n  faced before.\n\n  \\large{In the Dark Places of the Wild, the Secrets of the Dragon Below are\n  Better Left Undisturbed...}\n\n  \\Product{The Binding Stone} features the brand new races that were created\n  specifically for the \\Place{Eberron} campaign setting. It\'s also the first\n  \\Place{Eberron} novel to take its readers on an exploration of many uncharted\n  territories in the setting."
+  description: "A chance rescue brings bitter rivals together. With a mysterious ally, the\ntwo warriors embark on a mission of vengeance, but the enemy waiting for them\nin the depths of the \\Place{Shadow Marches} is far mor sinister than they\'ve faced before. large{In the Dark Places of the Wild, the Secrets of the Dragon Below are Better Left Undisturbed...} Product{The Binding Stone} features the brand new races that were created specifically for the \\Place{Eberron} campaign setting. It\'s also the first Place{Eberron} novel to take its readers on an exploration of many uncharted territories in the setting."
 }
 title: "Binding Stone"
 leader: "The"

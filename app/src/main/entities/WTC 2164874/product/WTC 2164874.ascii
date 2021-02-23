@@ -1,7 +1,7 @@
 template {
   name: "WTC 2164874"
   world: "Generic"
-  description: "This lavishly illustrated book gives roleplaying game fans a unique, behind-the-curtain glimpse into the making of the 4th Edition rules of the Dungeons & Dragons Roleplaying Game.\n                    Through words and images, it previews some of the iconic races and classes of the new edition. This book also features essays and insights from the game\'s designers, developers, and editors."
+  description: "This lavishly illustrated book gives roleplaying game fans a unique, behind-the-curtain glimpse into the making of the 4th Edition rules of the Dungeons & Dragons Roleplaying Game. Through words and images, it previews some of the iconic races and classes of the new edition. This book also features essays and insights from the game\'s designers, developers, and editors."
   short_description: "Preview of races and classes in D&D 4th edition."
 }
 title: "Races and Classes"

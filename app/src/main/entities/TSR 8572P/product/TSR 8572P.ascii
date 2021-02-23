@@ -17,7 +17,7 @@ template {
     name: "Dragon 246"
   }
   world: "Forgotten Realms"
-  description: "\\Place{Cormyr} has been ruled by the \\Group{Obarskyr} family since its\n                    inception one and a half millennia ago. Now its king, \\NPC{Azoun IV}, lies on\n                    his deathbed, and the vultures are circling, hoping to usurp the throne for\n                    their own. Against this crisis of state, the history of the \\Place{Forest\n                    Kingdom} unfolds, relating the previously untold story of a nation, its\n                    rules, and its wizards.\n                    \\Product{Cormyr: A Novel} is the epic historical saga of the most powerful\n                    nation in the \\Place{Forgotten Realms} fantasy world, as told by the world\'s\n                    co-creators."
+  description: "\\Place{Cormyr} has been ruled by the \\Group{Obarskyr} family since its inception one and a half millennia ago. Now its king, \\NPC{Azoun IV}, lies on his deathbed, and the vultures are circling, hoping to usurp the throne for their own. Against this crisis of state, the history of the \\Place{Forest Kingdom} unfolds, relating the previously untold story of a nation, its rules, and its wizards. \\Product{Cormyr: A Novel} is the epic historical saga of the most powerful nation in the \\Place{Forgotten Realms} fantasy world, as told by the world\'s co-creators."
 }
 title: "Cormyr: a Novel"
 subtitle: "The Epic Historical Saga of the Most Powerful Nation in the \\Place{Realms}."

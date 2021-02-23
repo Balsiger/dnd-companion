@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Most encounters with a \\Monster{roper} begin when it fires strong, sticky strands. The creature can have up to six strands at once, and they can strike up to 50 feet away (no range increment).  If a strand is severed, the roper can extrude a new one on its next turn as a free action."
+  description: "Most encounters with a \\Monster{roper} begin when it fires strong, sticky strands. The creature can have up to six strands at once, and they can strike up to 50 feet away (no range increment).\n\nIf a strand is severed, the roper can extrude a new one on its next turn as a free action."
 }
 type: EXTRAORDINARY

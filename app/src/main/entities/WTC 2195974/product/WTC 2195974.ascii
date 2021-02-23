@@ -1,7 +1,7 @@
 template {
   name: "WTC 2195974"
   world: "Forgotten Realms"
-  description: "..the hooded man said again -- or started to, until a flash of lightning shot through the camp and drove into a keg of warm ale beside him. As the keg exploded, liquid flying, a sheet of dissipating electricity stole the darkness from the growing twilight.\n                    All six of the companions fell back, shielding their eyes. When they regained their sight, one and all saw the lone figure of a lean dark elf standing atop one of their wagons.\n                    \\Large{\\NPC{Drizzt Do\'Urden}}\n                    ...gasped one of the \\Monster{dwarves}.\n                    "
+  description: "..the hooded man said again -- or started to, until a flash of lightning shot through the camp and drove into a keg of warm ale beside him. As the keg exploded, liquid flying, a sheet of dissipating electricity stole the darkness from the growing twilight. All six of the companions fell back, shielding their eyes. When they regained their sight, one and all saw the lone figure of a lean dark elf standing atop one of their wagons. \\Large{\\NPC{Drizzt Do\'Urden}} ...gasped one of the \\Monster{dwarves}. "
   short_description: "The first book with Drizzt in the Transitions series."
 }
 title: "Orc King"

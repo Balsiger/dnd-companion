@@ -1,7 +1,7 @@
 template {
   name: "WTC 17620"
   world: "Forgotten Realms"
-  description: "\\NPC{Tristan}, new-crowned king of the \\Group{Ffolk}, and \\NPC{Robyn} the\n                    druid must confront an evil that threatens their beloved \\Place{Moonshae\n                    Isles}. But they must also resolve their own relationship -- and decide if\n                    they will rule as king and queen or live forever as bitter enemies.\n                    Published in 1989, \\Product{Darkwell} was the final novel in the first\n                    trilogy ever set in the \\Place{Forgotten Realms} world. Unavailable for the\n                    past several years, this title is now being brought back into print in a\n                    newly-recovered mass market edition."
+  description: "\\NPC{Tristan}, new-crowned king of the \\Group{Ffolk}, and \\NPC{Robyn} the druid must confront an evil that threatens their beloved \\Place{Moonshae Isles}. But they must also resolve their own relationship -- and decide if they will rule as king and queen or live forever as bitter enemies. Published in 1989, \\Product{Darkwell} was the final novel in the first trilogy ever set in the \\Place{Forgotten Realms} world. Unavailable for the past several years, this title is now being brought back into print in a ewly-recovered mass market edition."
 }
 title: "Darkwell"
 subtitle: "The ultimate struggle of good and evil..."

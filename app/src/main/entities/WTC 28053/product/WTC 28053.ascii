@@ -1,7 +1,7 @@
 template {
   name: "WTC 28053"
   world: "Gamma World"
-  description: "Where are the scientists going?\n\nWhat is a \'scientist\' anyway?\n\n\\NPC{Hella} doesn\'t know what they\'re looking for, exactly, running across the badlands like that.\n\n\n\\NPC{Stampede} doesn\'t like the payday --- especially since the job\'s too big for just the two of them.\n\nAnd none of them like that thing coming out of the ripple --- the one with all the tentacles. They don\'t like that thing at all. \n\nVisit the great plains of a shattered future, which went from a place where nothing ever happens to a place where anything can. The locals liked it better the old way, but this isn\'t your father\'s \\Place{Oklahoma}.\n\nThis isn\'t even your father\'s \\Place{Gamma World}."
+  description: "Where are the scientists going?\n\nWhat is a \'scientist\' anyway? PC{Hella} doesn\'t know what they\'re looking for, exactly, running across the badlands like that. PC{Stampede} doesn\'t like the payday --- especially since the job\'s too big for just the two of them.\n\nAnd none of them like that thing coming out of the ripple --- the one with all the tentacles. They don\'t like that thing at all. \n\nVisit the great plains of a shattered future, which went from a place where nothing ever happens to a place where anything can. The locals liked it better the old way, but this isn\'t your father\'s \\Place{Oklahoma}.\n\nThis isn\'t even your father\'s \\Place{Gamma World}."
   short_description: "Post-apocalyptic mayhem in Gamma Oklahoma"
 }
 title: "Sooner Dead"

@@ -10,7 +10,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "\\emph{...the scope of the Advanced Dungeons & Dragons game si much larger\n                    than the most expansive dungeon.}\n                    This book, for new players and Dungeon Masters as well as more experienced\n                    campaigners, presents rules for adventuring in the outdoors. Opportunities\n                    and challenges await characters brave enough and hardy enough to take on the\n                    biggest \'monster\' of all---the wilderness!"
+  description: "\\emph{...the scope of the Advanced Dungeons & Dragons game si much larger than the most expansive dungeon.} This book, for new players and Dungeon Masters as well as more experienced campaigners, presents rules for adventuring in the outdoors. Opportunities and challenges await characters brave enough and hardy enough to take on the biggest \'monster\' of all---the wilderness!"
 }
 title: "Wilderness Survival Guide"
 author {

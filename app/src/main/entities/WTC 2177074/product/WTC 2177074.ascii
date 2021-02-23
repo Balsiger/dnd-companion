@@ -1,7 +1,7 @@
 template {
   name: "WTC 2177074"
   world: "Forgotten Realms"
-  description: "Raidon Kane emerges from the \\Event{Spellplague} with a sapphire tattoo burned into his flesh, strange supernatural powers, and eleven missing years.\n                    \\emph{The world had ended\n                    How could he forget that?}\n                    His daughter is dead. His home has been destroyed. His life is empty save for one thing.\n                    \\emph{Everything faded to blue, then to nothing.}\n                    \\large{REVENGE}\n                    "
+  description: "Raidon Kane emerges from the \\Event{Spellplague} with a sapphire tattoo burned into his flesh, strange supernatural powers, and eleven missing years. \\emph{The world had ended How could he forget that?} His daughter is dead. His home has been destroyed. His life is empty save for one thing. \\emph{Everything faded to blue, then to nothing.} \\large{REVENGE} "
   short_description: "Book I in the Abolethic Sovereignity trilogy"
 }
 title: "Plague of Spells"

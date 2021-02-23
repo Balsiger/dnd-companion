@@ -1,7 +1,7 @@
 template {
   name: "WTC 96452"
   world: "Forgotten Realms"
-  description: "Who betrayed his friends \\God{Midnight} and \\God{Kelemvor} and sought to\n                    destroy them.\n                    Who ascended to godhood and now spreads his lies and intrigues into every\n                    corner of \\Place{Faer\\hat{u}n}.\n                    Who is the \\God{Lord of Murder}, the \\God{Prince of Lies}--and insane."
+  description: "Who betrayed his friends \\God{Midnight} and \\God{Kelemvor} and sought to destroy them. Who ascended to godhood and now spreads his lies and intrigues into every corner of \\Place{Faer\\hat{u}n}. Who is the \\God{Lord of Murder}, the \\God{Prince of Lies}--and insane."
 }
 title: "Crucible: The Trial of Cyric the Mad"
 subtitle: "Cyric the Mad"

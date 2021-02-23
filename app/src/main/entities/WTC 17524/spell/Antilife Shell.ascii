@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You bring into being a mobile, hemispherical energy field that prevents the entrance of most types of living creatures.  The effect hedges out animals, aberrations, dragons, fey, giants, humanoids, magical beasts, monstrous humanoids, oozes, plants, and vermin, but not constructs, elementals, outsiders, or undead. See the \\Product{Monster Manual} for more about creature types.  This spell may be used only defensively, not aggressively. Forcing an abjuration barrier against creatures that the spell keeps at bay collapses the barrier (see Abjuration, page 172 of the \\Product{Player\'s Handbook})."
+  description: "You bring into being a mobile, hemispherical energy field that prevents the entrance of most types of living creatures.\n\nThe effect hedges out animals, aberrations, dragons, fey, giants, humanoids, magical beasts, monstrous humanoids, oozes, plants, and vermin, but not constructs, elementals, outsiders, or undead. See the \\Product{Monster Manual} for more about creature types.\n\nThis spell may be used only defensively, not aggressively. Forcing an abjuration barrier against creatures that the spell keeps at bay collapses the barrier (see Abjuration, page 172 of the \\Product{Player\'s Handbook})."
   short_description: "10-ft. field hedges out living creatures."
 }
 school: ABJURATION

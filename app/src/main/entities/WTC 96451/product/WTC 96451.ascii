@@ -1,7 +1,7 @@
 template {
   name: "WTC 96451"
   world: "Forgotten Realms"
-  description: "The \\Event{Time of Troubles} is at an end, and the gods have been restored\n                    to their rightful places.\n                    The soul of \\God{Kelemvor Lyonsbane}, former lover of the \\God{goddess of\n                    magic}, remains hidden from the mad god \\God{Cyric}.\n                    The will of one such as \\God{Cyric}, when bent on revenge, is not so easily\n                    thwarted."
+  description: "The \\Event{Time of Troubles} is at an end, and the gods have been restored to their rightful places. The soul of \\God{Kelemvor Lyonsbane}, former lover of the \\God{goddess of magic}, remains hidden from the mad god \\God{Cyric}. The will of one such as \\God{Cyric}, when bent on revenge, is not so easily thwarted."
 }
 title: "Prince of Lies"
 subtitle: "Revenge of a God"

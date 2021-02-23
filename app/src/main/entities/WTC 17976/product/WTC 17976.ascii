@@ -1,7 +1,7 @@
 template {
   name: "WTC 17976"
   world: "Dragonlance"
-  description: "This is the first title in a new trilogy centering around the character of\n  \\NPC{Linsha Majere}, the grandchild of one of hte central characters to the\n  entire \\Place{Dragonlance} saga. One of the author\'s previous titles,\n  \\Product{The Clandestine Circle}, introduced this character to\n  \\Place{Dragonlance} readers. This new title and trilogy will advance the\n  story of the world after the events of the best-selling \\Product{War of Souls\n  trilogy} and will also introduce a major new villain to the setting."
+  description: "This is the first title in a new trilogy centering around the character of PC{Linsha Majere}, the grandchild of one of hte central characters to the entire \\Place{Dragonlance} saga. One of the author\'s previous titles, Product{The Clandestine Circle}, introduced this character to Place{Dragonlance} readers. This new title and trilogy will advance the story of the world after the events of the best-selling \\Product{War of Souls trilogy} and will also introduce a major new villain to the setting."
 }
 title: "City of the Lost"
 author {

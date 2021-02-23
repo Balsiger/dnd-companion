@@ -7,7 +7,7 @@ template {
     name: "complete product listing"
   }
   world: "Generic"
-  description: "\\large{... All the new discoveries, plus a wealth of just uncovered secrets,\n                    between one pair of covers.}\n                    This, the latest of the AD&D game books, further defines and describes the\n                    game system. Inside are new spells, character classes, magic items, weapons,\n                    and much more for both players and Dungeon Master."
+  description: "\\large{... All the new discoveries, plus a wealth of just uncovered secrets, between one pair of covers.} This, the latest of the AD&D game books, further defines and describes the game system. Inside are new spells, character classes, magic items, weapons, and much more for both players and Dungeon Master."
 }
 title: "Unearthed Arcana"
 date {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 9539674"
   world: "Generic"
-  description: "The \\Product{d20 Future Tech} supplement describes a dazzling array of new\n  gear and gadgets---the latest and greatest technology for heroes and villains\n  of the future. In addition, it presents new types of \\Item{starships},\n  \\Item{robots}, and \\Item{mecha} and expands the rules for combining\n  character, vehicular, starship, and mech combat.\n\n  \\Product{d20 Future Tech} is an extensive collection of high-tech items for\n  use by players and Gamemasters. Building on subsystems first presented in\n  \\Product{d20 Future}, \\Product{d20 Future Tech} presents new gear and options\n  for characters, vehicles, starships, and mecha. Covering technology levels\n  from the current era to the far future, this supplement can be used in any\n  style of modern or future campaign."
+  description: "The \\Product{d20 Future Tech} supplement describes a dazzling array of new gear and gadgets---the latest and greatest technology for heroes and villains\nof the future. In addition, it presents new types of \\Item{starships},\n\\Item{robots}, and \\Item{mecha} and expands the rules for combining character, vehicular, starship, and mech combat. Product{d20 Future Tech} is an extensive collection of high-tech items for use by players and Gamemasters. Building on subsystems first presented in Product{d20 Future}, \\Product{d20 Future Tech} presents new gear and options for characters, vehicles, starships, and mecha. Covering technology levels from the current era to the far future, this supplement can be used in any style of modern or future campaign."
   short_description: "New gear and technology for any d20 Modern or d20 Future campaign."
 }
 title: "d20 Future Tech"

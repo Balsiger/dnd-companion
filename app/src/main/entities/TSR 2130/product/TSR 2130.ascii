@@ -14,7 +14,7 @@ template {
     name: "catalog93"
   }
   world: "Spelljammer"
-  description: "Out of the depths of wildspace come astonishing new ideas for\n  \\Place{Spelljammer} campaigns. Now you can create player characters from the\n  nonhuman races of the \\Monster{giff}, \\Monster{dracons}, \\Monster{scro},\n  \\Monster{grommams}, and more. Equip your characters with kits like the\n  Corsair, War Mage, and Aperusa. Then add some new space-oriented proficiences\n  and equipment, enlist your character in a spacefaring organization, and head\n  off into the \\Place{Void}!"
+  description: "Out of the depths of wildspace come astonishing new ideas for Place{Spelljammer} campaigns. Now you can create player characters from the onhuman races of the \\Monster{giff}, \\Monster{dracons}, \\Monster{scro}, Monster{grommams}, and more. Equip your characters with kits like the Corsair, War Mage, and Aperusa. Then add some new space-oriented proficiences and equipment, enlist your character in a spacefaring organization, and head off into the \\Place{Void}!"
 }
 title: "Complete Spacefarer\'s Handbook"
 author {

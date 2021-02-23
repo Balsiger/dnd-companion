@@ -13,7 +13,7 @@ template {
     name: "catalog96"
   }
   world: "Forgotten Realms"
-  description: "From the secret annals of \\Place{Realms} history come these\n                    never-before-published tales of infamy, featuring the most nefarious villains\n                    of that magical world---\\NPC{Artemis Entreri}, \\NPC{Manshoon of\n                    \\Place{Zhentil Keep}}, \\NPC{Elaith Craulnober}, \\NPC{Zulkir Szass Tam}, and\n                    many others---told by your favorite authors, including:\n                    \\bold{Ed Greenwood}\n                    \\bold{R.A. Salvatore}\n                    \\bold{Elaine Cunningham}\n                    \\bold{Troy Denning}\n                    \\bold{Christie Golden}"
+  description: "From the secret annals of \\Place{Realms} history come these never-before-published tales of infamy, featuring the most nefarious villains of that magical world---\\NPC{Artemis Entreri}, \\NPC{Manshoon of \\Place{Zhentil Keep}}, \\NPC{Elaith Craulnober}, \\NPC{Zulkir Szass Tam}, and many others---told by your favorite authors, including: \\bold{Ed Greenwood} \\bold{R.A. Salvatore} \\bold{Elaine Cunningham} \\bold{Troy Denning} bold{Christie Golden}"
 }
 title: "Realms of Infamy"
 author {

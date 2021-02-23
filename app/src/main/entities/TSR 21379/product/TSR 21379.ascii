@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Greyhawk"
-  description: "A village burns while its attackers flee into the night. Enraged, the\n  \\NPC{King of Keoland} orders an aging \\Class{warrior} to lead a band of\n  adventurers on a retaliatory strike. As they prepare to enter the heart of\n  the monsters\' lair, each knows only the bravest will survive. Against the\n  odds. Against the giants."
+  description: "A village burns while its attackers flee into the night. Enraged, the PC{King of Keoland} orders an aging \\Class{warrior} to lead a band of adventurers on a retaliatory strike. As they prepare to enter the heart of the monsters\' lair, each knows only the bravest will survive. Against the odds. Against the giants."
 }
 title: "Against the Giants"
 subtitle: "Vengeance will be served"

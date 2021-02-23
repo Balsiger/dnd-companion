@@ -1,7 +1,7 @@
 template {
   name: "WTC 9546274"
   world: "Forgotten Realms"
-  description: "The story of the \\Monster[elf]{elves} of \\Place{Faer\\hat{u}n} stretches from\n                    the dawn of history to the battle for the future of a world in constant\n                    upheaval."
+  description: "The story of the \\Monster[elf]{elves} of \\Place{Faer\\hat{u}n} stretches from the dawn of history to the battle for the future of a world in constant upheaval."
 }
 title: "Realms of the Elves"
 subtitle: "The History of Faer\\hat{u}n is written in the flowing script of the \\Monster{tel\'quessir}"

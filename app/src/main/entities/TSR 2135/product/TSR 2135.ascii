@@ -23,7 +23,7 @@ template {
     name: "catalog96"
   }
   world: "Generic"
-  description: "\\emph{Look out adventurers, they\'re here!} This handbook describes in detail\n                    over 20 humanoid races that can be run as player characters---from\n                    mischievious \\Monster{pixies} to stubborn \\Monster{minotaurs}, from the\n                    lixardlike \\Monster{saurial} to the savage \\Monster{half-ogre}---and many\n                    more in between. In addition to many new character types, this handbook\n                    contains new proficiencies, humanoid kits, unusual equipment, and a few new\n                    surprises that will open worlds of adventure within any ongoing\n                    campaign. Move over, common adventurers, \\Product{The Complete Book of\n                    Humanoids} is here!"
+  description: "\\emph{Look out adventurers, they\'re here!} This handbook describes in detail over 20 humanoid races that can be run as player characters---from mischievious \\Monster{pixies} to stubborn \\Monster{minotaurs}, from the lixardlike \\Monster{saurial} to the savage \\Monster{half-ogre}---and many more in between. In addition to many new character types, this handbook contains new proficiencies, humanoid kits, unusual equipment, and a few new surprises that will open worlds of adventure within any ongoing campaign. Move over, common adventurers, \\Product{The Complete Book of Humanoids} is here!"
 }
 title: "Complete Book of Humanoids"
 leader: "The"

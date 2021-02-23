@@ -13,7 +13,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "This is the complete guide to being an AD&D game Dungeon Master. Whether\n                    you\'re running a single adventure or masterminding a complete fantasy\n                    campaign, the \\Product{Dungeon Master Guide} is an absolute necessity. The\n                    AD&D 2nd Edition Dungeon Master Guide puts all the information you need right\n                    at your fingertips---in a fresh, new format, fully indexed for your\n                    convenience. Here you\'ll learn all there is to know about magical spells and\n                    items, as well as monsters, combat, travel, NPCs, treasure, encounters,\n                    awarding experience, and more!"
+  description: "This is the complete guide to being an AD&D game Dungeon Master. Whether you\'re running a single adventure or masterminding a complete fantasy campaign, the \\Product{Dungeon Master Guide} is an absolute necessity. The AD&D 2nd Edition Dungeon Master Guide puts all the information you need right at your fingertips---in a fresh, new format, fully indexed for your convenience. Here you\'ll learn all there is to know about magical spells and items, as well as monsters, combat, travel, NPCs, treasure, encounters, awarding experience, and more!"
 }
 title: "Dungeon Master Guide"
 author {

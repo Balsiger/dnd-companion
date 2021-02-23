@@ -26,7 +26,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "At long last, the story of the beautiful dark-hearted \\NPC{Kitiara Uth\n  Matar}. This compelling novel tells the story of the birth of her twin\n  brothers, the \\Class{warrior} \\NPC{Caramon} and the frail \\Class{mage}\n  \\NPC{Raistlin}, and \\NPC{Kit}\'s admirable role in their upbringing.\n\n  But her youthful mercenary deeds and increasing fascination with evil throw\n  her into the company of a roguish stranger and band of adventurers whose\n  fates are intermingled with her own. Haunted by the memory of her\n  \\Place{Solamnic} father, she hunts him ceaselessly.\n\n  Tina Daniell\'s first novel brings to life this remarkable\n  \\Class{warrior}-woman, whose credo of \'the sword is truth\' becomes her\n  triumph and downfall."
+  description: "At long last, the story of the beautiful dark-hearted \\NPC{Kitiara Uth Matar}. This compelling novel tells the story of the birth of her twin\nbrothers, the \\Class{warrior} \\NPC{Caramon} and the frail \\Class{mage}\n\\NPC{Raistlin}, and \\NPC{Kit}\'s admirable role in their upbringing. But her youthful mercenary deeds and increasing fascination with evil throw her into the company of a roguish stranger and band of adventurers whose fates are intermingled with her own. Haunted by the memory of her Place{Solamnic} father, she hunts him ceaselessly. Tina Daniell\'s first novel brings to life this remarkable Class{warrior}-woman, whose credo of \'the sword is truth\' becomes her triumph and downfall."
 }
 title: "Dark Heart"
 subtitle: "Obsession"

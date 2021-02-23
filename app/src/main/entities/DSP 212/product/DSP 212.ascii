@@ -1,7 +1,7 @@
 template {
   name: "DSP 212"
   world: "None"
-  description: "Join six characters in search of an authority on life, love and the perfect\n  set of purple shiny dice! Huzzah! It\'s the sixth collection of the critically\n  acclaimed \\Product{Dork Tower} comic book, and Matt, Ken, Igor, Kayleigh,\n  Carson the Muskrat and Gilly the Perky Goth porve that fandom is just another\n  word for nothing left to lose!"
+  description: "Join six characters in search of an authority on life, love and the perfect set of purple shiny dice! Huzzah! It\'s the sixth collection of the critically acclaimed \\Product{Dork Tower} comic book, and Matt, Ken, Igor, Kayleigh, Carson the Muskrat and Gilly the Perky Goth porve that fandom is just another word for nothing left to lose!"
 }
 title: "1d6 degrees of separation"
 subtitle: "1d6 Appeal!"

@@ -25,7 +25,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "The world of \\Place{Krynn} is caught in the grips of a terrible war between\n  the minions of \\God{Takhisis}, \\God{Queen of Darkness}, and the followers of\n  \\God{Paladine} and the gods of good. \\Monster{Dragons}, both foul and fair,\n  clash in the skies, and a small band of friends who will one day be known as\n  the \\Group{Heroes of the Lance}, strive for freedom and honor.\n\n  The story of this mighty conflict was revealed in the internationally\n  acclaimed \\Product{Dragonlance Chronicles} trilogy, and now many of the most\n  famous scribes of the series return to tell other tales of \\Place{Krynn}\'s\n  \\Event{War Years}."
+  description: "The world of \\Place{Krynn} is caught in the grips of a terrible war between\nthe minions of \\God{Takhisis}, \\God{Queen of Darkness}, and the followers of God{Paladine} and the gods of good. \\Monster{Dragons}, both foul and fair, clash in the skies, and a small band of friends who will one day be known as the \\Group{Heroes of the Lance}, strive for freedom and honor. The story of this mighty conflict was revealed in the internationally acclaimed \\Product{Dragonlance Chronicles} trilogy, and now many of the most famous scribes of the series return to tell other tales of \\Place{Krynn}\'s Event{War Years}."
   short_description: "Book VI of the Dragonlance Tales"
 }
 title: "War of the Lance"

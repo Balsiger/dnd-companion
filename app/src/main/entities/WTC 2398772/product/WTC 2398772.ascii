@@ -1,7 +1,7 @@
 template {
   name: "WTC 2398772"
   world: "Generic"
-  description: "If you\'re a Dungeon Master looking for some quick one-shot adventures, or you\'re searching for fun encounters to weave into your home D&D campaign, look no farther!\n                    This Dungeons & Dragons supplement provides Dungeon Masters with thirty short, easy-to-run mini-dungeons, or \'delves\', each designed to last a single game session. The book includes delves for characters from 1st to 30th level and features maps built using \\Product{D&D Dungeon Tiles}. Each adventure presents unique and challenging encounters to keep your players on the edge of their seats."
+  description: "If you\'re a Dungeon Master looking for some quick one-shot adventures, or you\'re searching for fun encounters to weave into your home D&D campaign, look no farther! This Dungeons & Dragons supplement provides Dungeon Masters with thirty short, easy-to-run mini-dungeons, or \'delves\', each designed to last a single game session. The book includes delves for characters from 1st to 30th level and features maps built using \\Product{D&D Dungeon Tiles}. Each adventure presents unique and challenging encounters to keep your players on the edge of their seats."
   short_description: "Ropleplaying game supplement with short adventures."
 }
 title: "Dungeon Delve"

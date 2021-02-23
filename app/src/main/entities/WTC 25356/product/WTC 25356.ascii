@@ -2,7 +2,7 @@ template {
   name: "WTC 25356"
   synonym: ""
   world: "Eberron"
-  description: "Eberron\'s fragile peace is crumbling. Armies gather, and for the first time in generations, \\Monster{dragons} rise to war. Prophecies are fulfilled. And the one man at the center of it all, the prophesied \\NPC{Storm Dragon}, lies helpless, his powers stripped away, his mind teetering on the edge of madness.\n\nEven as a band of desperate heroes try to restore the \\NPC{Storm Dragon} and prevent another world war, darker forces are at work. Some lust for power and are willing to do anything to seize it, even rouse \\Place{Eberron}\'s most fearsome powers for a full-scale...\n\n\\Large{Dragon War}."
+  description: "Eberron\'s fragile peace is crumbling. Armies gather, and for the first time in generations, \\Monster{dragons} rise to war. Prophecies are fulfilled. And the one man at the center of it all, the prophesied \\NPC{Storm Dragon}, lies helpless, his powers stripped away, his mind teetering on the edge of madness.\n\nEven as a band of desperate heroes try to restore the \\NPC{Storm Dragon} and prevent another world war, darker forces are at work. Some lust for power and are willing to do anything to seize it, even rouse \\Place{Eberron}\'s most fearsome powers for a full-scale... Large{Dragon War}."
   short_description: "Book Three of the Draconic Prophecies trilogy."
 }
 title: "Dragon War"

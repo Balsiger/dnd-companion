@@ -1,7 +1,7 @@
 template {
   name: "WTC 88604"
   world: "Forgotten Realms"
-  description: "\\large{Hell Hath Such Fury}\n                    On the world of his birth he\'s all but a god, but when an ancient evil\n                    banishes him to the depths of the \\Place{Nine Hells}, he\'s just another lost\n                    soul.\n                    \\NPC{Elminster}, \\NPC{Sage of Shadowdale}, \\NPC{Chosen of Mystra}, faces his\n                    most desperate struggle---to survive, to escape, to cling to his very\n                    sanity---and all the forces of the inferno are rallied against him."
+  description: "\\large{Hell Hath Such Fury} On the world of his birth he\'s all but a god, but when an ancient evil banishes him to the depths of the \\Place{Nine Hells}, he\'s just another lost soul. \\NPC{Elminster}, \\NPC{Sage of Shadowdale}, \\NPC{Chosen of Mystra}, faces his most desperate struggle---to survive, to escape, to cling to his very sanity---and all the forces of the inferno are rallied against him."
 }
 title: "Elminster in Hell"
 author {

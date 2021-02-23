@@ -1,7 +1,7 @@
 template {
   name: "WTC B0000006760"
   world: "Generic"
-  description: "To celebrate Dragon Magazine\'s 30th Anniversary, Paizo and Wizards of the\n                    Coast present this exclusive limited-edition Sorcerer on Black Dragon repaint\n                    figure from the forthcoming War of the Dragon Queen D&D Miniatures set. This\n                    is the first Huge repaint figure, and it\'s available only to Dragon or\n                    Dungeon subscribers."
+  description: "To celebrate Dragon Magazine\'s 30th Anniversary, Paizo and Wizards of the Coast present this exclusive limited-edition Sorcerer on Black Dragon repaint figure from the forthcoming War of the Dragon Queen D&D Miniatures set. This is the first Huge repaint figure, and it\'s available only to Dragon or Dungeon subscribers."
   short_description: "A limited edition, repainted miniature from the War of the Dragon Queen set."
 }
 title: "Sorcerer on Black Dragon"

@@ -7,7 +7,7 @@ template {
     name: "catalog98"
   }
   world: "Forgotten Realms"
-  description: "Accosted by bullies on a forest trail, \\NPC{Aeron} had no way of knowing\n                    that the confrontation would change his life forever. Accused of a crime for\n                    which he bears no blame, he is pursued deep into the forests of the\n                    \\Place{Maerchwood}. First rescued, and then tutored, by the mysterious\n                    \\NPC{Storm Walker}, he discovers a previously undreamed-of talent for magic,\n                    and his life is swept up in the study of the arcane arts...\n                    ...until the very principles of magic, and indeed the future of\n                    \\Place{Faer\\hat{u}n}, come under attack from the unspeakably evil influences\n                    of...\n                    \\bold{\\large{\\Product{The Shadow Stone}}}"
+  description: "Accosted by bullies on a forest trail, \\NPC{Aeron} had no way of knowing that the confrontation would change his life forever. Accused of a crime for which he bears no blame, he is pursued deep into the forests of the \\Place{Maerchwood}. First rescued, and then tutored, by the mysterious \\NPC{Storm Walker}, he discovers a previously undreamed-of talent for magic, and his life is swept up in the study of the arcane arts... ...until the very principles of magic, and indeed the future of \\Place{Faer\\hat{u}n}, come under attack from the unspeakably evil influences of... bold{\\large{\\Product{The Shadow Stone}}}"
 }
 title: "Shadow Stone"
 leader: "The"

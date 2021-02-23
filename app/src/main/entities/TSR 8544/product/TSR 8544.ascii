@@ -13,7 +13,7 @@ template {
     name: "catalog96"
   }
   world: "Forgotten Realms"
-  description: "Scholar-priest \\NPC{Cadderly} returns to the \\Place{Edificant Library} to\n                    find his life shattered. \\NPC{Danica}, the library, and \\NPC{Cadderly}\'s own\n                    livelihood are at stake as he tries to put the chaos curse to rest for\n                    good.\n                    \\Product{The Chaos Curse} is the exciting conclusion to \\Product{The Cleric\n                    Quintet}, set in the \\Place{Forgotten Realms} fantasy world from TSR,\n                    Inc. Author R.A. Salvatore also wrote the \\Product{New York Times}\n                    best-selling novels \\Product{Starless Night}, \\Product{The Legacy},\n                    \\Product{The Halfling\'s Gem}, and \\Product{Sojourn}."
+  description: "Scholar-priest \\NPC{Cadderly} returns to the \\Place{Edificant Library} to find his life shattered. \\NPC{Danica}, the library, and \\NPC{Cadderly}\'s own livelihood are at stake as he tries to put the chaos curse to rest for good. \\Product{The Chaos Curse} is the exciting conclusion to \\Product{The Cleric Quintet}, set in the \\Place{Forgotten Realms} fantasy world from TSR, Inc. Author R.A. Salvatore also wrote the \\Product{New York Times} best-selling novels \\Product{Starless Night}, \\Product{The Legacy}, Product{The Halfling\'s Gem}, and \\Product{Sojourn}."
 }
 title: "Chaos Curse"
 leader: "The"

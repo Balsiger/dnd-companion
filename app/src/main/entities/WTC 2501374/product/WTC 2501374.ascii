@@ -1,7 +1,7 @@
 template {
   name: "WTC 2501374"
   world: "Forgotten Realms"
-  description: "\\emph{You didn\'t get away. It caught you.}\n                    \\NPC{Anusha} took the warlock\'s sleeping potion to stay in her dreamform while she battled the great \\Monster{kraken}.\n                    \\emph{What do you mean?}\n                    That potion that prevented her from waking in time to escape the \\Monster{kraken}'s trap.\n                    \\emph{That relic sucked your mind into its heart.}\n                    He\'d do anything to free her -- even go to the \\Place{City of Torment} itself.\n                    \\Large{He just has to figure out how.}"
+  description: "\\emph{You didn\'t get away. It caught you.} \\NPC{Anusha} took the warlock\'s sleeping potion to stay in her dreamform while she battled the great \\Monster{kraken}. \\emph{What do you mean?} That potion that prevented her from waking in time to escape the \\Monster{kraken}'s trap. \\emph{That relic sucked your mind into its heart.} He\'d do anything to free her -- even go to the \\Place{City of Torment} itself. Large{He just has to figure out how.}"
   short_description: "Book II in the Abolethic Sovereignty"
 }
 title: "City of Torment"

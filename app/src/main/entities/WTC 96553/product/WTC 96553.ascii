@@ -1,7 +1,7 @@
 template {
   name: "WTC 96553"
   world: "Forgotten Realms"
-  description: "This latest title expands the civil upheaval among the \\Monster{drow}, one\n                    of the most popular races in the \\Place{Forgotten Realms}\n                    setting. Best-selling author R.A. Salvatore wrote the prologue to\n                    Annihilation and continues to consult on the series, lending his expertise as\n                    the author who brought \\Monster{drow} society to the forefront of the\n                    \\Place{Forgotten Realms} setting."
+  description: "This latest title expands the civil upheaval among the \\Monster{drow}, one of the most popular races in the \\Place{Forgotten Realms} setting. Best-selling author R.A. Salvatore wrote the prologue to Annihilation and continues to consult on the series, lending his expertise as the author who brought \\Monster{drow} society to the forefront of the Place{Forgotten Realms} setting."
 }
 title: "Annihilation"
 author {

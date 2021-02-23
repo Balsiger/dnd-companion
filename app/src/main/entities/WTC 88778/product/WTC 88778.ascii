@@ -1,7 +1,7 @@
 template {
   name: "WTC 88778"
   world: "Dragonlance"
-  description: "This annotated version of \\Product{Dragons of Autumn Twilight},\n  \\Product{Dragons of Winter Night}, and \\Product{Dragons of Spring Dawning}\n  contains extensive notes by New York Times bestselling authors Margaret Weis\n  and Tracy Hickman, as well as commentary from the original members of the\n  \\Place{Dragonlance} conceptual team."
+  description: "This annotated version of \\Product{Dragons of Autumn Twilight}, Product{Dragons of Winter Night}, and \\Product{Dragons of Spring Dawning} contains extensive notes by New York Times bestselling authors Margaret Weis and Tracy Hickman, as well as commentary from the original members of the Place{Dragonlance} conceptual team."
 }
 title: "Annotate Chronicles"
 leader: "The"

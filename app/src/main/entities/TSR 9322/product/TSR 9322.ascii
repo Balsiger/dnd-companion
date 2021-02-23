@@ -20,7 +20,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "\\center{\'From the wrath of the \\Group{Northmen}, O \\God{Lord}, deliver\n                    us...}\n                    Now you can take your campaign and player characters into the realms of the\n                    \\Group{Northmen}. This is no mere fantasy world---this sourcebook is set in\n                    the historical world of \\Group{Viking} legend. Included in this sourcebook\n                    are new character classes, new magic, new spells, new monsters, new treasures\n                    and the necessary background information on the life and times of the\n                    \\Group{Vikings}. Numerous floorplans and a full-color map of the Viking world\n                    give you a complete role-playing package."
+  description: "\\center{\'From the wrath of the \\Group{Northmen}, O \\God{Lord}, deliver us...} Now you can take your campaign and player characters into the realms of the \\Group{Northmen}. This is no mere fantasy world---this sourcebook is set in the historical world of \\Group{Viking} legend. Included in this sourcebook are new character classes, new magic, new spells, new monsters, new treasures and the necessary background information on the life and times of the \\Group{Vikings}. Numerous floorplans and a full-color map of the Viking world give you a complete role-playing package."
 }
 title: "Vikings"
 author {

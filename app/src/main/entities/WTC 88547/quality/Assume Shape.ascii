@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "A maurezhi can take on the appearance of any humanoid creature whose corpse it has consumed. This ability functions like the alter self spell (caster level 10th), except that the maurezhi can remain in the chosen form indefinitely.  It can assume a new form or return to its own as a standard action."
+  description: "A maurezhi can take on the appearance of any humanoid creature whose corpse it has consumed. This ability functions like the alter self spell (caster level 10th), except that the maurezhi can remain in the chosen form indefinitely.\n\nIt can assume a new form or return to its own as a standard action."
 }
 type: SUPERNATURAL

@@ -1,7 +1,7 @@
 template {
   name: "WTC 9546574"
   world: "Forgotten Realms"
-  description: "As I became a creature of the empty tunnels, survival became easier and more\n                    difficult all at once. I gained in the physical skills and experience\n                    necessary to live on. I could defeat almost anything that wandered into my\n                    chosen domain. It did not take me long, however, to discover one nemesis that\n                    I could neither defeat nor flee. It followed me wherever I\n                    went---indeed, the farther I ran, the more it closed in around me. My\n                    enemy was solitude, the interminable, incessant silence of hushed corridors.\n                    -- \\NPC{Drizzt Do\'Urden}\n                    This release of the classic R.A. Salvatore novel continues the tale of the\n                    origins of Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt\n                    Do\'Urden}."
+  description: "As I became a creature of the empty tunnels, survival became easier and more difficult all at once. I gained in the physical skills and experience necessary to live on. I could defeat almost anything that wandered into my chosen domain. It did not take me long, however, to discover one nemesis that I could neither defeat nor flee. It followed me wherever I went---indeed, the farther I ran, the more it closed in around me. My enemy was solitude, the interminable, incessant silence of hushed corridors. -- \\NPC{Drizzt Do\'Urden} This release of the classic R.A. Salvatore novel continues the tale of the origins of Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt Do\'Urden}."
 }
 title: "Exile"
 author {

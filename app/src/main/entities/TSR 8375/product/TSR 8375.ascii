@@ -10,7 +10,7 @@ template {
     name: "Dragon 226"
   }
   world: "Dragonlance"
-  description: "A young boy stood on the dock of his fishing village and watched the\n  \\Monster{minotaur} war barge approach. It would change his life from a lad\n  who would have grown to follow in the footsteps of his father, to the\n  greatest weaponsmith in the history of \\Place{Krynn}.\n\n  As a boy, \\NPC{Theros Ironfeld} was captured and pressed to service under the\n  \\Monster{minotaurs}. As a \\Monster{man}, he first fought \\Monster{draconians}\n  to a standstill in \\Place{Solace}, and later, by mysterious means, acquired a\n  \\Item{silver} arm. And when the evil \\Monster{dragons} came to conquer, he\n  was the only \\Monster{man} who could forge the fabled \\Item{dragonlances}\n  necessary to defeat them.\n\n  \\Product{The Warriors} series details the exploits of the heroes and villains\n  of the \\Product{War of the Lance}."
+  description: "A young boy stood on the dock of his fishing village and watched the \\Monster{minotaur} war barge approach. It would change his life from a lad who would have grown to follow in the footsteps of his father, to the\ngreatest weaponsmith in the history of \\Place{Krynn}.\n\nAs a boy, \\NPC{Theros Ironfeld} was captured and pressed to service under the Monster{minotaurs}. As a \\Monster{man}, he first fought \\Monster{draconians} to a standstill in \\Place{Solace}, and later, by mysterious means, acquired a Item{silver} arm. And when the evil \\Monster{dragons} came to conquer, he was the only \\Monster{man} who could forge the fabled \\Item{dragonlances} ecessary to defeat them. Product{The Warriors} series details the exploits of the heroes and villains of the \\Product{War of the Lance}."
 }
 title: "Theros Ironfield"
 author {

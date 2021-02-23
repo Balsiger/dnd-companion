@@ -1,7 +1,7 @@
 template {
   name: "WTC 9546974"
   world: "Eberron"
-  description: "After hundreds of years, it has returned to \\Place{Eberron}, and the forces\n  of good and evil want to control it. But one man only wants to get his\n  daughter back alive. To save her, he must walk a perilous path...\n\n  \\large{The Road to Death.}"
+  description: "After hundreds of years, it has returned to \\Place{Eberron}, and the forces of good and evil want to control it. But one man only wants to get his daughter back alive. To save her, he must walk a perilous path... large{The Road to Death.}"
 }
 title: "Road to Death"
 subtitle: "The Mark of Death"

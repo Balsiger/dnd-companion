@@ -1,7 +1,7 @@
 template {
   name: "WTC 96702"
   world: "Dragonlance"
-  description: "A young \\Class{thief}. A \\Class{wizard}\'s apprentice. A twelve-year-old\n  boy. Meet the \\Group{Knights of the Silver Dragon}!\n\n  When \\NPC{Moyra}\'s mother is arrested for stealing a medallion,\n  \\NPC{Kellach}, \\NPC{Moyra}, and \\NPC{Driskoll} set out to clear her\n  name. They must find the necklace\'s maker: a \\Monster{silver dragon} who\n  lives somewhere in the mountains outside \\Place{Curston}. But the mountains\n  are filled with dangerous creatures. And not far behind, an old enemy\n  watches, determined to stop the \\Group{Knights} at any cost. Will the\n  \\Group{Knights} make it to the \\Monster{dragon}\'s lair alive?\n\n  Become one of the \\Group{Knights of the Silver Dragon}! Receive free\n  giveaways, special correspondence, and other benefits. Visit\n  knightsofthesilverdragon.com for details."
+  description: "A young \\Class{thief}. A \\Class{wizard}\'s apprentice. A twelve-year-old boy. Meet the \\Group{Knights of the Silver Dragon}! When \\NPC{Moyra}\'s mother is arrested for stealing a medallion,\n\\NPC{Kellach}, \\NPC{Moyra}, and \\NPC{Driskoll} set out to clear her\nname. They must find the necklace\'s maker: a \\Monster{silver dragon} who lives somewhere in the mountains outside \\Place{Curston}. But the mountains are filled with dangerous creatures. And not far behind, an old enemy watches, determined to stop the \\Group{Knights} at any cost. Will the Group{Knights} make it to the \\Monster{dragon}\'s lair alive? Become one of the \\Group{Knights of the Silver Dragon}! Receive free giveaways, special correspondence, and other benefits. Visit knightsofthesilverdragon.com for details."
 }
 title: "Hidden Dragon"
 leader: "The"

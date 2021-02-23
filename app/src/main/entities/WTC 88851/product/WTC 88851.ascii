@@ -1,7 +1,7 @@
 template {
   name: "WTC 88851"
   world: "Forgotten Realms"
-  description: "The first in a series of premiere hardcover editions of Salvatore\'s classic\n                    \\Monster{dark elf} tales.\n                    This stunning new release of the classic R.A. Salvatore novel recounts the\n                    origins of Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt\n                    Do\'Urden} and is the first-ever release of this \\Place{Forgotten Realms}\n                    novel title in hardcover. This title kicks off \\Product{The Legend of Drizzt}\n                    series, which will showcase the classic \\Monster{dark elf} novels in new,\n                    deluxe hardcover editions. Each title features annotations by the author,\n                    all-new cover art, and forewords written by those who have become familiar\n                    with Salvatore and \\NPC{Drizzt} over the years."
+  description: "The first in a series of premiere hardcover editions of Salvatore\'s classic \\Monster{dark elf} tales. This stunning new release of the classic R.A. Salvatore novel recounts the origins of Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt Do\'Urden} and is the first-ever release of this \\Place{Forgotten Realms} novel title in hardcover. This title kicks off \\Product{The Legend of Drizzt} series, which will showcase the classic \\Monster{dark elf} novels in new, deluxe hardcover editions. Each title features annotations by the author, all-new cover art, and forewords written by those who have become familiar with Salvatore and \\NPC{Drizzt} over the years."
 }
 title: "Homeland"
 author {

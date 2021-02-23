@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Forgotten Realms"
-  description: "The loyal servant of the \\Group{Uskevren} family, has a  terrible secret.\n                    Now, when a ruthless evil is unleashed on \\Place{Selgaunt}, the butler\'s ties\n                    to the underworld may have put the \\Group{Uskevren} in jeopardy. \\NPC{Erevis}\n                    must finally prove his loyalty---to the city and to the \\Group{Uskevren}.\n                    He won\'t get a second chance."
+  description: "The loyal servant of the \\Group{Uskevren} family, has a\n\nterrible secret. Now, when a ruthless evil is unleashed on \\Place{Selgaunt}, the butler\'s ties to the underworld may have put the \\Group{Uskevren} in jeopardy. \\NPC{Erevis} must finally prove his loyalty---to the city and to the \\Group{Uskevren}. He won\'t get a second chance."
 }
 title: "Shadow\'s Witness"
 subtitle: "\\NPC{Erevis Cale}"

@@ -4,7 +4,7 @@ template {
     name: "net price list"
   }
   world: "Generic"
-  description: "\\emph{...The mysterious and exotic Orient, land of spices and warlords, has\n                    at last opened her gates to the West.}\n                    For beginners or experts, players or DMs, this book holds all the information\n                    on oriental character classes, races, spells, magical items, weapons,\n                    fighting styles, and monsters. The world of \\Class{samurai} and \\Class{ninja}\n                    awaits!"
+  description: "\\emph{...The mysterious and exotic Orient, land of spices and warlords, has at last opened her gates to the West.} For beginners or experts, players or DMs, this book holds all the information on oriental character classes, races, spells, magical items, weapons, fighting styles, and monsters. The world of \\Class{samurai} and \\Class{ninja} awaits!"
 }
 title: "Oriental Adventures"
 date {

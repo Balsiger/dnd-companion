@@ -1,7 +1,7 @@
 template {
   name: "WTC 88394"
   world: "Dragonlance"
-  description: "This three-book set is perfect for collectors and an ideal gift for readers\n  unfamiliar with the \\Place{Dragonlance} setting. The \\Product{Chronicles\n  Trilogy} -- \\Product{Dragons of Autumn Twilight}, \\Product{Dragons of Winter\n  Night}, and \\Product{Dragons of Spring Dawning}--are enclosed in a hard-sided\n  slipcover case featuring the stunning cover art from the series."
+  description: "This three-book set is perfect for collectors and an ideal gift for readers unfamiliar with the \\Place{Dragonlance} setting. The \\Product{Chronicles Trilogy} -- \\Product{Dragons of Autumn Twilight}, \\Product{Dragons of Winter ight}, and \\Product{Dragons of Spring Dawning}--are enclosed in a hard-sided slipcover case featuring the stunning cover art from the series."
 }
 title: "Chronicles Trilogy Gift Set"
 author {

@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A chain devil\'s most awesome attack is its ability to control up to four chains within 20 feet as a standard action, making the chains dance or move as it wishes. In addition, a chain devil can increase these chains\' length by up to 15 feet and cause them to sprout razor-edged barbs. These chains attack as effectively as the devil itself. If a chain is in another creature\'s possession, the creature can attempt a DC 15 Will save to break the chain devil\'s power over that chain. If the save is successful, the kyton cannot attempt to control that particular chain again for 24 hours or until the chain leaves the creature\'s possession. The save DC is Charisma-based.  53"
+  description: "A chain devil\'s most awesome attack is its ability to control up to four chains within 20 feet as a standard action, making the chains dance or move as it wishes. In addition, a chain devil can increase these chains\' length by up to 15 feet and cause them to sprout razor-edged barbs. These chains attack as effectively as the devil itself. If a chain is in another creature\'s possession, the creature can attempt a DC 15 Will save to break the chain devil\'s power over that chain. If the save is successful, the kyton cannot attempt to control that particular chain again for 24 hours or until the chain leaves the creature\'s possession. The save DC is Charisma-based.\n\n53"
 }
 type: SUPERNATURAL

@@ -16,7 +16,7 @@ template {
     name: "Dragon 238"
   }
   world: "Dragonlance"
-  description: "\\NPC{Vinas Solamnus}.\n\n\\Class{Soldier}, \\Class{Nobleman}, \\Class{Priest}.\n\n\\NPC{Vinas Solamnus}.\n\nRebel, Commander, Conqueror.\n\n\\NPC{Vinas Solamnus}.\n\nAuthor of \\Item{The Oath and the Measure} and founder of the \\Group{Solamnic Knights}.\n\nNo \\Class{knight} was ever nobler, more spiritual, more idealistic than \\NPC{Vinas Solamnus}... but he wasn\'t always that way. The story of his early years, his education, and his crucible is truly one of the most famous...\n"
+  description: "\\NPC{Vinas Solamnus}. Class{Soldier}, \\Class{Nobleman}, \\Class{Priest}. PC{Vinas Solamnus}.\n\nRebel, Commander, Conqueror. PC{Vinas Solamnus}.\n\nAuthor of \\Item{The Oath and the Measure} and founder of the \\Group{Solamnic Knights}. o \\Class{knight} was ever nobler, more spiritual, more idealistic than \\NPC{Vinas Solamnus}... but he wasn\'t always that way. The story of his early years, his education, and his crucible is truly one of the most famous...\n"
   short_description: "First Volume in the Lost Legends Series"
 }
 title: "Vinas Solamnus"

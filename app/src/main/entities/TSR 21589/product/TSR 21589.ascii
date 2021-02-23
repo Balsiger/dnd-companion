@@ -10,7 +10,7 @@ template {
     name: "Dragon 268"
   }
   world: "Dragonlance"
-  description: "The war against the \\Monster{dragon} minions of \\God{Queen Takhisis} rages\n  on. Armed with the mysterious, magical \\Item{dragon orbs} and the shining,\n  silver \\Item{dragonlance}, the companions bring hope to the world. But now,\n  in the dawn of a new day, the dark secrets that have long shadowed the hearts\n  of the friends come to the light. Betrayal, treachery, frailty, and weakness\n  will nearly destroy all that they have accomplished.\n\n  The greatest battle they have left to fight is within each of them.\n\n  Yet, in the end, they will be heroes."
+  description: "The war against the \\Monster{dragon} minions of \\God{Queen Takhisis} rages on. Armed with the mysterious, magical \\Item{dragon orbs} and the shining, silver \\Item{dragonlance}, the companions bring hope to the world. But now, in the dawn of a new day, the dark secrets that have long shadowed the hearts of the friends come to the light. Betrayal, treachery, frailty, and weakness will nearly destroy all that they have accomplished. The greatest battle they have left to fight is within each of them. Yet, in the end, they will be heroes."
 }
 title: "Dragons of Spring Dawning"
 author {

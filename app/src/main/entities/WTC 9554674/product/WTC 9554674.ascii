@@ -1,7 +1,7 @@
 template {
   name: "WTC 9554674"
   world: "Forgotten Realms"
-  description: "\\large{Lady of the \\Group{Order of Twilight}}\n                    \\large{Witch of the \\Group{Gargauthans}}\n                    \\large{Blood Magus}\n                    \\NPC{Morgynn} seethed for years under the yoke of ignorance her mother\n                    enforced. Then death came for \\NPC{Morgynn}, and after embracing it she was\n                    reborn with frightening powers of incredible strength.\n                    When a wandering ghostwalker and a seer\'s hubris provide the perfect opening\n                    to expand her dominion, she seizes the opportunity. But the ghostwalker is\n                    proving more trouble than she had bargained for...\n                    James P. Davis explores a terrifying sorceress in a deadly battle of wits and\n                    steel."
+  description: "\\large{Lady of the \\Group{Order of Twilight}} \\large{Witch of the \\Group{Gargauthans}} \\large{Blood Magus} \\NPC{Morgynn} seethed for years under the yoke of ignorance her mother enforced. Then death came for \\NPC{Morgynn}, and after embracing it she was reborn with frightening powers of incredible strength. When a wandering ghostwalker and a seer\'s hubris provide the perfect opening to expand her dominion, she seizes the opportunity. But the ghostwalker is proving more trouble than she had bargained for... James P. Davis explores a terrifying sorceress in a deadly battle of wits and steel."
 }
 title: "Bloodwalk"
 author {

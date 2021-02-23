@@ -1,7 +1,7 @@
 template {
   name: "WTC 95030"
   world: "Star Wars"
-  description: "Third in a series of titles that accompany each \\Place{Star Wars} miniatures\n  expansion, \\Product{Ultimate Missions: Revenge of the Sith} provides extended\n  information and gameplay suggestions for anyone looking to maximize their\n  \\Product{Star Wars Miniatures} experience. In addition to game-related\n  content, this full-color product also contains a foldout poster map and new\n  color terrain tiles to diversify gameplay."
+  description: "Third in a series of titles that accompany each \\Place{Star Wars} miniatures expansion, \\Product{Ultimate Missions: Revenge of the Sith} provides extended information and gameplay suggestions for anyone looking to maximize their Product{Star Wars Miniatures} experience. In addition to game-related content, this full-color product also contains a foldout poster map and new color terrain tiles to diversify gameplay."
 }
 title: "Ultimate Missions: Revenge of the Sith"
 author {

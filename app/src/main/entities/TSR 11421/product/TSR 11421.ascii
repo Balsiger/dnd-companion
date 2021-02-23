@@ -7,7 +7,7 @@ template {
     name: "Dragon 263"
   }
   world: "Generic"
-  description: "\\large{The Ultimate Collection!}\n                    The \\Product{Priest\'s Spell Compendium} is a three-volume series describing\n                    every priest spell for the AD&D game. Spells have been collected from rule\n                    books, campaign settings, supplements, adventures, and magazines dating back\n                    to 1975. Early entries have been updated to be immediately usable, making\n                    this the player\'s and DM\'s definitive source for priest spells."
+  description: "\\large{The Ultimate Collection!} The \\Product{Priest\'s Spell Compendium} is a three-volume series describing every priest spell for the AD&D game. Spells have been collected from rule books, campaign settings, supplements, adventures, and magazines dating back to 1975. Early entries have been updated to be immediately usable, making this the player\'s and DM\'s definitive source for priest spells."
 }
 title: "Priest\'s Spell Compendium, Volume Two"
 date {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 2178372"
   world: "Generic"
-  description: "This dungeons & dragons game supplement offers hundreds of magic items, weapons, armor, alchemical items, and other useful equipment for your D&D character. Whether you\'re a player looking for a new piece of equipment or a Dungeon Master stocking a \\Monster{dragon}\'s hoard, this book has exactly what you need.\n                    The book features a mix of classic items updated to 4th Edition D&D rules and brand-new items."
+  description: "This dungeons & dragons game supplement offers hundreds of magic items, weapons, armor, alchemical items, and other useful equipment for your D&D character. Whether you\'re a player looking for a new piece of equipment or a Dungeon Master stocking a \\Monster{dragon}\'s hoard, this book has exactly what you need. The book features a mix of classic items updated to 4th Edition D&D rules and brand-new items."
   short_description: "Arms and Equipment for All Character Classes"
 }
 title: "Adventurer\'s Vault"

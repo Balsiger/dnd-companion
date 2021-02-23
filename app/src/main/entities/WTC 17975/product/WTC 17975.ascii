@@ -1,7 +1,7 @@
 template {
   name: "WTC 17975"
   world: "None"
-  description: "\\Product{The Monsters of Magic} is a collection of short stories exploring\n                    the strengths and weaknesses of the creatures that inhabit the Magic: The\n                    Gathering world. The monsters highlighted are drawn not only from Magic card\n                    sets, but from the novels as well, giving any reader broader exposure to the\n                    entire Magic world."
+  description: "\\Product{The Monsters of Magic} is a collection of short stories exploring the strengths and weaknesses of the creatures that inhabit the Magic: The Gathering world. The monsters highlighted are drawn not only from Magic card sets, but from the novels as well, giving any reader broader exposure to the entire Magic world."
 }
 title: "Monster of Magic"
 leader: "The"

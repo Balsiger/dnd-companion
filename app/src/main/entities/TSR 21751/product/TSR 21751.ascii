@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "None"
-  description: "\\bold{Now, learn the behind-the-scenes story of this long-awaited fantasy\n  epic in \\Product{The Making of Dungeons & Dragons The Movie}}.\n\n  \\list\n  {Read interviews with the people who finally brought the world\'s\n   greatest role-playing game to the big screen.}\n  {Discover the origins of the film\'s masterfully evil villain and bold\n   heroes.}\n  {Follow the film\'s special-effects masters as they bring\n   fire-breathing dragons to life.}\n  {Learn the trials and triumphs of the film shoot in the ancient city\n   of \\Place{Prague}}\n\n  \\Product{The Making of Dungeons & Dragons: The Movie} is a magical carpet\n  ride that will thrill and entertain everyone from master players who have\n  love the D&D game for two decades to strangers in these fantastic\n  worlds. Bring your imagination and enjoy the show!"
+  description: "\\bold{Now, learn the behind-the-scenes story of this long-awaited fantasy epic in \\Product{The Making of Dungeons & Dragons The Movie}}. list {Read interviews with the people who finally brought the world\'s greatest role-playing game to the big screen.} {Discover the origins of the film\'s masterfully evil villain and bold\nheroes.}\n{Follow the film\'s special-effects masters as they bring fire-breathing dragons to life.} {Learn the trials and triumphs of the film shoot in the ancient city of \\Place{Prague}} Product{The Making of Dungeons & Dragons: The Movie} is a magical carpet ride that will thrill and entertain everyone from master players who have love the D&D game for two decades to strangers in these fantastic worlds. Bring your imagination and enjoy the show!"
 }
 title: "Making of Dungeons & Dragons: The Movie"
 leader: "The"

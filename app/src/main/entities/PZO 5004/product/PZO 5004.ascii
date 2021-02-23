@@ -1,7 +1,7 @@
 template {
   name: "PZO 5004"
   world: "Generic"
-  description: "From rope to lanterns to alchemical fire, this 54-card set of beautifully\n  illustrated full-color item cards contains all the standard adventuring gear\n  your characters needs to survive in the deadliest dungeons!\n\n  Unique codes and space for notes hep you and your players track their look."
+  description: "From rope to lanterns to alchemical fire, this 54-card set of beautifully illustrated full-color item cards contains all the standard adventuring gear your characters needs to survive in the deadliest dungeons! Unique codes and space for notes hep you and your players track their look."
   short_description: "Various item cards for various gear."
 }
 title: "Adventure Gear"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 9506076"
   world: "Forgotten Realms"
-  description: "These three titles chronicle the rise of the \\Monster{elven} people, and the\n                    schism between the two nations. The books were originally published in 1991,\n                    and they have been unavailable for several years. Last year the three books\n                    were brought out again in mass-market format to the delight of the fans. Now\n                    they have been collected into one easy-to-purchase gift set."
+  description: "These three titles chronicle the rise of the \\Monster{elven} people, and the schism between the two nations. The books were originally published in 1991, and they have been unavailable for several years. Last year the three books were brought out again in mass-market format to the delight of the fans. Now they have been collected into one easy-to-purchase gift set."
 }
 title: "The Elven Nations Trilogy Gift Set"
 author {

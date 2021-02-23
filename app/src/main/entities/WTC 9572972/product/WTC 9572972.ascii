@@ -1,7 +1,7 @@
 template {
   name: "WTC 9572972"
   world: "Eberron"
-  description: "This supplement delves into the mysterious draconic Prophecy and various dragon-themed organizations. It explores the continent of \\Place{Argonnessen}, homeland of hte \\Monster{dragons}, and describes various new adventure sites. The book also investigates \\Monster{dragons}, on the continents of \\Place{Khorvaire}, \\Place{Sarlona}, and \\Place{Xen\'drik} and provides several ready-to-play \\Monster{dragons} for your campaign.\n\nInside this book, you\'ll find:\n\n\\list\n{A detailed exploration of \\Place{Argonnessen}, the great continent of the \\Monster{dragons}\n{Secrets of the draconic Prophecy, and guidelines on how to use it in your campaign}\n{Ready-to-play \\Monster{dragons}, complete with statistics, lairs, and adventure hooks}\n    "
+  description: "This supplement delves into the mysterious draconic Prophecy and various dragon-themed organizations. It explores the continent of \\Place{Argonnessen}, homeland of hte \\Monster{dragons}, and describes various new adventure sites. The book also investigates \\Monster{dragons}, on the continents of \\Place{Khorvaire}, \\Place{Sarlona}, and \\Place{Xen\'drik} and provides several ready-to-play \\Monster{dragons} for your campaign.\n\nInside this book, you\'ll find: list\n{A detailed exploration of \\Place{Argonnessen}, the great continent of the \\Monster{dragons}\n{Secrets of the draconic Prophecy, and guidelines on how to use it in your campaign}\n{Ready-to-play \\Monster{dragons}, complete with statistics, lairs, and adventure hooks} "
 }
 title: "Dragons of Eberron"
 subtitle: "Like the Wings of a Great Dragon, The Prophecy Unfolds..."

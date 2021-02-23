@@ -7,7 +7,7 @@ template {
     name: "complete product listing"
   }
   world: "Generic"
-  description: "This tome contains alphabetical listings of monsters designed for use with\n                    the Advanced Dungeons & Dragons Game System. Each creature is described and\n                    most are illustrated for easy identification.\n                    Using the new encounter tables contained herein, this work is sure to add new\n                    excitement to any AD&D game."
+  description: "This tome contains alphabetical listings of monsters designed for use with the Advanced Dungeons & Dragons Game System. Each creature is described and most are illustrated for easy identification. Using the new encounter tables contained herein, this work is sure to add new excitement to any AD&D game."
 }
 title: "Fiend Folio"
 author {

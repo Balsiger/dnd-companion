@@ -14,7 +14,7 @@ template {
     name: "catalog96"
   }
   world: "Generic"
-  description: "Druids love forests, true---but they love the arctic tundra, tropical rain\n                    forests, broad savannas, and fungi caverns of the \\Place{Underdark},\n                    too. This 128-page accessory expands the living world of the druid in the\n                    AD&D 2nd Edition game, bringing new homes, character kits, personalities,\n                    spells, magical items, herbal lore, and a hundred details on druidic society,\n                    sacred groves, and high-level aspirations. This book has it all---don\'t leave\n                    the woods without it!"
+  description: "Druids love forests, true---but they love the arctic tundra, tropical rain forests, broad savannas, and fungi caverns of the \\Place{Underdark}, too. This 128-page accessory expands the living world of the druid in the AD&D 2nd Edition game, bringing new homes, character kits, personalities, spells, magical items, herbal lore, and a hundred details on druidic society, sacred groves, and high-level aspirations. This book has it all---don\'t leave the woods without it!"
 }
 title: "Complete Druid\'s Handbook"
 leader: "The"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 95751"
   world: "Generic"
-  description: "The \\Monster{black dragon}, a temperamental tyrant, rules the swamp. Nearby\n                    villages pay it tribute---or else. It breathes a deadly stream of acid that\n                    dissolves meta, stone, flesh, or bone with terrible ease.  Drawn from the\n                    pages of the Dungeons & Dragons \\Product{Monster Manual} and\n                    \\Product{Dragonomicon}, the Gargantuan \\Monster{Black Dragon} makes a bold\n                    and dramatic statement as it erupts from its fetid swamp to wreck havoc on\n                    unwary adventurers or battle-hardened warbands."
+  description: "The \\Monster{black dragon}, a temperamental tyrant, rules the swamp. Nearby villages pay it tribute---or else. It breathes a deadly stream of acid that dissolves meta, stone, flesh, or bone with terrible ease.\n\nDrawn from the pages of the Dungeons & Dragons \\Product{Monster Manual} and \\Product{Dragonomicon}, the Gargantuan \\Monster{Black Dragon} makes a bold and dramatic statement as it erupts from its fetid swamp to wreck havoc on unwary adventurers or battle-hardened warbands."
   short_description: "A gargantuan Black Dragon"
 }
 title: "Gargantuan Black Dragon"

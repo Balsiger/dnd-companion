@@ -2,7 +2,7 @@ template {
   name: "WTC 25386"
   synonym: ""
   world: "Generic"
-  description: "Deep within the \\Place{Elemental Chaos}, a vast and wicked maelstrom known as the \\Place{Abyss} disgorges hordes of \\Monster{demons} eager to ravage unsuspecting worlds. Their numbers defy imagining, and their appetite for destruction is insatiable. Is there anyone or anything capable of withstanding the onslaught?\n                    \\Product{Demonomicon} presents the definitive treatise on \\Monster{demons} and their vile masters, the \\Monster{demon lords}. Whether you\'re looking to introduce \\Monster{demons} into your Dungeons & Dragons campaign world or plunge your heroes into the heart of the \\Place{Abyss}, this book has something for your, including new monsters, demonic monster themes, summoning and banishment rules for \\Monster{demons}, demonic traps and hazards, and encounters."
+  description: "Deep within the \\Place{Elemental Chaos}, a vast and wicked maelstrom known as the \\Place{Abyss} disgorges hordes of \\Monster{demons} eager to ravage unsuspecting worlds. Their numbers defy imagining, and their appetite for destruction is insatiable. Is there anyone or anything capable of withstanding the onslaught? Product{Demonomicon} presents the definitive treatise on \\Monster{demons} and their vile masters, the \\Monster{demon lords}. Whether you\'re looking to introduce \\Monster{demons} into your Dungeons & Dragons campaign world or plunge your heroes into the heart of the \\Place{Abyss}, this book has something for your, including new monsters, demonic monster themes, summoning and banishment rules for \\Monster{demons}, demonic traps and hazards, and encounters."
 }
 title: "Demonomicon"
 subtitle: "Let Loose the Hords of the \\Place{Abyss}"

@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A creature hit by a barbed devil must succeed on a DC 20 Will save or be affected as though by fear (caster level 9th).  Whether or not the save is successful, that creature cannot be affected by that same barbed devil's fear ability for 24 hours. The save DC is Charisma-based. "
+  description: "A creature hit by a barbed devil must succeed on a DC 20 Will save or be affected as though by fear (caster level 9th).\n\nWhether or not the save is successful, that creature cannot be affected by that same barbed devil's fear ability for 24 hours. The save DC is Charisma-based. "
 }
 type: SUPERNATURAL

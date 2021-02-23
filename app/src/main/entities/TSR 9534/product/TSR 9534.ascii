@@ -13,7 +13,7 @@ template {
     name: "Dragon 232"
   }
   world: "Generic"
-  description: "Behind every heros is a story---a tale of brave deeds, cunning plans,\n                    self-sacrifice, and bold fortitude in the face of overwhelming odds.\n                    \\Product{A Hero\'s Tale} is a collection of nine short adventures, each\n                    slightly more challenging than the one before and suitable for any campaign\n                    world. Use the for a change of pace between larger quests or to sidetrack the\n                    heroes during major missions. Each adventure can stand alone, but if played\n                    in sequence they tell a connected, gradually unfolding tale of magic and\n                    chaos.\n                    For two to six characters of levels 1--10."
+  description: "Behind every heros is a story---a tale of brave deeds, cunning plans, self-sacrifice, and bold fortitude in the face of overwhelming odds. \\Product{A Hero\'s Tale} is a collection of nine short adventures, each slightly more challenging than the one before and suitable for any campaign world. Use the for a change of pace between larger quests or to sidetrack the heroes during major missions. Each adventure can stand alone, but if played in sequence they tell a connected, gradually unfolding tale of magic and chaos. For two to six characters of levels 1--10."
 }
 title: "Hero\'s Tale"
 leader: "A"

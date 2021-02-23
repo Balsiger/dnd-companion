@@ -1,7 +1,7 @@
 template {
   name: "WTC 17595"
   world: "None"
-  description: "\\NPC{Naseru}, known as \'The Anvil\', will stop at nothing to sit upon the\n                    Throne of \\Place{Rokugan}. When dark forces rise in the \\Place{City of\n                    Night}, he must act swiftly. To save his beloved \\Place{Empire},\n                    \\Product{Naseru} must learn to wield the most unlikely weapon of all\n                    --- justice."
+  description: "\\NPC{Naseru}, known as \'The Anvil\', will stop at nothing to sit upon the Throne of \\Place{Rokugan}. When dark forces rise in the \\Place{City of Night}, he must act swiftly. To save his beloved \\Place{Empire}, \\Product{Naseru} must learn to wield the most unlikely weapon of all --- justice."
 }
 title: "Wind of Justice"
 subtitle: "Darkness Grows in the Empire..."

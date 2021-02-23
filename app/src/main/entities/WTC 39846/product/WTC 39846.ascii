@@ -1,7 +1,7 @@
 template {
   name: "WTC 39846"
   world: "Forgotten Realms"
-  description: "\\large{Goddess, Command Me.}\n\n\\God{Mystra} has charged \\NPC{Elminster} to preserve magic wherever and whenever he can. He must be her \\NPC{Silent Shadow} once again to steal and copy magic so that her Art will survive. These are his holy orders.\n\n\\large{Lady, I will.}\n\n\\NPC{Elminster}\'s archenemy thinks he has destroyed \\NPC{Elminster}. But the sage has survived to counter \\NPC{Lord Manshoon}\'s insidious plots and carry out \\God{Mystra}\'s plan. Rise from the ashes, \\NPC{Elminster} --- go forth, Champion of the Realms!"
+  description: "\\large{Goddess, Command Me.} God{Mystra} has charged \\NPC{Elminster} to preserve magic wherever and whenever he can. He must be her \\NPC{Silent Shadow} once again to steal and copy magic so that her Art will survive. These are his holy orders. large{Lady, I will.} PC{Elminster}\'s archenemy thinks he has destroyed \\NPC{Elminster}. But the sage has survived to counter \\NPC{Lord Manshoon}\'s insidious plots and carry out \\God{Mystra}\'s plan. Rise from the ashes, \\NPC{Elminster} --- go forth, Champion of the Realms!"
   short_description: "The rise back of \\NPC{Elminster}."
 }
 title: "Bury Elminster Deep"

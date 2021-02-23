@@ -5,7 +5,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "For \\NPC{Goldmoon} and her followers, \\Place{Schallsea Island} is a place of\n  bright beginnings. In the shadow of the magical ruin called the \\Place{Silver\n  Stair}, a translucent spiral that leads to visions and revelations, they have\n  started construction on the \\Place{Citadel of Light}. For the first time\n  since the \\Event{Chaos War}, the future looks promising.\n\n  But two forces challenge \\NPC{Goldmoon}\'s plan to launch a new mystical order\n  on \\Place{Krynn} -- one clad in the plate mail of a \\Group{Solamnic Knight},\n  the other hidden by mysterious magic and dark shadows.\n\n  Jean Rabe\'s novel tells the compelling tale of the struggle to preserve the\n  \\Place{Silver Stair} and to prevent the dream of \\Place{Schallsea Island}\n  from becoming a nightmare."
+  description: "For \\NPC{Goldmoon} and her followers, \\Place{Schallsea Island} is a place of bright beginnings. In the shadow of the magical ruin called the \\Place{Silver\nStair}, a translucent spiral that leads to visions and revelations, they have\nstarted construction on the \\Place{Citadel of Light}. For the first time since the \\Event{Chaos War}, the future looks promising. But two forces challenge \\NPC{Goldmoon}\'s plan to launch a new mystical order on \\Place{Krynn} -- one clad in the plate mail of a \\Group{Solamnic Knight}, the other hidden by mysterious magic and dark shadows. Jean Rabe\'s novel tells the compelling tale of the struggle to preserve the Place{Silver Stair} and to prevent the dream of \\Place{Schallsea Island} from becoming a nightmare."
 }
 title: "Silver Stair"
 leader: "The"

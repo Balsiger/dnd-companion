@@ -1,7 +1,7 @@
 template {
   name: "WTC 88155"
   world: "Generic"
-  description: "Pick up your dice, grab your \\Product{Player\'s Handbook}, and embark on\n                    daring adventures. This accessory for the D&D game will help you decide your\n                    fate as you battle fearsome monsters, explore ancient ruins, and discover\n                    magnificent treasure.\n                    Contains a complete set of dice for use in the Dungeons & Dragons game:\n                    \\list{One 4-sided die}\n                    {Four 6-sided dice}\n                    {One 8-sided die}\n                    {One 10-sided die}\n                    {One percentile die}\n                    {One 12-sided die}\n                    {One 20-sided die}\n                    Also includes a cloth dice bag with an embroidered D&D logo."
+  description: "Pick up your dice, grab your \\Product{Player\'s Handbook}, and embark on daring adventures. This accessory for the D&D game will help you decide your fate as you battle fearsome monsters, explore ancient ruins, and discover magnificent treasure. Contains a complete set of dice for use in the Dungeons & Dragons game: \\list{One 4-sided die} {Four 6-sided dice} {One 8-sided die} {One 10-sided die} {One percentile die} {One 12-sided die} {One 20-sided die} Also includes a cloth dice bag with an embroidered D&D logo."
 }
 title: "Dungeons & Dragons Dice"
 subtitle: "Your Fate Is in Your Hands"

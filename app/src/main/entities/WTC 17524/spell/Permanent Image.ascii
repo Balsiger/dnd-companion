@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like silent image, except that the figment includes visual, auditory, olfactory, and thermal elements, and the spell is permanent. By concentrating, you can move the image within the limits of the range, but it is static while you are not concentrating.  Material Component: A bit of fleece plus powdered jade worth 100 gp."
+  description: "This spell functions like silent image, except that the figment includes visual, auditory, olfactory, and thermal elements, and the spell is permanent. By concentrating, you can move the image within the limits of the range, but it is static while you are not concentrating.\n\nMaterial Component: A bit of fleece plus powdered jade worth 100 gp."
   short_description: "Includes sight, sound, and smell."
 }
 school: ILLUSION

@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "In the fiery siege of the ciy of \\Place{Hope\'s End} the young \\Class{mage}\n  \\NPC{Raistlin} must leave behind his ideals to save himself and his\n  brother. Yet as \\NPC{Raistlin} and \\NPC{Caramon} train as mercenaries, far\n  away another soul is forged in the heat of battle. Another path is chosen,\n  and a future \\Monster{dragon} highlord begins her rise to power.\n\n  She is \\NPC{Kitiara Uth Matar}, the twins\' half sister.\n\n  \\Product{Brothers in Arms} is the much-anticipated sequel to \\Product{The\n  Soulforge}, the 1998 best-selling \\Place{Dragonlance} novel."
+  description: "In the fiery siege of the ciy of \\Place{Hope\'s End} the young \\Class{mage} PC{Raistlin} must leave behind his ideals to save himself and his brother. Yet as \\NPC{Raistlin} and \\NPC{Caramon} train as mercenaries, far away another soul is forged in the heat of battle. Another path is chosen, and a future \\Monster{dragon} highlord begins her rise to power. She is \\NPC{Kitiara Uth Matar}, the twins\' half sister. Product{Brothers in Arms} is the much-anticipated sequel to \\Product{The Soulforge}, the 1998 best-selling \\Place{Dragonlance} novel."
 }
 title: "Brothers in Arms"
 subtitle: "The Innocence of Youth Lost in War"

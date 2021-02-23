@@ -1,7 +1,7 @@
 template {
   name: "WTC 17850"
   world: "Dragonlance"
-  description: "Shrouded in ice, the stronghold of the \\Monster{ogres} has stood for eons as\n  an impregnable bastion of the \\Place{Icereach}. But now \\NPC{Strongwind\n  Whalebone}, king of the \\Group{Highlanders}, has been imprisoned in the\n  \\Monster{ogre} fortress. Outside its walls, a band of his compatriots plots\n  his rescue. Within the fortress, \\Monster{ogre} king \\NPC{Grimwar Bane} faces\n  royal treachery and desperate revolt.\n\n  It is time for the \\Monster{ogre} king to decide if the greater threat lies\n  outside \\Place{Winterheim}-- - or within.\n\n  In the third book of his epic trilogy, Douglas Niles weaves a tapestry of\n  magic and adventure into a climax that will affect the destiny of all those\n  who dwell in the cold land of the \\Place{Icereach}."
+  description: "Shrouded in ice, the stronghold of the \\Monster{ogres} has stood for eons as an impregnable bastion of the \\Place{Icereach}. But now \\NPC{Strongwind\nWhalebone}, king of the \\Group{Highlanders}, has been imprisoned in the\n\\Monster{ogre} fortress. Outside its walls, a band of his compatriots plots his rescue. Within the fortress, \\Monster{ogre} king \\NPC{Grimwar Bane} faces royal treachery and desperate revolt. It is time for the \\Monster{ogre} king to decide if the greater threat lies outside \\Place{Winterheim}-- - or within. In the third book of his epic trilogy, Douglas Niles weaves a tapestry of magic and adventure into a climax that will affect the destiny of all those who dwell in the cold land of the \\Place{Icereach}."
 }
 title: "Winterheim"
 author {

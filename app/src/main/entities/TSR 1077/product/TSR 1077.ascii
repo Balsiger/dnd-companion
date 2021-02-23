@@ -13,7 +13,7 @@ template {
     name: "catalog93"
   }
   world: "Al-Qadim"
-  description: "Ride a \\Item{magic carpet} to the land of a thousand and one adventures!\n                    Visit spired cities, lush oases, and mysterious isles set in glittering\n                    seas. Meet sultans and sheikhs. See \\Monster{genies} and\n                    \\Monster{giants}. Discover a trove of new magical treasures! Whether your\n                    character starts from the compatible \\Place{Forgotten Realms} game setting or\n                    begins the journey elsewhere, this box contains everything a bold adventurer\n                    needs to explore the exotic \\Place{Al-Qadim} campaign world.\n                    Contents:\n                    \\list\n                    {2 guidebooks totaling 192 pages}\n                    {12 full-color reference cards}\n                    {8 Monstrous Compendium sheets}\n                    {3 full-color poster maps}\n                    {1 clear map overlay for measuring distance}"
+  description: "Ride a \\Item{magic carpet} to the land of a thousand and one adventures! Visit spired cities, lush oases, and mysterious isles set in glittering seas. Meet sultans and sheikhs. See \\Monster{genies} and \\Monster{giants}. Discover a trove of new magical treasures! Whether your character starts from the compatible \\Place{Forgotten Realms} game setting or begins the journey elsewhere, this box contains everything a bold adventurer needs to explore the exotic \\Place{Al-Qadim} campaign world. Contents: \\list {2 guidebooks totaling 192 pages} {12 full-color reference cards} {8 Monstrous Compendium sheets} {3 full-color poster maps} {1 clear map overlay for measuring distance}"
 }
 title: "Land of Fate"
 author {

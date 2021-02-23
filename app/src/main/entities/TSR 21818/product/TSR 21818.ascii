@@ -2,7 +2,7 @@ template {
   name: "TSR 21818"
   synonym: "WTC 88092"
   world: "Forgotten Realms"
-  description: "After a fight, some warriors seek to return home.\n                    Others seek revenge.\n                    The battle of \\NPC{Akhlaur}\'s Swamp is over, and its heroes part ways. One\n                    becomes a wizard\'s apprentice and tries to unravel her mysterious\n                    lineage. Another hero returns to his queen, only to find that all is not was\n                    it was.\n                    Hidden from them both, the \\NPC{Magehound} broods. She cannot forgive those\n                    who drove her from power, and she will stop at nothing to be avenged. Her\n                    bitterness ensures that \\NPC{Akhlaur}\'s Swamp was only the beginning for them\n                    all."
+  description: "After a fight, some warriors seek to return home. Others seek revenge. The battle of \\NPC{Akhlaur}\'s Swamp is over, and its heroes part ways. One becomes a wizard\'s apprentice and tries to unravel her mysterious lineage. Another hero returns to his queen, only to find that all is not was it was. Hidden from them both, the \\NPC{Magehound} broods. She cannot forgive those who drove her from power, and she will stop at nothing to be avenged. Her bitterness ensures that \\NPC{Akhlaur}\'s Swamp was only the beginning for them all."
 }
 title: "Floodgate"
 leader: "The"

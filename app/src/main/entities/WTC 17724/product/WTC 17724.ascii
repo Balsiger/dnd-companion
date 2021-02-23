@@ -1,7 +1,7 @@
 template {
   name: "WTC 17724"
   world: "Dragonlance"
-  description: "This re-release of the second volume of \\Place{Dragonlance} short stories\n  ever published features a dramatic new cover treatment. It includes stories\n  by some of the best-loved authors writing in the \\Place{Dragonlance} world,\n  including a novella by New York Times best-selling authors and\n  \\Place{Dragonlance} setting co-creators Margaret Weis and Tracy Hickman."
+  description: "This re-release of the second volume of \\Place{Dragonlance} short stories ever published features a dramatic new cover treatment. It includes stories by some of the best-loved authors writing in the \\Place{Dragonlance} world, including a novella by New York Times best-selling authors and Place{Dragonlance} setting co-creators Margaret Weis and Tracy Hickman."
 }
 title: "Kender, Gully Dwarves, and Gnomes"
 author {

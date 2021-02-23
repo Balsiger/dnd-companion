@@ -1,7 +1,7 @@
 template {
   name: "WTC 17991"
   world: "Forgotten Realms"
-  description: "When family turns on family, it\'s business as usual in \\Place{Arrabar}, but\n                    when family turns on itself, an entire nation may be torn asunder.\n                    The Scions of Arrabar\n                    Heirs to a legacy of blood and steel struggle for control of a nation of\n                    mercenaries at odds with its neighbors and at war with itself."
+  description: "When family turns on family, it\'s business as usual in \\Place{Arrabar}, but when family turns on itself, an entire nation may be torn asunder. The Scions of Arrabar Heirs to a legacy of blood and steel struggle for control of a nation of mercenaries at odds with its neighbors and at war with itself."
 }
 title: "Sapphire Crescent"
 leader: "The"

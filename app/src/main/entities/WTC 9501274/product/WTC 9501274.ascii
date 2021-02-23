@@ -1,7 +1,7 @@
 template {
   name: "WTC 9501274"
   world: "Dragonlance"
-  description: "This collection of tales is edited by the creators of the\n  \\Place{Dragonlance} mythology. \\Product{The Cataclysm} contains a number of\n  short stories by popular \\Place{Dragonlance} authors as well as a novella by\n  Weis and Hickman."
+  description: "This collection of tales is edited by the creators of the Place{Dragonlance} mythology. \\Product{The Cataclysm} contains a number of short stories by popular \\Place{Dragonlance} authors as well as a novella by Weis and Hickman."
 }
 title: "Cataclysm"
 leader: "The"

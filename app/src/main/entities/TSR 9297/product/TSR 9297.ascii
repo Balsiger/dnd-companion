@@ -11,7 +11,7 @@ template {
     name: "catalog93"
   }
   world: "Forgotten Realms"
-  description: "The creatures of lore and legend---of myth and mystery---only the\n                    \\Monster[Dragon]{dragons} know the answers to the secrets and ciphers that\n                    surround them. But brave adventuring souls who have gone before have left\n                    behind clues and epistles with valuable information for anyone in pursuit of\n                    \\Monster[Dragon]{dragons}. This tome is a compilation of the lifetime efforts\n                    of numerous \\Monster[Dragon]{dragon}-hunting adventurers, presented to those\n                    who crave hints and leads for \\Monster[Dragon]{dragon}-questing."
+  description: "The creatures of lore and legend---of myth and mystery---only the \\Monster[Dragon]{dragons} know the answers to the secrets and ciphers that surround them. But brave adventuring souls who have gone before have left behind clues and epistles with valuable information for anyone in pursuit of \\Monster[Dragon]{dragons}. This tome is a compilation of the lifetime efforts of numerous \\Monster[Dragon]{dragon}-hunting adventurers, presented to those who crave hints and leads for \\Monster[Dragon]{dragon}-questing."
 }
 title: "Draconomicon"
 author {

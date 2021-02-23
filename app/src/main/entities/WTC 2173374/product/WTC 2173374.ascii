@@ -1,7 +1,7 @@
 template {
   name: "WTC 2173374"
   world: "Forgotten Realms"
-  description: "The \\Event{Shadowstorm} descends on \\Place{Sembia}, and leaves nothing but horror in its wake.\n                    \\emph{We must kill \\NPC{Kesson Rel} to stop the \\Event{Shadowstorm}, but we cannot afford to elevate \\NPC{Erevis Cale} in his place. There is a way. There must be. Find it.}\n                    No war can be fought without loss, but in a war against an enemy with souls as black as the darkest shadows, sometimes the only way to win is to die with your spirit intact."
+  description: "The \\Event{Shadowstorm} descends on \\Place{Sembia}, and leaves nothing but horror in its wake. \\emph{We must kill \\NPC{Kesson Rel} to stop the \\Event{Shadowstorm}, but we cannot afford to elevate \\NPC{Erevis Cale} in his place. There is a way. There must be. Find it.} o war can be fought without loss, but in a war against an enemy with souls as black as the darkest shadows, sometimes the only way to win is to die with your spirit intact."
   short_description: "The Twilight War, Book III"
 }
 title: "Shadowrealm"

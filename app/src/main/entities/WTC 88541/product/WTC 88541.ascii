@@ -1,7 +1,7 @@
 template {
   name: "WTC 88541"
   world: "Forgotten Realms"
-  description: "New York Times bestselling author R. A. Salvatores\' \\Product{Cleric Quintet}\n                    novels, now in a trade paperback collector\'s edition\n                    R.A. Salvatore\'s \\Product{The Cleric Quintet Collector\'s Edition} tells the\n                    tale of the scholar-priest \\NPC{Cadderly}, who is plucked from the halls of\n                    the \\Place{Edificant Library} to fulfill a heroic quest across the land of\n                    \\Place{Faer\\hat{u}n}. This one-volume collection includes all five of the\n                    original novels, complete and unabridged, with a new introduction by the\n                    author.\n                    \'Salvatore shows . . . intelligence in using the classic elements, a pleasant\n                    dry wit and a narrative gift.\'\n                    \\right{-- Publishers Weekly}"
+  description: "New York Times bestselling author R. A. Salvatores\' \\Product{Cleric Quintet} novels, now in a trade paperback collector\'s edition R.A. Salvatore\'s \\Product{The Cleric Quintet Collector\'s Edition} tells the tale of the scholar-priest \\NPC{Cadderly}, who is plucked from the halls of the \\Place{Edificant Library} to fulfill a heroic quest across the land of \\Place{Faer\\hat{u}n}. This one-volume collection includes all five of the original novels, complete and unabridged, with a new introduction by the author. \'Salvatore shows . . . intelligence in using the classic elements, a pleasant dry wit and a narrative gift.\' right{-- Publishers Weekly}"
 }
 title: "Cleric Quintet Collector\'s Edition"
 leader: "The"

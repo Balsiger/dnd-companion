@@ -10,7 +10,7 @@ template {
     name: "catalog96"
   }
   world: "Generic"
-  description: "In savage wastes that would kill a civilized adventurer, the barbarian\n                    thrives. Marve at the barbarian\'s mystic talismans, rough equipment, and\n                    uncanny survival proficiencies. Choose from new character kits like the\n                    forest lord, mage killer, dreamwalker, ravager, and the ever-popular\n                    brute. Is barabrism the natural state of \\Monster{humankind}? \\Product{The\n                    Complete Barbarian\'s Handbook} can help you find out."
+  description: "In savage wastes that would kill a civilized adventurer, the barbarian thrives. Marve at the barbarian\'s mystic talismans, rough equipment, and uncanny survival proficiencies. Choose from new character kits like the forest lord, mage killer, dreamwalker, ravager, and the ever-popular brute. Is barabrism the natural state of \\Monster{humankind}? \\Product{The Complete Barbarian\'s Handbook} can help you find out."
 }
 title: "Complete Barbarian\'s Handbook"
 leader: "The"

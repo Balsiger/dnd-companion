@@ -5,7 +5,7 @@ template {
     name: "net price list"
   }
   world: "Generic"
-  description: "This item is only one of the many popular playing aids for Dungeon & Dragons\n                    produced by TSR Hobbies, Inc.\n                    Other releases of additional items relating to D&D are planned for the\n                    future.\n                    TSR Hobbies publishes a complete line of fantasy, science fiction, and\n                    historical games and rules. A complete catalog on the entire selection of TSR\n                    items is available for $2.00 from TSR Hobbies, POB 756, Lake Geneva, WI\n                    53147."
+  description: "This item is only one of the many popular playing aids for Dungeon & Dragons produced by TSR Hobbies, Inc. Other releases of additional items relating to D&D are planned for the future. TSR Hobbies publishes a complete line of fantasy, science fiction, and historical games and rules. A complete catalog on the entire selection of TSR items is available for $2.00 from TSR Hobbies, POB 756, Lake Geneva, WI 53147."
 }
 title: "Hall of the Fire Giant King"
 date {

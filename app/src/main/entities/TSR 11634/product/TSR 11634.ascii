@@ -1,7 +1,7 @@
 template {
   name: "TSR 11634"
   world: "Forgotten Realms"
-  description: "As war-ravaged Cormyr tries to rebuild, a host of eager seekers---expert\n                    adventurers, hardened mercenaries, scheming wizards, misguided patriots,\n                    covetous rivals, and more---scramble to find the dragon\'s treasure.\n                    Will your band of heroes venture across the dangerous landscape of the Forest\n                    Kingdom to secure Cormyr\'s future, or will they seek the hoard for\n                    themselves.\n                    This adventure is inspired by the novel \\Product[TSR 21637]{Death of the\n                    Dragon} by Ed Greenwood and Troy Denning. Details of the novel are presented\n                    herein."
+  description: "As war-ravaged Cormyr tries to rebuild, a host of eager seekers---expert adventurers, hardened mercenaries, scheming wizards, misguided patriots, covetous rivals, and more---scramble to find the dragon\'s treasure. Will your band of heroes venture across the dangerous landscape of the Forest Kingdom to secure Cormyr\'s future, or will they seek the hoard for themselves. This adventure is inspired by the novel \\Product[TSR 21637]{Death of the Dragon} by Ed Greenwood and Troy Denning. Details of the novel are presented herein."
 }
 title: "Into the Dragon\'s Lair"
 author {

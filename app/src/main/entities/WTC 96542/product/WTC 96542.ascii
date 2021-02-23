@@ -1,7 +1,7 @@
 template {
   name: "WTC 96542"
   world: "None"
-  description: "\\Product{The Fifth Dawn} concludes a series that explores a new and\n                    mysterious world in the \\Place{Magic: The Gathering} setting."
+  description: "\\Product{The Fifth Dawn} concludes a series that explores a new and mysterious world in the \\Place{Magic: The Gathering} setting."
 }
 title: "Fifth Dawn"
 leader: "The"

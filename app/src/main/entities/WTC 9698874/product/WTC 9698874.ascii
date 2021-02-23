@@ -1,7 +1,7 @@
 template {
   name: "WTC 9698874"
   world: "None"
-  description: "This is the first title in an exciting trilogy dealing with the new Magic:\n                    The Gathering expansion sets. It will give players a sneak peek at the\n                    upcoming card releases."
+  description: "This is the first title in an exciting trilogy dealing with the new Magic: The Gathering expansion sets. It will give players a sneak peek at the upcoming card releases."
 }
 title: "Ravnica"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 88220"
   world: "Generic"
-  description: "Between the mountains of the \\Place{Merciless Rage} and the tall boughs of\n  the \\Place{Hellwood} lurks a foul presence. Those who approach it,\n  perish. Those who flee it are slain. These are dark times for the citizens of\n  \\Place{Fairbye}, but there is still hope. Four heroes rise to the challenge,\n  determined to save the small hamlet from the clutches of evil.\n\n  But will the heroes survive the depths of the savage caves?"
+  description: "Between the mountains of the \\Place{Merciless Rage} and the tall boughs of the \\Place{Hellwood} lurks a foul presence. Those who approach it, perish. Those who flee it are slain. These are dark times for the citizens of Place{Fairbye}, but there is still hope. Four heroes rise to the challenge, determined to save the small hamlet from the clutches of evil. But will the heroes survive the depths of the savage caves?"
 }
 title: "Savage Caves"
 leader: "The"

@@ -4,7 +4,7 @@ template {
     name: "Dragon 257"
   }
   world: "Forgotten Realms"
-  description: "Adrift in a strange world, the \\Monster{half-demon} \\NPC{Vheod} embarks on a\n                    quest to rid his new home of a powerful \\Monster{demon lord}...but before\n                    this unspeakable evil can be destroyed, it will have to be released!\n                    Monte Cook recounts the adventures of a new kind of hero in the\n                    \\Product{Forgotten Realms} setting."
+  description: "Adrift in a strange world, the \\Monster{half-demon} \\NPC{Vheod} embarks on a quest to rid his new home of a powerful \\Monster{demon lord}...but before this unspeakable evil can be destroyed, it will have to be released! Monte Cook recounts the adventures of a new kind of hero in the Product{Forgotten Realms} setting."
 }
 title: "Glass Prison"
 leader: "The"

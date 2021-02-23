@@ -1,7 +1,7 @@
 template {
   name: "WTC 96540"
   world: "Forgotten Realms"
-  description: "This brand-new hardcover from popular \\Place{Forgotten Realms} author Ed\n                    Greenwood chronicles the latest events in the life of the wizard\n                    \\NPC{Elminster}, Greenwood\'s signature character. \\Product{Elminster\'s\n                    Daughter} is the first new title from Greenwood in nearly two years."
+  description: "This brand-new hardcover from popular \\Place{Forgotten Realms} author Ed Greenwood chronicles the latest events in the life of the wizard \\NPC{Elminster}, Greenwood\'s signature character. \\Product{Elminster\'s Daughter} is the first new title from Greenwood in nearly two years."
 }
 title: "Elminter\'s Daughter"
 author {

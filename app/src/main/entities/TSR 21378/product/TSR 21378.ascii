@@ -10,7 +10,7 @@ template {
     name: "Dragon 264"
   }
   world: "Forgotten Realms"
-  description: "The sea war rages up and down the \\Place{Sword Coast}, leaving the busy\n                    harbor of \\Place{Baldur\'s Gate} in flames. Following his mad quest, the evil\n                    \\NPC{Iakhovas} has found a gateway into the protected waters of the\n                    \\Place{Sea of Fallen Stars}, and now no coast is safe from his marauding\n                    armies of the deep.\n                    Praise for \\Product{Raising Tide}: \'Odom does an admirable job of bringing\n                    the sea setting and its varied species to life. The novel\'s detailed fight\n                    sequences are tightly packed, making for a fast, exciting read...\'\n                    \\right{---\\Product{Publisher\'s Weekly}}"
+  description: "The sea war rages up and down the \\Place{Sword Coast}, leaving the busy harbor of \\Place{Baldur\'s Gate} in flames. Following his mad quest, the evil \\NPC{Iakhovas} has found a gateway into the protected waters of the \\Place{Sea of Fallen Stars}, and now no coast is safe from his marauding armies of the deep. Praise for \\Product{Raising Tide}: \'Odom does an admirable job of bringing the sea setting and its varied species to life. The novel\'s detailed fight sequences are tightly packed, making for a fast, exciting read...\' right{---\\Product{Publisher\'s Weekly}}"
 }
 title: "Under Fallen Stars"
 author {

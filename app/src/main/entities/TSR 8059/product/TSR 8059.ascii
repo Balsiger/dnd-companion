@@ -22,7 +22,7 @@ template {
     name: "catalog93"
   }
   world: "Ravenloft"
-  description: "\\emph{Revenge}. The word rings in \\NPC{Casimir}\'s mind. He has laid his plans for a decade---ten years among the scruffy children, the rats and the fleas of an orphanage. At last \\NPC{Casimir} sets his intricate scheme into motion, seeking glorious revenge upon the man who slew his mother and made him an orphan.\n\nBut revenge is a merciless master. To slay his nemesis, \\NPC{Casimir} summons a dark and powerful curse. And when that terrible curse is summoned, he must confront the greatest foe of all... himself.\n\n\\Product{Heart of Midnight} is the fourth in an open-ended series of Gothic horror tales dealing with the masters and monsters of the Ravenloft dark fantasy setting."
+  description: "\\emph{Revenge}. The word rings in \\NPC{Casimir}\'s mind. He has laid his plans for a decade---ten years among the scruffy children, the rats and the fleas of an orphanage. At last \\NPC{Casimir} sets his intricate scheme into motion, seeking glorious revenge upon the man who slew his mother and made him an orphan.\n\nBut revenge is a merciless master. To slay his nemesis, \\NPC{Casimir} summons a dark and powerful curse. And when that terrible curse is summoned, he must confront the greatest foe of all... himself. Product{Heart of Midnight} is the fourth in an open-ended series of Gothic horror tales dealing with the masters and monsters of the Ravenloft dark fantasy setting."
 }
 title: "Heart of Midnight"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 17755"
   world: "Generic"
-  description: "\\large{Fearsome and formidable foes lurk within}\n                    \\bold{by Skip Williams, Jonathan Tweet, and Monte Cook}\n                    Encounter a horde of monsters armed and ready to battle the boldest heroes or\n                    fight alongside them. The fully illustrated pages of this book are overrun\n                    with all the creatures, statistics, spells, and strategies you need to\n                    challenge the heroic characters of any Dungeon & Dragons roleplaying game."
+  description: "\\large{Fearsome and formidable foes lurk within} \\bold{by Skip Williams, Jonathan Tweet, and Monte Cook} Encounter a horde of monsters armed and ready to battle the boldest heroes or fight alongside them. The fully illustrated pages of this book are overrun with all the creatures, statistics, spells, and strategies you need to challenge the heroic characters of any Dungeon & Dragons roleplaying game."
 }
 title: "Monster Manual"
 date {

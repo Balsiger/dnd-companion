@@ -2,7 +2,7 @@ template {
   name: "WTC 11830"
   synonym: "WTC 88062"
   world: "Generic"
-  description: "The town of \\NPC{Brindinford} is in the midst of its annual streetfair. Joy\n                    and merryment abound---until calamity disrupts the celebration. Are rival\n                    gangs responsible? Is the government sliding into tyranny? Or is a\n                    nightmarish plot about to come to fruition?\n                    \\Product[WTC 11830]{The Speaker in Dreams} is a stand-alone adventure for the\n                    Dungeon & Dragons game. Player characters are in for a wild ride in this\n                    river town. Leave the dungeon behind---the terrors lurking in\n                    \\Place{Brindinford} are more challenging by far!"
+  description: "The town of \\NPC{Brindinford} is in the midst of its annual streetfair. Joy and merryment abound---until calamity disrupts the celebration. Are rival gangs responsible? Is the government sliding into tyranny? Or is a nightmarish plot about to come to fruition? \\Product[WTC 11830]{The Speaker in Dreams} is a stand-alone adventure for the Dungeon & Dragons game. Player characters are in for a wild ride in this river town. Leave the dungeon behind---the terrors lurking in Place{Brindinford} are more challenging by far!"
 }
 title: "Speaker in Dreams"
 leader: "The"

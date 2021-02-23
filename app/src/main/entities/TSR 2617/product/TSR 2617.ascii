@@ -10,7 +10,7 @@ template {
     name: "Dragon 229"
   }
   world: "Planescape"
-  description: "Lost... Lost...\n\n  Though \\NPC{Areas} rescued his uncle from the clutches of \\Monster{fiends},\n  he lost his love, \\NPC{Nina}, to a conniving \\Monster{tiefling}...and to the\n  very pits of the \\Place{Abyss}. Now he descends to the \\Place{underworld} to\n  find her but discovers that, in the \\Place{planes}, a person can be lost in\n  more than body.\n\n  \\NPC{Nina} has gone mad. With powers she only now is discovering, she draws\n  to herself a hellish army bent on capturing a beachhead on the\n  \\Place{Beastlands}. What \\NPC{Areas} and the forces of good do not realize is\n  that this toehold provides her monstrous horde a doorway to all the\n  \\Place{planes}."
+  description: "Lost... Lost... Though \\NPC{Areas} rescued his uncle from the clutches of \\Monster{fiends},\nhe lost his love, \\NPC{Nina}, to a conniving \\Monster{tiefling}...and to the\nvery pits of the \\Place{Abyss}. Now he descends to the \\Place{underworld} to find her but discovers that, in the \\Place{planes}, a person can be lost in more than body. PC{Nina} has gone mad. With powers she only now is discovering, she draws to herself a hellish army bent on capturing a beachhead on the Place{Beastlands}. What \\NPC{Areas} and the forces of good do not realize is that this toehold provides her monstrous horde a doorway to all the Place{planes}."
 }
 title: "Abyssal Warriors"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 17983"
   world: "Generic"
-  description: "An ancient, jeweled bottle, a missing lover, mysterious black-clad invadors,\n  and a warrior haunted by grief collide in the wilderness and on the\n  battlefield. Driven by rumors that his beloved \\NPC{Naull} may have survived\n  her abduction to the \\Place{Plane of Fire}, \\NPC{Regdar} and a band of loyal\n  mercenaries defy their overlord\'s wrath to seek the truth. Their quest leads\n  the to unexpected discoveries and unearthly danger.\n\n  Will their efforts bring about the return of the damned?"
+  description: "An ancient, jeweled bottle, a missing lover, mysterious black-clad invadors, and a warrior haunted by grief collide in the wilderness and on the battlefield. Driven by rumors that his beloved \\NPC{Naull} may have survived her abduction to the \\Place{Plane of Fire}, \\NPC{Regdar} and a band of loyal mercenaries defy their overlord\'s wrath to seek the truth. Their quest leads the to unexpected discoveries and unearthly danger. Will their efforts bring about the return of the damned?"
 }
 title: "Return of the Damned"
 author {

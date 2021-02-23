@@ -1,7 +1,7 @@
 template {
   name: "WTC 9598572"
   world: "Forgotten Realms"
-  description: "The kingdom of \\Place{Cormyr} is in need of heroes. Only the bravest and most loyal stand a chance in the trials to come. Standing tall against the darkness that besieges their homeland, a band of youthful adventurers answer that call.\n                    \\large{They are the \\Group{Knights of Myth Drannor}.}"
+  description: "The kingdom of \\Place{Cormyr} is in need of heroes. Only the bravest and most loyal stand a chance in the trials to come. Standing tall against the darkness that besieges their homeland, a band of youthful adventurers answer that call. large{They are the \\Group{Knights of Myth Drannor}.}"
 }
 title: "Swords of Dragonfire"
 author {

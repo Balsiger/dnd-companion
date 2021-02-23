@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "An invisible cone of terror causes each living creature in the area to become panicked unless it succeeds on a Will save. If cornered, a panicked creature begins cowering. (See the Dungeon Master's Guide for more information on fear-panicked creatures.) If the Will save succeeds, the creature is shaken for 1 round.  Material Component: Either the heart of a hen or a white feather."
+  description: "An invisible cone of terror causes each living creature in the area to become panicked unless it succeeds on a Will save. If cornered, a panicked creature begins cowering. (See the Dungeon Master's Guide for more information on fear-panicked creatures.) If the Will save succeeds, the creature is shaken for 1 round.\n\nMaterial Component: Either the heart of a hen or a white feather."
   short_description: "Subjects within cone flee for 1 round/level."
 }
 school: NECROMANCY

@@ -1,7 +1,7 @@
 template {
   name: "WTC 21814"
   world: "Dragonlance"
-  description: "\\NPC{Dhamon Grimwulf}, once a \\Group{Hero of the Heart}, has sunk into a\n  bitter life of crime and squalor. Now, as the great \\Monster{dragon}\n  overlords of the \\Event{Fifth Age} coldly plot to strengthen their rule and\n  to destroy their enemies, he must somehow find the will to redeem\n  himself. But perhaps it is too late.\n\n  Downfall marks the return of \\NPC{Dhamon} and other characters from author\n  Jean Rabe\'s bestselling \\Product{Dragons of a New Age} trilogy."
+  description: "\\NPC{Dhamon Grimwulf}, once a \\Group{Hero of the Heart}, has sunk into a bitter life of crime and squalor. Now, as the great \\Monster{dragon} overlords of the \\Event{Fifth Age} coldly plot to strengthen their rule and to destroy their enemies, he must somehow find the will to redeem himself. But perhaps it is too late. Downfall marks the return of \\NPC{Dhamon} and other characters from author Jean Rabe\'s bestselling \\Product{Dragons of a New Age} trilogy."
 }
 title: "Downfall"
 subtitle: "How far can a hero fall? Far enough to lose his soul?"

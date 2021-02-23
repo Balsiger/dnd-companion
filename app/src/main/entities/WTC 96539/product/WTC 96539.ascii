@@ -1,7 +1,7 @@
 template {
   name: "WTC 96539"
   world: "Dragonlance"
-  description: "This direct follow-up to the best-selling \\Product{War of Souls} trilogy\n  deals with the \\Monster{minotaurs}, a race with which New York Times\n  best-selling author Knaak is particularly known for. This series moves the\n  \\Monster{minotaur} species to the forefront of the \\Place{Dragonlance}\n  world."
+  description: "This direct follow-up to the best-selling \\Product{War of Souls} trilogy deals with the \\Monster{minotaurs}, a race with which New York Times best-selling author Knaak is particularly known for. This series moves the Monster{minotaur} species to the forefront of the \\Place{Dragonlance} world."
 }
 title: "Night of Blood"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 88548"
   world: "Forgotten Realms"
-  description: "\\large{Defeat breeds anger. Hatred breeds revenge.}\n                    Once again, the counselors of \\Place{Halruaa} have beaten back an attack by\n                    the wizard \\NPC{Akhlaur}. Once more, the kingdom has been saved from its\n                    enemies.\n                    But victory comes at a terrible price. The aged king is weakened, his powers\n                    diminished. His chief counselor \\NPC{Matteo} is torn between his duty and his\n                    heart. \\NPC{Tzigone}, the hero of the battle of \\Place{Ahlaur\'s Swamp}, has\n                    been hurled into a dark world from which she may never escape. And at the\n                    edge of time, \\NPC{Akhlaur} and his ally, the \\NPC{Magehound}, plot their\n                    final revenge."
+  description: "\\large{Defeat breeds anger. Hatred breeds revenge.} Once again, the counselors of \\Place{Halruaa} have beaten back an attack by the wizard \\NPC{Akhlaur}. Once more, the kingdom has been saved from its enemies. But victory comes at a terrible price. The aged king is weakened, his powers diminished. His chief counselor \\NPC{Matteo} is torn between his duty and his heart. \\NPC{Tzigone}, the hero of the battle of \\Place{Ahlaur\'s Swamp}, has been hurled into a dark world from which she may never escape. And at the edge of time, \\NPC{Akhlaur} and his ally, the \\NPC{Magehound}, plot their final revenge."
 }
 title: "Wizardwar"
 leader: "The"

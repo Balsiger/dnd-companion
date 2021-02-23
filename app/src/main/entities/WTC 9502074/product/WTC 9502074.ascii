@@ -1,7 +1,7 @@
 template {
   name: "WTC 9502074"
   world: "Dragonlance"
-  description: "This collection of tales is edited by the creators of the\n  \\Place{Dragonlance} mythology. The \\Product{War of the Lance} contains a\n  number of short stories by popular \\Place{Dragonlance} authors as well as two\n  stories by Weis and Hickman."
+  description: "This collection of tales is edited by the creators of the Place{Dragonlance} mythology. The \\Product{War of the Lance} contains a umber of short stories by popular \\Place{Dragonlance} authors as well as two stories by Weis and Hickman."
 }
 title: "War of the Lance"
 author {

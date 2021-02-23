@@ -16,7 +16,7 @@ template {
     name: "Dragon 248"
   }
   world: "Forgotten Realms"
-  description: "A murder victim is turned into a \\Monster{zombie}, just long enough to cover\n                    up the circumstances of his own death...\n                    A silent ghost with a friendly grin greets those about to meet their doom...\n                    The only clue to who\'s killing a party of adventurers is the letter \'H\',\n                    written in the blood of one of the victims...\n                    All new stories of murders, suspense, and intrigue by Elaine Cunningham, Jeff\n                    Grubb, Ed Greenwood, and other favorite \\Place{Forgotten Realms} authors."
+  description: "A murder victim is turned into a \\Monster{zombie}, just long enough to cover up the circumstances of his own death... A silent ghost with a friendly grin greets those about to meet their doom... The only clue to who\'s killing a party of adventurers is the letter \'H\', written in the blood of one of the victims... All new stories of murders, suspense, and intrigue by Elaine Cunningham, Jeff Grubb, Ed Greenwood, and other favorite \\Place{Forgotten Realms} authors."
 }
 title: "Realms of Mystery"
 author {

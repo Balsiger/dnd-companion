@@ -1,7 +1,7 @@
 template {
   name: "WTC 11831"
   world: "Diablo II"
-  description: "Now play the Diablo II computer game crossed with the brand new D&D\n                    roleplaying game rules. With all the fury, all the excitement, and all the\n                    monsters brought to life by your own imagination. This is face-to-face\n                    roleplaying combat---smoother, faster, and meaner than ever before.\n                    Inside you\'ll find:\n                    \\list\n                    {Hundreds of monsters to battle with the all-new D&D rules!}\n                    {Level after level of thrilling adventure in the pits of hell!}\n                    {Opportunities for millions of experience points!}\n                    {All ne adventures to catch Diablo and D&D players off guard!}\n                    Suitable for all levels of play"
+  description: "Now play the Diablo II computer game crossed with the brand new D&D roleplaying game rules. With all the fury, all the excitement, and all the monsters brought to life by your own imagination. This is face-to-face roleplaying combat---smoother, faster, and meaner than ever before. Inside you\'ll find: \\list {Hundreds of monsters to battle with the all-new D&D rules!} {Level after level of thrilling adventure in the pits of hell!} {Opportunities for millions of experience points!} {All ne adventures to catch Diablo and D&D players off guard!} Suitable for all levels of play"
 }
 title: "Diablo II: to Hell and Back"
 author {

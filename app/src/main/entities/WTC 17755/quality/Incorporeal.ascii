@@ -2,6 +2,6 @@ template {
   name: "Incorporeal"
   category: "immunity"
   world: "Generic"
-  description: "The creature can be harmed only by other incorporeal creatures, +1 or better magic weapons, spells, spell-like abilities, and supernatural abilities. The creature has a 50% chance to ignore any damage from a corporeal source, except for force effects or attacks made with ghost touch weapons. The creature can pass through solid objects, but not force effects, at will. Its attacks ignore natural armor, armor, and shields, but deflection bonuses and force effects work normally against them. The creature always moves silently and cannot be heard with Listen checks if it doesn\'t wish to be.  "
+  description: "The creature can be harmed only by other incorporeal creatures, +1 or better magic weapons, spells, spell-like abilities, and supernatural abilities. The creature has a 50% chance to ignore any damage from a corporeal source, except for force effects or attacks made with ghost touch weapons. The creature can pass through solid objects, but not force effects, at will. Its attacks ignore natural armor, armor, and shields, but deflection bonuses and force effects work normally against them. The creature always moves silently and cannot be heard with Listen checks if it doesn\'t wish to be.\n\n"
 }
 type: SUPERNATURAL

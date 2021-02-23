@@ -1,7 +1,7 @@
 template {
   name: "WTC 9553674"
   world: "Eberron"
-  description: "\\NPC{Diran} was once one of the most feared assassins in the land. But he\n  has turned his back on murder, seeking the life of a wandering priest. But in\n  a rough port town on the edge of the world, his past is about to catch up on\n  him.\n\n  When raiders hit the town, capturing \\NPC{Diran}\'s former lover, he must risk\n  everything to save her. And he\'s running out of time---for these are not\n  ordinary pirates bent on plunder, but minions of \\NPC{Erdas Cai}, a warlord\n  and servant of the Blood of Vol."
+  description: "\\NPC{Diran} was once one of the most feared assassins in the land. But he has turned his back on murder, seeking the life of a wandering priest. But in a rough port town on the edge of the world, his past is about to catch up on him. When raiders hit the town, capturing \\NPC{Diran}\'s former lover, he must risk everything to save her. And he\'s running out of time---for these are not ordinary pirates bent on plunder, but minions of \\NPC{Erdas Cai}, a warlord and servant of the Blood of Vol."
 }
 title: "Thieves of Blood"
 subtitle: "One Man Searching for Peace in a Land that Knows Only Blood"

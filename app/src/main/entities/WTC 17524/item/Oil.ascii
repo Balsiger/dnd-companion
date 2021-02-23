@@ -16,7 +16,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A pint of oil burns for 6 hours in a lantern. You can use a flask of oil as a splash weapon (see Throw Splash Weapon, page 158 in the \\Product[WTC 17524]{Player\'s Handbook}).  Use the rules for alchemist\'s fire, except that it takes a full-round action to prepare a flask with a fuse. Once it is thrown, there is a 50% chance of the flask igniting successfully.  You can pour a pint of oil on the ground to cover an area 5 feet square, provided that the surface is smooth. If lit, the oil burns for 2 rounds and deals 1d3 points of fire damage to each creature in the area."
+  description: "A pint of oil burns for 6 hours in a lantern. You can use a flask of oil as a splash weapon (see Throw Splash Weapon, page 158 in the \\Product[WTC 17524]{Player\'s Handbook}).\n\nUse the rules for alchemist\'s fire, except that it takes a full-round action to prepare a flask with a fuse. Once it is thrown, there is a 50% chance of the flask igniting successfully.\n\nYou can pour a pint of oil on the ground to cover an area 5 feet square, provided that the surface is smooth. If lit, the oil burns for 2 rounds and deals 1d3 points of fire damage to each creature in the area."
 }
 value {
   gold: 1

@@ -17,7 +17,7 @@ template {
     name: "Dragon 225"
   }
   world: "Generic"
-  description: "Something evil is stalking the parish of \\Place{Barlox}.\n                    Ten years ago, the village\'s temple burned to the ground and the parish\n                    priest disappeared. The temple has since been rebuilt, but life has not\n                    returned to normal. A current of fear and discontent now ripples beneath the\n                    surface of this once sleepy wine-making community. Old rivalries have turned\n                    bitter, and unwittingly unleashed a force of ancient corruption.\n                    \\Product{Cleric\'s Challenge II} is a special One-on-One Advanced Dungeons &\n                    Dragons adventure designed for a Dungeon Master and one player character\n                    cleric of 4th to 6th level. It is the eighth in a series of independent\n                    adventures focusing on an individual player of a specific class."
+  description: "Something evil is stalking the parish of \\Place{Barlox}. Ten years ago, the village\'s temple burned to the ground and the parish priest disappeared. The temple has since been rebuilt, but life has not returned to normal. A current of fear and discontent now ripples beneath the surface of this once sleepy wine-making community. Old rivalries have turned bitter, and unwittingly unleashed a force of ancient corruption. \\Product{Cleric\'s Challenge II} is a special One-on-One Advanced Dungeons & Dragons adventure designed for a Dungeon Master and one player character cleric of 4th to 6th level. It is the eighth in a series of independent adventures focusing on an individual player of a specific class."
 }
 title: "Cleric\'s Challenge II"
 date {

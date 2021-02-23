@@ -1,7 +1,7 @@
 template {
   name: "WTC 8860074"
   world: "Forgotten Realms"
-  description: "I will bring my people again from the depths of the sea. That thy foot may\n                    be dipped in the blood of thine enemies, and the tongue of thy dogs in the\n                    same.\n                    The spiritual heart of \\Place{Faer\\hat{u}n} beats in time with a hundred\n                    gods, and for each, a thousand servants. The Priests is a series that tells\n                    the tales of but a few.\n                    This book in the \\Product{Priests} series deals with a valiant\n                    \\Monster{shalarin} priestess who is trying to save her home and avenge her\n                    mother\'s death. This series is designed to bring new readers into the world\n                    of the \\Place{Forgotten Realms}. The books can be read in any order."
+  description: "I will bring my people again from the depths of the sea. That thy foot may be dipped in the blood of thine enemies, and the tongue of thy dogs in the same. The spiritual heart of \\Place{Faer\\hat{u}n} beats in time with a hundred gods, and for each, a thousand servants. The Priests is a series that tells the tales of but a few. This book in the \\Product{Priests} series deals with a valiant \\Monster{shalarin} priestess who is trying to save her home and avenge her mother\'s death. This series is designed to bring new readers into the world of the \\Place{Forgotten Realms}. The books can be read in any order."
   short_description: "Book 4 of The Priests."
 }
 title: "Queen of the Depths"

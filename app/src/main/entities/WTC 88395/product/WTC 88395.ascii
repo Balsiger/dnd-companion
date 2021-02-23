@@ -1,7 +1,7 @@
 template {
   name: "WTC 88395"
   world: "Forgotten Realms"
-  description: "This three-book set is perfect for collectors and an ideal gift for readers\n                    unfamiliar with the \\Place{Forgotten Realms} setting. \\Product{The Dark Elf\n                    Trilogy}--\\Product{Homeland}, \\Product{Exile}, and \\Product{Sojourn}--are\n                    enclosed in a hard-sided slipcover case featuring the cover art from the\n                    series.  "
+  description: "This three-book set is perfect for collectors and an ideal gift for readers unfamiliar with the \\Place{Forgotten Realms} setting. \\Product{The Dark Elf Trilogy}--\\Product{Homeland}, \\Product{Exile}, and \\Product{Sojourn}--are enclosed in a hard-sided slipcover case featuring the cover art from the series.\n\n"
 }
 title: "Dark Elf Trilogy Gift Set"
 leader: "The"

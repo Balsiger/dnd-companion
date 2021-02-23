@@ -1,7 +1,7 @@
 template {
   name: "RP 10-511"
   world: "Ravenloft"
-  description: "Ral Partha proudly presents an official \\Place{Ravenloft} boxed set. The\n                    role-playing experts at TSR believe that this set provides the best figures\n                    for the \\Place{Ravenloft} campaign setting."
+  description: "Ral Partha proudly presents an official \\Place{Ravenloft} boxed set. The role-playing experts at TSR believe that this set provides the best figures for the \\Place{Ravenloft} campaign setting."
 }
 title: "Denizens of Ravenloft"
 leader: "The"

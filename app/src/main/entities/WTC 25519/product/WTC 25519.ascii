@@ -2,7 +2,7 @@ template {
   name: "WTC 25519"
   synonym: ""
   world: "Generic"
-  description: "If you\'re a Dungeon Master looking for an intrigue-laden adventure location that fits easily into your Dungeons & Dragons campaign, this book is for you. The dwarven town of \\Place{Hammerfast} holds enough mystery and peril to keep your players entertained for sessions on end.\n                    \\Product{Hammerfast} presents a fully detailed, ready-to-use dwarven town built atop the ruins of an ancient necropolis, along with adventure hooks, encounters, and a full-color double-sided battle map."
+  description: "If you\'re a Dungeon Master looking for an intrigue-laden adventure location that fits easily into your Dungeons & Dragons campaign, this book is for you. The dwarven town of \\Place{Hammerfast} holds enough mystery and peril to keep your players entertained for sessions on end. Product{Hammerfast} presents a fully detailed, ready-to-use dwarven town built atop the ruins of an ancient necropolis, along with adventure hooks, encounters, and a full-color double-sided battle map."
   short_description: "An encounter location."
 }
 title: "Hammerfast"

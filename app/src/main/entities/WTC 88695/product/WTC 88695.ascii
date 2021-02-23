@@ -1,7 +1,7 @@
 template {
   name: "WTC 88695"
   world: "Greyhawk"
-  description: "Revisiting classic adventures has been extremely successful. \\Product{Queen\n  of the Demonweb Pits} was one of the most popular adventures ever created for\n  the Dungeons & Dragons game. This novelization appeals to those who have\n  played through the adventure, as well as to those who have an interest in\n  \\Monster{drow elves}--one of the most popular races in the game."
+  description: "Revisiting classic adventures has been extremely successful. \\Product{Queen of the Demonweb Pits} was one of the most popular adventures ever created for the Dungeons & Dragons game. This novelization appeals to those who have played through the adventure, as well as to those who have an interest in Monster{drow elves}--one of the most popular races in the game."
 }
 title: "Queen of the Demonweb Pits"
 author {

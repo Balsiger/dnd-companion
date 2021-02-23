@@ -1,7 +1,7 @@
 template {
   name: "WTC 21799"
   world: "Forgotten Realms"
-  description: "\\NPC{Arilyn Moonblade} has always feared the elfshadow, the essence of her\n                    sword\'s magic. When she learns the terrible truth behind her inherited\n                    \\Item{moonblade}, she vows to find a way to escape her fate.\n                    What begins as a means to an end becomes a deeply personal\n                    commitment. Determined to succeed in her quest, \\NPC{Arilyn} will risk all\n                    she holds dear."
+  description: "\\NPC{Arilyn Moonblade} has always feared the elfshadow, the essence of her sword\'s magic. When she learns the terrible truth behind her inherited \\Item{moonblade}, she vows to find a way to escape her fate. What begins as a means to an end becomes a deeply personal commitment. Determined to succeed in her quest, \\NPC{Arilyn} will risk all she holds dear."
 }
 title: "Silver Shadows"
 author {

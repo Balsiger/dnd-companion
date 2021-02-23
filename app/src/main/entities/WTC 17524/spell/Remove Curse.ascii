@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Remove curse instantaneously removes all curses on an object or a creature. Remove curse does not remove the curse from a cursed shield, weapon, or suit of armor, although the spell typically enables the creature afflicted with any such cursed item to remove and get rid of it. Certain special curses may not be countered by this spell or may be countered only by a caster of a certain level or higher.  Remove curse counters and dispels bestow curse."
+  description: "Remove curse instantaneously removes all curses on an object or a creature. Remove curse does not remove the curse from a cursed shield, weapon, or suit of armor, although the spell typically enables the creature afflicted with any such cursed item to remove and get rid of it. Certain special curses may not be countered by this spell or may be countered only by a caster of a certain level or higher.\n\nRemove curse counters and dispels bestow curse."
   short_description: "Frees object or person from curse."
 }
 school: ABJURATION

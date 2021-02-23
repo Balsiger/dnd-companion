@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Rhuallith can compel any spiderkind creature to obey her verbal commands. An unwilling, intelligent target is entitled to a Will saving throw (DC 17). A failed saving throw indicates that the target obeys one command, per a suggestion spell. A successful saving throw allows the creature to resist the command, but Rhuallith can attempt to command it again next round.  The act of commanding an unwilling target is a standard action.  Otherwise, issuing commands is a free action."
+  description: "Rhuallith can compel any spiderkind creature to obey her verbal commands. An unwilling, intelligent target is entitled to a Will saving throw (DC 17). A failed saving throw indicates that the target obeys one command, per a suggestion spell. A successful saving throw allows the creature to resist the command, but Rhuallith can attempt to command it again next round.\n\nThe act of commanding an unwilling target is a standard action.\n\nOtherwise, issuing commands is a free action."
 }
 type: EXTRAORDINARY

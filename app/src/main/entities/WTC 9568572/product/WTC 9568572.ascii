@@ -1,7 +1,7 @@
 template {
   name: "WTC 9568572"
   world: "Forgotten Realms"
-  description: "Beyond the pristine facade of the Temple of \\God{Mystra}, a sinister\n                    conspiracy threatens the future of \\Place{Cormyr}. Profane acts within the\n                    temple hearken to a mounting threat in the \\Place{Vast Swamp}. Adventurers\n                    must cross into the Plane of Shadow to unlock the truth about this growing\n                    darkness in time to thwart an attack against \\Place{Cormyr} and the goddess\n                    of magic herself.\n                    This \\Place{Forgotten Realms} campaign adventure is designed for characters\n                    of level 4-7. It can be played stand-alone or as the first adventure in a\n                    three-part series. Each encounter contains special tactical information for\n                    the Dungeon Master and expanded map features for ease of play."
+  description: "Beyond the pristine facade of the Temple of \\God{Mystra}, a sinister conspiracy threatens the future of \\Place{Cormyr}. Profane acts within the temple hearken to a mounting threat in the \\Place{Vast Swamp}. Adventurers must cross into the Plane of Shadow to unlock the truth about this growing darkness in time to thwart an attack against \\Place{Cormyr} and the goddess of magic herself. This \\Place{Forgotten Realms} campaign adventure is designed for characters of level 4-7. It can be played stand-alone or as the first adventure in a three-part series. Each encounter contains special tactical information for the Dungeon Master and expanded map features for ease of play."
   short_description: "An adventure for characters of level 4-7."
 }
 title: "Cormyr: The Tearing of the Weave"

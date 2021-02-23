@@ -1,7 +1,7 @@
 template {
   name: "WTC 9502174"
   world: "Forgotten Realms"
-  description: "Then, in the bitter wilds of \\Place{Rashemen}, they receive a desperate plea\n                    they alone can answer.\n                    If they succeed, it could mean their redemption. But if they fail, a troubled\n                    past will be the least of their problems."
+  description: "Then, in the bitter wilds of \\Place{Rashemen}, they receive a desperate plea they alone can answer. If they succeed, it could mean their redemption. But if they fail, a troubled past will be the least of their problems."
 }
 title: "Bladesinger"
 subtitle: "They are the half-bloods, the broken, the unforgiven. They failed themselves and their people. They are outcasts"

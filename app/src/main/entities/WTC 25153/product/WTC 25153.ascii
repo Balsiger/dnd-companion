@@ -1,7 +1,7 @@
 template {
   name: "WTC 25153"
   world: "Forgotten Realms"
-  description: "He saves his people.\n                    He rose from the dead.\n                    Now that we need him, He will com again.\n                    We only have to believe.\n                    \\large{...when the \\Monster{Red Dragon} was king.} "
+  description: "He saves his people. He rose from the dead. Now that we need him, He will com again. We only have to believe. large{...when the \\Monster{Red Dragon} was king.} "
   short_description: "Brotherhood fo the Griffon, Book I"
 }
 title: "Captive Flame"

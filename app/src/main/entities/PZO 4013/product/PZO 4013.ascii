@@ -1,7 +1,7 @@
 template {
   name: "PZO 4013"
   world: "Generic"
-  description: "And the slums are not even safe during the day! Paizo Publishing\'s GameMastery line of gaming accessories continues its mantra of providing simple and elegant tools for the busy Game Master with the newest GameMastery Map Pack release: \\Product{Slums}. Inside you\'ll find 18 beautiful 5\'\'x8\'\' map tiles that can be combined to form a number of slum locations that could be part of any fantasy city, including:\n\n\\list\n{Muddy Streets}\n{Poor Market}\n{Crumbling Buildings}\n{Decrepit Church}\n{Rat-infested Landfill}\n\nGame Masters shouldn\'t waste their time drawing winding muddy streets and ramshackle buildings. With \\Product{GameMastery Map Pack: Slums}, you can drop a few tiles and continue on with the game. Keep it simple. Keep it fun."
+  description: "And the slums are not even safe during the day! Paizo Publishing\'s GameMastery line of gaming accessories continues its mantra of providing simple and elegant tools for the busy Game Master with the newest GameMastery Map Pack release: \\Product{Slums}. Inside you\'ll find 18 beautiful 5\'\'x8\'\' map tiles that can be combined to form a number of slum locations that could be part of any fantasy city, including: list\n{Muddy Streets}\n{Poor Market}\n{Crumbling Buildings}\n{Decrepit Church}\n{Rat-infested Landfill}\n\nGame Masters shouldn\'t waste their time drawing winding muddy streets and ramshackle buildings. With \\Product{GameMastery Map Pack: Slums}, you can drop a few tiles and continue on with the game. Keep it simple. Keep it fun."
   short_description: "Map tiles for slums."
 }
 title: "Slums"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 9692874"
   world: "None"
-  description: "\\NPC{Rani Sen} longs to fit in at school. So she joins the \\Group{Fashion\n                    Divas}, a club whose members are some of the most popular girls at\n                    \\Place{Middletown High}. As she helps plan the \\Group{Divas}\' annual\n                    fashion show, \\NPC{Rani}\'s popularity grows. But still, something feels\n                    wrong. It takes a chance encounter and a crazy dare to show her what really\n                    matters: true friends."
+  description: "\\NPC{Rani Sen} longs to fit in at school. So she joins the \\Group{Fashion Divas}, a club whose members are some of the most popular girls at \\Place{Middletown High}. As she helps plan the \\Group{Divas}\' annual fashion show, \\NPC{Rani}\'s popularity grows. But still, something feels wrong. It takes a chance encounter and a crazy dare to show her what really matters: true friends."
 }
 title: "Rani and the Fashion Divas"
 subtitle: "Put cold cream on your face and go out in public. Would you dare?"

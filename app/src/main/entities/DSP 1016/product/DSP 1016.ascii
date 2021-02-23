@@ -1,7 +1,7 @@
 template {
   name: "DSP 1016"
   synonym: "Nodwick Chronicles VI"
-  description: "\\Large{Frodo\'s Not the Only Short Guy Who Got Famous for Hauling Stuff}\n\n\\NPC{Nodwick} has hit the big time in the movie \'Gamers 2: Dorkness Rising\', and he\'s bringing all of you lucky folks along for the ride! Look for this epic film from Dead Gentlemen Productions in a theater or DVD case near you sooon!\n\nIn the meaintime, join \\NPC{Nodwick} and his adventuring companions as they have their final showdown with \\NPC{Baphuma\'al} for the fate of the world! Can our heroes manage to win through in spice of being... well, them?\n\nWitness the climax that\'s been 36 comic books in the making and see why \\NPC{Nodwick} is Going Hollywood."
+  description: "\\Large{Frodo\'s Not the Only Short Guy Who Got Famous for Hauling Stuff} PC{Nodwick} has hit the big time in the movie \'Gamers 2: Dorkness Rising\', and he\'s bringing all of you lucky folks along for the ride! Look for this epic film from Dead Gentlemen Productions in a theater or DVD case near you sooon!\n\nIn the meaintime, join \\NPC{Nodwick} and his adventuring companions as they have their final showdown with \\NPC{Baphuma\'al} for the fate of the world! Can our heroes manage to win through in spice of being... well, them?\n\nWitness the climax that\'s been 36 comic books in the making and see why \\NPC{Nodwick} is Going Hollywood."
   short_description: "Nodwick Chronicles VI"
 }
 title: "Nodwick Goes Hollywood"

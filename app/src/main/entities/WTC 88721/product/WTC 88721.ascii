@@ -1,7 +1,7 @@
 template {
   name: "WTC 88721"
   world: "Dragonlance"
-  description: "This third title in \\Product{The Minotaur Wars} trilogy concludes the tale\n  of the fallout from the end of the New York Times best-selling \\Product{War\n  of Souls} series."
+  description: "This third title in \\Product{The Minotaur Wars} trilogy concludes the tale of the fallout from the end of the New York Times best-selling \\Product{War of Souls} series."
 }
 title: "Empire of Blood"
 author {

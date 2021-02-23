@@ -7,7 +7,7 @@ template {
     name: "Dragon 270"
   }
   world: "Greyhawk"
-  description: "Fresh from their encounter at \\Place{White Plume Mountain}, the\n  \\NPC{Justicar} and \\NPC{Escalla} are on the way to \\Place{Hommlet}. But life\n  around a \\Monster{pixie} is never exactly . . . stable. \\NPC{Escalla} is\n  drawn into the intrigues of the \\Monster{faerie} court. Before he knows it,\n  to save her life the \\NPC{Justicar} is on his way into the depts of the earth\n  to fight \\Monster{hobgoblins}, \\Monster{drow}, and the \\God{queen of the\n  demonweb pits}.\n\n  For an adventurer, it\'s all in a day\'s work."
+  description: "Fresh from their encounter at \\Place{White Plume Mountain}, the PC{Justicar} and \\NPC{Escalla} are on the way to \\Place{Hommlet}. But life around a \\Monster{pixie} is never exactly . . . stable. \\NPC{Escalla} is drawn into the intrigues of the \\Monster{faerie} court. Before he knows it, to save her life the \\NPC{Justicar} is on his way into the depts of the earth to fight \\Monster{hobgoblins}, \\Monster{drow}, and the \\God{queen of the demonweb pits}. For an adventurer, it\'s all in a day\'s work."
 }
 title: "Descent into the Depths of the Earth"
 subtitle: "The \\Class{ranger} and the \\Monster{faerie} are back!"

@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This exotic weapon is common among rogues and others who favor stealth over power. You can draw a hand crossbow back by hand. Loading a hand crossbow is a move action that provokes attacks of opportunity.  You can shoot, but not load, a hand crossbow with one hand at no penalty. You can shoot a hand crossbow with each hand, but you take a penalty on attack rolls as if attacking with two light weapons (see Table 8-10: Two-Weapon Fighting Penalties, page 160 in the \\Product[WTC 17524]{Player\'s Handbook})."
+  description: "This exotic weapon is common among rogues and others who favor stealth over power. You can draw a hand crossbow back by hand. Loading a hand crossbow is a move action that provokes attacks of opportunity.\n\nYou can shoot, but not load, a hand crossbow with one hand at no penalty. You can shoot a hand crossbow with each hand, but you take a penalty on attack rolls as if attacking with two light weapons (see Table 8-10: Two-Weapon Fighting Penalties, page 160 in the \\Product[WTC 17524]{Player\'s Handbook})."
   short_description: "An exotic, stealthy crossbow that can be drawn back by hand as a move action (AoO), can be shot one handed."
 }
 value {

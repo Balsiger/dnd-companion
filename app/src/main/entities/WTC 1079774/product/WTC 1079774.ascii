@@ -1,7 +1,7 @@
 template {
   name: "WTC 1079774"
   world: "Generic"
-  description: "The waters of a sunless sea meet a pebble-strewn shore, beyond which opens a wide \\Place{Underdark} vista shimmering with pale cave-light. Titanic columns as big as castles march miles into the misted distance. The wide, steeply sloping base of the nearest colossal column is carved with streets, walls, and elaborate structures, many with gaping, empty windows. A few glimmer with fain illumination. Are you brave enough to explore the spire-city and face the terrors that lurk within?\n                    This Dungeons & Dragons adventure is designed for 5th-level characters. Each encounter contains special tactical information for the Dungeon Master and expanded map features for ease of play."
+  description: "The waters of a sunless sea meet a pebble-strewn shore, beyond which opens a wide \\Place{Underdark} vista shimmering with pale cave-light. Titanic columns as big as castles march miles into the misted distance. The wide, steeply sloping base of the nearest colossal column is carved with streets, walls, and elaborate structures, many with gaping, empty windows. A few glimmer with fain illumination. Are you brave enough to explore the spire-city and face the terrors that lurk within? This Dungeons & Dragons adventure is designed for 5th-level characters. Each encounter contains special tactical information for the Dungeon Master and expanded map features for ease of play."
 }
 title: "Sinister Spire"
 leader: "The"

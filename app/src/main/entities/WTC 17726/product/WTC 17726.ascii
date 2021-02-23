@@ -1,7 +1,7 @@
 template {
   name: "WTC 17726"
   world: "Forgotten Realms"
-  description: "This latest title drives the civil upheaval among one of the most popular\n                    races in the \\Place{Forgotten Realms} setting to its epic conclusion. Several\n                    of the previous titles in this series hit the New York Times best-seller list\n                    upon initial release. Best-selling author R.A. Salvatore wrote the prologue\n                    to \\Product{Resurrection} and consulted on the series, lending his expertise\n                    as the author who brought \\Monster{drow} society to the forefront of the\n                    \\Product{Forgotten Realms} setting."
+  description: "This latest title drives the civil upheaval among one of the most popular races in the \\Place{Forgotten Realms} setting to its epic conclusion. Several of the previous titles in this series hit the New York Times best-seller list upon initial release. Best-selling author R.A. Salvatore wrote the prologue to \\Product{Resurrection} and consulted on the series, lending his expertise as the author who brought \\Monster{drow} society to the forefront of the Product{Forgotten Realms} setting."
 }
 title: "Resurrection"
 author {

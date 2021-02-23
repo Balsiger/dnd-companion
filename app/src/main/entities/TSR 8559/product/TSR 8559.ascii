@@ -14,7 +14,7 @@ template {
     name: "Dragon 218"
   }
   world: "Forgotten Realms"
-  description: "The \\Event{Time of Troubles} had arrived. The chaos of spilled blood,\n                    lawless strife, monsters unleashed, and avatars roaming \\Place{Faer\\hat{u}n}\n                    had come.}\n                    But wrathful and warring gods were not \\Place{Faer\\hat{u}n}\'s only problem.\n                    The dreaded and insidious \\Group{Shadowmasters} had seized the opportunity to\n                    increase their influence and power while \\God{Mystra} and her minions were\n                    otherwise engaged. The \\Group{Shadowmasters} had woven a magical cloak of\n                    spells that would render the wearer invisible to their rival\'s magic.\n                    \\emph{The shadow over \\Place{Faer\\hat{u}n} spreads.}"
+  description: "The \\Event{Time of Troubles} had arrived. The chaos of spilled blood, lawless strife, monsters unleashed, and avatars roaming \\Place{Faer\\hat{u}n} had come.} But wrathful and warring gods were not \\Place{Faer\\hat{u}n}\'s only problem. The dreaded and insidious \\Group{Shadowmasters} had seized the opportunity to increase their influence and power while \\God{Mystra} and her minions were otherwise engaged. The \\Group{Shadowmasters} had woven a magical cloak of spells that would render the wearer invisible to their rival\'s magic. emph{The shadow over \\Place{Faer\\hat{u}n} spreads.}"
 }
 title: "Cloak of Shadows"
 subtitle: "The Shadow Over \\Place{Faer\\hat{u}n}"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 88163"
   world: "Generic"
-  description: "\\large{Great Danger Wrought in Secrecy}\n                    \\emph{Legendary forgemasters now server an evil warlord and his dark\n                    purpose. Their hammers ring upon anvils dedicated to remaking a terrible\n                    weapon that was destroyed in ages long past. As the very fate of the world is\n                    being shaped, only the strongest heroes can shatter the diabolical plan.}\n                    \\Product{Lord of the Iron Fortress} is a stand-alone adventure for the\n                    Dungeons & Dragons game. Designed to challenge 15th-level D&D heroes, it\n                    opens the perilous gateway to planar travel.\n                    To use this accessory, a Dungeon Master also needs the \\Product{Player\'s\n                    Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster\n                    Manual}."
+  description: "\\large{Great Danger Wrought in Secrecy} \\emph{Legendary forgemasters now server an evil warlord and his dark purpose. Their hammers ring upon anvils dedicated to remaking a terrible weapon that was destroyed in ages long past. As the very fate of the world is being shaped, only the strongest heroes can shatter the diabolical plan.} \\Product{Lord of the Iron Fortress} is a stand-alone adventure for the Dungeons & Dragons game. Designed to challenge 15th-level D&D heroes, it opens the perilous gateway to planar travel. To use this accessory, a Dungeon Master also needs the \\Product{Player\'s Handbook}, the \\Product{Dungeon Master\'s Guide}, and the \\Product{Monster Manual}."
 }
 title: "Lord of the Iron Fortress"
 date {

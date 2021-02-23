@@ -10,7 +10,7 @@ template {
     name: "Dragon 270"
   }
   world: "Forgotten Realms"
-  description: "Silent death stalks the \\Group{Harpers} of \\Place{Faer\\hat{u}n}. One by one,\n                    members of the semi-secret society for good in the \\Place{Realms} are falling\n                    to a murderer\'s blade. Now a \\NPC{Harper} agent and a beautiful\n                    \\Monster{half-elf} \\Class{assassin} must solve the mystery. If they fail,\n                    they will be the next victims.\n                    But things in the \\Place{Realms} are rarely that simple."
+  description: "Silent death stalks the \\Group{Harpers} of \\Place{Faer\\hat{u}n}. One by one, members of the semi-secret society for good in the \\Place{Realms} are falling to a murderer\'s blade. Now a \\NPC{Harper} agent and a beautiful \\Monster{half-elf} \\Class{assassin} must solve the mystery. If they fail, they will be the next victims. But things in the \\Place{Realms} are rarely that simple."
 }
 title: "Elfshadow"
 author {

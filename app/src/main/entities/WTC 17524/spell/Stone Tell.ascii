@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You gain the ability to speak with stones, which relate to you who or what has touched them as well as revealing what is covered or concealed behind or under them. The stones relate complete descriptions if asked. A stone\'s perspective, perception, and knowledge may prevent the stone from providing the details you are looking for (as determined by the DM).  You can speak with natural or worked stone."
+  description: "You gain the ability to speak with stones, which relate to you who or what has touched them as well as revealing what is covered or concealed behind or under them. The stones relate complete descriptions if asked. A stone\'s perspective, perception, and knowledge may prevent the stone from providing the details you are looking for (as determined by the DM).\n\nYou can speak with natural or worked stone."
   short_description: "Talk to natural or worked stone."
 }
 school: DIVINATION

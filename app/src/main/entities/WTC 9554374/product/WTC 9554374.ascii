@@ -1,7 +1,7 @@
 template {
   name: "WTC 9554374"
   world: "Eberron"
-  description: "\\Place{Mel Aqat}, a ruined city, old when the ancestors of humanity were\n  young...\n\n  \\NPC{Dhavibastha} is a powerful \\Monster{demon} imprisoned in the city, once\n  worshiped as a tiger god by the \\Monster{giants} of \\Place{Xen\'dril}. Finding\n  the ruins gave \\NPC{Janik Martell} wealth and fame, but the last time he was\n  there the woman he loved betrayed him and tried to kill him.\n\n  Now, the ancient evil is stirring again. \\NPC{Janik} may be the only one who\n  can stop it, but to do that he\'ll have to return to the one place he swore\n  he\'d never go again, to face his own \\Monster{demons}, to place\n  himself...\n\n  \\Product{In the Claws of the Tiger}"
+  description: "\\Place{Mel Aqat}, a ruined city, old when the ancestors of humanity were young... PC{Dhavibastha} is a powerful \\Monster{demon} imprisoned in the city, once\nworshiped as a tiger god by the \\Monster{giants} of \\Place{Xen\'dril}. Finding the ruins gave \\NPC{Janik Martell} wealth and fame, but the last time he was there the woman he loved betrayed him and tried to kill him. ow, the ancient evil is stirring again. \\NPC{Janik} may be the only one who can stop it, but to do that he\'ll have to return to the one place he swore he\'d never go again, to face his own \\Monster{demons}, to place himself... Product{In the Claws of the Tiger}"
 }
 title: "In the Claws of the Tiger"
 author {

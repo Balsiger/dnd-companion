@@ -10,7 +10,7 @@ template {
     name: "Dragon 225"
   }
   world: "Planescape"
-  description: "\\NPC{Aeraes} knew nothing about the \\Place{planes} and the evil denizens\n  that dwelt there...until his uncle was abducted by a pair of\n  \\Monster{gargoyles} in the employ of an eight-armed god.\n\n  Hot on the trail of these other-worldy kidnappers, \\NPC{Aereas} and his\n  cousin, \\NPC{Nina}, enter bizarre and twisted worlds beyond\n  imagining. \\NPC{Aereas} finds that his uncle\'s abduction is part of a much\n  larger plot to turn the tide of the fiendish \\Event{Blood War} and loose an\n  unspeakable evil throughout the \\Place{planes}.\n\n  Though the \\Place{planes} hold unspeakable evil, they also hold unimaginable\n  good---the two in a delicate balance. The only question is: Which way will\n  \\NPC{Aereas} and \\NPC{Nina} tip the scales?"
+  description: "\\NPC{Aeraes} knew nothing about the \\Place{planes} and the evil denizens that dwelt there...until his uncle was abducted by a pair of\n\\Monster{gargoyles} in the employ of an eight-armed god.\n\nHot on the trail of these other-worldy kidnappers, \\NPC{Aereas} and his cousin, \\NPC{Nina}, enter bizarre and twisted worlds beyond imagining. \\NPC{Aereas} finds that his uncle\'s abduction is part of a much larger plot to turn the tide of the fiendish \\Event{Blood War} and loose an unspeakable evil throughout the \\Place{planes}. Though the \\Place{planes} hold unspeakable evil, they also hold unimaginable good---the two in a delicate balance. The only question is: Which way will PC{Aereas} and \\NPC{Nina} tip the scales?"
 }
 title: "Blood Hostages"
 author {

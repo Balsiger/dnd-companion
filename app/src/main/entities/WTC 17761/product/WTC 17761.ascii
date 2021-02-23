@@ -1,7 +1,7 @@
 template {
   name: "WTC 17761"
   world: "Generic"
-  description: "Kick down the door and be ready for anything. Inside, you\'ll confront\n  animals, aliens, aberrations, adversaries, and even a few allies. The\n  \\Product{d20 Menace Manual} provides creatures, characters, and organizations\n  to challenge or confound the heroes of any d20 Modern roleplaying game---so\n  watch your back.\n\n  To use this product, you also need the \\Product{d20 Modern Roleplaying Game}\n  core rulebook. For players and Gamemasters, this product is compatible with\n  other d20 System roleplaying games."
+  description: "Kick down the door and be ready for anything. Inside, you\'ll confront animals, aliens, aberrations, adversaries, and even a few allies. The Product{d20 Menace Manual} provides creatures, characters, and organizations to challenge or confound the heroes of any d20 Modern roleplaying game---so watch your back. To use this product, you also need the \\Product{d20 Modern Roleplaying Game} core rulebook. For players and Gamemasters, this product is compatible with other d20 System roleplaying games."
 }
 title: "d20 Menace Manual"
 subtitle: "Keep Your Guard Up and Your Pistol Loaded"

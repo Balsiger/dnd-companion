@@ -7,7 +7,7 @@ template {
     name: "Dragon 270"
   }
   world: "Dragonlance"
-  description: "Welcome, guest, to our inn.\n\n  To celebrate the coming of a new age to \\Place{Krynn}, we have devised a menu\n  of succulent dishes we hope you will enjoy. Take a seat in your favorite\n  booth. Order a mug of your favorite beverage. Meet new friends and share past\n  times with old ones. Here are songs for the singing and good food for the\n  eating.\n\n  Your proprietors, \\NPC{Caramon} and \\NPC{Tika Majere}\n\n  Inside this volume you will find articles on many subjects, including the\n  following:\n\n  \\list\n  {Que-Shue divination practices}\n  {\\NPC{Lord Gunthar}\'s Last Will and Testament}\n  {Fashions of \\Place{Krynn}}\n  {And as always, music, recipes, \\Monster{kender} sayings, and much more.}"
+  description: "Welcome, guest, to our inn. To celebrate the coming of a new age to \\Place{Krynn}, we have devised a menu of succulent dishes we hope you will enjoy. Take a seat in your favorite booth. Order a mug of your favorite beverage. Meet new friends and share past times with old ones. Here are songs for the singing and good food for the\neating.\n\nYour proprietors, \\NPC{Caramon} and \\NPC{Tika Majere} Inside this volume you will find articles on many subjects, including the following: list {Que-Shue divination practices} {\\NPC{Lord Gunthar}\'s Last Will and Testament} {Fashions of \\Place{Krynn}} {And as always, music, recipes, \\Monster{kender} sayings, and much more.}"
 }
 title: "More Leaves from the Inn of Last Home"
 subtitle: "A New Bill of Fare"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 96559"
   world: "Dragonlance"
-  description: "This second title in \\Product{The Minotaur Wars} trilogy continues the tale\n  of the fallout from the end of the New York Times best-selling \\Product{War\n  of Souls} series. Author Richard A. Knaak is particularly associated with\n  writing about \\Monster{minotaurs} of \\Place{Dragonlance}, making him the\n  ideal author to move the \\Monster{minotaurs} to the forefront of the\n  \\Place{Dragonlance} novel storyline."
+  description: "This second title in \\Product{The Minotaur Wars} trilogy continues the tale of the fallout from the end of the New York Times best-selling \\Product{War of Souls} series. Author Richard A. Knaak is particularly associated with writing about \\Monster{minotaurs} of \\Place{Dragonlance}, making him the ideal author to move the \\Monster{minotaurs} to the forefront of the Place{Dragonlance} novel storyline."
 }
 title: "Tides of Blood"
 author {

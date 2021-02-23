@@ -3,7 +3,7 @@ template {
   category: "mount"
   category: "beast of burden"
   world: "Generic"
-  description: "Mules are sterile crossbreeds of donkeys and horses. A mule is similar to a light horse, but slightly stronger and more agile. \n\\bold{Carrying Capacity:} A light load for a mule is up to 230 pounds; a medium load, 231-460 pounds; and a heavy load, 461-690 pounds. A mule can drag 3,450 pounds.\n\n\\bold{Skills:} Mules have a +2 racial bonus on Dexterity checks to avoid slipping or falling."
+  description: "Mules are sterile crossbreeds of donkeys and horses. A mule is similar to a light horse, but slightly stronger and more agile. \n\\bold{Carrying Capacity:} A light load for a mule is up to 230 pounds; a medium load, 231-460 pounds; and a heavy load, 461-690 pounds. A mule can drag 3,450 pounds. bold{Skills:} Mules have a +2 racial bonus on Dexterity checks to avoid slipping or falling."
   short_description: "A crossbreed of donkey and horse."
 }
 size {

@@ -20,7 +20,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "\\God{Maglubiyet}... \\God{Blibdoolpoolp}... \\God{Diinkarazan}...\n                    \\God{Panzuriel}... Such names are whispered in the dark on the far side of\n                    midnight, or muttered fearfully around jugs of wine when old, scarred\n                    adventurers tell their tales. They are the unseen, unknown things worshipped\n                    by monsters and monstrosities. Learn all about the avatars and shamans of\n                    \\Monster{giants}, \\Monster{goblins}, the \\Place{underdark}, even\n                    \\Monster{illithids} and \\Monster{beholders}, in this expansion of the\n                    popular \\Product{Legends & Lore}."
+  description: "\\God{Maglubiyet}... \\God{Blibdoolpoolp}... \\God{Diinkarazan}... \\God{Panzuriel}... Such names are whispered in the dark on the far side of midnight, or muttered fearfully around jugs of wine when old, scarred adventurers tell their tales. They are the unseen, unknown things worshipped by monsters and monstrosities. Learn all about the avatars and shamans of \\Monster{giants}, \\Monster{goblins}, the \\Place{underdark}, even \\Monster{illithids} and \\Monster{beholders}, in this expansion of the popular \\Product{Legends & Lore}."
 }
 title: "Monster Mythology"
 author {

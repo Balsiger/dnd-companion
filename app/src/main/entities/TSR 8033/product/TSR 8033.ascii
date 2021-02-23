@@ -13,7 +13,7 @@ template {
     name: "catalog93"
   }
   world: "Spelljammer"
-  description: "\\NPC{Teldin Moore} is looking for the great ship \\Item{Spelljammer}. A\n  \\Monste{radiant dragon} holds the key to commanding the great ship but needs\n  \\NPC{Teldin}\'s help to take control. Meanwhile, the \\Monster[elf]{elves} seek\n  his assistance in the second \\Event{Unhuman War}, where a group of\n  \\Monster{elf}-hating monsters trades with \\Monster[goblin]{goblinoids} for a\n  secret weapon against the \\Monster[elf]{elven} \\Group{Imperial Fleet}. But\n  someone in \\NPC{Teldin}\'s inner circle is pulling all parties toward\n  battle.\n\n  \\Product{The Radiant Dragon}, set in the \\Place{Spelljammer} fantasy\n  universe, is the fourth book in the \\Product{Cloakmaster Cycle} of\n  \\Place{Spelljammer} space fantasy novels from TSR, Inc."
+  description: "\\NPC{Teldin Moore} is looking for the great ship \\Item{Spelljammer}. A \\Monste{radiant dragon} holds the key to commanding the great ship but needs\n\\NPC{Teldin}\'s help to take control. Meanwhile, the \\Monster[elf]{elves} seek\nhis assistance in the second \\Event{Unhuman War}, where a group of Monster{elf}-hating monsters trades with \\Monster[goblin]{goblinoids} for a secret weapon against the \\Monster[elf]{elven} \\Group{Imperial Fleet}. But someone in \\NPC{Teldin}\'s inner circle is pulling all parties toward battle. Product{The Radiant Dragon}, set in the \\Place{Spelljammer} fantasy universe, is the fourth book in the \\Product{Cloakmaster Cycle} of Place{Spelljammer} space fantasy novels from TSR, Inc."
 }
 title: "Radiant Dragon"
 leader: "The"

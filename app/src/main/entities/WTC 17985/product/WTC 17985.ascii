@@ -1,7 +1,7 @@
 template {
   name: "WTC 17985"
   world: "Dragonlance"
-  description: "First launched over a decade ago, the \\Product{Preludes series} has\n  continued to prove popular with \\Place{Dragonlance} fans. This rerelease of\n  \\Product{Riverwind the Plainsman} showcases a new look that is also reflected\n  in the other recovers of this series. The title features cover art from lead\n  \\Place{Dragonlance} saga artist Matt Stawicki and is authored by popular\n  writing team Thompson & Cook."
+  description: "First launched over a decade ago, the \\Product{Preludes series} has continued to prove popular with \\Place{Dragonlance} fans. This rerelease of Product{Riverwind the Plainsman} showcases a new look that is also reflected in the other recovers of this series. The title features cover art from lead Place{Dragonlance} saga artist Matt Stawicki and is authored by popular writing team Thompson & Cook."
 }
 title: "Riverwind the Plainsman"
 author {

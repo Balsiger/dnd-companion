@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Rokugan"
-  description: "The \\NPC{Serene Prophet} foresaw its downfall -- tides of \\Monster{demons}\n                    flooding out of the \\Place{Shadowlands}. One man seeks to avert the\n                    catastrophe -- the leader of the \\Group{Scorpion Clan}. He will pay any\n                    price, perpetrate any deception, to save the \\Place{empire}. If he must, he\n                    will become evil to fight evil. He and the emperor\'s champion will battle\n                    each other to the death for that which they both hold dear: \\Place{Rokugan}"
+  description: "The \\NPC{Serene Prophet} foresaw its downfall -- tides of \\Monster{demons} flooding out of the \\Place{Shadowlands}. One man seeks to avert the catastrophe -- the leader of the \\Group{Scorpion Clan}. He will pay any price, perpetrate any deception, to save the \\Place{empire}. If he must, he will become evil to fight evil. He and the emperor\'s champion will battle each other to the death for that which they both hold dear: \\Place{Rokugan}"
 }
 title: "Scorpion"
 leader: "The"

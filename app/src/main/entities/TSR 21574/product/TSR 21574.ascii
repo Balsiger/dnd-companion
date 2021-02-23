@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "Lifelong friends, they went their separate ways. Now they are together\n  again, though each holds secrets from the others in his heart. They speak of\n  a world shadowed with rumors of war. They speak of tales of strange monsters,\n  creatures of myth, creatures of legend. They do not speak of their\n  secrets. Not then. Not until a chance encounter with a beautiful, sorrowful\n  woman, who bears a magical crystal staff, draws the companions deeper into\n  the shadows, forever changing their lives and shaping the fate of the world.\n\n  No one expected them to be heroes.\n\n  Least of all, them."
+  description: "Lifelong friends, they went their separate ways. Now they are together\nagain, though each holds secrets from the others in his heart. They speak of a world shadowed with rumors of war. They speak of tales of strange monsters, creatures of myth, creatures of legend. They do not speak of their secrets. Not then. Not until a chance encounter with a beautiful, sorrowful woman, who bears a magical crystal staff, draws the companions deeper into the shadows, forever changing their lives and shaping the fate of the world. o one expected them to be heroes. Least of all, them."
 }
 title: "Dragons of Autumn Twilight"
 author {

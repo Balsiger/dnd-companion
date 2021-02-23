@@ -10,7 +10,7 @@ template {
     name: "Dragon 226"
   }
   world: "Forgotten Realms"
-  description: "The \\Group{Bedine} witch \\NPC{Ruha} has left the \\Place{parched sea} of\n                    \\Place{Anauroch} on her quest to become a \\Group{Harper}. That quest takes\n                    her to \\Place{Elversult}, where she must prove herself by discovering who has\n                    poisoned \\NPC{Lady Yanseldara}. Simple enough. Find the poison and track the\n                    poisoner.\n                    Simple...until the \\Group{Cult of the Dragon}, a \\NPC{Shou Prince}, and\n                    oriental merchant, and an ancient \\Monster{dracolich} get involved.\n                    As \\NPC{Ruha} soon discovers, life is never simple for a \\Group{Harper}, and\n                    poisoners\' plots hold more treacherous twists than the tail of a\n                    \\Monster{Shou dragon}."
+  description: "The \\Group{Bedine} witch \\NPC{Ruha} has left the \\Place{parched sea} of \\Place{Anauroch} on her quest to become a \\Group{Harper}. That quest takes her to \\Place{Elversult}, where she must prove herself by discovering who has poisoned \\NPC{Lady Yanseldara}. Simple enough. Find the poison and track the poisoner. Simple...until the \\Group{Cult of the Dragon}, a \\NPC{Shou Prince}, and oriental merchant, and an ancient \\Monster{dracolich} get involved. As \\NPC{Ruha} soon discovers, life is never simple for a \\Group{Harper}, and poisoners\' plots hold more treacherous twists than the tail of a Monster{Shou dragon}."
 }
 title: "Veiled Dragon"
 leader: "The"

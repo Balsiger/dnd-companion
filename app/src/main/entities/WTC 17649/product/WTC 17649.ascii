@@ -1,7 +1,7 @@
 template {
   name: "WTC 17649"
   world: "Dragonlance"
-  description: "On a dark spring night, nine weeks behind schedule, the \\Item{MNS\n  Indestructible}, a \\Item{Class C Submersible Deepswimmer}, departs\n  \\Place{Sancrist Isle} with a crew of twenty and a callous disregard for the\n  inevitable.\n\n  Armed with top-secret devices, a band of intrepid \\Monster{gnome} explorers\n  sets out on a legendary journey to sub-navigate the continent of\n  \\Place{Ansalon} and determine why very large rocks float. Though the fate of\n  the world does not hang in the balance, theirs certainly does.\n\n  This is their story---and the story of a single member of that ignoble crew:\n  \\NPC{Conundrum}, the heroic \\Monster{gnome} featured in Margaret Weis and\n  Tracy Hickman\'s best-selling \\Product{War of Souls} trilogy."
+  description: "On a dark spring night, nine weeks behind schedule, the \\Item{MNS Indestructible}, a \\Item{Class C Submersible Deepswimmer}, departs\n\\Place{Sancrist Isle} with a crew of twenty and a callous disregard for the\ninevitable. Armed with top-secret devices, a band of intrepid \\Monster{gnome} explorers sets out on a legendary journey to sub-navigate the continent of Place{Ansalon} and determine why very large rocks float. Though the fate of the world does not hang in the balance, theirs certainly does. This is their story---and the story of a single member of that ignoble crew: PC{Conundrum}, the heroic \\Monster{gnome} featured in Margaret Weis and Tracy Hickman\'s best-selling \\Product{War of Souls} trilogy."
 }
 title: "Conundrum"
 author {

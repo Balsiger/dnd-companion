@@ -1,7 +1,7 @@
 template {
   name: "WTC 21712"
   world: "Generic"
-  description: "\\large{Run the Game}\n                    Build your own dungeons and pit your friends against monsters and villains!\n                    \\large{Play the Game}\n                    Explore the dungeon with your friends, fight the monsters, and bring back the treasure!"
+  description: "\\large{Run the Game} Build your own dungeons and pit your friends against monsters and villains! \\large{Play the Game} Explore the dungeon with your friends, fight the monsters, and bring back the treasure!"
   short_description: "The starter set for 4th Edition D&D"
 }
 title: "Roleplaying Game Starter Set"

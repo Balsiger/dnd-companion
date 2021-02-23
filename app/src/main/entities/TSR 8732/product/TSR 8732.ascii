@@ -4,7 +4,7 @@ template {
     name: "catalog98"
   }
   world: "None"
-  description: "The war between \\NPC{Urza} and \\NPC{Mishra} is over. Brooding on the death\n                    of his brother at the hands of extraplanar forces, \\NPC{Urza} drifts among\n                    the planes.\n                    But the end of the \\Event{Brother\'s War} has transformed him into something\n                    greater. Deep within his heart, a spark has been kindled to a flame that\n                    cannot be quenched.\n                    \\NPC{Urza} has become a planeswalker."
+  description: "The war between \\NPC{Urza} and \\NPC{Mishra} is over. Brooding on the death of his brother at the hands of extraplanar forces, \\NPC{Urza} drifts among the planes. But the end of the \\Event{Brother\'s War} has transformed him into something greater. Deep within his heart, a spark has been kindled to a flame that cannot be quenched. PC{Urza} has become a planeswalker."
 }
 title: "Planeswalker"
 subtitle: "Urza Triumphant."

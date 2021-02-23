@@ -5,7 +5,7 @@ template {
     name: "net price list"
   }
   world: "Generic"
-  description: "This module contains background information, referee\'s notes, player aids, a\n                    complete map level, and a cutaway view of the mountain\n                    complex. \\Product{White Plume Mountain} is from the Special (\'S\') series;\n                    like others in this series, it is meant to stand on its own and is a complete\n                    Advanced Dungeons & Dragons adventure. The recommended number of players is\n                    four to ten, with levels ranging from fifth to tenth.\n                    If you find this module interesting and challenging, look for the TSR logo on\n                    future publications from The Game Wizards!"
+  description: "This module contains background information, referee\'s notes, player aids, a complete map level, and a cutaway view of the mountain complex. \\Product{White Plume Mountain} is from the Special (\'S\') series; like others in this series, it is meant to stand on its own and is a complete Advanced Dungeons & Dragons adventure. The recommended number of players is four to ten, with levels ranging from fifth to tenth. If you find this module interesting and challenging, look for the TSR logo on future publications from The Game Wizards!"
 }
 title: "White Plume Mountain"
 author {

@@ -19,7 +19,7 @@ template {
     name: "catalog93"
   }
   world: "Forgotten Realms"
-  description: "Travel back to strange and exotic \\Place{Menzoberranzan}, the vast city of\n                    the \\Monster{drow} and homeland to \\Place{Icewind Dale} hero \\NPC{Drizzt\n                    Do\'Urden}.\n                    The you prince of a royal house, \\NPC{Drizzt} grows to maturity in the vile\n                    world of his dark kin. Possessing honor beyond the scope of his unprincipled\n                    society, young \\NPC{Drizzt} faces an inevitable dilemma. Can he live in a\n                    world that rejects integrity?\n                    \\Product{Homeland} is R.A. Salvatore\'s first book in \\Product{The Dark Elf\n                    Trilogy} set in the \\Product{Forgotten Realms} world from TSR, Inc."
+  description: "Travel back to strange and exotic \\Place{Menzoberranzan}, the vast city of the \\Monster{drow} and homeland to \\Place{Icewind Dale} hero \\NPC{Drizzt Do\'Urden}. The you prince of a royal house, \\NPC{Drizzt} grows to maturity in the vile world of his dark kin. Possessing honor beyond the scope of his unprincipled society, young \\NPC{Drizzt} faces an inevitable dilemma. Can he live in a world that rejects integrity? \\Product{Homeland} is R.A. Salvatore\'s first book in \\Product{The Dark Elf Trilogy} set in the \\Product{Forgotten Realms} world from TSR, Inc."
 }
 title: "Homeland"
 author {

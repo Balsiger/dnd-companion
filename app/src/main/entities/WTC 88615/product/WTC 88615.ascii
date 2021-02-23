@@ -1,7 +1,7 @@
 template {
   name: "WTC 88615"
   world: "Dominaria"
-  description: "The denizens of the desert live in the shadow of the sacred, where battles\n  are won or lost at the whims of the gods. Now the outcome of one desert war\n  could change the history of \\Place{Dominaria} forever.\n\n  The prophecy of None, One, and Two will finally be fulfilled."
+  description: "The denizens of the desert live in the shadow of the sacred, where battles are won or lost at the whims of the gods. Now the outcome of one desert war could change the history of \\Place{Dominaria} forever. The prophecy of None, One, and Two will finally be fulfilled."
 }
 title: "Hazezon"
 subtitle: "Who dares speak of the prophecy?"

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The subject becomes stronger. The spell grants a +4 enhancement bonus to Strength, adding the usual benefits to melee attack rolls, melee damage rolls, and other uses of the Strength modifier.  Arcane Material Component: A few hairs, or a pinch of dung, from a bull."
+  description: "The subject becomes stronger. The spell grants a +4 enhancement bonus to Strength, adding the usual benefits to melee attack rolls, melee damage rolls, and other uses of the Strength modifier.\n\nArcane Material Component: A few hairs, or a pinch of dung, from a bull."
   short_description: "Subject gains +4 to Str for 1 min./level."
 }
 school: TRANSMUTATION

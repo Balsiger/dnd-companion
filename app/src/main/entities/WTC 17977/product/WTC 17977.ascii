@@ -1,7 +1,7 @@
 template {
   name: "WTC 17977"
   world: "Forgotten Realms"
-  description: "\\Product{Extinction} is the fourth title in the New York Times best-selling\n                    saga of civil war and chaos in the darkest part of the \\Place{Forgotten\n                    Realms} setting.\n                    This latest title expands the civil upheaval among the \\Monster{drow}, one of\n                    the most popular races in the \\Place{Forgotten Realms}. Best-selling author\n                    R.A. Salvatore wrote the prologue to \\Product{Extinction} and continues to\n                    consult on the series, lending his expertise as the author who brought\n                    \\Monster{drow} society to the forefront of the \\Place{Forgotten Realms}\n                    setting."
+  description: "\\Product{Extinction} is the fourth title in the New York Times best-selling saga of civil war and chaos in the darkest part of the \\Place{Forgotten Realms} setting. This latest title expands the civil upheaval among the \\Monster{drow}, one of the most popular races in the \\Place{Forgotten Realms}. Best-selling author R.A. Salvatore wrote the prologue to \\Product{Extinction} and continues to consult on the series, lending his expertise as the author who brought \\Monster{drow} society to the forefront of the \\Place{Forgotten Realms} setting."
 }
 title: "Extinction"
 author {

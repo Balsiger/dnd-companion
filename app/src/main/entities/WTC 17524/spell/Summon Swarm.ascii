@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You summon a swarm of bats, rats, or spiders (your choice), which attacks all other creatures within its area. (You may summon the swarm so that it shares the area of other creatures.) If no living creatures are within its area, the swarm attacks or pursues the nearest creature as best it can. The caster has no control over its target or direction of travel.  See the Monster Manual for details of bat, rat, and spider swarms.  Arcane Material Component: A square of red cloth."
+  description: "You summon a swarm of bats, rats, or spiders (your choice), which attacks all other creatures within its area. (You may summon the swarm so that it shares the area of other creatures.) If no living creatures are within its area, the swarm attacks or pursues the nearest creature as best it can. The caster has no control over its target or direction of travel.\n\nSee the Monster Manual for details of bat, rat, and spider swarms.\n\nArcane Material Component: A square of red cloth."
   short_description: "Summons swarm of bats, rats, or spiders."
 }
 school: CONJURATION
@@ -41,7 +41,7 @@ effect {
   description: "One swarm of bats rats or spiders"
 }
 duration {
-  duration_description: "Concentration +  2 rounds"
+  duration_description: "Concentration +\n\n2 rounds"
 }
 saving_throw: "None"
 spell_resistance: "No"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 9546874"
   world: "Eberron"
-  description: "The war to end all wars -- or so it is hoped. For generations battle broke\n  the once-proud kingdom of \\NPC{Galifar}. As nation fought nation, adventure\n  was never far away from those eager to find it.\n\n  Hunters of evil, seekers of fortune, loyal soldiers, and those just trying to\n  stay alive. These are their tales.\n\n  Tales of the Last War."
+  description: "The war to end all wars -- or so it is hoped. For generations battle broke the once-proud kingdom of \\NPC{Galifar}. As nation fought nation, adventure was never far away from those eager to find it. Hunters of evil, seekers of fortune, loyal soldiers, and those just trying to stay alive. These are their tales. Tales of the Last War."
 }
 title: "Tales of the Last War"
 leader: "The"

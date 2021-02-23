@@ -3,7 +3,7 @@ template {
   reference {
     name: "complete product listing"
   }
-  description: "\\large{\'A \\Monster{troll} is that much bigger than my thief?\'}\n                    Your thief could throw a \\Item{flask of flaming oil} at the beast, but\n                    where\'s the rest of your party---the fighter, the cleric and the\n                    \\Monster{dwarf}? Would the flames engulf them, too?\n                    AD&D game action is fast-paced. Keeping track of who\'s where in the dungeon\n                    can be hard, especially during combat. That\'s why players and DM\'s agree that\n                    official AD&D miniatures make a great game even greater.\n                    And yes, a \\Monster{troll} \\emph{is} that much bigger than your\n                    character. All 25mm AD&D miniatures are in scale to one another, for added\n                    realism."
+  description: "\\large{\'A \\Monster{troll} is that much bigger than my thief?\'} Your thief could throw a \\Item{flask of flaming oil} at the beast, but where\'s the rest of your party---the fighter, the cleric and the \\Monster{dwarf}? Would the flames engulf them, too? AD&D game action is fast-paced. Keeping track of who\'s where in the dungeon can be hard, especially during combat. That\'s why players and DM\'s agree that official AD&D miniatures make a great game even greater. And yes, a \\Monster{troll} \\emph{is} that much bigger than your character. All 25mm AD&D miniatures are in scale to one another, for added realism."
 }
 title: "Monks, Bards & Thieves"
 date {

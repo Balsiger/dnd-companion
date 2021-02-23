@@ -1,7 +1,7 @@
 template {
   name: "WTC 9698974"
   world: "Dragonlance"
-  description: "\\Product{Wizard\'s Curse} continues a new series of \\Place{Dragonlance}\n  fantasy adventures written specifically for readers ages 10 and up. The\n  series features a group of young companions who band together for friendship,\n  adventure, and excitement during the golden age of the \\Place{Dragonlance}\n  world."
+  description: "\\Product{Wizard\'s Curse} continues a new series of \\Place{Dragonlance} fantasy adventures written specifically for readers ages 10 and up. The series features a group of young companions who band together for friendship, adventure, and excitement during the golden age of the \\Place{Dragonlance} world."
 }
 title: "Wizard\'s Curse"
 author {

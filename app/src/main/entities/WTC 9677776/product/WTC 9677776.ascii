@@ -1,7 +1,7 @@
 template {
   name: "WTC 9677776"
   world: "Forgotten Realms"
-  description: "This collection of \\Product{Daughter of the Drow}, \\Product{Tangled Webs},\n                    and \\Product{Windwalker} brings together for the first time three magical\n                    books about a member of one of the most popular \\Place{Forgotten Realms}\n                    races."
+  description: "This collection of \\Product{Daughter of the Drow}, \\Product{Tangled Webs}, and \\Product{Windwalker} brings together for the first time three magical books about a member of one of the most popular \\Place{Forgotten Realms} races."
 }
 title: "Starlight & Shadows Gift Set"
 author {

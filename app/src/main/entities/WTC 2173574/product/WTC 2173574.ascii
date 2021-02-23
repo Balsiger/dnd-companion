@@ -1,7 +1,7 @@
 template {
   name: "WTC 2173574"
   world: "Forgotten Realms"
-  description: "On one side \\God{Lolth}, the dreaded \\God{Queen of the Demonweb Pits}. On the other side \\God{Eilistraee}, the \\God{Lady of the Dance}. In between, every \\Monster[drow]{dark elf} on Faer\\hat{u}n. The \\NPC{Lady Penitent} kills in the name of \\God{Lolth}, and suffers every drop of blood. \\NPC{Qilu\\acute{e}} dances for \\God{Eilistraee}, and finds a demonic partner to join her.\n                    All of the pieces are set, the strategies in place, and all that\'s left is for the servants of dark gods to make their final alliances, say their last prayers, and help choose a future for the \\God{drow}.\n                    \\Large{Or do they have any future at all?}"
+  description: "On one side \\God{Lolth}, the dreaded \\God{Queen of the Demonweb Pits}. On the other side \\God{Eilistraee}, the \\God{Lady of the Dance}. In between, every \\Monster[drow]{dark elf} on Faer\\hat{u}n. The \\NPC{Lady Penitent} kills in the name of \\God{Lolth}, and suffers every drop of blood. \\NPC{Qilu\\acute{e}} dances for \\God{Eilistraee}, and finds a demonic partner to join her. All of the pieces are set, the strategies in place, and all that\'s left is for the servants of dark gods to make their final alliances, say their last prayers, and help choose a future for the \\God{drow}. Large{Or do they have any future at all?}"
 }
 title: "Ascendancy of the Last"
 subtitle: "And the Endgame Draws Near"

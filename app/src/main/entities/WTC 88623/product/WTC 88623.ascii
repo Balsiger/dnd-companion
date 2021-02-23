@@ -1,7 +1,7 @@
 template {
   name: "WTC 88623"
   world: "Dragonlance"
-  description: "The highways and byways of \\Place{Ansalon} are being ravaged by war.\n\n  As the \\Event{War of Souls} rages, vast armies and powerful wizards vie for\n  control of \\Place{Krynn}. But despite the deeds of the mighty, it is the\n  common people who must endure the great hardships of war.\n\n  \\NPC{Bertrem} of the \\Group{Order of Aesthetics}, keeper of the \\Place{Great\n  Library of Palanthas}, gathers accounts of everyday life in \\Place{Ansalon}\n  as it is forever changed by the \\Event{War of Souls}."
+  description: "The highways and byways of \\Place{Ansalon} are being ravaged by war. As the \\Event{War of Souls} rages, vast armies and powerful wizards vie for control of \\Place{Krynn}. But despite the deeds of the mighty, it is the common people who must endure the great hardships of war. PC{Bertrem} of the \\Group{Order of Aesthetics}, keeper of the \\Place{Great Library of Palanthas}, gathers accounts of everyday life in \\Place{Ansalon} as it is forever changed by the \\Event{War of Souls}."
 }
 title: "Bertrem\'s Guide to the War of the Souls, Volume Two"
 author {

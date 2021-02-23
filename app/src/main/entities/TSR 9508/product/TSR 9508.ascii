@@ -10,7 +10,7 @@ template {
     name: "Dragon 226"
   }
   world: "Generic"
-  description: "Between the settled \\Monster{human} lands and the \\Monster{orc}-filled\n                    mountains rests the barony of \\Place{Honshar}. The residents have grown used\n                    to occasiional \\Monster{orc} raids, but now they find themselves facing a\n                    full-scale war. As if that wasn\'t bad enough, the \\Monster{orcs} have\n                    kidnapped an important political figure from \\Place{Honshar}, along with a\n                    crucial magical item---\\Item{the Silver Key}. Unless the \\Item{key} is\n                    recovered, it could be \\Place{Honshar}\'s undoing. Both the \\Item{key} and the\n                    hostage are being held in the \\Monster{orc} city of \\Place{Krimba-Hai}, so\n                    getting them back will be tricky. However, there is a plan..."
+  description: "Between the settled \\Monster{human} lands and the \\Monster{orc}-filled mountains rests the barony of \\Place{Honshar}. The residents have grown used to occasiional \\Monster{orc} raids, but now they find themselves facing a full-scale war. As if that wasn\'t bad enough, the \\Monster{orcs} have kidnapped an important political figure from \\Place{Honshar}, along with a crucial magical item---\\Item{the Silver Key}. Unless the \\Item{key} is recovered, it could be \\Place{Honshar}\'s undoing. Both the \\Item{key} and the hostage are being held in the \\Monster{orc} city of \\Place{Krimba-Hai}, so getting them back will be tricky. However, there is a plan..."
 }
 title: "Silver Key"
 leader: "The"

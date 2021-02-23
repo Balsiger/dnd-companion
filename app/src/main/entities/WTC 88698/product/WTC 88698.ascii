@@ -1,7 +1,7 @@
 template {
   name: "WTC 88698"
   world: "None"
-  description: "Revealing the previously untold story of one of the Magic: The Gathering\n                    game\'s most popular characters, this book will give fans a glimpse into the\n                    history of the Magic universe and provide an alternative storyline to the\n                    current stories being told in the \\Product{Invasion trilogy} and the\n                    \\Product{Odyssey Cycle series}."
+  description: "Revealing the previously untold story of one of the Magic: The Gathering game\'s most popular characters, this book will give fans a glimpse into the history of the Magic universe and provide an alternative storyline to the current stories being told in the \\Product{Invasion trilogy} and the Product{Odyssey Cycle series}."
 }
 title: "Jedit"
 author {

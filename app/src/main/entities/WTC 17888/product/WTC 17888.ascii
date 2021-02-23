@@ -1,7 +1,7 @@
 template {
   name: "WTC 17888"
   world: "Star Wars"
-  description: "The power of the dark side is growing. Now you must choose your alliances\n  carefully from the likes of \\NPC{Mace Windu} or \\NPC{Darth Maul}, and enlist\n  an army in your command.\n\n  With \\Product{Sith Rising}, the new expansion for the \\Product{Star Wars\n  trading card game}, you can engage in the climactic battle of Attack of the\n  Clones and other epic contests of your choosing. Is it time for the\n  \\Group{Sith} to have revenge? Or will the \\Group{Jedi} overcome\n  insurmountable odds?\n\n  Select from the random cards in booster packs to build your own deck or add\n  reinforcements to your deck or collection.\n\n  \\bold{Go ahead. Be Seduced.}"
+  description: "The power of the dark side is growing. Now you must choose your alliances carefully from the likes of \\NPC{Mace Windu} or \\NPC{Darth Maul}, and enlist\nan army in your command.\n\nWith \\Product{Sith Rising}, the new expansion for the \\Product{Star Wars trading card game}, you can engage in the climactic battle of Attack of the Clones and other epic contests of your choosing. Is it time for the Group{Sith} to have revenge? Or will the \\Group{Jedi} overcome insurmountable odds? Select from the random cards in booster packs to build your own deck or add reinforcements to your deck or collection. bold{Go ahead. Be Seduced.}"
 }
 title: "Sith Rising"
 subtitle: "Time To Take Sides"

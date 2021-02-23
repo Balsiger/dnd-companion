@@ -7,7 +7,7 @@ template {
     name: "catalog96"
   }
   world: "Forgotten Realms"
-  description: "Long ago, the shadow magic transformed an ancient wizard into a being of\n                    utter evil, the \\NPC{Shadowking}. Now legendary \\Group{Harper} \\NPC{Caledan\n                    Caldorien}---heir to the shadow magic---has mysteriously vanished.\n                    The \\Group{Harpers} mount a mission to find and destroy...\\NPC{Caledan}.\n                    But renegade \\Group{Harper} \\NPC{Mari Al-maren} and the mage \\NPC{Morhion}\n                    embark on a desparate quest to rescue him, and stop \\NPC{Caledan} before a\n                    \\NPC{Shadowking} stalks the \\Place{Realms} once more!\n                    \\Product{Curse of the Shadowmage} is the eleventh in an open-ended series of\n                    novels focusing on the \\Group{Harpers}, the secret organization for Good in\n                    the \\Place{Forgotten Realms} fantasy world."
+  description: "Long ago, the shadow magic transformed an ancient wizard into a being of utter evil, the \\NPC{Shadowking}. Now legendary \\Group{Harper} \\NPC{Caledan Caldorien}---heir to the shadow magic---has mysteriously vanished. The \\Group{Harpers} mount a mission to find and destroy...\\NPC{Caledan}. But renegade \\Group{Harper} \\NPC{Mari Al-maren} and the mage \\NPC{Morhion} embark on a desparate quest to rescue him, and stop \\NPC{Caledan} before a \\NPC{Shadowking} stalks the \\Place{Realms} once more! \\Product{Curse of the Shadowmage} is the eleventh in an open-ended series of novels focusing on the \\Group{Harpers}, the secret organization for Good in the \\Place{Forgotten Realms} fantasy world."
 }
 title: "Curse of the Shadowmage"
 author {

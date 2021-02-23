@@ -1,7 +1,7 @@
 template {
   name: "DMA 000076"
   world: "Generic"
-  description: "\\bold{Quickly and easily track turns!}\n\n  Write the player\'s character name on a blue wet-erase player magnet and place\n  them in initiative order. Use the black and green magnets for enemies and\n  NPC\'s. As the turn oder changes, slide the magnets to their new places.\n\n  \\bold{The delaying and reading guides} make it simple to synchronize your\n  attacks---enemies beware! Slide the magnet to the proper guide and avoid the\n  confusion common with other initiative tracking methods.\n\n  \\bold{Use the combat round indicator} to keep track of time as you\n  battle. And the notes section to record damage, spells, effects, and anything\n  else to make combat run smoothly."
+  description: "\\bold{Quickly and easily track turns!}\n\nWrite the player\'s character name on a blue wet-erase player magnet and place\nthem in initiative order. Use the black and green magnets for enemies and PC\'s. As the turn oder changes, slide the magnets to their new places. bold{The delaying and reading guides} make it simple to synchronize your attacks---enemies beware! Slide the magnet to the proper guide and avoid the confusion common with other initiative tracking methods. bold{Use the combat round indicator} to keep track of time as you battle. And the notes section to record damage, spells, effects, and anything else to make combat run smoothly."
   short_description: "A pad to record combat order."
 }
 title: "Combat Pad"

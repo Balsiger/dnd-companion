@@ -1,7 +1,7 @@
 template {
   name: "WTC 31448"
   world: "Forgotten Realms"
-  description: "Two\\Monster{devas}, angels given mortal flesh, are sent to guard two star-crossed lovers, born scions of rival merchant houses. The \\Monster{devas} have worked together through countless cycles of reincarnation, guarding each other's backs as they pursue justice.\n\n\\large{Break from Ancient Grudge into New Mutiny}\n\nAt first, it looks as though love will conquer all, and the rift between the rival houses will finally be mended. But there are those who hate the word peace with a passion so great that it poisons everything they touch, turning house against house, mother against child, and \\Monster{deva} against \\Monster{deva}.\n\n\\large[Leaving Even Angels' Hands Unclean}"
+  description: "Two\\Monster{devas}, angels given mortal flesh, are sent to guard two star-crossed lovers, born scions of rival merchant houses. The \\Monster{devas} have worked together through countless cycles of reincarnation, guarding each other's backs as they pursue justice. large{Break from Ancient Grudge into New Mutiny}\n\nAt first, it looks as though love will conquer all, and the rift between the rival houses will finally be mended. But there are those who hate the word peace with a passion so great that it poisons everything they touch, turning house against house, mother against child, and \\Monster{deva} against \\Monster{deva}. large[Leaving Even Angels' Hands Unclean}"
   short_description: "A battle between two houses and two angels."
 }
 title: "Dawnbringer"

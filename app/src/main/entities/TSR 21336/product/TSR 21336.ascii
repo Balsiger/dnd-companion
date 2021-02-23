@@ -4,7 +4,7 @@ template {
     name: "Dragon 257"
   }
   world: "Dragonlance"
-  description: "Gargantuan \\Monster{dragons} soar over \\Place{Krynn}, battling for control\n  of the lands below. On the isle of \\Place{Sancrist}, the weakened\n  \\Group{Knights of Solamnia} ask their old enemies the \\Group{Knights of\n  Takhisis}, for help. At the insistence of \\NPC{Lord Gunthar}, the knights\n  renew the alliance forged during the last days of the \\Event{Chaos War}. But\n  when the \\NPC{Grand Master} of the \\Group{Knights of Solamnia} abruptly dies,\n  the leadership of the knights -- in fact their very existence -- is\n  challenged.\n\n  Jeff Crook\'s novel tells a tale of the \\Group{Knights of Solamnia}, the\n  greatest knightly order on \\Place{Krynn}, faced with what may be their\n  greatest challenge."
+  description: "Gargantuan \\Monster{dragons} soar over \\Place{Krynn}, battling for control of the lands below. On the isle of \\Place{Sancrist}, the weakened\n\\Group{Knights of Solamnia} ask their old enemies the \\Group{Knights of\nTakhisis}, for help. At the insistence of \\NPC{Lord Gunthar}, the knights renew the alliance forged during the last days of the \\Event{Chaos War}. But when the \\NPC{Grand Master} of the \\Group{Knights of Solamnia} abruptly dies, the leadership of the knights -- in fact their very existence -- is challenged. Jeff Crook\'s novel tells a tale of the \\Group{Knights of Solamnia}, the greatest knightly order on \\Place{Krynn}, faced with what may be their greatest challenge."
 }
 title: "Rose and the Skull"
 leader: "The"

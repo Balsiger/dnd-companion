@@ -22,7 +22,7 @@ template {
     name: "catalog93"
   }
   world: "Forgotten Realms"
-  description: "High in the placid \\Place{Snowflake Mountains} lies a little-known\n                    conservatory for bards, priests, clerics, and others. Cloistered among his\n                    colleagues, a scholar-priest named \\NPC{Cadderly} must contain a malevolent,\n                    consuming essence that\'s been uncorked, before his own brethren turn against\n                    him. \\NPC{Cadderly} must put his studies to the test and enter the catacombs\n                    far below to save his brothers and himself.\n                    \\Product{Canticle} is the first in a new series of novels entitled\n                    \\Product{The Cleric Quintet}, set in the \\Product{Forgotten Realms} fantasy\n                    world from TSR, Inc. R.A. Salvatore is also the author of the bestselling\n                    \\Product{Icewind Dale} and \\Product{Dark Elf} trilogies from TSR, Inc."
+  description: "High in the placid \\Place{Snowflake Mountains} lies a little-known conservatory for bards, priests, clerics, and others. Cloistered among his colleagues, a scholar-priest named \\NPC{Cadderly} must contain a malevolent, consuming essence that\'s been uncorked, before his own brethren turn against him. \\NPC{Cadderly} must put his studies to the test and enter the catacombs far below to save his brothers and himself. \\Product{Canticle} is the first in a new series of novels entitled \\Product{The Cleric Quintet}, set in the \\Product{Forgotten Realms} fantasy world from TSR, Inc. R.A. Salvatore is also the author of the bestselling Product{Icewind Dale} and \\Product{Dark Elf} trilogies from TSR, Inc."
 }
 title: "Canticle"
 author {

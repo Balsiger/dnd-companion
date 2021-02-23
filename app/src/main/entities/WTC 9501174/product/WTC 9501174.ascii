@@ -1,7 +1,7 @@
 template {
   name: "WTC 9501174"
   world: "Dragonlance"
-  description: "Two of the authors of the \\Product{Elven Nations} trilogy now continue the\n  story of the \\Monster{elves}! The fortunes of war have driven the once-great\n  \\Monster{elven} nations into exile in the desert land of \\Place{Khur}. The\n  \\Monster{elves} must overcome extraordinary perils including treachery to\n  establish a new homeland."
+  description: "Two of the authors of the \\Product{Elven Nations} trilogy now continue the story of the \\Monster{elves}! The fortunes of war have driven the once-great Monster{elven} nations into exile in the desert land of \\Place{Khur}. The Monster{elves} must overcome extraordinary perils including treachery to establish a new homeland."
 }
 title: "Sanctuary"
 author {

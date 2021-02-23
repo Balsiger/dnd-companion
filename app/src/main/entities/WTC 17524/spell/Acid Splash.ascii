@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You fire a small orb of acid at the target.  You must succeed on a ranged touch attack to hit your target. The orb deals 1d3 points of acid damage."
+  description: "You fire a small orb of acid at the target.\n\nYou must succeed on a ranged touch attack to hit your target. The orb deals 1d3 points of acid damage."
   short_description: "Orb deals 1d3 acid damage."
 }
 school: CONJURATION

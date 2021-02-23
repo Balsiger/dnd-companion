@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The transmuted creatures can breathe water freely. Divide the duration evenly among all the creatures you touch.  The spell does not make creatures unable to breathe air.  Arcane Material Component: A short reed or piece of straw."
+  description: "The transmuted creatures can breathe water freely. Divide the duration evenly among all the creatures you touch.\n\nThe spell does not make creatures unable to breathe air.\n\nArcane Material Component: A short reed or piece of straw."
   short_description: "Subjects can breathe underwater."
 }
 school: TRANSMUTATION

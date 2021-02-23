@@ -1,7 +1,7 @@
 template {
   name: "WTC 17725"
   world: "Dragonlance"
-  description: "This direct follow-up to the best-selling \\Product{War of Souls} trilogy\n  deals with the \\Monster{minotaurs}, a race with which New York Times\n  best-selling author Knaak is particularly associated in the minds of\n  \\Place{Dragonlance} novels fans. This series moves the \\Monster{minotaur}\n  species to the forefront of the \\Place{Dragonlance} world."
+  description: "This direct follow-up to the best-selling \\Product{War of Souls} trilogy deals with the \\Monster{minotaurs}, a race with which New York Times best-selling author Knaak is particularly associated in the minds of Place{Dragonlance} novels fans. This series moves the \\Monster{minotaur} species to the forefront of the \\Place{Dragonlance} world."
 }
 title: "Tides of Blood"
 author {

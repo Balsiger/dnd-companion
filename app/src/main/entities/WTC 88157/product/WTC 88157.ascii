@@ -1,7 +1,7 @@
 template {
   name: "WTC 88157"
   world: "Generic"
-  description: "Check your target and open fire. Inside, you\'ll find a fully illustrated\n  arsenal ranging from pistols and submachine guns to grenade launchers and\n  antimateriel rifles. The \\Product{d20 Modern Weapons Locker} provides\n  detailed descriptions and statistics for each firearm to make sure the\n  characters of any d20 Modern roleplaying game are packing the right gun for\n  the job.\n\n  To use this product, you also need the \\Product{d20 Modern Roleplaying Game}\n  core rulebook. For players and Gamemasters, this product is compatible with\n  other d20 System roleplaying games."
+  description: "Check your target and open fire. Inside, you\'ll find a fully illustrated\narsenal ranging from pistols and submachine guns to grenade launchers and antimateriel rifles. The \\Product{d20 Modern Weapons Locker} provides detailed descriptions and statistics for each firearm to make sure the characters of any d20 Modern roleplaying game are packing the right gun for the job. To use this product, you also need the \\Product{d20 Modern Roleplaying Game} core rulebook. For players and Gamemasters, this product is compatible with other d20 System roleplaying games."
 }
 title: "Weapons Locker"
 subtitle: "Lock and Load, then Rock and Roll"

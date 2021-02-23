@@ -1,7 +1,7 @@
 template {
   name: "DMA 000079"
   world: "Call of Cthulhu"
-  description: "Es beginnt ganz allt\\umlaut{a}glich: Eine Frau beauftragt einen Detektiv,\n  ihren Mann zu suchen. Doch schnell entwickelt sich aus einem Routine-Auftrag\n  ein Abenteuer, dass die harmolse Beschaulichkeit eines kleinen\n  St\\umlaut{a}dtchens als Fassade entlarvt, hinter der ein finsteres Geheimnis\n  aus uralter Zeit lauert. Und auch die \'Kinder- und Hausm\\umlaut{a}rchen\' der\n  Gebr\\umlaut{u}der Grimm erlangen pl\\umlaut{o}tzlich eine neue und\n  beunrihigende Bedeutung."
+  description: "Es beginnt ganz allt\\umlaut{a}glich: Eine Frau beauftragt einen Detektiv, ihren Mann zu suchen. Doch schnell entwickelt sich aus einem Routine-Auftrag ein Abenteuer, dass die harmolse Beschaulichkeit eines kleinen St\\umlaut{a}dtchens als Fassade entlarvt, hinter der ein finsteres Geheimnis aus uralter Zeit lauert. Und auch die \'Kinder- und Hausm\\umlaut{a}rchen\' der Gebr\\umlaut{u}der Grimm erlangen pl\\umlaut{o}tzlich eine neue und beunrihigende Bedeutung."
 }
 title: "Froschk\\umlaut{o}nig Fragmente"
 leader: "Die"

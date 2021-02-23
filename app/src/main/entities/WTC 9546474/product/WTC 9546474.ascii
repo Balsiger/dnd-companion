@@ -1,7 +1,7 @@
 template {
   name: "WTC 9546474"
   world: "Forgotten Realms"
-  description: "\\bold{\\NPC{Medusanna}}\n                    A priestess of terrifying power convinces the\n                    \\bold{\\Group{Se\'sehen}}\n                    A \\Monster{yuan-ti} tribe from the distant jungles of \\Place{Chult} to serve\n                    her growing cult of\n                    \\bold{\\God{Sseth}}\n                    The merciless god of the serpent people who languishes in the foul plane of\n                    \\bold{\\Place{Smaragh}}\n                    Where a trapped and desperate \\NPC{Karell} can only hope \\NPC{Arvin} will\n                    find her before the\n                    \\bold{\\Group{House of Serpents}}\n                    Finally destroys their last hope for freedom."
+  description: "\\bold{\\NPC{Medusanna}} A priestess of terrifying power convinces the \\bold{\\Group{Se\'sehen}} A \\Monster{yuan-ti} tribe from the distant jungles of \\Place{Chult} to serve her growing cult of \\bold{\\God{Sseth}} The merciless god of the serpent people who languishes in the foul plane of \\bold{\\Place{Smaragh}} Where a trapped and desperate \\NPC{Karell} can only hope \\NPC{Arvin} will find her before the \\bold{\\Group{House of Serpents}} Finally destroys their last hope for freedom."
 }
 title: "Vanity\'s Brood"
 author {

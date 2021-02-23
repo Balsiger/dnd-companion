@@ -10,7 +10,7 @@ template {
     name: "Dragon 270"
   }
   world: "Ravenloft"
-  description: "\\Monster{Demons}, \\Monster{devils}, and murderous \\Monster{hags} stretch\n                    their hideous claws toward AD&D game characters everywhere, while crafty\n                    \\Group{Vistani} and secretive witches hatch their plots in this tome, the\n                    third volume in \\NPC{Doctor Van Richten}\'s guides for monster hunters.\n                    This compilation contains the complete and updated texts of \\Product{Van\n                    Richten\'s Guide to Fiends}, and \\Product{Van Richten\'s Guide to the Vistani},\n                    with a surprise---the \\bold{previously unpublished} \\emph{\\NPC{Van Richten}\'s\n                    Guide to Witches}, all for use in any AD&D campaign."
+  description: "\\Monster{Demons}, \\Monster{devils}, and murderous \\Monster{hags} stretch their hideous claws toward AD&D game characters everywhere, while crafty \\Group{Vistani} and secretive witches hatch their plots in this tome, the third volume in \\NPC{Doctor Van Richten}\'s guides for monster hunters. This compilation contains the complete and updated texts of \\Product{Van Richten\'s Guide to Fiends}, and \\Product{Van Richten\'s Guide to the Vistani}, with a surprise---the \\bold{previously unpublished} \\emph{\\NPC{Van Richten}\'s Guide to Witches}, all for use in any AD&D campaign."
 }
 title: "Van Richten\'s Monster Hunter\'s Compendium, Volume Three"
 date {

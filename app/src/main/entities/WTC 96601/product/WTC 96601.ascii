@@ -1,7 +1,7 @@
 template {
   name: "WTC 96601"
   world: "Dragonlance"
-  description: "This attractive new re-release of \\Product{Galen Beknighted} showcases the\n  new look commissioned for the \\Product{Heroes} series. This title is a sequel\n  to another recently recovered title in this series, \\Product{Weasel\'s Luck},\n  and is by the same author, Michael Williams."
+  description: "This attractive new re-release of \\Product{Galen Beknighted} showcases the ew look commissioned for the \\Product{Heroes} series. This title is a sequel to another recently recovered title in this series, \\Product{Weasel\'s Luck}, and is by the same author, Michael Williams."
 }
 title: "Galen Beknighted"
 author {

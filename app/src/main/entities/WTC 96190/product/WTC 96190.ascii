@@ -1,7 +1,7 @@
 template {
   name: "WTC 96190"
   world: "Dragonlance"
-  description: "The peace of a rural village is shattered by the sudden appearance of a band\n  of renegade warriors seeking slaves. The farmers of \\Place{Nowhere} have no\n  hope unless they can raise a company of champions to defend them, but the\n  motley group of saviors who take up their cause---a shipwrecked sailor, a\n  \\Monster{minotaur} poet, a \\Monster{kender} treasure hunter, a shamed\n  \\Monster{half-ogre}, a disgraced foot soldier, and an eccentric\n  sorcerer---seem nearly as dangerous as the slavemasters."
+  description: "The peace of a rural village is shattered by the sudden appearance of a band of renegade warriors seeking slaves. The farmers of \\Place{Nowhere} have no hope unless they can raise a company of champions to defend them, but the motley group of saviors who take up their cause---a shipwrecked sailor, a Monster{minotaur} poet, a \\Monster{kender} treasure hunter, a shamed Monster{half-ogre}, a disgraced foot soldier, and an eccentric sorcerer---seem nearly as dangerous as the slavemasters."
 }
 title: "Middle of Nowhere"
 leader: "The"

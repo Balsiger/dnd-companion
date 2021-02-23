@@ -1,7 +1,7 @@
 template {
   name: "WTC 88172"
   world: "Generic"
-  description: "\\large{Sling fireballs and dodge bullets}\n\n  Explosive action and epic adventure fill the modern world when fantasy and\n  reality collide. In \\Product{Urban Arcana}, heroes armed with swords, spells,\n  shotguns, and cell phones dive headlong into trouble with monsters, mobsters,\n  cabals, and corporations. Take a deep breath, and discover the realms of\n  fantasy within the gritty shadows of the modern world.\n\n  To use this product, you also need the \\Product{d20 Modern Roleplaying Game}\n  core rulebook, for players and Gamemasters, this product is compatible with\n  other d20 System roleplaying games."
+  description: "\\large{Sling fireballs and dodge bullets}\n\nExplosive action and epic adventure fill the modern world when fantasy and reality collide. In \\Product{Urban Arcana}, heroes armed with swords, spells, shotguns, and cell phones dive headlong into trouble with monsters, mobsters, cabals, and corporations. Take a deep breath, and discover the realms of fantasy within the gritty shadows of the modern world. To use this product, you also need the \\Product{d20 Modern Roleplaying Game} core rulebook, for players and Gamemasters, this product is compatible with other d20 System roleplaying games."
 }
 title: "Urban Arcana"
 author {

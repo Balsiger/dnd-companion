@@ -13,7 +13,7 @@ template {
     name: "Dragon 241"
   }
   world: "Dragonlance"
-  description: "When Wanderlust overcomes young \\NPC{Trapspringer Fargo}, his insatiable\n  drive for adventure propels him along a route that only a \\Monster{kender}\n  could map. With curiosity as his only guide, he sets out across\n  \\Place{Ansalon} and unknowingly crosses paths with a pair of corrupt\n  \\Monster{gully dwarves} and a misplaced \\Monster{evil fiend} (Oops!). The\n  result is not only the inevitable madness and mayhem, but also a chance for\n  the diminutive \\NPC{Trapspringer} to save all of \\Place{Krynn} from a\n  catastrophe of \\Place{Takhisian} proportions."
+  description: "When Wanderlust overcomes young \\NPC{Trapspringer Fargo}, his insatiable drive for adventure propels him along a route that only a \\Monster{kender} could map. With curiosity as his only guide, he sets out across Place{Ansalon} and unknowingly crosses paths with a pair of corrupt Monster{gully dwarves} and a misplaced \\Monster{evil fiend} (Oops!). The result is not only the inevitable madness and mayhem, but also a chance for the diminutive \\NPC{Trapspringer} to save all of \\Place{Krynn} from a catastrophe of \\Place{Takhisian} proportions."
 }
 title: "Tales of Uncle Trapspringer"
 subtitle: "The most famous and legendary \\Monster{kender} of them all finally takes (or borrows) center stage!"

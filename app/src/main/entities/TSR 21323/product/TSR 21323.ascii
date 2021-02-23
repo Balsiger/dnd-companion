@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "None"
-  description: "Argoth is decimated...\n                    Tidal waves have turned canyons into rivers...\n                    Earthquakes leveled the cities...\n                    \\Place{Dominaria} is in ruins.\n                    Now the struggle for this war-torn world is to survive."
+  description: "Argoth is decimated... Tidal waves have turned canyons into rivers... Earthquakes leveled the cities... \\Place{Dominaria} is in ruins. ow the struggle for this war-torn world is to survive."
 }
 title: "Colors of Magic"
 leader: "The"

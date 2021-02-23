@@ -1,7 +1,7 @@
 template {
   name: "DD 29"
   world: "Generic"
-  description: "\\large{The characters might rest between adventures, but their adversaries\n  don\'t...}\n\n  \\list\n  {More than 150 complete descriptions of magic and mechanical traps}\n  {Dozens of beautiful illustrations detailing the mechanisms behind these\n   sinister creations}\n  {Tricks and techniques for making traps even more difficult to bypass}\n  {Rules for poison rarity, two new types of poisons, and more than 80\n   detailed listings of new poisons, natural and supernatural alike}\n  {A chapter devoted to unique puzzles and challenges to test the abilities of\n   both the players and their characters}"
+  description: "\\large{The characters might rest between adventures, but their adversaries don\'t...} list\n{More than 150 complete descriptions of magic and mechanical traps} {Dozens of beautiful illustrations detailing the mechanisms behind these sinister creations} {Tricks and techniques for making traps even more difficult to bypass} {Rules for poison rarity, two new types of poisons, and more than 80 detailed listings of new poisons, natural and supernatural alike} {A chapter devoted to unique puzzles and challenges to test the abilities of both the players and their characters}"
 }
 title: "Traps & Treachery II"
 subtitle: "A Sourcebook of More Deadly Machinations"

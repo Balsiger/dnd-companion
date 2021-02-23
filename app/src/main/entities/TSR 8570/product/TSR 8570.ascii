@@ -14,7 +14,7 @@ template {
     name: "Dragon 234"
   }
   world: "Forgotten Realms"
-  description: "\\Place{Netheril}, \\Place{empire of magic}, where wizards wield power far\n                    beyond the ken of mortal \\Monster{men}.\n                    \\Place{Netheril}, where citadels float, magic runs wild, and mages dabble in\n                    games better left for the gods.\n                    \\Place{Netheril}, a place of dangerous games where the barbarian\n                    \\NPC{Sunbright Steelshanks} soon finds himself an unwilling pawn in a lethal\n                    match of wits, wiles, and powers."
+  description: "\\Place{Netheril}, \\Place{empire of magic}, where wizards wield power far beyond the ken of mortal \\Monster{men}. \\Place{Netheril}, where citadels float, magic runs wild, and mages dabble in games better left for the gods. \\Place{Netheril}, a place of dangerous games where the barbarian \\NPC{Sunbright Steelshanks} soon finds himself an unwilling pawn in a lethal match of wits, wiles, and powers."
 }
 title: "Dangerous Games"
 subtitle: "\\Class{Mage}\'s Games"

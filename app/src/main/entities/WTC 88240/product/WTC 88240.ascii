@@ -1,7 +1,7 @@
 template {
   name: "WTC 88240"
   world: "Generic"
-  description: "The wizard and sorcerer who wins the well-known Duel Arcane will be awarded\n  the \\Item{Golden Wand}, a magical device that holds incredible power. Magic\n  users come from far and wide to compete in the contest. Some are drawn to\n  glory, others to the competition. Still more come for other, darker reasons,\n  driven by an oath to a merciless death god.\n\n  And some oaths cannot be broken."
+  description: "The wizard and sorcerer who wins the well-known Duel Arcane will be awarded the \\Item{Golden Wand}, a magical device that holds incredible power. Magic users come from far and wide to compete in the contest. Some are drawn to glory, others to the competition. Still more come for other, darker reasons, driven by an oath to a merciless death god. And some oaths cannot be broken."
 }
 title: "Oath of Nerull"
 author {

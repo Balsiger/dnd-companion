@@ -16,7 +16,7 @@ template {
     name: "Dragon 240"
   }
   world: "Generic"
-  description: "A lot of spells from \\Spell{A Summons One Dares Not Deny} to\n                    \\Spell{Dweomderdoom, Khelben\'s}"
+  description: "A lot of spells from \\Spell{A Summons One Dares Not Deny} to Spell{Dweomderdoom, Khelben\'s}"
 }
 title: "Wizard\'s Spell Compendium, Volume One"
 date {

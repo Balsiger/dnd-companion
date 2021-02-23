@@ -26,7 +26,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "\\NPC{Caramon}, \\NPC{Sturm}, and \\NPC{Tasslehoff}, on an innocent ship\'s\n  errand, are blown thousands of miles off course by a magic windstorm and\n  transported to the eastern \\Place{Bloodsea}. \\NPC{Caramon} and \\NPC{Sturm}\n  are left for dead while \\NPC{Tasslehoff} mysteriously turns against his\n  friends....\n\n  Back in \\Place{Solace}, \\NPC{Raistlin} convinces \\NPC{Flint Fireforge} and\n  \\NPC{Tanis Half-Elven} that they must make a perilous journey to\n  \\Place{Mithas}, the kingdom of the \\Monster{minotaurs}. Their task: not only\n  to rescue their friends, but also to defeat the elusive \\NPC{Nightmaster}.\n\n  \\Product{The Companions} brings the cast of the \\Place{Dragonlance} series\n  together for their first adventure. Author Tina Daniell wrote the best-seller\n  \\Product{Dark Heart}."
+  description: "\\NPC{Caramon}, \\NPC{Sturm}, and \\NPC{Tasslehoff}, on an innocent ship\'s errand, are blown thousands of miles off course by a magic windstorm and transported to the eastern \\Place{Bloodsea}. \\NPC{Caramon} and \\NPC{Sturm}\nare left for dead while \\NPC{Tasslehoff} mysteriously turns against his\nfriends.... Back in \\Place{Solace}, \\NPC{Raistlin} convinces \\NPC{Flint Fireforge} and PC{Tanis Half-Elven} that they must make a perilous journey to Place{Mithas}, the kingdom of the \\Monster{minotaurs}. Their task: not only to rescue their friends, but also to defeat the elusive \\NPC{Nightmaster}. Product{The Companions} brings the cast of the \\Place{Dragonlance} series together for their first adventure. Author Tina Daniell wrote the best-seller Product{Dark Heart}."
 }
 title: "Companions"
 leader: "The"

@@ -11,7 +11,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Fourth of the four universal games, the Talis deck is used for some non-magical divining, but also for a variety of card games, including whist, poker, talison, elemental empires, and old wizard. The deck consists of the four 12-card planar suits (stones, waves, winds, and flames) and the traditional 22-card major arcana (Sun, Moon, Star, Comet, Throne, Key, Night, etc. . . .). \n\nThe deck offered by Aurora is decorated by illuminators from Candlekeep, where they keep the texts of Alaundo the Sage, and has become the definitive Talis representation in the Realms. \n\nNote: This deck is non-magical in nature, but still a bargain at 3 sp!"
+  description: "Fourth of the four universal games, the Talis deck is used for some non-magical divining, but also for a variety of card games, including whist, poker, talison, elemental empires, and old wizard. The deck consists of the four 12-card planar suits (stones, waves, winds, and flames) and the traditional 22-card major arcana (Sun, Moon, Star, Comet, Throne, Key, Night, etc. . . .). \n\nThe deck offered by Aurora is decorated by illuminators from Candlekeep, where they keep the texts of Alaundo the Sage, and has become the definitive Talis representation in the Realms.\n\note: This deck is non-magical in nature, but still a bargain at 3 sp!"
 }
 value {
   silver: 3

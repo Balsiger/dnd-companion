@@ -5,7 +5,7 @@ template {
     name: "net price list"
   }
   world: "Generic"
-  description: "This item is only one of the many popular playing aids for Advanced Dungeons\n                    & Dragons produced by TSR Hobbies.\n                    TSR Hobbies publishes a complete line of fantasy, science fiction, and\n                    historical games and rules. A complete catalog on the entire selection of TSR\n                    items is available from TSR Hobbies, POB 756, Lake Geneva, WI 53147."
+  description: "This item is only one of the many popular playing aids for Advanced Dungeons & Dragons produced by TSR Hobbies. TSR Hobbies publishes a complete line of fantasy, science fiction, and historical games and rules. A complete catalog on the entire selection of TSR items is available from TSR Hobbies, POB 756, Lake Geneva, WI 53147."
 }
 title: "Glacial Rift of the Frost Giant Jarl"
 leader: "The"

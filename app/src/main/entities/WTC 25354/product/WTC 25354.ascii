@@ -1,7 +1,7 @@
 template {
   name: "WTC 25354"
   world: "Generic"
-  description: "Played by Dungeon & Dragons characters everywhere, \\Product{Three-Dragon Ante: Emperor\'s Gambit} hails from the ancient dragonborn empire of \\Place{Arkhosia}. Kick back and experience this high-stakes game of chance popularized in the royal courts and raunchy taverns of the D&D world!\n                    \\Product{Three-Dragon Ante: Emperor\'s Gambit} is a fast-paced, noncollectable card game for 2 to 6 players. It can be played as a standalone game or combined with the original \\Product{Three-Dragon Ante} card game. The two versions of the game are fully compatible."
+  description: "Played by Dungeon & Dragons characters everywhere, \\Product{Three-Dragon Ante: Emperor\'s Gambit} hails from the ancient dragonborn empire of \\Place{Arkhosia}. Kick back and experience this high-stakes game of chance popularized in the royal courts and raunchy taverns of the D&D world! Product{Three-Dragon Ante: Emperor\'s Gambit} is a fast-paced, noncollectable card game for 2 to 6 players. It can be played as a standalone game or combined with the original \\Product{Three-Dragon Ante} card game. The two versions of the game are fully compatible."
   short_description: "A standalone card game for 2-6 players."
 }
 title: "Three-Dragon Ante - Emperor\'s Gambirt"

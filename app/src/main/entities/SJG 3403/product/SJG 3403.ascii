@@ -1,7 +1,7 @@
 template {
   name: "SJG 3403"
   world: "Generic"
-  description: "It\'s all about the thrill of combat... meeting worthy foes and murdering\n  them by surprise.... gleefully slaughtering their low-level\n  minions... defiling the corpses... and, of course, TAKING THEIR STUFF. The\n  \\Product[SJG 3403]{Munchkin Monster Manual} contains dozens of foes for you\n  and your comrades to slay, from the dreaded \\Monster{Gazebo} to the\n  despicable \\Monster{Potted Plant}! And yes, of course there are stats for\n  \\Monster{Plutonium Dragons}. Of \\emph{all} ages.\n\n  \\small{Requires the use of the \\Product{Dungeons & Dragons Player\'s\n  Handbook}, Third Edition, published by Wizards of the Coast.}"
+  description: "It\'s all about the thrill of combat... meeting worthy foes and murdering\nthem by surprise.... gleefully slaughtering their low-level minions... defiling the corpses... and, of course, TAKING THEIR STUFF. The Product[SJG 3403]{Munchkin Monster Manual} contains dozens of foes for you and your comrades to slay, from the dreaded \\Monster{Gazebo} to the despicable \\Monster{Potted Plant}! And yes, of course there are stats for Monster{Plutonium Dragons}. Of \\emph{all} ages. small{Requires the use of the \\Product{Dungeons & Dragons Player\'s Handbook}, Third Edition, published by Wizards of the Coast.}"
 }
 title: "Munchkin Monster Manual"
 author {

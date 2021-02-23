@@ -13,7 +13,7 @@ template {
     name: "Dragon 221"
   }
   world: "Forgotten Realms"
-  description: "\\large{Out of the Shadows of Time...}\n                    For a cold eternity of centuries, a banished \\Monster{titan} has lurked in\n                    the forbidden dusk of the \\Place{Twilight Vale}---imprisoned for a crime as\n                    black as the boreal night.\n                    With the birth of a new king comes his freedom.\n                    When \\NPC{Queen Brianna} presents her husband with a first-born son,\n                    \\NPC{Tavis Burdun} must choose between the love of his child and the dark\n                    prophecy of a noble \\Monster{firbolg} shaman. Only \\NPC{Tavis} can prevent\n                    the boy from unleashing a cataclysmic war, but first he must track down the\n                    infant\'s gloom-cloaked kidnapper.\n                    The \\Product{Titan of Twilight} Book Three of the \\Product{Twilight Giants\n                    Trilogy}."
+  description: "\\large{Out of the Shadows of Time...} For a cold eternity of centuries, a banished \\Monster{titan} has lurked in the forbidden dusk of the \\Place{Twilight Vale}---imprisoned for a crime as black as the boreal night. With the birth of a new king comes his freedom. When \\NPC{Queen Brianna} presents her husband with a first-born son, \\NPC{Tavis Burdun} must choose between the love of his child and the dark prophecy of a noble \\Monster{firbolg} shaman. Only \\NPC{Tavis} can prevent the boy from unleashing a cataclysmic war, but first he must track down the infant\'s gloom-cloaked kidnapper. The \\Product{Titan of Twilight} Book Three of the \\Product{Twilight Giants Trilogy}."
 }
 title: "Titan of Twilight"
 leader: "The"

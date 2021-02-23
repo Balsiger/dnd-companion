@@ -1,7 +1,7 @@
 template {
   name: "WTC 9547174"
   world: "None"
-  description: "One guild ravages the streets. \\NPC{Teysa} leads another to \'cleanse\'\n                    them. And \\NPC{Agrus Kos} doesn\'t give a damn.\n                    But as he watches the guilds nip and tear at each other like\n                    snakes... something clicks.\n                    Now his mind is clear, as are his options. A disaster grows under the city\'s\n                    crowded streets. He knows what he must do."
+  description: "One guild ravages the streets. \\NPC{Teysa} leads another to \'cleanse\' them. And \\NPC{Agrus Kos} doesn\'t give a damn. But as he watches the guilds nip and tear at each other like snakes... something clicks. Now his mind is clear, as are his options. A disaster grows under the city\'s crowded streets. He knows what he must do."
 }
 title: "Guildpact"
 author {

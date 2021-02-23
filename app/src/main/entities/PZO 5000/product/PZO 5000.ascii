@@ -1,7 +1,7 @@
 template {
   name: "PZO 5000"
   world: "Generic"
-  description: "Track treasure in style with 54 beautiful full-color cards suitable for use\n  with any fantasy RPG! Mighty swords, potent wands, potion flasks, scrolls,\n  and more about in a trove sure to improve the way you play!"
+  description: "Track treasure in style with 54 beautiful full-color cards suitable for use with any fantasy RPG! Mighty swords, potent wands, potion flasks, scrolls, and more about in a trove sure to improve the way you play!"
   short_description: "Various item cards."
 }
 title: "Item Pack One"

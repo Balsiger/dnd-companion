@@ -1,7 +1,7 @@
 template {
   name: "WTC 2164672"
   world: "Forgotten Realms"
-  description: "\\Product{The Annotated Elminster} collects the first three of Ed Greenwood's classic \\NPC{Elminster} novels: \\Product{Elminster: The Making of a Mage}, \\Product{Elminster in Myth Drannor}, and \\Product{The Temptation of Elminster}. Extensive annotations by the author will provide fascinating insight into not only the books themselves but the process of creation that made the\\Place{ Forgotten Realms} world this generation\'s greatest fantasy setting.\n                    "
+  description: "\\Product{The Annotated Elminster} collects the first three of Ed Greenwood's classic \\NPC{Elminster} novels: \\Product{Elminster: The Making of a Mage}, \\Product{Elminster in Myth Drannor}, and \\Product{The Temptation of Elminster}. Extensive annotations by the author will provide fascinating insight into not only the books themselves but the process of creation that made the\\Place{ Forgotten Realms} world this generation\'s greatest fantasy setting. "
 }
 title: "Annotated Elminster"
 leader: "The"

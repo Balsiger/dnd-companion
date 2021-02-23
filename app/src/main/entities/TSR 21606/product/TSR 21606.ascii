@@ -7,7 +7,7 @@ template {
     name: "Dragon 270"
   }
   world: "Forgotten Realms"
-  description: "\\Place{Caradoon}, \\Place{city of shadows}, \\Place{city of\n                    assassins}. Through its dark streets flit the killers of the \\Group{Night\n                    Mass}, led by the thin, sinister killer known as \\NPC{Ghost}. In the city\'s\n                    evil alleyways \\NPC{Cadderly}, struggling against the horrible \\Item{Chaos\n                    Curse}, must fight an additional battle against sudden, silent death."
+  description: "\\Place{Caradoon}, \\Place{city of shadows}, \\Place{city of assassins}. Through its dark streets flit the killers of the \\Group{Night Mass}, led by the thin, sinister killer known as \\NPC{Ghost}. In the city\'s evil alleyways \\NPC{Cadderly}, struggling against the horrible \\Item{Chaos Curse}, must fight an additional battle against sudden, silent death."
 }
 title: "Night Masks"
 author {

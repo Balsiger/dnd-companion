@@ -1,7 +1,7 @@
 template {
   name: "WTC 17943"
   world: "None"
-  description: "The world of \\Place{Shobu} is bursting with shield-bashing creatures and\n  mind-warping spells. Bust open a Starter Set. Tough it out like\n  \\Place{Shobu}. Never give up, and rule the DUEL!\n\n  Look at all you get!\n\n  \\list\n  {Two 20-card training decks that can be combined into one tournament deck.\n   Decks may contain duplicate cards.}\n  {1 Dreamweave Duel Masters mini-comic!}\n  {1 exclusive Duel Masters Rothus, the Traveler premium card!}\n  {1 quick-start guide illustrated by Shigenobu Matsumoto}\n  {1 rulebook}\n  {2 Duel Masters playmats}\n  {1 D-MAX membership offer}\n  {1 bonus pack of booster cards!}"
+  description: "The world of \\Place{Shobu} is bursting with shield-bashing creatures and mind-warping spells. Bust open a Starter Set. Tough it out like \\Place{Shobu}. Never give up, and rule the DUEL! Look at all you get! list\n{Two 20-card training decks that can be combined into one tournament deck.\nDecks may contain duplicate cards.} {1 Dreamweave Duel Masters mini-comic!} {1 exclusive Duel Masters Rothus, the Traveler premium card!} {1 quick-start guide illustrated by Shigenobu Matsumoto} {1 rulebook} {2 Duel Masters playmats} {1 D-MAX membership offer} {1 bonus pack of booster cards!}"
 }
 title: "Duel Masters Starter Set"
 subtitle: "The Game Begins Here!"

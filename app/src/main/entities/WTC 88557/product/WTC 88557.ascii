@@ -1,7 +1,7 @@
 template {
   name: "WTC 88557"
   world: "Forgotten Realms"
-  description: "This slip-covered gift set contains the first three books published by\n                    R.A. Salvatore: \\Product{The Crystal Shard}, \\Product{Streams of Silver}, and\n                    \\Product{The Halfling\'s Gem}. These titles introduced the author\'s signature\n                    character, \\NPC{Drizzt Do\'Urden}, hero of Salvatore\'s many New York Times\n                    bestselling titles. These three classic novels are gathered together here in\n                    a handy and attractive slipcase."
+  description: "This slip-covered gift set contains the first three books published by R.A. Salvatore: \\Product{The Crystal Shard}, \\Product{Streams of Silver}, and \\Product{The Halfling\'s Gem}. These titles introduced the author\'s signature character, \\NPC{Drizzt Do\'Urden}, hero of Salvatore\'s many New York Times bestselling titles. These three classic novels are gathered together here in a handy and attractive slipcase."
 }
 title: "Icewind Dale Trilogy Gift Set"
 leader: "The"

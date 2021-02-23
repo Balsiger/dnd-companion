@@ -1,7 +1,7 @@
 template {
   name: "WTC 88605"
   world: "Forgotten Realms"
-  description: "Adventurer on the Run!\n                    Once \\NPC{Shandril} was a humble kitchen maid.\n                    Now she\'s one of the most powerful magic-users in the land.\n                    And a lot of people want her dead.\n                    The evil \\Group{Zhentarim}, the powerful \\Group{Cult of the Dragon}---all of\n                    them want her spellfire, and they\'ll kill whoever they must to get\n                    it. There\'s only one thing for \\NPC{Shandril} to do: run. With the aid of\n                    \\NPC{Elminster of Shadowdale}, the \\Group{Knights of Myth Drannor}, her\n                    lover, and a determined dwarf, she\'ll wield her magic for the cause of\n                    good. But if her magic becomes too powerful, her friends won\'t have\n                    a choice.\n                    They\'ll kill her themselves."
+  description: "Adventurer on the Run! Once \\NPC{Shandril} was a humble kitchen maid. Now she\'s one of the most powerful magic-users in the land. And a lot of people want her dead. The evil \\Group{Zhentarim}, the powerful \\Group{Cult of the Dragon}---all of them want her spellfire, and they\'ll kill whoever they must to get it. There\'s only one thing for \\NPC{Shandril} to do: run. With the aid of \\NPC{Elminster of Shadowdale}, the \\Group{Knights of Myth Drannor}, her lover, and a determined dwarf, she\'ll wield her magic for the cause of good. But if her magic becomes too powerful, her friends won\'t have a choice. They\'ll kill her themselves."
 }
 title: "Crown of Fire"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 9547474"
   world: "Dragonlance"
-  description: "As the \\NPC{Defiler}\'s curse holds \\NPC{Vael}s health hostage, \\NPC{Elidor}\n  searches for a way to rescue her without succumbing to the evil wizard\'s\n  demands.\n\n  Somewhere within the lost city of \\NPC{Taeloc}, a \\Item{crystal chalice} may\n  hold the answers to his prayers. A group of shady mercenaries offers to\n  protect \\NPC{Elidor} on the journey and give him the chalice, in exchange for\n  his help in locating the city. Desperate to save his love, \\NPC{Elidor}\n  reluctantly agrees.\n\n  But nothing goes exactly as planned..."
+  description: "As the \\NPC{Defiler}\'s curse holds \\NPC{Vael}s health hostage, \\NPC{Elidor}\nsearches for a way to rescue her without succumbing to the evil wizard\'s demands. Somewhere within the lost city of \\NPC{Taeloc}, a \\Item{crystal chalice} may hold the answers to his prayers. A group of shady mercenaries offers to protect \\NPC{Elidor} on the journey and give him the chalice, in exchange for his help in locating the city. Desperate to save his love, \\NPC{Elidor} reluctantly agrees. But nothing goes exactly as planned..."
 }
 title: "Crystal Chalice"
 leader: "The"

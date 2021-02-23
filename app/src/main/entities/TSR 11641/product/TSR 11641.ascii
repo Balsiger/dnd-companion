@@ -5,7 +5,7 @@ template {
     name: "internet"
   }
   world: "Generic"
-  description: "The easiest way to learn how to play the Third Edition Dungeons & Dragons\n                    game.\n                    The first new edition of the Dungeons & Dragons game in ten years improves\n                    and updates the world\'s bestselling roleplaying game. Third Edition D&D is\n                    the biggest thing to ever hit the roleplaying game market, and the D&D\n                    Adventure Game is the best way to enter the limitless realms of\n                    imagination. Every game lover who wants to learn how to play the D&D game\n                    should start with this box, which includes introductory rules, adventure\n                    material for beginning a D&D campaign, and everything needed to play --\n                    rules, dice, counters, character sheets, and more."
+  description: "The easiest way to learn how to play the Third Edition Dungeons & Dragons game. The first new edition of the Dungeons & Dragons game in ten years improves and updates the world\'s bestselling roleplaying game. Third Edition D&D is the biggest thing to ever hit the roleplaying game market, and the D&D Adventure Game is the best way to enter the limitless realms of imagination. Every game lover who wants to learn how to play the D&D game should start with this box, which includes introductory rules, adventure material for beginning a D&D campaign, and everything needed to play -- rules, dice, counters, character sheets, and more."
 }
 title: "D&D Adventure Game"
 author {

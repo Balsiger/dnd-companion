@@ -1,7 +1,7 @@
 template {
   name: "PZO 1100"
   world: "Generic"
-  description: "For three decades, \\Product{Dragon} magazine has been the official monthly\n                    resource for Dungeons & Dragons players. Many monsters, classes, and even\n                    campaign settings have gone on to define the modern game first appeared in\n                    \\Product{Dragon}\'s pages, and a history of the magazine is a history of the\n                    game itself.\n                    The \\Product{Dragon Compendium} collects the most popular classic articles\n                    from throughout \\Product{Dragon} magazine\'s proud history, all updated to the\n                    current edition of the D&D rules. Selected with the input of current and\n                    former editors and D&D fans across the world, the articles in this 256-page\n                    volume are proven favorites---material you will want to reference again and\n                    again."
+  description: "For three decades, \\Product{Dragon} magazine has been the official monthly resource for Dungeons & Dragons players. Many monsters, classes, and even campaign settings have gone on to define the modern game first appeared in \\Product{Dragon}\'s pages, and a history of the magazine is a history of the game itself. The \\Product{Dragon Compendium} collects the most popular classic articles from throughout \\Product{Dragon} magazine\'s proud history, all updated to the current edition of the D&D rules. Selected with the input of current and former editors and D&D fans across the world, the articles in this 256-page volume are proven favorites---material you will want to reference again and again."
 }
 title: "Dragon Compendium Volume I"
 subtitle: "30 Years in the Making!"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 2177574"
   world: "Eberron"
-  description: "A prominent aristocrat and his entire family are murdered in the heart of the capital city. \\NPC{Soneste}, a young inquisitive famous for solving two high-profile cases, is called in to track down the killer. The eyes of her realm are upon her, demanding swift and certain justice.\n\n\\NPC{Tallis} could have been a war hero, but fate dealt him a different hand. He survives on the streets, a wanted man in the land to which he devoted his life, unable to give up the fight. Even if it means hunting down the worst of the worst in \\Place{Karrnath}."
+  description: "A prominent aristocrat and his entire family are murdered in the heart of the capital city. \\NPC{Soneste}, a young inquisitive famous for solving two high-profile cases, is called in to track down the killer. The eyes of her realm are upon her, demanding swift and certain justice. PC{Tallis} could have been a war hero, but fate dealt him a different hand. He survives on the streets, a wanted man in the land to which he devoted his life, unable to give up the fight. Even if it means hunting down the worst of the worst in \\Place{Karrnath}."
 }
 title: "Darkwood Mask"
 leader: "The"

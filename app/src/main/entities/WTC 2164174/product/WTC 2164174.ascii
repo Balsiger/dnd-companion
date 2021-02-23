@@ -1,7 +1,7 @@
 template {
   name: "WTC 2164174"
   world: "Eberron"
-  description: "A swollen summer sun beats down mercilessly on the \\Place{City of Towers} as a savage series of senseless slaughters spreads throughout the city. Shimmering in the stifling heat, \\Place{Sharn} trembles on the brink of an explosion.\n\n\\NPC{Ulther Whitsun} is just trying to do his job of fixing problems. But when he finds himself teamed up with a young and ambitious chronicler, events thrust him into the center of the city\'s agony. And he finds that treachery can touch everything around him."
+  description: "A swollen summer sun beats down mercilessly on the \\Place{City of Towers} as a savage series of senseless slaughters spreads throughout the city. Shimmering in the stifling heat, \\Place{Sharn} trembles on the brink of an explosion. PC{Ulther Whitsun} is just trying to do his job of fixing problems. But when he finds himself teamed up with a young and ambitious chronicler, events thrust him into the center of the city\'s agony. And he finds that treachery can touch everything around him."
   short_description: "Book 2 of the Landernlight Files"
 }
 title: "When Night Falls"

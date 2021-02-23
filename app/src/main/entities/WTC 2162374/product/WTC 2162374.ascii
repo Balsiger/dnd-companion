@@ -1,7 +1,7 @@
 template {
   name: "WTC 2162374"
   world: "Forgotten Realms"
-  description: "\\Place{Faerun} is a land scarred by war, and peopled by the battle-tested and the war-weary.\n                    "
+  description: "\\Place{Faerun} is a land scarred by war, and peopled by the battle-tested and the war-weary. "
 }
 title: "Realms of War"
 subtitle: "The War Will Be Lost. All My Sacrifices Will Be For Nothing."

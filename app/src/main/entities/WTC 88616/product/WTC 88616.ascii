@@ -1,7 +1,7 @@
 template {
   name: "WTC 88616"
   world: "Forgotten Realms"
-  description: "In the blasted ruins of \\Place{Tilverton}, \\Monster{demons} stalk the\n                    shadows.\n                    In \\Place{Evereska} and \\Place{Cormyr}, alliances crumble.\n                    In the sun-baked desert of \\Place{Anauroch}, an empire of darkness is\n                    established.\n                    In the soul of a tortured elf, the future is decided.\n                    From the author of \\Product{The Summoning}, \\Product{The Siege}, and\n                    \\Product{Death of the Dragon} (with Ed Greenwood), the Realms-shaking\n                    \\Product{Returns of the Arch Wizards} series comes to a stunning\n                    conclusion!"
+  description: "In the blasted ruins of \\Place{Tilverton}, \\Monster{demons} stalk the shadows. In \\Place{Evereska} and \\Place{Cormyr}, alliances crumble. In the sun-baked desert of \\Place{Anauroch}, an empire of darkness is established. In the soul of a tortured elf, the future is decided. From the author of \\Product{The Summoning}, \\Product{The Siege}, and \\Product{Death of the Dragon} (with Ed Greenwood), the Realms-shaking \\Product{Returns of the Arch Wizards} series comes to a stunning conclusion!"
 }
 title: "Sorcerer"
 leader: "The"

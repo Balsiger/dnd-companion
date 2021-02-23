@@ -1,7 +1,7 @@
 template {
   name: "WTC 2162674"
   world: "Forgotten Realms"
-  description: "You hate our masters.\n                    I understand.\n                    But you thrive in their service.\n                    You are\n                    \\Large{undead}\n                    What started as one wizard\'s ambition to take over the ruling council has become a vicious civil war that breeds a monstrous array of undead. And while the undead have always been a part of life in \\Place{Thay}, after ten years of constant battles, they have begun to outnumber the living.\n                    "
+  description: "You hate our masters. I understand. But you thrive in their service. You are \\Large{undead} What started as one wizard\'s ambition to take over the ruling council has become a vicious civil war that breeds a monstrous array of undead. And while the undead have always been a part of life in \\Place{Thay}, after ten years of constant battles, they have begun to outnumber the living. "
   short_description: "The Haunted Lands, Book II"
 }
 title: "Undead"

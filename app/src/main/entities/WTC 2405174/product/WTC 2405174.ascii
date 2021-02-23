@@ -1,7 +1,7 @@
 template {
   name: "WTC 2405174"
   world: "Forgotten Realms"
-  description: "...in the black flesh,\' the portly proprietor said as the \\Monster{drow} came up to the bar. \'What brings you back to \\Place{Luskan} after these long years?\' He extended a hand, which \\NPC{Drizzt} grasped ans shook warmly.\n                    \'Well met, \\NPC{Arumn Gardpeck\', the \\Monster{dark elf} replied. \'Perhaps I have returned merely to see if you continued to ply your trade --- I take comfort that some things ever remain the same.\'\n                    \'What else would and old fool like me do?\' \\NPC{Arumn} replied. \'Have you sailed in with \\NPC{Deudermont}, then?\'\n                    \'\\NPC{Deudermont}? Is \\Item{Sea Sprite} in port?\'\n                    \'Aye, and with a trio of ships of a \\Place{Whaderdhavian} lord beside her\', \\NPC{Arumn} replied.\n                    \'And spoiling for a fight...\'"
+  description: "...in the black flesh,\' the portly proprietor said as the \\Monster{drow} came up to the bar. \'What brings you back to \\Place{Luskan} after these long years?\' He extended a hand, which \\NPC{Drizzt} grasped ans shook warmly. \'Well met, \\NPC{Arumn Gardpeck\', the \\Monster{dark elf} replied. \'Perhaps I have returned merely to see if you continued to ply your trade --- I take comfort that some things ever remain the same.\' \'What else would and old fool like me do?\' \\NPC{Arumn} replied. \'Have you sailed in with \\NPC{Deudermont}, then?\' \'\\NPC{Deudermont}? Is \\Item{Sea Sprite} in port?\' \'Aye, and with a trio of ships of a \\Place{Whaderdhavian} lord beside her\', \\NPC{Arumn} replied. 'And spoiling for a fight...\'"
   short_description: "The second book in the Transition series."
 }
 title: "Pirate King"

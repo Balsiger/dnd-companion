@@ -26,7 +26,7 @@ template {
     name: "net"
   }
   world: "Forgotten Realms"
-  description: "Far above the merciless \\Place{Underdark}, \\NPC{Drizzt Do\'Urden} fights to\n                    survive the elements of \\Place{Toril\'s} harsh surface. The young\n                    \\Monster{drow} begins a sojourn through a world entirely unlike his\n                    own---even as he evades the \\Monster{dark elves} of his past. He begins to\n                    understand his new home and its inhabitants, but acceptance among the\n                    surface-dwellers doesn\'t come easily.\n                    \'\\Product{Sojourn} is the best book published by TSR in quite some time.\'\n                    \\Product{Games Master International}."
+  description: "Far above the merciless \\Place{Underdark}, \\NPC{Drizzt Do\'Urden} fights to survive the elements of \\Place{Toril\'s} harsh surface. The young \\Monster{drow} begins a sojourn through a world entirely unlike his own---even as he evades the \\Monster{dark elves} of his past. He begins to understand his new home and its inhabitants, but acceptance among the surface-dwellers doesn\'t come easily. \'\\Product{Sojourn} is the best book published by TSR in quite some time.\' Product{Games Master International}."
 }
 title: "Sojourn"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "PZO 4011"
   world: "Generic"
-  description: "Let the games begin! Paizo Publishing\'s GameMastery line of gaming accessories continues its mantra of providing simple and elegant tools for the busy GameMaster with the newest GameMastery Map Pack release: \\Product[PZO 4011]{Tournament}. Inside, you\'ll find 18 beautiful 5\'\' x 8\'\' map tiles that can be combined to form five exciting tournament sites, including:\n\n\\list\n{A Jousting Field}\n{An Archery Stand}\n{A Melee Battleground}\n{Spectator Grandstands}\n{Competitor Pavilions}\n\nGameMasters shouldn\'t waste their time drawing a jousting field or a battleground for the grand melee. With \\Product[PZO 4011]{GameMastery Map Pack: Tournament}, you can drop a few tiles and continue on with the game. Keep it simple. Keep it fun."
+  description: "Let the games begin! Paizo Publishing\'s GameMastery line of gaming accessories continues its mantra of providing simple and elegant tools for the busy GameMaster with the newest GameMastery Map Pack release: \\Product[PZO 4011]{Tournament}. Inside, you\'ll find 18 beautiful 5\'\' x 8\'\' map tiles that can be combined to form five exciting tournament sites, including: list\n{A Jousting Field}\n{An Archery Stand}\n{A Melee Battleground}\n{Spectator Grandstands}\n{Competitor Pavilions}\n\nGameMasters shouldn\'t waste their time drawing a jousting field or a battleground for the grand melee. With \\Product[PZO 4011]{GameMastery Map Pack: Tournament}, you can drop a few tiles and continue on with the game. Keep it simple. Keep it fun."
   short_description: "Map cards for a tournament."
 }
 title: "Map Pack: Tournament"

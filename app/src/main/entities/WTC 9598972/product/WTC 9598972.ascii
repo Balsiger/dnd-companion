@@ -1,7 +1,7 @@
 template {
   name: "WTC 9598972"
   world: "Generic"
-  description: "If you want to earn the robes of a wizard, you must know the habits and habitats of the monsters in this book backward and forward. Only then will you be prepared to defend yourself on a quest of your own.\n\n\\large{You have been warned.}\n\nOver fifty creatures -- from the familiar \\Monster[giant]{giants} and \\Monster{goblins} to the utterly fantastical \\Monster{beholders} and \\Monster{behir} -- are showcased in this fully-illustrated eighty-page guide to the monstrous world around us. Discover intimate details about the habits and habitats of each magical beast, pore over maps of their lairs, and find out the best tools and tricks to overcome them."
+  description: "If you want to earn the robes of a wizard, you must know the habits and habitats of the monsters in this book backward and forward. Only then will you be prepared to defend yourself on a quest of your own. large{You have been warned.}\n\nOver fifty creatures -- from the familiar \\Monster[giant]{giants} and \\Monster{goblins} to the utterly fantastical \\Monster{beholders} and \\Monster{behir} -- are showcased in this fully-illustrated eighty-page guide to the monstrous world around us. Discover intimate details about the habits and habitats of each magical beast, pore over maps of their lairs, and find out the best tools and tricks to overcome them."
 }
 title: "Practical Guide to Monsters"
 leader: "A"

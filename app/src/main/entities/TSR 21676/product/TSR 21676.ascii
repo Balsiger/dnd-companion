@@ -10,7 +10,7 @@ template {
     name: "Dragon 270"
   }
   world: "Dragonlance"
-  description: "Welcome to \\Place{Krynn}, where magic and fantasy are commonplace.\n\n  In this collection, Don Perrin offers the story of a family of\n  \\Monster{minotaurs} cursed by \\God{Sargonnas} to repeat their heinous crime\n  of betrayal year after year after year. The god himself enjoys materializing\n  to savor their torment. Until one year, \\God{Sargonnas} doesn\'t show up . . .\n\n  Plus tales of rebels, tyrants, and other inhabitants of the wondrous world of\n  \\Place{Dragonlance} by best-selling authors Margaret Weis, Richard A. Knaak,\n  Nancy Varian Berberick, Paul B. Thompson, Chris Pierson, and Linda P. Baker\n  in a new installment of the long-running short story series celebrating its\n  fifteenth anniversary."
+  description: "Welcome to \\Place{Krynn}, where magic and fantasy are commonplace.\n\nIn this collection, Don Perrin offers the story of a family of\n\\Monster{minotaurs} cursed by \\God{Sargonnas} to repeat their heinous crime of betrayal year after year after year. The god himself enjoys materializing to savor their torment. Until one year, \\God{Sargonnas} doesn\'t show up . . . Plus tales of rebels, tyrants, and other inhabitants of the wondrous world of Place{Dragonlance} by best-selling authors Margaret Weis, Richard A. Knaak, ancy Varian Berberick, Paul B. Thompson, Chris Pierson, and Linda P. Baker in a new installment of the long-running short story series celebrating its fifteenth anniversary."
 }
 title: "Rebels and Tyrants"
 subtitle: "Tales of the Fifth Age"

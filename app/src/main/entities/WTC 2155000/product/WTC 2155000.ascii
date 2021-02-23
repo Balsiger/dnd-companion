@@ -1,7 +1,7 @@
 template {
   name: "WTC 2155000"
   world: "Generic"
-  description: "In an ancient time of magic and monsters, the factions of light and darkness battle for the fate of the world. With unexplored ruins and dread dungeons, bold adventurers clash with horrific creatures--including \\Monster[Dragon]{dragons}, \\Monster{demons}, and \\Monster{umber hulks}.\n                    Create classic battles when you collect all 60 miniatures of the \\Product{Dungeon of Dread} set. You build your warband. You challenge your friends. You conquer the dungeons with the \\Product{D&D Miniatures Game}."
+  description: "In an ancient time of magic and monsters, the factions of light and darkness battle for the fate of the world. With unexplored ruins and dread dungeons, bold adventurers clash with horrific creatures--including \\Monster[Dragon]{dragons}, \\Monster{demons}, and \\Monster{umber hulks}. Create classic battles when you collect all 60 miniatures of the \\Product{Dungeon of Dread} set. You build your warband. You challenge your friends. You conquer the dungeons with the \\Product{D&D Miniatures Game}."
   short_description: "A booster pack for the 4th edition miniature game."
 }
 title: "Dungeon of Dread Booster Pack"

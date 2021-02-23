@@ -1,7 +1,7 @@
 template {
   name: "WTC 17877"
   world: "Dragonlance"
-  description: "This direct follow-up to the recent best-selling \\Product{War of Souls\n  trilogy} deals with the \\Monster{minotaurs}, a species with which the author\n  is particularly associated in the minds of \\Product{Dragonlance} fans. This\n  series will move the \\Monster{minotaur} species to the forefront of the\n  \\Place{Dragonlance} world, and since this is the first hardcover title that\n  deals directly with the world-changing fallout at the end of the \\Product{War\n  of Souls}, it is both a key title for \\Product{Dragonlance} fans and an\n  excellent entry point for new readers."
+  description: "This direct follow-up to the recent best-selling \\Product{War of Souls trilogy} deals with the \\Monster{minotaurs}, a species with which the author is particularly associated in the minds of \\Product{Dragonlance} fans. This series will move the \\Monster{minotaur} species to the forefront of the Place{Dragonlance} world, and since this is the first hardcover title that deals directly with the world-changing fallout at the end of the \\Product{War of Souls}, it is both a key title for \\Product{Dragonlance} fans and an excellent entry point for new readers."
 }
 title: "Night of Blood"
 author {

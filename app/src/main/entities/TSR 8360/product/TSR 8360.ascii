@@ -17,7 +17,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "It will soon be the \\Event{Night of the Eye}, a rare time when all three\n  moons align in high sanction over the lands of \\Place{Krynn}. On the eve of\n  \\NPC{Guerrand DiThon}\'s political marriage to a rival family, the young noble\n  is visited by a strange, powerful mage who knows more about him than he does\n  himself. Seduced by promises of wizardly might, \\NPC{Guerrand} slips away\n  beneath the triple moons and journeys for the \\Place{Tower of Wayreth}.\n\n  No one thinks he will survive the deadly trek to the tower, but he does. It\'s\n  only then that \\NPC{Guerrand} realizes that he has made many enemies in his\n  journey. One of these foes would not only see \\NPC{Guerrand} dead, but the\n  three orders of sorcery destroyed with him."
+  description: "It will soon be the \\Event{Night of the Eye}, a rare time when all three\nmoons align in high sanction over the lands of \\Place{Krynn}. On the eve of\n\\NPC{Guerrand DiThon}\'s political marriage to a rival family, the young noble is visited by a strange, powerful mage who knows more about him than he does himself. Seduced by promises of wizardly might, \\NPC{Guerrand} slips away beneath the triple moons and journeys for the \\Place{Tower of Wayreth}. o one thinks he will survive the deadly trek to the tower, but he does. It\'s only then that \\NPC{Guerrand} realizes that he has made many enemies in his journey. One of these foes would not only see \\NPC{Guerrand} dead, but the three orders of sorcery destroyed with him."
 }
 title: "Night of the Eye"
 subtitle: "Magic at its peak!"

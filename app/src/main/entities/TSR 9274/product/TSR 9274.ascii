@@ -5,7 +5,7 @@ template {
     name: "catalogue93"
   }
   world: "Forgotten Realms"
-  description: "This booklet present the \\Place{Old Empires} for DMs and players\n                    alike. Descriptions of all the major cities and towns, maps of the most\n                    important ones, information on the people, places, economics, geography, and\n                    cultures of these countries are within these pages.\n                    Prepare, then, to enter the realms of god-kings and pharaohs, of strange\n                    magic unknown even to the likes of the \\Group{Red Wizards} of\n                    \\Place{Thay}. These are the \\Place{Old Empires}."
+  description: "This booklet present the \\Place{Old Empires} for DMs and players alike. Descriptions of all the major cities and towns, maps of the most important ones, information on the people, places, economics, geography, and cultures of these countries are within these pages. Prepare, then, to enter the realms of god-kings and pharaohs, of strange magic unknown even to the likes of the \\Group{Red Wizards} of Place{Thay}. These are the \\Place{Old Empires}."
 }
 title: "Old Empires"
 author {

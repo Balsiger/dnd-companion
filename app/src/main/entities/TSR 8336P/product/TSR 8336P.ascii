@@ -19,7 +19,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "Becoming a \\Class{knight} has changed the \\NPC{Weasel} very\n  little. \\NPC{Galen Pathwarden} is still reluctant to adventure, still out to\n  save his own skin at virtually any cost. But when his brother \\NPC{Brithelm}\n  vanishes mysteriously, \\NPC{Galen} sets aside his better judgement and\n  embarks on a quest that leads under the earth, deep into a conspiracy of\n  darkness, and to the end of his courage.\n\n  \\NPC{Galen} returns to imperiled \\Place{Solamnia} in this exciting sequel to\n  the top-sellling \\Product{Weasel\'s Luck}, also by Michael Williams, the bard\n  of the \\Place{Dragonlance} saga."
+  description: "Becoming a \\Class{knight} has changed the \\NPC{Weasel} very\nlittle. \\NPC{Galen Pathwarden} is still reluctant to adventure, still out to save his own skin at virtually any cost. But when his brother \\NPC{Brithelm} vanishes mysteriously, \\NPC{Galen} sets aside his better judgement and embarks on a quest that leads under the earth, deep into a conspiracy of darkness, and to the end of his courage. PC{Galen} returns to imperiled \\Place{Solamnia} in this exciting sequel to the top-sellling \\Product{Weasel\'s Luck}, also by Michael Williams, the bard of the \\Place{Dragonlance} saga."
 }
 title: "Galen Beknighted"
 subtitle: "The Reluctant Knight Returns"

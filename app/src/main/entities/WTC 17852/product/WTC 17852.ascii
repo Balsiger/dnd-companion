@@ -1,7 +1,7 @@
 template {
   name: "WTC 17852"
   world: "Generic"
-  description: "Far beneath the earth, a sinister ritual takes place. A corrupt cleric seeks\n  the \\Item{Eye of Gruumsh}, a relic sacred to the hideous god of the\n  orcs. Against hi m stand a scullery maid, a paladin, a priest of the god\n  \\God{Pelor}, and a half-orc barbarian.\n\n  Will they be enough?"
+  description: "Far beneath the earth, a sinister ritual takes place. A corrupt cleric seeks the \\Item{Eye of Gruumsh}, a relic sacred to the hideous god of the orcs. Against hi m stand a scullery maid, a paladin, a priest of the god God{Pelor}, and a half-orc barbarian. Will they be enough?"
 }
 title: "Bloody Eye"
 leader: "The"

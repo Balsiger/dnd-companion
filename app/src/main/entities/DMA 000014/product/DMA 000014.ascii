@@ -1,7 +1,7 @@
 template {
   name: "DMA 000014"
   world: "None"
-  description: "This is the official convention program book of the 30th anniversary gen con\n  game fair of the year 1997."
+  description: "This is the official convention program book of the 30th anniversary gen con game fair of the year 1997."
 }
 title: "1997 Gen Con Game Fair"
 editor {

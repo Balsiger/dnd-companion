@@ -7,7 +7,7 @@ template {
     name: "Dragon 270"
   }
   world: "Forgotten Realms"
-  description: "\\large{Even the brutal streets of a treacherous city can\'t hide a tortured\n                    soul forever.}\n                    The barbarian \\NPC{Wulfgar} sets upon a dangerous path toward redemption when\n                    an old friend finds him in the city of \\Place{Luskan}. \\NPC{Wulfgar}\'s\n                    journey twists up the windswept peaks of the \\Place{Spine of the World}. He\n                    will persevere, for at the end lies his most prized possession---the life he\n                    thought he\'d lost forever.\n                    \\emph{\'Salvatore shows...intelligence in using the classic elements, a\n                    pleasant dry wit and a narrative gift.\'}\n                    \\right{---Publishers Weekly}\n                    \\bold{Contains 15 pages of roleplaying game rules based on \\Product{The Spine\n                    of the World}.}"
+  description: "\\large{Even the brutal streets of a treacherous city can\'t hide a tortured soul forever.} The barbarian \\NPC{Wulfgar} sets upon a dangerous path toward redemption when an old friend finds him in the city of \\Place{Luskan}. \\NPC{Wulfgar}\'s journey twists up the windswept peaks of the \\Place{Spine of the World}. He will persevere, for at the end lies his most prized possession---the life he thought he\'d lost forever. \\emph{\'Salvatore shows...intelligence in using the classic elements, a pleasant dry wit and a narrative gift.\'} \\right{---Publishers Weekly} \\bold{Contains 15 pages of roleplaying game rules based on \\Product{The Spine of the World}.}"
 }
 title: "Spine of the World"
 leader: "The"

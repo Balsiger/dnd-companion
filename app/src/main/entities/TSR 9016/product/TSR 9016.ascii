@@ -5,7 +5,7 @@ template {
     name: "net price list"
   }
   world: "Generic"
-  description: "This module contains background information, referee\'s notes, two level\n                    maps, and exploration matrix keys. It provides a complete module for play of\n                    Advanced Dungeon & Dragons, and it can be used alone or as the first of a\n                    three-part expedition adventure which also employs Dungeon Module G2\n                    (\\Product{Glacial Rift of the \\Monster{Frost Giant} \\NPC{Jarl}}) and Dungeon\n                    Module G3 (\\Product{Hall of the \\Monster{Fire Giant} King})."
+  description: "This module contains background information, referee\'s notes, two level maps, and exploration matrix keys. It provides a complete module for play of Advanced Dungeon & Dragons, and it can be used alone or as the first of a three-part expedition adventure which also employs Dungeon Module G2 (\\Product{Glacial Rift of the \\Monster{Frost Giant} \\NPC{Jarl}}) and Dungeon Module G3 (\\Product{Hall of the \\Monster{Fire Giant} King})."
 }
 title: "Steading of the Hill Giant Chief"
 date {

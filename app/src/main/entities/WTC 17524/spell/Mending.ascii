@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Mending repairs small breaks or tears in objects (but not warps, such as might be caused by a warp wood spell). It will weld broken metallic objects such as a ring, a chain link, a medallion, or a slender dagger, providing but one break exists.  Ceramic or wooden objects with multiple breaks can be invisibly rejoined to be as strong as new. A hole in a leather sack or a wineskin is completely healed over by mending. The spell can repair a magic item, but the item\'s magical abilities are not restored. (For restoring a broken magic item\'s abilities, see the item creation feats in Chapter 5: Feats.) The spell cannot mend broken magic rods, staffs, or wands, nor does it affect creatures (including constructs)."
+  description: "Mending repairs small breaks or tears in objects (but not warps, such as might be caused by a warp wood spell). It will weld broken metallic objects such as a ring, a chain link, a medallion, or a slender dagger, providing but one break exists.\n\nCeramic or wooden objects with multiple breaks can be invisibly rejoined to be as strong as new. A hole in a leather sack or a wineskin is completely healed over by mending. The spell can repair a magic item, but the item\'s magical abilities are not restored. (For restoring a broken magic item\'s abilities, see the item creation feats in Chapter 5: Feats.) The spell cannot mend broken magic rods, staffs, or wands, nor does it affect creatures (including constructs)."
   short_description: "Makes minor repairs on an object."
 }
 school: TRANSMUTATION

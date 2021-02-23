@@ -16,7 +16,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "\\Monster{Dragons}, the true children of \\Place{Krynn}, are power incarnate,\n  and they know it. They come in all guises and forms. Their personalities are\n  a varied as their colors. Their magical abilities are virtually\n  unlimited. And nothing is so terrifying as \\Monster{dragons} on the wing.\n\n  In this collection, a follow-up to the popular \\Product{The Dragons of Krynn}\n  anthology, the \\Place{Dragonlance} saga\'s best-known authors serve up a\n  fantastical array of \\Monster{dragon} tales featuring the motley races of\n  \\Place{Krynn} and the deadliest creatures of the \\Place{Dragonlance} saga.\n\n  Here are exciting new stories in the series that has enthralled over 12\n  million readers worldwide, written by wonderful authors and edited by\n  \\Place{Dragonlance} creators Margaret Weis and Tracy Hickman."
+  description: "\\Monster{Dragons}, the true children of \\Place{Krynn}, are power incarnate, and they know it. They come in all guises and forms. Their personalities are\na varied as their colors. Their magical abilities are virtually\nunlimited. And nothing is so terrifying as \\Monster{dragons} on the wing. In this collection, a follow-up to the popular \\Product{The Dragons of Krynn} anthology, the \\Place{Dragonlance} saga\'s best-known authors serve up a fantastical array of \\Monster{dragon} tales featuring the motley races of Place{Krynn} and the deadliest creatures of the \\Place{Dragonlance} saga. Here are exciting new stories in the series that has enthralled over 12 million readers worldwide, written by wonderful authors and edited by Place{Dragonlance} creators Margaret Weis and Tracy Hickman."
 }
 title: "Dragons at War"
 leader: "The"

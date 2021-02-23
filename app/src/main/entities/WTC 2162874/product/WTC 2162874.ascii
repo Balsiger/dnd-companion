@@ -1,7 +1,7 @@
 template {
   name: "WTC 2162874"
   world: "Forgotten Realms"
-  description: "No one has laid eyes on the \\Place{Obsidian Ridge} in over a century. The floating mountain is a legend, lost in the dustiest tomes... until it appears as if from nowhere over the kingdom of \\Place{Erlkazar}.\n                    Driven by the madness of its master wizard, the \\Place{Obsidian Ridge} will destroy everything in its path until the wizard gets what he wants: the princess of \\Place{Erlkazar} for a bride. But deep in the tunnels of the \\Place{Obsidian Ridge}, a room of trophies attests that he wants a great deal more.\n                    \\emph{The citadel has hunted such quarry before.}\n                    "
+  description: "No one has laid eyes on the \\Place{Obsidian Ridge} in over a century. The floating mountain is a legend, lost in the dustiest tomes... until it appears as if from nowhere over the kingdom of \\Place{Erlkazar}. Driven by the madness of its master wizard, the \\Place{Obsidian Ridge} will destroy everything in its path until the wizard gets what he wants: the princess of \\Place{Erlkazar} for a bride. But deep in the tunnels of the \\Place{Obsidian Ridge}, a room of trophies attests that he wants a great deal more. \\emph{The citadel has hunted such quarry before.} "
 }
 title: "Obsidian Ridge"
 subtitle: "Nothing is beyond the reach of the \\Place{Obsidian Ridge}."

@@ -7,7 +7,7 @@ template {
     name: "Dragon 270"
   }
   world: "Forgotten Realms"
-  description: "The war rages on.\n                    \\NPC{Cadderly}, \\Class{scholar-priest} of the \\Place{Edificant Library},\n                    leads the combined forces of \\Place{Caradoon} and \\Place{Shilmista} forest\n                    against \\Place{Castle Trinity}, stronghold of his enemy \\NPC{Aballister}. But\n                    another mission calls him on a journey leading into the past.\n                    A past he would just as soon forget."
+  description: "The war rages on. \\NPC{Cadderly}, \\Class{scholar-priest} of the \\Place{Edificant Library}, leads the combined forces of \\Place{Caradoon} and \\Place{Shilmista} forest against \\Place{Castle Trinity}, stronghold of his enemy \\NPC{Aballister}. But another mission calls him on a journey leading into the past. A past he would just as soon forget."
 }
 title: "Fallen Fortress"
 leader: "The"

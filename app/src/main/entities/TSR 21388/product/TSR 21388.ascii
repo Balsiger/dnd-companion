@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Forgotten Realms"
-  description: "\\NPC{Wulfgar} returns from the \\Place{Abyss} to find there are\n                    \\Monster{demons} a hammer cannot crush.\n                    \\NPC{Entreri} has used his dagger to carve an empire in the back streets of\n                    \\Place{Calimport}, as he seeks the head of his oldest foe.\n                    \\NPC{Drizzt} learns that not all wounds bleed. And not all blades kill.\n                    \'Salvatore shows here, as in many of his other books...intelligence in using\n                    the classic elements, a pleasant dry wit and a narrative gift that make this\n                    book certain to keep \\Product{Forgotten Realms} readers turning pages\'.\n                    \\right{---Publishers Weekly}"
+  description: "\\NPC{Wulfgar} returns from the \\Place{Abyss} to find there are \\Monster{demons} a hammer cannot crush. \\NPC{Entreri} has used his dagger to carve an empire in the back streets of \\Place{Calimport}, as he seeks the head of his oldest foe. \\NPC{Drizzt} learns that not all wounds bleed. And not all blades kill. \'Salvatore shows here, as in many of his other books...intelligence in using the classic elements, a pleasant dry wit and a narrative gift that make this book certain to keep \\Product{Forgotten Realms} readers turning pages\'. right{---Publishers Weekly}"
 }
 title: "Silent Blade"
 leader: "The"

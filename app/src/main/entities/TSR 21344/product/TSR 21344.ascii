@@ -5,7 +5,7 @@ template {
     name: "net"
   }
   world: "None"
-  description: "\\NPC{Urza Planeswalker} has enlisted the most brilliant minds from across\n                    \\Place{Dominaria} to study at his academy on \\Place{Tolaria}. Together they\n                    work to bring to life the greatest artifact weapon \\NPC{Urza} has ever\n                    devised, hoping to use it to defend their home from an imminent\n                    \\Place{Phyrexian} invasion. But treachery and tragedy stalk the tiny island,\n                    as \\NPC{Urza} and his followers seek to manipulate time itself."
+  description: "\\NPC{Urza Planeswalker} has enlisted the most brilliant minds from across \\Place{Dominaria} to study at his academy on \\Place{Tolaria}. Together they work to bring to life the greatest artifact weapon \\NPC{Urza} has ever devised, hoping to use it to defend their home from an imminent \\Place{Phyrexian} invasion. But treachery and tragedy stalk the tiny island, as \\NPC{Urza} and his followers seek to manipulate time itself."
 }
 title: "Time Streams"
 subtitle: "\\NPC{Urza}\'s Legacy Unfolds."

@@ -1,7 +1,7 @@
 template {
   name: "WTC 17974"
   world: "Forgotten Realms"
-  description: "\\large{One \\Monster{Dark Elf}.}\n                    Two Enchanted Blades.\n                    One Unknown Enemy.\n                    And A Horde Of Invadors.\n                    When a blood-thirsty band of \\Monster{Orcs}, led by an as-yet-unseen enemy,\n                    comes rampaging out of the \\Place{Spine of the World}, it lays waste to\n                    everything in its path. \\Monster{Dark elf} range \\NPC{Drizzt Do\'Urden} and\n                    his most trusted friends find themselves in the path of destruction. As\n                    blades slash and feet trample, even they may not withstand the Thousand\n                    \\Monster{Orcs}."
+  description: "\\large{One \\Monster{Dark Elf}.} Two Enchanted Blades. One Unknown Enemy. And A Horde Of Invadors. When a blood-thirsty band of \\Monster{Orcs}, led by an as-yet-unseen enemy, comes rampaging out of the \\Place{Spine of the World}, it lays waste to everything in its path. \\Monster{Dark elf} range \\NPC{Drizzt Do\'Urden} and his most trusted friends find themselves in the path of destruction. As blades slash and feet trample, even they may not withstand the Thousand Monster{Orcs}."
 }
 title: "Thousand Orcs"
 leader: "The"

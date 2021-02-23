@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The transmuted creature becomes wiser.  The spell grants a +4 enhancement bonus to Wisdom, adding the usual benefit to Wisdom-related skills. Clerics, druids, paladins, and rangers (and other Wisdombased spellcasters) who receive owl\'s wisdom do not gain any additional bonus spells for the increased Wisdom, but the save DCs for their spells increase.  Arcane Material Component: A few feathers, or a pinch of droppings, from an owl."
+  description: "The transmuted creature becomes wiser.\n\nThe spell grants a +4 enhancement bonus to Wisdom, adding the usual benefit to Wisdom-related skills. Clerics, druids, paladins, and rangers (and other Wisdombased spellcasters) who receive owl\'s wisdom do not gain any additional bonus spells for the increased Wisdom, but the save DCs for their spells increase.\n\nArcane Material Component: A few feathers, or a pinch of droppings, from an owl."
   short_description: "Subject gains +4 to Wis for 1 min./level."
 }
 school: TRANSMUTATION

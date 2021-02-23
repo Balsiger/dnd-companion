@@ -20,7 +20,7 @@ template {
     name: "catalog96"
   }
   world: "Generic"
-  description: "The legendary coastal city of \\Place{Carsall} existed two centuries\n                    ago---before it vanished beneath the waves, reputedly at the hands of an\n                    angry sea god. Stories of the city and tales of fabulous artifacts\n                    originating from \\Place{Carsall} still abound. Now, the clerics of a seaside\n                    town have proven that some unusual items are indeed from the legendary\n                    city---and two priests involved in the process, as well as a mysterious\n                    stranger, are missing.\n                    Are player characters willing to risk life and breath beneath the water to\n                    find the lost city? Does the city truly exist, or is the story simply a hoax\n                    put forth by crooked fishermen? Take the plunge---explore \\Product{The Murky\n                    Deep}!"
+  description: "The legendary coastal city of \\Place{Carsall} existed two centuries ago---before it vanished beneath the waves, reputedly at the hands of an angry sea god. Stories of the city and tales of fabulous artifacts originating from \\Place{Carsall} still abound. Now, the clerics of a seaside town have proven that some unusual items are indeed from the legendary city---and two priests involved in the process, as well as a mysterious stranger, are missing. Are player characters willing to risk life and breath beneath the water to find the lost city? Does the city truly exist, or is the story simply a hoax put forth by crooked fishermen? Take the plunge---explore \\Product{The Murky Deep}!"
 }
 title: "Murky Deep"
 leader: "The"

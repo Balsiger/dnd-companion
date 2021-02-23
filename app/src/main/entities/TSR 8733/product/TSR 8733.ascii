@@ -4,7 +4,7 @@ template {
     name: "catalog98"
   }
   world: "None"
-  description: "Escaping from \\Place{Rath}, the crew of the flying ship \\Item{Weatherlight}\n                    finds itself adrift. Grieving for their lost comrades and in need of repairs,\n                    they make their painful way to \\Place{Mercadia}, a city where everything is\n                    for sale.\n                    But not everything is as it seems. In the streets of \\Place{Mercadia}, the\n                    heroes of the \\Item{Weatherlight} find that more than merchandise can be\n                    bought and sold."
+  description: "Escaping from \\Place{Rath}, the crew of the flying ship \\Item{Weatherlight} finds itself adrift. Grieving for their lost comrades and in need of repairs, they make their painful way to \\Place{Mercadia}, a city where everything is for sale. But not everything is as it seems. In the streets of \\Place{Mercadia}, the heroes of the \\Item{Weatherlight} find that more than merchandise can be bought and sold."
 }
 title: "Mercadian Masques"
 subtitle: "Treachery stalks the Weatherlight."

@@ -7,7 +7,7 @@ template {
     name: "catalog98"
   }
   world: "Generic"
-  description: "A lot of spells from \\Spell{Squaring the Circle} to \\Spell{Zone of\n                    Despair}."
+  description: "A lot of spells from \\Spell{Squaring the Circle} to \\Spell{Zone of Despair}."
 }
 title: "Wizard\'s Spell Compendium, Volume Four"
 date {

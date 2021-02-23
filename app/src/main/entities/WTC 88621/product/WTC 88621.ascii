@@ -1,7 +1,7 @@
 template {
   name: "WTC 88621"
   world: "Rokugan"
-  description: "\\Place{Rokugan} stands on the brink of chaos. As his brothers and sister\n                    seek the favor of the clans, the illegitimate son \\NPC{Akodo Kaneka} forsakes\n                    grasping for power and takes up a new quest---defending the helpless and\n                    destroying those who ravage the common people. But as his world crumbles\n                    about him, he discovers that no son of \\NPC{Toturi} can escape his destiny."
+  description: "\\Place{Rokugan} stands on the brink of chaos. As his brothers and sister seek the favor of the clans, the illegitimate son \\NPC{Akodo Kaneka} forsakes grasping for power and takes up a new quest---defending the helpless and destroying those who ravage the common people. But as his world crumbles about him, he discovers that no son of \\NPC{Toturi} can escape his destiny."
 }
 title: "Wind of War"
 subtitle: "The Steel Throne Sits Empty..."

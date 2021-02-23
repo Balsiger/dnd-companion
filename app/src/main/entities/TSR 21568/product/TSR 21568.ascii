@@ -10,7 +10,7 @@ template {
     name: "Dragon 268"
   }
   world: "Forgotten Realms"
-  description: "When armies of evil rise up from the seas around \\Place{Faer\\hat{u}n}, no\n                    one is safe.\n                    A young mage battles at the side of \\NPC{Khelben Arunsun} to defend the city\n                    of \\Place{Waterdeep}.\n                    A \\Monster{merman} struggles to fulfill his desperate mission to reach the\n                    \\Place{Sea of Fallen Stars}.\n                    Twelve all new stories by such \\Place{Forgotten Realms} stars as Mel Odom, Ed\n                    Greenwood, Elaine Cunningham, Troy Denning, Lynn Abbey, and Clayton Emery!."
+  description: "When armies of evil rise up from the seas around \\Place{Faer\\hat{u}n}, no one is safe. A young mage battles at the side of \\NPC{Khelben Arunsun} to defend the city of \\Place{Waterdeep}. A \\Monster{merman} struggles to fulfill his desperate mission to reach the \\Place{Sea of Fallen Stars}. Twelve all new stories by such \\Place{Forgotten Realms} stars as Mel Odom, Ed Greenwood, Elaine Cunningham, Troy Denning, Lynn Abbey, and Clayton Emery!."
 }
 title: "Realms of the Deep"
 author {

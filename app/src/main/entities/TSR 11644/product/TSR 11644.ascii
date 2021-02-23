@@ -2,7 +2,7 @@ template {
   name: "TSR 11644"
   synonym: "WTC 86575"
   world: "Generic"
-  description: "Two hundred years ago, the great \\Monster{dwarf} smith \\NPC{Durgeddin the\n                    Black} built \\Place{Khundrukar}, a hidden stronghold for his war of vengeance\n                    against all \\Monster{orckind}. For years \\NPC{Durgeddin} labored, until the\n                    \\Monster{orcs} discovered \\Place{Khundrukar} and stormed the citadel, slaying\n                    all within. Legends say that \\NPC{Durgeddin}\'s masterful blades and\n                    glittering treasures were never found.\n                    The \\Product{Forge of Fury} is a stand-alone adventure for the new Dungeons &\n                    Dragons game. It details \\Place{Khundrukar}\'s five extensive levels and\n                    fierce tribes, dangerous obstacles, diabolical traps, and monstrous\n                    creatures."
+  description: "Two hundred years ago, the great \\Monster{dwarf} smith \\NPC{Durgeddin the Black} built \\Place{Khundrukar}, a hidden stronghold for his war of vengeance against all \\Monster{orckind}. For years \\NPC{Durgeddin} labored, until the \\Monster{orcs} discovered \\Place{Khundrukar} and stormed the citadel, slaying all within. Legends say that \\NPC{Durgeddin}\'s masterful blades and glittering treasures were never found. The \\Product{Forge of Fury} is a stand-alone adventure for the new Dungeons & Dragons game. It details \\Place{Khundrukar}\'s five extensive levels and fierce tribes, dangerous obstacles, diabolical traps, and monstrous creatures."
 }
 title: "Forge of Fury"
 leader: "The"

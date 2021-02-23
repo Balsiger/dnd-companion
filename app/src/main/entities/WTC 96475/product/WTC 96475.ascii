@@ -1,7 +1,7 @@
 template {
   name: "WTC 96475"
   world: "Dragonlance"
-  description: "This title kicks off a key new \\Place{Dragonlance} trilogy from popular\n  \\Place{Dragonlance} author Douglas Niles. This series will explore the\n  post-war era in \\Place{Solamnia}, a central region of the \\Place{Dragonlance}\n  world, continuing key story elements from the New York Times best-selling\n  \\Product{War of Souls} series."
+  description: "This title kicks off a key new \\Place{Dragonlance} trilogy from popular Place{Dragonlance} author Douglas Niles. This series will explore the post-war era in \\Place{Solamnia}, a central region of the \\Place{Dragonlance} world, continuing key story elements from the New York Times best-selling Product{War of Souls} series."
 }
 title: "Lord of the Rose"
 author {

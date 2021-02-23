@@ -1,7 +1,7 @@
 template {
   name: "WTC 17721"
   world: "None"
-  description: "When \\NPC{Nova Darling} sees the weird message on the mall ATM, she can\'t\n                    believe her eyes. True, Nova loves to play the electric guitar. But that\'s\n                    one secret she\'s never told anyone, especially her mom. Nova\'s mom is\n                    convinced that Nova is destined to be a ballet star. But Nova\'s more\n                    interested in practicing riffs on her ax, and gazing at the oh-so-cute\n                    \\NPC{Joe Tsai}. Will the mystery message help Nova follow her dreams without\n                    breaking her mom\'s heart?"
+  description: "When \\NPC{Nova Darling} sees the weird message on the mall ATM, she can\'t believe her eyes. True, Nova loves to play the electric guitar. But that\'s one secret she\'s never told anyone, especially her mom. Nova\'s mom is convinced that Nova is destined to be a ballet star. But Nova\'s more interested in practicing riffs on her ax, and gazing at the oh-so-cute \\NPC{Joe Tsai}. Will the mystery message help Nova follow her dreams without breaking her mom\'s heart?"
 }
 title: "Nova Rocks!"
 subtitle: "Act like a rock star in front of a group of strangers. Would you dare?"

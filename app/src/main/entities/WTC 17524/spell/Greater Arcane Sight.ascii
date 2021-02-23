@@ -3,7 +3,7 @@ template {
   synonym: "Arcane Sight, Greater"
   synonym: "Sight, Arcane, Greater"
   world: "Generic"
-  description: "This spell functions like \\Spell{arcane sight}, except that you automatically know which spells or magical effects are active upon any individual or object you see.  \\Spell{Greater arcane sight} doesn't let you identify magic items.  Unlike \\Spell{arcane sight}, this spell cannot be made permanent with a permanency spell."
+  description: "This spell functions like \\Spell{arcane sight}, except that you automatically know which spells or magical effects are active upon any individual or object you see. Spell{Greater arcane sight} doesn't let you identify magic items.\n\nUnlike \\Spell{arcane sight}, this spell cannot be made permanent with a permanency spell."
   short_description: "As arcane sight, but also reveals magic effects on creatures and objects."
 }
 summary: "$undefined$"

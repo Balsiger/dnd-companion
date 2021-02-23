@@ -1,7 +1,7 @@
 template {
   name: "WTC 24196"
   world: "Eberron"
-  description: "Out of sight of the Twelve \\Group{Dragonmarked Houses}, a thirteenth house operates in the dark lower levels of \\NPC{Sharn}. A new leader has arisen from the ranks of the aberrent dragonmarks, a man who calls himself the \\NPC{Son of Khyber}.\n\n\\NPC{Thorn} is sent to infiltrate the group, before he incites \\Group{House Tarkanan} to revolt against the \\Group{Twelve}.\n\nBut is she lying to the \\Group{Tarkanans}, or are the strange powers she\'s manifesting the signs of an aberrent dragonmark? The answers may lie with her mysterious adversary\n\n\\Large{THE SON OF KHYBER}"
+  description: "Out of sight of the Twelve \\Group{Dragonmarked Houses}, a thirteenth house operates in the dark lower levels of \\NPC{Sharn}. A new leader has arisen from the ranks of the aberrent dragonmarks, a man who calls himself the \\NPC{Son of Khyber}. PC{Thorn} is sent to infiltrate the group, before he incites \\Group{House Tarkanan} to revolt against the \\Group{Twelve}.\n\nBut is she lying to the \\Group{Tarkanans}, or are the strange powers she\'s manifesting the signs of an aberrent dragonmark? The answers may lie with her mysterious adversary Large{THE SON OF KHYBER}"
   short_description: "Book 2 in the Thorn of Breland series."
 }
 title: "Son of Khyber"

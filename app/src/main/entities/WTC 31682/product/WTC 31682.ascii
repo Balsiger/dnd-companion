@@ -2,7 +2,7 @@ template {
   name: "WTC 31682"
   synonym: ""
   world: "Forgotten Realms"
-  description: "The madness of the Rage\n                    changed the face of the world.\n                    \\Monster{Dragons} lost their thrones, treasures and knowledge of the Great Game.\n                    But now the Rage is over.\n                    \\bold{We are the rightful lords of all \\Place{Faer\\hat{u}n}."
+  description: "The madness of the Rage changed the face of the world. \\Monster{Dragons} lost their thrones, treasures and knowledge of the Great Game. But now the Rage is over. bold{We are the rightful lords of all \\Place{Faer\\hat{u}n}."
   short_description: "Closing of the Brotherhood of the Griffon Trilogy."
 }
 title: "Spectral Blade"

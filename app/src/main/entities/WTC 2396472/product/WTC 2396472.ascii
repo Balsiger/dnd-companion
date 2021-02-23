@@ -1,7 +1,7 @@
 template {
   name: "WTC 2396472"
   world: "Eberron"
-  description: "Welcome to a world of swashbuckling action and dark fantasy, a world ruled by great dynasties and tempered by war. The \\Product{Eberron Campaign Setting} holds many wonders, from dragonmarks to \\Monster{warforged}, deadly dungeons to \\Item{elemental airships}. As the shadows of evil and conspiracy threaten to envelop the land, heroes of prophecy come forth to save the day.\n\nThis Dungeons & Dragons supplement contains everything you need to run thrilling adventures i the world of \\Place{Eberron}: historical and geographical information, adventure hooks, monsters, villains, an introductory adventure, and a full-color poster map of the continent of \\Place{Khorvaire}.\n\n\\bold{Use this material to run an \\World{Eberron} campaign or to add new elements to any D&D game.}"
+  description: "Welcome to a world of swashbuckling action and dark fantasy, a world ruled by great dynasties and tempered by war. The \\Product{Eberron Campaign Setting} holds many wonders, from dragonmarks to \\Monster{warforged}, deadly dungeons to \\Item{elemental airships}. As the shadows of evil and conspiracy threaten to envelop the land, heroes of prophecy come forth to save the day.\n\nThis Dungeons & Dragons supplement contains everything you need to run thrilling adventures i the world of \\Place{Eberron}: historical and geographical information, adventure hooks, monsters, villains, an introductory adventure, and a full-color poster map of the continent of \\Place{Khorvaire}. bold{Use this material to run an \\World{Eberron} campaign or to add new elements to any D&D game.}"
   short_description: "The 4th edition Eberron Campaign Setting."
 }
 title: "Eberron Campaign Guide"

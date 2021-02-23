@@ -1,7 +1,7 @@
 template {
   name: "WTC 17769"
   world: "Forgotten Realms"
-  description: "\\NPC{Vambran} and \\NPC{Emriana} have survived assassination attempts, family\n                    feuds, arranged marriages, and monster guarded secrets. But now things are\n                    starting to get really dangerous.\n                    \\large{The Scions of \\Place{Arrabar}}\n                    Heirs to a legacy of blood and steel struggle for control of a nation of\n                    mercenaries at odds with its neighbors and at war with itself.\n                    This title continues the trilogy exploring the political intrigue of a\n                    mercenary society in the \\Place{Forgotten Realms} world. The entire series is\n                    authored by R.A. Salvatore\'s War of the Spider Queen author and rising star\n                    Thomas M. Reid and features stunning cover art from artist Duane O. Meyers."
+  description: "\\NPC{Vambran} and \\NPC{Emriana} have survived assassination attempts, family feuds, arranged marriages, and monster guarded secrets. But now things are starting to get really dangerous. \\large{The Scions of \\Place{Arrabar}} Heirs to a legacy of blood and steel struggle for control of a nation of mercenaries at odds with its neighbors and at war with itself. This title continues the trilogy exploring the political intrigue of a mercenary society in the \\Place{Forgotten Realms} world. The entire series is authored by R.A. Salvatore\'s War of the Spider Queen author and rising star Thomas M. Reid and features stunning cover art from artist Duane O. Meyers."
 }
 title: "Ruby Guardian"
 leader: "The"

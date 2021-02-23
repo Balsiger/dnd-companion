@@ -1,7 +1,7 @@
 template {
   name: "WTC 96705"
   world: "None"
-  description: "When \\NPC{Bella DeLuca} gets a starring role in the school production of A\n                    Midsummer Night\'s Dream, it\'s truly a dream come true. Yet soon \\NPC{Bella}\'s\n                    dream turns to a nightmare. As a fairy, \\NPC{Bella} will have to fly above\n                    the audience, attached to a cable. But \\NPC{Bella}\'s afraid of heights, a\n                    fact she hasn\'t revealed to anyone, not even her best friend. Will the\n                    mystery message help \\NPC{Bella} overcome her fear before she soars across\n                    the stage?"
+  description: "When \\NPC{Bella DeLuca} gets a starring role in the school production of A Midsummer Night\'s Dream, it\'s truly a dream come true. Yet soon \\NPC{Bella}\'s dream turns to a nightmare. As a fairy, \\NPC{Bella} will have to fly above the audience, attached to a cable. But \\NPC{Bella}\'s afraid of heights, a fact she hasn\'t revealed to anyone, not even her best friend. Will the mystery message help \\NPC{Bella} overcome her fear before she soars across the stage?"
 }
 title: "Bright Lights for Bella"
 subtitle: "Fess up! Tell a friend your secret fear. Would you dare?"

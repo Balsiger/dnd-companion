@@ -22,7 +22,7 @@ template {
     name: "catalog96"
   }
   world: "Forgotten Realms"
-  description: "\\large{Schemes of a Mad God}\n                    For all his power as \\God{God of Strife} and \\God{Lord of the Dead},\n                    \\God{Cyric} cannot achieve that which he desired most---revenge on the\n                    \\God{Goddess of Magic}. To this end, he searches in vain for the soul of\n                    \\God{Kelemvor Lyonsbane}. Once \\God{Cyric}\'s friend and the goddess\n                    \\God{Midnight}s lover, in the time when all three roamed the world as\n                    mortals, \\God{Kelemvor} remains hidden from \\God{Cyric} by those who would\n                    see the mad god overthrown. But \\God{Cyric} will risk all to find his quiet\n                    nemesis, even the destruction of the \\Place{Realm of the Dead}."
+  description: "\\large{Schemes of a Mad God} For all his power as \\God{God of Strife} and \\God{Lord of the Dead}, \\God{Cyric} cannot achieve that which he desired most---revenge on the \\God{Goddess of Magic}. To this end, he searches in vain for the soul of \\God{Kelemvor Lyonsbane}. Once \\God{Cyric}\'s friend and the goddess \\God{Midnight}s lover, in the time when all three roamed the world as mortals, \\God{Kelemvor} remains hidden from \\God{Cyric} by those who would see the mad god overthrown. But \\God{Cyric} will risk all to find his quiet emesis, even the destruction of the \\Place{Realm of the Dead}."
 }
 title: "Prince of Lies"
 author {

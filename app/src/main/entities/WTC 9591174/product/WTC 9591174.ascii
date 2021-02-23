@@ -1,7 +1,7 @@
 template {
   name: "WTC 9591174"
   world: "Forgotten Realms"
-  description: "\\large{Daughter of \\Group{House Hiloar}}\n                    \\large{\\Group{War Wizard} of \\Place{Cormyr}}\n                    \\large{Renegade}\n                    Only fools find themselves at \\Place{Winterkeep} after the first snowfall. The cold\n                    alone can kill, if you live long enough, and dangers far worse haunt the\n                    ruined keep in winter.\n                    But slavers stole her son. She would sacrifice everything to get him back. In\n                    the uncaring, frozen north, will it be enough?\n                    \\Product{Frostfell} is the next title in the \\Place{Forgotten Realms} novel series focusing on\n                    wizards, the popular D&D game iconic class."
+  description: "\\large{Daughter of \\Group{House Hiloar}} \\large{\\Group{War Wizard} of \\Place{Cormyr}} \\large{Renegade} Only fools find themselves at \\Place{Winterkeep} after the first snowfall. The cold alone can kill, if you live long enough, and dangers far worse haunt the ruined keep in winter. But slavers stole her son. She would sacrifice everything to get him back. In the uncaring, frozen north, will it be enough? \\Product{Frostfell} is the next title in the \\Place{Forgotten Realms} novel series focusing on wizards, the popular D&D game iconic class."
 }
 title: "Frostfell"
 author {

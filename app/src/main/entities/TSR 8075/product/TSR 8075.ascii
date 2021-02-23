@@ -16,7 +16,7 @@ template {
     name: "Dragon 248"
   }
   world: "Ravenloft"
-  description: "For more than a century, \\NPC{Strahd von Zarovich} has ruled \\Place{Barovia}\n  with an iron hand, feeding on the blood of his vassals and fearing no one. In\n  all the years of his tortured rule, none have dared to defy him.\n\n  But now the \\NPC{Vistani} have returned to \\Place{Barovia}, bringing with\n  them a warning for the dread \\NPC{Lord of Barovia}. One is coming to oppose\n  \\NPC{Strahd}, an opponent who may not only bring the existence of the\n  \\Monster{vampire} to an end, but may destroy all of \\Place{Barovia} as\n  well.\n\n  \\Product{I Strahd: The War Against Azalin} is the sequel to the best-selling\n  \\Product{I Strahd: The Memoirs of a Vampire}."
+  description: "For more than a century, \\NPC{Strahd von Zarovich} has ruled \\Place{Barovia}\nwith an iron hand, feeding on the blood of his vassals and fearing no one. In\nall the years of his tortured rule, none have dared to defy him. But now the \\NPC{Vistani} have returned to \\Place{Barovia}, bringing with them a warning for the dread \\NPC{Lord of Barovia}. One is coming to oppose PC{Strahd}, an opponent who may not only bring the existence of the Monster{vampire} to an end, but may destroy all of \\Place{Barovia} as well. Product{I Strahd: The War Against Azalin} is the sequel to the best-selling Product{I Strahd: The Memoirs of a Vampire}."
 }
 title: "I, Strahd: The War Against Azalin"
 author {

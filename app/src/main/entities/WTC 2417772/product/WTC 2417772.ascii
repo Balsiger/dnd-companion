@@ -1,7 +1,7 @@
 template {
   name: "WTC 2417772"
   world: "Generic"
-  description: "You\'ve just defeated the monsters, and in the back of their lair you find an old wooden chest atop a pile of bones and rusty weapons. Through the keyhole spills wondrous golden light. What magical treasures will you find inside?\n                    This Dungeons & Dragons game supplement presents hundreds of new magic items, including weapons, armor, ammunition, tomes, totems, and wondrous items appropriate for any D&D campaign. This book also introduces item sets, thematically linked collections of equipment that grant additional powers when the gear is worn by a single character or multiple party members."
+  description: "You\'ve just defeated the monsters, and in the back of their lair you find an old wooden chest atop a pile of bones and rusty weapons. Through the keyhole spills wondrous golden light. What magical treasures will you find inside? This Dungeons & Dragons game supplement presents hundreds of new magic items, including weapons, armor, ammunition, tomes, totems, and wondrous items appropriate for any D&D campaign. This book also introduces item sets, thematically linked collections of equipment that grant additional powers when the gear is worn by a single character or multiple party members."
   short_description: "Arms and Equipment for All Character Classes."
 }
 title: "Adventurer\'s Vault 2"

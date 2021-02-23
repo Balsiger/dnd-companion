@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Tipped on either end with a glistening diamond, this rune-covered staff allows use of the following spells:\n\n\\list{\\Reference{spell}{Ice Storm} (1 charge)} {\\Reference{spell}{Wall of Ice} (1 charge)} {\\Reference{spell}{Cone of Cold} (2 charge)}"
+  description: "Tipped on either end with a glistening diamond, this rune-covered staff allows use of the following spells: list{\\Reference{spell}{Ice Storm} (1 charge)} {\\Reference{spell}{Wall of Ice} (1 charge)} {\\Reference{spell}{Cone of Cold} (2 charge)}"
   short_description: "Cast \\Reference{spell}{Ice Storm} (1), \\Reference{spell}{Wall of Ice} (1), or \\Reference{spell}{Cone of Cold} (2)."
 }
 value {

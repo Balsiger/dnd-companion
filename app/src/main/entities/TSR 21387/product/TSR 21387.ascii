@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Forgotten Realms"
-  description: "\\bold{A malevolent pool.}\n                    \\bold{A diabolical cult.}\n                    \\bold{A horrific plan.}\n                    A \\Monster{dracolich} and his sorcerous queen have seized control of the\n                    \\Item{Mythal}, the ancient magic that once protected the war-ravaged\n                    \\Monster[elf]{elven} capital. Once the \\Monster[elf]{elven} ruin is\n                    completely in their thrall, the cult intends to expand its domination one\n                    city -- and one soul -- at a time.\n                    The fate of all \\Place{Faer\\hat{u}n} lies with four reluctant heroes."
+  description: "\\bold{A malevolent pool.} \\bold{A diabolical cult.} \\bold{A horrific plan.} A \\Monster{dracolich} and his sorcerous queen have seized control of the \\Item{Mythal}, the ancient magic that once protected the war-ravaged \\Monster[elf]{elven} capital. Once the \\Monster[elf]{elven} ruin is completely in their thrall, the cult intends to expand its domination one city -- and one soul -- at a time. The fate of all \\Place{Faer\\hat{u}n} lies with four reluctant heroes."
 }
 title: "Pool of Radiance: The Ruins of Myth Drannor"
 author {

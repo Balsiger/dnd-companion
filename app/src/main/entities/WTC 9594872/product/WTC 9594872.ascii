@@ -1,7 +1,7 @@
 template {
   name: "WTC 9594872"
   world: "Eberron"
-  description: "When the Eternal Day dawns, the Time of the Dragon Above draws night. Showers of light fall upon the City of the Dead, and after twice thirteen years the Storm Dragon emerges.\n\nFrom the land of desolation under the dark of the great moon, the Eye of Siberys will lift the Sky Caves of Thieren Kor. The Storm Dragon will tread the paths of the first of sixteen.\n\n\\large{And All of \\Place{Eberron} Will Tremble at His Day\'s Dawning}"
+  description: "When the Eternal Day dawns, the Time of the Dragon Above draws night. Showers of light fall upon the City of the Dead, and after twice thirteen years the Storm Dragon emerges.\n\nFrom the land of desolation under the dark of the great moon, the Eye of Siberys will lift the Sky Caves of Thieren Kor. The Storm Dragon will tread the paths of the first of sixteen. large{And All of \\Place{Eberron} Will Tremble at His Day\'s Dawning}"
 }
 title: "Storm Dragon"
 author {

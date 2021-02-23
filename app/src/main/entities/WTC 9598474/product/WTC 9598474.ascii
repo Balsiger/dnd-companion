@@ -1,7 +1,7 @@
 template {
   name: "WTC 9598474"
   world: "Forgotten Realms"
-  description: "\\bold{...nightmares that have become reality.}\n                    Guarded by fell magic, deep within the heart of \\Place{Stardeep}, death and madness sleep. Defending this heart are warriors who kill rather than question intruders. The only way in is with a key -- a key that falls into unknowing hands, pulling danger in its wake."
+  description: "\\bold{...nightmares that have become reality.} Guarded by fell magic, deep within the heart of \\Place{Stardeep}, death and madness sleep. Defending this heart are warriors who kill rather than question intruders. The only way in is with a key -- a key that falls into unknowing hands, pulling danger in its wake."
 }
 title: "Stardeep"
 subtitle: "Nightmares of the Traitor\'s Escape Haunt Her..."

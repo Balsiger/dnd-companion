@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A ranseur has reach. You can strike opponents 10 feet away with it, but you can\'t use it against an adjacent foe.  With a ranseur, you get a +2 bonus on opposed attack rolls made to disarm an opponent (including the roll to avoid being disarmed if such an attempt fails)."
+  description: "A ranseur has reach. You can strike opponents 10 feet away with it, but you can\'t use it against an adjacent foe.\n\nWith a ranseur, you get a +2 bonus on opposed attack rolls made to disarm an opponent (including the roll to avoid being disarmed if such an attempt fails)."
 }
 value {
   gold: 10

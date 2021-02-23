@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You must succeed on a melee touch attack.  You place the subject into a state of suspended animation. For the creature, time ceases to flow and its condition becomes fixed. The creature does not grow older. Its body functions virtually cease, and no force or effect can harm it. This state persists until the magic is removed (such as by a successful dispel magic spell or a freedom spell).  Material Component: A powder composed of diamond, emerald, ruby, and sapphire dust with a total value of at least 5,000 gp.  Teleport On Off Similar Familiarity Target Target Area Mishap Very familiar 01-97 98-99 100  -  Studied carefully 01-94 95-97 98-99 100 Seen casually 01-88 89-94 95-98 99-100 Viewed once 01-76 77-88 89-96 97-100 False destination (1d20+80)  -   -  81-92 93-100"
+  description: "You must succeed on a melee touch attack.\n\nYou place the subject into a state of suspended animation. For the creature, time ceases to flow and its condition becomes fixed. The creature does not grow older. Its body functions virtually cease, and no force or effect can harm it. This state persists until the magic is removed (such as by a successful dispel magic spell or a freedom spell).\n\nMaterial Component: A powder composed of diamond, emerald, ruby, and sapphire dust with a total value of at least 5,000 gp.\n\nTeleport On Off Similar Familiarity Target Target Area Mishap Very familiar 01-97 98-99 100\n\n-\n\nStudied carefully 01-94 95-97 98-99 100 Seen casually 01-88 89-94 95-98 99-100 Viewed once 01-76 77-88 89-96 97-100 False destination (1d20+80)\n\n- \n\n-\n\n81-92 93-100"
   short_description: "Puts subject into suspended animation."
 }
 school: TRANSMUTATION

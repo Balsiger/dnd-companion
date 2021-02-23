@@ -1,7 +1,7 @@
 template {
   name: "WTC 88603"
   world: "None"
-  description: "The time has come.\n                    Every powerful wizard and fighter on the continent of \\Place{Otaria} wants\n                    one thing: power. One artifact can give them---undeniably---that which they\n                    seek, and nothing will stop any of them from possessing it.\n                    But in the end, only one can have it, and his actions will determine the fate\n                    of the world.\n                    The day of judgment has arrived."
+  description: "The time has come. Every powerful wizard and fighter on the continent of \\Place{Otaria} wants one thing: power. One artifact can give them---undeniably---that which they seek, and nothing will stop any of them from possessing it. But in the end, only one can have it, and his actions will determine the fate of the world. The day of judgment has arrived."
 }
 title: "Judgment"
 author {

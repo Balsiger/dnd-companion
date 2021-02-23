@@ -1,7 +1,7 @@
 template {
   name: "WTC 17752"
   world: "Generic"
-  description: "Weave exciting tales of heroism filled with magic and monsters. Within these\n                    pages, you\'ll discover the tools and options you need to create detailed\n                    worlds and dynamic adventures for your players to experience in the Dungeons\n                    & Dragons roleplaying game."
+  description: "Weave exciting tales of heroism filled with magic and monsters. Within these pages, you\'ll discover the tools and options you need to create detailed worlds and dynamic adventures for your players to experience in the Dungeons & Dragons roleplaying game."
 }
 title: "Dungeon Master\'s Guide"
 subtitle: "Realms of inspiration await discovery"

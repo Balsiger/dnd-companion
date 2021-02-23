@@ -1,7 +1,7 @@
 template {
   name: "WTC 2165072"
   world: "Eberron"
-  description: "Explore the most important frontier city of \\Place{Xen\'drik}, where opportunity and peril walk hand in hand. Whether you\'re looking for shadowy ruins, sinister organizations, or a treasure-laden dungeon, \\Place{Stormreach} is the place to start.\n\nThis Dungeons & Dragons supplements brings \\Place{Stormreach} to life:\n\n\\list{Information on the movers and shakers, both in front of and behind the scenes}\n{Ready-to-use adversaries to challenge your characters}\n{Adventure hooks to spice up your game}"
+  description: "Explore the most important frontier city of \\Place{Xen\'drik}, where opportunity and peril walk hand in hand. Whether you\'re looking for shadowy ruins, sinister organizations, or a treasure-laden dungeon, \\Place{Stormreach} is the place to start.\n\nThis Dungeons & Dragons supplements brings \\Place{Stormreach} to life: list{Information on the movers and shakers, both in front of and behind the scenes}\n{Ready-to-use adversaries to challenge your characters}\n{Adventure hooks to spice up your game}"
   short_description: "Description of \\Place{Stormreach} on \\Place{Xen\'drik}."
 }
 title: "City of Stormreach"

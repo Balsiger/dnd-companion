@@ -17,7 +17,7 @@ template {
     name: "catalog95"
   }
   world: "Forgotten Realms"
-  description: "There are many parallel worlds, and in times past, travel was easy between\n                    them. But those ways are now lost. Those worlds are forgotten.1\n                    Or are they?\n                    Welcome to the \\Place{Forgotten Realms}.\n                    This volume, brimming with newly rediscovered facts and original fiction,\n                    introduces you to the best-selling world of \\Place{Faer\\hat{u}n}, where\n                    \\Monster[Elf]{elves} are mysteriously disappearing, and magic is an art\n                    gifted by a goddess. No difficult game jargon obscures the wonders before\n                    you. Come and explore.\n                    Open this book, and discover a forgotten world!"
+  description: "There are many parallel worlds, and in times past, travel was easy between them. But those ways are now lost. Those worlds are forgotten.1 Or are they? Welcome to the \\Place{Forgotten Realms}. This volume, brimming with newly rediscovered facts and original fiction, introduces you to the best-selling world of \\Place{Faer\\hat{u}n}, where \\Monster[Elf]{elves} are mysteriously disappearing, and magic is an art gifted by a goddess. No difficult game jargon obscures the wonders before you. Come and explore. Open this book, and discover a forgotten world!"
 }
 title: "Player\'s Guide to the Forgotten Realms Campaign"
 leader: "The"

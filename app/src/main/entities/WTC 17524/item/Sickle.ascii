@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This weapon is like a farmer\'s sickle, but it is strengthened for use as a weapon. It is favored by druids and by anyone who wants a weapon that might be overlooked by guards. \n\nBecause of a sickle\'s shape, you can also use it to make trip attacks.  If you are tripped during your own trip attempt, you can drop the sickle to avoid being tripped."
+  description: "This weapon is like a farmer\'s sickle, but it is strengthened for use as a weapon. It is favored by druids and by anyone who wants a weapon that might be overlooked by guards. \n\nBecause of a sickle\'s shape, you can also use it to make trip attacks.\n\nIf you are tripped during your own trip attempt, you can drop the sickle to avoid being tripped."
 }
 value {
   gold: 6

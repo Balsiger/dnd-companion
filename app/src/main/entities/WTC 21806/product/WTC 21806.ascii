@@ -1,7 +1,7 @@
 template {
   name: "WTC 21806"
   world: "Dragonlance"
-  description: "Defying the fate that claimed his evil predecessor, \\NPC{Raistlin} opens the\n  \\Item{Portal} to the \\Place{Abyss} and passes through. With \\NPC{Crysania} at\n  his side, he engages the \\NPC{Queen of Darkness} in a battle for the ultimate\n  prize---a seat among the gods.\n\n  At the same time, \\NPC{Caramon} and \\NPC{Tasslehoff} are transported to the\n  future. There they come to understand the consequences of \\NPC{Raistlin}\'s\n  quest--- and \\NPC{Caramon} at last realizes the painful sacrifice he must\n  make to prevent his brother\'s success. Old friends and strange allies come\n  together to aid him, but \\NPC{Caramon} must take the last, greatest step\n  alone.\n\n  The step into the \\Place{Abyss}."
+  description: "Defying the fate that claimed his evil predecessor, \\NPC{Raistlin} opens the \\Item{Portal} to the \\Place{Abyss} and passes through. With \\NPC{Crysania} at\nhis side, he engages the \\NPC{Queen of Darkness} in a battle for the ultimate\nprize---a seat among the gods. At the same time, \\NPC{Caramon} and \\NPC{Tasslehoff} are transported to the future. There they come to understand the consequences of \\NPC{Raistlin}\'s quest--- and \\NPC{Caramon} at last realizes the painful sacrifice he must make to prevent his brother\'s success. Old friends and strange allies come together to aid him, but \\NPC{Caramon} must take the last, greatest step alone. The step into the \\Place{Abyss}."
 }
 title: "Test of the Twins"
 author {

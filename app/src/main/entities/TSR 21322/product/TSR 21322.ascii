@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Forgotten Realms"
-  description: "Lurking in the ruins is a horrific tale of greed, power, and revenge.\n                    The \\NPC{Protector} crawls forth, the shade of a dead city whose rulers\n                    refuse to die, and young companions in two distant epochs learn of a dreadful\n                    destiny they cannot escape...\n                    ...and a deadly threat to all they hold dear.\n                    The \\Product{Lost Empires} series uncovers the secrets of the ancient\n                    civilizations of the \\Place{Forgotten Realms} world."
+  description: "Lurking in the ruins is a horrific tale of greed, power, and revenge. The \\NPC{Protector} crawls forth, the shade of a dead city whose rulers refuse to die, and young companions in two distant epochs learn of a dreadful destiny they cannot escape... ...and a deadly threat to all they hold dear. The \\Product{Lost Empires} series uncovers the secrets of the ancient civilizations of the \\Place{Forgotten Realms} world."
 }
 title: "Star of Cursrah"
 author {

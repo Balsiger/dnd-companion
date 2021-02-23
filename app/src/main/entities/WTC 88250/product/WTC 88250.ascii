@@ -1,7 +1,7 @@
 template {
   name: "WTC 88250"
   world: "Generic"
-  description: "In the sands of a great desert, a once-heroic paladin has turned to evil and\n  enlisted an army of \\Monster{gnolls} to help retrieve a powerful relic,\n  reputed to be kept in the vaults of the \\Place{City of Fire}. If they find\n  it, the world will never be at peace.\n\n  Can a party of four stop an army of hundreds?"
+  description: "In the sands of a great desert, a once-heroic paladin has turned to evil and enlisted an army of \\Monster{gnolls} to help retrieve a powerful relic, reputed to be kept in the vaults of the \\Place{City of Fire}. If they find it, the world will never be at peace. Can a party of four stop an army of hundreds?"
 }
 title: "City of Fire"
 author {

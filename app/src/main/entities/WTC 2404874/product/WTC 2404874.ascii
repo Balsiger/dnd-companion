@@ -1,7 +1,7 @@
 template {
   name: "WTC 2404874"
   world: "Forgotten Realms"
-  description: "\\Place{Highwatch} has never been taken. The fortress has sat, undisturbed, for over a century, high above \\Place{Narfell}\'s frozen plains. The line of the \\Group{High Warden} runs unbroken down to his seventeen-year-old granddaughter, \\NPC{Hweilan}.\n                    \\large{Time to grow up, \\NPC{Hweilan inle Merah}. Time to hunt...}\n                    An enemy\'s pact with an ancient evil brings down \\Place{Highwatch} in less than a day. Only \\NPC{Hweilan} is left. An old friend offers her the chance to avenge her family\'s death -- by joining another ancient spirit, the \\NPC{Master of the Hunt}.\n                    \\large{Time to grow up. Time to choose. Understanding will come later. If you survive...}"
+  description: "\\Place{Highwatch} has never been taken. The fortress has sat, undisturbed, for over a century, high above \\Place{Narfell}\'s frozen plains. The line of the \\Group{High Warden} runs unbroken down to his seventeen-year-old granddaughter, \\NPC{Hweilan}. \\large{Time to grow up, \\NPC{Hweilan inle Merah}. Time to hunt...} An enemy\'s pact with an ancient evil brings down \\Place{Highwatch} in less than a day. Only \\NPC{Hweilan} is left. An old friend offers her the chance to avenge her family\'s death -- by joining another ancient spirit, the \\NPC{Master of the Hunt}. large{Time to grow up. Time to choose. Understanding will come later. If you survive...}"
   short_description: "Book I of the Chosen of Nendawen"
 }
 title: "Fall of Highwatch"

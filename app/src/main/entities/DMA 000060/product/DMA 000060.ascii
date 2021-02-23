@@ -1,6 +1,6 @@
 template {
   name: "DMA 000060"
-  description: "\\large{It\'s all Geek to Me!}\n\n  Release your inner nerd with Dork Covenant, the first collection of the\n  hilarious, critically acclaimed fan-favorite Dork Tower comic book! From\n  dragon-filled dungeons to star treks, from comic book conventions to internet\n  naughtiness, Dork Tower is the comic hat put the \'cult\' back into\n  sub-culture! So join \\NPC{Matt}, \\NPC{Igor}, \\NPC{Ken}, \\NPC{Gill the Perky\n  Goth} and \\NPC{Carson the Muskrat} in their uproariously dorky adventures!"
+  description: "\\large{It\'s all Geek to Me!} Release your inner nerd with Dork Covenant, the first collection of the hilarious, critically acclaimed fan-favorite Dork Tower comic book! From dragon-filled dungeons to star treks, from comic book conventions to internet aughtiness, Dork Tower is the comic hat put the \'cult\' back into sub-culture! So join \\NPC{Matt}, \\NPC{Igor}, \\NPC{Ken}, \\NPC{Gill the Perky Goth} and \\NPC{Carson the Muskrat} in their uproariously dorky adventures!"
 }
 title: "Dork Covenant"
 subtitle: "The Collected Dork Tower, Volume I"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 21798"
   world: "Rokugan"
-  description: "Magic is power for the \\Group{Phoenix} clan. During the depths of the\n                    \\Event{Clan War}, the \\Group{Elemental Masters} seek ultimate power in the\n                    form of a magic that will permanently destroy the \\Place{Shadowlands}\n                    armies. Without it, the enemy will reduce the clan to ahses from which even\n                    the \\Group{Phoenix} cannot rise. All hope rests in the mysteries of a dark\n                    and dreaded source: \\Item{The Black Scrolls}."
+  description: "Magic is power for the \\Group{Phoenix} clan. During the depths of the \\Event{Clan War}, the \\Group{Elemental Masters} seek ultimate power in the form of a magic that will permanently destroy the \\Place{Shadowlands} armies. Without it, the enemy will reduce the clan to ahses from which even the \\Group{Phoenix} cannot rise. All hope rests in the mysteries of a dark and dreaded source: \\Item{The Black Scrolls}."
 }
 title: "Phoenix"
 leader: "The"

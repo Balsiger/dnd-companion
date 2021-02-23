@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "None"
-  description: "Welcome to a world of rich folklore where \\Monster{angels} watch over the\n                    righteous, in which sea monsters sink ships, where dark figures lurk under\n                    every child\'s bed. Now the mysteries of \\Place{Dominaria} are explained."
+  description: "Welcome to a world of rich folklore where \\Monster{angels} watch over the righteous, in which sea monsters sink ships, where dark figures lurk under every child\'s bed. Now the mysteries of \\Place{Dominaria} are explained."
 }
 title: "Myths of Magic"
 leader: "The"

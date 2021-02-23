@@ -1,7 +1,7 @@
 template {
   name: "WTC 96556"
   world: "Dragonlance"
-  description: "\\Product{Flight of the Fallen} is the second title in a trilogy that centers\n  around \\NPC{Linsha Majere}, the grandchild of one of the central characters\n  of the entire \\Place{Dragonlance} saga. This trilogy continues to advance the\n  story of post-\\Event{War of Souls} events in the \\Place{Dragonlance} world\n  and introduces a major new villain to the setting."
+  description: "\\Product{Flight of the Fallen} is the second title in a trilogy that centers around \\NPC{Linsha Majere}, the grandchild of one of the central characters of the entire \\Place{Dragonlance} saga. This trilogy continues to advance the story of post-\\Event{War of Souls} events in the \\Place{Dragonlance} world and introduces a major new villain to the setting."
 }
 title: "Flight of the Fallen"
 author {

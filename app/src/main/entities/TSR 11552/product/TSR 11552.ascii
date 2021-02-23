@@ -4,7 +4,7 @@ template {
     name: "internet"
   }
   world: "Generic"
-  description: "\\large{Over 500 Fearsome Foes!}\n                    \\bold{by Skip Williams, Jonathan Tweet, and Monte Cook}\n                    From the mundane to the magical, from the meek to the mighty, the\n                    \\Product{Monster Manual} brings the monsters of the Dungeons & Dragons game\n                    to life with statistics, descriptions, full-color illustrations, and player\n                    character information. This book is essential for every Dungeon Master who\n                    wants to keep players on their toes!"
+  description: "\\large{Over 500 Fearsome Foes!} \\bold{by Skip Williams, Jonathan Tweet, and Monte Cook} From the mundane to the magical, from the meek to the mighty, the \\Product{Monster Manual} brings the monsters of the Dungeons & Dragons game to life with statistics, descriptions, full-color illustrations, and player character information. This book is essential for every Dungeon Master who wants to keep players on their toes!"
 }
 title: "Monster Manual"
 date {

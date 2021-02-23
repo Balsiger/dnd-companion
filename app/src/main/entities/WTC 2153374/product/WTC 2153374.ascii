@@ -1,7 +1,7 @@
 template {
   name: "WTC 2153374"
   world: "Forgotten Realms"
-  description: "\\large{There is no going back.}\n                    The city is built on its own ruins. Monsters stalk its long-collapsed corridors, hungry for fresh meat. Artifacts from a forgotten age lie in wait, corrupting all they touch. Water rising from the depths steals all hope of survival."
+  description: "\\large{There is no going back.} The city is built on its own ruins. Monsters stalk its long-collapsed corridors, hungry for fresh meat. Artifacts from a forgotten age lie in wait, corrupting all they touch. Water rising from the depths steals all hope of survival."
 }
 title: "Crypt of the Moaning Diamond"
 subtitle: "Alone in the Dark, Trapped Underground, the Water is Rising."

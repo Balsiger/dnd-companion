@@ -23,7 +23,7 @@ template {
     name: "catalog96"
   }
   world: "Ravenloft"
-  description: "\\Monster{Rakshasa...} For centuries, these diabolical creatures have hunted\n                    humanity and preyed upon its flehs. Now the \\Place{Mists} have opened upon\n                    the land of \\Place{Sri Raji}---home of dread \\NPC{Arijani}, the\n                    \\Monster{rakshasa} lord. He is the mastermind behind a deadly game of\n                    illusion where plots lie within plots that lie within plots. Wise player\n                    characters will trust neither their eyes nor their wits, for nothing is as it\n                    seems in \\Place{Sri Raji}. The \\Monster{rakshasa} have laid their traps of\n                    intrigue for the unwary. This time, the unwary are your characters."
+  description: "\\Monster{Rakshasa...} For centuries, these diabolical creatures have hunted humanity and preyed upon its flehs. Now the \\Place{Mists} have opened upon the land of \\Place{Sri Raji}---home of dread \\NPC{Arijani}, the \\Monster{rakshasa} lord. He is the mastermind behind a deadly game of illusion where plots lie within plots that lie within plots. Wise player characters will trust neither their eyes nor their wits, for nothing is as it seems in \\Place{Sri Raji}. The \\Monster{rakshasa} have laid their traps of intrigue for the unwary. This time, the unwary are your characters."
 }
 title: "Web of Illusions"
 author {

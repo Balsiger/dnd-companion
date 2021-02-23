@@ -1,7 +1,7 @@
 template {
   name: "WTC 86040"
   world: "Dragonlance"
-  description: "The next \\Place{Dragonlance} novel in the trilogy that launched the entire\n  \\Product{Dragonlance} line, \\Product{Dragons of Winter Night} has been\n  adapted to a format specifically targeted at young readers. The novel has\n  been divided into two volumes, \\Product{The Nightmare Lands} and \\Product{To\n  the Gates of Palanthas}, that are sized to fit the young reader market. These\n  titles contain brand new cover art and interior art and are a continuation of\n  the overall young reader adaptation of the entire \\Product{Dragonlance\n  Chronicles trilogy}."
+  description: "The next \\Place{Dragonlance} novel in the trilogy that launched the entire Product{Dragonlance} line, \\Product{Dragons of Winter Night} has been adapted to a format specifically targeted at young readers. The novel has been divided into two volumes, \\Product{The Nightmare Lands} and \\Product{To the Gates of Palanthas}, that are sized to fit the young reader market. These titles contain brand new cover art and interior art and are a continuation of the overall young reader adaptation of the entire \\Product{Dragonlance Chronicles trilogy}."
 }
 title: "To the Gates of Palanthas"
 author {

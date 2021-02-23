@@ -1,7 +1,7 @@
 template {
   name: "WTC C3689"
   world: "Generic"
-  description: "Good for dungeon and wilderness encounters alike, this sturdy double-sided, grid-lined play surface is ideal for when your Dungeon & Dragons campaign gets tactical. The D&D Adventure Grid also folds up for easy transport and storage, and can be used with both wet-erase and dry-erase pens interchangeably.\n\n\\em{Pens and miniatures not included.}\n"
+  description: "Good for dungeon and wilderness encounters alike, this sturdy double-sided, grid-lined play surface is ideal for when your Dungeon & Dragons campaign gets tactical. The D&D Adventure Grid also folds up for easy transport and storage, and can be used with both wet-erase and dry-erase pens interchangeably. em{Pens and miniatures not included.}\n"
   short_description: "Foldable dungeon and wilderness play areas."
 }
 title: "Adventure Grid"

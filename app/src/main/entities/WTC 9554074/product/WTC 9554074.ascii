@@ -1,7 +1,7 @@
 template {
   name: "WTC 9554074"
   world: "Eberron"
-  description: "They\'ve been hunted across the \\Place{Mournland}, captured in\n  \\Place{Karrnath}, and attacked in a \\Monster{dragon}\'s mountain lair. One\n  band of adventurers has had enough. Time to take the battle to the\n  enemy. Time to fight back. One young woman will have to decide to give in or\n  embrace her destiny as -- the \\NPC{Queen of Death}."
+  description: "They\'ve been hunted across the \\Place{Mournland}, captured in Place{Karrnath}, and attacked in a \\Monster{dragon}\'s mountain lair. One band of adventurers has had enough. Time to take the battle to the enemy. Time to fight back. One young woman will have to decide to give in or embrace her destiny as -- the \\NPC{Queen of Death}."
 }
 title: "Queen of the Death"
 leader: "The"

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like cause fear, except that it causes all targeted creatures of less than 6 HD to become frightened.  Material Component: A bit of bone from an undead skeleton, zombie, ghoul, ghast, or mummy."
+  description: "This spell functions like cause fear, except that it causes all targeted creatures of less than 6 HD to become frightened.\n\nMaterial Component: A bit of bone from an undead skeleton, zombie, ghoul, ghast, or mummy."
   short_description: "Panics creatures of less than 6 HD."
 }
 school: NECROMANCY

@@ -1,7 +1,7 @@
 template {
   name: "RP 10-550"
   world: "Forgotten Realms"
-  description: "Ral Partha proudly presents an official \\Place{Forgotten Realms} boxed\n                    set. Having worked closely with the excellent staff at Ral Partha during the\n                    evolution of this set, TSR believes these to be the finest miniatures\n                    possible for the \\Place{Forgotten Relmas} campaign setting."
+  description: "Ral Partha proudly presents an official \\Place{Forgotten Realms} boxed set. Having worked closely with the excellent staff at Ral Partha during the evolution of this set, TSR believes these to be the finest miniatures possible for the \\Place{Forgotten Relmas} campaign setting."
 }
 title: "Heroes"
 date {

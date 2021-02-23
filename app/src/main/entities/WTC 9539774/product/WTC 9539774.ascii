@@ -1,7 +1,7 @@
 template {
   name: "WTC 9539774"
   world: "Forgotten Realms"
-  description: "This is the paperback version of the stunning new release of the classic\n                    R.A. Salvatore novel that begins the tale of his signature \\Monster{dark elf}\n                    character, \\NPC{Drizzt Do-Urden}."
+  description: "This is the paperback version of the stunning new release of the classic R.A. Salvatore novel that begins the tale of his signature \\Monster{dark elf} character, \\NPC{Drizzt Do-Urden}."
 }
 title: "Homeland"
 author {

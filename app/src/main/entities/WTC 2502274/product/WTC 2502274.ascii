@@ -1,7 +1,7 @@
 template {
   name: "WTC 2502274"
   world: "Forgotten Realms"
-  description: "Sailors of the \\Place{Inner Sea} know better than to take what lies beneath its rushing waves for granted. Their luck and the gods above are all that keep them safe from horrifying behemoths, bloodthirsty \\Monster{sahuagin}, nigthmarish \\Monster{kraken} patrolling their masters\' territory...\n                    ... and the otherwordly fey that sailors call the \\NPC{Blue Lady}.\n                    No one knows where she came from. No one knows what she wants. But the blue depths of the \\Place{Sea of Fallen Stars} are her prison --- one she\'s ready to escape.\n                    \\Large{The Lucky Ones Drown.}"
+  description: "Sailors of the \\Place{Inner Sea} know better than to take what lies beneath its rushing waves for granted. Their luck and the gods above are all that keep them safe from horrifying behemoths, bloodthirsty \\Monster{sahuagin}, nigthmarish \\Monster{kraken} patrolling their masters\' territory... ... and the otherwordly fey that sailors call the \\NPC{Blue Lady}. No one knows where she came from. No one knows what she wants. But the blue depths of the \\Place{Sea of Fallen Stars} are her prison --- one she\'s ready to escape. Large{The Lucky Ones Drown.}"
   short_description: "The Wilds, 4th book."
 }
 title: "Wrath of the Blue Lady"

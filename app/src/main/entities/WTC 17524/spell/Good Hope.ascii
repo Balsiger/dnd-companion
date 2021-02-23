@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell instills powerful hope in the subjects. Each affected creature gains a +2 morale bonus on saving throws, attack rolls, ability checks, skill checks, and weapon damage rolls.  Good hope counters and dispels crushing despair."
+  description: "This spell instills powerful hope in the subjects. Each affected creature gains a +2 morale bonus on saving throws, attack rolls, ability checks, skill checks, and weapon damage rolls.\n\nGood hope counters and dispels crushing despair."
   short_description: "Subjects gain +2 on attack rolls, damage rolls, saves, and checks."
 }
 school: ENCHANTMENT

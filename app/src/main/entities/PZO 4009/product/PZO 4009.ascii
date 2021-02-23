@@ -1,7 +1,7 @@
 template {
   name: "PZO 4009"
   world: "Generic"
-  description: "Why go to the trouble of using miniatures only to push them around an empty table? Paizo\'s \\Product{Game Mastery Map Packs} contain full-color gridded maps for use with RPGs and miniatures games. The map cards in this set depict key encounter areas in several temple complexes appropriate for fantasy campaigns, including:\n\n\\list\n{Healing Temple}\n{Druidic Mountaintop}\n{Cultist Warehouse}\n{Sacrifice Temple}\n{Spider God Cavern}\n\n\\Product{Game Mastery Map Packs} provide everything you need to stay a step ahead of your players. Use this product to build temple encounters that perfectly fit your campaign. Additional map packs explore other locales of interest to fantasy gamers."
+  description: "Why go to the trouble of using miniatures only to push them around an empty table? Paizo\'s \\Product{Game Mastery Map Packs} contain full-color gridded maps for use with RPGs and miniatures games. The map cards in this set depict key encounter areas in several temple complexes appropriate for fantasy campaigns, including: list\n{Healing Temple}\n{Druidic Mountaintop}\n{Cultist Warehouse}\n{Sacrifice Temple}\n{Spider God Cavern} Product{Game Mastery Map Packs} provide everything you need to stay a step ahead of your players. Use this product to build temple encounters that perfectly fit your campaign. Additional map packs explore other locales of interest to fantasy gamers."
 }
 title: "Map Pack: Temples"
 subtitle: "Time to Get Religion!"

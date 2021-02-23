@@ -1,7 +1,7 @@
 template {
   name: "CKG 50202"
   world: "Generic"
-  description: "A brave band of dwarven adventurers followed the clues from an ancient\n  scroll. They entered the \\Place{Jungle of Darkness} in search of\n  treasure. Their map contained this riddle:\n\n  \\emph{I cast my net upon the breeze\n\n  To catch the fishes of the sky.\n\n  I catch them with the greatest ease\n\n  Although myself I cannot fly.}\n\n  The dwarves failed to solve the riddle, Now their doom is at hand!\n\n  Riddle Rooms #2 - Wilderness Puzzles and Perils contains 20 illustrated\n  encounters each posing a riddle or challenge. Some are deceptively simple;\n  others are fiendishly complex. Riddle Rooms can be used with \\emph{any}\n  fantasy role-playing system. The rooms are designed for you to add to your\n  adventures."
+  description: "A brave band of dwarven adventurers followed the clues from an ancient scroll. They entered the \\Place{Jungle of Darkness} in search of treasure. Their map contained this riddle: emph{I cast my net upon the breeze\n\nTo catch the fishes of the sky.\n\nI catch them with the greatest ease Although myself I cannot fly.} The dwarves failed to solve the riddle, Now their doom is at hand! Riddle Rooms #2 - Wilderness Puzzles and Perils contains 20 illustrated encounters each posing a riddle or challenge. Some are deceptively simple; others are fiendishly complex. Riddle Rooms can be used with \\emph{any} fantasy role-playing system. The rooms are designed for you to add to your adventures."
 }
 title: "Riddle Rooms #2"
 subtitle: "Wilderness Puzzles & Perils"

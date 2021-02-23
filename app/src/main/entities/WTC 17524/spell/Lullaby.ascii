@@ -26,7 +26,7 @@ casting_time {
 special_range: MEDIUM
 area: "Living creatures within a 10-ftradius burst"
 duration {
-  duration_description: "Concentration +  1 round/level"
+  duration_description: "Concentration +\n\n1 round/level"
   flags: "(D)"
   description: "(D)"
 }

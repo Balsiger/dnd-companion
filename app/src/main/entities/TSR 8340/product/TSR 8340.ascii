@@ -22,7 +22,7 @@ template {
     name: "catalog93"
   }
   world: "Dragonlance"
-  description: "When \\NPC{Flint Fireforge}, \\Monster{dwarf} and metalsmith, receives a\n  wondrous summons from the \\NPC{Speaker of the Sun}, he journeys to the fabled\n  \\Monster{elven} city of \\Place{Qualinost}. There he meets \\NPC{Tanis}, a\n  thoughtful youth born of a tragic union between \\Monster{elf} and\n  \\Monster{man}. \\NPC{Tanis} and \\NPC{Flint}, each a misfit in his own way,\n  find themselves unlikely friends.\n\n  But a pompous \\Monster{elf} lord is mysteriously slain, and another\n  \\Monster{elf} soon meets the same fate. \\NPC{Tanis} stands accused, and if\n  his innocence cannot be proven, the \\Monster{half-elf} will be banished\n  forever. Solving the mystery will be a perilous task. Time is on the\n  murderer\'s side, and he is not finished yet."
+  description: "When \\NPC{Flint Fireforge}, \\Monster{dwarf} and metalsmith, receives a wondrous summons from the \\NPC{Speaker of the Sun}, he journeys to the fabled\n\\Monster{elven} city of \\Place{Qualinost}. There he meets \\NPC{Tanis}, a\nthoughtful youth born of a tragic union between \\Monster{elf} and Monster{man}. \\NPC{Tanis} and \\NPC{Flint}, each a misfit in his own way, find themselves unlikely friends. But a pompous \\Monster{elf} lord is mysteriously slain, and another Monster{elf} soon meets the same fate. \\NPC{Tanis} stands accused, and if his innocence cannot be proven, the \\Monster{half-elf} will be banished forever. Solving the mystery will be a perilous task. Time is on the murderer\'s side, and he is not finished yet."
 }
 title: "Kindred Spirits"
 subtitle: "Magic and Murder"

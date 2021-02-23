@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A shuriken is a special monk weapon. This designation gives a \\Class{monk} wielding shuriken special options. A shuriken can\'t be used as a melee weapon.  Although they are thrown weapons, shuriken are treated as ammunition for the purposes of drawing them, crafting masterwork or otherwise special versions of them (see Masterwork Weapons, below), and what happens to them after they are thrown."
+  description: "A shuriken is a special monk weapon. This designation gives a \\Class{monk} wielding shuriken special options. A shuriken can\'t be used as a melee weapon.\n\nAlthough they are thrown weapons, shuriken are treated as ammunition for the purposes of drawing them, crafting masterwork or otherwise special versions of them (see Masterwork Weapons, below), and what happens to them after they are thrown."
 }
 value {
   gold: 1

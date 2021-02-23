@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Extra eight-sided (d8) Hit Dice, each of which gains a Constitution modifier, as normal. Remember that extra Hit Dice improve the animal companion's base attack and base save bonuses. An animal companion's base attack bonus is the same as that of a druid of a level equal to the animal's HD. An animal companion has good Fortitude and Reflex saves (treat it as a character whose level equals the animal's HD).  An animal companion gains additional skill points and feats for bonus HD as normal for advancing a monster's Hit Dice (see the Monster Manual)."
+  description: "Extra eight-sided (d8) Hit Dice, each of which gains a Constitution modifier, as normal. Remember that extra Hit Dice improve the animal companion's base attack and base save bonuses. An animal companion's base attack bonus is the same as that of a druid of a level equal to the animal's HD. An animal companion has good Fortitude and Reflex saves (treat it as a character whose level equals the animal's HD).\n\nAn animal companion gains additional skill points and feats for bonus HD as normal for advancing a monster's Hit Dice (see the Monster Manual)."
 }
 type: EXTRAORDINARY

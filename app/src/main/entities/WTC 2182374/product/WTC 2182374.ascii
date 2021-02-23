@@ -1,7 +1,7 @@
 template {
   name: "WTC 2182374"
   world: "Eberron"
-  description: "The Daughters of \\NPC{Sora Kell} demand recognition for \\Place{Doaam}, their fledgling kingdom of monsters. Ambassadors from the \\Place{Five Nations} gather at the fortress of the \\Place{Great Crag} to hear what their dangerous new neighbors have to say.\n\n\\NPC{Thorn}\'s mission: protected the \\Place{Brelish} ambassador and rescue a captured hero of the crown. It will take all of \\NPC{Thorn}\'s skills to manage both without bringing war to \\Place{Breland}.\n\nThat is, if she can prevail on the \\Group{Daughter}\'s deadly warlod.\n\nThe Queen of Stone."
+  description: "The Daughters of \\NPC{Sora Kell} demand recognition for \\Place{Doaam}, their fledgling kingdom of monsters. Ambassadors from the \\Place{Five Nations} gather at the fortress of the \\Place{Great Crag} to hear what their dangerous new neighbors have to say. PC{Thorn}\'s mission: protected the \\Place{Brelish} ambassador and rescue a captured hero of the crown. It will take all of \\NPC{Thorn}\'s skills to manage both without bringing war to \\Place{Breland}.\n\nThat is, if she can prevail on the \\Group{Daughter}\'s deadly warlod.\n\nThe Queen of Stone."
   short_description: "Thorn of Breland, Book 1."
 }
 title: "Queen of Stone"

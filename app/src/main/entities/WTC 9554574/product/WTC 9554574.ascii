@@ -1,7 +1,7 @@
 template {
   name: "WTC 9554574"
   world: "Forgotten Realms"
-  description: "Haunted by nightmares and driven by desire, \\NPC{Ususi} defied the will of\n                    her people and ran away, venturing alone into the outside world her people\n                    abandoned centuries ago.\n                    Now \\NPC{Ususi} tracks down the relics that brought both prosperity and doom\n                    to her people. But when an old adversary finds her trail, she discovers the\n                    danger she thought past might only be beginning.\n                    Bruce R. Cordell weaves a gripping adventure of mystery, magic, and eldritch\n                    horror."
+  description: "Haunted by nightmares and driven by desire, \\NPC{Ususi} defied the will of her people and ran away, venturing alone into the outside world her people abandoned centuries ago. Now \\NPC{Ususi} tracks down the relics that brought both prosperity and doom to her people. But when an old adversary finds her trail, she discovers the danger she thought past might only be beginning. Bruce R. Cordell weaves a gripping adventure of mystery, magic, and eldritch horror."
 }
 title: "Darkvision"
 subtitle: "Exile of the Hidden City. Adept of forgotten mysteries. Sorceress of the \\Place{Celestial Nadir}."

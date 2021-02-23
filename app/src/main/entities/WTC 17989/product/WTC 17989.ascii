@@ -1,7 +1,7 @@
 template {
   name: "WTC 17989"
   world: "Dragonlance"
-  description: "The peaceful life of \\NPC{Flint Fireforge} is disturbed when he is forced to\n  leave \\Place{Solace} and return to his \\Monster{dwarven} homeland to\n  investigate his brother\'s murder. As he delves into the mystery, unexpected\n  allies and unseen enemies join the fight of truth against treachery.\n\n  \\NPC{Flint} soon discovers that to bring his brother\'s killer to justice, he\n  must either die or become king. He\'s not sure which choice might be worse."
+  description: "The peaceful life of \\NPC{Flint Fireforge} is disturbed when he is forced to leave \\Place{Solace} and return to his \\Monster{dwarven} homeland to investigate his brother\'s murder. As he delves into the mystery, unexpected allies and unseen enemies join the fight of truth against treachery. PC{Flint} soon discovers that to bring his brother\'s killer to justice, he must either die or become king. He\'s not sure which choice might be worse."
 }
 title: "Flint the King"
 subtitle: "Before the War of the Lance"

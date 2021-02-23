@@ -1,6 +1,6 @@
 template {
   name: "WTC 24463"
-  description: "\\God{Orcus}, the \\Monster{demon prince} of the undead, is one of the most powerful \\Monster{demon} lords of the \\Place{Abyss}. He commands legions of followers, living and dead, and he takes great pleasure in the suffering of others. During his eternal reign, the \\Monster{demon} prince vanquished hundreds of mighty heroes and destroyed countless kingdoms. With every conquest, he adds the corpses of fallen enemies to his vast undead army.\n                    One of the greatest villains of the Dungeons & Dragons Roleplaying Game, \\God{Orcus}, Prince of Undeath, sets out to destroy the world of the living and rule over the undead. Can you adventurers stand against this vile demon prince?"
+  description: "\\God{Orcus}, the \\Monster{demon prince} of the undead, is one of the most powerful \\Monster{demon} lords of the \\Place{Abyss}. He commands legions of followers, living and dead, and he takes great pleasure in the suffering of others. During his eternal reign, the \\Monster{demon} prince vanquished hundreds of mighty heroes and destroyed countless kingdoms. With every conquest, he adds the corpses of fallen enemies to his vast undead army. One of the greatest villains of the Dungeons & Dragons Roleplaying Game, \\God{Orcus}, Prince of Undeath, sets out to destroy the world of the living and rule over the undead. Can you adventurers stand against this vile demon prince?"
   short_description: "An gargantuan, iconic miniature of Orcus, Prince of Undeath."
 }
 title: "Orcus, Prince of Undeath"

@@ -2,7 +2,7 @@ template {
   name: "WTC 21871"
   synonym: "WTC 88687"
   world: "Forgotten Realms"
-  description: "\\large{\\Place{Elversult}}\n                    \\large{Site of \\Place{Temple Hill}}\n                    Among the dark streets of the city move thieves and cutthroats. And they\n                    don\'t like independent operators like \\NPC{Lhasha Moonsilver}. But when she\n                    hires a former fighter, now the town drunk, as a bodyguard, she gets more\n                    than she bargained for. Together they\'ll have to battle the thieves\' guild,\n                    the \\Group{Cult of the \\Monster{Dragon}}, and other, darker foes. And a\n                    fallen man will have to remember the proud warrior he once was.\n                    \\large{The Cities}\n                    A new series of stand-alone novels, each set in one of the mighty cities of\n                    \\Place{Faer\\hat{u}n}."
+  description: "\\large{\\Place{Elversult}} \\large{Site of \\Place{Temple Hill}} Among the dark streets of the city move thieves and cutthroats. And they don\'t like independent operators like \\NPC{Lhasha Moonsilver}. But when she hires a former fighter, now the town drunk, as a bodyguard, she gets more than she bargained for. Together they\'ll have to battle the thieves\' guild, the \\Group{Cult of the \\Monster{Dragon}}, and other, darker foes. And a fallen man will have to remember the proud warrior he once was. \\large{The Cities} A new series of stand-alone novels, each set in one of the mighty cities of Place{Faer\\hat{u}n}."
 }
 title: "Temple Hill"
 author {

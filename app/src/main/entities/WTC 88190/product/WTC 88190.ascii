@@ -1,7 +1,7 @@
 template {
   name: "WTC 88190"
   world: "Generic"
-  description: "\\large{Play every adventure you can imagine}\n\n  Experience the thrills of every blockbuster action movie, every\n  heart-pounding first-person shooter, and every explosive, high-octane\n  escapade you can dream up. Inside this book, you\'ll discover everything you\n  need to build the ultimate moder-world campaign filled with cinematic\n  adventure, and to create the dynamic heores needed to face the harrowing\n  dangers that await within.\n\n  For players and Gamemasters, this product is compatible with the Dungeons &\n  Dragons roleplaying game and other d20 System roleplaying games."
+  description: "\\large{Play every adventure you can imagine}\n\nExperience the thrills of every blockbuster action movie, every heart-pounding first-person shooter, and every explosive, high-octane escapade you can dream up. Inside this book, you\'ll discover everything you eed to build the ultimate moder-world campaign filled with cinematic adventure, and to create the dynamic heores needed to face the harrowing dangers that await within. For players and Gamemasters, this product is compatible with the Dungeons & Dragons roleplaying game and other d20 System roleplaying games."
 }
 title: "d20 Modern"
 author {

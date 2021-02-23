@@ -1,7 +1,7 @@
 template {
   name: "WTC 9501574"
   world: "Forgotten Realms"
-  description: "\\large{The Witch-King}\n                    A \\Monster{lich} of unspeakable power that people say has been destroyed, but\n                    whose hand still somehow holds the realm in its grip.\n                    \\large{The Knight}\n                    A champion of good with secrets as dark as any assassin\'s, she is the\n                    unlikeliest ally a \\Monster[drow]{dark elf} has ever had.\n                    \\NPC{Entreri} and \\NPC{Jarlaxle} might be strangers in the rugged,\n                    unforgiving mountains of the \\Place{Bloodstone Lands}, but they\'ve been in\n                    difficult places before. Caught between the \\Monster{ghost} of a power-mad\n                    \\Monster{lich}, and the righteous fury of an oath-bound knight, they\'ve never\n                    felt more at home."
+  description: "\\large{The Witch-King} A \\Monster{lich} of unspeakable power that people say has been destroyed, but whose hand still somehow holds the realm in its grip. \\large{The Knight} A champion of good with secrets as dark as any assassin\'s, she is the unlikeliest ally a \\Monster[drow]{dark elf} has ever had. \\NPC{Entreri} and \\NPC{Jarlaxle} might be strangers in the rugged, unforgiving mountains of the \\Place{Bloodstone Lands}, but they\'ve been in difficult places before. Caught between the \\Monster{ghost} of a power-mad \\Monster{lich}, and the righteous fury of an oath-bound knight, they\'ve never felt more at home."
 }
 title: "Promise of the Witch-King"
 subtitle: "I Grant You Your Soul, But Not Your Life. Be Happy That I Have Found A Measure Of Mercy."

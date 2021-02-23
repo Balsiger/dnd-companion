@@ -1,7 +1,7 @@
 template {
   name: "WTC 9591674"
   world: "Forgotten Realms"
-  description: "\\NPC{Halisstra Melarn}, convert to the cause of the goddess\n                    \\God{Eilistraee}, was sent to the deepest depths of the \\Place{Outer Planes}\n                    to kill the \\God{demon goddess} she once worshiped, but instead was\n                    transformed into a hideous creature bent to the vengeful will of her former\n                    mistress. For the \\God{Queen of the Demonweb Pits} not only survived her\n                    \\Event{Silence} but evolved into something greater than she was before --\n                    something that no longer needs to share the domain she calls her own.\n                    \\large{Could it be that the \\Event{War of the Spider Queen} has just\n                    begun?}"
+  description: "\\NPC{Halisstra Melarn}, convert to the cause of the goddess \\God{Eilistraee}, was sent to the deepest depths of the \\Place{Outer Planes} to kill the \\God{demon goddess} she once worshiped, but instead was transformed into a hideous creature bent to the vengeful will of her former mistress. For the \\God{Queen of the Demonweb Pits} not only survived her \\Event{Silence} but evolved into something greater than she was before -- something that no longer needs to share the domain she calls her own. \\large{Could it be that the \\Event{War of the Spider Queen} has just begun?}"
   short_description: "The first book in the Lady Penitent series."
 }
 title: "Sacrifice of the Widow"

@@ -1,7 +1,7 @@
 template {
   name: "WTC C3687"
   world: "Generic"
-  description: "This durable, four-panel Dungeon Master\'s screen features a panoramic vision of a poor soul borne aloft by an ancient red dragon. The inside of this revised screen features rules references requested by D&D fans.\n\n\\list\n{The screen\'s landscape orientation allows the Dungeon Master to easily see beyon the screen and reach over, even as it keeps die rolls and notes hidden from players.}\n{It also provides an at-a-glance reference for the most relevant and often-used game information, equipping Dungeon Masters of all skill levels with essential support.}\n{It is an excellent resource for Dungeon Masters to facilitate inspired adventures and an engaging play experience.}\n"
+  description: "This durable, four-panel Dungeon Master\'s screen features a panoramic vision of a poor soul borne aloft by an ancient red dragon. The inside of this revised screen features rules references requested by D&D fans. list\n{The screen\'s landscape orientation allows the Dungeon Master to easily see beyon the screen and reach over, even as it keeps die rolls and notes hidden from players.}\n{It also provides an at-a-glance reference for the most relevant and often-used game information, equipping Dungeon Masters of all skill levels with essential support.}\n{It is an excellent resource for Dungeon Masters to facilitate inspired adventures and an engaging play experience.}\n"
   short_description: "A Dungeon Master\'s Screen."
 }
 title: "Dungeon Master\'s Screen Reincarnated"

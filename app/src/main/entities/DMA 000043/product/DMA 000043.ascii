@@ -2,7 +2,7 @@ template {
   name: "DMA 000043"
   synonym: "B0000778"
   world: "Generic"
-  description: "It\'s war! The long-standing dispute between the \\Group{Celestial Order\n                    Wizards} and the \\Group{Mages of the Red Cabal} erupts into open warfare as\n                    the two rival factions try to retrieve pieces of an artifact before it\'s too\n                    late. At last it happens---one of the \\Group{Celestial Order}\'s\n                    highest-ranking mages is slain in a surprise attack by the \\Group{Cabal}. Or\n                    is he? It\'s up to you to penetrate the enemy\'s hidden base, find\n                    \\NPC{Archeal} and his famous wand, and bring them back to safety."
+  description: "It\'s war! The long-standing dispute between the \\Group{Celestial Order Wizards} and the \\Group{Mages of the Red Cabal} erupts into open warfare as the two rival factions try to retrieve pieces of an artifact before it\'s too late. At last it happens---one of the \\Group{Celestial Order}\'s highest-ranking mages is slain in a surprise attack by the \\Group{Cabal}. Or is he? It\'s up to you to penetrate the enemy\'s hidden base, find PC{Archeal} and his famous wand, and bring them back to safety."
 }
 title: "Wand or Archeal"
 date {

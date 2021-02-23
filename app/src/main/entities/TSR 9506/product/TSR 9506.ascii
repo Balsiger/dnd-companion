@@ -16,7 +16,7 @@ template {
     name: "Dragon 228"
   }
   world: "Generic"
-  description: "\\large{You have all the time in the world---and now you don\'t.}\n                    The final and most dangerous fantasy frontier lies not in space, but in\n                    \\emph{time}! At last, the dimension of \\Place{Time} is open to those few\n                    wizards who would risk everything---even their very existence---to visit\n                    ancient and forgotten lands, or see the unbelievable wonders and horrors of\n                    the future. These few wizards are \\Product{Chronomancers}, and this optional\n                    96-page AD&D game accessory reveals the secrets of their lives. New spells,\n                    new powers, new realms---as well as terrifying monsters---are brought to\n                    light in this stunning work. Take time to study the mysteries of\n                    chronomancy---before someone else takes that time from you."
+  description: "\\large{You have all the time in the world---and now you don\'t.} The final and most dangerous fantasy frontier lies not in space, but in \\emph{time}! At last, the dimension of \\Place{Time} is open to those few wizards who would risk everything---even their very existence---to visit ancient and forgotten lands, or see the unbelievable wonders and horrors of the future. These few wizards are \\Product{Chronomancers}, and this optional 96-page AD&D game accessory reveals the secrets of their lives. New spells, new powers, new realms---as well as terrifying monsters---are brought to light in this stunning work. Take time to study the mysteries of chronomancy---before someone else takes that time from you."
 }
 title: "Chronomancer"
 author {

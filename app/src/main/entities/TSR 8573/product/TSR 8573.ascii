@@ -19,7 +19,7 @@ template {
     name: "Dragon 243"
   }
   world: "Forgotten Realms"
-  description: "The \\Place{Netherese} Empire will collapse in five generations.\n                    A forgotten foe, armed with a hell-spawned source of destructive magic,\n                    returns to seek her revenge, and a lost love is found in a most unexpected\n                    place.\n                    Against a backdrop of war and chaos, the barbarian \\NPC{Sunbright} struggles\n                    to carve out a niche for himself---and his people---in a rapidly changing\n                    world."
+  description: "The \\Place{Netherese} Empire will collapse in five generations. A forgotten foe, armed with a hell-spawned source of destructive magic, returns to seek her revenge, and a lost love is found in a most unexpected place. Against a backdrop of war and chaos, the barbarian \\NPC{Sunbright} struggles to carve out a niche for himself---and his people---in a rapidly changing world."
 }
 title: "Mortal Consequences"
 subtitle: "Endgame..."

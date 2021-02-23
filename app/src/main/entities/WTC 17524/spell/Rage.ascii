@@ -35,7 +35,7 @@ casting_time {
 special_range: MEDIUM
 target: "One willing living creature per three levels, no two of which may be more than 30 ft apart"
 duration {
-  duration_description: "Concentration +  1 round/level"
+  duration_description: "Concentration +\n\n1 round/level"
   flags: "(D)"
   description: "(D)"
 }

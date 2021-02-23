@@ -13,7 +13,7 @@ template {
     name: "Dragon 248"
   }
   world: "Forgotten Realms"
-  description: "An epic quest is over... or ist it? \\NPC{Piergeiron}, \\NPC{Open Lord of\n                    \\Place{Waterdeep}} is dead... or is he? The search for the abductors of his\n                    bride \\NPC{Eidola} has finally drawn to a close... or has it?\n                    As the paladins and mercenaries gather in \\Place{Waterdeep} for a solemn\n                    ceremony, the last act of this epic adventure is played out against the\n                    background of treachery and deceit. And the last surprise will be the\n                    greatest of all.\n                    \\Product{The Diamond} brings to an end the nine-book serial novel published\n                    by TSR and set in the exciting world of the \\Place{Forgotten Realms}. Be sure\n                    to look for the other parts in your local bookstore."
+  description: "An epic quest is over... or ist it? \\NPC{Piergeiron}, \\NPC{Open Lord of \\Place{Waterdeep}} is dead... or is he? The search for the abductors of his bride \\NPC{Eidola} has finally drawn to a close... or has it? As the paladins and mercenaries gather in \\Place{Waterdeep} for a solemn ceremony, the last act of this epic adventure is played out against the background of treachery and deceit. And the last surprise will be the greatest of all. \\Product{The Diamond} brings to an end the nine-book serial novel published by TSR and set in the exciting world of the \\Place{Forgotten Realms}. Be sure to look for the other parts in your local bookstore."
 }
 title: "Diamond"
 leader: "The"

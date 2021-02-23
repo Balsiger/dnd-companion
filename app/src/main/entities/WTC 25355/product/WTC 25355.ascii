@@ -2,7 +2,7 @@ template {
   name: "WTC 25355"
   synonym: ""
   world: "Forgotten Realms"
-  description: "A fallen statue, caught in the cobbles of the city it tried first to save, and then to destroy.\n                    Hollowed out, built over, and rented in pieces as apartments.\n                    \\emph{\\NPC{Tennora} wants to master wizardry at the \\Place{House of Wonder} and forge a life in the bustling City of \\Place{Waterdeep}. Her plans are unfolding admirably until a madwoman arrives at the \\Place{God Catcher}, where \\NPC{Tennora} has rented a room, and screems for the landlady --- soon demonstrating she\'s more than a crazy woman with strong longs. Quite a lot more.}\n                    The \\Product{The God Catcher} is a wild adventure that rages from end to end of \\Place{Waterdeep}: it features vivid characters who have fascinating lives, I loved it, and you will too!"
+  description: "A fallen statue, caught in the cobbles of the city it tried first to save, and then to destroy. Hollowed out, built over, and rented in pieces as apartments. \\emph{\\NPC{Tennora} wants to master wizardry at the \\Place{House of Wonder} and forge a life in the bustling City of \\Place{Waterdeep}. Her plans are unfolding admirably until a madwoman arrives at the \\Place{God Catcher}, where \\NPC{Tennora} has rented a room, and screems for the landlady --- soon demonstrating she\'s more than a crazy woman with strong longs. Quite a lot more.} The \\Product{The God Catcher} is a wild adventure that rages from end to end of \\Place{Waterdeep}: it features vivid characters who have fascinating lives, I loved it, and you will too!"
 }
 title: "God Catcher"
 leader: "The"

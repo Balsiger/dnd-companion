@@ -13,7 +13,7 @@ template {
     name: "Dragon 234"
   }
   world: "Dragonlance"
-  description: "The \\Even{War of the Lance} is long over. The seasons come and go. The pendulum of the world swings. Now it is summer. A hot parched summer such as no one on \\Place{Krynn} has ever known before. The uneasy balance begins to shift.\n\nDistraught by a grievous loss, the young make \\NPC{Palin Majere} seeks to enter the \\Place{Abyss} in search of his lost uncle, the infamous archmage \\NPC{Raistlin} and on a small island, the mysterious \\Group{Irda} capture an ancient artifact and use it to ensure their own safety.\n\n\\NPC{Usha} the child of the \\Group{Irda}, arrives in \\Place{Palanthas} claiming that she is \\NPC{Raistlin}\'s daughter. The summer will be deadly. Perhaps it will be the last summer \\Place{Ansalon} will ever know."
+  description: "The \\Even{War of the Lance} is long over. The seasons come and go. The pendulum of the world swings. Now it is summer. A hot parched summer such as no one on \\Place{Krynn} has ever known before. The uneasy balance begins to shift.\n\nDistraught by a grievous loss, the young make \\NPC{Palin Majere} seeks to enter the \\Place{Abyss} in search of his lost uncle, the infamous archmage \\NPC{Raistlin} and on a small island, the mysterious \\Group{Irda} capture an ancient artifact and use it to ensure their own safety. PC{Usha} the child of the \\Group{Irda}, arrives in \\Place{Palanthas} claiming that she is \\NPC{Raistlin}\'s daughter. The summer will be deadly. Perhaps it will be the last summer \\Place{Ansalon} will ever know."
   short_description: "Culmination of the Dragonlance chronicles."
 }
 title: "Dragons of Summer Flame"

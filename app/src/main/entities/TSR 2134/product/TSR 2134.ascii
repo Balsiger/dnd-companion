@@ -23,7 +23,7 @@ template {
     name: "catalog96"
   }
   world: "Generic"
-  description: "Clever illusionists and sly practical jokers. Brilliant burglers and\n                    easygoing farmers. Now \\Product{The Complete Book of \\Monster{Gnomes} and\n                    \\Monster{Halflings}} reveals the secrets of these two popular races---their\n                    culture, beliefs, and subraces (including two new subraces), as well as\n                    twenty-eight new character kits, from the \\Monster{gnome} Goblinsticker to\n                    the \\Monster{halfling} Forestwalker. If you enjoy playing \\Monster{gnome} or\n                    \\Monster{halfling} characters, or if you\'re a DM interested in creating an\n                    all-\\Monster{gnome} or all-\\Monster{halfling} campaign, this is the book for\n                    you!"
+  description: "Clever illusionists and sly practical jokers. Brilliant burglers and easygoing farmers. Now \\Product{The Complete Book of \\Monster{Gnomes} and \\Monster{Halflings}} reveals the secrets of these two popular races---their culture, beliefs, and subraces (including two new subraces), as well as twenty-eight new character kits, from the \\Monster{gnome} Goblinsticker to the \\Monster{halfling} Forestwalker. If you enjoy playing \\Monster{gnome} or \\Monster{halfling} characters, or if you\'re a DM interested in creating an all-\\Monster{gnome} or all-\\Monster{halfling} campaign, this is the book for you!"
 }
 title: "Complete Book of Gnomes & Halflings"
 leader: "The"

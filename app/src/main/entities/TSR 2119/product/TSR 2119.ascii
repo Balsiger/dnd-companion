@@ -14,7 +14,7 @@ template {
     name: "catalog93"
   }
   world: "Spelljammer"
-  description: "Prepare to be boarded! Here are still more new, inventive, dangerous, and\n  entertaining creatures and races for your \\Place{Spelljammer} campaign\n  setting! There are \\Monster{giant undead insects}, \\Monster{star gypsies},\n  \\Monster{space plants}, and much, much more awaiting your stellar travelers\n  in these pages. \\Monster{Elven war-beasts}, \\Monster{giant space turtles},\n  \\Monster{orcish death-creatures}, and other beings of the \\Place{phlogiston},\n  \\Place{crystal spheres}, and \\Place{wildspace} roam this volume. Some look\n  nasty, and are; some look nasty, and aren\'t. Which are which? Read the\n  entries and find out for yourself! And of course, they are ogranized into\n  five-hole-punched pages that fit into your \\Product{Monstrous Compendium}\n  binders."
+  description: "Prepare to be boarded! Here are still more new, inventive, dangerous, and entertaining creatures and races for your \\Place{Spelljammer} campaign\nsetting! There are \\Monster{giant undead insects}, \\Monster{star gypsies},\n\\Monster{space plants}, and much, much more awaiting your stellar travelers in these pages. \\Monster{Elven war-beasts}, \\Monster{giant space turtles}, Monster{orcish death-creatures}, and other beings of the \\Place{phlogiston}, Place{crystal spheres}, and \\Place{wildspace} roam this volume. Some look asty, and are; some look nasty, and aren\'t. Which are which? Read the entries and find out for yourself! And of course, they are ogranized into five-hole-punched pages that fit into your \\Product{Monstrous Compendium} binders."
 }
 title: "Monstrous Compendium, Spelljammer Appendix 2"
 author {

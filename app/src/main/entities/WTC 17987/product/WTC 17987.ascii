@@ -1,7 +1,7 @@
 template {
   name: "WTC 17987"
   world: "None"
-  description: "A \\Monster{dragon} sits on the throne of \\Place{Madara}, and his regent\n                    rules with knives in the dark. The islands bleed, the mainland shakes, and\n                    even the champion has forsaken his office. Does no honor remain in the\n                    empire?\n                    Ask \\NPC{Ayesha}, who has turned her hands from breaking artifacts to making\n                    forests. Ask \\NPC{Wasitora}, whose \\Monster{cat-dragon} kits fight the armies\n                    of evil. Most of all, ask \\NPC{Tetsuo}, who must regain his honor by\n                    destroying the emperor he once served."
+  description: "A \\Monster{dragon} sits on the throne of \\Place{Madara}, and his regent rules with knives in the dark. The islands bleed, the mainland shakes, and even the champion has forsaken his office. Does no honor remain in the empire? Ask \\NPC{Ayesha}, who has turned her hands from breaking artifacts to making forests. Ask \\NPC{Wasitora}, whose \\Monster{cat-dragon} kits fight the armies of evil. Most of all, ask \\NPC{Tetsuo}, who must regain his honor by destroying the emperor he once served."
 }
 title: "Champion\'s Trial"
 subtitle: "Evil Triumphant"

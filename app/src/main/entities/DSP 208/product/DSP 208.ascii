@@ -1,7 +1,7 @@
 template {
   name: "DSP 208"
   world: "None"
-  description: "From computer gaming and online flaming to dot-coms and dot-bombs,\n  \\Product{Livin\' La Vida Dorka} celebrates the techno-geek life and puts the\n  \'pulse\' back into \'obsessive compulsive\'. Join Matt, Igor, Ken and Carson the\n  muskrat in the comic strips collected in print for the first time! Stright\n  from the pages of Interactive Week, GameSpy.com, Pyramid Online and Scrye,\n  they\'re all \\Product{Livin\' La Vida Dorka}!"
+  description: "From computer gaming and online flaming to dot-coms and dot-bombs, Product{Livin\' La Vida Dorka} celebrates the techno-geek life and puts the 'pulse\' back into \'obsessive compulsive\'. Join Matt, Igor, Ken and Carson the muskrat in the comic strips collected in print for the first time! Stright from the pages of Interactive Week, GameSpy.com, Pyramid Online and Scrye, they\'re all \\Product{Livin\' La Vida Dorka}!"
 }
 title: "Livin\' La Vida Dorka"
 subtitle: "Meet the Global Village Idiots"

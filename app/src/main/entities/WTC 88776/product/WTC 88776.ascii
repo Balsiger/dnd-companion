@@ -1,7 +1,7 @@
 template {
   name: "WTC 88776"
   world: "Forgotten Realms"
-  description: "This novel is set in the most important city of the \\Place{Forgotten Realms}\n                    setting: \\Place{Waterdeep}, city of intrigue and secrets. Its authors are\n                    considered to be among the most authoritative figures writing in the\n                    \\Place{Forgotten Realms} setting. This novel is their first collaboration."
+  description: "This novel is set in the most important city of the \\Place{Forgotten Realms} setting: \\Place{Waterdeep}, city of intrigue and secrets. Its authors are considered to be among the most authoritative figures writing in the Place{Forgotten Realms} setting. This novel is their first collaboration."
 }
 title: "City of Splendors"
 leader: "The"

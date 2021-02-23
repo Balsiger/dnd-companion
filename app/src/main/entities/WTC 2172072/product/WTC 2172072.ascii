@@ -1,7 +1,7 @@
 template {
   name: "WTC 2172072"
   world: "Generic"
-  description: "Within the pages of this core rulebook for the 4th Edition Dungeons & Dragons Roleplaying Game lurk nearly 500 fearsome and deadly monsters for your heroes to face, each one specially designed for ease of use and excitement in play.\n                    The \\Product{Monster Manual} features long-time favorites such as \\Monster{giants}, \\Monster{demons}, and \\Monster{dragons}, as well as the brand-new \\Monster{titans}, \\Monster{angels}, and \\Monster{elemental archons}. The book includes threats for characters of every level, from the lowly \\Monster{kobold} minion to mighty \\NPC{Orcus}, Demon Prince of the Undead!"
+  description: "Within the pages of this core rulebook for the 4th Edition Dungeons & Dragons Roleplaying Game lurk nearly 500 fearsome and deadly monsters for your heroes to face, each one specially designed for ease of use and excitement in play. The \\Product{Monster Manual} features long-time favorites such as \\Monster{giants}, \\Monster{demons}, and \\Monster{dragons}, as well as the brand-new \\Monster{titans}, \\Monster{angels}, and \\Monster{elemental archons}. The book includes threats for characters of every level, from the lowly \\Monster{kobold} minion to mighty \\NPC{Orcus}, Demon Prince of the Undead!"
   short_description: "Roleplaying Game Core Rules"
 }
 title: "Monster Manual"

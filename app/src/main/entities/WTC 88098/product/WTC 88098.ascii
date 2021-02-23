@@ -1,7 +1,7 @@
 template {
   name: "WTC 88098"
   world: "Dragonlance"
-  description: "In the barren borderland between the kingdom of the \\Monster[elf]{elves} and\n  the land of the \\Monster[dwarf]{dwarves}, outlaws seize an\n  \\Monster[elf]{elven} princess. Sustained by faith in her husband and her god,\n  she waits patiently for the rescue that is sure to come.\n\n  But waiting is a dangerous game---one that can cause a princess and an outlaw\n  to look beyond themselves. To dare to trust the enemy.\n\n  In a place where suspicions run high and bloody battles are the order of the\n  day, trust can be the most dangerous game of all."
+  description: "In the barren borderland between the kingdom of the \\Monster[elf]{elves} and the land of the \\Monster[dwarf]{dwarves}, outlaws seize an Monster[elf]{elven} princess. Sustained by faith in her husband and her god, she waits patiently for the rescue that is sure to come. But waiting is a dangerous game---one that can cause a princess and an outlaw to look beyond themselves. To dare to trust the enemy. In a place where suspicions run high and bloody battles are the order of the day, trust can be the most dangerous game of all."
 }
 title: "Inheritance"
 leader: "The"

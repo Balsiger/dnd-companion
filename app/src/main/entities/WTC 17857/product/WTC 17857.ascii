@@ -1,7 +1,7 @@
 template {
   name: "WTC 17857"
   world: "Forgotten Realms"
-  description: "\\large{\\NPC{Thamalon Uskevren II}}\n                    The heir to the \\Group{Uskevren} fortune never expected to inherit so much so\n                    soon.\n                    After a sorcerous attack on \\Place{Stormweather Towers} cuts the family in\n                    half, \\NPC{Tamlin} must learn to lead the survivors before a deadly assassin\n                    finishes the job. Too bad nobody seems willing to follow his lead. Worse\n                    still, some of them want him dead."
+  description: "\\large{\\NPC{Thamalon Uskevren II}} The heir to the \\Group{Uskevren} fortune never expected to inherit so much so soon. After a sorcerous attack on \\Place{Stormweather Towers} cuts the family in half, \\NPC{Tamlin} must learn to lead the survivors before a deadly assassin finishes the job. Too bad nobody seems willing to follow his lead. Worse still, some of them want him dead."
 }
 title: "Lord of Stormweather"
 author {

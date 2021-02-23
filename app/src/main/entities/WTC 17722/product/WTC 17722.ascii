@@ -1,7 +1,7 @@
 template {
   name: "WTC 17722"
   world: "Dragonlance"
-  description: "\\Product{Return of the Exile} concludes a trilogy that centers on\n  \\NPC{Linsha Majere}, the grandchild of one of the central characters in the\n  entire \\Place{Dragonlance} saga. This trilogy advances the story of\n  post-\\Event{War of Souls} events in the \\Place{Dragonlance} world and\n  introduces a major new villain to the setting."
+  description: "\\Product{Return of the Exile} concludes a trilogy that centers on PC{Linsha Majere}, the grandchild of one of the central characters in the entire \\Place{Dragonlance} saga. This trilogy advances the story of post-\\Event{War of Souls} events in the \\Place{Dragonlance} world and introduces a major new villain to the setting."
 }
 title: "Return of the Exile"
 author {

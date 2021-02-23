@@ -19,7 +19,7 @@ template {
     name: "catalog93"
   }
   world: "Dragonlance"
-  description: "The Kingpriest\'s arrogance brings the wrath of the gods upon\n  \\Place{Krynn}. The result is the \\Event{Cataclysm} -- chaos and anarchy,\n  despair and villainy... and inspiring heroism.\n\n  Mark Anthony, Nancy Varian Berberick, Todd Fahnestock, Richard A. Knaak,\n  Roger E. Moore, Douglas Niles, Nick O\'Donohoe, Dan Parkinson, Paul\n  B. Thompson and Tonya C. Cook, and Michael and Teri Williams contribute\n  untold stories to this indispensable collection. Margaret Weis and Tracy\n  Hickman enhance this lineup with an original novella and verse dedicated to\n  the accursed \\NPC{Lord Soth}."
+  description: "The Kingpriest\'s arrogance brings the wrath of the gods upon\n\\Place{Krynn}. The result is the \\Event{Cataclysm} -- chaos and anarchy, despair and villainy... and inspiring heroism. Mark Anthony, Nancy Varian Berberick, Todd Fahnestock, Richard A. Knaak, Roger E. Moore, Douglas Niles, Nick O\'Donohoe, Dan Parkinson, Paul B. Thompson and Tonya C. Cook, and Michael and Teri Williams contribute untold stories to this indispensable collection. Margaret Weis and Tracy Hickman enhance this lineup with an original novella and verse dedicated to the accursed \\NPC{Lord Soth}."
   short_description: "Volume V of the Dragonlance Tales."
 }
 title: "Cataclysm"

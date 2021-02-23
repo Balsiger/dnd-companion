@@ -1,7 +1,7 @@
 template {
   name: "WTC 8844674"
   world: "Forgotten Realms"
-  description: "Trouble brews in \\Place{Thar} as \\Monster{orc} tribes converge on the ruined\n                    fortress of \\Place{X\\hat{u}l-Jarak}, flocking to the banner of a charismatic\n                    warlord. What are their wicked intentions, and what connection do they have\n                    to six missing nobles from \\Place{Melvaunt}?\n                    This stand-alone Dungeons & Dragons adventure is designed for 4th-level\n                    characters. Although set in the world of \\Place{Faer\\hat{u}n}, it can easily\n                    be placed in any D&D campaign.\n                    The adventure can be played using D&D Minatures."
+  description: "Trouble brews in \\Place{Thar} as \\Monster{orc} tribes converge on the ruined fortress of \\Place{X\\hat{u}l-Jarak}, flocking to the banner of a charismatic warlord. What are their wicked intentions, and what connection do they have to six missing nobles from \\Place{Melvaunt}? This stand-alone Dungeons & Dragons adventure is designed for 4th-level characters. Although set in the world of \\Place{Faer\\hat{u}n}, it can easily be placed in any D&D campaign. The adventure can be played using D&D Minatures."
   short_description: "A 4th level adventure revolving around \\Monster{orcs}."
 }
 title: "Sons of Gruumsh"

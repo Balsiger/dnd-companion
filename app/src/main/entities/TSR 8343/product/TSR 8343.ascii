@@ -19,7 +19,7 @@ template {
     name: "catalog93"
   }
   world: "Dragonlance"
-  description: "Although \\NPC{Raistlin} and \\NPC{Caramon} urge him not to go, \\NPC{Sturm\n  Brightblade} attends an annual \\Place{Solamnic} ceremony that is interrupted\n  by...\n\n  A stranger, taunting challenge. Clues from the past. Death.\n\n  Once he accepts a mysterious gauntlet, young \\NPC{Sturm} must make a\n  dangerous journey with some curious friends, rescue a fair if querulous maid,\n  defeat a traitor knight, and learn the secret fate of his long-lost\n  father. He must also learn the meaning of honor.\n\n  The fourth installment in the popular \\Product{Meetings Sextet} tells the\n  story of \\NPC{Sturm Brightblade}, the noble \\Class{Solamnic Knight}, in the\n  years before \\NPC{Sturm} joined up with the other companions of the\n  best-selling \\Product{Dragonlance series}."
+  description: "Although \\NPC{Raistlin} and \\NPC{Caramon} urge him not to go, \\NPC{Sturm Brightblade} attends an annual \\Place{Solamnic} ceremony that is interrupted by...\n\nA stranger, taunting challenge. Clues from the past. Death.\n\nOnce he accepts a mysterious gauntlet, young \\NPC{Sturm} must make a dangerous journey with some curious friends, rescue a fair if querulous maid, defeat a traitor knight, and learn the secret fate of his long-lost father. He must also learn the meaning of honor. The fourth installment in the popular \\Product{Meetings Sextet} tells the story of \\NPC{Sturm Brightblade}, the noble \\Class{Solamnic Knight}, in the years before \\NPC{Sturm} joined up with the other companions of the best-selling \\Product{Dragonlance series}."
 }
 title: "Oath and the Measure"
 leader: "The"

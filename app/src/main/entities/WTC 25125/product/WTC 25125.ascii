@@ -2,7 +2,7 @@ template {
   name: "WTC 25125"
   synonym: ""
   world: "Generic"
-  description: "All trade through the \\Place{Ironwall Mountains} stopped when \\Place{Stonefang Pass} fell to the \\Monster{orcs}. The ancient passage has become a haven for monsters, and something mighty stirs in the bedrock deep below. Now the \\Monster{dwarves} of the \\Group{Glintshield} clan want to reopen the pass, but they cannot do it alone...\n                    \\Product{Orcs of Stonefang Pass} is a Dungeons & Dragons adventures designed for 5th-level characters. It fits easily into any Dungeon Master\'s campaign and features an easy-to-run encounter format and a full-color, double-sided battle map. It can be played as a stand-alone adventure or as a follow-up to \\Product{The Slaying Stone}."
+  description: "All trade through the \\Place{Ironwall Mountains} stopped when \\Place{Stonefang Pass} fell to the \\Monster{orcs}. The ancient passage has become a haven for monsters, and something mighty stirs in the bedrock deep below. Now the \\Monster{dwarves} of the \\Group{Glintshield} clan want to reopen the pass, but they cannot do it alone... Product{Orcs of Stonefang Pass} is a Dungeons & Dragons adventures designed for 5th-level characters. It fits easily into any Dungeon Master\'s campaign and features an easy-to-run encounter format and a full-color, double-sided battle map. It can be played as a stand-alone adventure or as a follow-up to \\Product{The Slaying Stone}."
   short_description: "An Adventure for Characters of 5th level."
 }
 title: "Orcs of Stonefang Pass"

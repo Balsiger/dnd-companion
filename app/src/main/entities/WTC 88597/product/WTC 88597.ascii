@@ -1,7 +1,7 @@
 template {
   name: "WTC 88597"
   world: "Generic"
-  description: "The future is what you make of it. With access to space travel, cybernetics,\n  mutations, mecha, and more in \\Product{d20 Future}, heroes may battle across\n  alien worlds, survive on postapocalyptic \\Place{Earth}, voyage to distance\n  galaxies, and explore alternate dimensions. Charge your weapons and embark on\n  never-ending adventure within the infinite possibilities of the near and\n  distant future.\n\n  To use this product, you also need the \\Product{d20 Modern Roleplaying Game}\n  core rulebook. For players and Gamemasters, this product is compatible with\n  other d20 System roleplaying games."
+  description: "The future is what you make of it. With access to space travel, cybernetics,\nmutations, mecha, and more in \\Product{d20 Future}, heroes may battle across alien worlds, survive on postapocalyptic \\Place{Earth}, voyage to distance galaxies, and explore alternate dimensions. Charge your weapons and embark on ever-ending adventure within the infinite possibilities of the near and distant future. To use this product, you also need the \\Product{d20 Modern Roleplaying Game} core rulebook. For players and Gamemasters, this product is compatible with other d20 System roleplaying games."
 }
 title: "d20 Future"
 subtitle: "High Tech Meets High Adventure"

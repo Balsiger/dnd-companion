@@ -1,7 +1,7 @@
 template {
   name: "WTC 21795"
   world: "Generic"
-  description: "Monsters lurk in the maddening, evil realm called the \\Place{Demonweb Pits} and the dark, subterranean places of the world. Frenzied \\Monster{demon}s, frenzied \\Monster{drow}, and \\Monster{mind flayer} masterminds prepare to poison the world and destroy all peaceful folk.\n                    Create classic battles and spectacular adventures when you collect all 60 miniatures in the \\Product{Demonweb} set. Build you warband and challenge your friends with the D&D Miniatures Game, or set out to conquer countless dungeons with the Dungeons & Dragonsa Roleplaying game and these fantastic miniature figures."
+  description: "Monsters lurk in the maddening, evil realm called the \\Place{Demonweb Pits} and the dark, subterranean places of the world. Frenzied \\Monster{demon}s, frenzied \\Monster{drow}, and \\Monster{mind flayer} masterminds prepare to poison the world and destroy all peaceful folk. Create classic battles and spectacular adventures when you collect all 60 miniatures in the \\Product{Demonweb} set. Build you warband and challenge your friends with the D&D Miniatures Game, or set out to conquer countless dungeons with the Dungeons & Dragonsa Roleplaying game and these fantastic miniature figures."
   short_description: "A boster expansion for the miniature game."
 }
 title: "Demonweb Booster Pack"

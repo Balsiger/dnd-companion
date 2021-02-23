@@ -1,7 +1,7 @@
 template {
   name: "WTC 96263"
   world: "None"
-  description: "Break your game wide open with MLB Showdown booster packs. Each 9-card pack\n  includes sluggers to add pop to your lineup, aces to bring the heat to your\n  opponents, and strategies to show off your managerial genius.\n\n  Become a legitimate playoff contender today.\n\n  This booster pack contains 7 random player game cards and 2 random strategy\n  game cards. It doesn\'t include rules. You can get the rules and a playmat in\n  an MLB Showdown Starter Game. Each player must have an MLB Showdown team to\n  play."
+  description: "Break your game wide open with MLB Showdown booster packs. Each 9-card pack includes sluggers to add pop to your lineup, aces to bring the heat to your opponents, and strategies to show off your managerial genius. Become a legitimate playoff contender today. This booster pack contains 7 random player game cards and 2 random strategy game cards. It doesn\'t include rules. You can get the rules and a playmat in an MLB Showdown Starter Game. Each player must have an MLB Showdown team to play."
 }
 title: "MLB Showdown 2003 Booster Pack"
 date {

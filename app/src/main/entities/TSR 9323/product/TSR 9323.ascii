@@ -20,7 +20,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "\\emph{Lay on, soldiers of \\Place{France}! This day we win or die!}\n                    \\NPC{Charlemagne}---conqueror, statesman, lawmaker, the greatest medieval\n                    king of \\Place{Europe}. His reign lasted forty-four years, but his influence\n                    was felt for a thousand. From the chaos of the dark ages he forged a kingdom\n                    that rivaled \\Place{Roman Byzantium} in its power and prestige. Join the\n                    noblest heroes of the age---mighty \\NPC{Roland}, \\NPC{Bradaman} the warrior\n                    maiden, archbishop \\NPC{Turpin}, and \\NPC{Malagigi} the wizard---on royal\n                    quests and wars against the \\Group{Lombards}, \\Group{Moors}, \\Group{Saxons},\n                    and \\Group{Vikings}. Find adventure at the dawn of chivalry!"
+  description: "\\emph{Lay on, soldiers of \\Place{France}! This day we win or die!} \\NPC{Charlemagne}---conqueror, statesman, lawmaker, the greatest medieval king of \\Place{Europe}. His reign lasted forty-four years, but his influence was felt for a thousand. From the chaos of the dark ages he forged a kingdom that rivaled \\Place{Roman Byzantium} in its power and prestige. Join the noblest heroes of the age---mighty \\NPC{Roland}, \\NPC{Bradaman} the warrior maiden, archbishop \\NPC{Turpin}, and \\NPC{Malagigi} the wizard---on royal quests and wars against the \\Group{Lombards}, \\Group{Moors}, \\Group{Saxons}, and \\Group{Vikings}. Find adventure at the dawn of chivalry!"
 }
 title: "Charlemange\'s Paladins"
 author {

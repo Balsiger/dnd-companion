@@ -11,7 +11,7 @@ template {
     name: "catalog96"
   }
   world: "Generic"
-  description: "\\large{Beware of \\NPC{Baba Yaga} and her infamous hut!}\n                    \\NPC{Baba Yaga} is an ancient crone who is said to have power over day and\n                    night itself. Many seek out \\NPC{Baba Yaga} for her wisdom, which she has\n                    gleaned from centuries of travel through numerous worlds. Others, bolder and\n                    more foolish, search out the hut to plunder its treasures, which \\NPC{Baba\n                    Yaga} has gathered from every corner of the multiverse. None, thief or\n                    scholar, who enter the \\Place{Dancing Hut of \\NPC{Baba Yaga}} leave\n                    unscathed.\n                    \\large{How will you fare now that the great \\NPC{Baba Yaga} is in your\n                    neighborhood?}"
+  description: "\\large{Beware of \\NPC{Baba Yaga} and her infamous hut!} \\NPC{Baba Yaga} is an ancient crone who is said to have power over day and night itself. Many seek out \\NPC{Baba Yaga} for her wisdom, which she has gleaned from centuries of travel through numerous worlds. Others, bolder and more foolish, search out the hut to plunder its treasures, which \\NPC{Baba Yaga} has gathered from every corner of the multiverse. None, thief or scholar, who enter the \\Place{Dancing Hut of \\NPC{Baba Yaga}} leave unscathed. \\large{How will you fare now that the great \\NPC{Baba Yaga} is in your eighborhood?}"
 }
 title: "Dancing Hut of Baba Yaga"
 leader: "The"

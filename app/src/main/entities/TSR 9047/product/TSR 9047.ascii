@@ -4,7 +4,7 @@ template {
     name: "net price list"
   }
   world: "Generic"
-  description: "Are you running out of ideas for ways to stock your dungeon full of\n                    treasure? Do you need a quick an easy way to fill your castle of 1,000 rooms\n                    with monsters? The \\Product{Monster & Treasure Assortment} has 900 monsters,\n                    900 treasures, a host of treasure containers/protection devices/concealments,\n                    and complete instructions for using the assortment to fill in partially\n                    stocked or newly encountered levels.\n                    Designing and stocking any number of dungeon levels becomes a snap when\n                    \\Product{Monster and Treasure Assortment} is used in conjunction with\n                    \\Product{Dungeon Geomorphs}. TSR\'s geomorphs allow an almost endless variety\n                    of rooms to be laid out in virtually no time at all."
+  description: "Are you running out of ideas for ways to stock your dungeon full of treasure? Do you need a quick an easy way to fill your castle of 1,000 rooms with monsters? The \\Product{Monster & Treasure Assortment} has 900 monsters, 900 treasures, a host of treasure containers/protection devices/concealments, and complete instructions for using the assortment to fill in partially stocked or newly encountered levels. Designing and stocking any number of dungeon levels becomes a snap when \\Product{Monster and Treasure Assortment} is used in conjunction with \\Product{Dungeon Geomorphs}. TSR\'s geomorphs allow an almost endless variety of rooms to be laid out in virtually no time at all."
 }
 title: "Monster and Treasure Assortment, levels 1 to 9"
 author {

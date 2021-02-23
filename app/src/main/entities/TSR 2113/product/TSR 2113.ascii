@@ -20,7 +20,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "\\Class{Clerics} have long bee player\'s favorites, but now there are new\n                    \\Class{priest} characters for your gaming enjoyment! Within these pages are\n                    new rules for mythos-specific \\Class{priests}, guidelines for creating mythoi\n                    of your own, howto\'s for making new priesthoods. Also here are new\n                    \\Class{Priest} Kits, so you can play a \\Class{fighting monk}, an\n                    \\Class{amazon priestess}, a \\Class{savage priest}, or even a \\Class{peasant\n                    priest} (among many others). All this and more is presented in these 128\n                    pages for players and DMs."
+  description: "\\Class{Clerics} have long bee player\'s favorites, but now there are new \\Class{priest} characters for your gaming enjoyment! Within these pages are new rules for mythos-specific \\Class{priests}, guidelines for creating mythoi of your own, howto\'s for making new priesthoods. Also here are new \\Class{Priest} Kits, so you can play a \\Class{fighting monk}, an \\Class{amazon priestess}, a \\Class{savage priest}, or even a \\Class{peasant priest} (among many others). All this and more is presented in these 128 pages for players and DMs."
 }
 title: "Complete Priest\'s Handbook"
 leader: "The"

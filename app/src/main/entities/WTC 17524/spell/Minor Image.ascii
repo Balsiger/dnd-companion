@@ -30,7 +30,7 @@ casting_time {
   standard_actions: 1
 }
 duration {
-  duration_description: "Concentration +  2 rounds"
+  duration_description: "Concentration +\n\n2 rounds"
 }
 saving_throw: "Will disbelief (if interacted with)"
 spell_resistance: "No"

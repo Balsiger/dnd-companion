@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell causes an object to glow like a torch, shedding bright light in a 20-footradius (and dim light for an additional 20 feet) from the point you touch. The effect is immobile, but it can be cast on a movable object. Light taken into an area of magical darkness does not function.  A light spell (one with the light descriptor) counters and dispels a darkness spell (one with the darkness descriptor) of an equal or lower level.  Arcane Material Component: A firefly or a piece of phosphorescent moss."
+  description: "This spell causes an object to glow like a torch, shedding bright light in a 20-footradius (and dim light for an additional 20 feet) from the point you touch. The effect is immobile, but it can be cast on a movable object. Light taken into an area of magical darkness does not function.\n\nA light spell (one with the light descriptor) counters and dispels a darkness spell (one with the darkness descriptor) of an equal or lower level.\n\nArcane Material Component: A firefly or a piece of phosphorescent moss."
   short_description: "Object shines like a torch."
 }
 school: EVOCATION

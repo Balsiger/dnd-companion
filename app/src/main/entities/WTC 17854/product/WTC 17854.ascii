@@ -1,7 +1,7 @@
 template {
   name: "WTC 17854"
   world: "Dragonlance"
-  description: "The \\Group{Companions} have gone their separate ways, each vowing to return\n  with news of the growing darkness in \\Place{Ansalon}. \\NPC{Sturm\n  Brightblade}, a warrior whose honor is his life, and \\NPC{Kitiara}, a\n  passionate woman of uncertain loyalties, travel north in search of\n  \\NPC{Sturm}\'s long-lost father.\n\n  Before they reach their destination, a band of \\Monster{gnomes} begs for\n  their help. But nothing with \\Monster{gnomes} ever goes as planned. The two\n  adventurers are soon thrown into a perilous adventure that will take them\n  beyond the realms of \\Place{Ansalon}, through love and hate, to darkness and\n  light."
+  description: "The \\Group{Companions} have gone their separate ways, each vowing to return\nwith news of the growing darkness in \\Place{Ansalon}. \\NPC{Sturm\nBrightblade}, a warrior whose honor is his life, and \\NPC{Kitiara}, a passionate woman of uncertain loyalties, travel north in search of PC{Sturm}\'s long-lost father. Before they reach their destination, a band of \\Monster{gnomes} begs for their help. But nothing with \\Monster{gnomes} ever goes as planned. The two adventurers are soon thrown into a perilous adventure that will take them beyond the realms of \\Place{Ansalon}, through love and hate, to darkness and light."
 }
 title: "Darkness & Light"
 subtitle: "Before the War of the Lance."

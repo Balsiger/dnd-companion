@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can comprehend and communicate with animals. You are able to ask questions of and receive answers from animals, although the spell doesn\'t make them any more friendly or cooperative than normal.  Furthermore, wary and cunning animals are likely to be terse and evasive, while the more stupid ones make inane comments.  If an animal is friendly toward you, it may do some favor or service for you (as determined by the DM)."
+  description: "You can comprehend and communicate with animals. You are able to ask questions of and receive answers from animals, although the spell doesn\'t make them any more friendly or cooperative than normal.\n\nFurthermore, wary and cunning animals are likely to be terse and evasive, while the more stupid ones make inane comments.\n\nIf an animal is friendly toward you, it may do some favor or service for you (as determined by the DM)."
   short_description: "You can communicate with animals."
 }
 school: DIVINATION

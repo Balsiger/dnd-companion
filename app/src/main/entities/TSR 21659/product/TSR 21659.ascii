@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Rokugan"
-  description: "\\NPC{Doji Hoturi}, the young Champion of the \\Group{Crane}, is everything a\n                    \\Class{samurai} could wish to be: swift of sword and pure of heart . . . but\n                    his eyes hide a terrible secret.\n                    Bloody magic whispers through \\Place{Rokugan}\'s greatest cities, and the\n                    undead servants of a Dark God rise. From the shadows, \\NPC{Doji Hoturi}\n                    watches as a new champion of evil lifts his sword and laughs -- and the face\n                    beneath the armor is his own."
+  description: "\\NPC{Doji Hoturi}, the young Champion of the \\Group{Crane}, is everything a \\Class{samurai} could wish to be: swift of sword and pure of heart . . . but his eyes hide a terrible secret. Bloody magic whispers through \\Place{Rokugan}\'s greatest cities, and the undead servants of a Dark God rise. From the shadows, \\NPC{Doji Hoturi} watches as a new champion of evil lifts his sword and laughs -- and the face beneath the armor is his own."
 }
 title: "Crane"
 leader: "The"

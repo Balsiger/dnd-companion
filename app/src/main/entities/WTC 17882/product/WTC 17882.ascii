@@ -1,7 +1,7 @@
 template {
   name: "WTC 17882"
   world: "Generic"
-  description: "Frigid cold and ice sweep across the realm at the height of summer. Arctic\n  monsters prowl the flash-frozen landscape. To unlock the mystery, a small\n  band of heroes must traverse the depths of a ruined, ice-clogged city that\n  now houses only unearthly creatures and deadly traps.\n\n  Will they find the key to salvation."
+  description: "Frigid cold and ice sweep across the realm at the height of summer. Arctic monsters prowl the flash-frozen landscape. To unlock the mystery, a small band of heroes must traverse the depths of a ruined, ice-clogged city that ow houses only unearthly creatures and deadly traps. Will they find the key to salvation."
 }
 title: "Plague of Ice"
 author {

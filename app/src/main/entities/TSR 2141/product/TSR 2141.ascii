@@ -16,7 +16,7 @@ template {
     name: "Dragon 211"
   }
   world: "Generic"
-  description: "A lot of magical items, from the \\Item{Abacus of Calculation} to the\n                    \\Item{Dust of Blending}."
+  description: "A lot of magical items, from the \\Item{Abacus of Calculation} to the Item{Dust of Blending}."
 }
 title: "Encyclopedia Magica, Volume I"
 author {

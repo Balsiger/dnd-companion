@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A cloaker can manipulate shadows. This ability is effective only in shadowy areas and has three possible effects. \n\n\\bold{Obscure Vision}: The cloaker gains concealment (20% miss chance) for 1d4 rounds. \n\n\\bold{Dancing Images}: This effect duplicates a mirror image spell (caster level 6th). \n\n\\bold{Silent Image}: This effect duplicates a silent image spell (DC 15, caster level 6th). \n\nThe save DC is Charisma-based."
+  description: "A cloaker can manipulate shadows. This ability is effective only in shadowy areas and has three possible effects.\n\nbold{Obscure Vision}: The cloaker gains concealment (20% miss chance) for 1d4 rounds.\n\nbold{Dancing Images}: This effect duplicates a mirror image spell (caster level 6th).\n\nbold{Silent Image}: This effect duplicates a silent image spell (DC 15, caster level 6th). \n\nThe save DC is Charisma-based."
 }
 type: SUPERNATURAL

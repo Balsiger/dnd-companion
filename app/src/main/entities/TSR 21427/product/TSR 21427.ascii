@@ -10,7 +10,7 @@ template {
     name: "Dragon 264"
   }
   world: "Forgotten Realms"
-  description: "From a dark and dusty tomb, \\NPC{Elminster} emerges, seeking the guidance of\n                    \\God{Mystra}, and finds only silence. He is drawn into the clutches of the\n                    mysterious and sinister \\NPC{Lady of Shadows}. The path he takes will lead to\n                    a \\Place{Realms}-shaking confrontation where \\NPC{Elminster} has to make the\n                    most important choice of his long life.\n                    Whatever he decides, the \\Place{Realms} will be forever changed..."
+  description: "From a dark and dusty tomb, \\NPC{Elminster} emerges, seeking the guidance of \\God{Mystra}, and finds only silence. He is drawn into the clutches of the mysterious and sinister \\NPC{Lady of Shadows}. The path he takes will lead to a \\Place{Realms}-shaking confrontation where \\NPC{Elminster} has to make the most important choice of his long life. Whatever he decides, the \\Place{Realms} will be forever changed..."
 }
 title: "Temptation of Elminster"
 leader: "The"

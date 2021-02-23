@@ -1,7 +1,7 @@
 template {
   name: "Dungeon 97"
   world: "Generic"
-  description: "This is issue 97 of the dungeon magazine, together with the\n   \\Product{Polyhedron 156} issue."
+  description: "This is issue 97 of the dungeon magazine, together with the Product{Polyhedron 156} issue."
 }
 title: "Dungeon 97"
 author {

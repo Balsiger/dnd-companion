@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Upon command, a frost weapon is sheathed in icy cold.  The cold does not harm the wielder. The effect remains until another command is given. A frost weapon deals an extra 1d6 points of cold damage on a successful hit. Bows, crossbows, and slings so crafted bestow the cold energy upon their ammunition."
+  description: "Upon command, a frost weapon is sheathed in icy cold.\n\nThe cold does not harm the wielder. The effect remains until another command is given. A frost weapon deals an extra 1d6 points of cold damage on a successful hit. Bows, crossbows, and slings so crafted bestow the cold energy upon their ammunition."
   short_description: "+1d6 cold damage."
   base_only: true
 }

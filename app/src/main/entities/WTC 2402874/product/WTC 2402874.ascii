@@ -1,7 +1,7 @@
 template {
   name: "WTC 2402874"
   world: "Forgotten Realms"
-  description: "\\Place{The Mere-That-Was} nurses the nightmare children of the \\Event{Spellplague}. Along the dry lake bed, monsters unlike anything in \\Place{Toril} haunt the landscape. From the depths of the wilds, an eerie hymm draws strange disciples to the lair of one plaguechanged child.\n                    Its hypnotic song urges them to seek the key to completing the lullaby: a new voice.\n                    A trio of strangers must trust each other as they chase the cult of the Choir -- and the girl they\'ve taken -- through the wilds of \\Place{Akan\\hat{u}l}.\n                    But all their fears are coming true.\n                    "
+  description: "\\Place{The Mere-That-Was} nurses the nightmare children of the \\Event{Spellplague}. Along the dry lake bed, monsters unlike anything in \\Place{Toril} haunt the landscape. From the depths of the wilds, an eerie hymm draws strange disciples to the lair of one plaguechanged child. Its hypnotic song urges them to seek the key to completing the lullaby: a new voice. A trio of strangers must trust each other as they chase the cult of the Choir -- and the girl they\'ve taken -- through the wilds of \\Place{Akan\\hat{u}l}. But all their fears are coming true. "
   short_description: "The Wilds, Book 2"
 }
 title: "Restless Shore"

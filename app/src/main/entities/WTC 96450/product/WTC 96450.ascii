@@ -1,7 +1,7 @@
 template {
   name: "WTC 96450"
   world: "Forgotten Realms"
-  description: "The Streets of \\Place{Waterdeep}...\n                    Where danger lurks round every corner as the avatars of the gods seek the\n                    \\Item{Tablets of Fate}.\n                    Where \\God{Cyric} and \\God{Myrkul}, \\God{god of death}, plot to capture\n                    \\God{Midnight} and twist the \\Item{Tablets} to their own dark ends,\n                    imperiling the very existence of \\Place{Faer\\hat{u}n}.\n                    Where the destiny of the world will be decided and a new pantheon of gods\n                    will rise into the heavens."
+  description: "The Streets of \\Place{Waterdeep}... Where danger lurks round every corner as the avatars of the gods seek the \\Item{Tablets of Fate}. Where \\God{Cyric} and \\God{Myrkul}, \\God{god of death}, plot to capture \\God{Midnight} and twist the \\Item{Tablets} to their own dark ends, imperiling the very existence of \\Place{Faer\\hat{u}n}. Where the destiny of the world will be decided and a new pantheon of gods will rise into the heavens."
 }
 title: "Waterdeep"
 author {

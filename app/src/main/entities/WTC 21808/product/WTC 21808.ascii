@@ -1,7 +1,7 @@
 template {
   name: "WTC 21808"
   world: "Forgotten Realms"
-  description: "All is not well in the \\Place{City of Splendors}. A new \\Group{Zhentarim}\n                    threat lurks in the shadows of \\Place{Waterdeep}.\n                    Roguish \\Group{Harper} \\NPC{Bronwyn} is sent by \\Class{Archmage} \\NPC{Khelben\n                    Arunsun} on a mission to meet her long-lost father and reclaim her\n                    bloodline\'s dangerous heritage. She uncovers a family secret that threatens\n                    to destroy not only \\NPC{Bronwyn}, but the Harpers themselves!"
+  description: "All is not well in the \\Place{City of Splendors}. A new \\Group{Zhentarim} threat lurks in the shadows of \\Place{Waterdeep}. Roguish \\Group{Harper} \\NPC{Bronwyn} is sent by \\Class{Archmage} \\NPC{Khelben Arunsun} on a mission to meet her long-lost father and reclaim her bloodline\'s dangerous heritage. She uncovers a family secret that threatens to destroy not only \\NPC{Bronwyn}, but the Harpers themselves!"
 }
 title: "Thornhold"
 author {

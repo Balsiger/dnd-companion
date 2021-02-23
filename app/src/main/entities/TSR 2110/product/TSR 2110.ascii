@@ -20,7 +20,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "Who says \\Class{fighters} are the poor cousins of the AD&D game? No one will\n                    say it aloud after reading the \\Product{Complete \\Class{Fighter}\'s Handbook};\n                    128 -pages of mind-expanding advice on how to make your fighter the leanest,\n                    meanest threshing machine for leagues around. New weapons, new proficiencies,\n                    new fighting styles, and \'Fighter Kits\' make this optional AD&D accessory a\n                    useful item for players and DMs."
+  description: "Who says \\Class{fighters} are the poor cousins of the AD&D game? No one will say it aloud after reading the \\Product{Complete \\Class{Fighter}\'s Handbook}; 128 -pages of mind-expanding advice on how to make your fighter the leanest, meanest threshing machine for leagues around. New weapons, new proficiencies, new fighting styles, and \'Fighter Kits\' make this optional AD&D accessory a useful item for players and DMs."
 }
 title: "Complete Figher\'s Handbook"
 leader: "The"

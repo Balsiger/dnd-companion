@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can find secret doors, simple traps, hidden compartments, and other details not readily apparent. The Spot skill lets you notice something, such as a hiding rogue. The Search skill lets a character discern some small detail or irregularity through active effort.  Search does not allow you to find complex traps unless you are a rogue (see Restriction, below)."
+  description: "You can find secret doors, simple traps, hidden compartments, and other details not readily apparent. The Spot skill lets you notice something, such as a hiding rogue. The Search skill lets a character discern some small detail or irregularity through active effort.\n\nSearch does not allow you to find complex traps unless you are a rogue (see Restriction, below)."
 }
 ability: INTELLIGENCE
 action: "It takes a full-round action to search a 5-foot-by-5-foot                     area or a volume of goods 5 feet on a side."

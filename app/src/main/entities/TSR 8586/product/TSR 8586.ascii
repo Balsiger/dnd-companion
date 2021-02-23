@@ -7,7 +7,7 @@ template {
     name: "catalog98"
   }
   world: "Forgotten Realms"
-  description: "Hidden from his powerful family\'s enemies behind the hideous mask of his own\n                    face. Sent by the \\God{goddess of beauty} on an impossible mission. Driven to\n                    find a way past his own flesh, into a soul torn between destiny and love.\n                    Deep in the ancient valleys of the enigmatic \\Place{Utter East}, \\NPC{Atreus}\n                    will finally look into the..."
+  description: "Hidden from his powerful family\'s enemies behind the hideous mask of his own face. Sent by the \\God{goddess of beauty} on an impossible mission. Driven to find a way past his own flesh, into a soul torn between destiny and love. Deep in the ancient valleys of the enigmatic \\Place{Utter East}, \\NPC{Atreus} will finally look into the..."
 }
 title: "Faces of Deception"
 subtitle: "\\NPC{Atreus of Erlkazar}"

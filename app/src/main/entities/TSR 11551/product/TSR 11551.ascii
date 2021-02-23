@@ -4,7 +4,7 @@ template {
     name: "internet"
   }
   world: "Generic"
-  description: "\\large{World of Inspiration!}\n                    \\bold{by Monte Cook, Skip Williams, and Jonothan Tweet}\n                    You\'ve got the Dungeons & Dragons \\Product{Player\'s Handbook}, but you need\n                    more---you\'re the Dungeon Master, and it\'s up to you to create adventures and\n                    worlds for your friends\' characters to experience, explore and conquer.\n                    This book contains everything you need---from special high-level classes to\n                    magic items, artifacts and more! You\'re the Dungeon Master, and all the\n                    Dungeons & Dragons secrets are yours!"
+  description: "\\large{World of Inspiration!} \\bold{by Monte Cook, Skip Williams, and Jonothan Tweet} You\'ve got the Dungeons & Dragons \\Product{Player\'s Handbook}, but you need more---you\'re the Dungeon Master, and it\'s up to you to create adventures and worlds for your friends\' characters to experience, explore and conquer. This book contains everything you need---from special high-level classes to magic items, artifacts and more! You\'re the Dungeon Master, and all the Dungeons & Dragons secrets are yours!"
 }
 title: "Dungeon Master\'s Guide"
 date {

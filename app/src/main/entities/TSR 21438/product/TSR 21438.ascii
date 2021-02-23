@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Dominaria"
-  description: "\\Place{Dominaria} faces its biggest threat -- an invasion by its greatest\n                    enemy, an attack planned for eons by merciless foes. No one is exempt from\n                    their terror. No land is safe from their onslaught. In the shadow of the\n                    \\Group{Phyrexian} horde, \\NPC{Dominaria} has but one hope -- the\n                    \\NPC{Weatherlight} and her crew. The time has come to defend hearth and home\n                    from invasion."
+  description: "\\Place{Dominaria} faces its biggest threat -- an invasion by its greatest enemy, an attack planned for eons by merciless foes. No one is exempt from their terror. No land is safe from their onslaught. In the shadow of the \\Group{Phyrexian} horde, \\NPC{Dominaria} has but one hope -- the \\NPC{Weatherlight} and her crew. The time has come to defend hearth and home from invasion."
 }
 title: "Invasion"
 subtitle: "The Phyrexian nightmare begins."

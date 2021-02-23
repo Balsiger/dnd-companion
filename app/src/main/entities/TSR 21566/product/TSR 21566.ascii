@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Forgotten Realms"
-  description: "\\NPC{Ansoain} has been murdered, and her son \\NPC{Galimer} taken hostage.\n                    \\NPC{Druhallen}, a young magic user must avenge the murder of his teacher and\n                    rescue her son from a dubious fate. But not everyone is telling\n                    \\NPC{Druhallen} the truth.\n                    \\NPC{Druhallen} and his companions must brave the ruins of \\Place{Dekanter}\n                    to find a missing artifact...\\Item{The Nether Scroll}.\n                    Without the \\Item{Nether Scroll} \\NPC{Galimer} may die. With it\n                    \\NPC{Druhallen} may go mad."
+  description: "\\NPC{Ansoain} has been murdered, and her son \\NPC{Galimer} taken hostage. \\NPC{Druhallen}, a young magic user must avenge the murder of his teacher and rescue her son from a dubious fate. But not everyone is telling \\NPC{Druhallen} the truth. \\NPC{Druhallen} and his companions must brave the ruins of \\Place{Dekanter} to find a missing artifact...\\Item{The Nether Scroll}. Without the \\Item{Nether Scroll} \\NPC{Galimer} may die. With it PC{Druhallen} may go mad."
 }
 title: "Nether Scroll"
 leader: "The"

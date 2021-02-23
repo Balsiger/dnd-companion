@@ -1,7 +1,7 @@
 template {
   name: "WTC 9593074"
   world: "Eberron"
-  description: "He was a decorated soldier, thought to have died twenty years ago.\n\nBut yesterday in \\Place{Karrnath} his body washed ashore, unkempt, dressed in rags...\n\nand MURDERED.\n\nNow it\'s up to a hardened soldier out for cold vengeance and a chronicler looking for a story to unravel a dead man\'s past---and with it, the future of \\Place{Khorvaire}."
+  description: "He was a decorated soldier, thought to have died twenty years ago.\n\nBut yesterday in \\Place{Karrnath} his body washed ashore, unkempt, dressed in rags...\n\nand MURDERED. ow it\'s up to a hardened soldier out for cold vengeance and a chronicler looking for a story to unravel a dead man\'s past---and with it, the future of \\Place{Khorvaire}."
 }
 title: "Bound by Iron"
 author {

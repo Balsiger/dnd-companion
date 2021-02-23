@@ -1,7 +1,7 @@
 template {
   name: "WTC 9558974"
   world: "Eberron"
-  description: "The daughter of a noble family has gone missing. A proud and ancient house\n  has fallen to ruin. Even the dead are disappearing.\n\n  And a disgraced exile may be the only one who can save them.\n\n  Returning home from the \\Event{Last War}, a bitter soldier discovers a\n  criminal operation trafficking in slaves. When members of his own family turn\n  up missing, his attempt to get them back embroil him in a plot involving\n  illegal necromantic activities that run from the lowliest criminals to the\n  highest reaches of government."
+  description: "The daughter of a noble family has gone missing. A proud and ancient house has fallen to ruin. Even the dead are disappearing. And a disgraced exile may be the only one who can save them. Returning home from the \\Event{Last War}, a bitter soldier discovers a criminal operation trafficking in slaves. When members of his own family turn up missing, his attempt to get them back embroil him in a plot involving illegal necromantic activities that run from the lowliest criminals to the highest reaches of government."
 }
 title: "Blood and Honor"
 subtitle: "Karrnath, Born in War..."

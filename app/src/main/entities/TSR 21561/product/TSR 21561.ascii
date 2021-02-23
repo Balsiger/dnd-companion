@@ -10,7 +10,7 @@ template {
     name: "Dragon 270"
   }
   world: "Forgotten Realms"
-  description: "\\bold{Some are born with magic. Some without.}\n                    \\NPC{Matteo}, un-magical counselor to the mighty of \\Place{Halruaa}, has\n                    devoted his life to the truth---until he finds that he may have a hidden\n                    spark of magic after all. Now, with only a street waif for a companion, he\'s\n                    on the run from the mysterious \\Group{Cabal}. In the dismal \\Place{Swamp of\n                    \\NPC{Akhlaur}}, \\NPC{Matteo} will seek his own truth while battling a\n                    creature out his nightmares.\n                    But something even worse is on his trail: a relentless persecutor of\n                    magic. \\NPC{The Magehound}."
+  description: "\\bold{Some are born with magic. Some without.} \\NPC{Matteo}, un-magical counselor to the mighty of \\Place{Halruaa}, has devoted his life to the truth---until he finds that he may have a hidden spark of magic after all. Now, with only a street waif for a companion, he\'s on the run from the mysterious \\Group{Cabal}. In the dismal \\Place{Swamp of \\NPC{Akhlaur}}, \\NPC{Matteo} will seek his own truth while battling a creature out his nightmares. But something even worse is on his trail: a relentless persecutor of magic. \\NPC{The Magehound}."
 }
 title: "Magehound"
 leader: "The"

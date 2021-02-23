@@ -1,7 +1,7 @@
 template {
   name: "WTC 2164974"
   world: "Generic"
-  description: "This lavishly illustrated book gives roleplaying game fans a unique, behind-the-curtain glimpse into the making of the 4th Edition rules of the Dungeons & Dragons Roleplaying Game.\n                    Through words and images, it explores the ecology and evolution of the 4th Edition monsters, as well as the exciting new cosmology in which they live. This book features essays and insights from the game\'s designers, developers, and editors."
+  description: "This lavishly illustrated book gives roleplaying game fans a unique, behind-the-curtain glimpse into the making of the 4th Edition rules of the Dungeons & Dragons Roleplaying Game. Through words and images, it explores the ecology and evolution of the 4th Edition monsters, as well as the exciting new cosmology in which they live. This book features essays and insights from the game\'s designers, developers, and editors."
   short_description: "A glimpse into 4th edition worlds and monsters."
 }
 title: "Worlds and Monsters"

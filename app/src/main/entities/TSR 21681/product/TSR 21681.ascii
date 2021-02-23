@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "\\Place{Palanthas}, \\Place{Jewel of Ansalon}, \\Place{City of Seven Circles},\n  heart of the old \\Place{Solamnic empire}. For three thousand years she has\n  shone as a beacon to the world. Even now, ruled by the \\Group{Knights of\n  Neraka}, she glitters in the night.\n\n  Yet at the core of the gleaming city lies a dark center: the \\Group{Thieves\'\n  Guild}. Though the \\Group{Dark Knights} ruthlessly crushed the guild beneath\n  an iron heel, a stronger, darker guild has arisen. Now it\'s intent on\n  recovering its lost treasures and power.\n\n  And nothing will stand in its way."
+  description: "\\Place{Palanthas}, \\Place{Jewel of Ansalon}, \\Place{City of Seven Circles},\nheart of the old \\Place{Solamnic empire}. For three thousand years she has shone as a beacon to the world. Even now, ruled by the \\Group{Knights of eraka}, she glitters in the night. Yet at the core of the gleaming city lies a dark center: the \\Group{Thieves\' Guild}. Though the \\Group{Dark Knights} ruthlessly crushed the guild beneath an iron heel, a stronger, darker guild has arisen. Now it\'s intent on recovering its lost treasures and power. And nothing will stand in its way."
 }
 title: "Thieves\' Guild"
 leader: "The"

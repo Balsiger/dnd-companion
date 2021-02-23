@@ -2,7 +2,7 @@ template {
   name: "DMA 000086"
   synonym: "Dungeonology"
   world: "Forgotten Realms"
-  description: "Welcome, my intrepid friends, to a guide to the Forgotten Realms of myth and legend and how to best explore their most intriguing features: the monster-plagued, treasure-laden dungeons that plunge deep beneath the earth and riddle the highest mountains.\n\nWith my capable help, you will become both wise in the ways of such places and wary of their dangers. If you value your life, do not enter a dungeon without this book!\n\n\\right{-- \\NPC{Volothamp Geddarm},}\n\\right{your industrious guide and servant}"
+  description: "Welcome, my intrepid friends, to a guide to the Forgotten Realms of myth and legend and how to best explore their most intriguing features: the monster-plagued, treasure-laden dungeons that plunge deep beneath the earth and riddle the highest mountains.\n\nWith my capable help, you will become both wise in the ways of such places and wary of their dangers. If you value your life, do not enter a dungeon without this book! right{-- \\NPC{Volothamp Geddarm},}\n\\right{your industrious guide and servant}"
   short_description: "Description of dungeons in the Forgotten Realms."
 }
 title: "Volothamp Geddarm\'s Dungeonology"

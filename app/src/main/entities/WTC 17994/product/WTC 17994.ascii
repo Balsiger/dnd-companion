@@ -1,7 +1,7 @@
 template {
   name: "WTC 17994"
   world: "Dragonlance"
-  description: "This title completes the exploration of a key part of \\Place{Dragonlance}\n  history. The era explored in this novel, although referred to frequently\n  throughout many \\Place{Dragonlance} novels, is being finely detailed for the\n  first time. In addition, this title features popular characters that appear\n  throughout the \\Product{Dragonlance Legends} trilogy."
+  description: "This title completes the exploration of a key part of \\Place{Dragonlance} history. The era explored in this novel, although referred to frequently throughout many \\Place{Dragonlance} novels, is being finely detailed for the first time. In addition, this title features popular characters that appear throughout the \\Product{Dragonlance Legends} trilogy."
 }
 title: "Sacred Fire"
 author {

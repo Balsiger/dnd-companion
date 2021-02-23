@@ -13,7 +13,7 @@ template {
     name: "Dragon 248"
   }
   world: "Forgotten Realms"
-  description: "\\large{Who killed \\NPC{Grodoveth}}\n                    A vengeful ghost is only the first suspect when the body of \\NPC{Grodoveth},\n                    the king\'s envoy, is found separated from its head. It seems that everyone\n                    in town had either motive or opportunity to commit the...\n                    \\large{Murder in \\Place{Cormyr}}"
+  description: "\\large{Who killed \\NPC{Grodoveth}} A vengeful ghost is only the first suspect when the body of \\NPC{Grodoveth}, the king\'s envoy, is found separated from its head. It seems that everyone in town had either motive or opportunity to commit the... large{Murder in \\Place{Cormyr}}"
 }
 title: "Murder in Cormyr"
 author {

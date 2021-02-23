@@ -10,7 +10,7 @@ template {
     name: "Dragon 268"
   }
   world: "Dragonlance"
-  description: "Fantastical monsters and \\Monster{dragons} of every hue. Accursed\n  \\Class{wizards} and mysterious villains. Deadly battles and otherworldly\n  spectacle. The untold adventures of the beloved Companions.\n\n  Here are collected the best short stories of the original\n  \\Product{Dragonlance Tales 1} series, unfolding a world of heroism, magic,\n  and fantasy. It is a treasure for loyal fans of the saga, and for new readers\n  it is an enthralling introduction to the world of \\Place{Krynn}.\n\n  This volume includes a new \\Place{Dragonlance} short story written by\n  Margaret Weis in collabortion with Aron Eisenberg, Nog on television\'s Star\n  Trek: Deep Space Nine."
+  description: "Fantastical monsters and \\Monster{dragons} of every hue. Accursed\n\\Class{wizards} and mysterious villains. Deadly battles and otherworldly\nspectacle. The untold adventures of the beloved Companions. Here are collected the best short stories of the original Product{Dragonlance Tales 1} series, unfolding a world of heroism, magic, and fantasy. It is a treasure for loyal fans of the saga, and for new readers it is an enthralling introduction to the world of \\Place{Krynn}. This volume includes a new \\Place{Dragonlance} short story written by Margaret Weis in collabortion with Aron Eisenberg, Nog on television\'s Star Trek: Deep Space Nine."
 }
 title: "Best of Tales"
 leader: "The"

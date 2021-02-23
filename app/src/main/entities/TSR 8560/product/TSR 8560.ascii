@@ -10,7 +10,7 @@ template {
     name: "catalog96"
   }
   world: "Forgotten Realms"
-  description: "\\large{The Shadow Spreads}\n                    The \\Event{Time of Troubles} had almost passed. The chaos of spilled blood,\n                    lawless strife, monsters unleashed, and avatars roaming \\Place{Faer\\hat{u}n}\n                    was reaching an end.\n                    However, not so \\Group{Those Who Walk in Shadow}.\n                    The dreaded and insidious \\Group{Shadowmasters} realize that they have one\n                    last chance to seize control while chaos wreaks on all of the \\Place{Realms},\n                    and in doing so seal the fate of not just their archenemy \\NPC{Elminster},\n                    but all of \\God{Mystra}\'s minions as well.\n                    Darkness threatens to envelop all \\Place{Faer\\hat{u}n}\n                    \\emph{The shadows loom}."
+  description: "\\large{The Shadow Spreads} The \\Event{Time of Troubles} had almost passed. The chaos of spilled blood, lawless strife, monsters unleashed, and avatars roaming \\Place{Faer\\hat{u}n} was reaching an end. However, not so \\Group{Those Who Walk in Shadow}. The dreaded and insidious \\Group{Shadowmasters} realize that they have one last chance to seize control while chaos wreaks on all of the \\Place{Realms}, and in doing so seal the fate of not just their archenemy \\NPC{Elminster}, but all of \\God{Mystra}\'s minions as well. Darkness threatens to envelop all \\Place{Faer\\hat{u}n} emph{The shadows loom}."
 }
 title: "All Shadows Fled"
 author {

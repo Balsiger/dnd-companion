@@ -1,7 +1,7 @@
 template {
   name: "WTC 2154272"
   world: "Generic"
-  description: "\\large{Explore}\n                    Fantastic dungeons, from the perilous \\Place{Tomb of Horrors} to the \\Place{Lost Caverns of Tsojcanth}.\n                    \\large{Survive}\n                    Fierce monsters and fiendish traps.\n                    \\large{Uncoder}\n                    Legendary treasures and arcane secrets of a forgotten age."
+  description: "\\large{Explore} Fantastic dungeons, from the perilous \\Place{Tomb of Horrors} to the \\Place{Lost Caverns of Tsojcanth}. \\large{Survive} Fierce monsters and fiendish traps. \\large{Uncoder} Legendary treasures and arcane secrets of a forgotten age."
 }
 title: "Dungeon Survival Guide"
 subtitle: "Treasure and terror await you in the darkest dungeons of the D&D world"

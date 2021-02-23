@@ -1,7 +1,7 @@
 template {
   name: "WTC 96449"
   world: "Forgotten Realms"
-  description: "When \\NPC{Elminster}, the \\NPC{Old Sage of Shadowdale}, is apparently slain,\n                    \\God{Midnight} and \\NPC{Adon} stand trial for his murder.\n                    When \\God{Bane}, \\God{god of murder}, and his allies seek the lost\n                    \\Item{Tablets of Fate}, a slender dark-haired woman is all that stands\n                    between \\Place{Faer\\hat{u}n} and disaster.\n                    When a friend betrays them, \\God{Midnight} and her companions can trust no\n                    one."
+  description: "When \\NPC{Elminster}, the \\NPC{Old Sage of Shadowdale}, is apparently slain, \\God{Midnight} and \\NPC{Adon} stand trial for his murder. When \\God{Bane}, \\God{god of murder}, and his allies seek the lost \\Item{Tablets of Fate}, a slender dark-haired woman is all that stands between \\Place{Faer\\hat{u}n} and disaster. When a friend betrays them, \\God{Midnight} and her companions can trust no one."
 }
 title: "Tantras"
 subtitle: "Heroes Stand Trial!"

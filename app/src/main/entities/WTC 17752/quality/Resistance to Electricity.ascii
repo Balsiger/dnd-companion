@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A creature with resistance to electricity has the ability (usually extraordinary) to ignore some electricity damage) each round, but it does not have total immunity.  Each resistance ability is defined by what energy type it resists and how many points of damage are resisted. It doesn't matter whether the damage has a mundane or magical source. \n\nWhen resistance completely negates the damage from an energy attack, the attack does not disrupt a spell.  This resistance does not stack with the resistance that a spell, such as \\Spell{endure elements}, might provide."
+  description: "A creature with resistance to electricity has the ability (usually extraordinary) to ignore some electricity damage) each round, but it does not have total immunity.\n\nEach resistance ability is defined by what energy type it resists and how many points of damage are resisted. It doesn't matter whether the damage has a mundane or magical source. \n\nWhen resistance completely negates the damage from an energy attack, the attack does not disrupt a spell.\n\nThis resistance does not stack with the resistance that a spell, such as \\Spell{endure elements}, might provide."
 }
 type: EXTRAORDINARY

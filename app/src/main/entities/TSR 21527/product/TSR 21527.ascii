@@ -10,7 +10,7 @@ template {
     name: "Dragon 264"
   }
   world: "Planescape"
-  description: "The endless \\Event{Blood War} rages, a never-ending battle between the\n  \\Monster{fiends} of the \\Place{planes}. Amid this horrific conflict, a single\n  hero with no memory of his past seeks to discover his true identity.\n\n  Of course, this being the \\Place{planes}, his companions on his quest\n  are...unusual. But if you can\'t trust a floating skull, an eccentric\n  inventor, and a \\Monster{succubus}, who can you trust?\n\n  Practically no one.\n\n  Base on the best-selling computer game from Interplay."
+  description: "The endless \\Event{Blood War} rages, a never-ending battle between the Monster{fiends} of the \\Place{planes}. Amid this horrific conflict, a single hero with no memory of his past seeks to discover his true identity. Of course, this being the \\Place{planes}, his companions on his quest are...unusual. But if you can\'t trust a floating skull, an eccentric inventor, and a \\Monster{succubus}, who can you trust? Practically no one. Base on the best-selling computer game from Interplay."
 }
 title: "Torment"
 subtitle: "An eternal war"

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like darkness, except that the object radiates shadowy illumination in a 60-foot radius and the darkness lasts longer.  Daylight brought into an area of deeper darkness (or vice versa) is temporarily negated, so that the otherwise prevailing light conditions exist in the overlapping areas of effect.  Deeper darkness counters and dispels any light spell of equal or lower level, including daylight and light."
+  description: "This spell functions like darkness, except that the object radiates shadowy illumination in a 60-foot radius and the darkness lasts longer.\n\nDaylight brought into an area of deeper darkness (or vice versa) is temporarily negated, so that the otherwise prevailing light conditions exist in the overlapping areas of effect.\n\nDeeper darkness counters and dispels any light spell of equal or lower level, including daylight and light."
   short_description: "Object sheds supernatural shadow in 60-ft. radius."
 }
 school: EVOCATION

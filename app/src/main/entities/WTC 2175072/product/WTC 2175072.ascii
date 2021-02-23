@@ -1,7 +1,7 @@
 template {
   name: "WTC 2175072"
   world: "Generic"
-  description: "The world has fallen into darkness, but great rewards await those brave adventurers willing to face the terrible dangers ahead. This core rulebook for the Dungeons & Dragons Roleplaying Game holds everything a Dungeon Master needs to create memorable adventures and grand campaigns to challenge bold adventurers.\n                    The \\Product{Dungeon Master\'s Guide} features the 4th Edition game rules and guidelines for creating and running encounters, adventures, and campaigns. It offers a wealth of advice to new and experienced Dungeon Masters, and includes essential game rules for awarding experience, distributing treasure, creating nonplayer characters, and adding mighty artifacts to the game."
+  description: "The world has fallen into darkness, but great rewards await those brave adventurers willing to face the terrible dangers ahead. This core rulebook for the Dungeons & Dragons Roleplaying Game holds everything a Dungeon Master needs to create memorable adventures and grand campaigns to challenge bold adventurers. The \\Product{Dungeon Master\'s Guide} features the 4th Edition game rules and guidelines for creating and running encounters, adventures, and campaigns. It offers a wealth of advice to new and experienced Dungeon Masters, and includes essential game rules for awarding experience, distributing treasure, creating nonplayer characters, and adding mighty artifacts to the game."
   short_description: "Roleplaying Game Core Rules"
 }
 title: "Dungeon Master\'s Guide"

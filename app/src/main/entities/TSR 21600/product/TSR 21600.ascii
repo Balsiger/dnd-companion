@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "None"
-  description: "Before history itself, the plane of \\Place{Dominaira} was ruled by the\n                    \\Group{Thran}. They built machines and artifacts, the likes of which have\n                    never since been seen. But amid this civilization, a shadow took root, one\n                    that would stretch its arms across space and time.\n                    The hideous evil of \\Place{Phyrexia} was born."
+  description: "Before history itself, the plane of \\Place{Dominaira} was ruled by the \\Group{Thran}. They built machines and artifacts, the likes of which have never since been seen. But amid this civilization, a shadow took root, one that would stretch its arms across space and time. The hideous evil of \\Place{Phyrexia} was born."
 }
 title: "Thran"
 leader: "The"

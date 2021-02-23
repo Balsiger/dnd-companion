@@ -11,7 +11,7 @@ template {
     name: "catalog96"
   }
   world: "Forgotten Realms"
-  description: "From the research files of the legendary \\NPC{Volo} come tales of all things\n                    magical in the \\Place{Realms}---artifacts and auguries, wizards and weapons,\n                    heroes and hokum---told by your favorite authors, including:\n                    \\center{R.A. Salvatore}\n                    \\center{Elaine Cunningham}\n                    \\center{Ed Greenwood}\n                    \\center{Jeff Grubb}\n                    \\center{David \'Zeb\' Cook}\n                    \\center{Roger Moore}\n                    \\center{ant others.}"
+  description: "From the research files of the legendary \\NPC{Volo} come tales of all things magical in the \\Place{Realms}---artifacts and auguries, wizards and weapons, heroes and hokum---told by your favorite authors, including: \\center{R.A. Salvatore} \\center{Elaine Cunningham} \\center{Ed Greenwood} \\center{Jeff Grubb} \\center{David \'Zeb\' Cook} \\center{Roger Moore} center{ant others.}"
 }
 title: "Realms of Magic"
 author {

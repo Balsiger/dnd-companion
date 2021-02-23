@@ -1,7 +1,7 @@
 template {
   name: "WTC 88260"
   world: "Dragonlance"
-  description: "\\Place{Ansalon}\'s nightmare has only just begun. The gods have departed the\n  world, heralding a new \\Event{Age of Mortals}. But before the dust of war can\n  settle, vast shadows cover the land. \\Monster{Dragons} have come to\n  \\Place{Ansalon}, larger and more powerful than any ever seen, and they will\n  wreak havoc on nations still trembling from war. As the lands themselves\n  begin to change under the dire magic of the new \\Monster{dragon} overlords,\n  new heroes arise to lead the fight for freedom."
+  description: "\\Place{Ansalon}\'s nightmare has only just begun. The gods have departed the world, heralding a new \\Event{Age of Mortals}. But before the dust of war can settle, vast shadows cover the land. \\Monster{Dragons} have come to Place{Ansalon}, larger and more powerful than any ever seen, and they will wreak havoc on nations still trembling from war. As the lands themselves begin to change under the dire magic of the new \\Monster{dragon} overlords, ew heroes arise to lead the fight for freedom."
 }
 title: "Day of the Tempest"
 leader: "The"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 88627"
   world: "None"
-  description: "Scheming, intelligent, and power-hungry, the emperor\'s assassin moves always\n                    in shadow. He kills whom his master wishes and plans his own rise to\n                    power. Against him, one man stands on his honor, determined to end the cycle\n                    of death dealt from dark corners.\n                    Amid a dark landscape ravaged by war, the two at last confront one\n                    another. At stake is the future of the empire."
+  description: "Scheming, intelligent, and power-hungry, the emperor\'s assassin moves always in shadow. He kills whom his master wishes and plans his own rise to power. Against him, one man stands on his honor, determined to end the cycle of death dealt from dark corners. Amid a dark landscape ravaged by war, the two at last confront one another. At stake is the future of the empire."
 }
 title: "Assassin\'s Blade"
 subtitle: "Assassination hast its price!"

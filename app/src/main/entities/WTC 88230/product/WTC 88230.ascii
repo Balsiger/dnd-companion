@@ -1,7 +1,7 @@
 template {
   name: "WTC 88230"
   world: "Generic"
-  description: "Hunting parties from an \\Monster{elven} village are mysteriously\n  disappearing. Similar mysterious plague a \\Monster{dwarven} settlement on the\n  far side of the mountains. Each side blames the other. Only a band of tried\n  and true heroes can root out what sinister force manipulates these normally\n  peaceful people.\n\n  But can the conquer the evil before the tribes go to war?"
+  description: "Hunting parties from an \\Monster{elven} village are mysteriously disappearing. Similar mysterious plague a \\Monster{dwarven} settlement on the far side of the mountains. Each side blames the other. Only a band of tried and true heroes can root out what sinister force manipulates these normally peaceful people. But can the conquer the evil before the tribes go to war?"
 }
 title: "Living Dead"
 leader: "The"

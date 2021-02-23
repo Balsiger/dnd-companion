@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A howler's neck bristles with long quills. While biting, the creature thrashes about, striking with 1d4 of them. An opponent hit by a howler's quill attack must succeed on a DC 16 Reflex save or have the quill break off in his or her flesh. Lodged quills impose a -1 penalty on attacks, saves, and checks per quill. The save DC is Dexterity-based.  A quill can be removed safely with a DC 20 Heal check; otherwise, removing a quill deals an extra 1d6 points of damage."
+  description: "A howler's neck bristles with long quills. While biting, the creature thrashes about, striking with 1d4 of them. An opponent hit by a howler's quill attack must succeed on a DC 16 Reflex save or have the quill break off in his or her flesh. Lodged quills impose a -1 penalty on attacks, saves, and checks per quill. The save DC is Dexterity-based.\n\nA quill can be removed safely with a DC 20 Heal check; otherwise, removing a quill deals an extra 1d6 points of damage."
 }
 type: EXTRAORDINARY

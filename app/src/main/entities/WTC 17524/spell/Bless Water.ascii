@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This transmutation imbues a flask (1 pint) of water with positive energy, turning it into holy water (page 128).  Material Component: 5 pounds of powdered silver (worth 25 gp)."
+  description: "This transmutation imbues a flask (1 pint) of water with positive energy, turning it into holy water (page 128).\n\nMaterial Component: 5 pounds of powdered silver (worth 25 gp)."
   short_description: "Makes holy water."
 }
 school: TRANSMUTATION

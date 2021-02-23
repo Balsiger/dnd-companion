@@ -13,7 +13,7 @@ template {
     name: "Dragon 227"
   }
   world: "Generic"
-  description: "The \\Item{Rod of Seven Parts}...\n\n  ...originated at the dawn of time, the symbolic centerpiece of the conflict\n  between law and chaos.\n\n  Broken into pieces by powerful magic, scattered across a dangerous landscape,\n  the \\Item{rod}\'s components draw menacing forces from distant planes---and\n  change, forever, the life of any unsuspecting mortal who finds himself in\n  possession of even a single segment.\n\n  From the \\Group{Wind Dukes}, guardians of law, to the hideous \\NPC{Queen of\n  Chaos} herself, heroes and monsters compete to find the pieces of the\n  \\Item{rod}. Violent conflicts surround the bold heroes who strive to protect\n  the artifact, until the companions realize that only by facing ultimate chaos\n  can the forces of evil be vanquished."
+  description: "The \\Item{Rod of Seven Parts}... ...originated at the dawn of time, the symbolic centerpiece of the conflict between law and chaos.\n\nBroken into pieces by powerful magic, scattered across a dangerous landscape,\nthe \\Item{rod}\'s components draw menacing forces from distant planes---and change, forever, the life of any unsuspecting mortal who finds himself in possession of even a single segment. From the \\Group{Wind Dukes}, guardians of law, to the hideous \\NPC{Queen of Chaos} herself, heroes and monsters compete to find the pieces of the Item{rod}. Violent conflicts surround the bold heroes who strive to protect the artifact, until the companions realize that only by facing ultimate chaos can the forces of evil be vanquished."
 }
 title: "Rod of Seven Parts"
 leader: "The"

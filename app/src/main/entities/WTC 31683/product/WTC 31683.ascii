@@ -2,7 +2,7 @@ template {
   name: "WTC 31683"
   synonym: ""
   world: "Forgotten Realms"
-  description: "For centuries \\NPC{Elminster Aumar} served his goddess with the powers she granted him, battling tirelessly against the criminal forces of the \\Group{Zhentarim}, the \\Group{shadow princes of \\Place{Netheril}}, and the ruthless \\Group{Red Wizards of \\Place{Thay}}, making enemies he never had time to take care of, because the fate of the world always hung on his next move. But now\n                    \\large{\\center{His Goddess is Dead.}}\n                    His protector --- his lover, his goddess, his meaning and his means --- is gone forever. And now the mere touch of magic renders him mad. His enemies scent weakness. They are closing in, saying with one voice:\n                    \\large{\\ecnter{\\NPC{Elminster} Must Die}}\n                    "
+  description: "For centuries \\NPC{Elminster Aumar} served his goddess with the powers she granted him, battling tirelessly against the criminal forces of the \\Group{Zhentarim}, the \\Group{shadow princes of \\Place{Netheril}}, and the ruthless \\Group{Red Wizards of \\Place{Thay}}, making enemies he never had time to take care of, because the fate of the world always hung on his next move. But now \\large{\\center{His Goddess is Dead.}} His protector --- his lover, his goddess, his meaning and his means --- is gone forever. And now the mere touch of magic renders him mad. His enemies scent weakness. They are closing in, saying with one voice: \\large{\\ecnter{\\NPC{Elminster} Must Die}} "
   short_description: "Continuation of the Elminster saga."
 }
 title: "Elminster Must Die"

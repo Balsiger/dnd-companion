@@ -16,7 +16,7 @@ template {
     name: "Dragon 247"
   }
   world: "Forgotten Realms"
-  description: "The paladins and mercenaries have joined forces to defeat an attacking army\n                    of fiends. Now a powerful new weapon, the \\Item{Bloodforge}, comes into their\n                    hands. But some suspect that their leader\'s plans for the weapon are somewhat\n                    less than honorable. Can they undermine his hidden motives, while holding off\n                    the fiendish army.\n                    \\Product{Unseasy Alliance} is the seventh part in a nine-book serial novel\n                    published by TSR and set in the exciting world of the \\Place{Forgotten\n                    Realms}. Be sure to look for the earlier six parts, (listed inside). Continue\n                    the adventure with Parts 8, \\Product{Easy Betrayals} and 9, \\Product{The\n                    Diamond} at your local bookstore."
+  description: "The paladins and mercenaries have joined forces to defeat an attacking army of fiends. Now a powerful new weapon, the \\Item{Bloodforge}, comes into their hands. But some suspect that their leader\'s plans for the weapon are somewhat less than honorable. Can they undermine his hidden motives, while holding off the fiendish army. \\Product{Unseasy Alliance} is the seventh part in a nine-book serial novel published by TSR and set in the exciting world of the \\Place{Forgotten Realms}. Be sure to look for the earlier six parts, (listed inside). Continue the adventure with Parts 8, \\Product{Easy Betrayals} and 9, \\Product{The Diamond} at your local bookstore."
 }
 title: "Uneasy Alliances"
 author {

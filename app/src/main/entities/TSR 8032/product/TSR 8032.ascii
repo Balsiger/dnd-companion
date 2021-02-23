@@ -10,7 +10,7 @@ template {
     name: "catalog93"
   }
   world: "Spelljammer"
-  description: "From an \\Monster[elf]{elven} admiral at the \\Place{Rock of Bral},\n  \\NPC{Teldin Moore} learns more about his cloak\'s past and its potential\n  powers---but he doesn\'t count on being caught up in the hurricane of the\n  second \\Event{Unhuman War}. Vengeful humanoids rampage through the\n  \\Place{Known Spheres}, and they\'re on \\NPC{Teldin}\'s trail even as he hunts\n  for the ultimate spacefaring ship of all: the mighty \\Place{Spelljammer}."
+  description: "From an \\Monster[elf]{elven} admiral at the \\Place{Rock of Bral}, PC{Teldin Moore} learns more about his cloak\'s past and its potential powers---but he doesn\'t count on being caught up in the hurricane of the second \\Event{Unhuman War}. Vengeful humanoids rampage through the Place{Known Spheres}, and they\'re on \\NPC{Teldin}\'s trail even as he hunts for the ultimate spacefaring ship of all: the mighty \\Place{Spelljammer}."
 }
 title: "Maelston\'s Eye"
 leader: "The"

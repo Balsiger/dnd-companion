@@ -1,7 +1,7 @@
 template {
   name: "WTC 9595474"
   world: "Forgotten Realms"
-  description: "For the first time in one volume, the classic Forgotten Realms tales of Elaine Cunningham are joined by three all new stories!\n                    Travel alongside \\NPC{Arilyn} and \\NPC{Danilo}, \\NPC{Liriel} and \\NPC{Fyodor}, and a host of characters valiant and infamous as they tread the forests and cities, the castles and dungeons, of the wide world of \\Place{Faer\\hat{u}n}."
+  description: "For the first time in one volume, the classic Forgotten Realms tales of Elaine Cunningham are joined by three all new stories! Travel alongside \\NPC{Arilyn} and \\NPC{Danilo}, \\NPC{Liriel} and \\NPC{Fyodor}, and a host of characters valiant and infamous as they tread the forests and cities, the castles and dungeons, of the wide world of \\Place{Faer\\hat{u}n}."
 }
 title: "The Beast of the Realms, Book III"
 subtitle: "Enter the Realms of Elain Cunningham!"

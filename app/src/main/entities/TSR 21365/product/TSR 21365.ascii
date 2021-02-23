@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Forgotten Realms"
-  description: "Widespread and many-tentacled is the evil that threatens\n                    \\Place{Faer\\hat{u}n}. Before its heart can be found, all of the \\Group{Seven\n                    Sisters} will play a part, and all too much blood will be\n                    spilled...\\Monster{drow} blood.\n                    Seven linked novellas tell seven stories of seven sisters by the creator of\n                    the \\Product{Forgotten Realms} world!"
+  description: "Widespread and many-tentacled is the evil that threatens \\Place{Faer\\hat{u}n}. Before its heart can be found, all of the \\Group{Seven Sisters} will play a part, and all too much blood will be spilled...\\Monster{drow} blood. Seven linked novellas tell seven stories of seven sisters by the creator of the \\Product{Forgotten Realms} world!"
 }
 title: "Silverfall: Stories of the Seven Sisters"
 subtitle: "Rise, and be not afraid."

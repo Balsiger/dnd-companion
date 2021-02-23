@@ -1,7 +1,7 @@
 template {
   name: "WTC 88608"
   world: "Forgotten Realms"
-  description: "\\large{Be Careful of What You Wish For}\n                    Spellfire is the most powerful magic in the land.\n                    It\'s a dangerous weapon in anyone\'s hands.\n                    In the wrong hands, it can destroy the world.\n                    \\NPC{Shandril Shessair} wanted a taste of adventure. She got spellfire, and\n                    now she\'s fleeing for her life across \\Place{Faer\\hat{u}n}, searching for\n                    somewhere to hide. More evil wizards, warriors, and priests than she can\n                    count are trying to get it from her, and they\'ll kill or enslave her without\n                    hesitation. Her last, desperate hope is to take refuge in the sheltered city\n                    of \\Place{Silverymoon}.\n                    If she makes it that far."
+  description: "\\large{Be Careful of What You Wish For} Spellfire is the most powerful magic in the land. It\'s a dangerous weapon in anyone\'s hands. In the wrong hands, it can destroy the world. \\NPC{Shandril Shessair} wanted a taste of adventure. She got spellfire, and now she\'s fleeing for her life across \\Place{Faer\\hat{u}n}, searching for somewhere to hide. More evil wizards, warriors, and priests than she can count are trying to get it from her, and they\'ll kill or enslave her without hesitation. Her last, desperate hope is to take refuge in the sheltered city of \\Place{Silverymoon}. If she makes it that far."
 }
 title: "Hand of Fire"
 author {

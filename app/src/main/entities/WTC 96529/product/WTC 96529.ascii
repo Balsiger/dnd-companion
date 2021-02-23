@@ -1,7 +1,7 @@
 template {
   name: "WTC 96529"
   world: "Forgotten Realms"
-  description: "\\large{\\Place{Hlondeth}}\n                    A city populated by the humanoid serpents know as the \\Monster{yuan-ti}, and\n                    rule by\n                    \\large{\\Group{House Extaminos}}\n                    The powerful House of Serpents, and the ultimate target of\n                    \\large{\\Group{The Pox}}\n                    A human cult whose members worship the goddess of plague and disease, and who\n                    beings to work the deadly will of\n                    \\large{\\Group{Sibyl\'s Chosen}}\n                    A dangerous cabal of \\Monster{yuan-ti} who will turn every \\Monster{human} in\n                    the city into a freakish tainted one, unless\n                    \\large{\\NPC{Dediana}}\n                    a \\Monster{yuan-ti} halfblood, can stop them all."
+  description: "\\large{\\Place{Hlondeth}} A city populated by the humanoid serpents know as the \\Monster{yuan-ti}, and rule by \\large{\\Group{House Extaminos}} The powerful House of Serpents, and the ultimate target of \\large{\\Group{The Pox}} A human cult whose members worship the goddess of plague and disease, and who beings to work the deadly will of \\large{\\Group{Sibyl\'s Chosen}} A dangerous cabal of \\Monster{yuan-ti} who will turn every \\Monster{human} in the city into a freakish tainted one, unless \\large{\\NPC{Dediana}} a \\Monster{yuan-ti} halfblood, can stop them all."
 }
 title: "Venom\'s Taste"
 author {

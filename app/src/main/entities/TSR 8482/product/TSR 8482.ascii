@@ -20,7 +20,7 @@ template {
     name: "catalog93"
   }
   world: "Forgotten Realms"
-  description: "Hostile in ways that a surface-dweller could never know, the tunnel mazes of\n                    the \\Place{Underdark} challenge all who tread there. Among these souls are\n                    \\NPC{Drizzt Do\'Urden} and his magical cat, \\NPC{Guenhwyvar}. Exiled from his\n                    \\Monster{drow} homeland, \\NPC{Drizzt} must fight for a new home in the\n                    boundless labyrinth. Meanwhile, he must watch for signs of pursuit---for the\n                    \\Monster{dark elves} are not a forgiving race.\n                    \'Salvatore...is both upholding the best traditions of the genre and setting\n                    standards that could well become traditions of its next generation.\'\n                    \\Product{Dragon} Magazine."
+  description: "Hostile in ways that a surface-dweller could never know, the tunnel mazes of the \\Place{Underdark} challenge all who tread there. Among these souls are \\NPC{Drizzt Do\'Urden} and his magical cat, \\NPC{Guenhwyvar}. Exiled from his \\Monster{drow} homeland, \\NPC{Drizzt} must fight for a new home in the boundless labyrinth. Meanwhile, he must watch for signs of pursuit---for the \\Monster{dark elves} are not a forgiving race. \'Salvatore...is both upholding the best traditions of the genre and setting standards that could well become traditions of its next generation.\' Product{Dragon} Magazine."
 }
 title: "Exile"
 author {

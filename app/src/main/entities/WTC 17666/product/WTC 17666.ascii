@@ -1,7 +1,7 @@
 template {
   name: "WTC 17666"
   world: "Dragonlance"
-  description: "The \\Place{Ergoth Empire} trembles from a double invasion: reptilian\n  \\Monster{bakali} plunge straight into the heartland, while bands of\n  \\Monster{human} nomads ravage the eastern frontier. Army after army, warlord\n  after warlord fails to stop the invaders. Voices whisper, \'Where is\n  \\NPC{Tol of Juramona}? Only he can save us!\'\n\n  A mad emperor will not heed the calls for \\NPC{Tol}\'s return, so powerful\n  forces align to deliver the champion of \\Place{Ergoth} back home. A wizard\n  and a general, an empress and a queen -- all take up the quest. Despite their\n  efforts, though, \\NPC{Tol} alone must decide whether to give up the peace and\n  serenity of exile, or to save the empire that dishonored him."
+  description: "The \\Place{Ergoth Empire} trembles from a double invasion: reptilian\n\\Monster{bakali} plunge straight into the heartland, while bands of\n\\Monster{human} nomads ravage the eastern frontier. Army after army, warlord after warlord fails to stop the invaders. Voices whisper, \'Where is PC{Tol of Juramona}? Only he can save us!\' A mad emperor will not heed the calls for \\NPC{Tol}\'s return, so powerful forces align to deliver the champion of \\Place{Ergoth} back home. A wizard and a general, an empress and a queen -- all take up the quest. Despite their efforts, though, \\NPC{Tol} alone must decide whether to give up the peace and serenity of exile, or to save the empire that dishonored him."
 }
 title: "Hero\'s Justice"
 leader: "A"

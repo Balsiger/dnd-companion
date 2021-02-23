@@ -1,7 +1,7 @@
 template {
   name: "PZO 4010"
   world: "Generic"
-  description: "Sometimes, you need a soft bed. Paizo Publishing\'s GameMastery line of gaming accessories continues to provide simple and elegant tools for the busy GameMaster with the newest GameMastery Map Pack release: \\Product{Inns}. Inside, you\'ll find 18 beautiful 5\'\'x8\'\' map tiles that can be combined to form three unique locations:\n\n\\list\n{Run-Down Flophouse}\n{Common In}\n{Wealthy Hotel}\n\nGameMasters shouldn\'t waste their time drawing a common room for a bar fight or sketching a sleeping porch for a midnight raid. With \\Product{GameMastery Map Pack: Inns}, you can drop a few tiles and continue on with the game. Keep it simple. Keep it fun."
+  description: "Sometimes, you need a soft bed. Paizo Publishing\'s GameMastery line of gaming accessories continues to provide simple and elegant tools for the busy GameMaster with the newest GameMastery Map Pack release: \\Product{Inns}. Inside, you\'ll find 18 beautiful 5\'\'x8\'\' map tiles that can be combined to form three unique locations: list\n{Run-Down Flophouse}\n{Common In}\n{Wealthy Hotel}\n\nGameMasters shouldn\'t waste their time drawing a common room for a bar fight or sketching a sleeping porch for a midnight raid. With \\Product{GameMastery Map Pack: Inns}, you can drop a few tiles and continue on with the game. Keep it simple. Keep it fun."
 }
 title: "Map Pack: Inns"
 subtitle: "Adventuring is Hard Work"

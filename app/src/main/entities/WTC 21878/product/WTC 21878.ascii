@@ -2,7 +2,7 @@ template {
   name: "WTC 21878"
   synonym: "WTC 88194"
   world: "Forgotten Realms"
-  description: "\\emph{With each kill, I grow wiser, and with added wisdom, I grow stronger.}\n                    Powerful assassin \\NPC{Artremis Entreri} tightens his grip on the streets of\n                    \\Place{Calimport}, driven by the power of his hidden \\Monster{drow}\n                    supporters. But his sponsor \\NPC{Jarlaxle} grows ever more ambitious, and\n                    \\NPC{Entreri} struggles to remain cautious and in control. Soon, the power of\n                    the malevolent \\Item{Crystal Shard} grows greater than them both, threatening\n                    to draw them into a vast web of treachery from which there will be no\n                    escape."
+  description: "\\emph{With each kill, I grow wiser, and with added wisdom, I grow stronger.} Powerful assassin \\NPC{Artremis Entreri} tightens his grip on the streets of \\Place{Calimport}, driven by the power of his hidden \\Monster{drow} supporters. But his sponsor \\NPC{Jarlaxle} grows ever more ambitious, and \\NPC{Entreri} struggles to remain cautious and in control. Soon, the power of the malevolent \\Item{Crystal Shard} grows greater than them both, threatening to draw them into a vast web of treachery from which there will be no escape."
 }
 title: "Servant of the Shard"
 author {

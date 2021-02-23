@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like silent image, except that sound, smell, and thermal illusions are included in the spell effect. While concentrating, you can move the image within the range.  The image disappears when struck by an opponent unless you cause the illusion to react appropriately."
+  description: "This spell functions like silent image, except that sound, smell, and thermal illusions are included in the spell effect. While concentrating, you can move the image within the range.\n\nThe image disappears when struck by an opponent unless you cause the illusion to react appropriately."
   short_description: "As silent image, plus sound, smell and thermal effects."
 }
 school: ILLUSION
@@ -30,7 +30,7 @@ casting_time {
   standard_actions: 1
 }
 duration {
-  duration_description: "Concentration +  3 rounds"
+  duration_description: "Concentration +\n\n3 rounds"
 }
 saving_throw: "Will disbelief (if interacted with)"
 spell_resistance: "No"

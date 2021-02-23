@@ -10,7 +10,7 @@ template {
     name: "catalog96"
   }
   world: "Generic"
-  description: "\\emph{\'Come, let us explore the art of necromancy together\'}\n                    \\right{---the arch-necromancer \\NPC{Kazerabet}}\n                    Necromancers like \\NPC{Kazerabet} and their priestly counterparts have\n                    mastered many dark, forbidden secrets. This tome reveals these mysteries to\n                    the Dungeon Master, who will find new NPC kits and volumes of necromancer\'s\n                    minions, familiars, secret societies, poisons, magical items, enchanted\n                    tomes, and dozens of new wizard and priest spells, plus the deadly\n                    \\Place{Isle of the Necromancers}, a portable setting which can be placed into\n                    any existing campaign."
+  description: "\\emph{\'Come, let us explore the art of necromancy together\'} \\right{---the arch-necromancer \\NPC{Kazerabet}} Necromancers like \\NPC{Kazerabet} and their priestly counterparts have mastered many dark, forbidden secrets. This tome reveals these mysteries to the Dungeon Master, who will find new NPC kits and volumes of necromancer\'s minions, familiars, secret societies, poisons, magical items, enchanted tomes, and dozens of new wizard and priest spells, plus the deadly \\Place{Isle of the Necromancers}, a portable setting which can be placed into any existing campaign."
 }
 title: "Complete Book of Necromancers"
 leader: "The"

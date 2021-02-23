@@ -1,7 +1,7 @@
 template {
   name: "WTC 17969"
   world: "Dragonlance"
-  description: "The mighty \\Place{Ergothian} empire is gripped by civil war.\n\n  Centuries before the first \\Event{Cataclysm} sunders \\Place{Ansalon}, two\n  imperial dynasties struggle for supremacy. Brutal warlords jockey for power,\n  while corrupt wizards sell their skills to the highest bidder. Unnatural\n  monsters prey on the unwary.\n\n  Amid this chaos and upheaval, a brave young peasant shakes the towers of the\n  mighty as his fate and the destiny of \\Place{Krynn} collide."
+  description: "The mighty \\Place{Ergothian} empire is gripped by civil war. Centuries before the first \\Event{Cataclysm} sunders \\Place{Ansalon}, two imperial dynasties struggle for supremacy. Brutal warlords jockey for power, while corrupt wizards sell their skills to the highest bidder. Unnatural monsters prey on the unwary. Amid this chaos and upheaval, a brave young peasant shakes the towers of the mighty as his fate and the destiny of \\Place{Krynn} collide."
 }
 title: "Warrior\'s Journey"
 leader: "A"

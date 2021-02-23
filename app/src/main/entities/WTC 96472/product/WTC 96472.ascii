@@ -1,7 +1,7 @@
 template {
   name: "WTC 96472"
   world: "Dragonlance"
-  description: "This attractive new rerelease of \\Product{The Legend of Huma} debuts a new\n  look for the \\Product{Heroes} series. Each title in the series reflects the\n  new series design and feature entirely new cover art. This title is the only\n  \\Place{Dragonlance} novel not written by Margaret Weis & Tracy Hickman to hit\n  the New York Times best-seller list."
+  description: "This attractive new rerelease of \\Product{The Legend of Huma} debuts a new look for the \\Product{Heroes} series. Each title in the series reflects the ew series design and feature entirely new cover art. This title is the only Place{Dragonlance} novel not written by Margaret Weis & Tracy Hickman to hit the New York Times best-seller list."
 }
 title: "Legend of Huma"
 leader: "The"

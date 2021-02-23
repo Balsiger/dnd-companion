@@ -1,7 +1,7 @@
 template {
   name: "WTC 17981"
   world: "Forgotten Realms"
-  description: "This slip-covered gift set contains the four New York Times best-selling\n                    titles that make up the \\Product{Legacy of the Drow} series: \\Product{The\n                    Legacy}, \\Product{Starless Night}, \\Product{Siege of Darkness}, and\n                    \\Product{Passage to Dawn}. Each of these titles center around\n                    R.A. Salvatore\'s signature \\Monster{dark elf} character."
+  description: "This slip-covered gift set contains the four New York Times best-selling titles that make up the \\Product{Legacy of the Drow} series: \\Product{The Legacy}, \\Product{Starless Night}, \\Product{Siege of Darkness}, and \\Product{Passage to Dawn}. Each of these titles center around R.A. Salvatore\'s signature \\Monster{dark elf} character."
 }
 title: "Legacy of the Drow Gift Set"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 1092774"
   world: "Generic"
-  description: "Evil \\Monster{yuan-ti} conspire to destroy a kingdom using dark rituals and the bones of a long-dead king. To win the day, heroes must storm the \\Monster{yuan-ti} fortress and wrest the bones from the culists\' clutches before they complete their rituals and unleash a far greater menace upon the world.\n                    This Dungeons & Dragons adventure is designed for 6th-level characters. It can be played as a stand-alone adventure or as the concluding adventure in a three-part series. Each encounter contains special tactical information for the Dungeon Master and expanded map features for ease of play."
+  description: "Evil \\Monster{yuan-ti} conspire to destroy a kingdom using dark rituals and the bones of a long-dead king. To win the day, heroes must storm the \\Monster{yuan-ti} fortress and wrest the bones from the culists\' clutches before they complete their rituals and unleash a far greater menace upon the world. This Dungeons & Dragons adventure is designed for 6th-level characters. It can be played as a stand-alone adventure or as the concluding adventure in a three-part series. Each encounter contains special tactical information for the Dungeon Master and expanded map features for ease of play."
 }
 title: "Fortress of the Yuan-ti"
 subtitle: "Storm the Nest of Vipers"

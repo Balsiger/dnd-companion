@@ -23,7 +23,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "\\Item{Battle axes} and beards. Good companions when traveling\n                    underground. Handy with tools. If that was your view of \\Monster{dwarves},\n                    you need \\Product{The Complete Book of \\Monster{Dwarves}}. Discover 24 new\n                    character kits, new weapons, and new possibilities, including six\n                    \\Monster{dwarf} subraces, new proficiencies, strongholds, origin myths, and a\n                    look at \\Monster{dwarven} personalities. After reading \\Product{The Complete\n                    Book of \\Monster{Dwarves}}, you may still look down on these short folk...but\n                    only to see them!"
+  description: "\\Item{Battle axes} and beards. Good companions when traveling underground. Handy with tools. If that was your view of \\Monster{dwarves}, you need \\Product{The Complete Book of \\Monster{Dwarves}}. Discover 24 new character kits, new weapons, and new possibilities, including six \\Monster{dwarf} subraces, new proficiencies, strongholds, origin myths, and a look at \\Monster{dwarven} personalities. After reading \\Product{The Complete Book of \\Monster{Dwarves}}, you may still look down on these short folk...but only to see them!"
 }
 title: "Complete Book of Dwarves"
 leader: "The"

@@ -1,7 +1,7 @@
 template {
   name: "DMA 000066"
   world: "None"
-  description: "Combine this supplement with your January to June 2000 White Wolf Catalog\n  for our full-year listings."
+  description: "Combine this supplement with your January to June 2000 White Wolf Catalog for our full-year listings."
   short_description: "July to December Supplement"
 }
 title: "White Wolf Publishing 2000 Catalog"

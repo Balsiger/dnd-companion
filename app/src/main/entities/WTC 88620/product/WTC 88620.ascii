@@ -1,7 +1,7 @@
 template {
   name: "WTC 88620"
   world: "Dragonlance"
-  description: "Twenty years have passed since \\NPC{Beldinas the Kingpriest} assumed the\n  throne. His is a realm of unsurpassed grandeur and wealth, a testament to the\n  mightiest age of the empire of \\Place{Istar}.\n\n  But evil exists in this great realm, threatening the peace and sanctity of\n  the province. \\NPC{Beldinas} must turn to his most loyal lieutenant,\n  \\NPC{Cathan}, for help. Following \\NPC{Cathan}\'s lead, the \\Group{Knights of\n  the Divine Hammer} strive to extinguish a foul sorcery that will stop at\n  nothing to serve its own dark ends."
+  description: "Twenty years have passed since \\NPC{Beldinas the Kingpriest} assumed the throne. His is a realm of unsurpassed grandeur and wealth, a testament to the mightiest age of the empire of \\Place{Istar}. But evil exists in this great realm, threatening the peace and sanctity of the province. \\NPC{Beldinas} must turn to his most loyal lieutenant, PC{Cathan}, for help. Following \\NPC{Cathan}\'s lead, the \\Group{Knights of the Divine Hammer} strive to extinguish a foul sorcery that will stop at othing to serve its own dark ends."
 }
 title: "Divine Hammer"
 subtitle: "Sorcery: A Threat to the Glory of \\Place{Istar}."

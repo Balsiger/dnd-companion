@@ -10,7 +10,7 @@ template {
       high: 225
     }
   }
-  description: "This special ability can only be placed on a weapon that can be thrown. A returning weapon flies through the air back to the creature that threw it. It returns to the thrower just before the creature\'s next turn (and is therefore ready to use again in that turn).  Catching a returning weapon when it comes back is a free action. If the character can\'t catch it, or if the character has moved since throwing it, the weapon drops to the ground in the square from which it was thrown."
+  description: "This special ability can only be placed on a weapon that can be thrown. A returning weapon flies through the air back to the creature that threw it. It returns to the thrower just before the creature\'s next turn (and is therefore ready to use again in that turn).\n\nCatching a returning weapon when it comes back is a free action. If the character can\'t catch it, or if the character has moved since throwing it, the weapon drops to the ground in the square from which it was thrown."
   short_description: "Weapon returns before next turn."
   base_only: true
 }

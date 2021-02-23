@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A chain shirt protects your torso while leaving your limbs free and mobile. It includes a layer of quilted fabric worn underneath to prevent chafing and to cushion the impact of blows.  A chain shirt comes with a steel cap."
+  description: "A chain shirt protects your torso while leaving your limbs free and mobile. It includes a layer of quilted fabric worn underneath to prevent chafing and to cushion the impact of blows.\n\nA chain shirt comes with a steel cap."
   short_description: "A shirt of chain with quilted fabric underneeth and a steel cap."
 }
 value {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 96478"
   world: "Dragonlance"
-  description: "This attractive new rerelease of \\Product{Stormblade} showcases a new look\n  for the \\Product{Heroes} series. Each title in the series reflects the new\n  series design and features entirely new cover art."
+  description: "This attractive new rerelease of \\Product{Stormblade} showcases a new look for the \\Product{Heroes} series. Each title in the series reflects the new series design and features entirely new cover art."
 }
 title: "Stormblade"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 96480"
   world: "Forgotten Realms"
-  description: "This collection of four New York Times best-selling novels from premiere\n                    fantasy author R.A. Salvatore includes \\Product{The Silent Blade},\n                    \\Product{The Spine of the World}, \\Product{Servant of the Shard}, and\n                    \\Product{Sea of Swords}. These titles continue the tale of Salvatore\'s\n                    signature character \\NPC{Drizzt Do\'Urden}, one of the most well-known figures\n                    in the \\Place{Forgotten Realms} setting."
+  description: "This collection of four New York Times best-selling novels from premiere fantasy author R.A. Salvatore includes \\Product{The Silent Blade}, \\Product{The Spine of the World}, \\Product{Servant of the Shard}, and \\Product{Sea of Swords}. These titles continue the tale of Salvatore\'s signature character \\NPC{Drizzt Do\'Urden}, one of the most well-known figures in the \\Place{Forgotten Realms} setting."
 }
 title: "Paths of Darkness Collector\'s Edition"
 author {

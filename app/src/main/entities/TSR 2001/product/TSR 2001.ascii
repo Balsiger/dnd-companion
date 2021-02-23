@@ -4,7 +4,7 @@ template {
     name: "net price list"
   }
   world: "Generic"
-  description: "Rule for Fantastic Medieval Role Playing Adventure Game Campaigns.\n                    Playable with Paper and Pencil and Miniature Figures"
+  description: "Rule for Fantastic Medieval Role Playing Adventure Game Campaigns. Playable with Paper and Pencil and Miniature Figures"
 }
 title: "Dungeons & Dragons Basic Rulebook"
 date {

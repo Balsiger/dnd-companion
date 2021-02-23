@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "Torn asunder by the nightmares of a mad king, the \\Monster[elf]{elven} realm\n  of \\Place{Silvanesti} has nearly been restored to its former grandeur. But\n  the \\Monster{elf} \\NPC{Porthios}, returning to his homeland, launches a\n  rebellion against young \\NPC{Gilthas}, his own nephew.\n\n  \\NPC{Gilthas}\'s troubles are multiplied by threats from \\Monster{green\n  dragons} and from the \\Group{Knights of Takhisis}. Now, with \\NPC{Porthios}\n  at his throat, \\NPC{Gilthas} must choose between blood and honor.\n\n  Douglas Niles\' \\Place{Dragonlance} novel is filled with treachery and\n  intrigue among the \\Monster[elf]{elves} during the \\Event{Chaos War}, the\n  backdrop for The New York Times best-selling novel \\Product{Dragons of Summer\n  Flame}."
+  description: "Torn asunder by the nightmares of a mad king, the \\Monster[elf]{elven} realm of \\Place{Silvanesti} has nearly been restored to its former grandeur. But\nthe \\Monster{elf} \\NPC{Porthios}, returning to his homeland, launches a\nrebellion against young \\NPC{Gilthas}, his own nephew. PC{Gilthas}\'s troubles are multiplied by threats from \\Monster{green dragons} and from the \\Group{Knights of Takhisis}. Now, with \\NPC{Porthios} at his throat, \\NPC{Gilthas} must choose between blood and honor. Douglas Niles\' \\Place{Dragonlance} novel is filled with treachery and intrigue among the \\Monster[elf]{elves} during the \\Event{Chaos War}, the backdrop for The New York Times best-selling novel \\Product{Dragons of Summer Flame}."
 }
 title: "Puppet King"
 leader: "The"

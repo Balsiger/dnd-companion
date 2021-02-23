@@ -10,7 +10,7 @@ template {
     name: "catalog96"
   }
   world: "Generic"
-  description: "A lot of magical items from \\Item{Decoy Dust} to \\Item{Phylactery of\n                    Riteousness}."
+  description: "A lot of magical items from \\Item{Decoy Dust} to \\Item{Phylactery of Riteousness}."
 }
 title: "Encyclopedia Magica, Volume II"
 author {

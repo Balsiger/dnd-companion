@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "An invisible cone of despair causes great sadness in the subjects. Each affected creature takes a -2 penalty on attack rolls, saving throws, ability checks, skill checks, and weapon damage rolls.  Crushing despair counters and dispels good hope.  Material Component: A vial of tears."
+  description: "An invisible cone of despair causes great sadness in the subjects. Each affected creature takes a -2 penalty on attack rolls, saving throws, ability checks, skill checks, and weapon damage rolls.\n\nCrushing despair counters and dispels good hope.\n\nMaterial Component: A vial of tears."
   short_description: "Subjects take –2 on attack rolls, damage rolls, saves, and checks."
 }
 school: ENCHANTMENT

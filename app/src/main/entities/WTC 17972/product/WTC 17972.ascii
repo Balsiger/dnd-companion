@@ -1,7 +1,7 @@
 template {
   name: "WTC 17972"
   world: "Generic"
-  description: "\\Place{Andaron\'s Delve}, a great \\Monster{dwarven} stronghold ravaged by\n  war, has for ages lain abandoned. Now, smoke once again pours from the\n  immense furnaces, and \\Monster{goblins} and beasts guard the ancient\n  entrance. Evil is rekindled in the hear of the mountain and strives to forge\n  anew \\Place{Anaron}\'s sundered arms.\n\n  This time, it\'s about survival."
+  description: "\\Place{Andaron\'s Delve}, a great \\Monster{dwarven} stronghold ravaged by war, has for ages lain abandoned. Now, smoke once again pours from the immense furnaces, and \\Monster{goblins} and beasts guard the ancient entrance. Evil is rekindled in the hear of the mountain and strives to forge anew \\Place{Anaron}\'s sundered arms. This time, it\'s about survival."
 }
 title: "Sundered Arms"
 leader: "The"

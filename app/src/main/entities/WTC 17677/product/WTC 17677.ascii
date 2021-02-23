@@ -1,7 +1,7 @@
 template {
   name: "WTC 17677"
   world: "Forgotten Realms"
-  description: "This new release of the classic R.A. Salvatore novel continues the classic\n                    tale of Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt\n                    Do\'Urden}. Although this was the first title actually published about\n                    \\NPC{Drizzt}, it has now been placed in its proper chronological order as\n                    fourth in the series. Each title in \\Product{The Legend of Drizzt} series\n                    showcases the classic \\Monster{dark elf} novels in new, deluxe hardcover\n                    editions. Each title will feature all new cover art and new introductions\n                    written by those who have become familiar with Salvatore and \\NPC{Drizzt}\n                    over the years."
+  description: "This new release of the classic R.A. Salvatore novel continues the classic tale of Salvatore\'s signature \\Monster{dark elf} character \\NPC{Drizzt Do\'Urden}. Although this was the first title actually published about \\NPC{Drizzt}, it has now been placed in its proper chronological order as fourth in the series. Each title in \\Product{The Legend of Drizzt} series showcases the classic \\Monster{dark elf} novels in new, deluxe hardcover editions. Each title will feature all new cover art and new introductions written by those who have become familiar with Salvatore and \\NPC{Drizzt} over the years."
 }
 title: "Crystal Shard"
 leader: "The"

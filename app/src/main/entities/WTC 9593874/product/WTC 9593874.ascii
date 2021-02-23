@@ -1,7 +1,7 @@
 template {
   name: "WTC 9593874"
   world: "Forgotten Realms"
-  description: "\\NPC{Florin Falconhand} has always dreamed of adventure. When he saves the life of the king of \\Place{Cormyr}, his dream comes true! Unfortunately for \\NPC{Florin}, he also manages to earn the enmity of some of \\Place{Cormyr}\'s most dangerous denizens.\n                    \\NPC{Florin} and his friends, now the \\Group{Swords of Eveningstar}, must learn what it means to be true to themselves, to each other, and to the Crown to have any hope of surviving their long-awaited adventures.\n                    Join Ed Greenwood, the creator of the Forgotten Realms world, in a fantastic new adventure featuring some of his most celebrated characters. "
+  description: "\\NPC{Florin Falconhand} has always dreamed of adventure. When he saves the life of the king of \\Place{Cormyr}, his dream comes true! Unfortunately for \\NPC{Florin}, he also manages to earn the enmity of some of \\Place{Cormyr}\'s most dangerous denizens. \\NPC{Florin} and his friends, now the \\Group{Swords of Eveningstar}, must learn what it means to be true to themselves, to each other, and to the Crown to have any hope of surviving their long-awaited adventures. Join Ed Greenwood, the creator of the Forgotten Realms world, in a fantastic new adventure featuring some of his most celebrated characters. "
   short_description: "The Knights of Myth Drannor, Book I"
 }
 title: "Swords of Eveningstar"

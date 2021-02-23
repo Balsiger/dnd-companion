@@ -1,7 +1,7 @@
 template {
   name: "WTC 86060"
   world: "Dragonlance"
-  description: "An all-new young reader adaptation of the third \\Place{Dragonlance} novel.\n\n  The third \\Place{Dragonlance} novel in the trilogy that launched the entire\n  \\Place{Dragonlance} novel line, \\Product{Dragons of Spring Dawning}, has been\n  adapted to a format for young readers and finishes up the release of young\n  reader adaptations of the entire \\Product{Chronicles} series. The novel has\n  been divided into two volumes, \\Product{Hope\'s Flame} and \\Product{A Dawn of\n  Dragons}."
+  description: "An all-new young reader adaptation of the third \\Place{Dragonlance} novel. The third \\Place{Dragonlance} novel in the trilogy that launched the entire Place{Dragonlance} novel line, \\Product{Dragons of Spring Dawning}, has been adapted to a format for young readers and finishes up the release of young reader adaptations of the entire \\Product{Chronicles} series. The novel has been divided into two volumes, \\Product{Hope\'s Flame} and \\Product{A Dawn of Dragons}."
 }
 title: "Dawn of Dragons"
 leader: "A"

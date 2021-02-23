@@ -1,7 +1,7 @@
 template {
   name: "WTC 17992"
   world: "Generic"
-  description: "The mighty warrior \\NPC{Regdar} is unsuited to a life of inaction, even as\n  an officer of the \\Group{Ducal Guard} in \\Place{New Koratia}. His position\n  brings him unwanted attention from the \\NPC{Duke}\'s scheeming\n  \\NPC{daughter}---a deadly predicament when the girl\'s suitors begin turning\n  up dead, slain by a mysterious, unseen force. \\NPC{Regdar} can trust no one\n  when magic and murder prowl the palace halls.\n\n  Will he become the next victim of the death ray?"
+  description: "The mighty warrior \\NPC{Regdar} is unsuited to a life of inaction, even as an officer of the \\Group{Ducal Guard} in \\Place{New Koratia}. His position brings him unwanted attention from the \\NPC{Duke}\'s scheeming PC{daughter}---a deadly predicament when the girl\'s suitors begin turning up dead, slain by a mysterious, unseen force. \\NPC{Regdar} can trust no one when magic and murder prowl the palace halls. Will he become the next victim of the death ray?"
 }
 title: "Death Ray"
 leader: "The"

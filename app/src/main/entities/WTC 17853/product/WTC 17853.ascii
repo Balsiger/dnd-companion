@@ -1,7 +1,7 @@
 template {
   name: "WTC 17853"
   world: "Dragonlance"
-  description: "Across the ages roams an immortal troupe of actors, gifted with fantastical\n  powers and led by a mysterious artiste with a penchant for meddling. Wherever\n  they roam, they encounter magic and monsters and evil that requires taming.\n\n  This is the first anthology based on characters from the extraordinary\n  novella \'\\Product{The Travelling Players of Gilean}\', by Margaret Weis and\n  Aron Eisenberg, which was featured in \\Product{The Best of Tales}, Volume\n  One. This new anthology also features novellas by best-selling\n  \\Place{Dragonlance} authors Douglas Niles, Richard A. Knaak, Paul\n  B. Thompson, and a new collaboration by Jean Rabe and Aron Eisenberg."
+  description: "Across the ages roams an immortal troupe of actors, gifted with fantastical\npowers and led by a mysterious artiste with a penchant for meddling. Wherever they roam, they encounter magic and monsters and evil that requires taming. This is the first anthology based on characters from the extraordinary ovella \'\\Product{The Travelling Players of Gilean}\', by Margaret Weis and Aron Eisenberg, which was featured in \\Product{The Best of Tales}, Volume One. This new anthology also features novellas by best-selling Place{Dragonlance} authors Douglas Niles, Richard A. Knaak, Paul B. Thompson, and a new collaboration by Jean Rabe and Aron Eisenberg."
 }
 title: "Players of Gilean: Tales from the War of Souls"
 leader: "The"

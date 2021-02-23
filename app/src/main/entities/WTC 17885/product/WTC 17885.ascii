@@ -1,7 +1,7 @@
 template {
   name: "WTC 17885"
   world: "Forgotten Realms"
-  description: "She didn\'t want to steal it.\n                    She didn\'t want to kill a \\Group{Zhentarim} agent.\n                    She didn\'t want to doublecross the \\Group{thieves guild}.\n                    She didn\'t want to owe a debt to the \\Group{Red Wizards of Thay}.\n                    She didn\'t want to anger the followers of the \\Monster{dragon} god\n                    \\God{Tiamat}.\n                    She didn\'t want to tie her fate to the dreaded \\Item{Staff of the\n                    Necromance}.\n                    But she did.\n                    \\Product{The Alabaster Staff} is the first book in a new series that brings\n                    life the people who survive on the fringes and in the shadows of\n                    \\Place{Faer\\hat{u}n}--The Rogues."
+  description: "She didn\'t want to steal it. She didn\'t want to kill a \\Group{Zhentarim} agent. She didn\'t want to doublecross the \\Group{thieves guild}. She didn\'t want to owe a debt to the \\Group{Red Wizards of Thay}. She didn\'t want to anger the followers of the \\Monster{dragon} god \\God{Tiamat}. She didn\'t want to tie her fate to the dreaded \\Item{Staff of the Necromance}. But she did. \\Product{The Alabaster Staff} is the first book in a new series that brings life the people who survive on the fringes and in the shadows of Place{Faer\\hat{u}n}--The Rogues."
 }
 title: "Alabaster Staff"
 leader: "The"

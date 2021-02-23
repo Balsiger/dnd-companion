@@ -1,7 +1,7 @@
 template {
   name: "WTC 2155100"
   world: "Generic"
-  description: "This starter set contains everything you need to compete in head-to-head D&D battles against a friend. Pit the \\Monster{Green Dragon}\'s warband against the \\Monster{Elf} Warlkock\'s warband to see which side can control the dungeon!\n                    New, fully illustrated battle maps of dungeons and wilderness areas make every game exciting and different!"
+  description: "This starter set contains everything you need to compete in head-to-head D&D battles against a friend. Pit the \\Monster{Green Dragon}\'s warband against the \\Monster{Elf} Warlkock\'s warband to see which side can control the dungeon! ew, fully illustrated battle maps of dungeons and wilderness areas make every game exciting and different!"
   short_description: "The 4th edition miniatures game"
 }
 title: "D&D Miniatures Game Starter Set"

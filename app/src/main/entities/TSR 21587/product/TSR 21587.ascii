@@ -10,7 +10,7 @@ template {
     name: "Dragon 264"
   }
   world: "Dragonlance"
-  description: "When the \\NPC{Lord of \\Place{Tarsis}} finds himself with a politically\n  volatile murder on his hands, he turns to the three most expendable\n  inhabitants of the city of a solution. A \\Class{mercenary}, a\n  \\Class{poet-assassin}, and a \\Class{thief} might not be everyone\'s first\n  choice for detectives. But they find they\'re quite good at bringing murderers\n  to justice.\n\n  Perhaps a little too good..."
+  description: "When the \\NPC{Lord of \\Place{Tarsis}} finds himself with a politically volatile murder on his hands, he turns to the three most expendable inhabitants of the city of a solution. A \\Class{mercenary}, a Class{poet-assassin}, and a \\Class{thief} might not be everyone\'s first choice for detectives. But they find they\'re quite good at bringing murderers to justice. Perhaps a little too good..."
 }
 title: "Murder in Tarsis"
 subtitle: "Who killed \\NPC{Ambassador Bloodarrow}?"

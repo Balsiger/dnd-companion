@@ -4,7 +4,7 @@ template {
     name: "net price list"
   }
   world: "Generic"
-  description: "Monster Cards combine full-color illustrations with vital information on 20\n                    AD&D monsters, including 3 totally new creatures, on handy 3\'\'x 5\'\' cards."
+  description: "Monster Cards combine full-color illustrations with vital information on 20 AD&D monsters, including 3 totally new creatures, on handy 3\'\'x 5\'\' cards."
 }
 title: "Monster Cards, Set 4"
 date {

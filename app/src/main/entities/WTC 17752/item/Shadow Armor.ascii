@@ -11,7 +11,7 @@ template {
       high: 219
     }
   }
-  description: "This armor is jet black and blurs the wearer whenever she tries to hide, granting a +5 competence bonus on Hide checks.  (The armor\'s armor check penalty still applies normally.)"
+  description: "This armor is jet black and blurs the wearer whenever she tries to hide, granting a +5 competence bonus on Hide checks.\n\n(The armor\'s armor check penalty still applies normally.)"
   base_only: true
 }
 value {

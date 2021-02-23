@@ -1,7 +1,7 @@
 template {
   name: "WTC 88607"
   world: "Rokugan"
-  description: "The Steel Throne, seat of imperial power in \\Place{Rokugan}, sits\n  empty. Ambition wars with justice and deception with truth as the emperor\'s\n  heirs seek to gain the favor of the Clans. The fate of the Empire walks the\n  edge of a blade, and before all is lost, the \\NPC{Lady of the Sword} must\n  step forward to restore honor to a land in need."
+  description: "The Steel Throne, seat of imperial power in \\Place{Rokugan}, sits empty. Ambition wars with justice and deception with truth as the emperor\'s heirs seek to gain the favor of the Clans. The fate of the Empire walks the edge of a blade, and before all is lost, the \\NPC{Lady of the Sword} must step forward to restore honor to a land in need."
 }
 title: "Wind of Honor"
 subtitle: "The Emperor is Dead."

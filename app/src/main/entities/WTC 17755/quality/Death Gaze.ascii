@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Death, range 30 feet, Fortitude DC 15 negates.  Humanoids who die from this attack are transformed into bodaks 24 hours later. The save DC is Charisma-based"
+  description: "Death, range 30 feet, Fortitude DC 15 negates.\n\nHumanoids who die from this attack are transformed into bodaks 24 hours later. The save DC is Charisma-based"
 }
 type: SUPERNATURAL

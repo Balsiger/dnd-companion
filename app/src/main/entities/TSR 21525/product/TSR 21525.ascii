@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Forgotten Realms"
-  description: "Someone is sabotaging the iron mines of the \\Place{Swoard Coast}, pushing\n                    powerful realms toward a bloody war, and a young mercenary toward an\n                    unimaginable secret.\n                    Evil gods, giant \\Monster{spiders}, murderous \\Monster{doppelgangers},\n                    flesh-eating \\Monster{ghouls}, and wicked \\Group{Zhentarim} come to life in\n                    the action-packed novelization of the Baldur\'s Gate computer game from\n                    BioWare and Interplay."
+  description: "Someone is sabotaging the iron mines of the \\Place{Swoard Coast}, pushing powerful realms toward a bloody war, and a young mercenary toward an unimaginable secret. Evil gods, giant \\Monster{spiders}, murderous \\Monster{doppelgangers}, flesh-eating \\Monster{ghouls}, and wicked \\Group{Zhentarim} come to life in the action-packed novelization of the Baldur\'s Gate computer game from BioWare and Interplay."
 }
 title: "Baldur\'s Gate"
 subtitle: "\\God{Bhaal} Must Be Stopped!"

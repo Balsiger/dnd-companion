@@ -16,7 +16,7 @@ template {
     name: "Dragon 232"
   }
   world: "Generic"
-  description: "\\large{I wouldn\'t open that if I were you!}\n                    \\right{---last words heard by \\NPC{Gwelthyth the Impetuous}}\n                    In a dangerous, fast paces world of adventuring, knowledge means survival. In\n                    an age of legends, even the greatest heroes need technical advisors. Inside\n                    \\Product{Sages & Specialists} you\'ll find ten new NPC specialist\n                    classes---from apothecary to seer, from engineer to scribe---each with his\n                    own special talents and insights. In addition, this book contains a host of\n                    new rules that directly affect the lives of PCs everywhere. Add depth to your\n                    campaign with these unique and three-dimensional NPCs."
+  description: "\\large{I wouldn\'t open that if I were you!} \\right{---last words heard by \\NPC{Gwelthyth the Impetuous}} In a dangerous, fast paces world of adventuring, knowledge means survival. In an age of legends, even the greatest heroes need technical advisors. Inside \\Product{Sages & Specialists} you\'ll find ten new NPC specialist classes---from apothecary to seer, from engineer to scribe---each with his own special talents and insights. In addition, this book contains a host of new rules that directly affect the lives of PCs everywhere. Add depth to your campaign with these unique and three-dimensional NPCs."
 }
 title: "Sages and Specialists"
 date {

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like lesser planar ally, except you may call a single creature of 12 HD or less, or two creatures of the same kind whose Hit Dice total no more than 12. The creatures agree to help you and request your return payment together.  XP Cost: 250 XP."
+  description: "This spell functions like lesser planar ally, except you may call a single creature of 12 HD or less, or two creatures of the same kind whose Hit Dice total no more than 12. The creatures agree to help you and request your return payment together.\n\nXP Cost: 250 XP."
   short_description: "As lesser planar ally, but up to 12 HD."
 }
 school: CONJURATION

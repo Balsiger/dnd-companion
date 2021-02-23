@@ -3,7 +3,7 @@ template {
   base: "horse"
   category: "light"
   synonym: "Warhorse, Light"
-  description: "These animals or similar to light horses but are trained and bred for strength and aggression. They usually are not ready for warfare before age three. A light warhorse can fight while carrying a rider, but the rider cannot also attack unless he or she succeeds on a Ride check.\n\n\\bold{Carrying Capacity:} A light load for a light warhorse is up to 230 pounds; a medium load, 231-460 pounds; and a heavy load, 461-690 pounds. A light warhorse can drag 3,450 pounds."
+  description: "These animals or similar to light horses but are trained and bred for strength and aggression. They usually are not ready for warfare before age three. A light warhorse can fight while carrying a rider, but the rider cannot also attack unless he or she succeeds on a Ride check. bold{Carrying Capacity:} A light load for a light warhorse is up to 230 pounds; a medium load, 231-460 pounds; and a heavy load, 461-690 pounds. A light warhorse can drag 3,450 pounds."
   short_description: "A light, war trained horse."
 }
 hit_dice {

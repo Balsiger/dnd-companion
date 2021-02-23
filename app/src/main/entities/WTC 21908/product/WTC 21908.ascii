@@ -1,7 +1,7 @@
 template {
   name: "WTC 21908"
   world: "Forgotten Realms"
-  description: "Suspended between the worlds of the living and the dead is a thrill-seeking race imbued with the fleeting power of shadow: the \\Monster{shadar-key}.\n\n\\large{Baptized by Blood}\n\n\\NPC{Ashok} bears the scars of many battles, lashing out with iron-spiked chains at any who stand against him --- friend, foe, and brother alike --- until he is abandoned in the \\Place{Shadowfell}.\n\n\\large{Claimed by the \\God{God of Battles}}\n\nIn the bastion of disciplined \\Monster{shadar-kai} known as \\Place{Ikemmu}, a cleric of the \\God{god of battle} has a vision of a \\Monster{shadar-kai}, surrounded by flames and ravens, dying in the \\Place{Shadowfell}. A man who may be the savior of \\Place{Ikemmu}.\n\n\\bold{Or its ultimate downfall.}"
+  description: "Suspended between the worlds of the living and the dead is a thrill-seeking race imbued with the fleeting power of shadow: the \\Monster{shadar-key}. large{Baptized by Blood} PC{Ashok} bears the scars of many battles, lashing out with iron-spiked chains at any who stand against him --- friend, foe, and brother alike --- until he is abandoned in the \\Place{Shadowfell}. large{Claimed by the \\God{God of Battles}}\n\nIn the bastion of disciplined \\Monster{shadar-kai} known as \\Place{Ikemmu}, a cleric of the \\God{god of battle} has a vision of a \\Monster{shadar-kai}, surrounded by flames and ravens, dying in the \\Place{Shadowfell}. A man who may be the savior of \\Place{Ikemmu}. bold{Or its ultimate downfall.}"
   short_description: "A Forgotten Realms story about \\Monster{shadar-kai} and the \\Place{Shadowfell}."
 }
 title: "Unbroken Chain - The Darker Road"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 96600"
   world: "Dragonlance"
-  description: "This title is the next in a series that explores the lives of key characters\n  from Margaret Weis & Tracy Hickman\'s New York Times best-selling \\Product{War\n  of Souls} trilogy. \\Product{Prisoner of Haven} describes events that directly\n  overlap events during the \\Product{War of Souls}, and it features a character\n  originally introduced in \\Product{Dragons of Summer Flame}. Berberick also\n  wrote \\Product{The Lioness}, a previous title in this same series."
+  description: "This title is the next in a series that explores the lives of key characters from Margaret Weis & Tracy Hickman\'s New York Times best-selling \\Product{War of Souls} trilogy. \\Product{Prisoner of Haven} describes events that directly overlap events during the \\Product{War of Souls}, and it features a character originally introduced in \\Product{Dragons of Summer Flame}. Berberick also wrote \\Product{The Lioness}, a previous title in this same series."
 }
 title: "Prisoner of Haven"
 author {

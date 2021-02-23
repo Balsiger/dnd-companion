@@ -1,7 +1,7 @@
 template {
   name: "WTC 17728"
   world: "Forgotten Realms"
-  description: "Author Ed Greenwood concludes the story of \\NPC{Shandril of Highmoon} in\n                    this third volume of the \\Product{Shandril\'s Saga} trilogy. This mass market\n                    edition of the trade paperback features new cover art by Jon Sullivan."
+  description: "Author Ed Greenwood concludes the story of \\NPC{Shandril of Highmoon} in this third volume of the \\Product{Shandril\'s Saga} trilogy. This mass market edition of the trade paperback features new cover art by Jon Sullivan."
 }
 title: "Hand of Fire"
 author {

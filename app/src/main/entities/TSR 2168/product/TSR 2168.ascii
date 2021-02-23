@@ -13,7 +13,7 @@ template {
     name: "Dragon 240"
   }
   world: "Generic"
-  description: "A lot of spells from \\Spell{Eagle Form} to \\Spell{Mnemonic Enhancer,\n                    Rary\'s}"
+  description: "A lot of spells from \\Spell{Eagle Form} to \\Spell{Mnemonic Enhancer, Rary\'s}"
 }
 title: "Wizard\'s Spell Compendium, Volume Two"
 date {

@@ -4,7 +4,7 @@ template {
     name: "internet"
   }
   world: "Generic"
-  description: "\\large{The Key to Endless Adventure!}\n                    \\bold{by Jonathan Tweet, Monte Cook, and Skip Williams}\n                    Here is the indispensable manual of fantasy roleplaying. The\n                    \\Product{Player\'s Handbook} includes everything you need to create and play\n                    your ideal Dungeons & Dragons character.\n                    Pick up this book and join the millions of other players who have made the\n                    D&D game the world\'s most popular fantasy roleplaying game!"
+  description: "\\large{The Key to Endless Adventure!} \\bold{by Jonathan Tweet, Monte Cook, and Skip Williams} Here is the indispensable manual of fantasy roleplaying. The \\Product{Player\'s Handbook} includes everything you need to create and play your ideal Dungeons & Dragons character. Pick up this book and join the millions of other players who have made the D&D game the world\'s most popular fantasy roleplaying game!"
 }
 title: "Player\'s Handbook"
 date {

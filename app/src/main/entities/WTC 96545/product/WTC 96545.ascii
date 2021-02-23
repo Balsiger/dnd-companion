@@ -1,7 +1,7 @@
 template {
   name: "WTC 96545"
   world: "Dragonlance"
-  description: "Writing team Thompson & Cook once again explore the history of the ancient\n  \\Place{Dragonlance} world in \\Product{The Wizard\'s Fate}, the next title in\n  their latest trilogy. Considered the historical specialists of the\n  \\Place{Dragonlance} world, the authors take the story to a colorful and\n  violent era of its history that has not been previously chronicled in any\n  novel."
+  description: "Writing team Thompson & Cook once again explore the history of the ancient Place{Dragonlance} world in \\Product{The Wizard\'s Fate}, the next title in their latest trilogy. Considered the historical specialists of the Place{Dragonlance} world, the authors take the story to a colorful and violent era of its history that has not been previously chronicled in any ovel."
 }
 title: "Wizard\'s Fate"
 leader: "The"

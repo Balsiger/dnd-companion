@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Forgotten Realms"
-  description: "The quest is over. The hero returns home.\n                    A weary \\NPC{Cadderly} makes his way back to the \\Place{Edificant Library},\n                    where he can begin to rebuild his shattered life. But the \\Item{Chaos Curse}\n                    has one last surprise for him.\n                    If he fails to meet the challenge, his beloved \\NPC{Danica} will be lost to\n                    him forever."
+  description: "The quest is over. The hero returns home. A weary \\NPC{Cadderly} makes his way back to the \\Place{Edificant Library}, where he can begin to rebuild his shattered life. But the \\Item{Chaos Curse} has one last surprise for him. If he fails to meet the challenge, his beloved \\NPC{Danica} will be lost to him forever."
 }
 title: "Chaos Curse"
 leader: "The"

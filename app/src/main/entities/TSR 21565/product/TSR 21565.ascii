@@ -7,7 +7,7 @@ template {
     name: "Dragon 267"
   }
   world: "Dragonlance"
-  description: "A talent for magic runs like fire through the blood of \\NPC{Dalamar\n  Argent}. Yet he is only a servant in the house of an \\Monster[elf]{elvish}\n  lord, not worthy of the High Art of Sorcery and denied all but the most\n  grudging teaching.\n\n  As war simmers on the borders of \\Place{Silvanesti}, \\NPC{Dalamar} will find\n  a way to learn his art. His quest will take him along dark paths toward an\n  awesome destiny."
+  description: "A talent for magic runs like fire through the blood of \\NPC{Dalamar Argent}. Yet he is only a servant in the house of an \\Monster[elf]{elvish} lord, not worthy of the High Art of Sorcery and denied all but the most grudging teaching. As war simmers on the borders of \\Place{Silvanesti}, \\NPC{Dalamar} will find a way to learn his art. His quest will take him along dark paths toward an awesome destiny."
 }
 title: "Dalamar the Dark"
 author {

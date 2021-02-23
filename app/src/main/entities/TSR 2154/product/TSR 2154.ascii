@@ -10,7 +10,7 @@ template {
     name: "catalog96"
   }
   world: "Generic"
-  description: "These pages hold the keys to \\Monster{humans} who spot secret doors as\n                    easily as do \\Monster{elves}, thieves who sense illusions,\n                    \\Monster{half-ogre} sword masters, and a multitude of other unique\n                    characters. Player\'s Option Rulebooks present an alternative approach to AD&D\n                    characters. Custom-craft your next PC, selecting the profession, skills, and\n                    abilities you want! Characters can even have additional ability scores such\n                    as Stamina, Muscle, Balance, and others. New proficiencies, talents, and\n                    updated psionics round out the Player\'s Option character. Be ready for\n                    anything with \\Product{Skills & Powers}."
+  description: "These pages hold the keys to \\Monster{humans} who spot secret doors as easily as do \\Monster{elves}, thieves who sense illusions, \\Monster{half-ogre} sword masters, and a multitude of other unique characters. Player\'s Option Rulebooks present an alternative approach to AD&D characters. Custom-craft your next PC, selecting the profession, skills, and abilities you want! Characters can even have additional ability scores such as Stamina, Muscle, Balance, and others. New proficiencies, talents, and updated psionics round out the Player\'s Option character. Be ready for anything with \\Product{Skills & Powers}."
 }
 title: "Player\'s Option: Skills & Powers"
 author {

@@ -5,7 +5,7 @@ template {
     name: "net"
   }
   world: "Greyhawk"
-  description: "At gaming tables everywhere, the future of the \\Place{Greyhawk} setting\n  turns on the rolls of dice and the actions of thousands of Dungeons & Dragons\n  players.\n\n  This comprehensive sourcebook contains everything you need to get started in\n  the RPGA Network\'s exciting Living Greyhawk shared world campaign.\n\n  Inside you\'ll find descriptions of dozens of nations and scores of deities,\n  as well as hundreds of adventure hooks to get heores immersed in the dangers\n  of the world. In the Living Greyhawk campaign, you determine the fate of the\n  \\Place{Flanaess}. It\'s your world!"
+  description: "At gaming tables everywhere, the future of the \\Place{Greyhawk} setting\nturns on the rolls of dice and the actions of thousands of Dungeons & Dragons players. This comprehensive sourcebook contains everything you need to get started in the RPGA Network\'s exciting Living Greyhawk shared world campaign. Inside you\'ll find descriptions of dozens of nations and scores of deities, as well as hundreds of adventure hooks to get heores immersed in the dangers of the world. In the Living Greyhawk campaign, you determine the fate of the Place{Flanaess}. It\'s your world!"
 }
 title: "Living Greyhawk Gazetteer"
 subtitle: "Make the world your own!"

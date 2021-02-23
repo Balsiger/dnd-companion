@@ -1,7 +1,7 @@
 template {
   name: "WTC 9547274"
   world: "Generic"
-  description: "It\'s \\NPC{Zendric}s 500th birthday! But with one bite of birthday cake,\n  \\NPC{Zendric}s memory completely vanishes, along with all his powers. The\n  search for an antidote to the poisoned cake leads \\NPC{Moyra}, \\NPC{Kellach},\n  and \\NPC{Driskoll} to the \\God{Wee Jas} cemetery. The \\Monster{mummies},\n  \\Monster{ghasts}, and \\Monster{ghouls} that haunt the place can\'t scare away\n  the \\Group{Knights of the Silver Dragon}. But are the \\Group{Knights}\n  prepared for what they\'ll find inside the wizard\'s tomb?"
+  description: "It\'s \\NPC{Zendric}s 500th birthday! But with one bite of birthday cake, PC{Zendric}s memory completely vanishes, along with all his powers. The search for an antidote to the poisoned cake leads \\NPC{Moyra}, \\NPC{Kellach}, and \\NPC{Driskoll} to the \\God{Wee Jas} cemetery. The \\Monster{mummies}, Monster{ghasts}, and \\Monster{ghouls} that haunt the place can\'t scare away the \\Group{Knights of the Silver Dragon}. But are the \\Group{Knights} prepared for what they\'ll find inside the wizard\'s tomb?"
 }
 title: "Mystery of the Wizard\'s Tomb"
 author {

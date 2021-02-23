@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Up to three times per day an achaierai can release a choking, toxic black cloud.  Those other than achaierai within 10 feet instantly take 2d6 points of damage. They must also succeed on a DC 15 Fortitude save or be affected for 3 hours as though by an \\Spell{insanity} spell (caster level 16th). The save DC is Constitution-based."
+  description: "Up to three times per day an achaierai can release a choking, toxic black cloud.\n\nThose other than achaierai within 10 feet instantly take 2d6 points of damage. They must also succeed on a DC 15 Fortitude save or be affected for 3 hours as though by an \\Spell{insanity} spell (caster level 16th). The save DC is Constitution-based."
 }
 type: EXTRAORDINARY

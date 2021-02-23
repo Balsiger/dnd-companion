@@ -1,7 +1,7 @@
 template {
   name: "WTC 9590974"
   world: "Eberron"
-  description: "Three heroes know the danger. In the \\Place{City of Towers}, a tormented\n  mystic and a soldier-wizard try to thwart a monstrous scheme. In the\n  \\Place{Shadow Marches}, a disgraced warrior summons an ancient sect to\n  battle.\n\n  As a \\Monster{dragon} rises, can their struggle succeed? Or will they fall to\n  madness and the music of the \\Product{Killing Song}...."
+  description: "Three heroes know the danger. In the \\Place{City of Towers}, a tormented mystic and a soldier-wizard try to thwart a monstrous scheme. In the Place{Shadow Marches}, a disgraced warrior summons an ancient sect to battle. As a \\Monster{dragon} rises, can their struggle succeed? Or will they fall to madness and the music of the \\Product{Killing Song}...."
 }
 title: "Killing Song"
 leader: "The"

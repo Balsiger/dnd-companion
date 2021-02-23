@@ -1,7 +1,7 @@
 template {
   name: "DMA 000049"
   world: "Forgotten Realms"
-  description: "\\large{\\Place{Die Vergessenen Welten}}\n                    \\emph{Ein packendes Fanstasy-Epos von Kampf und Friedenssehnsucht,\n                    Freundschaft und Verrat, Lieve und Magie.}\n                    \\NPC{Wulfgar}, \\NPC{Bruenor} und \\NPC{Regis} wissen von \\NPC{Akar Kessels}\n                    Plan, in \\Place{Zehn-St\\umlaut{a}dte} einzufallen, aber niemand will ihren\n                    Warnungen Glauben schenken. W\\umlaut{a}hrend \\NPC{Kessel} die letzten\n                    Vorbereitungen zum Angriff trifft, macht sich \\NPC{Wulfgar} zum Hort des\n                    \\Monster{weissen Drachen} auf, um ein Versprechen einzul\\umlaut{o}sen, das er\n                    einst seinem Vater gegeben hat. Doch er muss erkennen, dass Wort zu halten\n                    schon immer die schwerste aller Aufgaben war.\n                    Deutsche Erstver\\umlaut{o}ffentlichung"
+  description: "\\large{\\Place{Die Vergessenen Welten}} \\emph{Ein packendes Fanstasy-Epos von Kampf und Friedenssehnsucht, Freundschaft und Verrat, Lieve und Magie.} \\NPC{Wulfgar}, \\NPC{Bruenor} und \\NPC{Regis} wissen von \\NPC{Akar Kessels} Plan, in \\Place{Zehn-St\\umlaut{a}dte} einzufallen, aber niemand will ihren Warnungen Glauben schenken. W\\umlaut{a}hrend \\NPC{Kessel} die letzten Vorbereitungen zum Angriff trifft, macht sich \\NPC{Wulfgar} zum Hort des \\Monster{weissen Drachen} auf, um ein Versprechen einzul\\umlaut{o}sen, das er einst seinem Vater gegeben hat. Doch er muss erkennen, dass Wort zu halten schon immer die schwerste aller Aufgaben war. Deutsche Erstver\\umlaut{o}ffentlichung"
 }
 title: "Verschlungenen Pfade"
 leader: "Die"

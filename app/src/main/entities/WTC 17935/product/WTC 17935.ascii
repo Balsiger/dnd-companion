@@ -1,7 +1,7 @@
 template {
   name: "WTC 17935"
   world: "None"
-  description: "The MLB Showdown 2-Player Starter Game comes loaded with everything you need\n  to get a game going in minutes! Each starter game contains:\n\n  \\list\n  {Two random 15-player teams}\n  {Updated 2004 player game cards with special abilities}\n  {Two of four exclusive, holographic player game cards}\n  {Two 4-card strategy game card packs}\n  {One 20-sided die}\n  {Rulebook with player checklist}\n  {Full-color playmat with easy-to-learn rules}\n\n  Collect from the best starters, middle relievers, and closers, or the top\n  sluggers, RBI leaders, and speedsters in Major League Baseball."
+  description: "The MLB Showdown 2-Player Starter Game comes loaded with everything you need to get a game going in minutes! Each starter game contains: list\n{Two random 15-player teams}\n{Updated 2004 player game cards with special abilities} {Two of four exclusive, holographic player game cards} {Two 4-card strategy game card packs} {One 20-sided die} {Rulebook with player checklist} {Full-color playmat with easy-to-learn rules} Collect from the best starters, middle relievers, and closers, or the top sluggers, RBI leaders, and speedsters in Major League Baseball."
 }
 title: "MLB Showdown 2004 Starter Game"
 date {

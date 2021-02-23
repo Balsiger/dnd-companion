@@ -1,7 +1,7 @@
 template {
   name: "WTC 96448"
   world: "Forgotten Realms"
-  description: "When the gods are banished from the heavens, they must travel through\n                    \\Place{Faer\\hat{u}n} in the guise of mortals.\n                    When four companions, last survivors of the \\Group{Company of the Lynx}, find\n                    themselves in possession of a mysterious amulet, they must escape death at\n                    the hand of \\God{Bane}, \\God{god of murder}.\n                    When magic itself runs wild, no one can say that the most innocent of spells\n                    will not destroy the world."
+  description: "When the gods are banished from the heavens, they must travel through \\Place{Faer\\hat{u}n} in the guise of mortals. When four companions, last survivors of the \\Group{Company of the Lynx}, find themselves in possession of a mysterious amulet, they must escape death at the hand of \\God{Bane}, \\God{god of murder}. When magic itself runs wild, no one can say that the most innocent of spells will not destroy the world."
 }
 title: "Shadowdale"
 author {

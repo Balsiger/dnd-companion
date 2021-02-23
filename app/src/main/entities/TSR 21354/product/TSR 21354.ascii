@@ -4,7 +4,7 @@ template {
     name: "Dragon 257"
   }
   world: "Forgotten Realms"
-  description: "Serene, beautiful, inviolate.\n                    Rich in magic and treasure, to those who hear of its legends it is the\n                    ultimate paradise. To the beleagured \\Monster{elves} of \\Place{Toril} it is\n                    the ultimate refuge. But to many it is the ultimate prize.\n                    At the heart of its story is \\NPC{Amlaruil}, \\NPC{Queen of all\n                    \\Monster{Elves}}. When \\Place{Evermeet} comes under massive, devastating\n                    attack, her sacrifice holds the last hope of saving the \\Monster{elven}\n                    homeland."
+  description: "Serene, beautiful, inviolate. Rich in magic and treasure, to those who hear of its legends it is the ultimate paradise. To the beleagured \\Monster{elves} of \\Place{Toril} it is the ultimate refuge. But to many it is the ultimate prize. At the heart of its story is \\NPC{Amlaruil}, \\NPC{Queen of all \\Monster{Elves}}. When \\Place{Evermeet} comes under massive, devastating attack, her sacrifice holds the last hope of saving the \\Monster{elven} homeland."
 }
 title: "Evermeet: Island of the Elves"
 author {

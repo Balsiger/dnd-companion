@@ -40,7 +40,7 @@ encounter {
   environment {
     walls {
       name: "Cavern Walls"
-      description: "Cavern walls in the \\Place{Skull Subterranes} are uneven and rarely flat. They are smooth to the touch but filled with tiny holes, hidden alcoves, and ledges at various heights. They’re also usually wet or at least damp.\n It takes a successful DC 15 Climb check to move along an unworked stone wall."
+      description: "Cavern walls in the \\Place{Skull Subterranes} are uneven and rarely flat. They are smooth to the touch but filled with tiny holes, hidden alcoves, and ledges at various heights. They’re also usually wet or at least damp.\nIt takes a successful DC 15 Climb check to move along an unworked stone wall."
       check {
         name: "climb"
         dc: 15

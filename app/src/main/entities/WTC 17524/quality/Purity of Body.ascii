@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "At 5th level, a monk gains control over her body's immune system. She gains immunity to all diseases except for supernatural and magical diseases (such as mummy rot and lycanthropy).  "
+  description: "At 5th level, a monk gains control over her body's immune system. She gains immunity to all diseases except for supernatural and magical diseases (such as mummy rot and lycanthropy).\n\n"
 }
 type: EXTRAORDINARY

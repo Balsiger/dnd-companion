@@ -1,7 +1,7 @@
 template {
   name: "WTC 9545974"
   world: "Dragonlance"
-  description: "\\Place{Solace} is booming out of control. An important temple dedication is\n  bringing merchants, dignitaries, and a host of ne\'er-do-wells and\n  surprise visitors to the fabled tree-top town. And lately there have been a\n  series of mysterious incidents...\n\n  \\NPC{Palin} has sworn off magic and nowadays acts as town mayor. He\n  desperately needs a new sheriff, as the last one has just been murdered by\n  malefactors unknown. Fortunately, \\NPC{Gerard} has quit the knighthood, after\n  a quarrel with his father, and arrives just in time to don a sheriff\'s badge.\n\n  Douglas W. Clark reunites two of the most popular characters from the\n  \\Product{War of Souls} epic in this new novel set in the best-selling world\n  of \\Place{Dragonlance}."
+  description: "\\Place{Solace} is booming out of control. An important temple dedication is bringing merchants, dignitaries, and a host of ne\'er-do-wells and\nsurprise visitors to the fabled tree-top town. And lately there have been a\nseries of mysterious incidents... PC{Palin} has sworn off magic and nowadays acts as town mayor. He desperately needs a new sheriff, as the last one has just been murdered by malefactors unknown. Fortunately, \\NPC{Gerard} has quit the knighthood, after a quarrel with his father, and arrives just in time to don a sheriff\'s badge. Douglas W. Clark reunites two of the most popular characters from the Product{War of Souls} epic in this new novel set in the best-selling world of \\Place{Dragonlance}."
 }
 title: "Saving Solace"
 author {

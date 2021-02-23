@@ -7,7 +7,7 @@ template {
     name: "catalog92"
   }
   world: "Generic"
-  description: "Includes all the rare and normal numbered cards in the 1992 series\n                    \\list\n                    {every card counterfeit proof}\n                    {the only official AD&D 2nd edition collector cards}"
+  description: "Includes all the rare and normal numbered cards in the 1992 series \\list {every card counterfeit proof} {the only official AD&D 2nd edition collector cards}"
 }
 title: "1992 Collector Card Factory Set"
 date {

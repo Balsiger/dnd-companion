@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell magically holds shut a door, gate, window, or shutter of wood, metal, or stone. The magic affects the portal just as if it were securely closed and normally locked. A knock spell or a successful dispel magic spell can negate a hold portal spell.  For a portal affected by this spell, add 5 to the normal DC for forcing open the portal."
+  description: "This spell magically holds shut a door, gate, window, or shutter of wood, metal, or stone. The magic affects the portal just as if it were securely closed and normally locked. A knock spell or a successful dispel magic spell can negate a hold portal spell.\n\nFor a portal affected by this spell, add 5 to the normal DC for forcing open the portal."
   short_description: "Holds door shut."
 }
 school: ABJURATION

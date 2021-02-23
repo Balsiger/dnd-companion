@@ -2,7 +2,7 @@ template {
   name: "WTC 21985"
   synonym: "WTC 88203"
   world: "Forgotten Realms"
-  description: "\\large{Death to the Children of \\God{Bhaal}!}\n                    On the run and hunted by everyone in \\Place{Faer\\hat{u}n}, \\God{Bhaal}\'s\n                    offspring are wiped out. Instead of ridding the land of evil, each kill gives\n                    more power to a vicious group of \\Monster{Bhaalspawn} intent on returning\n                    their father to the world.\n                    Follow the ultimate battle of the children of \\God{Bhaal} in this thrilling\n                    novel based on the computer game from BioWare and Interplay."
+  description: "\\large{Death to the Children of \\God{Bhaal}!} On the run and hunted by everyone in \\Place{Faer\\hat{u}n}, \\God{Bhaal}\'s offspring are wiped out. Instead of ridding the land of evil, each kill gives more power to a vicious group of \\Monster{Bhaalspawn} intent on returning their father to the world. Follow the ultimate battle of the children of \\God{Bhaal} in this thrilling ovel based on the computer game from BioWare and Interplay."
 }
 title: "Baldur\'s Gate II, Throne of Bhaal"
 author {

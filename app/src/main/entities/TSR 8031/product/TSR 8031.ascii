@@ -13,7 +13,7 @@ template {
     name: "catalog93"
   }
   world: "Spelljammer"
-  description: "Plunged into a sea of alien faces, \\NCP{Teldin Moore} isn\'t sure whom to\n  trust. His \\Monster[gnome]{gnomish} sidewheeler is attacked by space pirates,\n  and \\NCP{Teldin} is saved by a hideous \\Monster{mind flayer} who offers to\n  help the \\Monster{human} use his \\Item{magical cloak}---but for whose gain?\n  \\NPC{Teldin} learns the basics of spelljamming, and he seeks an ancient\n  arcane, one who might tell him more.\n\n  \\Product{Into the Void}, set in the \\Place{Forgotten Realms} fantasy world,\n  is the second book in the \\Product{Cloakmaster Cycle} of \\Place{Spelljammer}\n  space fantasy novels from TSR, Inc."
+  description: "Plunged into a sea of alien faces, \\NCP{Teldin Moore} isn\'t sure whom to\ntrust. His \\Monster[gnome]{gnomish} sidewheeler is attacked by space pirates, and \\NCP{Teldin} is saved by a hideous \\Monster{mind flayer} who offers to help the \\Monster{human} use his \\Item{magical cloak}---but for whose gain? PC{Teldin} learns the basics of spelljamming, and he seeks an ancient arcane, one who might tell him more. Product{Into the Void}, set in the \\Place{Forgotten Realms} fantasy world, is the second book in the \\Product{Cloakmaster Cycle} of \\Place{Spelljammer} space fantasy novels from TSR, Inc."
 }
 title: "Into the void"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 17630"
   world: "None"
-  description: "The second title in a series that peers into a mysterious new area of the\n                    Magic world.\n                    \\Product{Heretic: Betrayers of Kamigawa} continues a series that will explore\n                    a new and mysterious area of the \\Place{Magic: The Gathering} world that you\n                    have never seen before. This novel previews the newest trading card game set\n                    to be released in February, giving you a sneak peek at the new elements of\n                    the game."
+  description: "The second title in a series that peers into a mysterious new area of the Magic world. \\Product{Heretic: Betrayers of Kamigawa} continues a series that will explore a new and mysterious area of the \\Place{Magic: The Gathering} world that you have never seen before. This novel previews the newest trading card game set to be released in February, giving you a sneak peek at the new elements of the game."
 }
 title: "Heretic: Betrayers of Kamigawa"
 author {

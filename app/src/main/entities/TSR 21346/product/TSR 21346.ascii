@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "A \\Item{submarine} trip to an island of ghosts. A band of fugitive actors. A\n  deadly \\Monster{draconian} who has had too much holiday punch. And veritable\n  onslaught of \\Monster{dryads}, \\Monster{shadow wights}, and that rarest of\n  all monsters, the dread \\Monster{forest boojum}.\n\n  Also, from the team of Margaret Weis and Don Perrin, the latest adventure of\n  \\NPC{Kang} and his wayward troop of \\Monster{draconians}.\n\n  In the proud tradition of the best-selling \\Place{Dragonlance} anthologies,\n  \\Product{Heroes and Fools} promises a sometimes heroic -- sometimes foolish\n  -- visit to the world of \\Place{Krynn}."
+  description: "A \\Item{submarine} trip to an island of ghosts. A band of fugitive actors. A\ndeadly \\Monster{draconian} who has had too much holiday punch. And veritable onslaught of \\Monster{dryads}, \\Monster{shadow wights}, and that rarest of all monsters, the dread \\Monster{forest boojum}. Also, from the team of Margaret Weis and Don Perrin, the latest adventure of PC{Kang} and his wayward troop of \\Monster{draconians}. In the proud tradition of the best-selling \\Place{Dragonlance} anthologies, Product{Heroes and Fools} promises a sometimes heroic -- sometimes foolish -- visit to the world of \\Place{Krynn}."
 }
 title: "Heroes and Fools"
 subtitle: "Tales of the Fifth Age"

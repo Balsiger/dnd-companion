@@ -13,7 +13,7 @@ template {
     name: "catalog93"
   }
   world: "Forgotten Realms"
-  description: "Between the valiant kingdoms of the western Realms and the exotic eastern\n                    lands of \\Place{Kara-Tur} liest a vast, unexplored kingdom. For centuries,\n                    the \'civilized\' peoples of the \\Place{Forgotten Realms} have given little\n                    notice to these barbarians. Now, a powerful leader has united the wild\n                    horsemen into a mighty force---an army powerful enough to challenge the\n                    world.\n                    \\Product{Horselords} is the first novel in the \\Product{Empires Trilogy},\n                    TSR\'s newest saga set in the \\Product{Forgotten Realms} fantasy world."
+  description: "Between the valiant kingdoms of the western Realms and the exotic eastern lands of \\Place{Kara-Tur} liest a vast, unexplored kingdom. For centuries, the \'civilized\' peoples of the \\Place{Forgotten Realms} have given little notice to these barbarians. Now, a powerful leader has united the wild horsemen into a mighty force---an army powerful enough to challenge the world. \\Product{Horselords} is the first novel in the \\Product{Empires Trilogy}, TSR\'s newest saga set in the \\Product{Forgotten Realms} fantasy world."
 }
 title: "Horselords"
 author {

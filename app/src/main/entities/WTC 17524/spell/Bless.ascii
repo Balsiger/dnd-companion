@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Bless fills your allies with courage. Each ally gains a +1 morale bonus on attack rolls and on saving throws against fear effects.  Bless counters and dispels bane."
+  description: "Bless fills your allies with courage. Each ally gains a +1 morale bonus on attack rolls and on saving throws against fear effects.\n\nBless counters and dispels bane."
   short_description: "Allies gain +1 on attack rolls and saves against fear."
 }
 school: ENCHANTMENT

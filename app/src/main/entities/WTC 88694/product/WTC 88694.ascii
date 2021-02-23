@@ -1,7 +1,7 @@
 template {
   name: "WTC 88694"
   world: "Dragonlance"
-  description: "\\Product{The Kingpriest trilogy} chronicles the origins and development of a\n  noted figure from the \\Product{Dragonlance Legends} trilogy, linking this new\n  series to one of the top-selling trilogies in the entire \\Place{Dragonlance}\n  backlist. \\Place{Dragonlance} is a rich world that lends itself to revisiting\n  popular characters from prior series--an integral part of the publishing\n  program."
+  description: "\\Product{The Kingpriest trilogy} chronicles the origins and development of a oted figure from the \\Product{Dragonlance Legends} trilogy, linking this new series to one of the top-selling trilogies in the entire \\Place{Dragonlance} backlist. \\Place{Dragonlance} is a rich world that lends itself to revisiting popular characters from prior series--an integral part of the publishing program."
 }
 title: "Chosen of the Gods"
 author {

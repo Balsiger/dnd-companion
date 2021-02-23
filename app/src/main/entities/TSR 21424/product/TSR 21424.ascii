@@ -10,7 +10,7 @@ template {
     name: "Dragon 264"
   }
   world: "Greyhawk"
-  description: "A remorseless \\Class{ranger}.\n\n  A sentient \\Monster{hell hound} pelt with a penchant for pyromania.\n\n  An irksome \\Monster{pixie} who sells intrigue and information.\n\n  Three companions who find themselves trapped in a city filled with warring\n  priestly factions, devious machinations, and an angry \\Monster{fiend}. To\n  save the city, they must find three weapons of power, which lie in the most\n  trap-laden, monster-infested place this side of \\Place{\\NPC{Acererak}\'s\n  tomb}: \\Place{White Plume Mountain}."
+  description: "A remorseless \\Class{ranger}. A sentient \\Monster{hell hound} pelt with a penchant for pyromania. An irksome \\Monster{pixie} who sells intrigue and information. Three companions who find themselves trapped in a city filled with warring priestly factions, devious machinations, and an angry \\Monster{fiend}. To save the city, they must find three weapons of power, which lie in the most trap-laden, monster-infested place this side of \\Place{\\NPC{Acererak}\'s tomb}: \\Place{White Plume Mountain}."
 }
 title: "White Plume Mountain"
 author {

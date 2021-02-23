@@ -13,7 +13,7 @@ template {
     name: "catalog96"
   }
   world: "Ravenloft"
-  description: "Sir \\NPC{Tristan Hiregaard} is a nobleman in the dark land of \\Place{Nova Vaasa}, to all outward appearances a kind lord who would never harm anyone. Yet, Sir \\NPC{Tristan} has a sinister secret, one that even he does not understand...\n\nAt times the nobleman transforms into a brutish creature named \\NPC{Malken}, a man-beast who finds no act too base, just as long as it extends the killing grip of his vast criminal empire. No one is safe from \\NPC{Malken}, and it seems that no one can break his stranglehold on \\Place{Nova Vaasa}---until \\NPC{Tristan} himself takes on a quest to destroy his evil side.\n\n\\Product{The Enemy Within} is the seventh in an open-ended series of Gothic horror tales dealing with the masters and monsters of the Ravenloft dark fantasy setting."
+  description: "Sir \\NPC{Tristan Hiregaard} is a nobleman in the dark land of \\Place{Nova Vaasa}, to all outward appearances a kind lord who would never harm anyone. Yet, Sir \\NPC{Tristan} has a sinister secret, one that even he does not understand...\n\nAt times the nobleman transforms into a brutish creature named \\NPC{Malken}, a man-beast who finds no act too base, just as long as it extends the killing grip of his vast criminal empire. No one is safe from \\NPC{Malken}, and it seems that no one can break his stranglehold on \\Place{Nova Vaasa}---until \\NPC{Tristan} himself takes on a quest to destroy his evil side. Product{The Enemy Within} is the seventh in an open-ended series of Gothic horror tales dealing with the masters and monsters of the Ravenloft dark fantasy setting."
 }
 title: "Enemy Within"
 leader: "The"

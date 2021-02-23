@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Dominaria"
-  description: "The \\Event{Ice Age} has come to an abrupt end, but the world\'s troubles have\n                    not. Legions of \\Monster{undead} still plague the living. The temporary peace\n                    in \\Place{Kjeldor} has come to an end, and an evil far more treacherous than\n\\NPC{Lim Dâl} has been unleashed upon the land.\n                    The ice has gone, but the evil remains."
+  description: "The \\Event{Ice Age} has come to an abrupt end, but the world\'s troubles have not. Legions of \\Monster{undead} still plague the living. The temporary peace in \\Place{Kjeldor} has come to an end, and an evil far more treacherous than\n\\NPC{Lim Dâl} has been unleashed upon the land. The ice has gone, but the evil remains."
 }
 title: "Shattered Alliance"
 leader: "The"

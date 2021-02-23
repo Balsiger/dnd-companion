@@ -4,7 +4,7 @@ template {
     name: "Dragon 257"
   }
   world: "Dragonlance"
-  description: "During the hottest summer in memory, \\Monster{minotaurs} fight against the\n  \\Group{Knights of Takhisis}, into whose hands their god \\God{Sargonnas} has\n  delivered them. In the midst of the conflict, the armies of Chaos plunge into\n  the heart of \\Place{Ansalon}.\n\n  Now the \\Monster{minotaur} \\Class{warrior} \\NPC{Aryx} must unite his people\n  and their enemy, the \\Group{knights}, against the monstrous servants of\n  Chaos. If he succeeds, the two sides may forge a bond that will change\n  \\Place{Krynn} for all time.\n\n  If he fails, then they will all perish.\n\n  Richard Knaak, author of the New Yor Times best-selling \\Product{The Legend\n  of Huma}, tells this thrilling tale of the \\Monster{minotaurs} of\n  \\Place{Krynn} in the time of the \\Event{Chaos War}."
+  description: "During the hottest summer in memory, \\Monster{minotaurs} fight against the \\Group{Knights of Takhisis}, into whose hands their god \\God{Sargonnas} has delivered them. In the midst of the conflict, the armies of Chaos plunge into\nthe heart of \\Place{Ansalon}. ow the \\Monster{minotaur} \\Class{warrior} \\NPC{Aryx} must unite his people and their enemy, the \\Group{knights}, against the monstrous servants of Chaos. If he succeeds, the two sides may forge a bond that will change Place{Krynn} for all time. If he fails, then they will all perish. Richard Knaak, author of the New Yor Times best-selling \\Product{The Legend of Huma}, tells this thrilling tale of the \\Monster{minotaurs} of Place{Krynn} in the time of the \\Event{Chaos War}."
 }
 title: "Reavers of the Blood Sea"
 subtitle: "Chaos\'s evil shadow sweeps over \\Place{Krynn}"

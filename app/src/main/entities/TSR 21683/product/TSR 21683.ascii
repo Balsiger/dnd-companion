@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "Against a darkened cloud it comes, framed by thunder and lightning, soaring\n  over the ravaged land: the \\Place{flying citadel}, mightiest power in the\n  arsenal of the \\Monster{dragon} highlords.\n\n  In an age of war, an evil \\Class{wizard} learned the secret of creating these\n  castles in the air and sought to use them to gain power over all\n  \\Place{Krynn}. Against him were ranged a red-robed \\Class{magic-user}, a\n  \\Class{cleric}, an ancient \\Class{warrior}, and -- naturally -- a\n  \\Monster{kender}.\n\n  Their battle shook the skies of \\Place{Krynn}."
+  description: "Against a darkened cloud it comes, framed by thunder and lightning, soaring\nover the ravaged land: the \\Place{flying citadel}, mightiest power in the arsenal of the \\Monster{dragon} highlords. In an age of war, an evil \\Class{wizard} learned the secret of creating these castles in the air and sought to use them to gain power over all Place{Krynn}. Against him were ranged a red-robed \\Class{magic-user}, a Class{cleric}, an ancient \\Class{warrior}, and -- naturally -- a Monster{kender}. Their battle shook the skies of \\Place{Krynn}."
 }
 title: "Citadel"
 leader: "The"

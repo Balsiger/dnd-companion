@@ -1,7 +1,7 @@
 template {
   name: "WTC 2178972"
   world: "Generic"
-  description: "The heroes of bow and blade, martial warriors stand tall against the threats of evil. Clad in sturdy armor and holding a trusty weapon, your martial hero must rely on wit and grit to achieve victory.\n                    This Dungeons & Dragons supplement presents hundreds of new powers, feats, paragon paths, and epic destinies designed for the fighter, ranger, rogue, and warlord classes.\n                    It includes brand-new builds and class features for these four classes, allowing you to play new versions of you favorite martial classes --- from the battlerager fighter or cutthroat rogue to the bravura warlord or beastmaster ranger."
+  description: "The heroes of bow and blade, martial warriors stand tall against the threats of evil. Clad in sturdy armor and holding a trusty weapon, your martial hero must rely on wit and grit to achieve victory. This Dungeons & Dragons supplement presents hundreds of new powers, feats, paragon paths, and epic destinies designed for the fighter, ranger, rogue, and warlord classes. It includes brand-new builds and class features for these four classes, allowing you to play new versions of you favorite martial classes --- from the battlerager fighter or cutthroat rogue to the bravura warlord or beastmaster ranger."
   short_description: "Options for Fighters, Rangers, Rogues, and Warlords"
 }
 title: "Martial Power"

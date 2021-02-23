@@ -26,7 +26,7 @@ template {
     name: "catalog95"
   }
   world: "Generic"
-  description: "Need a monster? Look inside, where more than 300 new pieces of full color\n                    art show that the monsters really look like!\n                    This book contains more than 600 monsters including all the creatures from\n                    the \\Product{Monstrous Compendium Volumes 1} and \\Product{2}! In addition,\n                    there are monsters from the other Monstrous Compendium Volumes, and some\n                    creatures never seen in the second edition AD&D Game before.\n                    Entries have be reorganized, corrected, updated, and full cross-referenced,\n                    to make this most valuable monster reference ever!"
+  description: "Need a monster? Look inside, where more than 300 new pieces of full color art show that the monsters really look like! This book contains more than 600 monsters including all the creatures from the \\Product{Monstrous Compendium Volumes 1} and \\Product{2}! In addition, there are monsters from the other Monstrous Compendium Volumes, and some creatures never seen in the second edition AD&D Game before. Entries have be reorganized, corrected, updated, and full cross-referenced, to make this most valuable monster reference ever!"
 }
 title: "Monstrous Manual"
 author {

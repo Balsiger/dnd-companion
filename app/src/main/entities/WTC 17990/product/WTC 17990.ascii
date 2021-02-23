@@ -1,7 +1,7 @@
 template {
   name: "WTC 17990"
   world: "Forgotten Realms"
-  description: "The best stories, the best authors, together in one volume for the first\n                    time.\n                    \\Product{The Best of the Realms} presents your favorite stories from a decade\n                    of Forgotten Realms anthologies---every one chosen by you."
+  description: "The best stories, the best authors, together in one volume for the first time. \\Product{The Best of the Realms} presents your favorite stories from a decade of Forgotten Realms anthologies---every one chosen by you."
 }
 title: "Best of the Realms"
 leader: "The"

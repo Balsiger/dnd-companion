@@ -8,7 +8,7 @@ template {
     name: "Dragon 238"
   }
   world: "Forgotten Realms"
-  description: "Six years. Not so long in the lifespan of a \\Monster{drow}. And yet---in\n                    counting the months, the weeks, the days, the hours---it seemed to me as if I\n                    had been away from \\Place{Mithril Hall} a hundred times that number. The\n                    place was another lifetime, another way of life, a mere stepping stone\n                    to...\n                    To what? To where?\n                    I ride the waves along the \\Place{sword coast} now, the wind and spray in my\n                    face. My ceiling is the rush of the clouds and the canopy of stars; my floor,\n                    the creaking boards of a swift, well-weathered ship. Beyond that lies the\n                    azure blanked, flat and still, heaving and rolling, hissing in the rain and\n                    exploding under the fall of a breaching whale.\n                    It this, then, my home?"
+  description: "Six years. Not so long in the lifespan of a \\Monster{drow}. And yet---in counting the months, the weeks, the days, the hours---it seemed to me as if I had been away from \\Place{Mithril Hall} a hundred times that number. The place was another lifetime, another way of life, a mere stepping stone to... To what? To where? I ride the waves along the \\Place{sword coast} now, the wind and spray in my face. My ceiling is the rush of the clouds and the canopy of stars; my floor, the creaking boards of a swift, well-weathered ship. Beyond that lies the azure blanked, flat and still, heaving and rolling, hissing in the rain and exploding under the fall of a breaching whale. It this, then, my home?"
 }
 title: "Passage to Dawn"
 author {

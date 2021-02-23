@@ -22,7 +22,7 @@ template {
     name: "catalog93"
   }
   world: "Forgotten Realms"
-  description: "The \\Group{Red Wizards} rule \\Place{Thay}, perhaps the most wicked and\n                    corrupt land in all the \\Place{Forgotten Realms}. While the evil mage,\n                    \\NPC{Zulkir Maligor}, builds a net of treachery and deceit, the\n                    \\Group{Harpers} seek to uncover his vile schemes. A small band is sent by the\n                    \\Group{Harpers} to pose as slaves and slavers to infiltrate the malevolent\n                    land. Once inside \\Place{Thay}, they face undead minions of the \\Group{Red\n                    Wizards} and a future far worse than death: becoming the wizard\'s soulless\n                    puppets!\n                    \\Product{Red Magic} is the third in an open-ended series of novels focusing\n                    on the \\Group{Harpers}, the secret organization for Good in the\n                    \\Product{Forgotten Realms} fantasy world."
+  description: "The \\Group{Red Wizards} rule \\Place{Thay}, perhaps the most wicked and corrupt land in all the \\Place{Forgotten Realms}. While the evil mage, \\NPC{Zulkir Maligor}, builds a net of treachery and deceit, the \\Group{Harpers} seek to uncover his vile schemes. A small band is sent by the \\Group{Harpers} to pose as slaves and slavers to infiltrate the malevolent land. Once inside \\Place{Thay}, they face undead minions of the \\Group{Red Wizards} and a future far worse than death: becoming the wizard\'s soulless puppets! \\Product{Red Magic} is the third in an open-ended series of novels focusing on the \\Group{Harpers}, the secret organization for Good in the Product{Forgotten Realms} fantasy world."
 }
 title: "Red Magic"
 author {

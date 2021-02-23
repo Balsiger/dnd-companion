@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You summon a light horse or a pony (your choice) to serve you as a mount. The steed serves willingly and well. The mount comes with a bit and bridle and a riding saddle.  Material Component: A bit of horse hair."
+  description: "You summon a light horse or a pony (your choice) to serve you as a mount. The steed serves willingly and well. The mount comes with a bit and bridle and a riding saddle.\n\nMaterial Component: A bit of horse hair."
   short_description: "Summons riding horse for 2 hours/level."
 }
 school: CONJURATION

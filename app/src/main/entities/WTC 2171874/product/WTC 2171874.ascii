@@ -1,7 +1,7 @@
 template {
   name: "WTC 2171874"
   world: "Generic"
-  description: "Near the sleepy town of \\Place{Winterhaven}, a ruined keep overlooks a dormant gateway to the otherworldly realm known as the \\Place{Shadowfell}. Though this dark scar on the world has lain dormant for many years, an evil cleric of \\NPC{Orcus}, Demon Prince of the Undead, seeks to reopen the gate. The only thing preventing the forces of darkness from sweeping across the land is a determined band of heroes...\n                    This adventure takes characters from 1st level to 3rd level, and serves as the first chapter of a plot that can expand to fill an entire campaign. Inside this folder are an 80-page Adventure Book, a 16-page 4th Edition Quick-Start Rulebook, five ready-to-play 1st-level characters, and three double-sided battle maps designed for use with D&D Miniatures."
+  description: "Near the sleepy town of \\Place{Winterhaven}, a ruined keep overlooks a dormant gateway to the otherworldly realm known as the \\Place{Shadowfell}. Though this dark scar on the world has lain dormant for many years, an evil cleric of \\NPC{Orcus}, Demon Prince of the Undead, seeks to reopen the gate. The only thing preventing the forces of darkness from sweeping across the land is a determined band of heroes... This adventure takes characters from 1st level to 3rd level, and serves as the first chapter of a plot that can expand to fill an entire campaign. Inside this folder are an 80-page Adventure Book, a 16-page 4th Edition Quick-Start Rulebook, five ready-to-play 1st-level characters, and three double-sided battle maps designed for use with D&D Miniatures."
   short_description: "A Heroic Tier Adventure, characters of 1st to 3rd level"
 }
 title: "Keep on the Shadowfell"

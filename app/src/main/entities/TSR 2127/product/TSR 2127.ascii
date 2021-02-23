@@ -20,7 +20,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "Thief, musician, clown, actor, acrobat---just a partial list of the many\n                    twists on the bard class to be found in this book! Seventeen bard kits,\n                    multitudes of abilities and powers, new magical items, new proficiencies,\n                    rules for gaining patrons and followers, over 100 bardic instruments, and\n                    much more await you within. \\Product{The Complete Bard\'s Handbook} gives you\n                    everything you need to create a bard the world will never forget!"
+  description: "Thief, musician, clown, actor, acrobat---just a partial list of the many twists on the bard class to be found in this book! Seventeen bard kits, multitudes of abilities and powers, new magical items, new proficiencies, rules for gaining patrons and followers, over 100 bardic instruments, and much more await you within. \\Product{The Complete Bard\'s Handbook} gives you everything you need to create a bard the world will never forget!"
 }
 title: "Complete Bard\'s Handbook"
 leader: "The"

@@ -1,7 +1,7 @@
 template {
   name: "WTC 88231"
   world: "Star Wars"
-  description: "Everything you need to know about the \\Group{Empire} and \\Group{Rebel\n  Alliance} from the classic Star Wars universe can be found in this one\n  sourcebook -- from weapon and ship statistics to information on non-player\n  characters. \\NPC{Han Solo}, the \\Item{Death Stars}, \\Item{TIE interceptors},\n  \\NPC{Princess Leia}, stormtroopers, \\NPC{Luke Skywalker} . . . it\'s all here\n  in detail."
+  description: "Everything you need to know about the \\Group{Empire} and \\Group{Rebel Alliance} from the classic Star Wars universe can be found in this one sourcebook -- from weapon and ship statistics to information on non-player characters. \\NPC{Han Solo}, the \\Item{Death Stars}, \\Item{TIE interceptors}, PC{Princess Leia}, stormtroopers, \\NPC{Luke Skywalker} . . . it\'s all here in detail."
 }
 title: "Rebellion Era Sourcebook"
 author {

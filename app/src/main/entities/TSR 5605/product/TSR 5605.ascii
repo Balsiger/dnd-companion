@@ -3,7 +3,7 @@ template {
   reference {
     name: "complete product listing"
   }
-  description: "An \\Monster{Scrag}, a \\Monster{Yuan-Ti} and a \\Monster{Banderlog}\n                    miniature."
+  description: "An \\Monster{Scrag}, a \\Monster{Yuan-Ti} and a \\Monster{Banderlog} miniature."
 }
 title: "Scrag, Yuan-Ti & Banderlog"
 date {

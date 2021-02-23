@@ -1,7 +1,7 @@
 template {
   name: "WTC 96712"
   world: "Dragonlance"
-  description: "\\Product{Dragon Spell} continues a new series of \\Place{Dragonlance} fantasy\n  adventures written specifically for readers ages 10 and up. Sized to fit\n  young readers, the series features a group of young companions who band\n  together for friendship and excitement during the golden age of the\n  \\Place{Dragonlance} world."
+  description: "\\Product{Dragon Spell} continues a new series of \\Place{Dragonlance} fantasy adventures written specifically for readers ages 10 and up. Sized to fit young readers, the series features a group of young companions who band together for friendship and excitement during the golden age of the Place{Dragonlance} world."
 }
 title: "Dragon Spell"
 author {

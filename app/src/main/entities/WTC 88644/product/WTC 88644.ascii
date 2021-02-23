@@ -1,7 +1,7 @@
 template {
   name: "WTC 88644"
   world: "Call of Cthulhu"
-  description: "\\large{The old ones were, the old ones are, and the old ones shall be.}\n\n  Ancient knowledge and dark secrets await those brave of foolish enough to\n  delve into the depths of the unknown. Discover terrifying, malevolent\n  creatures that defy the darkest recesses of imagination. Confront horrifying\n  truths long hidden away from the minds of the sane. The risks of\n  investigating such arcana reach way beyond death---the rewards exceed\n  explanation.\n\n  Inspired by the works of H.P. Lovecraft, the \\Product{Call of Cthulhu\n  Roleplaying Game} is a self-contained d20 System game that provides\n  everything you need to explore the realm of horror."
+  description: "\\large{The old ones were, the old ones are, and the old ones shall be.}\n\nAncient knowledge and dark secrets await those brave of foolish enough to\ndelve into the depths of the unknown. Discover terrifying, malevolent creatures that defy the darkest recesses of imagination. Confront horrifying truths long hidden away from the minds of the sane. The risks of investigating such arcana reach way beyond death---the rewards exceed explanation. Inspired by the works of H.P. Lovecraft, the \\Product{Call of Cthulhu Roleplaying Game} is a self-contained d20 System game that provides everything you need to explore the realm of horror."
 }
 title: "Call of Cthulhu Roleplaying Game"
 author {

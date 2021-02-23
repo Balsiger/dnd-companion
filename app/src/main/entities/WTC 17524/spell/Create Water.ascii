@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell generates wholesome, drinkable water, just like clean rain water. Water can be created in an area as small as will actually contain the liquid, or in an area three times as large - possibly creating a downpour or filling many small receptacles.  Note: Conjuration spells can't create substances or objects within a creature.  Water weighs about 8 pounds per gallon.  One cubic foot of water contains roughly 8 gallons and weighs about 60 pounds."
+  description: "This spell generates wholesome, drinkable water, just like clean rain water. Water can be created in an area as small as will actually contain the liquid, or in an area three times as large - possibly creating a downpour or filling many small receptacles. ote: Conjuration spells can't create substances or objects within a creature.\n\nWater weighs about 8 pounds per gallon.\n\nOne cubic foot of water contains roughly 8 gallons and weighs about 60 pounds."
   short_description: "Creates 2 gallons/level of pure water."
 }
 school: CONJURATION

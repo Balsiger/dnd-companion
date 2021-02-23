@@ -1,7 +1,7 @@
 template {
   name: "WTC 95031"
   world: "Star Wars"
-  description: "Lead the galaxy\'s greatest legends into battle! Fourth in a series of titles\n  that accompany each Star Wars miniatures expansion, \\Product{Ultimate\n  Missions: Universe} provides ready-to-play battle scenarios perfect for\n  anyone looking to maximize their Star Wars Miniatures experience. In addition\n  to game-related content, this full-color product also contains a\n  double-sided, fold-out poster map and new color terrain tiles to diversify\n  gameplay.\n\n  Requires the \\Product{Universe Starter Pack} plus \\Product{Universe booster\n  packs} to play."
+  description: "Lead the galaxy\'s greatest legends into battle! Fourth in a series of titles\nthat accompany each Star Wars miniatures expansion, \\Product{Ultimate Missions: Universe} provides ready-to-play battle scenarios perfect for anyone looking to maximize their Star Wars Miniatures experience. In addition to game-related content, this full-color product also contains a double-sided, fold-out poster map and new color terrain tiles to diversify gameplay. Requires the \\Product{Universe Starter Pack} plus \\Product{Universe booster packs} to play."
 }
 title: "Ultimate Missions: Universe"
 author {

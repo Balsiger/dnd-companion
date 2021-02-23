@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Ravenloft"
-  description: "Few creatures strike more terror into the hears of AD&D game characters and\n                    their players than these vile beings. They grip one\'s heart in a fist of fear\n                    from which no escape is possible.\n                    This compilation contains the complete texts of \\Product{Van Richten\'s Guide\n                    to Vampires}, \\Product{Van Richten\'s Guide to Werebeasts}, and \\Product{Van\n                    Richten\'s Guide to the Created}, updated and usable in any AD&D campaign."
+  description: "Few creatures strike more terror into the hears of AD&D game characters and their players than these vile beings. They grip one\'s heart in a fist of fear from which no escape is possible. This compilation contains the complete texts of \\Product{Van Richten\'s Guide to Vampires}, \\Product{Van Richten\'s Guide to Werebeasts}, and \\Product{Van Richten\'s Guide to the Created}, updated and usable in any AD&D campaign."
 }
 title: "Van Richten\'s Monster Hunter\'s Compendium, Volume One"
 date {

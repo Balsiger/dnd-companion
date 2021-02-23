@@ -1,7 +1,7 @@
 template {
   name: "WTC 88188"
   world: "Dominaria"
-  description: "What beasts rule our dreams?\n                    Ancient Primevals enslaved our ancestors, and modern \\Monster{dragon} engines\n                    enslave us. \\Monster{Plains dragons} defend \\Monster{humans}, and\n                    \\Monster{undead dragons} destroy them. And all \\Monster{dragons} hold\n                    mysteries deep within.\n                    Uncover the secrets of the \\Monster{dragons} of \\Place{Dominaria}."
+  description: "What beasts rule our dreams? Ancient Primevals enslaved our ancestors, and modern \\Monster{dragon} engines enslave us. \\Monster{Plains dragons} defend \\Monster{humans}, and \\Monster{undead dragons} destroy them. And all \\Monster{dragons} hold mysteries deep within. Uncover the secrets of the \\Monster{dragons} of \\Place{Dominaria}."
 }
 title: "Dragons of Magic"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 9547374"
   world: "None"
-  description: "Would you dare?\n                    \\NPC{Nova Darling}\'s dream of joining \\NPC{Joe}s band, \\Group{The Charmed\n                    Three}, has finally come true. \\NPC{Nova} should be walking on air about\n                    their upcoming Band Idol competition -- not to mention all that quality time\n                    with her crush. But in the \\Group{Charmed Three}, it turns out three is a\n                    crowd! The band\'s drummer \\NPC{Ivy} has a crush on Joe too and she wants\n                    \\NPC{Nova} out of the way. Will the azy-cray are-day help \\NPC{Nova} rock her\n                    way past \\NPC{Ivy} and into \\NPC{Joe}\'s heart?\n                    Do a dare, earn a charm, change your life!"
+  description: "Would you dare? \\NPC{Nova Darling}\'s dream of joining \\NPC{Joe}s band, \\Group{The Charmed Three}, has finally come true. \\NPC{Nova} should be walking on air about their upcoming Band Idol competition -- not to mention all that quality time with her crush. But in the \\Group{Charmed Three}, it turns out three is a crowd! The band\'s drummer \\NPC{Ivy} has a crush on Joe too and she wants \\NPC{Nova} out of the way. Will the azy-cray are-day help \\NPC{Nova} rock her way past \\NPC{Ivy} and into \\NPC{Joe}\'s heart? Do a dare, earn a charm, change your life!"
 }
 title: "Nova and the Charmed Three"
 subtitle: "Read your favorite book to your least favorite person -- in Pig Latin!"

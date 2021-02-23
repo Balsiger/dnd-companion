@@ -14,7 +14,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "This indispensable aid to the Dungeon Master puts all the most important\n                    combat and encounter tables at your fingertips! Don\'t slow down the action by\n                    searching for a number; keep them in front of you all the time with this\n                    handy screen and reference guide.\n                    Also included is a 16-page adventure, \\Product{Terrible Trouble at\n                    Tragidore}. This exciting RPGA tournament adventure is intended for\n                    medium-level characters (levels 5-8). It contains advice and tips for novice\n                    Dungeon Masters but is suitable for use by all players."
+  description: "This indispensable aid to the Dungeon Master puts all the most important combat and encounter tables at your fingertips! Don\'t slow down the action by searching for a number; keep them in front of you all the time with this handy screen and reference guide. Also included is a 16-page adventure, \\Product{Terrible Trouble at Tragidore}. This exciting RPGA tournament adventure is intended for medium-level characters (levels 5-8). It contains advice and tips for novice Dungeon Masters but is suitable for use by all players."
 }
 title: "Dungeon Master Screen / Terrible Trouble at Tragidore"
 author {

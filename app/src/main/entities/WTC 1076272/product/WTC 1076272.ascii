@@ -1,7 +1,7 @@
 template {
   name: "WTC 1076272"
   world: "Generic"
-  description: "Within this tome you\'ll find over 1\'000 of the best magic items created for\n                    the Dungeons & Dragons game, including hundreds of new low-cost items. In\n                    addition, this supplement contains rules for \\Item{augment crystal}s, which\n                    grant new abilities to existing magic items, and item sets, which provide\n                    collection benefits when you have all the items in a set. This tome also\n                    presents new and improved rules for item creation, an updated treasure\n                    generation system, and more!"
+  description: "Within this tome you\'ll find over 1\'000 of the best magic items created for the Dungeons & Dragons game, including hundreds of new low-cost items. In addition, this supplement contains rules for \\Item{augment crystal}s, which grant new abilities to existing magic items, and item sets, which provide collection benefits when you have all the items in a set. This tome also presents new and improved rules for item creation, an updated treasure generation system, and more!"
   short_description: "A compendium of magic items."
 }
 title: "Magic Item Compendium"

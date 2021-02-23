@@ -5,7 +5,7 @@ template {
     name: "net"
   }
   world: "None"
-  description: "Time is getting short as \\Place{Tolaria} races to find the one who will\n                    wield the power of the Legacy. Deep in the inner circle, the dark lord\n                    \\NPC{Yawgmoth} sends out an edict: Kill \\NPC{Urza Planeswalker}.\n                    From the bloodlines of the \\Place{Benalish plains}, a hero is born."
+  description: "Time is getting short as \\Place{Tolaria} races to find the one who will wield the power of the Legacy. Deep in the inner circle, the dark lord \\NPC{Yawgmoth} sends out an edict: Kill \\NPC{Urza Planeswalker}. From the bloodlines of the \\Place{Benalish plains}, a hero is born."
 }
 title: "Bloodlines"
 subtitle: "Blood has been spilled. Battle lines have been drawn."

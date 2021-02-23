@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Forgotten Realms"
-  description: "For the first time, \\NPC{Jack ERavenwild}\'s designs exceed his talents. His\n                    ambitions plunge him into the middle of a plot to destroy the city, a noble\n                    quest to find a lost hoard, and a conspiracy to seize the reins of power\n                    through the nobility\'s \\Event{Game of Masks}. Worse yet, \\NPC{Jack} must\n                    choose between a life of freedom and saving the city he doesn\'t even know he\n                    loves.\n                    \\large{The Cities}\n                    A new series of stand-alone novels, each set in one of the mighty cities of\n                    \\Place{Faer\\hat{u}n}."
+  description: "For the first time, \\NPC{Jack ERavenwild}\'s designs exceed his talents. His ambitions plunge him into the middle of a plot to destroy the city, a noble quest to find a lost hoard, and a conspiracy to seize the reins of power through the nobility\'s \\Event{Game of Masks}. Worse yet, \\NPC{Jack} must choose between a life of freedom and saving the city he doesn\'t even know he loves. \\large{The Cities} A new series of stand-alone novels, each set in one of the mighty cities of Place{Faer\\hat{u}n}."
 }
 title: "City of Ravens"
 leader: "The"

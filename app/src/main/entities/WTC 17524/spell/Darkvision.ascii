@@ -1,7 +1,7 @@
 template {
   name: "Darkvision"
   world: "Generic"
-  description: "The subject gains the ability to see 60 feet even in total darkness. Darkvision is black and white only but otherwise like normal sight. Darkvision does not grant one the ability to see in magical darkness. Darkvision can be made permanent with a permanency spell.  Material Component: Either a pinch of dried carrot or an agate."
+  description: "The subject gains the ability to see 60 feet even in total darkness. Darkvision is black and white only but otherwise like normal sight. Darkvision does not grant one the ability to see in magical darkness. Darkvision can be made permanent with a permanency spell.\n\nMaterial Component: Either a pinch of dried carrot or an agate."
   short_description: "See 60 ft. in total darkness."
 }
 school: TRANSMUTATION

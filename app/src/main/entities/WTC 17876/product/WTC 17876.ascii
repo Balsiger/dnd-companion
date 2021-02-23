@@ -1,7 +1,7 @@
 template {
   name: "WTC 17876"
   world: "None"
-  description: "Though his assassins have failed, the godlike \\Place{Madaran} emperor has\n                    other ways of crushing rebellion. He sends the brutal imperial army to rein\n                    in a defiant island chain, and the empire is once more plunged into\n                    violence. The emperor\'s champion accompanies the army, but his\n                    loyalty will be tested by the horrors of war. Can the champion achieve\n                    honorable victory, or will he and the rebels alike be crushed by the\n                    Emperor\'s Fist?"
+  description: "Though his assassins have failed, the godlike \\Place{Madaran} emperor has other ways of crushing rebellion. He sends the brutal imperial army to rein in a defiant island chain, and the empire is once more plunged into violence. The emperor\'s champion accompanies the army, but his loyalty will be tested by the horrors of war. Can the champion achieve honorable victory, or will he and the rebels alike be crushed by the Emperor\'s Fist?"
 }
 title: "Emperor\'s Fist"
 subtitle: "Honor Tested by War"

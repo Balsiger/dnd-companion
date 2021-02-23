@@ -1,7 +1,7 @@
 template {
   name: "WTC 96473"
   world: "None"
-  description: "\\Product{The Darksteel Eye} continues a series that explores a new and\n                    mysterious world in the \\Place{Magic: The Gathering} setting. This novel\n                    previews the newest card set to be released in February, giving you a sneak\n                    peek at the newest elements of the game."
+  description: "\\Product{The Darksteel Eye} continues a series that explores a new and mysterious world in the \\Place{Magic: The Gathering} setting. This novel previews the newest card set to be released in February, giving you a sneak peek at the newest elements of the game."
 }
 title: "Darksteel Eye"
 leader: "The"

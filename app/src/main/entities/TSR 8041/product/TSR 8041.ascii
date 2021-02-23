@@ -13,7 +13,7 @@ template {
     name: "Dragon 238"
   }
   world: "None"
-  description: "\\large{It falls one night onto the village of \\Place{Aston Point}.}\n                    When the valiant \\Group{Rael} emerge from their crashed starship, the people\n                    of \\Place{Ashton Point} are drawn into a deadly struggle against the\n                    mechanical constructs of the \\NPC{Overseer}---and before their adventures are\n                    done, they will travel to the stars to match spells against computers and\n                    battle-axes against tanks, to save a dozen worlds as innocent as their own."
+  description: "\\large{It falls one night onto the village of \\Place{Aston Point}.} When the valiant \\Group{Rael} emerge from their crashed starship, the people of \\Place{Ashton Point} are drawn into a deadly struggle against the mechanical constructs of the \\NPC{Overseer}---and before their adventures are done, they will travel to the stars to match spells against computers and battle-axes against tanks, to save a dozen worlds as innocent as their own."
 }
 title: "Tale of the Comet"
 author {

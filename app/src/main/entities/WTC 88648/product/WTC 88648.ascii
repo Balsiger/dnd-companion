@@ -1,7 +1,7 @@
 template {
   name: "WTC 88648"
   world: "Generic"
-  description: "Explore mysterious towers, foreboding temples, hidden covers, treacherous\n                    dungeons, and other intriguing locations with the aid of the thirty-two\n                    full-color maps tucked inside this protective pocket folder. Whether you use\n                    them as inspiration for creating new adventures, for handy reference during\n                    your game, or as detailed handouts to capture your player\'s imagination, each\n                    map offers the promise of adventure, the threat of danger, and the allure of\n                    reward.\n                    Originally developed for the Map-a-Week feature on the official D&D website,\n                    these maps are the first in a new series of materials created to help you add\n                    flavor and functionality to your D&D game."
+  description: "Explore mysterious towers, foreboding temples, hidden covers, treacherous dungeons, and other intriguing locations with the aid of the thirty-two full-color maps tucked inside this protective pocket folder. Whether you use them as inspiration for creating new adventures, for handy reference during your game, or as detailed handouts to capture your player\'s imagination, each map offers the promise of adventure, the threat of danger, and the allure of reward. Originally developed for the Map-a-Week feature on the official D&D website, these maps are the first in a new series of materials created to help you add flavor and functionality to your D&D game."
 }
 title: "Map Folio I"
 subtitle: "Locate Your Next Adventure"

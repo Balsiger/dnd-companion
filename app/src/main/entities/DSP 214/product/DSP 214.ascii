@@ -1,7 +1,7 @@
 template {
   name: "DSP 214"
   world: "None"
-  description: "Go all the way with the Dork Tower gang once again, as the critically\n  acclaimed Web Comic returns in a volume packed with still more geeky good\n  humor. More than 40\'000 people a day check out the DorkTower.com web\n  site. Pick up John Kovalic\'s eight Dork Tower collection, and find out why!"
+  description: "Go all the way with the Dork Tower gang once again, as the critically acclaimed Web Comic returns in a volume packed with still more geeky good humor. More than 40\'000 people a day check out the DorkTower.com web site. Pick up John Kovalic\'s eight Dork Tower collection, and find out why!"
 }
 title: "Go, Dork. Go!"
 author {

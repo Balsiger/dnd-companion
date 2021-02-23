@@ -19,7 +19,7 @@ template {
     name: "catalog93"
   }
   world: "Forgotten Realms"
-  description: "An epic sea voyage...a daring rescue...\n                    The \\God{Earthmother} has returned to the \\Place{Moonshaes}. Now her\n                    mightiest druid, \\NPC{Robyn} Kendrick, faces the greatest challenge of her\n                    life. Aided by a courageous Northman prince, her own daughters, and a crew of\n                    heroes, \\NPC{Robyn} wages a desperate battle against the savage \\NPC{Claws of\n                    the Deep}.\n                    Douglas Niles is the author of the immensely popular \\Product{Maztica} and\n                    \\Product{Moonshae} Trilogies. The \\Product{Druidhome Trilogy} is the\n                    much-anticipated sequel to the \\Product{Moonshae Trilogy}."
+  description: "An epic sea voyage...a daring rescue... The \\God{Earthmother} has returned to the \\Place{Moonshaes}. Now her mightiest druid, \\NPC{Robyn} Kendrick, faces the greatest challenge of her life. Aided by a courageous Northman prince, her own daughters, and a crew of heroes, \\NPC{Robyn} wages a desperate battle against the savage \\NPC{Claws of the Deep}. Douglas Niles is the author of the immensely popular \\Product{Maztica} and \\Product{Moonshae} Trilogies. The \\Product{Druidhome Trilogy} is the much-anticipated sequel to the \\Product{Moonshae Trilogy}."
 }
 title: "Coral Kingdom"
 leader: "The"

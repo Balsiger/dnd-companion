@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The body of a balor is wreathed in flame.  Anyone grappling a balor takes 6d6 points of fire damage each round."
+  description: "The body of a balor is wreathed in flame.\n\nAnyone grappling a balor takes 6d6 points of fire damage each round."
 }
 type: SUPERNATURAL

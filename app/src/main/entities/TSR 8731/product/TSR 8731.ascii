@@ -7,7 +7,7 @@ template {
     name: "net"
   }
   world: "None"
-  description: "A collection of powerful magical artifacts is the only defense against the\n                    forces of evil that are arrayed against \\Place{Dominaria}. \\NPC{Gerrard}, the\n                    heir to the Legacy, together with \\NPC{Sisay}, captain of the flying ship\n                    \\Item{Weatherlight}, has sought out many parts of the Legacy.\n                    \\bold{Gerrard\'s Quest}\n                    \\NPC{Sisay} has been kidnapped by \\NPC{Volrath}, ruler of the plane of\n                    \\Place{Rath}. \\NPC{Gerrard} stands at a crossroads. His companion is in\n                    danger, the Legacy may be lost forever. Only he -- with the loyal crew of the\n                    \\Item{Weatherlight} -- can rescue \\NPC{Sisay} and recover the Legacy."
+  description: "A collection of powerful magical artifacts is the only defense against the forces of evil that are arrayed against \\Place{Dominaria}. \\NPC{Gerrard}, the heir to the Legacy, together with \\NPC{Sisay}, captain of the flying ship \\Item{Weatherlight}, has sought out many parts of the Legacy. \\bold{Gerrard\'s Quest} \\NPC{Sisay} has been kidnapped by \\NPC{Volrath}, ruler of the plane of \\Place{Rath}. \\NPC{Gerrard} stands at a crossroads. His companion is in danger, the Legacy may be lost forever. Only he -- with the loyal crew of the Item{Weatherlight} -- can rescue \\NPC{Sisay} and recover the Legacy."
 }
 title: "Rath and Storm"
 subtitle: "Gerrard\'s Legacy"

@@ -22,7 +22,7 @@ template {
     name: "catalog93"
   }
   world: "Forgotten Realms"
-  description: "\\NPC{Arilyn Moonblade} is one of the two best assassins in the\n                    \\Place{Realms}. Maybe both.\n                    From \\Place{Cormyr} to \\Place{Waterdeep}, \\Group{Harpers} are being\n                    murdered. The trail leads to the \\Monster{half-elven} adventurer, \\NPC{Arilyn\n                    Moonblade}. Is she guilty, or is she the next target?\n                    Tormented by strange dreams and stalked by shadows, \\NPC{Arilyn} must uncover\n                    the ancient secret of her sword\'s power in order to find and face the\n                    \\Group{Harper} Assassin.\n                    \\Product{Elfshadow} is the second in an open-ended series of novels focusing\n                    on the \\Group{Harpers}, the secret organization for Good in the\n                    \\Product{Forgotten Realms} fantasy world."
+  description: "\\NPC{Arilyn Moonblade} is one of the two best assassins in the \\Place{Realms}. Maybe both. From \\Place{Cormyr} to \\Place{Waterdeep}, \\Group{Harpers} are being murdered. The trail leads to the \\Monster{half-elven} adventurer, \\NPC{Arilyn Moonblade}. Is she guilty, or is she the next target? Tormented by strange dreams and stalked by shadows, \\NPC{Arilyn} must uncover the ancient secret of her sword\'s power in order to find and face the \\Group{Harper} Assassin. \\Product{Elfshadow} is the second in an open-ended series of novels focusing on the \\Group{Harpers}, the secret organization for Good in the Product{Forgotten Realms} fantasy world."
 }
 title: "Elfshadow"
 author {

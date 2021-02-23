@@ -23,7 +23,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "At one time or another, every Dungeon Master faces questions like, \'What\'s\n                    the difference between \\Item{banded mail} and \\Item{splint mail}?\' and \'What\n                    do all these pole arms look like?\' The DM and players alike will be thrilled\n                    to find answers to these and other equipment questions all in this book, the\n                    \\Product{Arms and Equipment Guide}. Lavishly illustrated, this book provides\n                    valuable descriptions and diagrams for a variety of armors, weapons, and\n                    barding, as well as important items of clothing and equipment. This is the\n                    essential volume for the well-equipped character!"
+  description: "At one time or another, every Dungeon Master faces questions like, \'What\'s the difference between \\Item{banded mail} and \\Item{splint mail}?\' and \'What do all these pole arms look like?\' The DM and players alike will be thrilled to find answers to these and other equipment questions all in this book, the \\Product{Arms and Equipment Guide}. Lavishly illustrated, this book provides valuable descriptions and diagrams for a variety of armors, weapons, and barding, as well as important items of clothing and equipment. This is the essential volume for the well-equipped character!"
 }
 title: "Arms and Equipment Guide"
 author {

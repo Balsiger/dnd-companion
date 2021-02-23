@@ -1,7 +1,7 @@
 template {
   name: "WTC 95697"
   world: "Generic"
-  description: "Gather your dice, grab your D&D \\Product{Player\'s Handbook} core rulebook, and embark on the adventure of a lifetime. This accessory for the Dungeons & Dragons roleplaying game will help you decide your fate as you battle fearsome monsters, explore ancient dungeons, and claim magnificent treasure.\n                    This box contains a dice bag and a complete set of dice for use in the Dungeons & Dragons game:\n                    \\list\n                    {One 4-sided die}\n                    {Four 6-sided dice}\n                    {One 8-sided die}\n                    {One 10-sided die}\n                    {One percentile die}\n                    {One 12-sided die}\n                    {One 20-sided die}\n                    "
+  description: "Gather your dice, grab your D&D \\Product{Player\'s Handbook} core rulebook, and embark on the adventure of a lifetime. This accessory for the Dungeons & Dragons roleplaying game will help you decide your fate as you battle fearsome monsters, explore ancient dungeons, and claim magnificent treasure. This box contains a dice bag and a complete set of dice for use in the Dungeons & Dragons game: \\list {One 4-sided die} {Four 6-sided dice} {One 8-sided die} {One 10-sided die} {One percentile die} {One 12-sided die} {One 20-sided die} "
 }
 title: "Deluxe Dice"
 subtitle: "10 Deluce Dice"

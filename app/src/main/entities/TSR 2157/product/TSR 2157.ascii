@@ -13,7 +13,7 @@ template {
     name: "Dragon 218"
   }
   world: "Generic"
-  description: "A lot of magical items from \\Item{Pick of Earth Parting} to \\Item{Thesis on\n                    Conditional Ruptures (Spellbook)}"
+  description: "A lot of magical items from \\Item{Pick of Earth Parting} to \\Item{Thesis on Conditional Ruptures (Spellbook)}"
 }
 title: "Encyclopedia Magica, Volume III"
 author {

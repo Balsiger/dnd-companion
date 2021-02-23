@@ -1,7 +1,7 @@
 template {
   name: "WTC 21802"
   world: "Dominaria"
-  description: "In the midst of an all-out war, the ground shifts and moves. Milliions upon\n                    millions of invaders appear out of nowhere as the artificial plane of\n                    \\Place{Rath} overlays \\Place{Dominaria}, covering the natural landscape with\n                    the unnatural horros of \\Place{Phyrexia}.\n                    There is no rest for the wicked."
+  description: "In the midst of an all-out war, the ground shifts and moves. Milliions upon millions of invaders appear out of nowhere as the artificial plane of \\Place{Rath} overlays \\Place{Dominaria}, covering the natural landscape with the unnatural horros of \\Place{Phyrexia}. There is no rest for the wicked."
 }
 title: "Planeshift"
 subtitle: "The first wave is over, but the invasion rages on."

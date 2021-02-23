@@ -1,7 +1,7 @@
 template {
   name: "WTC 17984"
   world: "Dragonlance"
-  description: "The third and final title in the \\Product{Dhamon Saga} is now available in\n  mass market format. This title ties up the story of a character first\n  introduced in popular \\Place{Dragonlance} saga author Jean Rabe\'s\n  \\Product{Dragons of a New Age} trilogy."
+  description: "The third and final title in the \\Product{Dhamon Saga} is now available in mass market format. This title ties up the story of a character first introduced in popular \\Place{Dragonlance} saga author Jean Rabe\'s Product{Dragons of a New Age} trilogy."
 }
 title: "Redepmtion"
 author {

@@ -1,7 +1,7 @@
 template {
   name: "WTC 95050"
   world: "Generic"
-  description: "Monsters and heroes face off on the miniatures battlefield!\n                    True to the head-to-head nature of the \\Product{D&D Miniatures Game}, the\n                    latest expansion set highlights miniatures against the backdrop of war. Per\n                    previous releases, the figures in the set are selected from key D&D\n                    roleplaying game titles such as \\Product{Monster Manual}, \\Product{Monster\n                    Manual III}, \\Product{Miniatures Handbook}, and the \\Product{Eberron} and\n                    \\Product{Forgotten Realms campaign} settings. The set also includes an elite\n                    group of figures that come with a second, epic-level stat card, allowing\n                    players to assemble higher-value armies with which to do battle."
+  description: "Monsters and heroes face off on the miniatures battlefield! True to the head-to-head nature of the \\Product{D&D Miniatures Game}, the latest expansion set highlights miniatures against the backdrop of war. Per previous releases, the figures in the set are selected from key D&D roleplaying game titles such as \\Product{Monster Manual}, \\Product{Monster Manual III}, \\Product{Miniatures Handbook}, and the \\Product{Eberron} and \\Product{Forgotten Realms campaign} settings. The set also includes an elite group of figures that come with a second, epic-level stat card, allowing players to assemble higher-value armies with which to do battle."
 }
 title: "War Drums Booster Pack"
 date {

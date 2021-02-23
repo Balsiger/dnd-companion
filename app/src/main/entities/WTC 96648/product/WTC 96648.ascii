@@ -1,7 +1,7 @@
 template {
   name: "WTC 96648"
   world: "Generic"
-  description: "Version 3.5 editions of the \\Product{Player\'s Handbook}, \\Product{Monster\n                    Manual}, and \\Product{Dungeon Master\'s Guide} are now offered in one\n                    slip-covered gift set.\n                    In the 30-year history of the Dungeons & Dragons game, this type of boxed set\n                    has never been available -- until now. Enjoy the foundation of the Dungeons &\n                    Dragons roleplaying game in one product that is a great gift for someone you\n                    want to introduce to the hobby or as a gift to yourself.\n                    With these three books in one case, the entire world of Dungeons & Dragons is\n                    yours to explore and share with others."
+  description: "Version 3.5 editions of the \\Product{Player\'s Handbook}, \\Product{Monster Manual}, and \\Product{Dungeon Master\'s Guide} are now offered in one slip-covered gift set. In the 30-year history of the Dungeons & Dragons game, this type of boxed set has never been available -- until now. Enjoy the foundation of the Dungeons & Dragons roleplaying game in one product that is a great gift for someone you want to introduce to the hobby or as a gift to yourself. With these three books in one case, the entire world of Dungeons & Dragons is yours to explore and share with others."
 }
 title: "Core Rulebook Gift Set"
 date {

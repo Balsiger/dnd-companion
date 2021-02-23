@@ -2,7 +2,7 @@ template {
   name: "WTC 24209"
   synonym: "E3"
   world: "Generic"
-  description: "\\God{Orcus}, the Demon Prince of Undeath, creaves the power of the \\God{Raven Queen} and mastery of death\'s domain. The key to his ascension --- and the secret to his destruction --- lies buried in the heart of the \\Place{Abyss}. As heroes chase \\God{Orcus} into the abysscal depths, evil opposes them at every turn, and each victory brings them closer to their final fate.\n                    \\Product{Prince of Undeath} is an adventure that takes characters from 27th level to 30th level. It can be played as a stand-alone adventure or as the final part of an epic series that concludes the storyline begun in H1: \\Product{Keep on the Shadowfell}. This folder includes two adventure books and a double-sided battle map designed for use with D&D Miniatures."
+  description: "\\God{Orcus}, the Demon Prince of Undeath, creaves the power of the \\God{Raven Queen} and mastery of death\'s domain. The key to his ascension --- and the secret to his destruction --- lies buried in the heart of the \\Place{Abyss}. As heroes chase \\God{Orcus} into the abysscal depths, evil opposes them at every turn, and each victory brings them closer to their final fate. Product{Prince of Undeath} is an adventure that takes characters from 27th level to 30th level. It can be played as a stand-alone adventure or as the final part of an epic series that concludes the storyline begun in H1: \\Product{Keep on the Shadowfell}. This folder includes two adventure books and a double-sided battle map designed for use with D&D Miniatures."
   short_description: "An Adventure for Characters of 27th - 30th level"
 }
 title: "Prince of Undeath"

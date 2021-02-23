@@ -1,7 +1,7 @@
 template {
   name: "WTC 2397074"
   world: "Eberron"
-  description: "For millennia, the \\Monster{dragons} have watched the great events of the world unfold, nurturing and destroying entire nations when necessary, always guided by the \\Item{Draconic Prophecy}.\n\nBut now, the younger races are seizing their own destiny. Mere mortals have taken a hand in the \\Item{Prophecy} --- and a select few think they have found a way to harness the power of the mighty \\Monster{dragons} for their own ends:\n\nThe Dragon Forge.\n\n\\NPC{Gaven Lyrandar}, Exile and Storm Dragon, stands on the edge to two destinies: master of the Dragon Forge --- or its slave."
+  description: "For millennia, the \\Monster{dragons} have watched the great events of the world unfold, nurturing and destroying entire nations when necessary, always guided by the \\Item{Draconic Prophecy}.\n\nBut now, the younger races are seizing their own destiny. Mere mortals have taken a hand in the \\Item{Prophecy} --- and a select few think they have found a way to harness the power of the mighty \\Monster{dragons} for their own ends:\n\nThe Dragon Forge. PC{Gaven Lyrandar}, Exile and Storm Dragon, stands on the edge to two destinies: master of the Dragon Forge --- or its slave."
   short_description: "Draconic Prophecies, Book Two"
 }
 title: "Dragon Forge"

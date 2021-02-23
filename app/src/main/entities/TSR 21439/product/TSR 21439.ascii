@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "None"
-  description: "\\bold{A novelization of the fantasy movie of the year.}\n                    \\emph{It began as a game.}\n                    \\emph{It became a phenomenon.}\n                    Now Dungeons & Dragons has come to the big screen in a stunning tale of good\n                    and evil, heroes and villains, monsters and mayhem.\n                    When an evil wizard calls upon foul magic to bend the powerful \\Monster{red\n                    dragons} to his will, a young empress must find unlikely champions: two\n                    streetwise thieves, an apprentice sorceress, an \\Monster{elven} ranger, and a\n                    bloodlusty \\Monster{dwarf}.\n                    \\bold{Join the adventure. Fell the magic.}"
+  description: "\\bold{A novelization of the fantasy movie of the year.} \\emph{It began as a game.} \\emph{It became a phenomenon.} Now Dungeons & Dragons has come to the big screen in a stunning tale of good and evil, heroes and villains, monsters and mayhem. When an evil wizard calls upon foul magic to bend the powerful \\Monster{red dragons} to his will, a young empress must find unlikely champions: two streetwise thieves, an apprentice sorceress, an \\Monster{elven} ranger, and a bloodlusty \\Monster{dwarf}. bold{Join the adventure. Fell the magic.}"
 }
 title: "Dungeons & Dragons: Movie"
 leader: "The"

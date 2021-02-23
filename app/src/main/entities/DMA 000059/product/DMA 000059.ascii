@@ -1,6 +1,6 @@
 template {
   name: "DMA 000059"
-  description: "\\large{Give in to the Dork Side}\n\n  Lurking in the dork shadows, you\'ll find \\NPC{Matt}, \\NPC{Igor}, \\NPC{Ken},\n  \\NPC{Gilly the Perky Goth} and \\NPC{Carson the Muskrat}. Whether you\'re a\n  goth, a gamer, an SF fan, a comics fanboy, a computer wonk or a mundane,\n  you\'ll recognize them all! Dork Tower is worldwide hit amongst geeks and\n  non-geeks alike! Make Dork Shadows the brightest spot in your comics\n  collection! Meet the characters from John Kovalic\'s Dork Tower in their\n  second sellout collection...and welcome to the world of Dorkness! "
+  description: "\\large{Give in to the Dork Side} Lurking in the dork shadows, you\'ll find \\NPC{Matt}, \\NPC{Igor}, \\NPC{Ken}, PC{Gilly the Perky Goth} and \\NPC{Carson the Muskrat}. Whether you\'re a goth, a gamer, an SF fan, a comics fanboy, a computer wonk or a mundane, you\'ll recognize them all! Dork Tower is worldwide hit amongst geeks and on-geeks alike! Make Dork Shadows the brightest spot in your comics collection! Meet the characters from John Kovalic\'s Dork Tower in their second sellout collection...and welcome to the world of Dorkness! "
 }
 title: "Dork Shadows"
 subtitle: "The Collected Dork Tower Volume II"

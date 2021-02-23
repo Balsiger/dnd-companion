@@ -1,7 +1,7 @@
 template {
   name: "WTC 2173274"
   world: "Forgotten Realms"
-  description: "Newly knighted, the \\Group{Swords of Eveningstar} roam far from the pastoral conflict of their home in \\Place{Espar}, into bright cities with dark underbellies, the twisted bowels of their namesake dungeon, and deep trouble of the sword and coin.\n                    Fighting for the love of Cormyr is more dangerous, more work, and more fulfilling than they could have possibly imagined. The Swords are being forged in the fires of adventure. This is the stuff of which destinies are made.\n                    Join master storyteller Ed Greenwood, the creator of the Forgotten Realms world, in the continuing adventures of some of his most celebrated characters. "
+  description: "Newly knighted, the \\Group{Swords of Eveningstar} roam far from the pastoral conflict of their home in \\Place{Espar}, into bright cities with dark underbellies, the twisted bowels of their namesake dungeon, and deep trouble of the sword and coin. Fighting for the love of Cormyr is more dangerous, more work, and more fulfilling than they could have possibly imagined. The Swords are being forged in the fires of adventure. This is the stuff of which destinies are made. Join master storyteller Ed Greenwood, the creator of the Forgotten Realms world, in the continuing adventures of some of his most celebrated characters. "
   short_description: "The \\Group{Knights of Myth Drannor}, Book II"
 }
 title: "Swords of Dragonfire"

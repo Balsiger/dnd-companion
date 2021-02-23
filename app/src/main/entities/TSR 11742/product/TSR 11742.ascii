@@ -4,7 +4,7 @@ template {
     name: "internet"
   }
   world: "Generic"
-  description: "The Dungeons & Dragons world is a place where powerful creatures contest\n                    with ordinary \\Monster{men} and \\Monster{women} in a subtle war pitting good\n                    agasint evil, law against chaos.\n                    It is a world of magic, a world of mystery, a world of fantastic adventure --\n                    all a backdrop for your own adventures.\n                    Inside is everything you need to launch your own version of the first\n                    campaign world, including:\n                    \\list\n                    {A full-color map of the land of the \\Place{Flanaess}, also showing the\n                    continentes and seas of the planet \\Place{Oerth}.}\n                    {A short history of the land.}\n                    {Descriptions of 60 countries, ready for adventure}"
+  description: "The Dungeons & Dragons world is a place where powerful creatures contest with ordinary \\Monster{men} and \\Monster{women} in a subtle war pitting good agasint evil, law against chaos. It is a world of magic, a world of mystery, a world of fantastic adventure -- all a backdrop for your own adventures. Inside is everything you need to launch your own version of the first campaign world, including: \\list {A full-color map of the land of the \\Place{Flanaess}, also showing the continentes and seas of the planet \\Place{Oerth}.} {A short history of the land.} {Descriptions of 60 countries, ready for adventure}"
 }
 title: "D&D Gazetteer"
 subtitle: "Welcome to the world of the D&D game!"

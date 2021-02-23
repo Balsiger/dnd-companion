@@ -1,7 +1,7 @@
 template {
   name: "WTC 21571"
   world: "Dragonlance"
-  description: "Cold, forbidding, remote, it stands like a dim white cloud on the very edge\n  of sight. There \\NPC{Kerrick}, an \\Monster{elf} from the \\Place{golden woods\n  of Silvanesti}, has been sent, an exile in disgrace. There too, a band of\n  barbarian villagers make their stand against the remnants of an\n  \\Monster{ogre} empire that is determined to once again rule the frozen\n  wastes.\n\n  In the first book of this thrilling trilogy, Douglas Niles takes his readers\n  to a land that most in \\Place{Krynn} have heard of only in legend -- the\n  legend of the \\Place{Icewall}."
+  description: "Cold, forbidding, remote, it stands like a dim white cloud on the very edge\nof sight. There \\NPC{Kerrick}, an \\Monster{elf} from the \\Place{golden woods of Silvanesti}, has been sent, an exile in disgrace. There too, a band of barbarian villagers make their stand against the remnants of an Monster{ogre} empire that is determined to once again rule the frozen wastes. In the first book of this thrilling trilogy, Douglas Niles takes his readers to a land that most in \\Place{Krynn} have heard of only in legend -- the legend of the \\Place{Icewall}."
 }
 title: "Messenger"
 leader: "The"

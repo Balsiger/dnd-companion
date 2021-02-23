@@ -1,7 +1,7 @@
 template {
   name: "WTC 17964"
   world: "Dragonlance"
-  description: "The third and last title in the second \\Place{Dragonlance} novel trilogy\n  released for the first time ever in a trade hardcover edition. Featuring the\n  stunning art and design that graced the cover of the paperback edition, the\n  new version of this series is a follow-up to the release of the\n  \\Place{Dragonlance} novels \\Product{Chronicles} trilogy in hardcover in\n  2003."
+  description: "The third and last title in the second \\Place{Dragonlance} novel trilogy released for the first time ever in a trade hardcover edition. Featuring the stunning art and design that graced the cover of the paperback edition, the ew version of this series is a follow-up to the release of the Place{Dragonlance} novels \\Product{Chronicles} trilogy in hardcover in 2003."
 }
 title: "Test of the Twins"
 author {

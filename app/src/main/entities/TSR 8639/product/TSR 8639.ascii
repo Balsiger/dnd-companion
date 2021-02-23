@@ -16,7 +16,7 @@ template {
     name: "Dragon 246"
   }
   world: "Forgotten Realms"
-  description: "As the search continues in the \\Place{Utter East} for the kidnapped bride of\n                    \\Place{Waterdeep}, the forces of the \\Class{paladins} and mercenaries\n                    converge. Now, for the first time, the dark secret behind the abduction is\n                    revealed, and the searchers realize their quest is only half begun.\n                    \\Product{Conspiracy} is the sixth part in a nine-book serial novel published\n                    by TSR and set in the exciting world of the \\Place{Forgotten Realms}. Be sure\n                    to look for the earlier five parts, (listed inside). Continue the adventure\n                    with Parts 7, \\Product{Uneasy Alliances}; 9, \\Product{Easy Betrayals} and 9,\n                    \\Product{The Diamond} at your local bookstore."
+  description: "As the search continues in the \\Place{Utter East} for the kidnapped bride of \\Place{Waterdeep}, the forces of the \\Class{paladins} and mercenaries converge. Now, for the first time, the dark secret behind the abduction is revealed, and the searchers realize their quest is only half begun. \\Product{Conspiracy} is the sixth part in a nine-book serial novel published by TSR and set in the exciting world of the \\Place{Forgotten Realms}. Be sure to look for the earlier five parts, (listed inside). Continue the adventure with Parts 7, \\Product{Uneasy Alliances}; 9, \\Product{Easy Betrayals} and 9, Product{The Diamond} at your local bookstore."
 }
 title: "Conspiracy"
 author {

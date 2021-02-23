@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "Rokugan"
-  description: "\\Place{Shadowlands} monsters mass on the edges of \\Place{Rokugan}. The\n                    \\Group{Crab Clan}, long vigilant in battling them, seems unable or unwilling\n                    to stop the \\Monster{demonic} onslaught.\n                    But from an unlikely quarter, a hero arises. She will lead her forces in a\n                    battle that will rend the world: \\bold{The \\Event{Battle at Beiden Pass.}}"
+  description: "\\Place{Shadowlands} monsters mass on the edges of \\Place{Rokugan}. The \\Group{Crab Clan}, long vigilant in battling them, seems unable or unwilling to stop the \\Monster{demonic} onslaught. But from an unlikely quarter, a hero arises. She will lead her forces in a battle that will rend the world: \\bold{The \\Event{Battle at Beiden Pass.}}"
 }
 title: "Unicorn"
 leader: "The"

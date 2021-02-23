@@ -23,7 +23,7 @@ template {
     name: "catalog93"
   }
   world: "Generic"
-  description: "\\emph{Celts}---from these powerful barbarians who rule \\Place{Europe} for\n                    ecnturies and challenged the might of \\Place{Rome} came the Druids, bards,\n                    and even the original legend of King \\NPC{Arthur}. They ranged from\n                    \\Place{Scotland} to \\Place{Greece} and from \\Place{Spain} to \\Place{Asia\n                    Minor}, trading, raiding, and establishing a culture that is still alive\n                    today. Join mighty heroes like the legendary \\NPC{Cu Chulainn} or the\n                    woman-warrior \\NPC{Boudicca} in wars against the \\Group{Romans} or the giant\n                    \\Group{Fomorians}, compete in feats of skill like chariot-jumping and\n                    spear-catching, or wander the half-world of the elflike \\Monster{sidhe}. The\n                    battle frenzy is strong and the call to war rings clear!"
+  description: "\\emph{Celts}---from these powerful barbarians who rule \\Place{Europe} for ecnturies and challenged the might of \\Place{Rome} came the Druids, bards, and even the original legend of King \\NPC{Arthur}. They ranged from \\Place{Scotland} to \\Place{Greece} and from \\Place{Spain} to \\Place{Asia Minor}, trading, raiding, and establishing a culture that is still alive today. Join mighty heroes like the legendary \\NPC{Cu Chulainn} or the woman-warrior \\NPC{Boudicca} in wars against the \\Group{Romans} or the giant \\Group{Fomorians}, compete in feats of skill like chariot-jumping and spear-catching, or wander the half-world of the elflike \\Monster{sidhe}. The battle frenzy is strong and the call to war rings clear!"
 }
 title: "Celts"
 author {

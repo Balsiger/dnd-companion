@@ -5,7 +5,7 @@ template {
     name: "net"
   }
   world: "Dragonlance"
-  description: "A young brother and sister escape a pack of predators and strike out on\n  their own, their lives taking parallel courses linked to the destiny of\n  different tribes.\n\n  But dark powers watch the rise of civilization with cold calculation and\n  deadly intent.\n\n  Best-selling writing team Thompson and Cook make a long-awaited return to the\n  fantastical world of \\Place{Dragonlance} with this new epic trilogy."
+  description: "A young brother and sister escape a pack of predators and strike out on their own, their lives taking parallel courses linked to the destiny of different tribes. But dark powers watch the rise of civilization with cold calculation and deadly intent. Best-selling writing team Thompson and Cook make a long-awaited return to the fantastical world of \\Place{Dragonlance} with this new epic trilogy."
   short_description: "First book in the Barbarians Trilogy"
 }
 title: "Children of the Plains"

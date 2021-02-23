@@ -10,7 +10,7 @@ template {
     name: "catalog96"
   }
   world: "Ravenloft"
-  description: "In the bell tower of \\Place{Nartok Keep} there lives a monster. At least, so\n  it is whispered in the village below. But \\NPC{Wort} is no monster. He is\n  merely a man---gentle and lonely, his form hideously twisted by fate.\n\n  When a good deed earns \\NPC{Wort} only the revilement of \\Place{Nartok}\'s\n  folk, he makes a dark decision. If they think him a monster, then that is\n  exactly what he will be...\n\n  \\Product{Tower of Doom} is the ninth in an open-ended series of Gothic horror\n  tales dealing with the masters and monsters of the \\Product{Ravenloft} dark\n  fantasy setting."
+  description: "In the bell tower of \\Place{Nartok Keep} there lives a monster. At least, so\nit is whispered in the village below. But \\NPC{Wort} is no monster. He is merely a man---gentle and lonely, his form hideously twisted by fate. When a good deed earns \\NPC{Wort} only the revilement of \\Place{Nartok}\'s folk, he makes a dark decision. If they think him a monster, then that is exactly what he will be... Product{Tower of Doom} is the ninth in an open-ended series of Gothic horror tales dealing with the masters and monsters of the \\Product{Ravenloft} dark fantasy setting."
 }
 title: "Tower of Doom"
 author {

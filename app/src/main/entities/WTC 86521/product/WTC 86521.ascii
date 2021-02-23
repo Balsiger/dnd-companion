@@ -1,7 +1,7 @@
 template {
   name: "WTC 86521"
   world: "Forgotten Realms"
-  description: "Welcome to \\Place{Waterdeep}\n                    Here, everything imaginable is for sale. Even dreams can be purchased if one\n                    is willing to pay the price.\n                    When the sale of \\Item{dream spheres} threatens the life of his newfound half\n                    sister, \\NPC{Danilo Thann} joins forces with \\NPC{Arilyn Moonblade} to\n                    uncover the source of this deadly trade. Their search leads them into the\n                    dark heart of \\Place{Waterdeep}, and to personal secrets that could destroy\n                    them both.\n                    Elaine Cunningham returns to the \\Place{City of Splendors} and the characters\n                    that made her one of the most popular \\Place{Forgotten Realms} authors."
+  description: "Welcome to \\Place{Waterdeep} Here, everything imaginable is for sale. Even dreams can be purchased if one is willing to pay the price. When the sale of \\Item{dream spheres} threatens the life of his newfound half sister, \\NPC{Danilo Thann} joins forces with \\NPC{Arilyn Moonblade} to uncover the source of this deadly trade. Their search leads them into the dark heart of \\Place{Waterdeep}, and to personal secrets that could destroy them both. Elaine Cunningham returns to the \\Place{City of Splendors} and the characters that made her one of the most popular \\Place{Forgotten Realms} authors."
 }
 title: "Dream Spheres"
 leader: "The"
