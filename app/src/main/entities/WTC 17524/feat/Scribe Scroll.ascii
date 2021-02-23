@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Scribing a scroll takes one day for each 1,000 gp in its base price. The base price of a scroll is its spell level \342\210\232\303\263 its caster level \342\210\232\303\263 25 gp. To scribe a scroll, you must spend 1/25 of this base price in XP and use up raw materials costing one-half of this base price. \n\nAny scroll that stores a spell with a costly material component or an XP cost also carries a commensurate cost. In addition to the costs derived from the Mialee casts a spell from a scroll she scribed. \n\nbase price, you must expend the material component or pay the XP when scribing the scroll. \n\nYou can create scrolls, from which you or another spellcaster can cast the scribed spells. See the Dungeon Master's Guide for rules on scrolls."
+  description: "Scribing a scroll takes one day for each 1,000 gp in its base price. The base price of a scroll is its spell level x its caster level x 25 gp. To scribe a scroll, you must spend 1/25 of this base price in XP and use up raw materials costing one-half of this base price. \n\nAny scroll that stores a spell with a costly material component or an XP cost also carries a commensurate cost. In addition to the costs derived from the Mialee casts a spell from a scroll she scribed. \n\nbase price, you must expend the material component or pay the XP when scribing the scroll. \n\nYou can create scrolls, from which you or another spellcaster can cast the scribed spells. See the Dungeon Master's Guide for rules on scrolls."
   short_description: "Create magic scrolls"
 }
 type: GENERAL

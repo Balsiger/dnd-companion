@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like cat\342\200\232\303\204\303\264s grace, except that it affects multiple creatures."
+  description: "This spell functions like cat's grace, except that it affects multiple creatures."
   short_description: "As cat’s grace, affects one subject/level."
 }
 school: TRANSMUTATION

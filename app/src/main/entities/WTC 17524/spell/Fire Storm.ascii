@@ -11,7 +11,7 @@ template {
   description: "When a fire storm spell is cast, the whole area is shot through with sheets of roaring flame. The raging flames do not harm natural vegetation, ground cover, and any plant creatures in the area that you wish to exclude from damage. Any other creature within the area takes 1d6 points of fire damage per caster level (maximum 20d6)."
   short_description: "Deals 1d6/level fire damage."
 }
-school: EVOACATION
+school: EVOCATION
 summary: "Within [[$level * 2]] 10 ft cubes up to [[100 + (10 * $level)]] ft away shot through with sheets of flame for [[min(20, $level)]]d6 fire damage."
 descriptor: FIRE
 level {

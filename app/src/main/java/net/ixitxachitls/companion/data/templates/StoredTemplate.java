@@ -58,6 +58,14 @@ public abstract class StoredTemplate<P extends MessageLite> extends Entry<P> {
         .collect(Collectors.toList());
   }
 
+  public String getIncomplete() {
+    return template.getIncomplete();
+  }
+
+  public String getDescription() {
+    return template.getDescription();
+  }
+
   protected static String formatReference(Value.ReferenceProto reference) {
     Optional<ProductTemplate> product =
         Templates.get().getProductTemplates().get(reference.getName());

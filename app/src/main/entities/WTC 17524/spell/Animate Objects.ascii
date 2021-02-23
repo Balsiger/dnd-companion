@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You imbue inanimate objects with mobility and a semblance of life. Each such animated object then immediately attacks whomever or whatever you initially designate. An animated object can be of any nonmagical material\342\200\232\303\204\303\256wood, metal, stone, fabric, leather, ceramic, glass, or the like..  You may animate one Small or smaller object (such as a chair) or an equivalent number of larger objects per caster level. A Medium object (such as a coat rack) counts as two Small or smaller objects, a Large object (such as a table) as four, a Huge object as eight, a Gargantuan object as sixteen, and a Colossal object as thirty-two.  You can change the designated target or targets as a move action, as if directing an active spell.  The \\Product{Monster Manual} has game statistics for animated objects.  This spell cannot animate objects carried or worn by a creature.  \\Spell{Animate objects} can be made permanent with a \\Spell{permanency} spell."
+  description: "You imbue inanimate objects with mobility and a semblance of life. Each such animated object then immediately attacks whomever or whatever you initially designate. An animated object can be of any nonmagical material - wood, metal, stone, fabric, leather, ceramic, glass, or the like..  You may animate one Small or smaller object (such as a chair) or an equivalent number of larger objects per caster level. A Medium object (such as a coat rack) counts as two Small or smaller objects, a Large object (such as a table) as four, a Huge object as eight, a Gargantuan object as sixteen, and a Colossal object as thirty-two.  You can change the designated target or targets as a move action, as if directing an active spell.  The \\Product{Monster Manual} has game statistics for animated objects.  This spell cannot animate objects carried or worn by a creature.  \\Spell{Animate objects} can be made permanent with a \\Spell{permanency} spell."
   short_description: "Objects attack your foes."
 }
 school: TRANSMUTATION
@@ -31,7 +31,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "One Small object per caster level; see text"
+special_range: MEDIUM
+target: "One Small object per caster level; see text"
 duration {
   duration {
     rounds: 1

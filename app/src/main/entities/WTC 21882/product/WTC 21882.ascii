@@ -32,7 +32,7 @@ producer: "WTC"
 number: "Volume One"
 series: "Bertrem\'s Guide to the War of Souls"
 price {
-  currency: "\302\254\302\243"
+  currency: "£"
   number: 599
   precision: 100
 }

@@ -76,7 +76,13 @@ public class SpellTemplate extends StoredTemplate<Template.SpellTemplateProto> {
   public String formatComponents() {
     return Strings.COMMA_JOINER.join(proto.getComponentsList().stream()
         .map(c -> Strings.toWords(c.toString()))
-        .collect(Collectors.toList()));
+        .collect(Collectors.toList()))
+        + (proto.getMaterialCount() > 0 ?
+        " (" + Strings.COMMA_JOINER.join(proto.getMaterialList().stream()
+            .flatMap(m -> m.getComponentList().stream())
+            .collect(Collectors.toList())) + ")" : "")
+        + (proto.hasFocus() ?
+        " (" + Strings.COMMA_JOINER.join(proto.getFocus().getComponentList()) + ")" : "");
   }
 
   public Duration getCastingTime() {
@@ -173,11 +179,11 @@ public class SpellTemplate extends StoredTemplate<Template.SpellTemplateProto> {
   }
 
   public String formatSavingThrow(Value.SpellClass spellClass, int abilityBonus) {
-    if (proto.getSpellResistance().equals("None")) {
-      return proto.getSpellResistance();
+    if (proto.getSavingThrow().equals("None")) {
+      return proto.getSavingThrow();
     }
 
-    return proto.getSpellResistance() + " [DC " +  saveDC(spellClass, abilityBonus) + "]";
+    return proto.getSavingThrow() + " [DC " +  saveDC(spellClass, abilityBonus) + "]";
 }
 
   private int saveDC(Value.SpellClass spellClass, int abilityBonus) {

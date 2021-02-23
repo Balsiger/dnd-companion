@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "As \\Spell{polymorph}, except that you change the subject into a Small or smaller animal of no more than 1 HD (such as a \\Monster{dog}, \\Monster{lizard}, \\Monster{monkey}, or \\Monster{toad}). If the new form would prove fatal to the creature (for example, if you polymorphed a landbound target into a fish, or a flying target into a toad) the subject gets a +4 bonus on the save.  If the spell succeeds, the subject must also make a Will save. If this second save fails, the creature loses its extraordinary, supernatural, and spell-like abilities, loses its ability to cast spells (if it had the ability), and gains the alignment, special abilities, and Intelligence, Wisdom, and Charisma scores of its new form in place of its own.  It still retains its class and level (or HD), as well as all benefits deriving therefrom (such as base attack bonus, base save bonuses, and hit points). It retains any class features (other than spellcasting) that aren\342\200\232\303\204\303\264t extraordinary, supernatural, or spelllike abilities.  Incorporeal or gaseous creatures are immune to being polymorphed, and a creature with the shapechanger subtype (such as a lycanthrope or a doppelganger) can revert to its natural form as a standard action."
+  description: "As \\Spell{polymorph}, except that you change the subject into a Small or smaller animal of no more than 1 HD (such as a \\Monster{dog}, \\Monster{lizard}, \\Monster{monkey}, or \\Monster{toad}). If the new form would prove fatal to the creature (for example, if you polymorphed a landbound target into a fish, or a flying target into a toad) the subject gets a +4 bonus on the save.  If the spell succeeds, the subject must also make a Will save. If this second save fails, the creature loses its extraordinary, supernatural, and spell-like abilities, loses its ability to cast spells (if it had the ability), and gains the alignment, special abilities, and Intelligence, Wisdom, and Charisma scores of its new form in place of its own.  It still retains its class and level (or HD), as well as all benefits deriving therefrom (such as base attack bonus, base save bonuses, and hit points). It retains any class features (other than spellcasting) that aren't extraordinary, supernatural, or spelllike abilities.  Incorporeal or gaseous creatures are immune to being polymorphed, and a creature with the shapechanger subtype (such as a lycanthrope or a doppelganger) can revert to its natural form as a standard action."
   short_description: "Transforms subject into harmless animal."
 }
 school: TRANSMUTATION
@@ -31,7 +31,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEtarget: "One creature"
+special_range: CLOSE
+target: "One creature"
 duration {
   duration_description: "Permanent"
   }

@@ -1,5 +1,5 @@
 template {
   name: "Evil Gaze"
-  description: "Fear, 30 feet. A creature that meets the \\Monster{nightwalker}\'s gaze must succeed on a DC 24 Will save or be paralyzed with fear for 1d8 rounds. Whether or not the save is successful, that creature cannot be affected again by the same \\Monster{nightshade}\342\200\231s gaze for 24 hours. This is a mind-affecting fear effect. The save DC is Charisma-based. "
+  description: "Fear, 30 feet. A creature that meets the \\Monster{nightwalker}\'s gaze must succeed on a DC 24 Will save or be paralyzed with fear for 1d8 rounds. Whether or not the save is successful, that creature cannot be affected again by the same \\Monster{nightshade}'s gaze for 24 hours. This is a mind-affecting fear effect. The save DC is Charisma-based. "
 }
 type: SUPERNATURAL

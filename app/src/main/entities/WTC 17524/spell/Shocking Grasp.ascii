@@ -11,7 +11,7 @@ template {
   description: "Your successful melee touch attack deals 1d6 points of electricity damage per caster level (maximum 5d6). When delivering the jolt, you gain a +3 bonus on attack rolls if the opponent is wearing metal armor (or made out of metal, carrying a lot of metal, or the like)."
   short_description: "Touch delivers 1d6/level electricity damage (max 5d6)."
 }
-school: EVOACATION
+school: EVOCATION
 summary: "Touch, [[min(5, $level)]]d6 electricity damage, +3 to attack if opponent wears metal armor."
 descriptor: ELECTRICITY
 level {

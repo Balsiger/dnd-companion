@@ -1,7 +1,7 @@
 template {
   name: "DMA 000088"
   world: "Forgotten Realms"
-  description: "When evil giants attack your home in Ardeep Forest, your parents think you\342\200\231re dead and they go hunting for your missing little brother. You wake up and set out after them, helped by a giant wizard who lives in a flying tower. You don\342\200\231t know where they\342\200\231ve gone, but you know that if you don\342\200\231t find them, you\342\200\231re all in big trouble. Wield your magic wisely against the giants, wizard."
+  description: "When evil giants attack your home in Ardeep Forest, your parents think you're dead and they go hunting for your missing little brother. You wake up and set out after them, helped by a giant wizard who lives in a flying tower. You don't know where they've gone, but you know that if you don't find them, you're all in big trouble. Wield your magic wisely against the giants, wizard."
   short_description: "You become the hero and choose your own fate."
 }
 title: "Big Trouble"

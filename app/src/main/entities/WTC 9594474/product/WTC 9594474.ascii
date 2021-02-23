@@ -1,11 +1,11 @@
 template {
   name: "WTC 9594474"
   world: "Forgotten Realms"
-  description: "Deep below the unsuspecting streets of \\Place{Amn} lies a forgotten lair. \\Monster{Ghosts} haunt its twisted passages. Old magic courses through its ancient stone. And lethal traps fashioned with sadistic creativity hide within every shadowed nook.\n                    \\large{They\342\200\232\303\204\303\264re meant to keep something in.}\n                    "
+  description: "Deep below the unsuspecting streets of \\Place{Amn} lies a forgotten lair. \\Monster{Ghosts} haunt its twisted passages. Old magic courses through its ancient stone. And lethal traps fashioned with sadistic creativity hide within every shadowed nook.\n                    \\large{They're meant to keep something in.}\n                    "
 }
 title: "Howling Delve"
 leader: "The"
-subtitle: "The dangers of the \\Place{Delve} aren\342\200\232\303\204\303\264t meant to keep anyone out."
+subtitle: "The dangers of the \\Place{Delve} aren't meant to keep anyone out."
 author {
   name: "Johnson, Jaleigh"
 }

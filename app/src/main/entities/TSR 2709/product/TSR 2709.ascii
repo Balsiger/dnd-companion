@@ -19,7 +19,7 @@ isbn13 {
 }
 system: AMAZING_ENGINE
 price {
-  currency: "\302\254\302\243 "
+  currency: "£ "
   number: 499
   precision: 100
 }

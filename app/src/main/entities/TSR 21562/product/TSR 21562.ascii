@@ -4,7 +4,7 @@ template {
     name: "net"
   }
   world: "None"
-  description: "Thousands of years after the explosion at \\Place{Argoth} that ended the\n                    \\Event{Brothers\' War}, ice has covered the world of \\Place{Dominaria}. The\n                    strong have turned to barbarism. The weak have died. Now \\NPC{Lim D\342\210\232\302\252l}, a\n                    \\Class{necromancer} with a taste for power, seeks to awaken a deeper evil."
+  description: "Thousands of years after the explosion at \\Place{Argoth} that ended the \\Event{Brothers\' War}, ice has covered the world of \\Place{Dominaria}. The strong have turned to barbarism. The weak have died. Now \\NPC{Lim Dâl}, a \\Class{necromancer} with a taste for power, seeks to awaken a deeper evil."
 }
 title: "Eternal Ice"
 leader: "The"

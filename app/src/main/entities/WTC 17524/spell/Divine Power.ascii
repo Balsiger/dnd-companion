@@ -11,7 +11,7 @@ template {
   description: "Calling upon the divine power of your patron, you imbue yourself with strength and skill in combat. Your base attack bonus becomes equal to your character level (which may give you additional attacks), you gain a +6 enhancement bonus to Strength, and you gain 1 temporary hit point per caster level."
   short_description: "You gain attack bonus, +6 to Str, and 1 hp/level."
 }
-school: EVOACATION
+school: EVOCATION
 summary: "$level rounds, gain base attack bonus of $level, +6 enhancement bonus to Strengh, $level temporary hit points."
 level {
   spell_class: CLERIC

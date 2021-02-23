@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like dispel magic, except that the maximum caster level on your dispel check is +20 instead of +10.  Additionally, greater dispel magic has a chance to dispel any effect that remove curse can remove, even if dispel magic can\342\200\232\303\204\303\264t dispel that effect."
+  description: "This spell functions like dispel magic, except that the maximum caster level on your dispel check is +20 instead of +10.\n\nAdditionally, greater dispel magic has a chance to dispel any effect that remove curse can remove, even if dispel magic can't dispel that effect."
   short_description: "As dispel magic, but up to +20 on check."
 }
 school: ABJURATION

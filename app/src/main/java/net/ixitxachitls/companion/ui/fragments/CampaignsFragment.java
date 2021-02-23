@@ -21,7 +21,9 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,6 +81,8 @@ public class CampaignsFragment extends CompanionFragment {
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle state) {
+    super.onCreateView(inflater, container, state);
+
     LinearLayout view = (LinearLayout)
         inflater.inflate(R.layout.fragment_campaigns, container, false);
 
@@ -107,11 +111,6 @@ public class CampaignsFragment extends CompanionFragment {
         .description("Products", "Browse and modify your product catalog.");
 
     if (!started) {
-      startLoading(LOADING_CAMPAIGNS);
-      startLoading(LOADING_CHARACTERS);
-      startLoading(LOADING_IMAGES);
-      startLoading(LOADING_MESSAGES);
-      startLoading(LOADING_USER);
       started = true;
     } else {
       update();
@@ -126,14 +125,6 @@ public class CampaignsFragment extends CompanionFragment {
     updateCampaigns();
     updateCharacters();
     updateUser();
-
-    if (images().loaded()) {
-      finishLoading(LOADING_IMAGES);
-    }
-
-    if (messages().isLoaded()) {
-      finishLoading(LOADING_MESSAGES);
-    }
   }
 
   private void addCampaign() {
@@ -183,10 +174,6 @@ public class CampaignsFragment extends CompanionFragment {
 
     note.visible(this.characters.getView().getChildCount() == 0 || campaigns().getIds().isEmpty());
     campaigns.simpleUpdate(v -> v.update());
-
-    if (campaigns().isLoaded()) {
-      finishLoading(LOADING_CAMPAIGNS);
-    }
   }
 
   private void updateCharacters() {
@@ -206,17 +193,11 @@ public class CampaignsFragment extends CompanionFragment {
     messages().readMessages(characters().getPlayerCharacters(me().getId()).stream()
         .map(Character::getId)
         .collect(Collectors.toList()));
-
-    if (characters().isLoaded()) {
-      finishLoading(LOADING_CHARACTERS);
-    }
   }
 
   private void updateUser() {
     user.setTitle(me().getNickname());
     user.setSubtitle(subtitle());
     user.loadImageUrl(me().getPhotoUrl());
-
-    finishLoading(LOADING_USER);
   }
 }

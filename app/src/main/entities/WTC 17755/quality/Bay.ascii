@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "When a yeth hound howls or barks, all creatures except other evil outsiders within a 300-foot spread must succeed on a DC 11 Will save or become panicked for 2d4 rounds. This is a sonic mind-affecting fear effect. Whether or not the save is successful, an affected creature is immune to the same hound\342\200\232\303\204\303\264s bay for 24 hours. The save DC is Charisma-based."
+  description: "When a yeth hound howls or barks, all creatures except other evil outsiders within a 300-foot spread must succeed on a DC 11 Will save or become panicked for 2d4 rounds. This is a sonic mind-affecting fear effect. Whether or not the save is successful, an affected creature is immune to the same hound's bay for 24 hours. The save DC is Charisma-based."
 }
 type: SUPERNATURAL

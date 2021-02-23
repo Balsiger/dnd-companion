@@ -1,5 +1,5 @@
 template {
-  name: "Mass Bull\342\200\232\303\204\303\264s Strength Mass"
+  name: "Mass Bull's Strength Mass"
   synonym: "Bull\'s Strength, Mass"
   reference {
     name: "WTC 17524"
@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like bull\342\200\232\303\204\303\264s strength, except that it affects multiple creatures."
+  description: "This spell functions like bull's strength, except that it affects multiple creatures."
   short_description: "As bull’s strength, affects one subject/level."
 }
 school: TRANSMUTATION

@@ -3,7 +3,7 @@ template {
   reference {
     name: "net"
   }
-  description: "preconstructed deck with water Pok\342\210\232\302\251mon"
+  description: "preconstructed deck with water Pokémon"
 }
 title: "Water Blast Theme Deck"
 date {
@@ -33,7 +33,7 @@ content {
 }
 content {
   part: MISC
-  description: "Pok\342\210\232\302\251mon coin"
+  description: "Pokémon coin"
   number: 1073741824
 }
 content {

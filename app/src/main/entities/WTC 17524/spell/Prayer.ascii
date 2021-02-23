@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You bring special favor upon yourself and your allies while bringing disfavor to your enemies. You and your each of your allies gain a +1 luck bonus on attack rolls, weapon damage rolls, saves, and skill checks, while each of your foes takes a \342\200\232\303\204\303\2541 penalty on such rolls."
+  description: "You bring special favor upon yourself and your allies while bringing disfavor to your enemies. You and your each of your allies gain a +1 luck bonus on attack rolls, weapon damage rolls, saves, and skill checks, while each of your foes takes a -1 penalty on such rolls."
   short_description: "Allies +1 bonus on most rolls, enemies –1 penalty."
 }
 school: ENCHANTMENT

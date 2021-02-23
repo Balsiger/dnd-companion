@@ -3,7 +3,7 @@ template {
   category: "climb"
   synonym: "Kit, Climber\'s"
   world: "Generic"
-  description: "A climber\342\200\231s kit includes special pitons, boot tips, gloves, and a harness that aids in all sorts of climbing. This is the perfect tool for climbing and gives you a +2 circumstance bonus on Climb checks. "
+  description: "A climber's kit includes special pitons, boot tips, gloves, and a harness that aids in all sorts of climbing. This is the perfect tool for climbing and gives you a +2 circumstance bonus on Climb checks. "
   short_description: "The perfect tool for climbing, give a +2 circumstance to Climb."
 }
 value {

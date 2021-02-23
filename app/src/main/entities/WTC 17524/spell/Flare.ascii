@@ -11,7 +11,7 @@ template {
   description: "This cantrip creates a burst of light. If you cause the light to burst directly in front of a single creature, that creature is dazzled for 1 minute unless it makes a successful Fortitude save. Sightless creatures, as well as creatures already dazzled, are not affected by flare."
   short_description: "Dazzles one creature (–1 on attack rolls)."
 }
-school: EVOACATION
+school: EVOCATION
 summary: "For DC $dc or dazzled (Attach -1, Spot -1, Search -1)"
 descriptor: LIGHT
 level {

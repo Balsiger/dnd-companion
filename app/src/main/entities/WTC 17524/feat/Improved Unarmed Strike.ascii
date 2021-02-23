@@ -12,6 +12,6 @@ template {
   short_description: "Considered armed even when unarmed"
 }
 type: FIGHTER
-benefit: "You are considered to be armed even when unarmed \342\200\232\303\204\303\256 that is, you do not provoke attacks or opportunity from armed opponents when you attack them while unarmed. However, you still get an attack of opportunity against any opponent who makes an unarmed attack on you. \n\nIn addition, your unarmed strikes can deal lethal or nonlethal damage, at your option."
+benefit: "You are considered to be armed even when unarmed  -  that is, you do not provoke attacks or opportunity from armed opponents when you attack them while unarmed. However, you still get an attack of opportunity against any opponent who makes an unarmed attack on you. \n\nIn addition, your unarmed strikes can deal lethal or nonlethal damage, at your option."
 special: "A monk automatically gains Improved Unarmed Strike as a bonus feat at 1st level. She need not select it. \n\nA fighter may select Improved Unarmed Strike as one of his fighter bonus feats (see page 38)."
 normal: "Without this feat, you are considered unarmed when attacking with an unarmed strike, and you can deal only nonlethal damage with such an attack."

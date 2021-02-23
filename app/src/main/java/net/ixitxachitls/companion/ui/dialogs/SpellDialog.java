@@ -7,13 +7,18 @@ import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Templates;
+import net.ixitxachitls.companion.data.enums.MetaMagic;
 import net.ixitxachitls.companion.data.templates.SpellTemplate;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.util.Strings;
+import net.ixitxachitls.companion.util.Texts;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import androidx.annotation.ColorRes;
 import androidx.annotation.LayoutRes;
@@ -28,12 +33,14 @@ public class SpellDialog extends Dialog {
   private static final String ARG_CASTER_LEVEL = "caster_level";
   private static final String ARG_ABILITY_BONUS = "ability_bonus";
   private static final String ARG_SPELL_CLASS = "spell_class";
+  private static final String ARG_META_MAGIC = "meta_magic";
 
   SpellTemplate spell = new SpellTemplate(Template.SpellTemplateProto.getDefaultInstance(),
       "dummy");
   int casterLevel;
   int abilityBonus;
   Value.SpellClass spellClass;
+  List<MetaMagic> metaMagics;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -44,6 +51,8 @@ public class SpellDialog extends Dialog {
     casterLevel = getArguments().getInt(ARG_CASTER_LEVEL);
     abilityBonus = getArguments().getInt(ARG_ABILITY_BONUS);
     spellClass = Value.SpellClass.forNumber(getArguments().getInt(ARG_SPELL_CLASS));
+    metaMagics = getArguments().getStringArrayList(ARG_META_MAGIC).stream()
+        .map(MetaMagic::fromName).collect(Collectors.toList());
 
     Optional<SpellTemplate> template = Templates.get().getSpellTemplates().get(name);
     if (template.isPresent()) {
@@ -55,39 +64,61 @@ public class SpellDialog extends Dialog {
 
   @Override
   protected void createContent(View view) {
-    TextWrapper.wrap(view, R.id.name).text(spell.getName());
+    if (metaMagics.isEmpty()) {
+      TextWrapper.wrap(view, R.id.name).text(spell.getName());
+    } else {
+      TextWrapper.wrap(view, R.id.name).text(spell.getName() + " [" +
+          Strings.COMMA_JOINER.join(metaMagics.stream()
+              .map(MetaMagic::getName).collect(Collectors.toList())) + "]");
+    }
     TextWrapper.wrap(view, R.id.school).text(spell.formatSchool());
     TextWrapper.wrap(view, R.id.level).text(spell.formatLevel());
     TextWrapper.wrap(view, R.id.components).text(spell.formatComponents());
     TextWrapper.wrap(view, R.id.casting_time).text(spell.getCastingTime().toString());
     TextWrapper.wrap(view, R.id.range).text(spell.formatRange(casterLevel).toString());
+
     String effect = spell.formatEffect();
     TextWrapper.wrap(view, R.id.label_effect).visible(!effect.isEmpty());
     TextWrapper.wrap(view, R.id.effect).text(effect).visible(!effect.isEmpty());
-    TextWrapper.wrap(view, R.id.target).text(spell.getTarget());
+
+    String target = spell.getTarget();
+    TextWrapper.wrap(view, R.id.label_target).visible(!target.isEmpty());
+    TextWrapper.wrap(view, R.id.target).text(target).visible(!target.isEmpty());
+
     TextWrapper.wrap(view, R.id.duration).text(spell.formatDuration(casterLevel));
-    TextWrapper.wrap(view, R.id.saving_throw).text(spell.getSavingThrow());
-    TextWrapper.wrap(view, R.id.spell_resistance)
+    TextWrapper.wrap(view, R.id.saving_throw)
         .text(spell.formatSavingThrow(spellClass, abilityBonus));
+    TextWrapper.wrap(view, R.id.spell_resistance).text(spell.getSpellResistance());
     TextWrapper.wrap(view, R.id.references).text(Strings.COMMA_JOINER.join(spell.getReferences()));
+
+    String incomplete = spell.getIncomplete();
+    TextWrapper.wrap(view, R.id.incomplete).text(spell.getIncomplete())
+        .visible(!incomplete.isEmpty());
+
+    TextWrapper.wrap(view, R.id.description)
+        .text(Texts.processCommands(getContext(), spell.getDescription()));
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
                                     @ColorRes int colorId, String spell, int casterLevel,
-                                    int abilityBonus, Value.SpellClass spellClass) {
+                                    int abilityBonus, Value.SpellClass spellClass,
+                                    List<MetaMagic> metaMagics) {
     Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
     arguments.putString(ARG_SPELL, spell);
     arguments.putInt(ARG_CASTER_LEVEL, casterLevel);
     arguments.putInt(ARG_ABILITY_BONUS, abilityBonus);
     arguments.putInt(ARG_SPELL_CLASS, spellClass.getNumber());
+    arguments.putStringArrayList(ARG_META_MAGIC, metaMagics.stream()
+        .map(MetaMagic::getName)
+        .collect(Collectors.toCollection(ArrayList::new)));
     return arguments;
   }
 
   public static SpellDialog newInstance(String spell, int casterLevel, int abilityBonus,
-                                        Value.SpellClass spellClass) {
+                                        Value.SpellClass spellClass, List<MetaMagic> metaMagics) {
     SpellDialog fragment = new SpellDialog();
     fragment.setArguments(arguments(R.layout.dialog_spell,
-        R.string.spell, R.color.spell, spell, casterLevel, abilityBonus, spellClass));
+        R.string.spell, R.color.spell, spell, casterLevel, abilityBonus, spellClass, metaMagics));
     return fragment;
   }
 }

@@ -507,6 +507,7 @@ enum SpellClass {
   TRICKERY = 29;
   WAR = 30;
   WATER_SPELL = 31;
+  DARKNESS = 32;
 }
 
 enum SkillSubtype {
@@ -639,5 +640,17 @@ enum MonsterSubtype {
   WATER = 26;
 }
 
+enum MetaMagic {
+  UNKNOWN_META_MAGIC = 0;
 
-
+  // PHB.
+  EMPOWERED = 1;
+  ENLARGED = 2;
+  EXTENDED = 3;
+  HEIGHTENED = 4;
+  MAXIMIZED = 5;
+  QUICKENED = 6;
+  SILENT = 7;
+  STILL = 8;
+  WIDENED = 9;
+}

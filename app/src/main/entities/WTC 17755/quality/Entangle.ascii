@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A balor\342\200\232\303\204\303\264s +1 flaming whip entangles foes much like an attack with a net. The whip has 20 hit points. The whip needs no folding. If it hits, the target and the balor immediately make opposed Strength checks; if the balor wins, it drags the target against its flaming body (see below). The target remains anchored against the balor\342\200\232\303\204\303\264s body until it escapes the whip."
+  description: "A balor's +1 flaming whip entangles foes much like an attack with a net. The whip has 20 hit points. The whip needs no folding. If it hits, the target and the balor immediately make opposed Strength checks; if the balor wins, it drags the target against its flaming body (see below). The target remains anchored against the balor's body until it escapes the whip."
 }
 type: EXTRAORDINARY

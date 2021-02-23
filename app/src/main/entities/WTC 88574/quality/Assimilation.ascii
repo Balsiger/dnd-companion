@@ -8,6 +8,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "If the creature kills an ordinary \\Monster{wraith} (even one of its own spawn), it assimilates the lesser \\Monster{wraith}\342\200\231s energy into itself, growing stronger in the process. It adds the assimilated \\Monster{wraith}\342\200\231s Hit Dice (usually 5) to its own, to a maximum of 60 HD. It gains all the benefits of these additional HD acording to the monster advancement rules in the Monster Manual. When an orb wraith advances to 60 HD, it fissions into two 30-HD orb wraiths."
+  description: "If the creature kills an ordinary \\Monster{wraith} (even one of its own spawn), it assimilates the lesser \\Monster{wraith}'s energy into itself, growing stronger in the process. It adds the assimilated \\Monster{wraith}'s Hit Dice (usually 5) to its own, to a maximum of 60 HD. It gains all the benefits of these additional HD acording to the monster advancement rules in the Monster Manual. When an orb wraith advances to 60 HD, it fissions into two 30-HD orb wraiths."
 }
 type: SUPERNATURAL

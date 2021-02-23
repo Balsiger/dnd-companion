@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Any melee or ranged attack directed at Ripper has a 50% miss chance unless the attacker can locate the beast by some means other than sight. A true seeing effect allows the user to see the beast\342\200\232\303\204\303\264s position, but see invisibility has no effect."
+  description: "Any melee or ranged attack directed at Ripper has a 50% miss chance unless the attacker can locate the beast by some means other than sight. A true seeing effect allows the user to see the beast's position, but see invisibility has no effect."
 }
 type: SUPERNATURAL

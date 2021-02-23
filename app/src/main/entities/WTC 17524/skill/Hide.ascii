@@ -8,9 +8,9 @@ template {
     }
   }
   world: "Generic"
-  description: "Use this skill to sink back into the shadows and proceed unseen, to approach a wizard\342\200\232\303\204\303\264s tower under cover of brush, or to tail someone through a busy street without being noticed."
+  description: "Use this skill to sink back into the shadows and proceed unseen, to approach a wizard's tower under cover of brush, or to tail someone through a busy street without being noticed."
 }
 ability: DEXTERITY
-action: "Usually none. Normally, you make a Hide check as part of                     movement, so it doesn\342\200\232\303\204\303\264t take a separate action. However,                     hiding immediately after a ranged attack (see Sniping,                     above) is a move action."
-special: "If you are invisible, you gain a +40 bonus on Hide checks                     if you are immobile, or a +20 bonus on Hide checks if                     you\342\200\232\303\204\303\264re moving.  If you have the Stealthy feat, you get a                     +2 bonus on Hide checks.  A 13th-level ranger can attempt                     a Hide check in any sort of nat- ural terrain, even if it                     doesn\342\200\232\303\204\303\264t grant cover or concealment. A 17th- level ranger                     can do this even while being observed (see page 48)."
+action: "Usually none. Normally, you make a Hide check as part of                     movement, so it doesn't take a separate action. However,                     hiding immediately after a ranged attack (see Sniping,                     above) is a move action."
+special: "If you are invisible, you gain a +40 bonus on Hide checks                     if you are immobile, or a +20 bonus on Hide checks if                     you're moving.  If you have the Stealthy feat, you get a                     +2 bonus on Hide checks.  A 13th-level ranger can attempt                     a Hide check in any sort of nat- ural terrain, even if it                     doesn't grant cover or concealment. A 17th- level ranger                     can do this even while being observed (see page 48)."
 restriction: ARMOR_CHECK_PENALTY

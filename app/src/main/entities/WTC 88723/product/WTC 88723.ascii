@@ -4,7 +4,7 @@ template {
   description: "For the first time, \\NPC{Caramon}, the surviving twin of the enigmatic and\n  powerful \\Class{mage}, tells one of the strangest and best-loved tales in all\n  of \\Place{Krynn}.\n\n  Plus, immerse yourself in nine additional exciting short stories -- tales of\n  chivalry and affection, heroic quests and foul villainy, magic in battle and\n  transcendent defeat -- featuring all the beloved companions and fantastic\n  creatures of the best-selling \\Place{Dragonlance} Saga. "
 }
 title: "Love and War"
-subtitle: "The legend of Raistlin\033$(B!G\033(Bs daughter!"
+subtitle: "The legend of Raistlin's daughter!"
 author {
 }
 author {

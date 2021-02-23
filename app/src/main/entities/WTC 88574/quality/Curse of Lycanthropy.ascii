@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Any humanoid hit by Thelossa\342\200\232\303\204\303\264s bite attack must succeed at a Fortitude save (DC 14) or contract lycanthropy."
+  description: "Any humanoid hit by Thelossa's bite attack must succeed at a Fortitude save (DC 14) or contract lycanthropy."
 }
 type: SUPERNATURAL

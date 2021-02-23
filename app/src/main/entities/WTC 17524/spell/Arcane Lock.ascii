@@ -32,7 +32,8 @@ material {
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "The door, chest, or portal touched, up to 30 sq. ft/level in size"
+special_range: TOUCH
+target: "The door, chest, or portal touched, up to 30 sq. ft/level in size"
 duration {
   duration_description: "Permanent"
   }

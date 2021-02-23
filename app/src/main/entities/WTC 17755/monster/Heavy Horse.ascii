@@ -9,7 +9,7 @@ template {
       high: 273
     }
   }
-  description: "The statistics presented here describe large breeds of working horses such as Clydesdales. These animals are usually ready for heavy work by age three. A heavy horse cannot fight while carrying a rider.\n\n\\bold{Carrying Capacity:} A light load for a heavy horse is up to 200 pounds; a medium load, 201\342\200\223400 pounds; and a heavy load, 401\342\200\223600 pounds. A heavy horse can drag 3,000 pounds."
+  description: "The statistics presented here describe large breeds of working horses such as Clydesdales. These animals are usually ready for heavy work by age three. A heavy horse cannot fight while carrying a rider.\n\n\\bold{Carrying Capacity:} A light load for a heavy horse is up to 200 pounds; a medium load, 201-400 pounds; and a heavy load, 401-600 pounds. A heavy horse can drag 3,000 pounds."
 }
 hit_dice {
   modifier: 3

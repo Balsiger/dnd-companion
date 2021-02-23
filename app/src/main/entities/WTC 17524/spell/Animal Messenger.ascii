@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You compel a Tiny animal to go to a spot you designate. The most common use for this spell is to get an animal to carry a message to your allies. The animal cannot be one tamed or trained by someone else, including such creatures as familiars and animal companions.  Using some type of food desirable to the animal as a lure, you call the animal to you.It advances and awaits your bidding. You can mentally impress on the animal a certain place well known to you or an obvious landmark (such as the peak of a distant mountain). The directions must be simple, because the animal depends on your knowledge and can\342\200\232\303\204\303\264t find a destination on its own. You can attach some small item or note to the messenger. The animal then goes to the designated location and waits there until the duration of the spell expires, whereupon it resumes its normal activities.  During this period of waiting, the messenger allows others to approach it and remove any scroll or token it carries. Unless the intended recipient of a message is expecting a messenger in the form of a bird or other small animal, the carrier may be ignored. The intended recipient gains no special ability to communicate with the animal or read any attached message (if it\342\200\232\303\204\303\264s written in a language he or she doesn\342\200\232\303\204\303\264t know, for example)."
+  description: "You compel a Tiny animal to go to a spot you designate. The most common use for this spell is to get an animal to carry a message to your allies. The animal cannot be one tamed or trained by someone else, including such creatures as familiars and animal companions.  Using some type of food desirable to the animal as a lure, you call the animal to you.It advances and awaits your bidding. You can mentally impress on the animal a certain place well known to you or an obvious landmark (such as the peak of a distant mountain). The directions must be simple, because the animal depends on your knowledge and can't find a destination on its own. You can attach some small item or note to the messenger. The animal then goes to the designated location and waits there until the duration of the spell expires, whereupon it resumes its normal activities.  During this period of waiting, the messenger allows others to approach it and remove any scroll or token it carries. Unless the intended recipient of a message is expecting a messenger in the form of a bird or other small animal, the carrier may be ignored. The intended recipient gains no special ability to communicate with the animal or read any attached message (if it's written in a language he or she doesn't know, for example)."
   short_description: "Sends a Tiny animal to a specific place."
 }
 school: ENCHANTMENT
@@ -38,7 +38,8 @@ material {
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEtarget: "One Tiny animal"
+special_range: CLOSE
+target: "One Tiny animal"
 duration {
   duration {
     days: 1

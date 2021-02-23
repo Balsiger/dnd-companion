@@ -27,7 +27,7 @@ system: DND_1ST
 type: CAMPAIGN_EXPANSION
 producer: "TSR"
 price {
-  currency: "$\302\254\342\200\240"
+  currency: "$"
   number: 795
   precision: 100
 }

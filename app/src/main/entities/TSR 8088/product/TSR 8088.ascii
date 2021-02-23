@@ -24,7 +24,7 @@ number: "Book One"
 series: "New Series"
 series: "Dragon Strike"
 price {
-  currency: "\302\254\302\243 "
+  currency: "£ "
   number: 399
   precision: 100
 }

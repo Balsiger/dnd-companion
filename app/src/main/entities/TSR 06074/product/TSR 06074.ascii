@@ -33,7 +33,7 @@ content {
 }
 content {
   part: MISC
-  description: "Pok\342\210\232\302\251mon coin"
+  description: "Pokémon coin"
   number: 1073741824
 }
 content {

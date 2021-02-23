@@ -28,7 +28,7 @@ isbn13 {
 system: ADND_1ST
 type: ADVENTURE
 price {
-  currency: "$\303\224\303\270\316\251"
+  currency: "$£"
   number: 595
   precision: 100
 }

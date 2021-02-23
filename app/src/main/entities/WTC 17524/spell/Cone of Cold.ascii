@@ -11,7 +11,7 @@ template {
   description: "Cone of cold creates an area of extreme cold, originating at your hand and extending outward in a cone. It drains heat, dealing 1d6 points of cold damage per caster level (maximum 15d6).  Arcane Material Component: A very small crystal or glass cone."
   short_description: "1d6/level cold damage."
 }
-school: EVOACATION
+school: EVOCATION
 summary: "60 ft cone for [[min(15,$level)]]d6 cold damage, Ref DC [[10 + $ability + switch($class, Water: 6, default: 5)]] for half."
 descriptor: COLD
 level {

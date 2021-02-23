@@ -3,7 +3,7 @@ template {
   reference {
     name: "net"
   }
-  description: "the Pok\342\210\232\302\251mon starter set"
+  description: "the Pokémon starter set"
 }
 title: "Starter Gift Box"
 date {
@@ -67,6 +67,6 @@ content {
 }
 content {
   part: MISC
-  description: "Pok\342\210\232\302\251mon coin"
+  description: "Pokémon coin"
   number: 1073741824
 }

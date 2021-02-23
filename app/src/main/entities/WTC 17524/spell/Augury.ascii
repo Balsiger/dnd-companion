@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "An augury can tell you whether a particular action will bring good or bad results for you in the immediate future. For example, if a character is considering destroying a weird seal that closes a portal, an augury might determine whether that act is a good idea.  The base chance for receiving a meaningful reply is 70% + 1% per caster level, to a maximum of 90%; the DM makes the roll secretly. The DM may determine that a question is so straightforward that a successful result is automatic, or so vague as to have no chance of success. If the augury succeeds, you get one of four results: \\list {Weal (if the action will probably bring good results).}  {Woe (for bad results).}  {Weal and woe (for both).}  {Nothing (for actions that don\342\200\232\303\204\303\264t have especially good or bad results).}  If the spell fails, you get the \342\200\232\303\204\303\272nothing\342\200\232\303\204\303\271 result. A cleric who gets the \342\200\232\303\204\303\272nothing\342\200\232\303\204\303\271 result has no way to tell whether it was the consequence of a failed or successful \\Spell{augury}.  The \\Spell{augury} can see into the future only about half an hour, so anything that might happen after that does not affect the result.  Thus, the result might not take into account the long-term consequences of a contemplated action. All auguries cast by the same person about the same topic use the same dice result as the first casting."
+  description: "An augury can tell you whether a particular action will bring good or bad results for you in the immediate future. For example, if a character is considering destroying a weird seal that closes a portal, an augury might determine whether that act is a good idea.  The base chance for receiving a meaningful reply is 70% + 1% per caster level, to a maximum of 90%; the DM makes the roll secretly. The DM may determine that a question is so straightforward that a successful result is automatic, or so vague as to have no chance of success. If the augury succeeds, you get one of four results: \\list {Weal (if the action will probably bring good results).}  {Woe (for bad results).}  {Weal and woe (for both).}  {Nothing (for actions that don't have especially good or bad results).}  If the spell fails, you get the 'nothing' result. A cleric who gets the 'nothing' result has no way to tell whether it was the consequence of a failed or successful \\Spell{augury}.  The \\Spell{augury} can see into the future only about half an hour, so anything that might happen after that does not affect the result.  Thus, the result might not take into account the long-term consequences of a contemplated action. All auguries cast by the same person about the same topic use the same dice result as the first casting."
   short_description: "Learns whether an action will be good or bad."
 }
 school: DIVINATION
@@ -34,7 +34,8 @@ material {
 casting_time {
   minutes: 1
 }
-special_range: PERSONALtarget: "You"
+special_range: PERSONAL
+target: "You"
 duration {
   duration_description: "Instantaneous"
   }

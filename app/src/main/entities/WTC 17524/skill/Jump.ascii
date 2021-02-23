@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Use this skill to leap over pits, vault low fences, or reach a tree\342\200\232\303\204\303\264s lowest branches."
+  description: "Use this skill to leap over pits, vault low fences, or reach a tree's lowest branches."
 }
 ability: STRENGTH
 action: "None. A Jump check is included in your movement, so it is                     part of a move action. If you run out of movement                     mid-jump, your next action (either on this turn or, if                     necessary, on your next turn) must be a move action to                     complete the jump."

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This feat allows spellcasters to acquire a new familiar from a non-standard list, but only when they could normally acquire a new familiar (see page 52 of the Player\342\200\232\303\204\303\264s Handbook)."
+  description: "This feat allows spellcasters to acquire a new familiar from a non-standard list, but only when they could normally acquire a new familiar (see page 52 of the Player's Handbook)."
   short_description: "Possibility to gain more powerful familiars."
 }
 type: GENERAL

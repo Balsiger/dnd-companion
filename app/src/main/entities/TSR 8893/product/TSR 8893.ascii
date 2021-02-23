@@ -20,7 +20,7 @@ system: NONE
 audience: ALL
 type: CALENDAR
 price {
-  currency: "\302\254\302\243 "
+  currency: "£ "
   number: 699
   precision: 100
 }

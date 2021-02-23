@@ -37,11 +37,13 @@ import com.tenmiles.helpstack.HSHelpStack;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.data.drive.DriveStorage;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
+import net.ixitxachitls.companion.ui.fragments.LoadingFragment;
 import net.ixitxachitls.companion.ui.views.ActionBarView;
 import net.ixitxachitls.companion.ui.views.StatusView;
 
@@ -95,18 +97,10 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
     actions.clearActions();
   }
 
-  public void finishLoading(String text) {
+  public void incrementProgress(Templates.Kind kind) {
     runOnUiThread(() -> {
-      if (actions != null) {
-        actions.finishLoading(text);
-      }
-    });
-  }
-
-  public void incrementProgress() {
-    runOnUiThread(() -> {
-      if (actions != null) {
-        actions.incrementProgress();
+      if (CompanionFragments.get().isShowing(CompanionFragment.Type.loading)) {
+        ((LoadingFragment)(CompanionFragments.get().getCurrentFragment().get())).increment(kind);
       }
     });
   }
@@ -189,18 +183,6 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
     }
   }
 
-  public void startLoading(String text, int count) {
-    if (actions != null) {
-      actions.startLoading(text, count);
-    }
-  }
-
-  public void startLoading(String text) {
-    if (actions != null) {
-      actions.startLoading(text);
-    }
-  }
-
   @Override
   public void update() {
     Optional<CompanionFragment> fragment = CompanionFragments.get().getCurrentFragment();
@@ -211,8 +193,6 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
   }
 
   private void create() {
-    setTheme(R.style.AppTheme_NoActionBar);
-
     setContentView(R.layout.activity_main);
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
@@ -292,6 +272,9 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
           CompanionApplication.get(this).context().users().login(
               user.getUid(), user.getPhotoUrl().toString());
           Status.log("Successfully logged in");
+          if (CompanionFragments.get().isShowing(CompanionFragment.Type.loading)) {
+            ((LoadingFragment)(CompanionFragments.get().getCurrentFragment().get())).loggedIn();
+          }
         } else if (response == null) {
           Status.error("Login required");
           MessageDialog.create(this)
@@ -331,7 +314,6 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
         .build(), CODE_SIGN_IN);
 
     super.onCreate(state);
-
     create();
   }
 }

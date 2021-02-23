@@ -49,7 +49,6 @@ public class ProductsFragment extends TemplatesFragment {
   @Override
   protected void loadEntities() {
     super.loadEntities();
-    startLoading(LOADING_PRODUCTS);
     me().readProducts(this::loadedEntities);
   }
 
@@ -100,7 +99,6 @@ public class ProductsFragment extends TemplatesFragment {
   @Override
   protected void loadedEntities() {
     super.loadedEntities();
-    finishLoading(LOADING_PRODUCTS);
     update();
   }
 

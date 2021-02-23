@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You turn ammunition (such as arrows, bolts, shuriken, and stones) into fiery projectiles. Each piece of ammunition deals an extra 1d6 points of fire damage to any target it hits. A flaming projectile can easily ignite a flammable object or structure, but it won\342\200\232\303\204\303\264t ignite a creature it strikes. Material Component: A drop of oil and a small piece of flint."
+  description: "You turn ammunition (such as arrows, bolts, shuriken, and stones) into fiery projectiles. Each piece of ammunition deals an extra 1d6 points of fire damage to any target it hits. A flaming projectile can easily ignite a flammable object or structure, but it won't ignite a creature it strikes. Material Component: A drop of oil and a small piece of flint."
   short_description: "Arrows deal +1d6 fire damage."
 }
 school: TRANSMUTATION

@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The damage a horned devil deals with its tail attack causes a persistent wound. An injured creature loses 2 additional hit points each round. The wound does not heal naturally and resists healing spells. The continuing hit point loss can be stopped by a DC 24 Heal check, a cure spell, or a heal spell. However, a character attempting to cast a cure spell or a heal spell on a creature damaged by a horned devil\342\200\232\303\204\303\264s tail must succeed on a DC 24 caster level check, or the spell has no effect on the injured character. A successful Heal check automatically stops the continuing hit point loss as well as restoring hit points. The check DC is Constitution-based."
+  description: "The damage a horned devil deals with its tail attack causes a persistent wound. An injured creature loses 2 additional hit points each round. The wound does not heal naturally and resists healing spells. The continuing hit point loss can be stopped by a DC 24 Heal check, a cure spell, or a heal spell. However, a character attempting to cast a cure spell or a heal spell on a creature damaged by a horned devil's tail must succeed on a DC 24 caster level check, or the spell has no effect on the injured character. A successful Heal check automatically stops the continuing hit point loss as well as restoring hit points. The check DC is Constitution-based."
 }
 type: SUPERNATURAL

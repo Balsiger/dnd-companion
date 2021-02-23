@@ -29,7 +29,7 @@ system: DND_1ST
 producer: "TSR"
 series: "Creature Crucible"
 price {
-  currency: "$\302\254\342\200\240"
+  currency: "$"
   number: 995
   precision: 100
 }

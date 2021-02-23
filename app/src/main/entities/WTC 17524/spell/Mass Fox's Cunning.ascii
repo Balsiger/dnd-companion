@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like fox\342\200\232\303\204\303\264s cunning, except that it affects multiple creatures."
+  description: "This spell functions like fox's cunning, except that it affects multiple creatures."
   short_description: "As fox’s cunning, affects one subject/level."
 }
 school: TRANSMUTATION

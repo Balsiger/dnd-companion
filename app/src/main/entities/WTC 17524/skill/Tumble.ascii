@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can dive, roll, somersault, flip, and so on. You can\342\200\232\303\204\303\264t use this skill if your speed has been reduced by armor, excess equipment, or loot (see Table 9\342\200\232\303\204\303\2542: Carrying Loads, page 162)."
+  description: "You can dive, roll, somersault, flip, and so on. You can't use this skill if your speed has been reduced by armor, excess equipment, or loot (see Table 9-2: Carrying Loads, page 162)."
 }
 ability: DEXTERITY
 action: "Not applicable. Tumbling is part of movement, so a Tumble                     check is part of a move action."

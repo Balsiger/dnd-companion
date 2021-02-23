@@ -7,7 +7,7 @@ template {
       high: 103
     }
   }
-  description: "Common traits for half-elves.\n\nA half-elf does not have the elf \342\200\231s ability to notice secret doors simply by passing near them, but still get\'s bonuses on listen, search and spot.\n\nHalf-elves get along naturally with all people. This bonus may not apply in situations or settings where half-elves are viewed with distrust (such as isolated human settlements), at the DM\342\200\231s option."
+  description: "Common traits for half-elves.\n\nA half-elf does not have the elf 's ability to notice secret doors simply by passing near them, but still get\'s bonuses on listen, search and spot.\n\nHalf-elves get along naturally with all people. This bonus may not apply in situations or settings where half-elves are viewed with distrust (such as isolated human settlements), at the DM's option."
   short_description: "Common traits for half-elves."
 }
  skill_modifier {

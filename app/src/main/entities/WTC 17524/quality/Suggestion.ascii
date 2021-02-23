@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A bard of 6th level or higher with 9 or more ranks in a Perform skill can make a suggestion (as the spell) to a creature that he has already fascinated (see above). Using this ability does not break the bard\342\200\232\303\204\303\264s concentration on the fascinate effect, nor does it allow a second saving throw against the fascinate effect. Making a suggestion doesn\342\200\232\303\204\303\264t count against a bard\342\200\232\303\204\303\264s daily limit on bardic music performances. A Will saving throw (DC 10 + 1/2 bard\342\200\232\303\204\303\264s level + bard\342\200\232\303\204\303\264s Cha modifier) negates the effect. This ability affects only a single creature (but see mass suggestion, below). Suggestion is an enchanment (compulsion), mind-affecting, language dependent ability."
+  description: "A bard of 6th level or higher with 9 or more ranks in a Perform skill can make a suggestion (as the spell) to a creature that he has already fascinated (see above). Using this ability does not break the bard's concentration on the fascinate effect, nor does it allow a second saving throw against the fascinate effect. Making a suggestion doesn't count against a bard's daily limit on bardic music performances. A Will saving throw (DC 10 + 1/2 bard's level + bard's Cha modifier) negates the effect. This ability affects only a single creature (but see mass suggestion, below). Suggestion is an enchanment (compulsion), mind-affecting, language dependent ability."
 }
 type: SPELL_LIKE

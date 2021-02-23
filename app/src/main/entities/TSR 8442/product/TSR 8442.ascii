@@ -38,7 +38,7 @@ type: ACCESSORY
 style: SOFT_COVER
 producer: "TSR"
 price {
-  currency: "\302\254\302\243"
+  currency: "£"
   number: 1099
   precision: 100
 }

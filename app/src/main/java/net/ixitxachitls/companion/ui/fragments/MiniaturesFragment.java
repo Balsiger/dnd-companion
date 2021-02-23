@@ -50,7 +50,6 @@ public class MiniaturesFragment extends TemplatesFragment {
   @Override
   protected void loadEntities() {
     super.loadEntities();
-    startLoading(LOADING_MINIATURES);
     me().readMiniatures(this::loadedEntities);
   }
 
@@ -87,7 +86,6 @@ public class MiniaturesFragment extends TemplatesFragment {
   @Override
   protected void loadedEntities() {
     super.loadedEntities();
-    finishLoading(LOADING_MINIATURES);
     update();
   }
 

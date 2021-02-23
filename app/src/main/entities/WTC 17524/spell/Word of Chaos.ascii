@@ -11,7 +11,7 @@ template {
   description: "Any nonchaotic creature within the area who hears the word of chaos suffers the following ill effects.  The effects are cumulative and concurrent. No saving throw is allowed against these effects.  Deafened: The creature is deafened for 1d4 rounds.  Stunned: The creature is stunned for 1 round. Confused: The creature is confused, as by the confusion spell, for 1d10 minutes. This is a mind-affecting enchantment effect.  Killed: Living creatures die. Undead creatures are destroyed.  HD Effect Equal to caster level Deafened Up to caster level - 1 Stunned, deafened Up to caster level 5 Confused, stunned, deafened Up to caster level -10 Killed, confused, stunned, deafened Furthermore, if you are on your home plane when you cast this spell, nonchaotic extraplanar creatures within the area are instantly banished back to their home planes. Creatures so banished cannot return for at least 24 hours. This effect takes place regardless of whether the creatures hear the word of chaos. The banishment effect allows a Will save (at a -4 penalty) to negate.  Creatures whose HD exceed your caster level are unaffected by word of chaos."
   short_description: "Kills, confuses, stuns, or deafens nonchaotic subjects."
 }
-school: EVOACATION
+school: EVOCATION
 summary: "Any nonchaotic creatures 40 ft hearing the word of chaos is deafend for 1d4 rounds (up to $level HD), stunned for 1 round (up to level [[$level - 1]]), confused (\\Reference{spell}{Confusion}) for 1d10 min (up to [[$level - 5]] HD),  killed or destroyed (up to [[$level - 10]] HD). Nonchaotic extraplanar creatures are banished (Will [[10 + 7 + $ability]] cannot return for 24 hours)"
 descriptor: CHAOTIC
 descriptor: SONIC

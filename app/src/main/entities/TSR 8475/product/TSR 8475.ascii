@@ -42,7 +42,7 @@ style: PAPERBACK
 number: "Book One"
 series: "Maztica Trilogy"
 price {
-  currency: "\302\254\302\243 "
+  currency: "£ "
   number: 499
   precision: 100
 }

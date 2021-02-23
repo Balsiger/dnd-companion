@@ -2,6 +2,7 @@ package net.ixitxachitls.companion.data.templates.values;
 
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.data.enums.MetaMagic;
 import net.ixitxachitls.companion.data.templates.AdventureTemplate;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
@@ -14,10 +15,10 @@ public class SpellGroup {
   private final int casterLevel;
   private final int abilityBonus;
   private Value.SpellClass spellClass;
-  private final ImmutableList<String> spells;
+  private final ImmutableList<SpellReference> spells;
 
   public SpellGroup(String name, int casterLevel, int abilityBonus, Value.SpellClass spellClass,
-                    ImmutableList<String> spells) {
+                    ImmutableList<SpellReference> spells) {
     this.name = name;
     this.casterLevel = casterLevel;
     this.abilityBonus = abilityBonus;
@@ -41,7 +42,7 @@ public class SpellGroup {
     return spellClass;
   }
 
-  public ImmutableList<String> getSpells() {
+  public ImmutableList<SpellReference> getSpells() {
     return spells;
   }
 
@@ -54,7 +55,33 @@ public class SpellGroup {
     return new SpellGroup(proto.getName(), proto.getCasterLevel(), proto.getAbilityBonus(),
         proto.getSpellClass(),
         proto.getSpellList().stream()
-            .map(p -> p.getName())
+            .map(SpellReference::fromProto)
             .collect(ImmutableList.toImmutableList()));
+  }
+
+  public static class SpellReference {
+    private final String name;
+    private final ImmutableList<MetaMagic> metaMagics;
+
+    public SpellReference(String name, ImmutableList<MetaMagic> metaMagics) {
+      this.name = name;
+      this.metaMagics = metaMagics;
+    }
+
+    public ImmutableList<MetaMagic> getMetaMagics() {
+      return metaMagics;
+    }
+
+    public String getName() {
+      return name;
+    }
+
+    public static SpellReference fromProto(
+        Template.AdventureTemplateProto.Encounter.SpellGroup.SpellReference proto) {
+      return new SpellReference(proto.getName(),
+          proto.getMetaMagicList().stream()
+              .map(MetaMagic::fromProto)
+              .collect(ImmutableList.toImmutableList()));
+    }
   }
 }

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "\\Spell{Barkskin} toughens a creature\342\200\232\303\204\303\264s skin. The effect grants a +2 enhancement bonus to the creature\342\200\232\303\204\303\264s existing natural armor bonus. This enhancement bonus increases by 1 for every three caster levels above 3rd, to a maximum of +5 at caster level 12th.  The enhancement bonus provided by \\Spell{barkskin} stacks with the target\342\200\232\303\204\303\264s natural armor bonus, but not with other enhancement bonuses to natural armor. A creature without natural armor has an effective natural armor bonus of +0, much as a character wearing only normal clothing has an armor bonus of +0."
+  description: "\\Spell{Barkskin} toughens a creature's skin. The effect grants a +2 enhancement bonus to the creature's existing natural armor bonus. This enhancement bonus increases by 1 for every three caster levels above 3rd, to a maximum of +5 at caster level 12th.  The enhancement bonus provided by \\Spell{barkskin} stacks with the target's natural armor bonus, but not with other enhancement bonuses to natural armor. A creature without natural armor has an effective natural armor bonus of +0, much as a character wearing only normal clothing has an armor bonus of +0."
   short_description: "Grants +2 (or higher) enhancement to natural armor."
 }
 school: TRANSMUTATION
@@ -31,12 +31,13 @@ components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
 }
-special_range: TOUCHtarget: "Living creature touched"
+special_range: TOUCH
+target: "Living creature touched"
 duration {
   duration {
     minutes: 10
   }
   levels: "level"
-  }
+}
 saving_throw: "None"
 spell_resistance: "Yes (harmless)"

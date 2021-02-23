@@ -4,7 +4,7 @@ template {
   category: "Adventure"
   world: "Generic"
   description: "The \\Place{Underdark} is a subterranean wonderland, a vast and twisted labyrinth where fear reigns. It is the home of horrific monsters that have never seen the light of day. \n\nIt is here that the \\Monster{dark elf} \\NPC{Gromph Baenre}, Archmage of \\Place{Menzoberranzan}, casts a foul spell meant to ignite a magical energy that suffuses the \\Place{Underdark} and tears open portals to the demonic \\Place{Abyss}. What steps through surprises even him, and from that moment on, the insanity that pervades the \\Place{Underdark} escalates and threatens to shake the \\Place{Forgotten Realms} to its foundations. Stop the madness before it consumes you!"
-  short_description: "Dare to descend into the \\Place{Underdark} in this adventure for the world\342\200\231s greatest roleplaying game! "
+  short_description: "Dare to descend into the \\Place{Underdark} in this adventure for the world's greatest roleplaying game! "
 }
 title: "Out of the Abyss"
 subtitle: "Madness is the Only Escape"

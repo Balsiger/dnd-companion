@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Because of the negative energy that suffuses its frame, a kir-lanan is vulnerable to attacks using positive energy, just as undead are. It takes damage from cure spells, holy water, and blessed weapons. It cannot be turned, but it is uncomfortable around such displays of positive energy and generally seeks to avoid a turning cleric anyway. \n\nLike undead, a kir-lanan is healed by inflict spells and other applications of negative energy. It gains 5 temporary hit points for each negative level it would gain from an energy drain effect, such as enervation, energy drain, or a shadow dragon\342\200\232\303\204\303\264s breath weapon."
+  description: "Because of the negative energy that suffuses its frame, a kir-lanan is vulnerable to attacks using positive energy, just as undead are. It takes damage from cure spells, holy water, and blessed weapons. It cannot be turned, but it is uncomfortable around such displays of positive energy and generally seeks to avoid a turning cleric anyway. \n\nLike undead, a kir-lanan is healed by inflict spells and other applications of negative energy. It gains 5 temporary hit points for each negative level it would gain from an energy drain effect, such as enervation, energy drain, or a shadow dragon's breath weapon."
 }
 type: EXTRAORDINARY

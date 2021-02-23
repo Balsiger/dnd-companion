@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The creature has a +4 racial bonus on checks to influence a rat\342\200\232\303\204\303\264s attitude. She can communicate simple concepts and (if the animal is friendly) commands."
+  description: "The creature has a +4 racial bonus on checks to influence a rat's attitude. She can communicate simple concepts and (if the animal is friendly) commands."
 }
 type: EXTRAORDINARY

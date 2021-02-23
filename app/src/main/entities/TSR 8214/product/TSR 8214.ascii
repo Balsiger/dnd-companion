@@ -24,7 +24,7 @@ system: NONE
 audience: ALL
 type: NOVEL
 price {
-  currency: "\302\254\302\243 "
+  currency: "£ "
   number: 250
   precision: 100
 }

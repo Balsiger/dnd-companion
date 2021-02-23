@@ -1,7 +1,7 @@
 template {
   name: "WTC 25393"
   world: "Forgotten Realms"
-  description: "... shook its head wildly, and \\NPC{Guenhwyvar} went flying away. Then the beast swung its head back into the room with battering ram force at \\NPC{Drizzt}, a blow that would have killed him had it hit him squarely.\n                    But no one ever hit ...\n                    \\Large{\\NPC{DRIZZT DO\342\200\232\303\204\303\264URDEN}}\n                    ... squarely.\n                    As the head swung in, \\NPC{Drizzt} dived over sideways, just ahead of it. Still, the sheer weight of the glancing blow had him rolling in an attempt to absorb the force, until he ran out of room, coming up hard into the wrecked chamber\342\200\232\303\204\303\264s side wall, a burst of embers flying up behind him.\n                    Stung and a bit dazed, but hardly down, \\NPC{Drizzt} rushed back at the beast...."
+  description: "... shook its head wildly, and \\NPC{Guenhwyvar} went flying away. Then the beast swung its head back into the room with battering ram force at \\NPC{Drizzt}, a blow that would have killed him had it hit him squarely.\n                    But no one ever hit ...\n                    \\Large{\\NPC{DRIZZT DO'URDEN}}\n                    ... squarely.\n                    As the head swung in, \\NPC{Drizzt} dived over sideways, just ahead of it. Still, the sheer weight of the glancing blow had him rolling in an attempt to absorb the force, until he ran out of room, coming up hard into the wrecked chamber's side wall, a burst of embers flying up behind him.\n                    Stung and a bit dazed, but hardly down, \\NPC{Drizzt} rushed back at the beast...."
   short_description: "Transitions III"
 }
 title: "Ghost King"

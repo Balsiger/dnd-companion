@@ -6,8 +6,8 @@ template {
   synonym: "Silver Elf"
   synonym: "Elf, Silver"
   world: "Forgotten Realms"
-  description: "Moon elves are the most common sort of elves in \\Place{Faer\303\273n}, also called silver elves, they have fair skin (sometimes tinged with blue) and hair of silver-white, black, or blue, (Humanlike colors are rare, but possible.) Their eyes are blue or green, with gold flecks. They are the elven subrace most tolerant of humankind, and most half-elves are descended from moon elves.\n\nRegions: Moon elven domains can.be found in the woodlands of the \\Place{Dalelands} (in \\Place{Cormanthor}), \\Place{Evermeet}, the \\Place{High Forest}, the \\Place{North}, \\Place{Silverymoon}, and the \\Place{Western Heartlands}. \\Place{Evereska}, on the western edges of \\Place{Anauroch}, is the strongest elven domain remaining in Faer\303\273n. The moon elf entry describes characters from any small elven forest community.\n\n"
-  short_description: "The most common sort of elves in \\Place{Faer\303\273n}."
+  description: "Moon elves are the most common sort of elves in \\Place{Faerûn}, also called silver elves, they have fair skin (sometimes tinged with blue) and hair of silver-white, black, or blue, (Humanlike colors are rare, but possible.) Their eyes are blue or green, with gold flecks. They are the elven subrace most tolerant of humankind, and most half-elves are descended from moon elves.\n\nRegions: Moon elven domains can.be found in the woodlands of the \\Place{Dalelands} (in \\Place{Cormanthor}), \\Place{Evermeet}, the \\Place{High Forest}, the \\Place{North}, \\Place{Silverymoon}, and the \\Place{Western Heartlands}. \\Place{Evereska}, on the western edges of \\Place{Anauroch}, is the strongest elven domain remaining in Faerûn. The moon elf entry describes characters from any small elven forest community.\n\n"
+  short_description: "The most common sort of elves in \\Place{Faerûn}."
 }
 language {
   modifier: AUTOMATIC

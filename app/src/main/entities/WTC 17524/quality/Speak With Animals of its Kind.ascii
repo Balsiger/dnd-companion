@@ -1,7 +1,7 @@
 template {
   name: "Speak With Animals of its Kind"
   reference {
-    name: "WTC 1754"
+    name: "WTC 17524"
     pages {
       low: 53
       high: 53

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Howlers live on planes where chaos and evil hold sway; they originate on the plane of Pandemonium. These beasts hunt in packs, racing through caverns to wear down their prey and rend it to bits.\n\nA howler is about 8 feet long and weighs about 2,000 pounds.\n\nAlthough they are surprisingly intelligent, howlers do not speak\342\200\224they only howl. If there is a language within the howls, as some have suggested, even spells cannot decipher it. Howlers understand Abyssal."
+  description: "Howlers live on planes where chaos and evil hold sway; they originate on the plane of Pandemonium. These beasts hunt in packs, racing through caverns to wear down their prey and rend it to bits.\n\nA howler is about 8 feet long and weighs about 2,000 pounds.\n\nAlthough they are surprisingly intelligent, howlers do not speak - they only howl. If there is a language within the howls, as some have suggested, even spells cannot decipher it. Howlers understand Abyssal."
   short_description: "A gaunt, bestial hound with quills."
 }
 size {
@@ -132,7 +132,7 @@ language {
   name: ABYSSAL
 }
 encounter: "This creature looks like some gaunt, bestial hound or feline, with a mane of bristling quills."
-combat: "Howlers attack in groups, for they are cowardly and cruel. They prefer to charge into combat, race out, and then charge in again. A howler\342\200\231s natural weapons, as well as any weapons it wields, are treated as chaotic-aligned and evil-aligned for the purpose of over- coming damage reduction."
+combat: "Howlers attack in groups, for they are cowardly and cruel. They prefer to charge into combat, race out, and then charge in again. A howler's natural weapons, as well as any weapons it wields, are treated as chaotic-aligned and evil-aligned for the purpose of over- coming damage reduction."
 skill {
   name: "Climb"
 }

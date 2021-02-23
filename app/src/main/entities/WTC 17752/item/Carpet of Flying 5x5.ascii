@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This rug is able to fly through the air as if affected by an overland flight spell of unlimited duration. The size, carrying capacity, and speed of the different carpets of flyingare shown on the table below. Beautifully and intricately made, each carpet has its own command word to activate it\342\200\232\303\204\303\256if the device is within voice range, the command word activates it, whether the speaker is on the rug or not. The carpet is then controlled by spoken directions. \n\nThe carpet can carry 200 lbs and has a speed of 40 ft. A carpet of flying can carry up to double its capacity, but doing so reduces its speed to 30 feet. It has average maneuverability, but a carpet of flying can still hover"
+  description: "This rug is able to fly through the air as if affected by an overland flight spell of unlimited duration. The size, carrying capacity, and speed of the different carpets of flyingare shown on the table below. Beautifully and intricately made, each carpet has its own command word to activate it - if the device is within voice range, the command word activates it, whether the speaker is on the rug or not. The carpet is then controlled by spoken directions. \n\nThe carpet can carry 200 lbs and has a speed of 40 ft. A carpet of flying can carry up to double its capacity, but doing so reduces its speed to 30 feet. It has average maneuverability, but a carpet of flying can still hover"
   short_description: "A carpet that can fly."
 }
 value {

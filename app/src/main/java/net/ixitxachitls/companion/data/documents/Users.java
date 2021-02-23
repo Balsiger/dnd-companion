@@ -24,7 +24,9 @@ package net.ixitxachitls.companion.data.documents;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.CompanionContext;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -32,8 +34,14 @@ import java.util.Optional;
  * Collection allowing access to user data.
  */
 public class Users extends Documents<Users> {
+  @FunctionalInterface
+  public interface Callback {
+    public void call();
+  }
+
   private Optional<User> me = Optional.empty();
   private Map<String, User> usersById = new HashMap<>();
+  private List<Callback> loginCallbacks = new ArrayList<>();
 
   public Users(CompanionContext context) {
     super(context);
@@ -77,5 +85,16 @@ public class Users extends Documents<Users> {
     });
 
     usersById.put(me.get().getId(), me.get());
+    for (Callback callback : loginCallbacks) {
+      callback.call();
+    }
+  }
+
+  public void executeAfterLoggingIn(Callback callback) {
+    if (me.isPresent()) {
+      callback.call();
+    } else {
+      loginCallbacks.add(callback);
+    }
   }
 }

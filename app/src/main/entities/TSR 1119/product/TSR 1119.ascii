@@ -25,7 +25,7 @@ audience: ALL
 type: BOOSTER_PACK
 style: BOX
 price {
-  currency: "\302\254\302\243 "
+  currency: "£ "
   number: 199
   precision: 100
 }

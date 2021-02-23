@@ -28,7 +28,7 @@ style: HARDCOVER
 number: "Book Three"
 series: "Legacy of the Drow"
 price {
-  currency: "\302\254\302\243"
+  currency: "£"
   number: 1099
   precision: 100
 }

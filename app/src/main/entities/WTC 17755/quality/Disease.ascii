@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Filth fever\342\200\232\303\204\303\256bite, Fortitude DC 11, incubation period 1d3 days, damage 1d3 Dex and 1d3 Con. The save DC is Constitution-based."
+  description: "Filth fever - bite, Fortitude DC 11, incubation period 1d3 days, damage 1d3 Dex and 1d3 Con. The save DC is Constitution-based."
 }
 type: EXTRAORDINARY

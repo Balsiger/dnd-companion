@@ -20,12 +20,12 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_campaign"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
   <view
@@ -33,7 +33,7 @@
       class="net.ixitxachitls.companion.ui.views.CampaignTitleView"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:transitionName="sharedMove"/>
+      android:transitionName="sharedMove" />
 
   <TextView
       android:id="@+id/date"
@@ -43,7 +43,7 @@
       android:layout_marginTop="-2dp"
       android:background="@color/campaignLight"
       android:padding="10dp"
-      android:theme="@style/SmallText"/>
+      android:theme="@style/SmallText" />
 
   <fragment
       android:id="@+id/party"
@@ -52,7 +52,7 @@
       android:layout_height="wrap_content"
       android:layout_above="@+id/actionsContainer"
       android:layout_below="@+id/date"
-      android:tag="party"/>
+      android:tag="party" />
 
   <fragment
       android:id="@+id/encounter"
@@ -61,6 +61,6 @@
       android:layout_height="match_parent"
       android:layout_above="@+id/actionsContainer"
       android:layout_below="@+id/date"
-      android:tag="encounter"/>
+      android:tag="encounter" />
 
 </RelativeLayout>

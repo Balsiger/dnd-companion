@@ -1,0 +1,43 @@
+template {
+  name: "Steeldance"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 144
+      high: 145
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{You place the two daggers in your outstretched palm and cast the spell. They rise from your hands, glowing with a dim blue radiance.}\n\nThe two daggers hover about you, attacking foes that come near.\n\nOn your turn, each blade can make an attack at an adjacent opponent, with an attack bonus equal to your caster level + your relevant ability modifier. The damage they deal is equal to the normal weapon damage (1d4 for daggers) + your ability modifier (Intelligence for wizards and Charisma for sorcerers). The weapons are treated as magic for the purpose of overcoming damage reduction.\n\nYour blades can be attacked with sunder or disarm attempts as if you were wielding them, and they use the above attack bonus to resolve such situations. Disarming a weapon under the effect of \\Spell{steeldance} ends the spell for that weapon."
+  short_description: "Let two blades attack your foes."
+}
+school: TRANSMUTATION
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+  component: "Two bladed weapons, such as daggers or longswords."
+}
+casting_time {
+  standard_actions: 1
+}
+special_range: MEDIUM
+target: "Two swords or daggers"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+}
+saving_throw: "None"
+spell_resistance: "No"
+
+

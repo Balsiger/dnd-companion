@@ -23,7 +23,8 @@ components: SOMATIC
 components: DIVINE_FOCUS
 casting_time {
   standard_actions: 1
-}area: "10-ft.-radius emanation, centered on you"
+}
+area: "10-ft.-radius emanation, centered on you"
 duration {
   duration {
     minutes: 10

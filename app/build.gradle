@@ -37,6 +37,17 @@ android {
       || ':app:bundleRelease' in gradle.startParameter.taskNames) {
     version['VERSION'] = (version['VERSION'].toInteger() + 1).toString()
     version['ENTITIES'] = (fileTree(dir: 'src/main/assets/entities').getFiles().size()).toString()
+    version['ENTITIES_MONSTER'] = (fileTree(dir: 'src/main/assets/entities', include: '**/monster/*').getFiles().size()).toString()
+    version['ENTITIES_LEVEL'] = (fileTree(dir: 'src/main/assets/entities', include: '**/level/*').getFiles().size()).toString()
+    version['ENTITIES_WORLD'] = (fileTree(dir: 'src/main/assets/entities', include: '**/world/*').getFiles().size()).toString()
+    version['ENTITIES_ITEM'] = (fileTree(dir: 'src/main/assets/entities', include: '**/item/*').getFiles().size()).toString()
+    version['ENTITIES_FEAT'] = (fileTree(dir: 'src/main/assets/entities', include: '**/feat/*').getFiles().size()).toString()
+    version['ENTITIES_MINIATURE'] = (fileTree(dir: 'src/main/assets/entities', include: '**/miniature/*').getFiles().size()).toString()
+    version['ENTITIES_SKILL'] = (fileTree(dir: 'src/main/assets/entities', include: '**/skill/*').getFiles().size()).toString()
+    version['ENTITIES_SPELL'] = (fileTree(dir: 'src/main/assets/entities', include: '**/spell/*').getFiles().size()).toString()
+    version['ENTITIES_QUALITY'] = (fileTree(dir: 'src/main/assets/entities', include: '**/quality/*').getFiles().size()).toString()
+    version['ENTITIES_ADVENTURE'] = (fileTree(dir: 'src/main/assets/entities', include: '**/adventure/*').getFiles().size()).toString()
+    version['ENTITIES_PRODUCT'] = (fileTree(dir: 'src/main/assets/entities', include: '**/product/*').getFiles().size()).toString()
     version.store(versionFile.newWriter(), null)
   }
 
@@ -64,6 +75,17 @@ android {
       resValue("string", "app_version", version['NAME'])
       resValue("string", "app_build", version['VERSION'])
       resValue("integer", "app_entities", version['ENTITIES'])
+      resValue("integer", "app_entities_monster", version['ENTITIES_MONSTER'])
+      resValue("integer", "app_entities_level", version['ENTITIES_LEVEL'])
+      resValue("integer", "app_entities_world", version['ENTITIES_WORLD'])
+      resValue("integer", "app_entities_item", version['ENTITIES_ITEM'])
+      resValue("integer", "app_entities_feat", version['ENTITIES_FEAT'])
+      resValue("integer", "app_entities_miniature", version['ENTITIES_MINIATURE'])
+      resValue("integer", "app_entities_skill", version['ENTITIES_SKILL'])
+      resValue("integer", "app_entities_spell", version['ENTITIES_SPELL'])
+      resValue("integer", "app_entities_quality", version['ENTITIES_QUALITY'])
+      resValue("integer", "app_entities_adventure", version['ENTITIES_ADVENTURE'])
+      resValue("integer", "app_entities_product", version['ENTITIES_PRODUCT'])
     }
 
     debug {
@@ -72,6 +94,17 @@ android {
       resValue("string", "app_version", version['NAME'])
       resValue("string", "app_build", version['VERSION'] + ' (DEBUG)')
       resValue("integer", "app_entities", version['ENTITIES'])
+      resValue("integer", "app_entities_monster", version['ENTITIES_MONSTER'])
+      resValue("integer", "app_entities_level", version['ENTITIES_LEVEL'])
+      resValue("integer", "app_entities_world", version['ENTITIES_WORLD'])
+      resValue("integer", "app_entities_item", version['ENTITIES_ITEM'])
+      resValue("integer", "app_entities_feat", version['ENTITIES_FEAT'])
+      resValue("integer", "app_entities_miniature", version['ENTITIES_MINIATURE'])
+      resValue("integer", "app_entities_skill", version['ENTITIES_SKILL'])
+      resValue("integer", "app_entities_spell", version['ENTITIES_SPELL'])
+      resValue("integer", "app_entities_quality", version['ENTITIES_QUALITY'])
+      resValue("integer", "app_entities_adventure", version['ENTITIES_ADVENTURE'])
+      resValue("integer", "app_entities_product", version['ENTITIES_PRODUCT'])
     }
   }
   packagingOptions {
@@ -201,14 +234,26 @@ ext.convertToBinaryProto = { inputFile, outputFile, proto ->
 
 ext.convertToBinaryProtos = { input, type, proto ->
   FileTree entities = fileTree(input)
+
   FileTree filtered = entities.matching {
     include "**/${type}/*.ascii"
   }
 
-  filtered.files.each { f ->
-    convertToBinaryProto(f, f.path.replaceFirst(/[^\/\\]*[\/\\]([^\\\/]*[\/\\]${type}[\\\/].*)\.ascii$/, {
-      all, path -> "assets/entities/" + path + ".pb"
-    }), proto)
+  filtered.files.each {f ->
+    if (type == 'product') {
+      String dir = f.path.replaceFirst(/([^\/\\]*[\/\\][^\\\/]*[\/\\])${type}.*/, {
+        all, dir -> dir
+      });
+      if (fileTree(dir).files.size() > 1) {
+        convertToBinaryProto(f, f.path.replaceFirst(/[^\/\\]*[\/\\]([^\\\/]*[\/\\]${type}[\\\/].*)\.ascii$/, {
+          all, path -> "assets/entities/" + path + ".pb"
+        }), proto)
+      }
+    } else {
+      convertToBinaryProto(f, f.path.replaceFirst(/[^\/\\]*[\/\\]([^\\\/]*[\/\\]${type}[\\\/].*)\.ascii$/, {
+        all, path -> "assets/entities/" + path + ".pb"
+      }), proto)
+    }
   }
 }
 

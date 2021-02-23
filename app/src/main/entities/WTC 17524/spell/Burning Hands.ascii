@@ -11,7 +11,7 @@ template {
   description: "A cone of searing flame shoots from your fingertips. Any creature in the area of the flames takes 1d4 points of fire damage per caster level (maximum 5d4). Flammable materials, such as cloth, paper, parchment, and thin wood burn if the flames touch them. A character can extinguish burning items as a full-round action."
   short_description: "1d4/level fire damage (max 5d4)."
 }
-school: EVOACATION
+school: EVOCATION
 summary: "[[min($level, 5)]]d4 fire damage in 15 ft cone, Ref $dc for half"
 descriptor: FIRE
 level {

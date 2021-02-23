@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:id="@+id/main"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBack"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
   <ScrollView
       android:id="@+id/campaignsScroll"
@@ -25,7 +26,7 @@
           app:color="@color/primary"
           app:dark="true"
           app:subtitle="loading..."
-          app:title="[ Nickname ]"/>
+          app:title="[ Nickname ]" />
 
       <TextView
           android:id="@+id/note"
@@ -33,14 +34,13 @@
           android:layout_height="wrap_content"
           android:padding="20dp"
           android:text="Tell your DM to invite you to his campaign or create your own!\nYou can also create a character now and move it into a campaign later."
-          android:theme="@style/LargeText"
-          />
+          android:theme="@style/LargeText" />
 
       <LinearLayout
           android:id="@+id/campaigns"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:orientation="vertical"/>
+          android:orientation="vertical" />
 
       <LinearLayout
           android:id="@+id/characters"
@@ -57,7 +57,7 @@
           android:layout_gravity="center_horizontal"
           android:layout_marginStart="20dp"
           android:layout_marginTop="20dp"
-          android:layout_marginEnd="20dp"/>
+          android:layout_marginEnd="20dp" />
 
       <LinearLayout
           android:layout_width="wrap_content"
@@ -70,19 +70,19 @@
             android:id="@+id/version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_version"/>
+            android:text="@string/app_version" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="#"/>
+            android:text="#" />
 
         <TextView
             android:id="@+id/build"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_build"/>
+            android:text="@string/app_build" />
       </LinearLayout>
 
     </LinearLayout>
@@ -113,7 +113,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/miniatures"/>
+        app:srcCompat="@drawable/miniatures" />
 
     <ImageButton
         android:id="@+id/products"
@@ -138,7 +138,7 @@
         app:backgroundTint="@color/campaign"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_add_black_24dp"/>
+        app:srcCompat="@drawable/ic_add_black_24dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/character_add"
@@ -149,7 +149,7 @@
         app:backgroundTint="@color/character"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/campaign_add"
-        app:srcCompat="@drawable/ic_add_black_24dp"/>
+        app:srcCompat="@drawable/ic_add_black_24dp" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

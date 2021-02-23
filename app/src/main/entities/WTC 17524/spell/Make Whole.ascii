@@ -24,5 +24,3 @@ special_range: CLOSE
 target: "One object of up to 10 cu. ft/level"
 saving_throw: "None"
 spell_resistance: "No"
-saving_throw: "None"
-spell_resistance: "No"

@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Taharak\342\200\232\303\204\303\264s touch acts as a rod of withering, dealing 1d4 points of Strength damage and 1d4 points of Constitution damage with a successful incorporeal touch attack (Fort DC 28 negates). If Taharak scores a critical hit, the damage is Constitution drain instead."
+  description: "Taharak's touch acts as a rod of withering, dealing 1d4 points of Strength damage and 1d4 points of Constitution damage with a successful incorporeal touch attack (Fort DC 28 negates). If Taharak scores a critical hit, the damage is Constitution drain instead."
 }
 type: SUPERNATURAL

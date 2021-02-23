@@ -21,7 +21,7 @@ type: RULEBOOK
 style: BOX
 producer: "TSR"
 price {
-  currency: "\302\254\302\243"
+  currency: "£"
   number: 2150
   precision: 100
 }

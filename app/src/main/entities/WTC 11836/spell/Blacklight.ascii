@@ -1,0 +1,50 @@
+template {
+  name: "Blacklight"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 68
+      high: 68
+    }
+  }
+  world: "Forgotten Realms"
+  description: "You create an area of total darkness. The darkness is impenetrable to normal vision and darkvision, but you can see normally within the blacklit area. Creatures outside the spell's area, even you, cannot see through it.\n\nYou can cast the spell on a point in space, but the effect is stationary unless you cast it cast on a mobile object. You can cast the spell on a creature, and the effect then radiates from the creature and moves as it moves. Unattended objects and points in space do not get saving throws or benefit from spell resistance.\n\n\\Spell{Blacklight} counters or dispels any light spell of equal or lower level, such as \\Spell{daylight}. The 3rd-level cleric Spell \\Spell{daylight} counters or dispels \\Spell{blacklight}."
+  short_description: "Create an area of total darkness you can see in (but not through)."
+}
+school: EVOCATION
+descriptor: DARKNESS
+
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+level {
+  spell_class: DARKNESS
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+  component: "A piece of coal"
+  component: "A dried eyeball of any creature"
+}
+casting_time {
+  standard_actions: 1
+}
+special_range: CLOSE
+area: "A 20-ft.-radius emanation centered on a creature, object, or point in space"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+}
+saving_throw: "Will negates or None (object)"
+spell_resistance: "Yes or No (object)"
+
+

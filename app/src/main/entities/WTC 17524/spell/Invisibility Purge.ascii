@@ -11,7 +11,7 @@ template {
   description: "You surround yourself with a sphere of power with a radius of 5 feet per caster level that negates all forms of invisibility.  Anything invisible becomes visible while in the area."
   short_description: "Dispels invisibility within 5 ft./level."
 }
-school: EVOACATION
+school: EVOCATION
 summary: "$level min (D),[[5 * $level]] ft sphere negating all forms of invisibility."
 level {
   spell_class: CLERIC

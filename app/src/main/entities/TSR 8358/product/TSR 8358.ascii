@@ -30,7 +30,7 @@ audience: ALL
 type: NOVEL
 style: HARDCOVER
 price {
-  currency: "\302\254\302\243"
+  currency: "£"
   number: 1399
   precision: 100
 }

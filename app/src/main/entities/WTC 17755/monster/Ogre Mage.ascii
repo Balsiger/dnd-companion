@@ -101,7 +101,7 @@ language {
   name: GIANT
 }
 encounter: "This creature looks like a big, demonic human. It has green skin, dark hair, and a pair of short ivory horns protruding from its forehead. The eyes are dark with strikingly white pupils, and its teeth and claws are jet black."
-combat: "Ogre mages rely on their spell-like abilities, resorting to physical combat only when necessary. When faced with obviously superior forces, they prefer to retreat using gaseous form rather than fight a losing battle. Ogre mages hold deep, abiding grudges, however, and the unwise person who crosses one would do well to keep looking over one\342\200\231s shoulder"
+combat: "Ogre mages rely on their spell-like abilities, resorting to physical combat only when necessary. When faced with obviously superior forces, they prefer to retreat using gaseous form rather than fight a losing battle. Ogre mages hold deep, abiding grudges, however, and the unwise person who crosses one would do well to keep looking over one's shoulder"
 possession {
   text: "large greatsword"
   count {

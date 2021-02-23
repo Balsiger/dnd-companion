@@ -11,9 +11,9 @@ template {
   description: "You can cut or lift a purse and hide it on your person, palm an unattended object, hide a light weapon in your clothing, or perform some feat of legerdemain with an object no larger than a hat or a loaf of bread."
 }
 ability: DEXTERITY
-action: "Any Sleight of Hand check normally is a standard action.                     However, you may perform a Sleight of Hand check as a free                     action by taking a \342\200\232\303\204\303\25420 penalty on the check."
+action: "Any Sleight of Hand check normally is a standard action.                     However, you may perform a Sleight of Hand check as a free                     action by taking a -20 penalty on the check."
 special: "If you have the Deft Hands feat, you get a +2 bonus on                     Sleight of Hand checks."
-untrained: "An untrained Sleight of Hand check is simply a Dexterity                     check. Without actual training, you can\342\200\232\303\204\303\264t succeed on any                     Sleight of Hand check with a DC higher than 10, except for                     hiding an object on your body."
+untrained: "An untrained Sleight of Hand check is simply a Dexterity                     check. Without actual training, you can't succeed on any                     Sleight of Hand check with a DC higher than 10, except for                     hiding an object on your body."
 restriction: TRAINED_ONLY
 restriction: ARMOR_CHECK_PENALTY
 synergy {

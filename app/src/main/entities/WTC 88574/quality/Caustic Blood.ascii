@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "A quth-maren\342\200\232\303\204\303\264s natural attacks deal an additional 1d6 points of acid damage from the creature\342\200\232\303\204\303\264s caustic blood. Any creature hitting a quth-maren with natural weapons or unarmed attacks also takes 1d6 points of acid damage."
+  description: "A quth-maren's natural attacks deal an additional 1d6 points of acid damage from the creature's caustic blood. Any creature hitting a quth-maren with natural weapons or unarmed attacks also takes 1d6 points of acid damage."
 }
 type: EXTRAORDINARY

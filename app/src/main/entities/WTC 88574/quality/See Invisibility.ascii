@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "This ability functions like a \\SpellRef{see invisibility} spell, except that it is always active and its range extends to the limit of the jade spider\342\200\232\303\204\303\264s vision."
+  description: "This ability functions like a \\SpellRef{see invisibility} spell, except that it is always active and its range extends to the limit of the jade spider's vision."
 }
 type: SUPERNATURAL

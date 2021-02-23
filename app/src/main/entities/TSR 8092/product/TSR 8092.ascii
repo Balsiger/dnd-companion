@@ -26,7 +26,7 @@ number: "Book Five"
 series: "New Series"
 series: "Wildspace"
 price {
-  currency: "\302\254\302\243 "
+  currency: "£ "
   number: 399
   precision: 100
 }

@@ -38,7 +38,7 @@ style: PACK
 producer: "TSR"
 series: "Trading Cards"
 price {
-  currency: "\302\254\302\243 "
+  currency: "£"
   number: 80
   precision: 100
 }

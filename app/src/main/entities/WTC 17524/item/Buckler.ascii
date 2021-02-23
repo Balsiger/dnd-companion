@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This small metal shield is worn strapped to your forearm.  You can use a bow or crossbow without penalty while carrying it. You can also use your shield arm to wield a weapon (whether you are using an off-hand weapon or using your off hand to help wield a two-handed weapon), but you take a \342\210\232\302\242\302\254\303\204\302\254\303\2541 penalty on attack rolls while doing so because of the extra weight on your arm. This penalty stacks with those that may apply for fighting with your off hand and for fighting with two weapons. In any case, if you use a weapon in your off hand, you don\'t get the buckler\'s AC bonus for the rest of the round."
+  description: "This small metal shield is worn strapped to your forearm.  You can use a bow or crossbow without penalty while carrying it. You can also use your shield arm to wield a weapon (whether you are using an off-hand weapon or using your off hand to help wield a two-handed weapon), but you take a -1 penalty on attack rolls while doing so because of the extra weight on your arm. This penalty stacks with those that may apply for fighting with your off hand and for fighting with two weapons. In any case, if you use a weapon in your off hand, you don\'t get the buckler\'s AC bonus for the rest of the round."
   short_description: "A small metal shield to be strapped to your forearm."
 }
 value {

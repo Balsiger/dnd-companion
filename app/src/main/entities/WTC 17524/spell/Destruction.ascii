@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell instantly slays the subject and consumes its remains (but not its equipment and possessions) utterly. If the target\342\200\232\303\204\303\264s Fortitude saving throw succeeds, it instead takes 10d6 points of damage. The only way to restore life to a character who has failed to save against this spell is to use true resurrection, a carefully worded wish spell followed by resurrection, or miracle.  Focus: A special holy (or unholy) symbol of silver marked with verses of anathema (cost 500 gp)."
+  description: "This spell instantly slays the subject and consumes its remains (but not its equipment and possessions) utterly. If the target's Fortitude saving throw succeeds, it instead takes 10d6 points of damage. The only way to restore life to a character who has failed to save against this spell is to use true resurrection, a carefully worded wish spell followed by resurrection, or miracle.  Focus: A special holy (or unholy) symbol of silver marked with verses of anathema (cost 500 gp)."
   short_description: "Kills subject and destroys remains."
 }
 school: NECROMANCY

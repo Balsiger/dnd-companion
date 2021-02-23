@@ -1,0 +1,40 @@
+template {
+  name: "Shadow Well"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 144
+      high: 144
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{You spit out the words of the spell, and the shadow of your foe darkens, becoming a solid black pit. Your opponent pinwheels its arms as it topples backward into the darkness.}\n\nYou cause the target’s shadow to become a temporary gateway to a pocket realm within the Plane of Shadow. The target must make a Will save or be pulled into the gateway. Inside the pocket realm, the creature sees a deserted, gloomy duplicate of the real world, while shadowy phantasms stalk and taunt it without causing actual harm. Each round, the creature can attempt another Will save to return from the \\Spell{shadow well}. Otherwise, the subject returns to the real world when the spell’s duration expires.\n\nBeing trapped in a shadow well can be terrifying; upon returning to the real world, the subject must succeed on another Will save or be frightened for 1d4 rounds.\n\nUpon leaving the pocket realm, the subject reappears in the spot it had been in when the shadow well spell was cast. If this spot is filled with a solid object, the subject appears in the nearest adjacent empty space.\n\nSpells and abilities that move a creature within a plane, such as \\Spell{teleport} and \\Spell{dimension door}, do not help a creature escape a \\Spell{shadow well} spell, although a \\Spell{plane shift} spell allows it to flee to another plane as normal. The target might still become frightened upon leaving."
+  short_description: "Traps the target in its own shadow."
+}
+school: ILLUSION
+subschool: SHADOW
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+casting_time {
+  standard_actions: 1
+}
+special_range: CLOSE
+target: "One creature"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+}
+saving_throw: "Will negates; see text"
+spell_resistance: "Yes"
+
+

@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
+import android.os.Debug;
 import android.transition.ChangeBounds;
 import android.transition.Fade;
 import android.view.View;
@@ -29,6 +30,7 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Monster;
@@ -37,6 +39,7 @@ import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
 import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
+import net.ixitxachitls.companion.ui.fragments.LoadingFragment;
 import net.ixitxachitls.companion.ui.fragments.LocalCharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.MiniaturesFragment;
 import net.ixitxachitls.companion.ui.fragments.MonsterFragment;
@@ -72,6 +75,7 @@ public class CompanionFragments {
   private Optional<MiniaturesFragment> miniaturesFragment = Optional.empty();
   private Optional<ProductsFragment> productsFragment = Optional.empty();
   private Optional<MonsterFragment> monsterFragment = Optional.empty();
+  private Optional<LoadingFragment> loadingFragment = Optional.empty();
 
   private CompanionFragments(CompanionContext context, FragmentManager fragmentManager) {
     this.context = context;
@@ -108,7 +112,7 @@ public class CompanionFragments {
       show(currentFragment.get(), Optional.empty());
     } else {
       // Show the default campaign to be able to come back to it.
-      show(CompanionFragment.Type.campaigns, Optional.empty());
+      show(CompanionFragment.Type.loading, Optional.empty());
     }
   }
 
@@ -163,6 +167,12 @@ public class CompanionFragments {
           monsterFragment = Optional.of(new MonsterFragment());
         }
         return show(monsterFragment.get(), sharedElement);
+
+      case loading:
+        if (!loadingFragment.isPresent()) {
+          loadingFragment = Optional.of(new LoadingFragment());
+        }
+        return show(loadingFragment.get(), sharedElement);
     }
   }
 
@@ -187,6 +197,10 @@ public class CompanionFragments {
     }
   }
 
+  public boolean isShowing(CompanionFragment.Type type) {
+    return currentFragment.isPresent() && currentFragment.get().getType() == type;
+  }
+
   public void showMonster(Monster monster, Optional<View> shared) {
     show(CompanionFragment.Type.monster, shared);
     monsterFragment.get().showMonster(monster);
@@ -208,7 +222,7 @@ public class CompanionFragments {
 
     // Shared element transition.
     FragmentTransaction transaction = fragmentManager.beginTransaction();
-    if (sharedTransitionElement.isPresent()) {
+    if (false && sharedTransitionElement.isPresent()) {
       currentFragment.get().setExitTransition(fade(ENTER_FADE_DURATION_MS, 0));
       currentFragment.get().setReenterTransition(fade(ENTER_FADE_DURATION_MS,
           EXIT_FADE_DURATION_MS + MOVE_DURATION_MS));

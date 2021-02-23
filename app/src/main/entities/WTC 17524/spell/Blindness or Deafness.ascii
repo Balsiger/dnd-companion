@@ -34,7 +34,8 @@ components: VERBOSE
 casting_time {
   standard_actions: 1
 }
-special_range: MEDIUMtarget: "One living creature"
+special_range: MEDIUM
+target: "One living creature"
 duration {
   duration_description: "Permanent"
   flags: "(D)"

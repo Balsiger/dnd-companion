@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "During the excitement of battle, a nightmare snorts and neighs with rage. This snorting fills a 15-foot cone with a hot, sulfurous smoke that chokes and blinds opponents. Anyone in the cone must succeed on a DC 16 Fortitude save or take a \342\200\232\303\204\303\2542 penalty on all attack and damage rolls until 1d6 minutes after leaving the cone. The cone lasts 1 round, and the nightmare uses it once as a free action during its turn each round. The save DC is Constitution-based. \n\nBecause of the smoke it gives off, a nightmare has concealment against creatures 5 feet away and total concealment against creatures 10 feet or farther away. The smoke does not obscure the nightmare\342\200\232\303\204\303\264s vision at all."
+  description: "During the excitement of battle, a nightmare snorts and neighs with rage. This snorting fills a 15-foot cone with a hot, sulfurous smoke that chokes and blinds opponents. Anyone in the cone must succeed on a DC 16 Fortitude save or take a -2 penalty on all attack and damage rolls until 1d6 minutes after leaving the cone. The cone lasts 1 round, and the nightmare uses it once as a free action during its turn each round. The save DC is Constitution-based. \n\nBecause of the smoke it gives off, a nightmare has concealment against creatures 5 feet away and total concealment against creatures 10 feet or farther away. The smoke does not obscure the nightmare's vision at all."
 }
 type: SUPERNATURAL

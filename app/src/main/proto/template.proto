@@ -778,7 +778,7 @@ message SpellTemplateProto {
     CONJURATION = 2;
     DIVINATION = 3;
     ENCHANTMENT = 4;
-    EVOACATION = 5;
+    EVOCATION = 5;
     ILLUSION = 6;
     NECROMANCY = 7;
     TRANSMUTATION = 8;
@@ -1014,21 +1014,6 @@ message AdventureTemplateProto {
 
       message SpellReference {
         string name = 1;
-
-        enum MetaMagic {
-          UNKNOWN = 0;
-
-          // PHB.
-          EMPOWERED = 1;
-          ENLARGED = 2;
-          EXTENDED = 3;
-          HEIGHTENED = 4;
-          MAXIMIZED = 5;
-          QUICKENED = 6;
-          SILENT = 7;
-          STILL = 8;
-          WIDENED = 9;
-        }
         repeated MetaMagic meta_magic = 2;
       }
       repeated SpellReference spell = 5;

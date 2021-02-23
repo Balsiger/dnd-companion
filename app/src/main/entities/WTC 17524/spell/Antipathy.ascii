@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You cause an object or location to emanate magical vibrations that repel either a specific kind of intelligent creature or creatures of a particular alignment, as defined by you. The kind of creature to be affected must be named specifically\342\200\232\303\204\303\256for example, red dragons, hill giants, wererats, lammasus, cloakers, or vampires. A creature subtype (such as goblinoid) is not specific enough. Likewise, the specific alignment to be repelled must be named\342\200\232\303\204\303\256 for example, chaotic evil, chaotic good, lawful neutral, or neutral.  Creatures of the designated kind or alignment feel an overpowering urge to leave the area or to avoid the affected item.  A compulsion forces them to abandon the area or item, shunning it and never willingly returning to it while the spell is in effect. A creature that makes a successful saving throw can stay in the area or touch the item but feels uncomfortable doing so.  This distracting discomfort reduces the creature\342\200\232\303\204\303\264s Dexterity score by 4 points. \\Spell{Antipathy} counters and dispels \\Spell{sympathy}."
+  description: "You cause an object or location to emanate magical vibrations that repel either a specific kind of intelligent creature or creatures of a particular alignment, as defined by you. The kind of creature to be affected must be named specifically - for example, red dragons, hill giants, wererats, lammasus, cloakers, or vampires. A creature subtype (such as goblinoid) is not specific enough. Likewise, the specific alignment to be repelled must be named -  for example, chaotic evil, chaotic good, lawful neutral, or neutral.  Creatures of the designated kind or alignment feel an overpowering urge to leave the area or to avoid the affected item.  A compulsion forces them to abandon the area or item, shunning it and never willingly returning to it while the spell is in effect. A creature that makes a successful saving throw can stay in the area or touch the item but feels uncomfortable doing so.  This distracting discomfort reduces the creature's Dexterity score by 4 points. \\Spell{Antipathy} counters and dispels \\Spell{sympathy}."
   short_description: "Object or location affected by spell repels certain creatures."
 }
 school: ENCHANTMENT
@@ -37,7 +37,8 @@ material {
 casting_time {
   hours: 1
 }
-special_range: CLOSEtarget: "One location (up to a 10-ft. cube/level) or one object"
+special_range: CLOSE
+target: "One location (up to a 10-ft. cube/level) or one object"
 duration {
   duration {
     hours: 2

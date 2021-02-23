@@ -11,7 +11,7 @@ template {
   description: "You blast an area with a tremendous cacophony. Every creature in the area takes 1d8 points of sonic damage and must succeed on a Fortitude save to avoid being stunned for 1 round. \n\nCreatures that cannot hear are not stunned but are still damaged. \n\nArcane Focus: A musical instrument."
   short_description: "Deals 1d8 sonic damage to subjects; may stun them."
 }
-school: EVOACATION
+school: EVOCATION
 summary: "[[25 + (5 * ($level/2))]] ft, 10-ft spread, 1d8 sonic dmage and Fort DC [[10 + 2 + $ability]] or be stunned for 1 round."
 descriptor: SONIC
 level {

@@ -2,7 +2,7 @@ template {
   name: "WTC A9607"
   category: "Adventure"
   world: "Forgotten Realms"
-  description: "The \\Group{Cult of the Dragon} leads the charge in an unholy campaign to bring \\God{Tiamat} back to the \\Place{Forgotten Realms}. With the race against evil moving from \\Place{Waterdeep} to the \\Place{Sea of Moving Ice} to \\Place{Thay}, the situation grows more perilous with each passing moment.\n\nThe heroes must succeed, or \\Place{Faer\303\273n} will succumb to draconic tyranny. In the end, the world will never be the same.\n\nA Dungeons & Dragons adventure for characters of levels 8-15, following the events in \\Product{Hoard of the Dragon Queen}.\n\nFor use with the fifth edition Player\'s Handbook, Monster Manual, and Dungeon Master\'s Guide."
+  description: "The \\Group{Cult of the Dragon} leads the charge in an unholy campaign to bring \\God{Tiamat} back to the \\Place{Forgotten Realms}. With the race against evil moving from \\Place{Waterdeep} to the \\Place{Sea of Moving Ice} to \\Place{Thay}, the situation grows more perilous with each passing moment.\n\nThe heroes must succeed, or \\Place{Faerûn} will succumb to draconic tyranny. In the end, the world will never be the same.\n\nA Dungeons & Dragons adventure for characters of levels 8-15, following the events in \\Product{Hoard of the Dragon Queen}.\n\nFor use with the fifth edition Player\'s Handbook, Monster Manual, and Dungeon Master\'s Guide."
   short_description: "Avert the cataclysmisc return of \\God{Tiamat} in this adventure for the world\'s greatest roleplaying game."
 }
 title: "Rise of Tiamat"

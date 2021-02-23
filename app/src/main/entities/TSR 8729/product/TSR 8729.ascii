@@ -18,7 +18,7 @@ system: WILD_SPACE
 type: ADVENTURE
 number: "Book One"
 price {
-  currency: "\302\254\302\243 "
+  currency: "£ "
   number: 199
   precision: 100
 }

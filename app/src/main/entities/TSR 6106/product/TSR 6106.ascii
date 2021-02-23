@@ -18,7 +18,7 @@ system: DND_1ST
 audience: ALL
 type: BOARD_GAME
 price {
-  currency: "\302\254\302\243"
+  currency: "£"
   number: 1299
   precision: 100
 }

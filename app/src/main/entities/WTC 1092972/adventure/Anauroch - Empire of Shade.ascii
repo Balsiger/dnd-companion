@@ -49,6 +49,58 @@ encounter {
     spell { name: "detect magic" }
     spell { name: "ghost sound" }
     spell { name: "mage hand" }
-    spell { name: "open/close" }
+    spell { name: "open & close" }
+  }
+}
+encounter {
+  name: "An Adroit Challenge"
+  short_name: "M2"
+  description: "Meet Darcassan the Adroit and be judged."
+  short_description: "Welcome to my test."
+  encounter_level: 16
+  location: "Windsong Tower"
+  location: "Myth Drannor"
+
+  spell_group {
+    name: "Darcassan the Adroit"
+    description: "Male sun elf diviner 13/expert 2"
+    caster_level: 13
+    ability_bonus: 6
+    spell_class: WIZARD
+    spell { name: "prismatic eye" }
+    spell { name: "spell turning" }
+    spell { name: "acid storm" }
+    spell { name: "greater dispel magic" }
+    spell { name: "melf's acid arrow" meta_magic: QUICKENED }
+    spell { name: "bigby's interposing hand" }
+    spell { name: "dominate person" }
+    spell { name: "feeblemind" }
+    spell { name: "lesser spell matric" }
+    spell { name: "telekinesis" }
+    spell { name: "evard's black tentacles" }
+    spell { name: "greater invisibility" }
+    spell { name: "otiluke's resilient sphere" }
+    spell { name: "shadow spray" meta_magic: HEIGHTENED }
+    spell { name: "shout" }
+    spell { name: "thunderlance" }
+    spell { name: "haste" }
+    spell { name: "lightning bolt" }
+    spell { name: "greater magic weapon" }
+    spell { name: "nondetection" }
+    spell { name: "reverse arrows" }
+    spell { name: "battering ram" }
+    spell { name: "daylight" }
+    spell { name: "detect thoughts" }
+    spell { name: "melf's acid arrow" }
+    spell { name: "scorch" }
+    spell { name: "see invibisility" }
+    spell { name: "alarm" }
+    spell { name: "arrow mind" }
+    spell { name: "magic missile" }
+    spell { name: "shield" }
+    spell { name: "detect magic" }
+    spell { name: "ghost sound" }
+    spell { name: "mage hand" }
+    spell { name: "clairaudience or clairvoyance" }
   }
 }

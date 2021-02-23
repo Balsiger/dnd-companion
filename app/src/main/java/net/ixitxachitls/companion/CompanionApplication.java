@@ -26,6 +26,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Debug;
 
 import com.google.common.base.Stopwatch;
 import com.tenmiles.helpstack.HSHelpStack;
@@ -46,9 +47,12 @@ import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.data.documents.Users;
 import net.ixitxachitls.companion.storage.ApplicationAssetAccessor;
 import net.ixitxachitls.companion.storage.AssetAccessor;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
+import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 
 import java.time.Duration;
+import java.util.Optional;
 
 /**
  * The main application for the companion.
@@ -162,14 +166,16 @@ public class CompanionApplication extends Application
   @Override
   public void onActivityStarted(Activity activity) {
     if (currentActivity instanceof MainActivity) {
-      int entitiesCount = getResources().getInteger(R.integer.app_entities);
-
       MainActivity main = (MainActivity) currentActivity;
-      main.startLoading(PROGRESS_LOADING, entitiesCount);
 
       AsyncTask.execute(() -> {
         Templates.init(CompanionApplication.this.getAssetAccessor(), main);
-        runOnUiThread(() -> main.finishLoading(PROGRESS_LOADING));
+        Templates.get().executeAfterLoading(() -> {
+          users().executeAfterLoggingIn(() -> {
+            Status.log("Loading done, showing campaigns");
+            CompanionFragments.get().show(CompanionFragment.Type.campaigns, Optional.empty());
+          });
+        });
       });
     }
 

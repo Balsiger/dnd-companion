@@ -21,7 +21,7 @@ audience: ALL
 type: SPECIAL_BOOK
 style: HARDCOVER
 price {
-  currency: "\302\254\302\243"
+  currency: "£"
   number: 1499
   precision: 100
 }

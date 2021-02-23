@@ -30,7 +30,7 @@ pages: 144
 system: AMAZING_ENGINE
 type: RULES_SUPPLEMENT
 price {
-  currency: "\302\254\302\243"
+  currency: "£"
   number: 1295
   precision: 100
 }

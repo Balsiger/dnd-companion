@@ -20,7 +20,7 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: TOUC
+special_range: TOUCH
 target: "One touched object weighing no more than 10 lb."
 duration {
   duration_description: "Permanent until Discharged"

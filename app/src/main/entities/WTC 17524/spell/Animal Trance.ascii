@@ -30,7 +30,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: CLOSEtarget: "Animals or magical beasts with Intelligence 1 or 2"
+special_range: CLOSE
+target: "Animals or magical beasts with Intelligence 1 or 2"
 duration {
   duration_description: "Concentration"
   }

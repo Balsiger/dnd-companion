@@ -22,7 +22,7 @@ isbn13 {
 system: ADND_2ND
 type: ACCESSORY
 price {
-  currency: "$\303\224\303\270\316\251"
+  currency: "$£"
   number: 695
   precision: 100
 }

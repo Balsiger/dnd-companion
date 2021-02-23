@@ -1,0 +1,40 @@
+template {
+  name: "Acid Storm"
+  reference {
+    name: "WTC 8859872"
+    pages {
+      low: 7
+      high: 7
+    }
+  }
+  world: "Generic"
+  description: "\\emph{A dark green cloud whirls into being before unleashing a shower of foul-smelling, yellow-green rain.}\n\nAcid rain deals 1d6 points of acid damage per caster level (maximum 15d6) to each creature in the area."
+  short_description: "Create a storm raining acid."
+}
+school: CONJURATION
+subschool: CREATION
+descriptor: ACID
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+ component: "A flask of acid (10 gp)"
+}
+casting_time: {
+  standard_actions: 1
+}
+special_range: MEDIUM
+area: "Cylinder (20-ft radius, 20 ft. high)"
+duration {
+  duration_description: "Instantaneous"
+}
+saving_throw: "Reflex half"
+spell_resistance: "No"

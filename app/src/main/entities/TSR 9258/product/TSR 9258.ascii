@@ -53,7 +53,7 @@ style: BOOKLET
 producer: "TSR"
 series: "Oriental Adventures"
 price {
-  currency: "\302\254\302\243 "
+  currency: "£ "
   number: 650
   precision: 100
 }

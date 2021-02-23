@@ -54,7 +54,7 @@ type: ACCESSORY
 style: BOOKLET
 producer: "WTC"
 price {
-  currency: "\302\243"
+  currency: "£"
   number: 1299
   precision: 100
 }

@@ -22,7 +22,7 @@ system: DND_1ST
 type: ADVENTURE
 producer: "TSR"
 price {
-  currency: "$\302\254\342\200\240"
+  currency: "$"
   number: 595
   precision: 100
 }

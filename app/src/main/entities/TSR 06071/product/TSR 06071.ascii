@@ -3,7 +3,7 @@ template {
   reference {
     name: "net"
   }
-  description: "47 new Pok\342\210\232\302\251mon fossil cards"
+  description: "47 new Pokémon fossil cards"
 }
 title: "Fossil Booster"
 date {

@@ -39,7 +39,7 @@ style: PAPERBACK
 number: "Book Three"
 series: "New Series"
 price {
-  currency: "\303\224\303\270\316\251 "
+  currency: "£ "
   number: 399
   precision: 100
 }

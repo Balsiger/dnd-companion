@@ -11,7 +11,7 @@ template {
     }
   }
   world: "Generic"
-  description: "These special tools include the items needed to pursue any craft. Without them, you have to use improvised tools (\342\200\2232 penalty on Craft checks), if you can do the job at all. "
+  description: "These special tools include the items needed to pursue any craft. Without them, you have to use improvised tools (-2 penalty on Craft checks), if you can do the job at all. "
   short_description: "Tools needed for a specific craft."
 }
 value {

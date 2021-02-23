@@ -35,6 +35,7 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -53,10 +54,6 @@ import androidx.annotation.Nullable;
  */
 public class ActionBarView extends LinearLayout {
 
-  private final List<String> progressGroups = new ArrayList<>();
-  private final LinearLayout progress;
-  private final ProgressBar progressBar;
-  private final TextWrapper<TextView> progressText;
   private final LinearLayout actionsView;
 
   public ActionBarView(Context context) {
@@ -77,11 +74,6 @@ public class ActionBarView extends LinearLayout {
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_action_bar, null, false);
     view.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
         ViewGroup.LayoutParams.MATCH_PARENT));
-
-    progress = view.findViewById(R.id.progress);
-    progressBar = view.findViewById(R.id.progressBar);
-    progressBar.setIndeterminate(false);
-    progressText = TextWrapper.wrap(view, R.id.progressText);
     actionsView = view.findViewById(R.id.actions);
 
     addView(view);
@@ -104,38 +96,6 @@ public class ActionBarView extends LinearLayout {
 
   public void clearActions() {
     actionsView.removeAllViews();
-    progressGroups.clear();
-    refreshProgress();
-  }
-
-  public void finishLoading(String text) {
-    progressGroups.remove(text);
-    refreshProgress();
-  }
-
-  public void incrementProgress() {
-    progressBar.incrementProgressBy(1);
-  }
-
-  public void startLoading(String text) {
-    progressGroups.add(text);
-    refreshProgress();
-  }
-
-  public void startLoading(String text, int count) {
-    startLoading(text);
-    progressBar.setMax(count);
-  }
-
-  private void refreshProgress() {
-
-    if (progressGroups.isEmpty()) {
-      progressText.text("");
-      progress.setVisibility(GONE);
-    } else {
-      progressText.text("loading " + Strings.COMMA_JOINER.join(progressGroups) + "...");
-      progress.setVisibility(VISIBLE);
-    }
   }
 
   public class Action {

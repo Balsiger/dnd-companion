@@ -1,7 +1,7 @@
 template {
   name: "Reduce Animal"
   world: "Generic"
-  description: "This spell functions like reduce person, except that it affects a single willing animal (not one with which you are engaged in combat, for instance). This decrease in size allows the animal to fit better into tight spaces, such as the typical dungeon room or subterranean passage. Reduce the damage dealt by the animal\'s natural attacks as shown on Table 2\342\200\232\303\204\303\2543 in the Dungeon Master\'s Guide."
+  description: "This spell functions like reduce person, except that it affects a single willing animal (not one with which you are engaged in combat, for instance). This decrease in size allows the animal to fit better into tight spaces, such as the typical dungeon room or subterranean passage. Reduce the damage dealt by the animal\'s natural attacks as shown on Table 2-3 in the Dungeon Master\'s Guide."
   short_description: "Shrinks one willing animal."
 }
 school: TRANSMUTATION

@@ -1,7 +1,7 @@
 template {
   name: "WTC 2153274"
   world: "Eberron"
-  description: "When you\'ve got a problem, he\'s your man. But when he finds himself in possession of a strange relic, he gets even more trouble than he can handle. His enemies want the relic, he wants its owner, and the City Watch wants him locked away for good. As if that weren\342\200\232\303\204\303\264t enough, a mysterious woman just hired him to find a magic device that could bring the world to its knees. Could the two be related?\n\nWhen a job turns this dangerous, whether you win or lose doesn\342\200\232\303\204\303\264t matter. The best you can hope for is just to survive."
+  description: "When you\'ve got a problem, he\'s your man. But when he finds himself in possession of a strange relic, he gets even more trouble than he can handle. His enemies want the relic, he wants its owner, and the City Watch wants him locked away for good. As if that weren't enough, a mysterious woman just hired him to find a magic device that could bring the world to its knees. Could the two be related?\n\nWhen a job turns this dangerous, whether you win or lose doesn't matter. The best you can hope for is just to survive."
 }
 title: "Left Hand of Death"
 leader: "The"

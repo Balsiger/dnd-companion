@@ -24,9 +24,9 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
             android:opacity="opaque">
   <item android:drawable="@color/colorPrimary"/>
-  <item>
+  <item android:top="150dp">
     <bitmap
-        android:gravity="center"
+        android:gravity="top"
         android:src="@drawable/splash_image"/>
   </item>
 </layer-list>

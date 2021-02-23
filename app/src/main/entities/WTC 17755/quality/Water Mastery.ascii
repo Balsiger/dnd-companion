@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A water elemental gains a +1 bonus on attack and damage rolls if both it and its opponent are touching water. If the opponent or the elemental is touching the ground, the elemental takes a \342\200\232\303\204\303\2544 penalty on attack and damage rolls. (These modifiers are not included in the statistics block.)  A water elemental can be a serious threat to a ship that crosses its path. An elemental can easily overturn small craft (5 feet of length per Hit Die of the elemental) and stop larger vessels (10 feet long per HD). Even large ships (20 feet long per HD) can be slowed to half speed."
+  description: "A water elemental gains a +1 bonus on attack and damage rolls if both it and its opponent are touching water. If the opponent or the elemental is touching the ground, the elemental takes a -4 penalty on attack and damage rolls. (These modifiers are not included in the statistics block.)  A water elemental can be a serious threat to a ship that crosses its path. An elemental can easily overturn small craft (5 feet of length per Hit Die of the elemental) and stop larger vessels (10 feet long per HD). Even large ships (20 feet long per HD) can be slowed to half speed."
 }
 type: EXTRAORDINARY

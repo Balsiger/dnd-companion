@@ -115,7 +115,7 @@ advancement {
     high: 6
   }
 }
-combat: "A favorite tactic is to send a few individuals against the foe\342\200\231s front while the rest of the pack circles and attacks from the flanks or rear."
+combat: "A favorite tactic is to send a few individuals against the foe's front while the rest of the pack circles and attacks from the flanks or rear."
 quality {
   name: "trip"
   }

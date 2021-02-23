@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The subject or subjects can move through any type of terrain\342\200\232\303\204\303\256mud, snow, dust, or the like\342\200\232\303\204\303\256and leave neither footprints nor scent. Tracking the subjects is impossible by nonmagical means."
+  description: "The subject or subjects can move through any type of terrain - mud, snow, dust, or the like - and leave neither footprints nor scent. Tracking the subjects is impossible by nonmagical means."
   short_description: "One subject/level leaves no tracks."
 }
 school: TRANSMUTATION

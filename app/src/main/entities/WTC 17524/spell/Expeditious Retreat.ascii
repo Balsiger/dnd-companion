@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell increases your base land speed by 30 feet. (This adjustment is treated as an enhancement bonus.) There is no effect on other modes of movement, such as burrow, climb, fly, or swim. As with any effect that increases your speed, this spell affects your jumping distance (see the Jump skill, page 77).  This spell need not be used as part of a retreat; the name of the spell merely hints at the typical wizard\342\200\232\303\204\303\264s attitude towards combat."
+  description: "This spell increases your base land speed by 30 feet. (This adjustment is treated as an enhancement bonus.) There is no effect on other modes of movement, such as burrow, climb, fly, or swim. As with any effect that increases your speed, this spell affects your jumping distance (see the Jump skill, page 77).  This spell need not be used as part of a retreat; the name of the spell merely hints at the typical wizard's attitude towards combat."
   short_description: "Your speed increases by 30 ft."
 }
 school: TRANSMUTATION

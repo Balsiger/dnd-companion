@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data;
 
+import android.os.AsyncTask;
+
 import com.google.inject.Singleton;
 
 import net.ixitxachitls.companion.Status;
@@ -54,8 +56,12 @@ import androidx.annotation.Nullable;
 @Singleton
 public class Templates {
 
+  public enum Kind {
+    worlds, monsters, levels, items, feats, miniatures, skills, spells, qualities, adventures,
+    products,
+  }
+
   private static final String PATH_ENTITIES = "entities";
-  private static final String LOADING_TEMPLATES = "templates";
 
   private static @Nullable Templates singleton = null;
 
@@ -153,87 +159,101 @@ public class Templates {
   }
 
   private void load(MainActivity main) {
-    main.startLoading(LOADING_TEMPLATES);
     worlds.ensure(WorldTemplate.DEFAULT);
 
-    try {
-      for (String reference : assetAccessor.list(PATH_ENTITIES)) {
-        for (String type : assetAccessor.list(PATH_ENTITIES + "/" + reference)) {
-          String path = PATH_ENTITIES + "/" + reference + "/" + type;
-          for (String file : assetAccessor.list(path)) {
-            String name = path + "/" + file;
-            switch (type) {
-              case MonsterTemplate.TYPE:
-                monsterTemplates.read(name, assetAccessor.open(name));
-                break;
-              case WorldTemplate.TYPE:
-                worlds.read(name, assetAccessor.open(name));
-                break;
-              case ItemTemplate.TYPE:
-                items.read(name, assetAccessor.open(name));
-                break;
-              case LevelTemplate.TYPE:
-                levels.read(name, assetAccessor.open(name));
-                break;
-              case FeatTemplate.TYPE:
-                feats.read(name, assetAccessor.open(name));
-                break;
-              case MiniatureTemplate.TYPE:
-                miniatures.read(name, assetAccessor.open(name));
-                break;
-              case SkillTemplate.TYPE:
-                skills.read(name, assetAccessor.open(name));
-                break;
-              case SpellTemplate.TYPE:
-                spells.read(name, assetAccessor.open(name));
-                break;
-              case QualityTemplate.TYPE:
-                qualities.read(name, assetAccessor.open(name));
-                break;
-              case AdventureTemplate.TYPE:
-                adventures.read(name, assetAccessor.open(name));
-                break;
-              case ProductTemplate.TYPE:
-                products.read(name, assetAccessor.open(name));
-                break;
-              default:
-                Status.error("Unsupported type " + type + " found!");
-                break;
-            }
+    AsyncTask.execute(() -> {
+      try {
+        for (String reference : assetAccessor.list(PATH_ENTITIES)) {
+          for (String type : assetAccessor.list(PATH_ENTITIES + "/" + reference)) {
+            String path = PATH_ENTITIES + "/" + reference + "/" + type;
+            for (String file : assetAccessor.list(path)) {
+              String name = path + "/" + file;
+              Kind kind = null;
+              switch (type) {
+                case MonsterTemplate.TYPE:
+                  monsterTemplates.read(name, assetAccessor.open(name));
+                  kind = Kind.monsters;
+                  break;
+                case WorldTemplate.TYPE:
+                  worlds.read(name, assetAccessor.open(name));
+                  kind = Kind.worlds;
+                  break;
+                case ItemTemplate.TYPE:
+                  items.read(name, assetAccessor.open(name));
+                  kind = Kind.items;
+                  break;
+                case LevelTemplate.TYPE:
+                  levels.read(name, assetAccessor.open(name));
+                  kind = Kind.levels;
+                  break;
+                case FeatTemplate.TYPE:
+                  feats.read(name, assetAccessor.open(name));
+                  kind = Kind.feats;
+                  break;
+                case MiniatureTemplate.TYPE:
+                  miniatures.read(name, assetAccessor.open(name));
+                  kind = Kind.miniatures;
+                  break;
+                case SkillTemplate.TYPE:
+                  skills.read(name, assetAccessor.open(name));
+                  kind = Kind.skills;
+                  break;
+                case SpellTemplate.TYPE:
+                  spells.read(name, assetAccessor.open(name));
+                  kind = Kind.spells;
+                  break;
+                case QualityTemplate.TYPE:
+                  qualities.read(name, assetAccessor.open(name));
+                  kind = Kind.qualities;
+                  break;
+                case AdventureTemplate.TYPE:
+                  adventures.read(name, assetAccessor.open(name));
+                  kind = Kind.adventures;
+                  break;
+                case ProductTemplate.TYPE:
+                  products.read(name, assetAccessor.open(name));
+                  kind = Kind.products;
+                  break;
+                default:
+                  Status.error("Unsupported type " + type + " found!");
+                  break;
+              }
 
-            main.incrementProgress();
+              if (kind != null) {
+                main.incrementProgress(kind);
+              }
+            }
           }
         }
+
+        monsterTemplates.loaded();
+        worlds.loaded();
+        items.loaded();
+        levels.loaded();
+        feats.loaded();
+        miniatures.loaded();
+        skills.loaded();
+        spells.loaded();
+        qualities.loaded();
+        adventures.loaded();
+        products.loaded();
+
+        productsWithData.addAll(monsterTemplates.getProductIds());
+        productsWithData.addAll(items.getProductIds());
+        productsWithData.addAll(levels.getProductIds());
+        productsWithData.addAll(feats.getProductIds());
+        productsWithData.addAll(qualities.getProductIds());
+        productsWithData.addAll(skills.getProductIds());
+        productsWithData.addAll(spells.getProductIds());
+        productsWithData.addAll(adventures.getProductIds());
+
+      } catch (IOException | NoSuchMethodException | IllegalAccessException
+          | InvocationTargetException e) {
+        Status.error("Loading of entries from internal storage failed: " + e);
       }
 
-      monsterTemplates.loaded();
-      worlds.loaded();
-      items.loaded();
-      levels.loaded();
-      feats.loaded();
-      miniatures.loaded();
-      skills.loaded();
-      spells.loaded();
-      qualities.loaded();
-      adventures.loaded();
-      products.loaded();
-
-      productsWithData.addAll(monsterTemplates.getProductIds());
-      productsWithData.addAll(items.getProductIds());
-      productsWithData.addAll(levels.getProductIds());
-      productsWithData.addAll(feats.getProductIds());
-      productsWithData.addAll(qualities.getProductIds());
-      productsWithData.addAll(skills.getProductIds());
-      productsWithData.addAll(spells.getProductIds());
-      productsWithData.addAll(adventures.getProductIds());
-
-      main.finishLoading(LOADING_TEMPLATES);
-
-      loaded();
-    } catch (IOException | NoSuchMethodException | IllegalAccessException
-        | InvocationTargetException e) {
-      Status.error("Loading of entries from internal storage failed: " + e);
-    }
+      main.runOnUiThread(() -> loaded());
+    });
   }
 
   private void loaded() {

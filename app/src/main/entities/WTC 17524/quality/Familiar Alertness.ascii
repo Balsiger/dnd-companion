@@ -8,6 +8,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The presence of the familiar sharpens its master\342\200\231s senses. While a familiar is within arm\342\200\231s reach, the master gains the \\feat{Alertness} feat."
+  description: "The presence of the familiar sharpens its master's senses. While a familiar is within arm's reach, the master gains the \\feat{Alertness} feat."
 }
 type: EXTRAORDINARY

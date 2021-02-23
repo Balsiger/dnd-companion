@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You influence the actions of the target creature by suggesting a course of activity (limited to a sentence or two). The suggestion must be worded in such a manner as to make the activity sound reasonable.  Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act automatically negates the effect of the spell. However, a suggestion that a pool of acid is actually pure water and that a quick dip would be refreshing is another matter.  Urging a red dragon to stop attacking your party so that the dragon and party could jointly loot a rich treasure elsewhere is a likewise reasonable use of the spell\'s power.  The suggested course of activity can continue for the entire duration, such as in the case of the red dragon mentioned above. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do. You can instead specify conditions that will trigger a special activity during the duration. For example, you might suggest that a noble knight give her warhorse to the first beggar she meets.  If the condition is not met before the spell duration expires, the activity is not performed.  A very reasonable suggestion causes the save to be made with a penalty (such as \342\200\232\303\204\303\2541 or \342\200\232\303\204\303\2542) at the discretion of the DM.  Material Component: A snake\'s tongue and either a bit of honeycomb or a drop of sweet oil."
+  description: "You influence the actions of the target creature by suggesting a course of activity (limited to a sentence or two). The suggestion must be worded in such a manner as to make the activity sound reasonable.\n\nAsking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act automatically negates the effect of the spell. However, a suggestion that a pool of acid is actually pure water and that a quick dip would be refreshing is another matter.\n\nUrging a red dragon to stop attacking your party so that the dragon and party could jointly loot a rich treasure elsewhere is a likewise reasonable use of the spell\'s power.\n\nThe suggested course of activity can continue for the entire duration, such as in the case of the red dragon mentioned above. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do. You can instead specify conditions that will trigger a special activity during the duration. For example, you might suggest that a noble knight give her warhorse to the first beggar she meets.\n\nIf the condition is not met before the spell duration expires, the activity is not performed.\n\nVery reasonable suggestion causes the save to be made with a penalty (such as +1 or +2) at the discretion of the DM."
   short_description: "Compels subject to follow stated course of action."
 }
 school: ENCHANTMENT
@@ -30,6 +30,10 @@ level {
 }
 components: VERBOSE
 components: MATERIAL
+material {
+  component: "A snake\'s tongue"
+  component: "Either a bit of honeycomb or a drop of sweet oil."
+}
 casting_time {
   standard_actions: 1
 }

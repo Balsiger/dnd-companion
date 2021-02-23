@@ -1,0 +1,43 @@
+template {
+  name: "Prismatic Eye"
+  reference {
+    name: "WTC 8859872"
+    pages {
+      low: 161
+      high: 162
+    }
+  }
+  world: "Generic"
+  description: "\\emph{With a popping sound, a moist, apple-sized eye with a rainbow-hued iris appears and sends a beam of colored light at the foe you designate.}\n\nYou create a visible orb that can produce ray effects duplicating the beams of a \\Spell{prismatic spray} spell (PH 264). You can move the eye up to your speed as a move action, but it cannot go beyond the spell’s range.\n\nStarting in the round the eye appears, you can command it to fire a ray (50-foot range) as a free action once per round. You must succeed on a ranged touch attack with a ray to strike a target, but each ray uses a +6 bonus on attack rolls instead of your ranged attack bonus.\n\nA target struck by a ray suffers the effect of one beam of a \\Spell{prismatic spray} spell (roll 1d8 to determine the effect, rerolling any result of 8), except that the save DC (if applicable) is 19. After a particular color of ray has been used, it is no longer available to the eye, and die rolls that indicate the same color are rerolled. Once all seven rays have been fired, the eye remains until the spell’s duration expires. You can still move it, but it can fire no more rays.\n\nThe eye is a Fine object with AC 18 (+8 size) and 9 hit points. It uses your save bonuses for saving throws."
+  short_description: "Create an eye that shoots prismatic rays."
+}
+school: EVOCATION
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+ component: "A polished, rainbow-hued abalone shell"
+}
+casting_time: {
+  standard_actions: 1
+}
+special_range: MEDIUM
+effect {
+  description: "Magical Eye"
+}
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+}
+saving_throw: "See text"
+spell_resistance: "Yes"

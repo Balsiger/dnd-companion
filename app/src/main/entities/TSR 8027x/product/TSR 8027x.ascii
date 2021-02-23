@@ -17,7 +17,7 @@ isbn13 {
 system: TERROR_TRACKS
 type: ADVENTURE
 price {
-  currency: "\302\254\302\243"
+  currency: "£"
   number: 1099
   precision: 100
 }

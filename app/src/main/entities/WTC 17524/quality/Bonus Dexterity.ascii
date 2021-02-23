@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Add this value to the animal companion\342\200\232\303\204\303\264s Dexterity score."
+  description: "Add this value to the animal companion's Dexterity score."
 }
 type: EXTRAORDINARY

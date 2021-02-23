@@ -545,17 +545,17 @@ public class AdventureView extends LinearLayout {
         spells.addView(TextWrapper.wrap(new TextView(getContext()))
             .text(group.getName() + " (" + Strings.numeral(group.getCasterLevel()) + ", "
                 + Strings.signed(group.getAbilityBonus()) + ")").get());
-        for (String spell : group.getSpells()) {
-          Optional<SpellTemplate> template = spellTemplates.get(spell);
+        for (SpellGroup.SpellReference spell : group.getSpells()) {
+          Optional<SpellTemplate> template = spellTemplates.get(spell.getName());
           String text = "";
-          String name = template.isPresent() ? template.get().getName() : spell;
+          String name = template.isPresent() ? template.get().getName() : spell.getName();
           String description = template.isPresent() ?
               template.get().getShortDescription() : "(spell not found)";
           spells.addView(TextWrapper.wrap(new TextView(getContext()))
               .text(name + " - " + description)
               .onClick(() -> {
             SpellDialog.newInstance(name, group.getCasterLevel(),
-                group.getAbilityBonus(), group.getSpellClass()).display();
+                group.getAbilityBonus(), group.getSpellClass(), spell.getMetaMagics()).display();
           }).get());
         }
       }

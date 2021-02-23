@@ -31,7 +31,7 @@ type: NOVEL
 number: "Book 1"
 series: "Legacy of the Drow"
 price {
-  currency: "\302\254\302\243 "
+  currency: "£ "
   number: 999
   precision: 100
 }

@@ -26,8 +26,8 @@ components: SOMATIC
 casting_time {
   standard_actions: 1
 }
-special_range: PERSONALt
-arget: "You"
+special_range: PERSONAL
+target: "You"
 duration {
   duration {
     hours: 1

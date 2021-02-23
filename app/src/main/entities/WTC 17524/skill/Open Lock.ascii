@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can pick padlocks, finesse combination locks, and solve puzzle locks. The effort requires at least a simple tool of the appropriate sort (a pick, pry bar, blank key, wire, or the like). Attempting an Open Lock check without a set of thieves\342\200\232\303\204\303\264 tools (page 130) imposes a \342\200\232\303\204\303\2542 circumstance penalty on the check, even if a simple tool is employed. If you use masterwork thieves\342\200\232\303\204\303\264 tools, you gain a +2 circumstance bonus on the check."
+  description: "You can pick padlocks, finesse combination locks, and solve puzzle locks. The effort requires at least a simple tool of the appropriate sort (a pick, pry bar, blank key, wire, or the like). Attempting an Open Lock check without a set of thieves' tools (page 130) imposes a -2 circumstance penalty on the check, even if a simple tool is employed. If you use masterwork thieves' tools, you gain a +2 circumstance bonus on the check."
 }
 ability: DEXTERITY
 action: "Opening a lock is a full-round action."

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Hobgoblins are larger cousins of goblins. They are far more aggressive and organized than their smaller relatives and wage a perpetual war with other humanoids, particularly elves.\n\nHobgoblins\342\200\231 hair color ranges from dark reddish-brown to dark gray. They have dark orange or red-orange skin. Large males have blue or red noses. Hobgoblins\342\200\231 eyes are yellowish or dark brown, while their teeth are yellow. Their garments tend to be brightly colored, often blood red with black-tinted leather. Their weaponry is kept polished and in good repair.\n\nHobgoblins speak Goblin and Common.\n\nMost hobgoblins encountered outside their homes are warriors; the information in the statistics block is for one of 1st level."
+  description: "Hobgoblins are larger cousins of goblins. They are far more aggressive and organized than their smaller relatives and wage a perpetual war with other humanoids, particularly elves.\n\nHobgoblins' hair color ranges from dark reddish-brown to dark gray. They have dark orange or red-orange skin. Large males have blue or red noses. Hobgoblins' eyes are yellowish or dark brown, while their teeth are yellow. Their garments tend to be brightly colored, often blood red with black-tinted leather. Their weaponry is kept polished and in good repair.\n\nHobgoblins speak Goblin and Common.\n\nMost hobgoblins encountered outside their homes are warriors; the information in the statistics block is for one of 1st level."
   short_description: "The larger cousins of goblins."
 }
 size {
@@ -96,7 +96,7 @@ organization {
     dice: 10
   }
   plus {
-    text: "0 noncombatants plus 1 3rd-level sergeant per 20 adults, 1 or 2 lieutenants of 4th or 5th level, 1 leader of 6th\342\200\2238th level, 2\342\200\2234 dire wolves, and 1\342\200\2234 ogres or 1\342\200\2232 trolls)"
+    text: "0 noncombatants plus 1 3rd-level sergeant per 20 adults, 1 or 2 lieutenants of 4th or 5th level, 1 leader of 6th-8th level, 2-4 dire wolves, and 1-4 ogres or 1-2 trolls)"
   }
 }
 challenge_rating {

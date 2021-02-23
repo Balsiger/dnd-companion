@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell afflicts the subject with uncontrollable laughter. It collapses into gales of manic laughter, falling prone. The subject can take no actions while laughing, but is not considered helpless. After the spell ends, it can act normally.  A creature with an Intelligence score of 2 or lower is not affected. A creature whose type (such as humanoid or dragon) is different from the caster\'s receives a +4 bonus on its saving throw, because humor doesn\'t \342\200\232\303\204\303\272translate\342\200\232\303\204\303\271 well.  Material Component: Tiny tarts that are thrown at the target and a feather that is waved in the air."
+  description: "This spell afflicts the subject with uncontrollable laughter. It collapses into gales of manic laughter, falling prone. The subject can take no actions while laughing, but is not considered helpless. After the spell ends, it can act normally.  A creature with an Intelligence score of 2 or lower is not affected. A creature whose type (such as humanoid or dragon) is different from the caster\'s receives a +4 bonus on its saving throw, because humor doesn\'t 'translate' well.  Material Component: Tiny tarts that are thrown at the target and a feather that is waved in the air."
   short_description: "Subject loses actions for 1 round/level."
 }
 school: ENCHANTMENT

@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The elemental\342\200\232\303\204\303\264s touch puts out torches, campfires, exposed lanterns, and other open flames of nonmagical origin if these are of Large size or smaller. The creature can dispel magical fire it touches as dispel magic (caster level equals elemental\342\200\232\303\204\303\264s HD)."
+  description: "The elemental's touch puts out torches, campfires, exposed lanterns, and other open flames of nonmagical origin if these are of Large size or smaller. The creature can dispel magical fire it touches as dispel magic (caster level equals elemental's HD)."
 }
 type: EXTRAORDINARY

@@ -11,6 +11,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Can create visual illusions from surrounding shadows. This ability\342\200\232\303\204\303\264s effect is identical to that of the arcane spell \\SpellRef{silent image} and may be employed once per day."
+  description: "Can create visual illusions from surrounding shadows. This ability's effect is identical to that of the arcane spell \\SpellRef{silent image} and may be employed once per day."
 }
 type: SPELL_LIKE

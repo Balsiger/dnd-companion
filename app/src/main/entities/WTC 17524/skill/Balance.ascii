@@ -11,7 +11,7 @@ template {
   description: "You can keep your balance while walking on a tightrope, a narrow beam, a slippery ledge, or an uneven floor."
 }
 ability: DEXTERITY
-action: "None. A Balance check doesn\342\200\232\303\204\303\264t require an action; it is                     made as part of another action or as a reaction to a                     situation."
+action: "None. A Balance check doesn't require an action; it is                     made as part of another action or as a reaction to a                     situation."
 special: "If you have the Agile feat, you get a +2 bonus on Balance                     checks."
 restriction: ARMOR_CHECK_PENALTY
 synergy {

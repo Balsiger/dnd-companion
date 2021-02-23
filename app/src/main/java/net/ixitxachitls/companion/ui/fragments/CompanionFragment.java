@@ -50,7 +50,8 @@ import androidx.fragment.app.Fragment;
 public abstract class CompanionFragment extends Fragment implements CompanionApplication.Updatable {
 
   public enum Type {
-    settings, campaigns, campaign, character, miniatures, monster, localCharacter, products
+    settings, campaigns, campaign, character, miniatures, monster, localCharacter, products,
+    loading,
   };
 
   private final Type type;
@@ -69,7 +70,6 @@ public abstract class CompanionFragment extends Fragment implements CompanionApp
   @Override
   public void onResume() {
     ((MainActivity) getActivity()).setScreenName(getClass().getSimpleName());
-
 
     super.onResume();
 
@@ -120,13 +120,6 @@ public abstract class CompanionFragment extends Fragment implements CompanionApp
     return application().monsters();
   }
 
-  protected void finishLoading(String text) {
-    // Not sure why this sometimes ends up null...
-    if (getActivity() != null) {
-      ((MainActivity) getActivity()).finishLoading(text);
-    }
-  }
-
   protected Images images() {
     return application().images();
   }
@@ -147,20 +140,8 @@ public abstract class CompanionFragment extends Fragment implements CompanionApp
     return application().monsters();
   }
 
-  protected void runBackground(String description, Wrapper.Action action) {
-    startLoading(description);
-    AsyncTask.execute( () -> {
-      action.execute();
-      getActivity().runOnUiThread(() -> finishLoading(description));
-    });
-  }
-
   protected void show(Type fragment) {
     CompanionFragments.get().show(fragment, Optional.empty());
-  }
-
-  protected void startLoading(String text) {
-    ((MainActivity) getActivity()).startLoading(text);
   }
 
   protected Users users() {
