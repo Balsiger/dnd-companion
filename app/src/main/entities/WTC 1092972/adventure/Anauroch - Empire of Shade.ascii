@@ -93,7 +93,7 @@ encounter {
     spell { name: "detect thoughts" }
     spell { name: "melf's acid arrow" }
     spell { name: "scorch" }
-    spell { name: "see invibisility" }
+    spell { name: "see invisibility" }
     spell { name: "alarm" }
     spell { name: "arrow mind" }
     spell { name: "magic missile" }
@@ -103,4 +103,612 @@ encounter {
     spell { name: "mage hand" }
     spell { name: "clairaudience or clairvoyance" }
   }
+}
+encounter {
+  name: "Deadly Nightshade"
+  short_name: "M3"
+  description: "Sharran left some nasty undead to harass any followers."
+  short_description: "Nasty undead are lurking."
+  encounter_level: 16
+  location: "Windsong Tower"
+  location: "Myth Drannor"
+
+  spell_group {
+    name: "Advanced Nighthaunt"
+    description: "Advanced Nighthaunt"
+    caster_level: 16
+    ability_bonus: 4
+    spell_class: WIZARD
+    spell { name: "deeper darkness" }
+    spell { name: "detect magic" }
+    spell { name: "see invisibility" }
+    spell { name: "unholy blight" }
+    spell { name: "contagion" }
+    spell { name: "greater dispel magic" }
+    spell { name: "haste" }
+    spell { name: "invisibility" }
+    spell { name: "finger of death" }
+    spell { name: "hold monster" }
+    spell { name: "ice storm" }
+    spell { name: "plane shift" }
+  }
+}
+encounter {
+  name: "Guardians of Stone"
+  short_name: "M4"
+  description: "Darcassan left some guards in hiding."
+  short_description: "Hidden guardians."
+  encounter_level: 15
+  location: "Windsong Tower"
+  location: "Myth Drannor"
+
+  spell_group {
+    name: "Advanced Stone Golem"
+    description: "Advanced Stone Golem"
+    caster_level: 18
+    ability_bonus: 6
+    spell_class: WIZARD
+    spell { name: "slow" }
+  }
+  spell_group {
+    name: "Battle Horror"
+    description: "Battle Horror"
+    caster_level: 7
+    ability_bonus: 0
+    spell_class: WIZARD
+    spell { name: "magic missile" }
+    spell { name: "blink" }
+    spell { name: "dimension door" }
+  }
+}
+encounter {
+  name: "The Warrior Attacks"
+  short_name: "M5"
+  description: "Darcassan the fighting machine."
+  short_description: "Surrender or die."
+  encounter_level: 16
+  location: "Windsong Tower"
+  location: "Myth Drannor"
+
+  spell_group {
+    name: "Darcassan the Warrior"
+    description: "Darcassan the Warrior"
+    caster_level: 13
+    ability_bonus: 6
+    spell_class: WIZARD
+    spell { name: "delayed blast fireball" }
+    spell { name: "spell turning" }
+    spell { name: "greater dispel magic" }
+    spell { name: "repulsion" }
+    spell { name: "tenser's transformation" }
+    spell { name: "true seeing" }
+    spell { name: "bigby's interposing hand" }
+    spell { name: "lesser ironguard" }
+    spell { name: "prying eyes" }
+    spell { name: "telekinesis" }
+    spell { name: "wall of force" }
+    spell { name: "arcane eye" }
+    spell { name: "fire shield" }
+    spell { name: "ice storm" }
+    spell { name: "locate creature" }
+    spell { name: "stoneskin" }
+    spell { name: "thunderlance" }
+    spell { name: "haste" }
+    spell { name: "protection from energy" }
+    spell { name: "greater magic weapon" }
+    spell { name: "battering ram" }
+    spell { name: "blur" }
+    spell { name: "daylight" }
+    spell { name: "detect thoughts" }
+    spell { name: "invisiblity" }
+    spell { name: "mirror image" }
+    spell { name: "see invisibility" }
+    spell { name: "arrow mind" }
+    spell { name: "endure elements" }
+    spell { name: "expeditious retreat" }
+    spell { name: "magic missile" }
+    spell { name: "obscuring mist" }
+    spell { name: "protection from evil" }
+    spell { name: "shield" }
+    spell { name: "true strike" }
+    spell { name: "detect magic" }
+    spell { name: "ghost sound" }
+    spell { name: "resistance" }
+    spell { name: "mage hand" }
+    spell { name: "clairaudience or clairvoyance" }
+  }
+}
+encounter {
+  name: "Guardians of the Vault"
+  short_name: "M6"
+  description: "Guardians protected the treasures."
+  short_description: "Nothing here."
+  encounter_level: 14
+  location: "Windsong Tower"
+  location: "Myth Drannor"
+  spell_group {
+    name: "Advanced Bralani"
+    description: "Advanced Bralani"
+    caster_level: 6
+    ability_bonus: 3
+    spell_class: SORCERER
+    spell { name: "blur" }
+    spell { name: "charm person" }
+    spell { name: "gust of wind" }
+    spell { name: "mirror image" }
+    spell { name: "wind wall" }
+    spell { name: "lightning bolt" }
+    spell { name: "cure serious wounds" }
+  }
+  spell_group {
+    name: "Ghaele"
+    description: "Ghaele"
+    caster_level: 14
+    ability_bonus: 3
+    spell_class: CLERIC
+    spell { name: "regenerate" }
+    spell { name: "resurrection" }
+    spell { name: "word of chaos" }
+    spell { name: "chain lightning" }
+    spell { name: "heal" }
+    spell { name: "heroes' feast" }
+    spell { name: "dispel evil" }
+    spell { name: "dispel law" }
+    spell { name: "healing circle" }
+    spell { name: "righteous might" }
+    spell { name: "chaos hammer" }
+    spell { name: "cure critical wounds" }
+    spell { name: "freedom of movement" }
+    spell { name: "neutralize poison" }
+    spell { name: "cure serious wounds" }
+    spell { name: "daylight" }
+    spell { name: "invisibility purge" }
+    spell { name: "magic circle against law" }
+    spell { name: "prayer" }
+    spell { name: "consecrate" }
+    spell { name: "cure moderate wounds" }
+    spell { name: "shatter" }
+    spell { name: "silence" }
+    spell { name: "spiritual weapon" }
+    spell { name: "bless" }
+    spell { name: "cure light wounds" }
+    spell { name: "divine favor" }
+    spell { name: "protection from law" }
+    spell { name: "shield of faith" }
+    spell { name: "cure minor wounds" }
+    spell { name: "guidance" }
+    spell { name: "mending" }
+    spell { name: "read magic" }
+  }
+  spell_group {
+    name: "Ghaele (spell-like abilities)"
+    description: "Ghaele"
+    caster_level: 12
+    ability_bonus: 3
+    spell_class: SORCERER
+    spell { name: "aid" }
+    spell { name: "charm monster" }
+    spell { name: "color spray" }
+    spell { name: "comprehend languages" }
+    spell { name: "continual flame" }
+    spell { name: "cure light wounds" }
+    spell { name: "detect evil" }
+    spell { name: "detect thoughts" }
+    spell { name: "disguise self" }
+    spell { name: "dispel magic" }
+    spell { name: "hold monster" }
+    spell { name: "greater invisibility" }
+    spell { name: "major image" }
+    spell { name: "see invisibility" }
+    spell { name: "greater teleport" }
+    spell { name: "chain lightning" }
+    spell { name: "prismatic spray" }
+    spell { name: "wall of force" }
+  }
+  spell_group {
+    name: "Ghaele (aura)"
+    description: "Ghaele (aura)"
+    caster_level: 10
+    ability_bonus: 3
+    spell_class: SORCERER
+    spell { name: "magic circle against evil" }
+    spell { name: "lesser globe of invulnerability" }
+  }
+}
+encounter {
+  name: "Just a Drill"
+  short_name: "M7"
+  description: "If you are out for a fight..."
+  short_description: "Want some exercise?"
+  encounter_level: 12
+  location: "Windsong Tower"
+  location: "Myth Drannor"
+}
+encounter {
+  name: "Battle in the Aerie"
+  short_name: "M8"
+  description: ""
+  short_description: "Another day, another battle."
+  encounter_level: 16
+  location: "Windsong Tower"
+  location: "Myth Drannor"
+  spell_group {
+    name: "Darcassan the Guardian"
+    description: "Darcassan the Guardian"
+    caster_level: 13
+    ability_bonus: 6
+    spell_class: WIZARD
+    spell { name: "prismatic spray" }
+    spell { name: "spell turning" }
+    spell { name: "bigby's forceful hand" }
+    spell { name: "fireball" meta_magic: MAXIMIZED}
+    spell { name: "greater dispel magic" }
+    spell { name: "true seeing" }
+    spell { name: "cone of cold" }
+    spell { name: "dominate person" }
+    spell { name: "mordenkainen's faithful hound" }
+    spell { name: "wall of force" }
+    spell { name: "confusion" }
+    spell { name: "fire shield" }
+    spell { name: "magic missile" meta_magic: MAXIMIZED }
+    spell { name: "wall of ice" }
+    spell { name: "greater magic weapon" }
+    spell { name: "reverse arrows" }
+    spell { name: "shadow spray" meta_magic: HEIGHTENED }
+    spell { name: "suggestion" }
+    spell { name: "darkvision" }
+    spell { name: "detect thoughts" }
+    spell { name: "melf's acid arrow" }
+    spell { name: "resist energy" }
+    spell { name: "summon swarm" }
+    spell { name: "web" }
+    spell { name: "burning hands" }
+    spell { name: "arrow mind" }
+    spell { name: "protection from evil" }
+    spell { name: "protection from law" }
+    spell { name: "scatterspray" }
+    spell { name: "shield" }
+    spell { name: "true strike" }
+    spell { name: "detect magic" }
+    spell { name: "mage hand" }
+    spell { name: "resistance" }
+    spell { name: "clairaudience or clairvoyance" }
+  }
+}
+encounter {
+  name: "Stonelands"
+  short_name: "R1"
+  description: "Some random encounters in the Stonelands, just in case somebody gets bored"
+  short_description: "Are you bored?"
+  location: "Stonelands"
+  spell_group {
+    name: "Gynosphinx"
+    description: "Gynosphinx"
+    caster_level: 14
+    ability_bonus: 4
+    spell_class: SORCERER
+    spell { name: "clairaudience or clairvoyance" }
+    spell { name: "detect magic" }
+    spell { name: "see invisibility" }
+    spell { name: "comprehend languages"}
+    spell { name: "locate object" }
+    spell { name: "dispel magic" }
+    spell { name: "remove curse" }
+    spell { name: "legend lore" }
+  }
+  spell_group {
+    name: "Dragonflesh Golem"
+    caster_level: 1
+    spell_class: SORCERER
+    spell { name: "slow" }
+  }
+  spell_group {
+    name: "Mature Adult Sand Dragon"
+    description: "Spells: 6/6/4"
+    caster_level: 5
+    ability_bonus: 4
+    spell_class: SORCERER
+    spell { name: "haboob" }
+    spell { name: "dispel water" }
+    spell { name: "daze" }
+    spell { name: "detect magic" }
+    spell { name: "flare" }
+    spell { name: "ghost sound" }
+    spell { name: "read magic" }
+    spell { name: "locate water" }
+    spell { name: "mage armor" }
+    spell { name: "silent image" }
+    spell { name: "obscuring mist" }
+    spell { name: "blur" }
+    spell { name: "invisibility" }
+    spell { name: "fireball" }
+  }
+}
+encounter {
+  name: "Entrance to Synod"
+  short_name: "C1"
+  description: "Entrance to the Netherise Ex-City"
+  short_description: "Polly?"
+  location: "Synod"
+  spell_group {
+    name: "Dragonflesh Golem"
+    description: "Scary and ugly"
+    caster_level: 10
+    ability_bonus: 0
+    spell_class: SORCERER
+    spell { name: "slow" }
+  }
+  spell_group {
+    name: "Beholder"
+    description: "Beauty is NOT in the eye of the beholder"
+    caster_level: 13
+    ability_bonus: 2
+    spell_class: SORCERER
+    spell { name: "charm monster" }
+    spell { name: "charm person" }
+    spell { name: "disintegrate" }
+    spell { name: "fear" }
+    spell { name: "finger of death" }
+    spell { name: "flesh to stone" }
+    spell { name: "inflict moderate wounds" }
+    spell { name: "sleep" }
+    spell { name: "slow" }
+    spell { name: "telekinesis" }
+    spell { name: "antimagic field" }
+  }
+}
+encounter {
+  name: "Abandoned Guardhouse"
+  short_name: "C8"
+  description: "It's dusty in here"
+  short_description: "Hachoo!"
+  location: "Synod"
+  spell_group {
+    name: "Dust Wight"
+    description: "Still dusty"
+    caster_level: 16
+    spell_class: SORCERER
+    ability_bonus: 1
+    spell { name: "greater invisibility" }
+    spell { name: "haste" }
+  }
+}
+encounter {
+  name: "Hidden Tombs"
+  short_name: "C15"
+  description: "You are not welcome"
+  location: "Synod"
+  spell_group {
+    name: "Deathshrieker"
+    description: "Silence is golden"
+    caster_level: 18
+    spell_class: SORCERER
+    ability_bonus: 4
+    spell { name: "insanity" }
+  }
+  spell_group {
+    name: "Diamond Golem"
+    description: "Shiny"
+    caster_level: 16
+    spell_class: SORCERER
+    ability_bonus: 0
+    spell { name: "dispel magic" }
+    spell { name: "true strike" }
+    spell { name: "sunbeam" }
+  }
+}
+encounter {
+  name: "Waterfall"
+  short_name: "C20"
+  description: "Fly you fools"
+  location: "Synod"
+  spell_group {
+    name: "Death Tyrant"
+    description: "Now you have magic, now you don't"
+    caster_level: 13
+    spell_class: SORCERER
+    ability_bonus: 3
+    spell { name: "disintegrate" }
+    spell { name: "fear" }
+    spell { name: "finger of death" }
+    spell { name: "sleep" }
+    spell { name: "slow" }
+    spell { name: "antimagic field" }
+  }
+}
+encounter {
+  name: "First Guardroom"
+  short_name: "C22"
+  description: "Guarding what's to come"
+  location: "Synod"
+  spell_group {
+    name: "Beholder"
+    description: "Beauty is NOT in the eye of the beholder"
+    caster_level: 13
+    ability_bonus: 2
+    spell_class: SORCERER
+    spell { name: "charm monster" }
+    spell { name: "charm person" }
+    spell { name: "disintegrate" }
+    spell { name: "fear" }
+    spell { name: "finger of death" }
+    spell { name: "flesh to stone" }
+    spell { name: "inflict moderate wounds" }
+    spell { name: "sleep" }
+    spell { name: "slow" }
+    spell { name: "telekinesis" }
+    spell { name: "antimagic field" }
+  }
+}
+encounter {
+  name: "Second Guardroom"
+  short_name: "C25"
+  description: "Guarding what's to come"
+  location: "Synod"
+  spell_group {
+    name: "Beholder"
+    description: "Beauty is NOT in the eye of the beholder"
+    caster_level: 13
+    ability_bonus: 2
+    spell_class: SORCERER
+    spell { name: "charm monster" }
+    spell { name: "charm person" }
+    spell { name: "disintegrate" }
+    spell { name: "fear" }
+    spell { name: "finger of death" }
+    spell { name: "flesh to stone" }
+    spell { name: "inflict moderate wounds" }
+    spell { name: "sleep" }
+    spell { name: "slow" }
+    spell { name: "telekinesis" }
+    spell { name: "antimagic field" }
+  }
+}
+encounter {
+  name: "Library"
+  short_name: "C27"
+  description: "Let there be magic"
+  location: "Synod"
+  spell_group {
+    name: "Blighted Bloodfire"
+    description: "Hot but ugly"
+    caster_level: 10
+    spell_class: SORCERER
+    spell { name: "true strike" }
+  }
+  spell_group {
+    name: "Culcathrax"
+    description: "Not a nice cone"
+    caster_level: 13
+    spell_class: SORCERER
+    ability_bonus: 6
+    spell { name: "acid fog" }
+    spell { name: "chain lightning" }
+    spell { name: "bigby's interposing hand" }
+    spell { name: "dismissal" }
+    spell { name: "teleport" }
+    spell { name: "enervation" }
+    spell { name: "fire shield" }
+    spell { name: "lesser globe of invulnerability" }
+    spell { name: "stoneskin" }
+    spell { name: "dispel magic" }
+    spell { name: "fireball" }
+    spell { name: "greater mage armor" }
+    spell { name: "suggestion" }
+    spell { name: "bear's endurance" }
+    spell { name: "flaming sphere" }
+    spell { name: "invisiblity" }
+    spell { name: "resist energy" }
+    spell { name: "scorching ray" }
+    spell { name: "burning hands" }
+    spell { name: "identify" }
+    spell { name: "magic missle" }
+    spell { name: "reduce person" }
+    spell { name: "unseen servant" }
+    spell { name: "acid splash" }
+    spell { name: "arcane mark" }
+    spell { name: "daze" }
+    spell { name: "flare" }
+    spell { name: "ghost sound" }
+    spell { name: "light" }
+    spell { name: "mage hand" }
+    spell { name: "open or close" }
+    spell { name: "read magic" }
+    spell { name: "detec magic" }
+  }
+
+}
+encounter {
+  name: "Phaerimm Nursery"
+  short_name: "C28"
+  description: "Ohh, babies"
+  location: "Synod"
+  spell_group {
+    name: "Hatchling Phaerimms"
+    description: "They are definitely not cute"
+    caster_level: 1
+    ability_bonus: 1
+    spell_class: SORCERER
+    spell { name: "burning hands" }
+    spell { name: "magic missile" }
+    spell { name: "dacning lights" }
+    spell { name: "flare" }
+    spell { name: "mage hand" }
+    spell { name: "resistance" }
+  }
+  spell_group {
+    name: "Junvenile Phaerimm"
+    description: "They are definitely not cute"
+    caster_level: 4
+    ability_bonus: 3
+    spell_class: SORCERER
+    spell { name: "melf's acid arrow" }
+    spell { name: "charm person" }
+    spell { name: "magic missile" }
+    spell { name: "ray of enfeeblement" }
+    spell { name: "detect magic" }
+    spell { name: "disrupt undead" }
+    spell { name: "mage hand" }
+    spell { name: "resistance" }
+    spell { name: "touch of fatigue" }
+  }
+  spell_group {
+    name: "Beholder"
+    description: "Beauty is NOT in the eye of the beholder"
+    caster_level: 13
+    ability_bonus: 2
+    spell_class: SORCERER
+    spell { name: "charm monster" }
+    spell { name: "charm person" }
+    spell { name: "disintegrate" }
+    spell { name: "fear" }
+    spell { name: "finger of death" }
+    spell { name: "flesh to stone" }
+    spell { name: "inflict moderate wounds" }
+    spell { name: "sleep" }
+    spell { name: "slow" }
+    spell { name: "telekinesis" }
+    spell { name: "antimagic field" }
+  }
+  spell_group {
+    name: "Tomb Tappers"
+    description: "Now that's ugly"
+    caster_level: 13
+    spell_class: SORCERER
+    ability_bonus: 6
+    spell { name: "acid fog" }
+    spell { name: "chain lightning" }
+    spell { name: "bigby's interposing hand" }
+    spell { name: "dismissal" }
+    spell { name: "teleport" }
+    spell { name: "enervation" }
+    spell { name: "fire shield" }
+    spell { name: "lesser globe of invulnerability" }
+    spell { name: "stoneskin" }
+    spell { name: "dispel magic" }
+    spell { name: "fireball" }
+    spell { name: "greater mage armor" }
+    spell { name: "suggestion" }
+    spell { name: "bear's endurance" }
+    spell { name: "flaming sphere" }
+    spell { name: "invisiblity" }
+    spell { name: "resist energy" }
+    spell { name: "scorching ray" }
+    spell { name: "burning hands" }
+    spell { name: "identify" }
+    spell { name: "magic missle" }
+    spell { name: "reduce person" }
+    spell { name: "unseen servant" }
+    spell { name: "acid splash" }
+    spell { name: "arcane mark" }
+    spell { name: "daze" }
+    spell { name: "flare" }
+    spell { name: "ghost sound" }
+    spell { name: "light" }
+    spell { name: "mage hand" }
+    spell { name: "open or close" }
+    spell { name: "read magic" }
+    spell { name: "detec magic" }
+  }
+
 }

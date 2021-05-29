@@ -48,7 +48,7 @@ public class CloudImageView extends LinearLayout {
   private final Wrapper<ImageView> image;
   private final ProgressBar progressBar;
   private Optional<String> imageId = Optional.empty();
-  private boolean reload = false;
+  private boolean imageLoaded = false;
 
   public CloudImageView(Context context) {
     this(context, null, 0);
@@ -82,19 +82,22 @@ public class CloudImageView extends LinearLayout {
   }
 
   public void setImage(String id, @DrawableRes int drawable, int maxAgeHours) {
-    this.imageId = Optional.of(id);
+    if (!imageLoaded || !id.equals(imageId.orElse(null))) {
+      this.imageId = Optional.of(id);
 
-    if (drawable != 0) {
-      setImage(drawable);
+      if (drawable != 0) {
+        setImage(drawable);
+      }
+      progressBar.setVisibility(VISIBLE);
+      CompanionApplication.get().context().images().get(PATH + normalize(id), maxAgeHours,
+          image -> {
+            progressBar.setVisibility(GONE);
+            if (image.isPresent()) {
+              this.image.get().setImageDrawable(new BitmapDrawable(getResources(), image.get()));
+              imageLoaded = true;
+            }
+          });
     }
-    progressBar.setVisibility(VISIBLE);
-    CompanionApplication.get().context().images().get(PATH + normalize(id), maxAgeHours,
-        image -> {
-          progressBar.setVisibility(GONE);
-          if (image.isPresent()) {
-            this.image.get().setImageDrawable(new BitmapDrawable(getResources(), image.get()));
-          }
-        });
   }
 
   private String normalize(String id) {
@@ -103,6 +106,7 @@ public class CloudImageView extends LinearLayout {
 
   private void reload() {
     if (imageId.isPresent()) {
+      imageLoaded = false;
       setImage(imageId.get(), 0, 0);
     }
   }

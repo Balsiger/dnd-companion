@@ -21,6 +21,9 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import android.os.AsyncTask;
+import android.os.Debug;
+
 import com.google.common.collect.SortedSetMultimap;
 import com.google.common.collect.TreeMultimap;
 import com.google.firebase.firestore.CollectionReference;
@@ -29,7 +32,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.ui.Alert;
 
+import java.nio.channels.AsynchronousByteChannel;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -174,13 +179,15 @@ public class Characters extends Documents<Characters> {
 
     if (!userIdsLoading.contains(player.getId())) {
       userIdsLoading.add(player.getId());
-      CollectionReference reference = db.collection(player.getId() + "/" + PATH);
-      reference.addSnapshotListener((s, e) -> {
-        if (e == null) {
-          processCharacters(player, s.getDocuments());
-        } else {
-          Status.exception("Cannot read characters!", e);
-        }
+      AsyncTask.execute(() -> {
+        CollectionReference reference = db.collection(player.getId() + "/" + PATH);
+        reference.addSnapshotListener((s, e) -> {
+          if (e == null) {
+            processCharacters(player, s.getDocuments());
+          } else {
+            Status.exception("Cannot read characters!", e);
+          }
+        });
       });
     }
   }
@@ -222,6 +229,7 @@ public class Characters extends Documents<Characters> {
     }
 
     loaded = true;
+
     CompanionApplication.get().update("characters loaded");
   }
 }

@@ -1,0 +1,42 @@
+template {
+  name: "Shadow Spray"
+  reference {
+    name: "WTC 8859872"
+    pages {
+      low: 186
+      high: 186
+    }
+  }
+  world: "Generic"
+  description: "\\emph{As you finish casting this spell, ribbonlike shadows burst outward from the midst of your foes.} You cause a multitude of ribbonlike shadows to instantaneously explode outward from the point of origin. Creatures in the area take 4 points of Strength damage and are dazed for 1 round."
+  short_description: "Create black shadow ribbons that cause 4 Str damage."
+}
+school: ILLUSION
+subschool: SHADOW
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+ component: "A handful of black ribbons"
+}
+casting_time: {
+  standard_actions: 1
+}
+special_range: MEDIUM
+area: "5-ft-radius burst"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+}
+saving_throw: "Fortitude negates"
+spell_resistance: "Yes"

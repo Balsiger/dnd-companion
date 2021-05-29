@@ -25,11 +25,15 @@ import android.content.Context;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 
+import com.google.api.client.util.Lists;
 import com.google.common.collect.ImmutableMap;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.enums.SpellClass;
+import net.ixitxachitls.companion.ui.dialogs.SpellDialog;
 import net.ixitxachitls.companion.util.commands.BoldCommand;
+import net.ixitxachitls.companion.util.commands.ClickableCommand;
 import net.ixitxachitls.companion.util.commands.ColorCommand;
 import net.ixitxachitls.companion.util.commands.ItalicsCommand;
 import net.ixitxachitls.companion.util.commands.ListCommand;
@@ -39,11 +43,14 @@ import net.ixitxachitls.companion.util.commands.TextCommand;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
+import javax.annotation.Nullable;
 
 import androidx.annotation.VisibleForTesting;
 
@@ -76,7 +83,13 @@ public class Texts {
   private static Map<String, TextCommand> COMMANDS = ImmutableMap.<String, TextCommand>builder()
       .put("Class", new ColorCommand(R.color.classNameDark))
       .put("Place", new ColorCommand(R.color.campaignDark))
-      .put("Spell", new ColorCommand(R.color.spellDark))
+      .put("Spell", new ClickableCommand(R.color.spellDark, (name, values) -> {
+        SpellDialog.newInstance(name, values.get(SpellDialog.VALUE_CASTER_LEVEL, 1),
+            values.get(SpellDialog.VALUE_SPELL_ABILITY_BONUS, 0),
+            SpellClass.fromName(values.get(SpellDialog.VALUE_SPELL_CLASS, "Wizard")),
+            Lists.newArrayList())
+            .display();
+      }))
       .put("Monster", new ColorCommand(R.color.monsterDark))
       .put("Quality", new ColorCommand(R.color.qualityDark))
       .put("Item", new ColorCommand(R.color.itemDark))
@@ -97,7 +110,7 @@ public class Texts {
         .replaceAll(MARKER_OPTONAL_END + "<\\d+>", "" + OPTIONAL_END);
   }
 
-  private static String evaluateExpression(String expression, Map<String, Value> values) {
+  private static String evaluateExpression(String expression, Values values) {
     for (StringBuffer buffer = new StringBuffer();
          evaluateExpressionBrackets(buffer, expression, values);
          buffer = new StringBuffer()) {
@@ -108,7 +121,7 @@ public class Texts {
   }
 
   private static boolean evaluateExpressionBrackets(StringBuffer buffer, String expression,
-                                                    Map<String, Value> values) {
+                                                    Values values) {
 
     // Evaluate all brackets.
     Matcher matcher = EXPRESSION_BRACKET.matcher(expression);
@@ -130,7 +143,7 @@ public class Texts {
     return found;
   }
 
-  private static Value evaluateExpressionPart(String expression, Map<String, Value> values) {
+  private static Value evaluateExpressionPart(String expression, Values values) {
     // The given expression will not have any brackets.
 
     // Number.
@@ -266,11 +279,17 @@ public class Texts {
   }
 
   public static SpannableStringBuilder processCommands(Context context, String text) {
-    return processCommands(context, text, ImmutableMap.of());
+    return processCommands(context, text, new Values());
+  }
+
+  @Deprecated
+  public static SpannableStringBuilder processCommands(Context context, String text,
+                                                       Map<String, Value> values) {
+    return processCommands(context, text, new Values(values));
   }
 
   public static SpannableStringBuilder processCommands(Context context, String text,
-                                                       Map<String, Value> values) {
+                                                       Values values) {
     if (text.isEmpty()) {
       return new SpannableStringBuilder(text);
     }
@@ -289,6 +308,9 @@ public class Texts {
     // Mark the brackets in the text
     SpannableStringBuilder builder = new SpannableStringBuilder();
     text = markOptionalBrackets(markBrackets(text));
+
+    TextCommand.RenderingContext renderingContext =
+        new TextCommand.RenderingContext(context, values);
 
     for (int start = 0; start < text.length(); ) {
       // Search the first command (don't accept escaped commands)
@@ -382,7 +404,7 @@ public class Texts {
 
       // Now we try to render the command (we have to use an additional
       // template to avoid exceptions because a rendering is already in place)
-      builder.append(render(context, name, optionals, arguments));
+      builder.append(render(renderingContext, name, optionals, arguments));
 
       // If no arguments were found, then skip the character directly following
       // the command (must be a white space)
@@ -398,7 +420,7 @@ public class Texts {
   }
 
   @VisibleForTesting
-  protected static String processExpressions(String text, Map<String, Value> values) {
+  protected static String processExpressions(String text, Values values) {
     Matcher matcher = EXPRESSSION_PATTERN.matcher(text);
     StringBuffer buffer = new StringBuffer();
     while (matcher.find()) {
@@ -431,7 +453,7 @@ public class Texts {
     return builder;
   }
 
-  private static Spanned render(Context context, String command,
+  private static Spanned render(TextCommand.RenderingContext context, String command,
                                 List<SpannableStringBuilder> optionals,
                                 List<SpannableStringBuilder> arguments) {
     if (COMMANDS.containsKey(command)) {
@@ -448,6 +470,55 @@ public class Texts {
 
   public static Spanned toSpanned(Context context, String text, Map<String, Value> values) {
     return processCommands(context, processWhitespace(text), values);
+  }
+
+  public static class Values {
+    Map<String, Value> values = new HashMap<>();
+
+    public Values() {
+    }
+
+    public Values(Map<String, Value> values) {
+      this.values = new HashMap<>(values);
+    }
+
+    public Values put(String key, int value) {
+      return put(key, new IntegerValue(value));
+    }
+
+    public Values put(String key, String value) {
+      return put(key, new StringValue(value));
+    }
+
+    public Values put(String key, Value value) {
+      values.put(key, value);
+
+      return this;
+    }
+
+    public int get(String key, int defaultValue) {
+      if (values.get(key) instanceof IntegerValue) {
+        return ((IntegerValue) values.get(key)).value;
+      }
+
+      return defaultValue;
+    }
+
+    public String get(String key, String defaultValue) {
+      if (values.get(key) instanceof StringValue) {
+        return ((StringValue) values.get(key)).value;
+      }
+
+      return defaultValue;
+    }
+
+    public boolean containsKey(String key) {
+      return values.containsKey(key);
+    }
+
+    public @Nullable Value get(String key) {
+      return values.get(key);
+    }
   }
 
   public static class Value {

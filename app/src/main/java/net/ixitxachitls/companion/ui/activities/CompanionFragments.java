@@ -118,6 +118,7 @@ public class CompanionFragments {
 
   public CompanionFragment show(CompanionFragment.Type fragment, Optional<View> sharedElement) {
     CompanionApplication.get().logEvent(fragment.toString(), fragment.name(), "view");
+
     switch (fragment) {
       case settings:
         if (!settingsFragment.isPresent()) {
@@ -221,8 +222,8 @@ public class CompanionFragments {
     }
 
     // Shared element transition.
-    FragmentTransaction transaction = fragmentManager.beginTransaction();
-    if (false && sharedTransitionElement.isPresent()) {
+    FragmentTransaction transaction = fragmentManager.beginTransaction().setReorderingAllowed(true);
+    if (sharedTransitionElement.isPresent()) {
       currentFragment.get().setExitTransition(fade(ENTER_FADE_DURATION_MS, 0));
       currentFragment.get().setReenterTransition(fade(ENTER_FADE_DURATION_MS,
           EXIT_FADE_DURATION_MS + MOVE_DURATION_MS));
@@ -238,8 +239,9 @@ public class CompanionFragments {
       transaction.addSharedElement(sharedTransitionElement.get(), TRANSITION_NAME);
     }
 
-    transaction.replace(R.id.content, fragment).commitAllowingStateLoss();
-    fragmentManager.executePendingTransactions();
+    transaction.replace(R.id.content, fragment).commitNow();
+    //transaction.replace(R.id.content, fragment).commit();
+    //fragmentManager.executePendingTransactions();
     return fragment;
   }
 

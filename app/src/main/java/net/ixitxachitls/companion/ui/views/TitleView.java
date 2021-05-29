@@ -52,6 +52,7 @@ public class TitleView extends LinearLayout {
   protected final int foregroundColor;
   protected final int backgroundColor;
   protected final int defaultImage;
+  protected boolean hasImage = false;
 
   // UI elements.
   protected LinearLayout container;
@@ -80,12 +81,17 @@ public class TitleView extends LinearLayout {
     init(attributes);
   }
 
+  public boolean hasImage() {
+    return hasImage;
+  }
+
   public void setAction(Wrapper.Action action) {
     container.setOnClickListener(v -> action.execute());
   }
 
   public void setDefaultImage(@DrawableRes int drawable) {
     image.setImageDrawable(getContext().getDrawable(drawable));
+    hasImage = false;
   }
 
   public void setImageAction(Wrapper.Action action) {
@@ -93,6 +99,7 @@ public class TitleView extends LinearLayout {
   }
 
   public void setImageBitmap(Bitmap bitmap) {
+    hasImage = true;
     image.setImageBitmap(bitmap);
   }
 

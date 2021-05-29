@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like invisibility, except that it doesn\'t end if the subject attacks."
+  description: "This spell functions like \\Spell{invisibility}, except that it doesn't end if the subject attacks."
   short_description: "As invisibility, but subject can attack and stay invisible."
 }
 school: ILLUSION

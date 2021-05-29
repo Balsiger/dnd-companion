@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
@@ -59,7 +60,9 @@ import net.ixitxachitls.companion.util.Strings;
 import net.ixitxachitls.companion.util.Texts;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -90,6 +93,7 @@ public class AdventureView extends LinearLayout {
   private Optional<Encounter> encounter = Optional.empty();
   private Optional<AdventureTemplate> adventureTemplate;
   private Optional<AdventureTemplate.EncounterTemplate> encounterTemplate;
+  private Map<String, Drawable> imageByCharacter = new HashMap<>();
 
   public AdventureView(Context context) {
     super(context);
@@ -150,12 +154,15 @@ public class AdventureView extends LinearLayout {
     characters.removeAllViews();
     for (Character character :
         CompanionApplication.get().characters().getCampaignCharacters(campaign.getId())) {
-      Drawable image;
-      if (CompanionApplication.get().images().get(character.getId(), 1).isPresent()) {
-        image = new BitmapDrawable(getResources(),
-            CompanionApplication.get().images().get(character.getId(), 1).get());
-      } else {
-        image = getResources().getDrawable(R.drawable.ic_person_black_48dp, null);
+      Drawable image = imageByCharacter.get(character.getId());
+      if (image == null) {
+        Optional<Bitmap> bitmap = CompanionApplication.get().images().get(character.getId(), 1);
+        if (bitmap.isPresent()) {
+          image = new BitmapDrawable(getResources(), bitmap.get());
+          imageByCharacter.put(character.getId(), image);
+        } else {
+          image = getResources().getDrawable(R.drawable.ic_person_black_48dp, null);
+        }
       }
       ImageDropTarget target =
           new ImageDropTarget(getContext(), image, character.getName(), true);
@@ -211,7 +218,7 @@ public class AdventureView extends LinearLayout {
   }
 
   private String formatEncounterTitle(AdventureTemplate.EncounterTemplate template) {
-    return template.getId() + ": " + template.getName() + ", EL " + template.getEncounterLevel();
+    return template.getId() + " - " + template.getName() + ", EL " + template.getEncounterLevel();
   }
 
   @CallSuper
@@ -283,8 +290,7 @@ public class AdventureView extends LinearLayout {
         ListSelectDialog dialog = ListSelectDialog.newInstance(R.string.select_encounter,
             ImmutableList.of(campaign.get().getEncounterId()),
             adventure.get().getEncounters().stream()
-                .map(t -> new ListSelectDialog.Entry(formatEncounterName(t.getId(),
-                    t.getName()),
+                .map(t -> new ListSelectDialog.Entry(formatEncounterTitle(t),
                     Encounters.createId(campaign.get().getAdventureId(), t.getId())))
                 .collect(Collectors.toList()), R.color.campaign);
         dialog.setSelectListener(this::selectedEncounter);

@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import android.os.AsyncTask;
+
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
@@ -79,13 +81,15 @@ public class Adventures extends Documents<Adventures> {
 
   public void readAdventures(String campaignId) {
     if (!adventuresByCampaignId.containsKey(campaignId)) {
-      CollectionReference reference = db.collection(campaignId + "/" + PATH);
-      reference.addSnapshotListener((s, e) -> {
-        if (e == null) {
-          readAdventures(campaignId, s.getDocuments());
-        } else {
-          Status.exception("Cannot read adventures!", e);
-        }
+      AsyncTask.execute(() -> {
+        CollectionReference reference = db.collection(campaignId + "/" + PATH);
+        reference.addSnapshotListener((s, e) -> {
+          if (e == null) {
+            readAdventures(campaignId, s.getDocuments());
+          } else {
+            Status.exception("Cannot read adventures!", e);
+          }
+        });
       });
     }
   }

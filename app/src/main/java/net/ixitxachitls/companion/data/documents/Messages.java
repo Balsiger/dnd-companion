@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import android.os.AsyncTask;
+
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
@@ -67,15 +69,17 @@ public class Messages extends Documents<Messages> {
 
   public void readMessages(String id) {
     if (!messagesByOwnerId.containsKey(id)) {
-      messagesByOwnerId.put(id, Collections.emptyList());
-      Status.log("reading messages for " + id);
-      CollectionReference reference = db.collection(id + "/" + PATH);
-      reference.addSnapshotListener((s, e) -> {
-        if (e == null) {
-          readMessages(id, s.getDocuments());
-        } else {
-          Status.exception("Cannot read messages!", e);
-        }
+      AsyncTask.execute(() -> {
+        messagesByOwnerId.put(id, Collections.emptyList());
+        Status.log("reading messages for " + id);
+        CollectionReference reference = db.collection(id + "/" + PATH);
+        reference.addSnapshotListener((s, e) -> {
+          if (e == null) {
+            readMessages(id, s.getDocuments());
+          } else {
+            Status.exception("Cannot read messages!", e);
+          }
+        });
       });
     }
   }

@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import android.os.AsyncTask;
+
 import com.google.common.collect.ImmutableMap;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
@@ -34,6 +36,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import androidx.loader.content.AsyncTaskLoader;
 
 /**
  * Manage all invites.
@@ -77,17 +81,19 @@ public class Invites extends Documents<Invites> {
   public void listenCampaigns(CampaignsCallback callback) {
     ensureId();
 
-    db.collection(INVITES + "/" + email() + "/" + CAMPAIGNS)
-        .addSnapshotListener((snapshots, e) -> {
-          List<String> campaigns = new ArrayList<>();
-          if (snapshots != null) {
-            for (DocumentSnapshot snapshot : snapshots) {
-              campaigns.add(snapshot.getString(FIELD_CAMPAIGN));
+    AsyncTask.execute(() -> {
+      db.collection(INVITES + "/" + email() + "/" + CAMPAIGNS)
+          .addSnapshotListener((snapshots, e) -> {
+            List<String> campaigns = new ArrayList<>();
+            if (snapshots != null) {
+              for (DocumentSnapshot snapshot : snapshots) {
+                campaigns.add(snapshot.getString(FIELD_CAMPAIGN));
+              }
             }
-          }
 
-          callback.execute(campaigns);
-        });
+            callback.execute(campaigns);
+          });
+    });
   }
 
   private void ensureId() {

@@ -1,0 +1,58 @@
+template {
+  name: "Locate Water"
+  reference {
+    name: "WTC 17739"
+    pages {
+      low: 117
+      high: 118
+    }
+  }
+  world: "Generic"
+  description: "You sense the direction of a substantial body of water. The amount of information revealed depends on how long you search a particular area.\n\n\\emph{1st Round:} Presence or absence of water.\n\n\\emph{2nd Round:} Number of water sources in the area and the rough size of the largest one present.\n\n\\emph{3rd Round:} The size (see below) and location of each source of water. If a water source is outside your line of sight, then you discern its direction but not its exact location.\n\n\\emph{Size:} For the purpose of this spell, the size categories of bodies of water are as follows.\n\n\\emph{Small:} A small pond or pool (200 cubic feet or less) or a brook (5 feet across or smaller).\n\n\\emph{Medium:} A large pond or small lake (up to 20,000 cubic feet) or a good-sized stream (up to 30 feet across).\n\n\\emph{Large:} A large lake (up to 10 million cubic feet) or a broad river.\n\n\\emph{Vast:} An ocean or an inland sea.\n\nCreatures cannot be found by this spell. The spell ignores small quantities of water, such as filled bottles and skins. The spell reveals nothing about the quality of the water or how easy it is to reach.\n\nThe presence of fire or magma within the spell’s area blocks it."
+  short_description: "Find larger sources of water."
+}
+school: CONJURATION
+subschool: CREATION
+descriptor: AIR
+descriptor: EARTH
+level {
+  spell_class: CLERIC
+  level: 1
+}
+level {
+  spell_class: DRUID
+  level: 1
+}
+level {
+  spell_class: RANGER
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+components: DIVINE_FOCUS
+focus {
+  component: "A forked hazel wand"
+}
+casting_time {
+  standard_actions: 1
+}
+special_range: LONG
+area: "Cone-shaped emanation"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  duration_description: "Concentration, up to"
+}
+saving_throw: "None"
+spell_resistance: "No"

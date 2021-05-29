@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion;
 
 import android.app.Application;
+import android.os.Debug;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
@@ -36,6 +37,7 @@ import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.data.documents.Users;
+import net.ixitxachitls.companion.ui.Alert;
 
 /**
  * The global data for the companion.

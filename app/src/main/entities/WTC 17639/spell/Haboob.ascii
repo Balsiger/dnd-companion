@@ -1,0 +1,64 @@
+template {
+  name: "Haboob"
+  reference {
+    name: "WTC 17739"
+    pages {
+      low: 117
+      high: 117
+    }
+  }
+  world: "Generic"
+  description: "A thick haze of swirling dust and sand swirls out from the point you designate. The effect obscures all sight, including darkvision, beyond 5 feet. A creature within 5 feet has concealment. Creatures farther away have total concealment. Unprotected, nonmagical flames are automatically extinguished, and there is a 50% chance that protected flames will be snuffed.\n\nIn addition to obscuring sight, the swirling dust abrades any creature within it or attempting to move through it. Any creature passing through the haze takes 1d4 points of damage per two caster levels (maximum 5d4), with no save allowed. If you conjure \\Spell{haboob} so that it appears where creatures are located, each creature takes damage as if passing through the haze. Such creatures take half damage with a successful Reflex save, but if these creatures do not leave the affected area at their next opportunity, they take full damage from the abrading sands (no save) as if they had voluntarily entered the area. Any creature that remains within the affected area for more than 1 round likewise takes damage automatically (no save).\n\nA moderate wind (11+ mph) disperses the dust in 8 rounds; a strong wind (21+ mph) disperses it in 4 rounds. This spell does not function underwater."
+  short_description: "Create a swirling of dust that prevents sight and does 1d4 damage per two caster levels."
+}
+school: CONJURATION
+subschool: CREATION
+descriptor: AIR
+descriptor: EARTH
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: RANGER
+  level: 3
+}
+level {
+  spell_class: SAND
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+  component: "A pinch of ash, dust, or sand"
+}
+casting_time {
+  standard_actions: 1
+}
+special_range: MEDIUM
+effect {
+  description: "Abrasive dust spreads in 20-ft. readius, 20 ft. high"
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+}
+saving_throw: "None or Reflex half; see text"
+spell_resistance: "No"
+
+

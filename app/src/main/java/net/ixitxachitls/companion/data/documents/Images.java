@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.documents;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.util.Log;
 
 import com.google.common.cache.Cache;
@@ -59,10 +60,10 @@ public class Images {
   private final Map<String, Bitmap> imagesById = new HashMap<>();
 
   private final Cache<String, List<Callback>> pendingById = CacheBuilder.newBuilder()
-      .expireAfterWrite(10, TimeUnit.SECONDS)
+      .expireAfterWrite(30, TimeUnit.MINUTES)
       .build();
   private final Cache<String, String> inexistentById = CacheBuilder.newBuilder()
-      .expireAfterWrite(1, TimeUnit.MINUTES)
+      .expireAfterWrite(30, TimeUnit.MINUTES)
       .build();
   private final FileCache fileCache;
   protected FirebaseStorage storage;
@@ -85,6 +86,7 @@ public class Images {
     }
   }
 
+  // Return the image if it's already there, otherwise queue it for loading if necessary.
   public Optional<Bitmap> get(String id, int maxAgeHours) {
     if (!fileCache.isOld(id, maxAgeHours)) {
       return getCached(id, maxAgeHours);
@@ -136,6 +138,7 @@ public class Images {
   }
 
   private void load(String id, String name) {
+    Log.d("Images", "reading image from storage " + id + " / " + name);
     storage.getReference(name).getBytes(MAX_SIZE_BYTES).addOnSuccessListener(bytes -> {
       Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
       imagesById.put(id, bitmap);
@@ -160,19 +163,21 @@ public class Images {
     }
 
     String name = id + extensions.get(0);
-    storage.getReference(name).getMetadata()
-        .addOnSuccessListener(metadata -> {
-          String hash = metadata.getMd5Hash();
-          if (!hash.equals(imageHashesById.get(id))) {
-            load(id, name);
-            imageHashesById.put(id, hash);
-          }
-          CompanionApplication.get().update("image loaded");
-        })
-        .addOnFailureListener(e -> {
-          Log.d("Images", "load: failed for " + name);
-          load(id, extensions.subList(1, extensions.size()));
-        });
+    AsyncTask.execute(() -> {
+      storage.getReference(name).getMetadata()
+          .addOnSuccessListener(metadata -> {
+            String hash = metadata.getMd5Hash();
+            if (!hash.equals(imageHashesById.get(id))) {
+              load(id, name);
+              imageHashesById.put(id, hash);
+            }
+            CompanionApplication.get().update("image loaded");
+          })
+          .addOnFailureListener(e -> {
+            Log.d("Images", "load: failed for " + name);
+            load(id, extensions.subList(1, extensions.size()));
+          });
+    });
   }
 
   private void maybeLoad(String id, @Nullable Callback callback) {

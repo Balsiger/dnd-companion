@@ -33,7 +33,7 @@ import java.util.List;
  */
 public class ParCommand extends TextCommand {
   @Override
-  public Spanned render(Context context, List<SpannableStringBuilder> optionals,
+  public Spanned render(RenderingContext context, List<SpannableStringBuilder> optionals,
                         List<SpannableStringBuilder> arguments) {
     return SpannedString.valueOf("\n\n");
   }

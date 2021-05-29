@@ -72,11 +72,13 @@ public class CampaignTitleView extends TitleView {
 
       updateIcons();
 
-      Optional<Bitmap> bitmap = CompanionApplication.get().images().get(campaign.get().getId(), 1);
-      if (bitmap.isPresent()) {
-        setImageBitmap(bitmap.get());
-      } else {
-        clearImage(R.drawable.image_filter_hdr);
+      if (!hasImage()) {
+        Optional<Bitmap> bitmap = CompanionApplication.get().images().get(campaign.get().getId(), 1);
+        if (bitmap.isPresent()) {
+          setImageBitmap(bitmap.get());
+        } else {
+          clearImage(R.drawable.image_filter_hdr);
+        }
       }
     }
   }

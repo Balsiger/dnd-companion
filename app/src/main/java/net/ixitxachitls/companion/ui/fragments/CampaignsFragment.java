@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Debug;
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +37,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.ui.Alert;
 import net.ixitxachitls.companion.ui.Hints;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
@@ -120,8 +123,10 @@ public class CampaignsFragment extends CompanionFragment {
     return view;
   }
 
+  int count = 0;
   @Override
   public void update() {
+    Status.log("Update campaigns fragment: " + ++count);
     updateCampaigns();
     updateCharacters();
     updateUser();
@@ -165,9 +170,7 @@ public class CampaignsFragment extends CompanionFragment {
           if (campaign.isPresent()) {
             view.setCampaign(campaign.get());
             view.setAction(() -> {
-              CompanionApplication.get().startWatch();
               CompanionFragments.get().showCampaign(campaign.get(), Optional.of(view));
-              Status.log("finished click: " + CompanionApplication.get().elapsed());
             });
           }
         });

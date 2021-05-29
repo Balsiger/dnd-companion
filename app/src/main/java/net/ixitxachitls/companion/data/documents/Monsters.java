@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import android.os.AsyncTask;
+
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.google.firebase.firestore.CollectionReference;
@@ -59,13 +61,15 @@ public class Monsters extends Documents<Monsters> {
 
   public void addCampaign(String campaignId) {
     if (!monstersByCampaignId.containsKey(campaignId)) {
-      CollectionReference reference = db.collection(campaignId + "/" + Monster.PATH);
-      reference.addSnapshotListener((s, e) -> {
-        if (e == null) {
-          readMonsters(campaignId, s.getDocuments());
-        } else {
-          Status.exception("Cannot read monsters!", e);
-        }
+      AsyncTask.execute(() -> {
+        CollectionReference reference = db.collection(campaignId + "/" + Monster.PATH);
+        reference.addSnapshotListener((s, e) -> {
+          if (e == null) {
+            readMonsters(campaignId, s.getDocuments());
+          } else {
+            Status.exception("Cannot read monsters!", e);
+          }
+        });
       });
     }
   }

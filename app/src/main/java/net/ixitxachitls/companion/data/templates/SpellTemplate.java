@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.data.templates;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.enums.SpellClass;
 import net.ixitxachitls.companion.data.values.Distance;
 import net.ixitxachitls.companion.data.values.Duration;
 import net.ixitxachitls.companion.proto.Template;
@@ -178,7 +179,7 @@ public class SpellTemplate extends StoredTemplate<Template.SpellTemplateProto> {
     return proto.getSpellResistance();
   }
 
-  public String formatSavingThrow(Value.SpellClass spellClass, int abilityBonus) {
+  public String formatSavingThrow(SpellClass spellClass, int abilityBonus) {
     if (proto.getSavingThrow().equals("None")) {
       return proto.getSavingThrow();
     }
@@ -186,9 +187,9 @@ public class SpellTemplate extends StoredTemplate<Template.SpellTemplateProto> {
     return proto.getSavingThrow() + " [DC " +  saveDC(spellClass, abilityBonus) + "]";
 }
 
-  private int saveDC(Value.SpellClass spellClass, int abilityBonus) {
+  private int saveDC(SpellClass spellClass, int abilityBonus) {
     for (Template.SpellTemplateProto.Level level : proto.getLevelList()) {
-      if (level.getSpellClass() == spellClass) {
+      if (level.getSpellClass() == spellClass.toProto()) {
         return 10 + level.getLevel() + abilityBonus;
       }
     }

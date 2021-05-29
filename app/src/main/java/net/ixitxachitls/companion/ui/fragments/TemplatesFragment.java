@@ -21,8 +21,10 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,7 +82,9 @@ public abstract class TemplatesFragment extends CompanionFragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
-    LinearLayout view = (LinearLayout)
+    container.getRootView().findViewById(R.id.content)
+        .setBackgroundColor(getResources().getColor(R.color.white, null));
+   LinearLayout view = (LinearLayout)
         inflater.inflate(R.layout.fragment_templates, container, false);
 
     pager = view.findViewById(R.id.pager);

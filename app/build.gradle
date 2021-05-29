@@ -3,13 +3,14 @@ import org.gradle.internal.os.OperatingSystem
 buildscript {
   repositories {
     google()
-    jcenter()
+    mavenCentral()
     maven { url 'https://maven.google.com' }
+    jcenter()
   }
 
   dependencies {
     classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.14'
-    classpath 'de.mobilej.unmock:UnMockPlugin:0.6.4'
+    //classpath 'de.mobilej.unmock:UnMockPlugin:0.6.4'
   }
 }
 
@@ -239,7 +240,7 @@ ext.convertToBinaryProtos = { input, type, proto ->
     include "**/${type}/*.ascii"
   }
 
-  filtered.files.each {f ->
+  filtered.files.each { f ->
     if (type == 'product') {
       String dir = f.path.replaceFirst(/([^\/\\]*[\/\\][^\\\/]*[\/\\])${type}.*/, {
         all, dir -> dir
@@ -257,7 +258,7 @@ ext.convertToBinaryProtos = { input, type, proto ->
   }
 }
 
-task convertProtoData{
+task convertProtoData {
   doLast {
     convertToBinaryProtos('./src/main/entities', 'monster',
         'net.ixitxachitls.companion.proto.MonsterTemplateProto')

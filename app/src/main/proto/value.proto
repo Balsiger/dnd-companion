@@ -508,6 +508,9 @@ enum SpellClass {
   WAR = 30;
   WATER_SPELL = 31;
   DARKNESS = 32;
+  HARPER_SCOUT = 33;
+  HIEROPHANT = 34;
+  SAND = 35;
 }
 
 enum SkillSubtype {

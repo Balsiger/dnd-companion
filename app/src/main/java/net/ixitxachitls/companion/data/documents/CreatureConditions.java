@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import android.os.AsyncTask;
+
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
@@ -121,13 +123,15 @@ public class CreatureConditions extends Documents<CreatureConditions> {
   public void readConditions(String creatureId) {
     if (!"null/null".equals(creatureId) && !conditionsByCreatureId.containsKey(creatureId)) {
       conditionsByCreatureId.put(creatureId, Collections.emptyList());
-      CollectionReference reference = db.collection(creatureId + "/" + PATH);
-      reference.addSnapshotListener((s, e) -> {
-        if (e == null) {
-          readConditions(creatureId, s.getDocuments());
-        } else {
-          Status.exception("Cannot read conditions!", e);
-        }
+      AsyncTask.execute(() -> {
+        CollectionReference reference = db.collection(creatureId + "/" + PATH);
+        reference.addSnapshotListener((s, e) -> {
+          if (e == null) {
+            readConditions(creatureId, s.getDocuments());
+          } else {
+            Status.exception("Cannot read conditions!", e);
+          }
+        });
       });
     }
   }

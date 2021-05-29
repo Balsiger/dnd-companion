@@ -153,9 +153,8 @@
                 android:layout_marginTop="-7dp"
                 android:layout_marginBottom="-7dp"
                 android:layout_span="2"
-                android:progressBackgroundTint="@color/itemLight"
-                android:progressTint="@color/itemDark"
-                android:theme="@style/SmallText" />
+                android:progressBackgroundTint="@color/primaryBack"
+                android:progressTint="@color/itemLight" />
           </TableRow>
 
           <TableRow
@@ -219,8 +218,8 @@
                 android:layout_marginTop="-7dp"
                 android:layout_marginBottom="-7dp"
                 android:layout_span="2"
-                android:progressBackgroundTint="@color/itemLight"
-                android:progressTint="@color/itemDark" />
+                android:progressBackgroundTint="@color/primaryBack"
+                android:progressTint="@color/itemLight" />
           </TableRow>
 
           <TableRow
@@ -284,8 +283,8 @@
                 android:layout_marginTop="-7dp"
                 android:layout_marginBottom="-7dp"
                 android:layout_span="2"
-                android:progressBackgroundTint="@color/itemLight"
-                android:progressTint="@color/itemDark" />
+                android:progressBackgroundTint="@color/primaryBack"
+                android:progressTint="@color/itemLight" />
           </TableRow>
 
           <TableRow
@@ -349,8 +348,8 @@
                 android:layout_marginTop="-7dp"
                 android:layout_marginBottom="-7dp"
                 android:layout_span="2"
-                android:progressBackgroundTint="@color/itemLight"
-                android:progressTint="@color/itemDark" />
+                android:progressBackgroundTint="@color/primaryBack"
+                android:progressTint="@color/itemLight" />
           </TableRow>
 
           <TableRow
@@ -414,8 +413,8 @@
                 android:layout_marginTop="-7dp"
                 android:layout_marginBottom="-7dp"
                 android:layout_span="2"
-                android:progressBackgroundTint="@color/itemLight"
-                android:progressTint="@color/itemDark" />
+                android:progressBackgroundTint="@color/primaryBack"
+                android:progressTint="@color/itemLight" />
           </TableRow>
 
           <TableRow
@@ -479,9 +478,8 @@
                 android:layout_marginTop="-7dp"
                 android:layout_marginBottom="-7dp"
                 android:layout_span="2"
-                android:progressBackgroundTint="@color/itemLight"
-                android:progressTint="@color/itemDark"
-                android:theme="@style/SmallText" />
+                android:progressBackgroundTint="@color/primaryBack"
+                android:progressTint="@color/itemLight" />
           </TableRow>
 
           <TableRow
@@ -545,8 +543,8 @@
                 android:layout_marginTop="-7dp"
                 android:layout_marginBottom="-7dp"
                 android:layout_span="2"
-                android:progressBackgroundTint="@color/itemLight"
-                android:progressTint="@color/itemDark" />
+                android:progressBackgroundTint="@color/primaryBack"
+                android:progressTint="@color/itemLight" />
           </TableRow>
 
           <TableRow
@@ -610,8 +608,8 @@
                 android:layout_marginTop="-7dp"
                 android:layout_marginBottom="-7dp"
                 android:layout_span="2"
-                android:progressBackgroundTint="@color/itemLight"
-                android:progressTint="@color/itemDark" />
+                android:progressBackgroundTint="@color/primaryBack"
+                android:progressTint="@color/itemLight" />
           </TableRow>
 
           <TableRow
@@ -675,8 +673,8 @@
                 android:layout_marginTop="-7dp"
                 android:layout_marginBottom="-7dp"
                 android:layout_span="2"
-                android:progressBackgroundTint="@color/itemLight"
-                android:progressTint="@color/itemDark" />
+                android:progressBackgroundTint="@color/primaryBack"
+                android:progressTint="@color/itemLight" />
           </TableRow>
 
           <TableRow
@@ -739,8 +737,8 @@
                 android:layout_marginTop="-7dp"
                 android:layout_marginBottom="-7dp"
                 android:layout_span="2"
-                android:progressBackgroundTint="@color/itemLight"
-                android:progressTint="@color/itemDark" />
+                android:progressBackgroundTint="@color/primaryBack"
+                android:progressTint="@color/itemLight" />
           </TableRow>
 
           <TableRow
@@ -803,8 +801,8 @@
                 android:layout_marginTop="-7dp"
                 android:layout_marginBottom="-7dp"
                 android:layout_span="2"
-                android:progressBackgroundTint="@color/itemLight"
-                android:progressTint="@color/itemDark" />
+                android:progressBackgroundTint="@color/primaryBack"
+                android:progressTint="@color/itemLight" />
           </TableRow>
 
         </TableLayout>

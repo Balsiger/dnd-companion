@@ -36,10 +36,10 @@ import java.util.List;
  */
 public class ClassCommand extends TextCommand {
   @Override
-  public Spanned render(Context context, List<SpannableStringBuilder> optionals,
+  public Spanned render(RenderingContext context, List<SpannableStringBuilder> optionals,
                         List<SpannableStringBuilder> arguments) {
     arguments.get(0).setSpan(new ForegroundColorSpan(
-            context.getResources().getColor(R.color.className, null)),
+            context.getContext().getResources().getColor(R.color.className, null)),
         0, arguments.get(0).length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
     return arguments.get(0);
   }

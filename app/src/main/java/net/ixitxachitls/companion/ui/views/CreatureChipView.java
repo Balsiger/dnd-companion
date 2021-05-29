@@ -45,6 +45,7 @@ public class CreatureChipView extends ChipView {
   private final NestedScrollView conditionsScroll;
 
   private int perLine;
+  private boolean hasImage = false;
 
   public CreatureChipView(Context context, Monster monster, int perLine) {
     this(context, monster, R.color.monsterDark, R.color.monsterLight,
@@ -103,14 +104,17 @@ public class CreatureChipView extends ChipView {
   public void update(Creature<?> creature) {
     Optional<Bitmap> bitmap = Optional.empty();
 
-    if (creature instanceof Monster) {
-      bitmap = CompanionApplication.get().images().get(((Monster) creature).getImagePath(), 1);
-    } else {
-      bitmap = CompanionApplication.get().images().get(creature.getId(), 1);
-    }
+    if (!hasImage) {
+      if (creature instanceof Monster) {
+        bitmap = CompanionApplication.get().images().get(((Monster) creature).getImagePath(), 1);
+      } else {
+        bitmap = CompanionApplication.get().images().get(creature.getId(), 1);
+      }
 
-    if (bitmap.isPresent()) {
-      image.get().setImageBitmap(bitmap.get());
+      if (bitmap.isPresent()) {
+        image.get().setImageBitmap(bitmap.get());
+        hasImage = true;
+      }
     }
 
     conditions.update(creature);

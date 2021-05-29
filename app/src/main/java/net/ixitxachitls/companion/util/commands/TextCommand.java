@@ -25,12 +25,34 @@ import android.content.Context;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 
+import net.ixitxachitls.companion.util.Texts;
+
 import java.util.List;
+import java.util.Map;
 
 /**
  * A text command for formatting texts.
  */
 public abstract class TextCommand {
-  public abstract Spanned render(Context context, List<SpannableStringBuilder> optionals,
+
+  public static class RenderingContext {
+    private final Context context;
+    private final Texts.Values values;
+
+    public RenderingContext(Context context, Texts.Values values) {
+      this.context = context;
+      this.values = values;
+    }
+
+    public Context getContext() {
+      return context;
+    }
+
+    public Texts.Values getValues() {
+      return values;
+    }
+  }
+
+  public abstract Spanned render(RenderingContext context, List<SpannableStringBuilder> optionals,
                                  List<SpannableStringBuilder> arguments);
 }

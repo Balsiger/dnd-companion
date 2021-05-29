@@ -1,0 +1,41 @@
+template {
+  name: "Lesser Ironguard"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 71
+      high: 72
+    }
+  }
+  world: "Forgotten Realms"
+  description: "You or a creature you touch becomes immune to nonmagical metal. Metal items (including metal weapons) simply pass through you, and you can walk through metal barriers such as iron bars. Magic metal affects you normally, as do spells, spell-like abilities, and supernatural effects. Attacks delivered by metal items (such as poison on a dagger) affect you normally. If the spell expires while metal is inside you, the metal object is shunted out of your body (or you away from the metal, if it is an immovable object such as a set of iron bars). You and the object each take 1d6 points of damage as a result (ignoring the object's hardness for determining damage to it).\n\nBecause you pass through metal, you may ignore armor bonuses from metal armor on opponents you attack with unarmed attacks."
+  short_description: "Create an area of total darkness you can see in (but not through)."
+}
+school: ABJURATION
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+  component: "A tiny shield of wood, glass, or crystal"
+}
+casting_time {
+  standard_actions: 1
+}
+special_range: TOUCH
+target: "Creature touched"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+}
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

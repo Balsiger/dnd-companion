@@ -101,6 +101,8 @@ public class CharacterFragment extends CompanionFragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
+    container.getRootView().findViewById(R.id.content)
+        .setBackgroundColor(getResources().getColor(R.color.white, null));
     super.onCreateView(inflater, container, savedInstanceState);
 
     storeOnPause = true;

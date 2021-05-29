@@ -2,6 +2,7 @@ package net.ixitxachitls.companion.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Debug;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.ui.Alert;

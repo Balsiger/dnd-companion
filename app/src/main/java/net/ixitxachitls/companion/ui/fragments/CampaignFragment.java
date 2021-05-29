@@ -25,6 +25,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Debug;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -108,6 +109,8 @@ public class CampaignFragment extends CompanionFragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
+    container.getRootView().findViewById(R.id.content)
+        .setBackgroundColor(getResources().getColor(R.color.white, null));
     super.onCreateView(inflater, container, savedInstanceState);
 
     RelativeLayout view = (RelativeLayout)
@@ -168,6 +171,11 @@ public class CampaignFragment extends CompanionFragment {
 
   public void showCampaign(Campaign campaign) {
     this.campaign = Optional.of(campaign);
+
+    if (party == null) {
+      return;
+    }
+
     party.show(campaign);
     encounter.show(campaign);
     encounterGroup.show(campaign.amDM());
@@ -188,7 +196,6 @@ public class CampaignFragment extends CompanionFragment {
       title.removeAction();
       date.removeClick();
     }
-
 
     characters().addPlayers(campaign);
     monsters().addCampaign(campaign.getId());

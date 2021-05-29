@@ -1,0 +1,45 @@
+template {
+  name: "Reverse Arrows"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 143
+      high: 143
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{As you clasp the shell in one hand and the ball of sap in the other, a silver radiance flecked with blue lines surrounds you. You pocket the items, but the radiance remains.}\n\nThis spell functions like \\Spell{protection from arrows} (PH 266), except as noted here. If any projectile fired from a ranged weapon that strikes you has all its damage negated by your damage reduction (10/magic), the projectile is turned back upon the creature that fired it. The attacker’s attack roll is used to determine if the reversed projectile strikes the attacker, but the damage is rerolled. If the attacker is also protected by a reverse arrows spell, it is possible for the projectile to bounce between both individuals until one of the spells is discharged from accumulated damage.\n\nOnce this spell has prevented a total of 10 points of damage per caster level (maximum 100 points), it is discharged."
+  short_description: "Protect yourself from arrows and send them back."
+}
+school: ABJURATION
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+  component: "A piece of shell from a tortoise"
+  component: "A ball of tree sap"
+}
+casting_time {
+  standard_actions: 1
+}
+special_range: PERSONAL
+target: "You"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  flags: "or until discharged"
+}
+saving_throw: "None"
+spell_resistance: "No"
+
+

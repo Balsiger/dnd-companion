@@ -25,27 +25,53 @@ import android.content.Context;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
+import android.view.View;
+
+import net.ixitxachitls.companion.util.Texts;
 
 import java.util.List;
+import java.util.Map;
 
 import androidx.annotation.ColorRes;
+import androidx.annotation.NonNull;
 
 /**
  * A command to display the text colored.
  */
-public class ColorCommand extends TextCommand {
-  private final @ColorRes int color;
+public class ClickableCommand extends TextCommand {
+  @FunctionalInterface
+  public interface Action {
+    public void execute(String argument, Texts.Values values);
+  }
 
-  public ColorCommand(@ColorRes int color) {
+  private final @ColorRes int color;
+  private final Action action;
+
+  public ClickableCommand(@ColorRes int color, Action action) {
     this.color = color;
+    this.action = action;
   }
 
   @Override
   public Spanned render(RenderingContext context, List<SpannableStringBuilder> optionals,
                         List<SpannableStringBuilder> arguments) {
-    arguments.get(0).setSpan(new ForegroundColorSpan(
-            context.getContext().getResources().getColor(color, null)),
+    String argument =
+        optionals.isEmpty() ? arguments.get(0).toString() : optionals.get(0).toString();
+    arguments.get(0).setSpan(new ClickableSpan() {
+                               @Override
+                               public void onClick(@NonNull View widget) {
+                                 action.execute(argument, context.getValues());
+                               }
+
+                               @Override
+                               public void updateDrawState(@NonNull TextPaint paint) {
+                                 paint.setColor(context.getContext().getResources()
+                                     .getColor(color, null));
+                               }
+                             },
         0, arguments.get(0).length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
     return arguments.get(0);
   }

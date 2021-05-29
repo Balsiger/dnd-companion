@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Debug;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -40,6 +41,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.data.drive.DriveStorage;
+import net.ixitxachitls.companion.ui.Alert;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;

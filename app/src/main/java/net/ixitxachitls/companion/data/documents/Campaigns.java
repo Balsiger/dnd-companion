@@ -21,6 +21,9 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import android.os.AsyncTask;
+import android.os.Debug;
+
 import com.google.common.collect.ImmutableList;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -29,8 +32,10 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
+import net.ixitxachitls.companion.ui.Alert;
 import net.ixitxachitls.companion.util.Strings;
 
+import java.nio.channels.AsynchronousByteChannel;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -155,10 +160,12 @@ public class Campaigns extends Documents<Campaigns> {
   }
 
   public void loggedIn(User me) {
-    this.dmCampaigns = db.collection(me.getId() + "/" + PATH);
-    Templates.get().executeAfterLoading(() -> {
-      processDMCampaigns();
-      processPlayerCampaigns(me);
+    AsyncTask.execute(() -> {
+      this.dmCampaigns = db.collection(me.getId() + "/" + PATH);
+      Templates.get().executeAfterLoading(() -> {
+          processDMCampaigns();
+          processPlayerCampaigns(me);
+        });
     });
   }
 

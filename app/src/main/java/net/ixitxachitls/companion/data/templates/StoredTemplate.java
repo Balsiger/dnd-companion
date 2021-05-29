@@ -93,6 +93,6 @@ public abstract class StoredTemplate<P extends MessageLite> extends Entry<P> {
       return String.valueOf(range.getLow());
     }
 
-    return range.getLow() + "_" + range.getHigh();
+    return range.getLow() + "-" + range.getHigh();
   }
 }

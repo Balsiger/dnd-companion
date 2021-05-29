@@ -1,0 +1,35 @@
+template {
+  name: "Healing Circle"
+  reference {
+    name: "WTC 9956472"
+    pages {
+      low: 122
+      high: 122
+    }
+  }
+  world: "Generic"
+  description: "\\emph{A circle of warm comfort emanates from you, enveloping those who enter in positive energy.}\n\nBy casting this spell, you create an aura of healing energy upon which your allies can draw to mend their own wounds. The spell has five charges when cast. Once per round as a standard action, a single allied creature within 30 feet can drain one charge from the healing circle. The first charge so drained functions as a \\Spell{cure critical wounds} spell, the second as a \\Spell{cure serious wounds} spell, the third as a \\Spell{cure moderate wounds} spell, and the fourth as a \\Spell{cure light wounds} spell, and the final charge heals only 5 points of damage. A creature must be conscious to draw a charge from the \\Spell{healing circle}.\n\n The spell effect delivered by each charge functions as if you had personally cast the associated spell. Thus, the first charge heals 4d8 points of damage +1 point per caster level (maximum +20), and so on."
+  short_description: "Allies can tap healing energy pool for cure spells."
+}
+school: CONJURATION
+subschool: HEALING
+level {
+  spell_class: CLERIC
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+casting_time {
+  standard_actions: 1
+}
+special_range: PERSONAL
+target: "You"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  description: "or until discharged"
+}
+saving_throw: "None"
+spell_resistance: "No"

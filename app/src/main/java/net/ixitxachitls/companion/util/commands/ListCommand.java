@@ -34,7 +34,7 @@ import java.util.List;
 public class ListCommand extends TextCommand {
 
   @Override
-  public Spanned render(Context context, List<SpannableStringBuilder> optionals,
+  public Spanned render(RenderingContext context, List<SpannableStringBuilder> optionals,
                         List<SpannableStringBuilder> arguments) {
     SpannableStringBuilder result = new SpannableStringBuilder();
     for (SpannableStringBuilder argument : arguments) {

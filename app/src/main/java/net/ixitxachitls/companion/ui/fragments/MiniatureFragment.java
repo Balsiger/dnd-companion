@@ -60,7 +60,6 @@ public class MiniatureFragment extends NestedCompanionFragment {
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle state) {
-
     ViewGroup view =
         (ViewGroup) inflater.inflate(R.layout.fragment_miniatures_page, container, false);
 

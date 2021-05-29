@@ -1,0 +1,53 @@
+template {
+  name: "Thunderlance"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 145
+      high: 145
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{A faint gray shimmering force in the general shape of a staff or spear springs from your hand.}\n\nWhen you cast this spell, you create a deadly lance of force. You can freely make a thunderlance retract or grow to any length from 1 foot to 20 feet, but it always remains a straight lance of force. This effect gives you a natural reach of 20 feet. You can use a thunderlance to make powerful melee attacks.\n\nYou can wield a \\Spell{thunderlance} in one or two hands, dealing a base 3d6 points of damage (crit 20/×3). Instead of using your Strength modifier, you use the higher of your Intelligence modifier or Charisma modifier as a bonus on attack rolls and damage rolls.\n\nIf you successfully strike a target protected by any force effect of 3rd level or lower, such as a \\Spell{shield} or \\Spell{mage armor} spell, the \\Spell{thunderlance} might dispel the force effect in addition to damaging the target. Make a dispel check against the level of the caster who created the effect. If you succeed, the effect is dispelled. The \\Spell{thunderlance} remains whether you succeed or fail on this check."
+  short_description: "Create a lance of force to attack with 20 ft reach."
+}
+school: EVOCATION
+descriptor: FORCE
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+  component: "A small metal spear"
+}
+casting_time {
+  standard_actions: 1
+}
+range {
+  imperial {
+    feet {
+      leader: 0
+    }
+  }
+}
+effect {
+  description: "A spearlike beam"
+}
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  flags: "(D)"
+}
+saving_throw: "None"
+spell_resistance: "No"
+
+

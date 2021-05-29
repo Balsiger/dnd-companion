@@ -165,7 +165,8 @@ public class CompanionApplication extends Application
 
   @Override
   public void onActivityStarted(Activity activity) {
-    if (currentActivity instanceof MainActivity) {
+    if (!CompanionFragments.get().getCurrentFragment().isPresent() &&
+        currentActivity instanceof MainActivity) {
       MainActivity main = (MainActivity) currentActivity;
 
       AsyncTask.execute(() -> {
@@ -173,7 +174,9 @@ public class CompanionApplication extends Application
         Templates.get().executeAfterLoading(() -> {
           users().executeAfterLoggingIn(() -> {
             Status.log("Loading done, showing campaigns");
-            CompanionFragments.get().show(CompanionFragment.Type.campaigns, Optional.empty());
+            activity.runOnUiThread(() -> {
+              CompanionFragments.get().show(CompanionFragment.Type.campaigns, Optional.empty());
+            });
           });
         });
       });

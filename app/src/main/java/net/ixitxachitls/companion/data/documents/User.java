@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+ import android.os.AsyncTask;
+
  import com.google.firebase.firestore.DocumentReference;
  import com.google.firebase.firestore.DocumentSnapshot;
  import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -49,8 +51,9 @@ package net.ixitxachitls.companion.data.documents;
  import java.util.stream.Collectors;
 
  import androidx.annotation.CallSuper;
+ import androidx.loader.content.AsyncTaskLoader;
 
-/**
+ /**
  * The data for a single user.
  */
 public class User extends Document<User> {
@@ -453,15 +456,19 @@ public class User extends Document<User> {
   }
 
   private void storeMiniatures() {
-    db.collection(getId() + MINIATURE_PATH).document(MINIATURE_PATH)
-        .set(writeMiniatures().asMap())
-        .addOnFailureListener(e -> Status.exception("Saving miniature data failed!", e));
+    AsyncTask.execute(() -> {
+      db.collection(getId() + MINIATURE_PATH).document(MINIATURE_PATH)
+          .set(writeMiniatures().asMap())
+          .addOnFailureListener(e -> Status.exception("Saving miniature data failed!", e));
+    });
   }
 
   private void storeProducts() {
-    db.collection(getId() + PRODUCT_PATH).document(PRODUCT_PATH)
-        .set(writeProducts().asMap(), SetOptions.merge())
-        .addOnFailureListener(e -> Status.exception("Saving products data failed!", e));
+    AsyncTask.execute(() -> {
+      db.collection(getId() + PRODUCT_PATH).document(PRODUCT_PATH)
+          .set(writeProducts().asMap(), SetOptions.merge())
+          .addOnFailureListener(e -> Status.exception("Saving products data failed!", e));
+    });
   }
 
   private void verifyMiniatures() {

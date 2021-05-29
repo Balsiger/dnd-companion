@@ -83,6 +83,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   private EnumMap<Items.Slot, LinearLayout> slotItems = new EnumMap<>(Items.Slot.class);
   private Optional<Items.Slot> lastOpenedSlot = Optional.empty();
   private LabelledEditTextView distributionName;
+  private Drawable image = null;
 
   public CharacterInventoryFragment() {
   }
@@ -286,11 +287,12 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     targetsCharacters.removeAllViews();
     for (Character other : characters().getCampaignCharacters(character.getCampaignId())) {
       if (!other.equals(character)) {
-        Drawable image;
-        if (images().get(other.getId(), 1).isPresent()) {
-          image = new BitmapDrawable(getResources(), images().get(other.getId(), 1).get());
-        } else {
-          image = getResources().getDrawable(R.drawable.ic_person_black_48dp, null);
+        if (image == null) {
+          if (images().get(other.getId(), 1).isPresent()) {
+            image = new BitmapDrawable(getResources(), images().get(other.getId(), 1).get());
+          } else {
+            image = getResources().getDrawable(R.drawable.ic_person_black_48dp, null);
+          }
         }
         ImageDropTarget target = new ImageDropTarget(getContext(), image, other.getName(), true);
         target.setSupport(i -> i instanceof Item);

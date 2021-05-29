@@ -1,0 +1,45 @@
+template {
+  name: "Scorch"
+  reference {
+    name: "WTC 8859872"
+    pages {
+      low: 181
+      high: 181
+    }
+  }
+  world: "Generic"
+  description: "\\emph{A jet of roaring flame bursts from your outstretched hand, scorching any creature in its path.}\n\nScorch deals 1d8 points of damage per two caster levels, to a maximum of 5d8 points of damage, to each target it hits."
+  short_description: "Produce a light of fire to damage your foes."
+}
+school: EVOCATION
+descriptor: FIRE
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+ component: "A red dragon’s scale"
+}
+casting_time: {
+  standard_actions: 1
+}
+range {
+  imperial {
+    feet {
+      leader: 30
+    }
+  }
+}
+area: "30-ft. line"
+duration {
+  description: "Instantaneous"
+}
+saving_throw: "Reflex half"
+spell_resistance: "Yes"

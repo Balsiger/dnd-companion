@@ -1,0 +1,46 @@
+template {
+  name: "Lesser Spell Matrix"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 144
+      high: 144
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{Concentrating as you intone the arcane words, you envision your mind as a maze of paths and doors. You get a chill as the spell completes and some of the doors open.} You prepare a magic matrix that allows you to store one of your spells and use it later as a swift action.\n\nIn the round after you cast lesser spell matrix, you can cast one spell of up to 3rd level to be stored in it. The matrix closes after 1 round, whether or not you have stored a spell in it. Only a spell that can be altered by the Quicken Spell feat can be placed in the matrix, and any spell stored there is treated as a prepared spell. Casting lesser spell matrix deals 1d6 points of damage to you, and this damage cannot be healed by any means while the matrix exists.\n\nWhile the matrix is active, you can cast the spell stored in it as a swift action. Once it is cast from the matrix, the spell is gone.\n\nA \\Spell{dispel magic} spell that successfully dispels the matrix also dispels the spell held inside it. If you are affected by an \\Spell{antimagic field}, the duration of the matrix is interrupted, but the spell does not activate. The matrix becomes active again when you emerge from the antimagic fi eld. If you die while the spell is still held in the matrix, both the spell and the matrix dissipate harmlessly."
+  short_description: "Store up to a 3rd level spell to cast later as a swift action."
+}
+school: TRANSMUTATION
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+  component: "A piece of amber with a minimum value of 500 gp."
+}
+casting_time {
+  standard_actions: 1
+}
+special_range: PERSONAL
+effect {
+  description: "Matrix that holds one of your spells"
+}
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  flags: "(D)"
+}
+saving_throw: "None"
+spell_resistance: "No"
+
+

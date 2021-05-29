@@ -1,0 +1,44 @@
+template {
+  name: "Scatterspray"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 73
+      high: 73
+    }
+  }
+  world: "Forgotten Realms"
+  description: "You can point to a collection of little, unsecured items and cause them to fly off in all directions simultaneously. The spray of items makes a burst with a 10-foot radius. If the items are farily hard or sharp (such as stones, sling bullets, coins, or the like), creatures in the burst take 1d8 points of damage. A successful Reflex saves negates this damage. Eggs, fruit, and other soft objects can be used, but the damage then dealt is subdual damage."
+  short_description: "Turn small loose objects into a 10-foot spread of damage."
+}
+school: TRANSMUTATION
+level {
+  spell_class: HARPER_SCOUT
+  level: 1
+}
+level {
+  spell_class: HIEROPHANT
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+casting_time {
+  standard_actions: 1
+}
+special_range: CLOSE
+target: "Six or more Diminutive or Fine objects, all within 1 ft. of each other, whose total weight does not exceed 25 lb."
+duration {
+  duration_description: "Instantaneous"
+}
+saving_throw: "None (see text)"
+spell_resistance: "No"
+
+
