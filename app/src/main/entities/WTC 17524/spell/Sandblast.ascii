@@ -1,0 +1,49 @@
+template {
+  name: "Sandblast"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 146
+      high: 146
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{A violent burst of sand and howling wind streams forth from your hand, extending outward in a cone.}\\par Every creature and object within the cone takes 6d8 points of damage and is subjected to winds of hurricane force that blow directly away from you. These winds blow away Medium or smaller creatures, knock down Large creatures, and check Huge or larger creatures. (See Table 3–24, DMG 95.)\\par Any creature that succeeds on a Fortitude save takes half damage from the \\Spell{sandblast} and ignores the wind effect."
+  short_description: "Create hurricane wind from you, dealing 6d8 damage and blowing away creature."
+}
+school: EVOCATION
+descriptor: EARTH
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+  component: "A handful of sand from the heart of a desert"
+}
+casting_time {
+  standard_actions: 1
+}
+range {
+  imperial {
+    feet {
+      leader: 60
+    }
+  }
+}
+area: "Cone-shaped burst"
+duration {
+  duration:  {
+    rounds: 1
+  }
+  levels: "level"
+  flags: "(D)"
+}
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

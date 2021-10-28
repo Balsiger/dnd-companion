@@ -1,0 +1,38 @@
+template {
+  name: "Reciprocal Gyre"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 143
+      high: 143
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{You finger the tiny loop of wire in your hands as you complete the spell. You manipulate the magic aura of the target, creating a damaging feedback reaction, and the target explodes with white sparks..}\\par The subject takes 1d12 points of damage per functioning spell or spell-like ability currently affecting it (maximum 25d12). In addition, any creature so affected that fails its Will save must then succeed on a Fortitude save or be dazed for 1d6 rounds. Only spells specifically targeted on the creature in question can be used to create the backlash of a reciprocal gyre, so spells that affect an area can’t be used to deal reciprocal damage to creatures within their area. Likewise, persistent or continuous effects from magic items can’t be used to deal reciprocal damage, but targeted spell effects can be."
+  short_description: "Deal 1d12 damage per spell or spell-like ability affecting a target."
+}
+school: ABJURATION
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+  component: "A tiny closed look of copper wire"
+}
+casting_time {
+  standard_actions: 1
+}
+special_range: MEDIUM
+target: "One creature or object"
+duration {
+  duration_description: "Instantaneous"
+}
+saving_throw: "Will half, then Fortitude negates"
+spell_resistance: "No"

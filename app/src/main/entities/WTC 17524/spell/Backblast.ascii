@@ -1,0 +1,35 @@
+template {
+  name: "Backblast"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 145
+      high: 145
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{As you finish casting, the air around you suddenly seems colder.}\\par Though this spell was originally created by the \\Monster{phaerimms}, it has since been stolen by spellcasters of other races and can now be found in grimoires across Faerûn. \\Spell{Backblast} protects you in the same manner as the \\Spell{spell turning} spell (PH 282), except that it turns only spells that have the fire descriptor and that are targeted on you. Effect and area spells are unaffected, as is any spell with a range of touch. The DM secretly rolls 1d4+2 to determine the total number of spell levels that can be turned. \\Spell{Backblast} otherwise follows the rules for the \\Spell{spell turning} spell. In addition to the above, \\Spell{backblast} grants you fire resistance 10. This effect persists until the end of the round in which the spell turning effect ends."
+  short_description: "Turn targeted fire spells and gain resistance fire 10."
+}
+school: ABJURATION
+descriptor: FIRE
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+casting_time {
+  standard_actions: 1
+}
+special_range: PERSONAL
+target: "You"
+duration {
+  duration_description: "Until expended or 10 minutes/level (D)"
+}
+saving_throw: "No"
+spell_resistance: "No"

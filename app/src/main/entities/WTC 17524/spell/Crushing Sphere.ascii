@@ -1,0 +1,41 @@
+template {
+  name: "Crushing Sphere"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 145
+      high: 146
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{The target of your spell is visibly restricted, unable to move freely as a shimmering sphere surrounds it.}\\par This spell functions like \\Spell{Otiluke’s resilient sphere} (PH 258), except the sphere painfully constricts the target, hampering her movements and breathing. The target is entangled and takes 3d6 points of nonlethal damage per round as the sphere contracts. If the target is rendered unconscious, any remaining damage from the \\Spell{crushing sphere} is lethal damage."
+  short_description: "Restrict a target's movement, prevent effects in and out and deal non-lethal damage all the time."
+}
+school: EVOCATION
+descriptor: FIRE
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+  component: "An eggshell, which is crushed as the spell is cast"
+}
+casting_time {
+  standard_actions: 1
+}
+special_range: MEDIUM
+effect {
+  description: "1-ft.-diameter/level sphere, centered around a creature"
+}
+duration {
+  duration_description: "Instantaneous"
+}
+saving_throw: "Fortitude partial"
+spell_resistance: "Yes"

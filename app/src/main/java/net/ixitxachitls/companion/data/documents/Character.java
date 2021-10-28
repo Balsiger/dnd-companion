@@ -219,7 +219,8 @@ public class Character extends Creature<Character> implements Comparable<Charact
 
   @Override
   public boolean amPlayer() {
-    return player == context.me();
+    return player == context.me()
+        || context.me().getFeatures().contains("override=" + getName());
   }
 
   // TODO(merlin): Move this into Document generally?

@@ -430,6 +430,7 @@ encounter {
   description: "Entrance to the Netherise Ex-City"
   short_description: "Polly?"
   location: "Synod"
+  encounter_level: 16
   spell_group {
     name: "Dragonflesh Golem"
     description: "Scary and ugly"
@@ -463,6 +464,7 @@ encounter {
   description: "It's dusty in here"
   short_description: "Hachoo!"
   location: "Synod"
+  encounter_level: 13
   spell_group {
     name: "Dust Wight"
     description: "Still dusty"
@@ -474,10 +476,27 @@ encounter {
   }
 }
 encounter {
+  name: "Augathra's Entrance"
+  short_name: "C9"
+  description: "This is hot..."
+  short_description: "hot hot hot"
+  location: "Synod"
+  encounter_level: 15
+}
+encounter {
+  name: "Chapel of Amaunator"
+  short_name: "C11"
+  description: "This Not all dreams are nice..."
+  short_description: "Wakey wakey"
+  location: "Synod"
+  encounter_level: 16
+}
+encounter {
   name: "Hidden Tombs"
   short_name: "C15"
   description: "You are not welcome"
   location: "Synod"
+  encounter_level: 16
   spell_group {
     name: "Deathshrieker"
     description: "Silence is golden"
@@ -502,6 +521,7 @@ encounter {
   short_name: "C20"
   description: "Fly you fools"
   location: "Synod"
+  encounter_level: 14
   spell_group {
     name: "Death Tyrant"
     description: "Now you have magic, now you don't"
@@ -521,6 +541,7 @@ encounter {
   short_name: "C22"
   description: "Guarding what's to come"
   location: "Synod"
+  encounter_level: 14
   spell_group {
     name: "Beholder"
     description: "Beauty is NOT in the eye of the beholder"
@@ -545,6 +566,7 @@ encounter {
   short_name: "C25"
   description: "Guarding what's to come"
   location: "Synod"
+  encounter_level: 14
   spell_group {
     name: "Beholder"
     description: "Beauty is NOT in the eye of the beholder"
@@ -565,10 +587,11 @@ encounter {
   }
 }
 encounter {
-  name: "Library"
+  name: "Laboratory"
   short_name: "C27"
   description: "Let there be magic"
   location: "Synod"
+  encounter_level: 15
   spell_group {
     name: "Blighted Bloodfire"
     description: "Hot but ugly"
@@ -691,7 +714,7 @@ encounter {
     spell { name: "suggestion" }
     spell { name: "bear's endurance" }
     spell { name: "flaming sphere" }
-    spell { name: "invisiblity" }
+    spell { name: "invisibility" }
     spell { name: "resist energy" }
     spell { name: "scorching ray" }
     spell { name: "burning hands" }
@@ -706,9 +729,389 @@ encounter {
     spell { name: "ghost sound" }
     spell { name: "light" }
     spell { name: "mage hand" }
-    spell { name: "open or close" }
+    spell { name: "open & close" }
     spell { name: "read magic" }
-    spell { name: "detec magic" }
+    spell { name: "detect magic" }
   }
-
+}
+encounter {
+  name: "Chambers of the Master"
+  short_name: "C32"
+  description: "Meet the coneheads"
+  location: "Synod"
+  encounter_level: 18
+  spell_group {
+    name: "Potion of Bear's endurance"
+    description: "Potion"
+    caster_level: 3
+    ability_bonus: 0
+    spell_class: SORCERER
+    spell { name: "bear's endurance" }
+  }
+  spell_group {
+    name: "Potion of Protection from Energy (Fire)"
+    description: "Potion"
+    caster_level: 5
+    ability_bonus: 0
+    spell_class: SORCERER
+    spell { name: "protection from energy" }
+  }
+  spell_group {
+    name: "Potion of Eagle's splendor"
+    description: "Potion"
+    caster_level: 3
+    ability_bonus: 0
+    spell_class: SORCERER
+    spell { name: "eagle's splendor" }
+  }
+  spell_group {
+    name: "Kir-Lanan Gargoyles"
+    description: "Hexing gargoyles"
+    caster_level: 5
+    ability_bonus: 1
+    spell_class: SORCERER
+    spell { name: "bull's strength" }
+    spell { name: "false life" }
+    spell { name: "mirror image" }
+    spell { name: "entropic shield" }
+    spell { name: "expeditious retreat" }
+    spell { name: "identify" }
+    spell { name: "protection from good" }
+    spell { name: "ray of enfeeblement" }
+  }
+  spell_group {
+    name: "Drullister"
+    description: "A formidable cone."
+    caster_level: 16
+    ability_bonus: 5
+    spell_class: SORCERER
+    spell { name: "mystic shield" }
+    spell { name: "limited wish" }
+    spell { name: "project image" }
+    spell { name: "crushing sphere" }
+    spell { name: "sandblast" }
+    spell { name: "symbol of persuasion" }
+    spell { name: "cone of cold" }
+    spell { name: "dominate person" }
+    spell { name: "mind fog" }
+    spell { name: "reciprocal gyre" }
+    spell { name: "evard's black tentacles" }
+    spell { name: "lesser globe of invulnerability" }
+    spell { name: "spell fangs" }
+    spell { name: "stoneskin" }
+    spell { name: "backblast" }
+    spell { name: "dweomer vortex" }
+    spell { name: "greater mage armor" }
+    spell { name: "haste" }
+    spell { name: "command undead" }
+    spell { name: "darkvision" }
+    spell { name: "detect thoughts" }
+    spell { name: "melf's acid arrow" }
+    spell { name: "scorching ray" }
+    spell { name: "ray of enfeeblement" }
+    spell { name: "shocking grasp" }
+    spell { name: "sonic blast" }
+    spell { name: "swift expeditious retreat" }
+    spell { name: "true strike" }
+    spell { name: "acid splash" }
+    spell { name: "caltrops" }
+    spell { name: "electric jolt" }
+    spell { name: "light" }
+    spell { name: "mage hand" }
+    spell { name: "message" }
+    spell { name: "ray of frost" }
+    spell { name: "read magic" }
+    spell { name: "touch of fatigue" }
+    spell { name: "detect magic" }
+  }
+  spell_group {
+    name: "Cushtal"
+    description: "That's no ice cone."
+    caster_level: 10
+    ability_bonus: 4
+    spell_class: SORCERER
+    spell { name: "cone of cold" }
+    spell { name: "crushing despair" }
+    spell { name: "dimension door" }
+    spell { name: "blink" }
+    spell { name: "lightning bolt" }
+    spell { name: "ray of exhaustion" }
+    spell { name: "eagle's splendor" }
+    spell { name: "false life" }
+    spell { name: "protection from arrows" }
+    spell { name: "scorching ray" }
+    spell { name: "obscuring mist" }
+    spell { name: "mage armor" }
+    spell { name: "shield" }
+    spell { name: "tenser's floating disk" }
+    spell { name: "true strike" }
+    spell { name: "acid splash" }
+    spell { name: "arcane mark" }
+    spell { name: "daze" }
+    spell { name: "flare" }
+    spell { name: "light" }
+    spell { name: "mage hand" }
+    spell { name: "open & close" }
+    spell { name: "read magic" }
+    spell { name: "touch of fatigue" }
+    spell { name: "detect magic" }
+  }
+}
+encounter {
+  name: "The Faceless Incanter"
+  short_name: "C37"
+  description: "No face, no grace"
+  location: "Synod"
+  encounter_level: 14
+  spell_group {
+    name: "Krinth"
+    description: "At least they have a face"
+    caster_level: 5
+    ability_bonus: 0
+    spell_class: SORCERER
+    spell { name: "blur" }
+  }
+  spell_group {
+    name: "The Faceless Incanter"
+    description: "A crudely made simulacrum"
+    caster_level: 10
+    ability_bonus: 5
+    spell_class: WIZARD
+    spell { name: "cloudkill" }
+    spell { name: "feeblemind" }
+    spell { name: "mordenkainen's private sanctum" }
+    spell { name: "bestow curse" }
+    spell { name: "greater invisibility" }
+    spell { name: "ice storm" }
+    spell { name: "rary's mnemonic enhancer" }
+    spell { name: "displacement" }
+    spell { name: "fly" }
+    spell { name: "suggestion" }
+    spell { name: "vampiric touch" }
+    spell { name: "feather fall" }
+    spell { name: "fox's cunning" }
+    spell { name: "ghoul touch" }
+    spell { name: "spectral hand" }
+    spell { name: "tasha's hideous laughter" }
+    spell { name: "chill touch" }
+    spell { name: "comprehend languages" }
+    spell { name: "identify" }
+    spell { name: "protection from good" }
+    spell { name: "shocking grasp" }
+    spell { name: "true strike" }
+    spell { name: "detect magic" }
+    spell { name: "disrupt undead" }
+    spell { name: "mage hand" }
+    spell { name: "read magic" }
+    spell { name: "invisibility" }
+    spell { name: "mirror image" }
+  }
+}
+encounter {
+  name: "Mythallar Chamber"
+  short_name: "C36"
+  description: "An evil blob"
+  location: "Synod"
+  encounter_level: 18
+  spell_group {
+    name: "Orb Wraith"
+    description: "Meat the black blob"
+    caster_level: 20
+    ability_bonus: 7
+    spell_class: SORCERER
+    spell { name: "bane" }
+    spell { name: "bestow curse" }
+    spell { name: "doom" }
+    spell { name: "fear" }
+    spell { name: "circle of death" }
+    spell { name: "mass inflict light wounds" }
+    spell { name: "destruction" }
+  }
+}
+encounter {
+  name: "Cult Ambush"
+  short_name: "W1"
+  description: "Hidden slayers"
+  location: "Mount Talath"
+  location: "Halruaa"
+  encounter_level: 14
+  spell_group {
+    name: "Cultists"
+    description: "Meat the black blob"
+    caster_level: 5
+    ability_bonus: 0
+    spell_class: SORCERER
+    spell { name: "touch of idiocy" }
+    spell { name: "endure elements" }
+    spell { name: "hold portal" }
+    spell { name: "shield" }
+    spell { name: "resistance" }
+  }
+}
+encounter {
+  name: "Shadovar Patrol"
+  short_name: "W2"
+  description: "Nighly Surprise"
+  location: "Somewhere in the Desert"
+  location: "Anauroch"
+  encounter_level: 14
+  spell_group {
+    name: "Shadovar Guards"
+    description: "Don't come too close"
+    caster_level: 10
+    ability_bonus: 3
+    spell_class: SORCERER
+    spell { name: "cloudkill" }
+    spell { name: "stoneskin" }
+    spell { name: "summon monster iv" }
+    spell { name: "gaseous form" }
+    spell { name: "ray of exhaustion" }
+    spell { name: "tongues" }
+    spell { name: "invisibility" }
+    spell { name: "resist energy" }
+    spell { name: "summon swarm" }
+    spell { name: "whispering wind" }
+    spell { name: "endure elements" }
+    spell { name: "feather fall" }
+    spell { name: "mage armor" }
+    spell { name: "protection from good" }
+    spell { name: "shield" }
+    spell { name: "arcane mark" }
+    spell { name: "daze" }
+    spell { name: "mage hand" }
+    spell { name: "mending" }
+    spell { name: "message" }
+    spell { name: "open & close" }
+    spell { name: "read magic" }
+    spell { name: "resistance" }
+    spell { name: "touch of fatigue" }
+    spell { name: "ray of exhaustion" }
+  }
+}
+encounter {
+  name: "Psionic Raiders"
+  short_name: "W3"
+  description: "Another nighly Surprise"
+  location: "Somewhere in the Desert"
+  location: "Anauroch"
+  encounter_level: 15
+  spell_group {
+    name: "Sysalok"
+    description: "Don't mind me"
+    caster_level: 15
+    ability_bonus: 4
+    spell_class: SORCERER
+    spell { name: "daze" }
+    spell { name: "suggestion" }
+    spell { name: "baleful polymorph" }
+  }
+}
+encounter {
+  name: "The Catacombs of Oreme"
+  short_name: "T1"
+  description: "Somebody is waiting - but not for you"
+  location: "Oreme"
+  location: "Anauroch"
+  encounter_level: 20
+  spell_group {
+    name: "Kharantes"
+    description: "Ssslither away"
+    caster_level: 10
+    ability_bonus: 4
+    spell_class: SORCERER
+    spell { name: "animal trance" }
+    spell { name: "entangle" }
+    spell { name: "darkness" }
+    spell { name: "deeper darkness" }
+    spell { name: "poison" }
+    spell { name: "suggestion" }
+    spell { name: "unholy aura" }
+    spell { name: "baleful polymorph" }
+    spell { name: "blasphemy" }
+    spell { name: "contagion" }
+    spell { name: "desecrate" }
+    spell { name: "fear" }
+    spell { name: "horrid wilting" }
+    spell { name: "unhallow" }
+    spell { name: "unholy blight" }
+  }
+  spell_group {
+    name: "Marliss"
+    description: "Ssss"
+    caster_level: 14
+    ability_bonus: 3
+    spell_class: SORCERER
+    spell { name: "waves of exhaustion" }
+    spell { name: "disintegrate" }
+    spell { name: "greater dispel magic" }
+    spell { name: "cone of cold" }
+    spell { name: "nightmare" }
+    spell { name: "prying eyes" }
+    spell { name: "animate dead" }
+    spell { name: "ice storm" }
+    spell { name: "mass reduce person" }
+    spell { name: "stoneskin" }
+    spell { name: "displacement" }
+    spell { name: "fly" }
+    spell { name: "lightning bolt" }
+    spell { name: "cat's grace" }
+    spell { name: "eagle's splendor" }
+    spell { name: "invisibility" }
+    spell { name: "protection from arrows" }
+    spell { name: "scorching ray" }
+    spell { name: "expeditious retreat" }
+    spell { name: "magic missile" }
+    spell { name: "ray of enfeeblement" }
+    spell { name: "shield" }
+    spell { name: "silent image" }
+    spell { name: "acid splash" }
+    spell { name: "daze" }
+    spell { name: "detect magic" }
+    spell { name: "ghost sound" }
+    spell { name: "light" }
+    spell { name: "mage hand" }
+    spell { name: "open & close" }
+    spell { name: "ray of frost" }
+    spell { name: "read magic" }
+  }
+  spell_group {
+    name: "Marliss (spell-like abilities)"
+    description: "Ssss"
+    caster_level: 5
+    ability_bonus: 3
+    spell_class: SORCERER
+    spell { name: "daylight" }
+    spell { name: "see invisibility" }
+  }
+}
+encounter {
+  name: "Gates of the Thaalud"
+  short_name: "T2"
+  description: "Give up your magic and flee"
+  location: "Somewhere deep below"
+  location: "Anauroch"
+  encounter_level: 17
+  spell_group {
+    name: "Tomb Tappers"
+    description: "You shall not pass."
+    caster_level: 22
+    ability_bonus: 3
+    spell_class: SORCERER
+    spell { name: "detect magic" }
+    spell { name: "stone shape" }
+    spell { name: "spike stones" }
+  }
+  spell_group {
+    name: "Ring of Elemental Command (Earth)"
+    description: "Rrrumble"
+    caster_level: 15
+    ability_bonus: 0
+    spell_class: SORCERER
+    spell { name: "meld into stone" }
+    spell { name: "soften earth and stone" }
+    spell { name: "stone shape" }
+    spell { name: "stoneskin" }
+    spell { name: "passwall" }
+    spell { name: "wall of stone" }
+  }
 }

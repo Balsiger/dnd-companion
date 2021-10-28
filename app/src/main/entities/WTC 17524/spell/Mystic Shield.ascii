@@ -1,0 +1,45 @@
+template {
+  name: "Mystic Shield"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 141
+      high: 141
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{With the casting of your spell, you feel a presence about you, warding of the spells of othjer casters.}\\par This spell creates an invisible auro around the recipient that moves with that individual. It prevents all spells and spell-like abilities of 6th level or lower from affecting the recipient. The protected individual can cast spells normally, even on himself. Magic items and spells that summon items to the caster such as \\Spell{Leomund's secret chest} and \\Spell{Drawmij's instant summons} likewise function normally.\\par \\Spell{mystic shield} also negates the enhancement bonuses and special properties of magic weapons used against the target."
+  short_description: "Protect from all spells and spell-like abilities of 6th level or lower."
+}
+school: ABJURATION
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+  component: "A stone"
+  component: "A drop of blood"
+  component: "A tear from the caster's eye"
+  component: "A clear gem stone worth at least 400 gp"
+}
+casting_time {
+  rounds: 1
+}
+special_range: TOUCH
+target: "Creature touched"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  flags: "(D)"
+}
+saving_throw: "Will negates (harmless)"
+spell_resistance: "Yes (harmless)"

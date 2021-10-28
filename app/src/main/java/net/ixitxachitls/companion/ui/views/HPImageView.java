@@ -40,7 +40,7 @@ import javax.annotation.Nullable;
  */
 public class HPImageView extends PartialImageView {
 
-  private enum State { alive, dying, stable, dead }
+  private enum State {alive, dying, stable, dead}
 
   private static final int SIZE_PX = 50;
 
@@ -64,7 +64,7 @@ public class HPImageView extends PartialImageView {
     this.alive = context.getDrawable(R.drawable.baseline_favorite_black_24).mutate();
     this.alive.setTint(context.getColor(R.color.alive));
     this.aliveBackground = context.getDrawable(R.drawable.baseline_favorite_black_24).mutate();
-    this.aliveBackground.setTint(context.getColor(R.color.characterDark));
+    this.aliveBackground.setTint(context.getColor(R.color.characterText));
     this.stable = context.getDrawable(R.drawable.ic_heart_pulse_black_24dp).mutate();
     this.stable.setTint(context.getColor(R.color.stable));
     this.stableBackground = context.getDrawable(R.drawable.ic_heart_pulse_black_24dp).mutate();
@@ -109,7 +109,7 @@ public class HPImageView extends PartialImageView {
 
   @Override
   protected boolean longClicked(View view) {
-    switch(state()) {
+    switch (state()) {
       case alive:
         showDescription("Alive, all is well", "No worries, you are still alive... for now...");
         break;
@@ -148,7 +148,7 @@ public class HPImageView extends PartialImageView {
   }
 
   private void update() {
-    switch(state()) {
+    switch (state()) {
       case alive:
         setVisibility(VISIBLE);
         setImageDrawable(alive);

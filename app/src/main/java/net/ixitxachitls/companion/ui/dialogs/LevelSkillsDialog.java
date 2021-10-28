@@ -36,6 +36,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -56,6 +57,7 @@ public class LevelSkillsDialog extends Dialog<LevelSkillsDialog, Map<String, Int
   private static final String ARG_CROSS_CLASS_SKILLS = "cross_class_skills";
   private static final String ARG_CROSS_CLASS_RANKS = "cross_class_ranks";
   private static final String ARG_MAX_RANKS = "max_ranks";
+  private static final String ARG_LOWER_LEVEL_SKILLS = "lower_level_skills";
 
   private int totalPoints = 0;
   private int remainingPoints = 0;
@@ -86,6 +88,11 @@ public class LevelSkillsDialog extends Dialog<LevelSkillsDialog, Map<String, Int
     return value;
   }
 
+  private void adjustRemaining(int value) {
+    remainingPoints += value;
+    refresh();
+  }
+
   @Override
   protected void createContent(View view) {
     totalPoints = getArguments().getInt(ARG_POINTS);
@@ -96,6 +103,8 @@ public class LevelSkillsDialog extends Dialog<LevelSkillsDialog, Map<String, Int
     List<String> crossClassSkillNames = getArguments().getStringArrayList(ARG_CROSS_CLASS_SKILLS);
     List<Integer> crossClassSkillRanks = getArguments().getIntegerArrayList(ARG_CROSS_CLASS_RANKS);
     int maxRanks = getArguments().getInt(ARG_MAX_RANKS);
+    Map<String, Integer> lowerLevelSkills =
+        (Map<String, Integer>) getArguments().getSerializable(ARG_LOWER_LEVEL_SKILLS);
 
     for (int i = 0; i < classSkillNames.size(); i++) {
       classSkills.put(classSkillNames.get(i), classSkillRanks.get(i));
@@ -111,21 +120,16 @@ public class LevelSkillsDialog extends Dialog<LevelSkillsDialog, Map<String, Int
     crossClassSkillsView = view.findViewById(R.id.crossclass_skills);
 
     for (Map.Entry<String, Integer> skill : classSkills.entrySet()) {
-      classSkillsView.addView(new LineView(getContext(), skill.getKey(), skill.getValue(), maxRanks,
-          false));
+      classSkillsView.addView(new LineView(getContext(), skill.getKey(), skill.getValue(),
+          lowerLevelSkills.getOrDefault(skill.getKey(), 0), maxRanks, false));
     }
     for (Map.Entry<String, Integer> skill : crossClassSkills.entrySet()) {
       crossClassSkillsView.addView(new LineView(getContext(), skill.getKey(), skill.getValue(),
-          maxRanks, true));
+          lowerLevelSkills.getOrDefault(skill.getKey(), 0), maxRanks, true));
     }
 
     Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
 
-    refresh();
-  }
-
-  private void adjustRemaining(int value) {
-    remainingPoints += value;
     refresh();
   }
 
@@ -139,7 +143,8 @@ public class LevelSkillsDialog extends Dialog<LevelSkillsDialog, Map<String, Int
                                     ArrayList<Integer> classSkillRanks,
                                     ArrayList<String> crossClassSkillNames,
                                     ArrayList<Integer> crossClassSkillRanks,
-                                    int maxRanks) {
+                                    int maxRanks,
+                                    HashMap<String, Integer> lowerLevelSkills) {
     Bundle arguments = Dialog.arguments(layoutId, title, colorId);
     arguments.putInt(ARG_POINTS, points);
     arguments.putStringArrayList(ARG_CLASS_SKILLS, classSkillNames);
@@ -147,12 +152,15 @@ public class LevelSkillsDialog extends Dialog<LevelSkillsDialog, Map<String, Int
     arguments.putStringArrayList(ARG_CROSS_CLASS_SKILLS, crossClassSkillNames);
     arguments.putIntegerArrayList(ARG_CROSS_CLASS_RANKS, crossClassSkillRanks);
     arguments.putInt(ARG_MAX_RANKS, maxRanks);
+    arguments.putSerializable(ARG_LOWER_LEVEL_SKILLS, lowerLevelSkills);
+
     return arguments;
   }
 
   public static LevelSkillsDialog newInstance(int totalPoints, int maxRanks,
                                               Set<String> classSkills,
-                                              Map<String, Integer> skills) {
+                                              Map<String, Integer> skills,
+                                              HashMap<String, Integer> lowerLevelSkills) {
     ArrayList<String> classSkillNames = new ArrayList<>();
     ArrayList<Integer> classSkillRanks = new ArrayList<>();
     ArrayList<String> crossClassSkillNames = new ArrayList<>();
@@ -184,7 +192,7 @@ public class LevelSkillsDialog extends Dialog<LevelSkillsDialog, Map<String, Int
     LevelSkillsDialog dialog = new LevelSkillsDialog();
     dialog.setArguments(arguments(R.layout.dialog_level_skills, "Skills",
         R.color.character, totalPoints, classSkillNames, classSkillRanks,
-        crossClassSkillNames, crossClassSkillRanks, maxRanks));
+        crossClassSkillNames, crossClassSkillRanks, maxRanks, lowerLevelSkills));
     return dialog;
   }
 
@@ -193,13 +201,15 @@ public class LevelSkillsDialog extends Dialog<LevelSkillsDialog, Map<String, Int
     private final int maxRanks;
     private final boolean crossClassSkill;
     private final String name;
+    private final int lowerRanks;
     private int ranks;
 
-    public LineView(Context context, String name, int ranks, int maxRanks,
+    public LineView(Context context, String name, int ranks, int lowerRanks, int maxRanks,
                     boolean crossClassSkill) {
       super(context);
       this.name = name;
       this.ranks = ranks;
+      this.lowerRanks = lowerRanks;
       this.maxRanks = maxRanks;
       this.crossClassSkill = crossClassSkill;
 
@@ -209,6 +219,7 @@ public class LevelSkillsDialog extends Dialog<LevelSkillsDialog, Map<String, Int
           .onClick(this::increase)
           .onLongClick(this::reset);
       this.ranksView = TextWrapper.wrap(view, R.id.ranks);
+      TextWrapper.wrap(view, R.id.lower_ranks).text("" + lowerRanks);
 
       refresh();
 
@@ -224,12 +235,20 @@ public class LevelSkillsDialog extends Dialog<LevelSkillsDialog, Map<String, Int
     }
 
     private void increase() {
-      ranks++;
-      if (ranks > maxRanks) {
+      if (isMaxRank(ranks)) {
         reset();
       } else {
+        ranks++;
         adjustRemaining(crossClassSkill ? -2 : -1);
         refresh();
+      }
+    }
+
+    private boolean isMaxRank(int rank) {
+      if (crossClassSkill) {
+        return rank >= (maxRanks / 2) - lowerRanks;
+      } else {
+        return rank >= maxRanks - lowerRanks;
       }
     }
 

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2017-{2017} Peter Balsiger
   ~ All rights reserved
   ~
@@ -38,6 +37,7 @@
         android:id="@+id/image"
         android:layout_width="250px"
         android:layout_height="250px"
+        android:backgroundTint="@color/location_grey"
         app:radius_percents="6" />
 
     <androidx.core.widget.NestedScrollView
@@ -64,6 +64,7 @@
       android:layout_marginTop="1dp"
       android:background="@drawable/rounded_bg"
       android:backgroundTint="@color/character"
+      android:gravity="center"
       android:padding="3dp"
       android:text="... text ..."
       android:textAlignment="center"

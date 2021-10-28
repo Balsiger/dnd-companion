@@ -404,8 +404,12 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
 
   private void changeXp() {
     if (!xp.getText().isEmpty()) {
-      character.setXp(Integer.parseInt(xp.getText()));
-      character.store();
+      try {
+        character.setXp(Integer.parseInt(xp.getText()));
+        character.store();
+      } catch (NumberFormatException e) {
+        Status.error("Invalid format for xp ignored: " + xp.getText());
+      }
     }
   }
 

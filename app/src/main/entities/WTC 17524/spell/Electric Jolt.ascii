@@ -1,0 +1,37 @@
+template {
+  name: "Electric Jolt"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 143
+      high: 143
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emphh{A white-hot electric spark dances on your fingertip and then bolts toward your target.}\\par You release a small stroke of electrical energy. You must succeed on a ranged touch attack with the ray to strike a target. The spell deals 1d3 points of electricity damage."
+  short_description: "Ranged touch attack for 1d3 electrical damage."
+}
+school: EVOCATION
+descriptor: ELECTRICITY
+level {
+  spell_class: SORCERER
+  level: 0
+}
+level {
+  spell_class: WIZARD
+  level: 0
+}
+components: VERBOSE
+components: SOMATIC
+casting_time {
+  standard_actions: 1
+}
+special_range: CLOSE
+effect {
+ description: "Ray"
+}
+duration {
+  duration_description: "Instantaneous"
+}
+saving_throw: "None"
+spell_resistance: "Yes"

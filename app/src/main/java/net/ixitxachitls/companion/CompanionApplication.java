@@ -26,7 +26,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Debug;
+import android.os.Handler;
 
 import com.google.common.base.Stopwatch;
 import com.tenmiles.helpstack.HSHelpStack;
@@ -212,23 +212,27 @@ public class CompanionApplication extends Application
   }
 
   public void update(String source) {
-    runOnUiThread(() -> {
-      if (updating) {
-        Status.error("Cannot update during an update! (" + source + ")");
-      } else {
-        updating = true;
-        Status.update("Starting update: " + source);
+    // Run an update only once per second.
+    if (!updating) {
+      updating = true;
+      new Handler().postDelayed(new Runnable() {
+        @Override
+        public void run() {
+          runOnUiThread(() -> {
+            Status.update("Starting update: " + source);
 
-        if (currentActivity instanceof MainActivity) {
-          ((MainActivity) currentActivity).update();
-          Status.update("Update done: " + source);
-        } else {
-          Status.error("Don't know how to update " + currentActivity + " (" + source + ")");
+            if (currentActivity instanceof MainActivity) {
+              ((MainActivity) currentActivity).update();
+              Status.update("Update done: " + source);
+            } else {
+              Status.error("Don't know how to update " + currentActivity + " (" + source + ")");
+            }
+
+            updating = false;
+          });
         }
-
-        updating = false;
-      }
-    });
+      }, 1000);
+    }
   }
 
   public Users users() {

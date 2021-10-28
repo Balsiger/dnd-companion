@@ -477,7 +477,7 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
       case UNARMED: {
         int strength = getStrength().total();
         if (strength != 0) {
-          attack.add(new Modifier(strength, Modifier.Type.GENERAL, "Strength"));
+          attack.add(new Modifier(getStrengthModifier(), Modifier.Type.GENERAL, "Strength"));
         }
         break;
       }
@@ -489,7 +489,7 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
       case THROWN_TWO_HANDED: {
         int dexterity = getDexterityModifier();
         if (dexterity != 0) {
-          attack.add(new Modifier(dexterity, Modifier.Type.GENERAL, "Dexterity"));
+          attack.add(new Modifier(getDexterityModifier(), Modifier.Type.GENERAL, "Dexterity"));
         }
         break;
       }
@@ -574,8 +574,9 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
         break;
 
       case TWOHANDED_MELEE:
-        damage.add(0, 0, (int) 1.5 * getStrengthModifier(), DamageType.NONE, Optional.empty(),
+        damage.add(0, 0, (int) (1.5 * getStrengthModifier()), DamageType.NONE, Optional.empty(),
             "Strength");
+        break;
 
       case RANGED:
       case THROWN:

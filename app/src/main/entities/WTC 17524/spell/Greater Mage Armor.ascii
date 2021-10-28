@@ -1,0 +1,40 @@
+template {
+  name: "Greater Mage Armor"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 143
+      high: 143
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{An invisible sheen of armor-shaped force surrounds you.}\\par This spell functions like \\Spell{mage armor} (PH 249), except that it requires no material component and its tangible field of force provides a +6 armor bonus to Armor Class."
+  short_description: "Deflection AC +6."
+}
+school: CONJURATION
+subschool: CREATION
+descriptor: FORCE
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+casting_time {
+  standard_actions: 1
+}
+special_range: TOUCH
+target: "Creature touched"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "/level"
+  flags: "(D)"
+}
+saving_throw: "No"
+spell_resistance: "No"

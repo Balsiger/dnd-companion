@@ -48,28 +48,6 @@ public class CharacterMessageView extends MessageView {
   }
 
   @Override
-  protected void handle() {
-    if (canHandle()) {
-      switch (message.getType()) {
-        case xp:
-          character.addXp(message.getXP());
-          break;
-
-        case itemAdd:
-          character.add(message.getItem().get());
-          break;
-
-        case itemDelete:
-          character.removeItem(message.getItem().get());
-          break;
-      }
-
-      character.getContext().messages().deleteMessage(message.getId());
-      character.store();
-    }
-  }
-
-  @Override
   protected String description() {
     switch (message.getType()) {
       case xp:
@@ -89,6 +67,28 @@ public class CharacterMessageView extends MessageView {
 
       default:
         return super.description();
+    }
+  }
+
+  @Override
+  protected void handle() {
+    if (canHandle()) {
+      switch (message.getType()) {
+        case xp:
+          character.addXp(message.getXP());
+          break;
+
+        case itemAdd:
+          character.add(message.getItem().get());
+          break;
+
+        case itemDelete:
+          character.removeItem(message.getItem().get());
+          break;
+      }
+
+      character.getContext().messages().deleteMessage(message.getId());
+      character.store();
     }
   }
 }

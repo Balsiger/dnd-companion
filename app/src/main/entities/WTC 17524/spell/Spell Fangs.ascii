@@ -1,0 +1,40 @@
+template {
+  name: "Spell Fangs"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 141
+      high: 142
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{A spectral tentacle ending in multiple fanged maws springs forth from your hand.}\\par A more powerful version of \\Spell{toothed tentacle}, this spell creates a shadowy tentacle of energy that extends 30 feet from your hand, splitting off into 1d6+2 smaller tentacles about 10 feet from its end. Each of these smaller tentacles ends in a fanged, slavering maw. All of these mouths can be directed to attack as a full-round action, or one of them can attack as a standard action. You can direct the mouths to attack separate targets as long as all targets are within 10 feet of each other. Each mouth strikes with an attack bonus equal to your caster level plus the modifier for the ability score that controls your spellcasting, and each deals 2d6 points of damage on a successful hit. Damage done by the tentacles is gained by you as temporary hit points that last for 1 round.\\par Because the mouths are tangible, they can be destroyed. Each has an AC of 15 and hit points equal to 10 + your caster level. If a mouth is destroyed, it fades away into nothingness, but the other mouths remain. If all the mouths are destroyed, the spell’s duration ends. The main tentacle cannot be attacked."
+  short_description: "Create 1d6+2 mawed tentacles that attack for 2d6 damage gained as temporary hp (1 round)."
+}
+school: EVOCATION
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+  component: "A hair and three teeth"
+}
+casting_time {
+  standard_actions: 1
+}
+special_range: PERSONAL
+effect {
+ description: "30-ft.-long tentacle extending from your hand"
+}
+duration {
+  duration_description: "Concentration, to a maximum of 1 round/level"
+}
+saving_throw: "No"
+spell_resistance: "No"

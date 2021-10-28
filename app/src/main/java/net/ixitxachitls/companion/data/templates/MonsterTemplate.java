@@ -92,6 +92,14 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
     return proto.getSaves().getFortitude();
   }
 
+  public int getHitDice() {
+    return proto.getHitDice().getNumber();
+  }
+
+  public int getHitDie() {
+    return proto.getHitDice().getDice();
+  }
+
   public int getIntelligenec() {
     return proto.getAbilities().getIntelligence();
   }
@@ -123,6 +131,10 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
 
   public int getSkillPointBonus() {
     return proto.getSkillPointBonus();
+  }
+
+  public int getSkillPointBonusFirstLevel() {
+    return proto.getSkillPointBonusFirstLevel();
   }
 
   public List<Speed> getSpeeds() {
@@ -163,14 +175,6 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
 
   public boolean isPrimaryRace() {
     return proto.getMainRace();
-  }
-
-  public int getHitDice() {
-    return proto.getHitDice().getNumber();
-  }
-
-  public int getHitDie() {
-    return proto.getHitDice().getDice();
   }
 
   public boolean hasBonusFeat(int level) {

@@ -21,7 +21,6 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
-import android.os.Debug;
 import android.transition.ChangeBounds;
 import android.transition.Fade;
 import android.view.View;
@@ -30,7 +29,6 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Monster;
@@ -88,6 +86,10 @@ public class CompanionFragments {
 
   public FragmentManager getFragmentManager() {
     return fragmentManager;
+  }
+
+  public boolean isShowing(CompanionFragment.Type type) {
+    return currentFragment.isPresent() && currentFragment.get().getType() == type;
   }
 
   public void display(Dialog dialog) {
@@ -198,10 +200,6 @@ public class CompanionFragments {
     }
   }
 
-  public boolean isShowing(CompanionFragment.Type type) {
-    return currentFragment.isPresent() && currentFragment.get().getType() == type;
-  }
-
   public void showMonster(Monster monster, Optional<View> shared) {
     show(CompanionFragment.Type.monster, shared);
     monsterFragment.get().showMonster(monster);
@@ -240,8 +238,6 @@ public class CompanionFragments {
     }
 
     transaction.replace(R.id.content, fragment).commitNow();
-    //transaction.replace(R.id.content, fragment).commit();
-    //fragmentManager.executePendingTransactions();
     return fragment;
   }
 

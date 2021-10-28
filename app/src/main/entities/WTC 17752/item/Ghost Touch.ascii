@@ -1,0 +1,19 @@
+template {
+  name: "Ghost Touch Weapon"
+  synonym: "ghost touch"
+  synonym: "Weapon, Ghost Touch"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 224
+      high: 225
+    }
+  }
+  description: "A ghost touch weapon deals damage normally against incorporeal creatures, regardless of its bonus. (An incorporeal creature’s 50% chance to avoid damage does not apply to attacks with ghost touch weapons.) The weapon can be picked up and moved by an incorporeal creature at any time. A manifesting ghost can wield the weapon against corporeal foes. Essentially, a ghost touch weapon counts as either corporeal or incorporeal at any given time, whichever is more beneficial to the wielder."
+  short_description: "Deals normal damage against incorporeal creatures."
+  base_only: true
+}
+value {
+  magic_weapon: 1
+}
+probability: RARE

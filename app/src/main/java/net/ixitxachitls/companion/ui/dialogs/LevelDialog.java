@@ -74,6 +74,7 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
   private Optional<Feat> racialFeat = Optional.empty();
   private Optional<Feat> classFeat = Optional.empty();
   private Map<String, Integer> skills = new HashMap<>();
+  private HashMap<String, Integer> lowerLevelSkills = new HashMap<>();
 
   // UI.
   private LabelledTextView className;
@@ -103,6 +104,33 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
         abilityIncrease.getText().isEmpty()
             ? Optional.empty() : Optional.of(Ability.fromName(abilityIncrease.getText())),
         feat, racialFeat, classFeat, qualityNames, skills);
+  }
+
+  @Override
+  public void save() {
+    character.setLevel(characterLevel, getValue());
+
+    super.save();
+  }
+
+  private HashMap<String, Integer> allSkillsBelow(int level) {
+    HashMap<String, Integer> skills = new HashMap<>();
+    for (int i = level - 1; i >= 0; i--) {
+      if (character.getLevel(i).isPresent()) {
+        addAll(skills, character.getLevel(i).get().getSkills());
+      }
+    }
+
+    return skills;
+  }
+
+  private List<FeatTemplate> bonusFeats() {
+    Optional<LevelTemplate> level = Templates.get().getLevelTemplates().get(className.getText());
+    if (level.isPresent()) {
+      return level.get().collectBonusFeats(classLevel);
+    } else {
+      return Collections.emptyList();
+    }
   }
 
   @Override
@@ -162,28 +190,13 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
     qualities = view.findViewById(R.id.qualities);
 
     skills = level.getSkills();
+    lowerLevelSkills = allSkillsBelow(characterLevel);
     skillsView = view.findViewById(R.id.skills);
     skillsView.text(formatSkills()).onClick(this::selectSkills)
         .validate((v) -> level.validateSkills(character.getIntelligenceModifier(), characterLevel,
             character.getRace()));
 
     refresh();
-  }
-
-  @Override
-  public void save() {
-    character.setLevel(characterLevel, getValue());
-
-    super.save();
-  }
-
-  private List<FeatTemplate> bonusFeats() {
-    Optional<LevelTemplate> level = Templates.get().getLevelTemplates().get(className.getText());
-    if (level.isPresent()) {
-      return level.get().collectBonusFeats(classLevel);
-    } else {
-      return Collections.emptyList();
-    }
   }
 
   private void editAbility(List<String> ability) {
@@ -394,8 +407,15 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
 
   private void selectSkills() {
     LevelSkillsDialog.newInstance(level.availableSkillPoints(character.getIntelligenceModifier(),
-        characterLevel, character.getRace()), 3 + characterLevel, level.getTemplate().getClassSkills(),
-        skills).onSaved(this::saveSkills).display();
+        characterLevel, character.getRace()), 3 + characterLevel,
+        level.getTemplate().getClassSkills(),
+        skills, lowerLevelSkills).onSaved(this::saveSkills).display();
+  }
+
+  private static void addAll(Map<String, Integer> base, Map<String, Integer> add) {
+    for (Map.Entry<String, Integer> entry : add.entrySet()) {
+      base.put(entry.getKey(), entry.getValue() + base.getOrDefault(entry.getKey(), 0));
+    }
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, String title,

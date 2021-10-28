@@ -104,7 +104,7 @@ public class RoundImageView extends AppCompatImageView {
 
   private class LoadTask extends AsyncTask<String, Void, Bitmap> {
     @Override
-    protected Bitmap doInBackground(String ... input) {
+    protected Bitmap doInBackground(String... input) {
       try {
         URL url = new URL(input[0]);
         return BitmapFactory.decodeStream(url.openConnection().getInputStream());

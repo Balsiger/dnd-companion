@@ -1,7 +1,10 @@
 template {
   name: "Mwk Weapon"
   category: "masterwork"
+  synonym: "mwk"
   synonym: "Masterwork"
+  synonym: "Masterwork Weapon"
+  synonym: "Weapon, Masterwork"
   reference {
     name: "WTC 17524"
     pages {

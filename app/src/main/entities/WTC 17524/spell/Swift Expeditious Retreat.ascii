@@ -1,0 +1,40 @@
+template {
+  name: "Swift Expeditious Retreat"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 143
+      high: 143
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emphh{In a breathless voice you call out, as if you were already running a race.}\\par This spell functions like \\Spell{expeditious retreat} (PH 228), except as noted above."
+  short_description: "Your speed increases by 30 ft."
+}
+school: TRANSMUTATION
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+casting_time {
+  swift_actions: 1
+}
+special_range: PERSONAL
+target: "You"
+duration {
+  duration {
+    rounds: 1
+  }
+}
+saving_throw: "None"
+spell_resistance: "No"

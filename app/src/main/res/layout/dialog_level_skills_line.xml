@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2017-2019 Peter Balsiger
   ~ All rights reserved
   ~
@@ -20,8 +19,7 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
@@ -33,13 +31,41 @@
       android:layout_height="wrap_content"
       android:layout_weight="1"
       android:text="...name..."
-      android:textAppearance="@style/LargeText"/>
+      android:textAppearance="@style/LargeText" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:text="+"
+      android:textAppearance="@style/LargeText" />
 
   <TextView
       android:id="@+id/ranks"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_weight="0"
-      android:text="+4"
-      android:textAppearance="@style/LargeText"/>
+      android:text="4"
+      android:textAppearance="@style/LargeText" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingStart="5dp"
+      android:text="("
+      android:textAppearance="@style/LargeText" />
+
+  <TextView
+      android:id="@+id/lower_ranks"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:text="0"
+      android:textAppearance="@style/LargeText" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text=")"
+      android:textAppearance="@style/LargeText" />
 </LinearLayout>

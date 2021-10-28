@@ -152,10 +152,14 @@ public class Level extends NestedDocument {
   }
 
   public int availableSkillPoints(int intelligenceModifier, int characterLevel,
-                                   Optional<MonsterTemplate> race) {
+                                  Optional<MonsterTemplate> race) {
     return Levels.skillPoints(getTemplate().getSkillPoints(),
         intelligenceModifier, characterLevel == 1,
-        race.isPresent() ? race.get().getSkillPointBonus() : 0);
+        race.isPresent() ? (
+            characterLevel == 1
+                ? race.get().getSkillPointBonusFirstLevel()
+                : race.get().getSkillPointBonus())
+            : 0);
   }
 
   public List<QualitySelection> collectQualitySelections(int level) {
@@ -255,7 +259,7 @@ public class Level extends NestedDocument {
 
     if (racialFeat.isPresent()
         && (!character.getRace().isPresent()
-            || !character.getRace().get().hasBonusFeat(number))) {
+        || !character.getRace().get().hasBonusFeat(number))) {
       errors.add("There is a racial bonus feat selected at level " + number
           + ", but there should be none.");
     } else if (!racialFeat.isPresent()
@@ -265,7 +269,8 @@ public class Level extends NestedDocument {
     }
 
     if (classFeat.isPresent() && !template.hasBonusFeat(number)) {
-      errors.add("There is a class bonus feat selected at level " + number + ", but there should be none");
+      errors.add("There is a class bonus feat selected at level " + number + ", but there should "
+          + "be none");
     } else if (!classFeat.isPresent() && template.hasBonusFeat(number)) {
       errors.add("There is no class bonus feat selected for level " + number);
     }
@@ -293,10 +298,10 @@ public class Level extends NestedDocument {
     int used = usedSkillPoints();
     int available = availableSkillPoints(intelligenceModifier, characterLevel, race);
     if (used > available) {
-      return Collections.singletonList("Used too many skill points.");
+      return Collections.singletonList("Used too many skill points");
     }
     if (used < available) {
-      return Collections.singletonList("Did not use all skill points.");
+      return Collections.singletonList("Did not use all skill points");
     }
 
     return Collections.emptyList();
@@ -328,10 +333,10 @@ public class Level extends NestedDocument {
   private int usedSkillPoints() {
     int used = 0;
     for (Map.Entry<String, Integer> entry : skills.entrySet()) {
-      if (getTemplate().getClassSkills().contains(entry.getKey())) {
-        used += 2;
+      if (getTemplate().getClassSkills().contains(entry.getKey().toLowerCase())) {
+        used += entry.getValue();
       } else {
-        used++;
+        used += 2 * entry.getValue();
       }
     }
 

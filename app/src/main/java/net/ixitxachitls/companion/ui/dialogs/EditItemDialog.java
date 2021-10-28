@@ -105,12 +105,14 @@ public class EditItemDialog extends Dialog {
       }
 
       String itemId = getArguments().getString(ARG_ITEM_ID);
-      if (itemId.isEmpty()) {
-        Status.error("No ID for item found");
-        close();
-      }
+      //if (itemId.isEmpty()) {
+      //  Status.error("No ID for item found");
+      //  close();
+      //}
 
-      item = this.owner.getItem(itemId);
+      if (!itemId.isEmpty()) {
+        item = this.owner.getItem(itemId);
+      }
     }
   }
 
@@ -283,9 +285,9 @@ public class EditItemDialog extends Dialog {
 
   private void update(List<ItemTemplate> templates) {
     String fullName = Item.name(templates);
-    if (item.isPresent() && owner.amDM()) {
+    if (owner.amDM()) {
       name.text(fullName);
-    } else {
+    } else if (item.isPresent()) {
       name.text(item.get().getPlayerName());
     }
     dmName.text(fullName);

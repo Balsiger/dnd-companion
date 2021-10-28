@@ -41,7 +41,6 @@ import net.ixitxachitls.companion.data.values.Substance;
 import net.ixitxachitls.companion.data.values.Weight;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
-import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -111,11 +110,13 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
   }
 
   public Damage getDamage() {
-    if (!isWeapon()) {
-      return new Damage();
+    Damage damage;
+    if (isWeapon()) {
+      damage = Damage.from(proto.getWeapon().getDamage(), getName());
+    } else {
+      damage = new Damage();
     }
 
-    Damage damage = Damage.from(proto.getWeapon().getDamage(), getName());
     for (Template.MagicTemplateProto.Modifier modifier : proto.getMagic().getModifierList()) {
       if (modifier.getType() == Template.MagicTemplateProto.Type.DAMAGE) {
         damage.addModifiers(Modifier.fromProto(modifier.getModifier(), getName()));

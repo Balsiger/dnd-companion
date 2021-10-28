@@ -133,6 +133,13 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     return view;
   }
 
+  @Override
+  public void onResume() {
+    super.onResume();
+
+    this.update();
+  }
+
   public void show(Character character) {
     this.character = character;
   }
@@ -170,7 +177,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
       // Update attacks.
       attacks.removeAllViews();
       for (Item item : character.getItems()) {
-        if (item.isWeapon() && character.isWearing(item)) {
+        if (item.isWeapon()) {
           if (character.isWearing(item, Items.Slot.hands)) {
             attacks.addView(new AttackDetailsView(getContext(), character, item, false), 0);
           } else {

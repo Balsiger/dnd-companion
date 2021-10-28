@@ -150,6 +150,7 @@ public class CharacterFragment extends CompanionFragment {
   public void onResume() {
     super.onResume();
 
+
     update();
   }
 
@@ -215,7 +216,7 @@ public class CharacterFragment extends CompanionFragment {
   public class CharacterPagerAdapter extends FragmentPagerAdapter {
 
     public CharacterPagerAdapter(FragmentManager manager) {
-      super(manager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+      super(manager, BEHAVIOR_SET_USER_VISIBLE_HINT);
     }
 
     @Override

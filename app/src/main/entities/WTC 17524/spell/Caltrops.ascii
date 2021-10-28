@@ -1,0 +1,38 @@
+template {
+  name: "Caltrops"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 142
+      high: 142
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emphh{You speak the words and spread your palm open, as if you were throwing jacks. Coppery sparks spring from your palm, filling the corridor with small four-pronged spikes.}\\par A caltrops spell covers one 5-foot-by-5-foot square with caltrops. Every time a creature moves into an area covered by caltrops or spends a round fighting while standing in such an area, it might step on one. The caltrops make one attack roll (+0 melee) against the creature. For this attack, the target’s shield and deflection bonuses do not count, nor does its armor bonus for armor worn. A target wearing shoes or other footwear gains a +2 armor bonus to Armor Class (which does count). If the caltrops succeed on the attack, the creature has stepped on one.\\par A successful attack by a caltrop deals 1 point of damage. If the target is Small, Medium, or Large, its land speed is reduced by one-half because of the injury. This movement penalty lasts for 24 hours, until the creature is successfully treated with a DC 15 Heal check, or until it receives at least 1 point of magic healing. A charging or running creature must immediately stop if it steps on a caltrop. Any creature moving at half speed or slower can pick its way through a bed of caltrops with no trouble.\\par The DM judges the effectiveness of caltrops against unusual opponents or opponents outside the size range given above. A giant centipede, for example, can scramble among the caltrops with no chance of hurting itself, and a fire giant wearing thick, massive boots might be immune to their attacks.\\par For every two caster levels beyond 1st, you can affect an additional 5-foot-by-5-foot square, and the caltrops’ attack bonus increases by 1. Thus, you affect two squares at 3rd level (+1 melee), three at 5th level (+2 melee), four at 7th level (+3 melee), and a maximum of five at 9th level or higher (+4 melee maximum).\\par Multiple caltrops spells (or mundane caltrops) occupying the same space have no additional effect."
+  short_description: "Create caltrops in an area that damage and potentially slow enemies."
+}
+school: CONJURATION
+subschool: CREATION
+level {
+  spell_class: SORCERER
+  level: 0
+}
+level {
+  spell_class: WIZARD
+  level: 0
+}
+components: VERBOSE
+components: SOMATIC
+casting_time {
+  standard_actions: 1
+}
+special_range: CLOSE
+area: "See text"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "/level"
+}
+saving_throw: "None"
+spell_resistance: "No"

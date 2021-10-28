@@ -1,0 +1,35 @@
+template {
+  name: "Sonic Blast"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 144
+      high: 144
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{The words of your spell twist upon each other and grow stronger. Then, like a cluster of bees, they streak toward your target and detonate in a screaming bellow around him.}\\par You blast the target with loud and high-pitched sounds. The subject takes 1d4 points of sonic damage per two caster levels (maximum 5d4) and must make a Will save or be deafened for 1d4 rounds. This spell has no effect if cast into the area of a \\Spell{silence} spell."
+  short_description: "Deal 1d4 sonic damage per two caster levels (max 5d4) and deafen."
+}
+school: EVOCATION
+descriptor: SONIC
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+casting_time {
+  standard_actions: 1
+}
+special_range: CLOSE
+target: "One creature"
+duration {
+  duration_description: "Instantaneous"
+}
+saving_throw: "Will partial"
+spell_resistance: "Yes"

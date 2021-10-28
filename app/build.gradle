@@ -10,7 +10,6 @@ buildscript {
 
   dependencies {
     classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.14'
-    //classpath 'de.mobilej.unmock:UnMockPlugin:0.6.4'
   }
 }
 
@@ -128,7 +127,7 @@ protobuf {
     artifact = 'com.google.protobuf:protoc:3.9.1'
   }
   plugins {
-    lite {
+    java {
       // Never versions seem to clash with firebase.
       artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0"
     }
@@ -139,10 +138,13 @@ protobuf {
   generateProtoTasks {
     all().each { task ->
       task.builtins {
-        //  remove java
-        //}
-        //task.plugins {
-        //  lite { }
+        java
+        //remove java
+      }
+
+      task.plugins {
+        //javalite {}
+        // lite {}
         java {
           option "lite"
         }

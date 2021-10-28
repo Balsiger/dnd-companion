@@ -264,6 +264,7 @@ message MonsterTemplateProto {
   bool bonus_feat = 37;
   repeated FeatSelection automatic_feat = 38;
   int32 skill_point_bonus = 39;
+  int32 skill_point_bonus_first_level = 40;
 }
 
 message ItemTemplateProto {
