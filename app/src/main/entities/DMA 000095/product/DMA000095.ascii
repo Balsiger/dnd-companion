@@ -1,0 +1,41 @@
+template {
+  name: "DMA 000095"
+  world: "Forgotten Realms"
+  description: "\\bold{At long last, New York Times bestselling author R. A. Salvatore returns with one of fantasy's most beloved and enduring icons, the dark elf Drizzt Do'Urden, in an all-new trilogy full of swordplay, danger, and imaginative thrills.} Centuries ago, in the city of Menzoberranzan—the City of Spiders, the city of drow—nestled deep in the unmerciful Underdark of Toril, a young weapon master earned a reputation far above his station or that of his poor house.\n\nZaknafein.\n\nThe greater nobles watched him, and one powerful Matron—Malice—decided to take him as her own. She connived with rival houses to secure her prize, but it was ultimately the roguish Jarlaxle who caught him.\n\nThus sparked the birth of two key moments in Menzoberranzan: the coupling of a noble and weapon master that would produce Drizzt Do’Urden…and the friendship between Zaknafein and Jarlaxle.\n\nR. A. Salvatore reveals the Underdark anew through the eyes of this unlikely pair—offering a fresh take on the intrigue and opportunities to be found in the shadows, and providing a fascinating prelude to the journeys that have shaped the modern-day Forgotten Realms. There, Zaknafein and Drizzt are joined together in a series of trials that parallel those of centuries long past, even though their paths no longer seem to be aligned. How will a father, so long constrained by the vicious and conservative world of the drow, be able to reconcile his ingrained prejudices with the world and companions of his enlightened son?\n\nThe answer lies in their desire for peace over chaos. And as long as the scourge of the goddess Lolth’s ambitions still remain, both are determined to keep her dark will at bay. But the Spider Queen is powerful, and now demons have been unleashed on the unwitting denizens of the surface world. United in purpose—and through their mutual friendship with Jarlaxle—Zaknafein and Drizzt will need to put aside their differences in order to keep the ones they love safe."
+}
+title: "Timeless"
+leader: ""
+subtitle: "A Drizzt Novel"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Briclot, Aleksi"
+}
+date {
+  year: 2019
+  month: 6
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "06"
+  title: "268860"
+  check: 2
+}
+pages: 428
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "Harper Voyage"
+price {
+  currency: "$"
+  number: 799
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

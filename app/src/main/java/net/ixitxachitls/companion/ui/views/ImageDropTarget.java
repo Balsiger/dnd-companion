@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.ui.views;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.DragEvent;
@@ -58,6 +59,7 @@ public class ImageDropTarget extends LinearLayout implements View.OnDragListener
   public ImageDropTarget(Context context) {
     this(context, null);
   }
+
   public ImageDropTarget(Context context, AttributeSet attributes) {
     super(context, attributes);
     this.round = false;
@@ -104,18 +106,18 @@ public class ImageDropTarget extends LinearLayout implements View.OnDragListener
         }
 
       case DragEvent.ACTION_DRAG_ENTERED:
-        image.get().setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.drag_over,
-            null)));
+        image.get().setColorFilter(getResources().getColor(R.color.drag_over, null),
+            PorterDuff.Mode.LIGHTEN);
         text.textColor(R.color.drag_over);
         return true;
 
       case DragEvent.ACTION_DRAG_EXITED:
-        image.get().setImageTintList(tint);
+        image.get().setColorFilter(0);
         text.textColorValue(tint.getDefaultColor());
         return true;
 
       case DragEvent.ACTION_DROP:
-        image.get().setImageTintList(tint);
+        image.get().setColorFilter(0);
         text.textColorValue(tint.getDefaultColor());
         if (dropExecutor.isPresent()) {
           return dropExecutor.get().execute(event.getLocalState());

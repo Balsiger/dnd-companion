@@ -107,7 +107,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
         .visible(character.amPlayer() || character.amDM());
     targetsCharacters = view.findViewById(R.id.targets_characters);
     removeItem = Wrapper.<ImageDropTarget>wrap(view, R.id.item_remove)
-        .description("Remove Item", "Drag an item over the trash to remove it");
+        .description("Remove Item", "Drag an item here to remove it.");
     removeItem.get().setSupport(i -> i instanceof Item);
     removeItem.get().setDropExecutor(this::removeItem);
     removeItem.visible(character.amPlayer() || character.amDM());
@@ -176,7 +176,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
 
       // Update attacks.
       attacks.removeAllViews();
-      for (Item item : character.getItems()) {
+      for (Item item : character.getDeepItems()) {
         if (item.isWeapon()) {
           if (character.isWearing(item, Items.Slot.hands)) {
             attacks.addView(new AttackDetailsView(getContext(), character, item, false), 0);
@@ -205,7 +205,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   }
 
   private ItemView createLine(Item item) {
-    return new ItemView(getContext(), character.getCampaign(), character, item);
+    return new ItemView(getContext(), character.getCampaign(), character, item, false);
   }
 
   private boolean dragSlot(Items.Slot slot, DragEvent event) {
@@ -264,7 +264,8 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
 
       case DragEvent.ACTION_DRAG_ENDED:
         if (event.getResult()) {
-          // The drop was handled by some view.
+          // The event was handled by some other view.
+          update();
           return true;
         }
 

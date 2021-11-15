@@ -1,0 +1,10 @@
+template {
+  name: "Oil of Daylight"
+  base: "oil"
+  description: "As \\SpellRef[Clr 3]{Daylight}."
+  short_description: "As \\SpellRef[Clr 3]{Daylight}."
+}
+probability: COMMON
+value {
+  gold: 750
+}

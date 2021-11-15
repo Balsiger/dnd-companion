@@ -28,11 +28,14 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.ui.dialogs.EditItemDialog;
 import net.ixitxachitls.companion.ui.dialogs.ItemDialog;
@@ -49,7 +52,7 @@ import java.util.Map;
  */
 public class ItemView extends LinearLayout implements View.OnDragListener {
 
-  private static final float MIN_DRAG_DISTANCE = 20;
+  private static final float MIN_DRAG_DISTANCE = 10;
 
   private final Campaign campaign;
   private final Item.Owner owner;
@@ -69,7 +72,8 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
   private float touchStartX = 0;
   private float touchStartY = 0;
 
-  public ItemView(Context context, Campaign campaign, Item.Owner owner, Item item) {
+  public ItemView(Context context, Campaign campaign, Item.Owner owner, Item item,
+                  boolean inContainer) {
     super(context);
     this.campaign = campaign;
     this.owner = owner;
@@ -78,6 +82,8 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_item, this, false);
     title = Wrapper.<LinearLayout>wrap(view, R.id.title).onTouch(this::handleTouch);
     name = TextWrapper.wrap(view, R.id.name);
+    Wrapper.<ImageView>wrap(view, R.id.unpack).visible(inContainer)
+        .onClick(this::handleUnpack);
     value = TextWrapper.wrap(view, R.id.value);
     weight = TextWrapper.wrap(view, R.id.weight);
     TextWrapper<TextView> edit = TextWrapper.wrap(view, R.id.edit);
@@ -107,6 +113,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
 
   @Override
   public boolean onDrag(View view, DragEvent event) {
+    Status.error("Item Status: " + event.getAction());
     switch (event.getAction()) {
       case DragEvent.ACTION_DRAG_STARTED:
       case DragEvent.ACTION_DRAG_ENTERED:
@@ -127,6 +134,10 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
         return true;
 
       case DragEvent.ACTION_DRAG_ENDED:
+        //owner.dragEnded(event.getResult());
+        showNoInsert();
+        return true;
+
       case DragEvent.ACTION_DRAG_EXITED:
         showNoInsert();
         return true;
@@ -172,7 +183,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
       if (owner.isWearing(content)) {
         ItemView view = views.get(content);
         if (view == null) {
-          view = new ItemView(getContext(), campaign, owner, content);
+          view = new ItemView(getContext(), campaign, owner, content, true);
         } else {
           view.update();
         }
@@ -208,7 +219,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
   }
 
   private boolean handleTouch(MotionEvent event) {
-    switch(event.getActionMasked()) {
+    switch (event.getActionMasked()) {
       case MotionEvent.ACTION_DOWN:
         touchStartX = event.getX();
         touchStartY = event.getY();
@@ -230,6 +241,12 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
 
       default:
         return false;
+    }
+  }
+
+  private void handleUnpack() {
+    if (owner instanceof Creature) {
+      ((Creature) owner).moveItemLast(item);
     }
   }
 
@@ -261,6 +278,4 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     title.margin(AbstractWrapper.Margin.TOP, 10);
     title.backgroundColor(R.color.item);
   }
-
-
 }

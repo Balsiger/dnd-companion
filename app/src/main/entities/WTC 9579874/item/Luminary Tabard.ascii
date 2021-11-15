@@ -1,0 +1,50 @@
+template {
+  name: "Luminary Tabard"
+  category: "celestial"
+  category: "magic"
+  synonym: "of the celestial host"
+  synonym: "Celestial Host, Weapon of the"
+  reference {
+    name: "WTC 9579874"
+    pages {
+      low: 16
+      high: 16
+    }
+  }
+  description: "When you don this tabard, your spirit feels lighter and the world less threatening. You relish the thought of an evildoer trying to frighten you, for you wear the silvery emblem of the Luminous Order, against which no evil can stand.\n\nA Luminary Tabard grants you a +2 resistance bonus on Reflex saves. Further, whenever you succeed on a save against a fear effect. the tabard heals you of a number of points of damage equal to the caster level of the effect or the Hit Dice of the effect's creator, whichever is lower. If you encounter a persistent fear effect that requires a new saving throw every round, the healing effect of the tabard functions only the first time you succeed on the save."
+  short_description: "The tabard provides Ref +2 resistance and hp on saved checks vs. fear."
+  incomplete: "Hp gained on failed saves not automated."
+}
+value {
+  gold: 3000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+  }
+}
+probability: RARE
+lore {
+  checks {
+    skill: "Knowledge [local]"
+    dc: 20
+  }
+  description: "The tabard marks its wearer as a Knight of the Luminous Order."
+}
+appearance {
+  probability: COMMON
+  appearance: "A dark blue tabard, worn over the shoulders and cinched at the waist, this garment has a silver tower insignia on it and more silver embroidery at the hem. When it absorbs a fear effect, the tower glows and seems to grow slightly larger for a moment."
+}
+magic {
+  modifier {
+    type: REFLEX
+    modifier {
+      modifier {
+        value: 2
+        type: RESISTANCE
+      }
+    }
+  }
+}

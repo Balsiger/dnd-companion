@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2017-2019 Peter Balsiger
   ~ All rights reserved
   ~
@@ -21,22 +20,24 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:paddingBottom="10dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
 
   <TextView
       android:id="@+id/condition"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="... condition ..."
-      android:textStyle="bold"/>
+      android:textColor="@color/grey_very_dark"
+      android:textStyle="bold" />
 
   <TextView
       android:id="@+id/text"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="... text ..."
-      android:textStyle="italic"/>
+      android:textColor="@color/black"
+      android:textStyle="italic" />
 </LinearLayout>

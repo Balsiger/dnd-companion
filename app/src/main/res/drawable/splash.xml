@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2017-2018 Peter Balsiger
   ~ All rights reserved
   ~
@@ -22,11 +21,14 @@
 
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
-            android:opacity="opaque">
-  <item android:drawable="@color/colorPrimary"/>
-  <item android:top="150dp">
+    android:opacity="opaque">
+  <item android:drawable="@color/colorPrimary" />
+  <item
+      android:left="50dp"
+      android:right="50dp"
+      android:top="100dp">
     <bitmap
         android:gravity="top"
-        android:src="@drawable/splash_image"/>
+        android:src="@drawable/splash_image" />
   </item>
 </layer-list>

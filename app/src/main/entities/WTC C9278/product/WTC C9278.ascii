@@ -1,0 +1,236 @@
+template {
+  name: "WTC C9278"
+  world: "Forgotten Realms"
+  description: "\\Place{Candlekeep} attracts scholars like a flame attracts moths. Historians, sages, and others who crave knowledge flock to this library fortress to peruse its vast collection of books, scribbled in which are the answers to the mysteries that bedevil them. Many of these books contain their own mysteries - each one a doorway to adventure. Dare you cross that threshold?\n\n\Product[WTC C9278]{Candlekeep Mysteries} is a collection of seventeen short, stand-alone D&D adventures designed for characters of levels 1-16. Each adventure begins with the discovery of a book, and each book is the key to a door behind which danger and glory await. These adventures can be run as one-shot games, plugged into an ongoing Forgotten Realms campaign, or adapted for other campaign settings. This books also includes a poster map of the library fortress and detailed descriptions of Candlekeep and its inhabitants."
+  short_description: "An anthology of seventeen mystery-themed adventures for the worlds greatest roleplaying game."
+}
+title: "Candlekeep Mysteries"
+subtitle: "Great Books Hide Their Secrets Well"
+date {
+  year: 2021
+  month: 3
+}
+author {
+  name: "Barber, Graeme"
+}
+author {
+  name: "Benham, Bill"
+}
+author {
+  name: "Lynne D'Angelo, Kelly"
+}
+author {
+  name: "Huang, Alison"
+}
+author {
+  name: "Hulmes, Mark"
+}
+author {
+  name: "Kretchmer, Jennifer"
+}
+author {
+  name: "Kwan, Daniel"
+}
+author {
+  name: "Lee, Adam"
+}
+author {
+  name: "Levitch, Ari"
+}
+author {
+  name: "Lindsay, Chris"
+}
+author {
+  name: "Madsen, Sarah"
+}
+author {
+  name: "Perkins, Christopher"
+}
+author {
+  name: "Polkinghorn, Michael"
+}
+author {
+  name: "Rehman, Taymoor"
+}
+author {
+  name: "Rose, Hannah"
+}
+author {
+  name: "Ruiz, Derek"
+}
+author {
+  name: "Shaw, Kienna"
+}
+author {
+  name: "Stoddard, Brandes"
+}
+author {
+  name: "Vorpahl, Amy"
+}
+author {
+  name: "Winslow Bill, Toni"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "rules development"
+}
+author {
+  name: "Dillon, Dan"
+  job: "rules development"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "rules development"
+}
+author {
+  name: "Rehmann, Taymoor"
+  job: "rules development"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Fitzgerald Gray, Scott"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Rose, Hannah"
+}
+cover {
+  name: "Cearley, Clint"
+}
+cover {
+  name: "Meyer, Simon"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Burburan, Filip"
+}
+illustrator {
+  name: "Burdett, Christopher"
+}
+illustrator {
+  name: "Chaturvedi, Sidarth"
+}
+illustrator {
+  name: "Dawes, Nikki"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Gariba, Caroline"
+}
+illustrator {
+  name: "Keiser, Sam"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Ladon, Katerina"
+}
+illustrator {
+  name: "Mar, Andrew"
+}
+illustrator {
+  name: "Nordsol, Irina"
+}
+illustrator {
+  name: "Olausson, Robin"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Prime, April"
+}
+illustrator {
+  name: "Sellaro, Domenico"
+}
+illustrator {
+  name: "Souza, Ernanda"
+}
+illustrator {
+  name: "Valeza, Brian"
+}
+illustrator {
+  name: "Walpole, Tyler"
+}
+illustrator {
+  name: "Wurzyk, Zusanne"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "lead graphic designer"
+}
+illustrator {
+  name: "Falcone, Tristan"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+cartographer {
+  name: "Hartin, Tim"
+}
+cartographer {
+  name: "Dyson Logos"
+}
+cartographer {
+  name: "Macdonald, Sean"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+manager {
+  name: "Perkins, Christopher"
+  job: "project lead"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "project engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+pages: 224
+system: DND_5E
+audience: DM
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: MAP
+  number: 1
+  description: "Poster map"
+}
+layout: FULL_COLOR

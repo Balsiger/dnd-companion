@@ -567,6 +567,7 @@ encounter {
   description: "Guarding what's to come"
   location: "Synod"
   encounter_level: 14
+
   spell_group {
     name: "Beholder"
     description: "Beauty is NOT in the eye of the beholder"
@@ -592,6 +593,32 @@ encounter {
   description: "Let there be magic"
   location: "Synod"
   encounter_level: 15
+
+  read_aloud {
+    text: "This is obviously a laboratory for magical experimentation. Magic circles marked with candles and glowing sigils adorn the floor. Between them are a worktable and a lectern. Two small cages stand to the side; winged snakes lie coiled inside them. At the west end of the room is a large, boiling pool, a reddish glow emanating from its depths."
+  }
+  read_aloud {
+    condition: "First see the \\Monster{phaerimm}"
+    text: "A strange conical beast floats in the air. Rows of tentacles surround a lampreylike maw at its wide base. Four arms ending in clawed digits surround this end; one arm clutches an elaborate wand. The far end of this creature terminates in a stinger."
+  }
+  read_aloud {
+    condition: "\\Monster{Bloodfire} emerges from the pool"
+    text: "With a hiss and a rush of steam, a horror clambers from the pool; it is a disgusting mass of boiling brimstone, pulling itself along on gory pseudopods. Strange bulbous masses form and rupture across its fluid body, and occasionally a twisted face manifests itself in the effl uvia that makes up its roiling hide."
+  }
+
+  treasure {
+    name: "Culcathrax"
+    description: "The items are carried by Culcathrax and might be used in battle."
+    item {
+      name: "Wand of Magic Missile 5"
+      multiuse: 48
+    }
+    item {
+      name: "Greater Ring of Energy Resistance (fire)"
+    }
+  }
+
+
   spell_group {
     name: "Blighted Bloodfire"
     description: "Hot but ugly"
@@ -635,7 +662,7 @@ encounter {
     spell { name: "ghost sound" }
     spell { name: "light" }
     spell { name: "mage hand" }
-    spell { name: "open or close" }
+    spell { name: "open & close" }
     spell { name: "read magic" }
     spell { name: "detec magic" }
   }
@@ -1113,5 +1140,342 @@ encounter {
     spell { name: "stoneskin" }
     spell { name: "passwall" }
     spell { name: "wall of stone" }
+  }
+}
+encounter {
+  name: "Askilion's Tower"
+  short_name: "T4"
+  description: "I will sing you to death"
+  location: "Tomb of Thaluud"
+  encounter_level: 19
+  spell_group {
+    name: "Chalice of Amaunator"
+    description: "Let there be light."
+    caster_level: 18
+    ability_bonus: 0
+    spell_class: SORCERER
+    spell { name: "sunbeam" }
+    spell { name: "plane shift" }
+    spell { name: "daylight" }
+  }
+  spell_group {
+    name: "Chalice of Amaunator"
+    description: "Let there be light."
+    caster_level: 25
+    spell { name: "sunburst" meta_magic: MAXIMIZED }
+  }
+  spell_group {
+    name: "Chalice of Amaunator"
+    description: "Let there be light."
+    caster_level: 20
+    spell { name: "mordenkainen's disjunction" }
+    spell { name: "disintegrate" }
+  }
+  spell_group {
+    name: "Netherese Blast Scepter"
+    description: "Kapow"
+    caster_level: 10
+    ability_bonus: 0
+    spell_class: SORCERER
+    spell { name: "lightning bold" meta_magic: EMPOWERED }
+  }
+  spell_group {
+    name: "Netherese Blast Scepter"
+    description: "Kapow"
+    caster_level: 7
+    ability_bonus: 0
+    spell_class: SORCERER
+    spell { name: "shocking grasp" meta_magic: MAXIMIZED }
+  }
+  spell_group {
+    name: "Beholder Crown"
+    description: "Eyes everywhere..."
+    caster_level: 13
+    ability_bonus: 0
+    spell_class: SORCERER
+    spell { name: "disintegrate" }
+    spell { name: "sleep" }
+    spell { name: "flessh to stone" }
+    spell { name: "inflict moderate wounds" }
+    spell { name: "slow" }
+    spell { name: "telekinesis" }
+    spell { name: "charm person" }
+  }
+  spell_group {
+    name: "Tomb Tappers"
+    description: "You shall not pass."
+    caster_level: 22
+    ability_bonus: 3
+    spell_class: SORCERER
+    spell { name: "detect magic" }
+    spell { name: "stone shape" }
+    spell { name: "spike stones" }
+  }
+  spell_group {
+    name: "Askalion"
+    description: "Please sing along"
+    caster_level: 11
+    ability_bonus: 6
+    spell_class: BARD
+    spell { name: "dimension door" }
+    spell { name: "hold monster" }
+    spell { name: "rainbow pattern" }
+    spell { name: "crushing despair" }
+    spell { name: "cure serious wounds" }
+    spell { name: "see invisibility" }
+    spell { name: "slow" }
+    spell { name: "blindness or deafness" }
+    spell { name: "blur" }
+    spell { name: "detect thoughts" }
+    spell { name: "sound burst" }
+    spell { name: "charm person" }
+    spell { name: "detect secret doors" }
+    spell { name: "hypnotism" }
+    spell { name: "sleep" }
+    spell { name: "dancing lights" }
+    spell { name: "detect magic" }
+    spell { name: "flare" }
+    spell { name: "lullaby" }
+    spell { name: "mage hand" }
+    spell { name: "open & close" }
+  }
+}
+encounter {
+  name: "Air Attack"
+  short_name: "S1"
+  description: "Death from above"
+  location: "Anauroch"
+  encounter_level: 14
+  spell_group {
+    name: "Shadovar Aearial Scouts"
+    description: "Jousting is a sport."
+    caster_level: 4
+    spell { name: "cat's grace" }
+    spell { name: "endure elements" }
+    spell { name: "shield" }
+    spell { name: "true strike" }
+    spell { name: "detect magic" }
+    spell { name: "true strike" }
+    spell { name: "detect magic" }
+    spell { name: "disrupt undead" }
+    spell { name: "light" }
+    spell { name: "mage hand" }
+    spell { name: "message" }
+    spell { name: "resistance" }
+  }
+}
+encounter {
+  name: "Battle at the Oasis"
+  short_name: "S2"
+  description: "It's empty, no worries"
+  location: "Anauroch"
+  encounter_level: 15
+  spell_group {
+    name: "Sharran Shadow Adepts"
+    description: "All is lost."
+    caster_level: 12
+    ability_bonus: 5
+    spell { name: "harm" }
+    spell { name: "prying eyes" }
+    spell { name: "word of recall" }
+    spell { name: "darkbolt" }
+    spell { name: "flame strike" }
+    spell { name: "greater command" }
+    spell { name: "bestow curse" meta_magic: HEIGHTENED }
+    spell { name: "slay living" }
+    spell { name: "air walk" }
+    spell { name: "cure critical wounds" }
+    spell { name: "freedom of movement" }
+    spell { name: "hold person" meta_magic: HEIGHTENED }
+    spell { name: "unholy blight" }
+    spell { name: "blacklight" }
+    spell { name: "cure serious wounds" }
+    spell { name: "command" meta_magic: HEIGHTENED }
+    spell { name: "invisibility purge" }
+    spell { name: "aid" }
+    spell { name: "blindness or deafness" }
+    spell { name: "cure moderate wounds" }
+    spell { name: "sound burst" }
+    spell { name: "spiritual weapon" }
+    spell { name: "bless" }
+    spell { name: "cure light wounds" }
+    spell { name: "divine favor" }
+    spell { name: "endure elements" }
+    spell { name: "entropic shield" }
+    spell { name: "protection from good" }
+    spell { name: "shield of faith" }
+    spell { name: "cure minor wounds" }
+    spell { name: "detect magic" }
+    spell { name: "guidance" }
+  }
+  spell_group {
+    name: "Sharran Shadow Adepts"
+    description: "All is lost."
+    caster_level: 7
+    ability_bonus: 5
+    spell { name: "shadow walk" }
+  }
+}
+encounter {
+  name: "Guardians of the Orchards"
+  short_name: "S4"
+  description: "Want an apple?"
+  location: "Anauroch"
+  encounter_level: 14
+  spell_group {
+    name: "Krinth Guards"
+    description: "We keep the peace around here."
+    caster_level: 3
+    spell { name: "cure light wounds" }
+    spell { name: "cure moderate wounds" }
+    spell { name: "shatter" }
+    spell { name: "unholy blight" }
+    spell { name: "zone of truth" }
+    spell { name: "blindness or deafness" }
+    spell { name: "bull's strength" }
+    spell { name: "spiritual weapon" }
+    spell { name: "cure light wounds" }
+    spell { name: "divine favor" }
+    spell { name: "obscuring mist" }
+    spell { name: "sanctuary" }
+    spell { name: "cure minor wounds" }
+    spell { name: "detect magic" }
+    spell { name: "guidance" }
+    spell { name: "resistance" }
+  }
+}
+encounter {
+  name: "An Ancient Enemy"
+  short_name: "S5"
+  description: "Of course we are just birds?"
+  location: "Anauroch"
+  encounter_level: 17
+  spell_group {
+    name: "Mature Adult Phaerimms"
+    description: "Nothing to see here."
+    caster_level: 13
+    ability_bonus: 5
+    spell { name: "chain lightning" }
+    spell { name: "disintegrate" }
+    spell { name: "cloudkill" }
+    spell { name: "hold monster" }
+    spell { name: "telekinesis" }
+    spell { name: "charm monster" }
+    spell { name: "dimension door" }
+    spell { name: "phantasmal killer" }
+    spell { name: "wall of ice" }
+    spell { name: "displacement" }
+    spell { name: "lightning bolt" }
+    spell { name: "sleet storm" }
+    spell { name: "vampiric touch" }
+    spell { name: "ghoul touch" }
+    spell { name: "see invisibility" }
+    spell { name: "spectral hand" }
+    spell { name: "summon swarm" }
+    spell { name: "Tasha's hideous laughter" }
+    spell { name: "chill touch" }
+    spell { name: "grease" }
+    spell { name: "magic missile" }
+    spell { name: "ray of enfeeblement" }
+    spell { name: "shield" }
+    spell { name: "arcane mark" }
+    spell { name: "dancing lights" }
+    spell { name: "detect magic" }
+    spell { name: "disrupt undead" }
+    spell { name: "ghost sound" }
+    spell { name: "mage hand" }
+    spell { name: "message" }
+    spell { name: "open & close" }
+    spell { name: "read magic" }
+  }
+}
+encounter {
+  name: "Hadrhune Intervenes"
+  short_name: "S6"
+  description: "Die you worms!"
+  location: "Anauroch"
+  encounter_level: 22
+  spell_group {
+    name: "Hadrhune"
+    description: "You don't stand a chance."
+    caster_level: 20
+    ability_bonus: 5
+    spell { name: "dominate monster" }
+    spell { name: "power word kill" }
+    spell { name: "wail of the banshee" }
+    spell { name: "mind blank" }
+    spell { name: "greater shadow evocation" }
+    spell { name: "dimension door" meta_magic: QUICKENED }
+    spell { name: "finger of death" }
+    spell { name: "power word stun" }
+    spell { name: "greater dispel magic" meta_magic: SILENT }
+    spell { name: "shadow evocation" }
+    spell { name: "suggestion" meta_magic: SILENT }
+    spell { name: "confusion" }
+    spell { name: "phantasmal killer" }
+    spell { name: "dispel magic" meta_magic: SILENT }
+    spell { name: "Sinsabur's baleful bolt" }
+    spell { name: "blacklight" }
+    spell { name: "fly" }
+    spell { name: "protection from energy" }
+    spell { name: "suggestion" }
+    spell { name: "death armor" }
+    spell { name: "ghoul touch" }
+    spell { name: "see invisibility" }
+    spell { name: "spectral hand" }
+    spell { name: "Tasha's hideous laughter" }
+    spell { name: "magic missile" }
+    spell { name: "protection from good" }
+    spell { name: "ray of enfeeblement" }
+    spell { name: "shield" }
+    spell { name: "detect magic" }
+    spell { name: "mage hand" }
+    spell { name: "message" }
+    spell { name: "prestidigitation" }
+    spell { name: "invisibility" }
+    spell { name: "shadow walk" }
+    spell { name: "mirror image" }
+  }
+  spell_group {
+    name: "Hadrhune's Shadow Double"
+    description: "You don't stand a chance."
+    caster_level: 20
+    ability_bonus: 5
+    spell { name: "dominate monster" }
+    spell { name: "horrid wilting" }
+    spell { name: "mass charm monster" }
+    spell { name: "wail of the banshee" }
+    spell { name: "weird" }
+    spell { name: "energy drain" }
+    spell { name: "Grimwald's graymantle" }
+    spell { name: "project image" }
+    spell { name: "shadow spray" }
+  }
+  spell_group {
+    name: "Delethyrsos"
+    description: "Grrrowl."
+    caster_level: 7
+    ability_bonus: 5
+    spell { name: "clairaudience or clairvoyance" }
+    spell { name: "heroism" }
+    spell { name: "bear's endurance" }
+    spell { name: "cat's grace" }
+    spell { name: "detect thoughts" }
+    spell { name: "expeditious retreat" }
+    spell { name: "mage armor" }
+    spell { name: "protection from good" }
+    spell { name: "shield" }
+    spell { name: "ventriloquism" }
+    spell { name: "detect magic" }
+    spell { name: "ghost sound" }
+    spell { name: "mage hand" }
+    spell { name: "message" }
+    spell { name: "open & close" }
+    spell { name: "read magic" }
+    spell { name: "resistance" }
+    spell { name: "mirror image" }
+    spell { name: "nondetection" }
+    spell { name: "dimension door" }
+    spell { name: "shadow walk" }
   }
 }

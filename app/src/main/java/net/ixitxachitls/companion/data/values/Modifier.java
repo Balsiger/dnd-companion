@@ -218,6 +218,9 @@ public class Modifier {
 
       case SYNERGY:
         return Type.SYNERGY;
+
+      case RESISTANCE:
+        return Type.RESISTANCE;
     }
   }
 
@@ -292,7 +295,7 @@ public class Modifier {
     // Modifiers with conditions only stack with modifiers without conditions if the one without
     // condition has a higher modifier.
     if ((first.condition.isPresent() && first.value > second.value)
-      || second.condition.isPresent() && second.value > first.value) {
+        || second.condition.isPresent() && second.value > first.value) {
       return false;
     }
 

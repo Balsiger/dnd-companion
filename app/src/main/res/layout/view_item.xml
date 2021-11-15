@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2017-2018 Peter Balsiger
   ~ All rights reserved
   ~
@@ -20,14 +19,13 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="4dp"
-    android:paddingRight="4dp">
+    android:paddingRight="4dp"
+    android:paddingBottom="4dp">
 
   <LinearLayout
       android:id="@+id/title"
@@ -49,7 +47,15 @@
         android:textAlignment="viewStart"
         android:textColor="@color/itemText"
         android:textStyle="bold"
-        android:theme="@style/SmallText"/>
+        android:theme="@style/SmallText" />
+
+    <ImageView
+        android:id="@+id/unpack"
+        android:layout_width="15dp"
+        android:layout_height="14sp"
+        android:paddingStart="5px"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/noun_unboxing_3344318" />
 
   </LinearLayout>
 
@@ -76,8 +82,8 @@
       <ImageView
           android:layout_width="20dp"
           android:layout_height="20dp"
-          android:tint="@color/itemDark"
-          app:srcCompat="@drawable/icons8_coins_24"/>
+          app:srcCompat="@drawable/icons8_coins_24"
+          app:tint="@color/white" />
 
       <TextView
           android:id="@+id/value"
@@ -86,13 +92,13 @@
           android:layout_marginStart="5dp"
           android:layout_weight="1"
           android:text="...5 gp..."
-          android:textColor="@color/itemText"/>
+          android:textColor="@color/itemText" />
 
       <ImageView
           android:layout_width="20dp"
           android:layout_height="20dp"
           android:tint="@color/itemDark"
-          app:srcCompat="@drawable/noun_weights_416229"/>
+          app:srcCompat="@drawable/noun_weights_416229" />
 
       <TextView
           android:id="@+id/weight"
@@ -101,7 +107,7 @@
           android:layout_marginStart="5dp"
           android:layout_weight="1"
           android:text="...10 lb..."
-          android:textColor="@color/itemText"/>
+          android:textColor="@color/itemText" />
 
       <ImageView
           android:id="@+id/edit"
@@ -110,7 +116,7 @@
           android:layout_marginStart="10dp"
           android:layout_weight="0"
           android:tint="@color/white"
-          app:srcCompat="@drawable/ic_mode_edit_black_24dp"/>
+          app:srcCompat="@drawable/ic_mode_edit_black_24dp" />
     </LinearLayout>
 
     <TextView
@@ -119,7 +125,7 @@
         android:layout_height="wrap_content"
         android:text="This is ghe general appearance of the item"
         android:textColor="@color/itemText"
-        android:theme="@style/SmallText"/>
+        android:theme="@style/SmallText" />
 
     <TextView
         android:id="@+id/description"
@@ -128,15 +134,14 @@
         android:layout_marginTop="5dp"
         android:text="This is the description of the item."
         android:textColor="@color/itemText"
-        android:theme="@style/TinyText"/>
+        android:theme="@style/TinyText" />
 
     <LinearLayout
         android:id="@+id/contents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:orientation="vertical">
-    </LinearLayout>
+        android:orientation="vertical"></LinearLayout>
 
   </LinearLayout>
 

@@ -1,0 +1,27 @@
+template {
+  name: "Greater Ring of Energy Resistance (fire)"
+  base: "ring"
+  category: "energy"
+  category: "resistance"
+  category: "fire"
+  category: "magic"
+  category: "ring"
+  synonym: "Ring of Energy Resistance (fire), Greater"
+  synonym: "Energy Resistance (fire), Greater Ring of"
+  synonym: "Greater Ring of Fire Resistance"
+  synonym: "Ring of Fire Resistance, Greater"
+  synonym: "Fire Resistance, Greater Ring of"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 232
+      high: 232
+    }
+  }
+  description: "This reddish iron ring continually protects the wearer from damage from fire. Each time the wearer would normally take such damage, subtract the ring’s resistance value from the damage dealt.\n\nA greater ring of energy resistance grants 30 points of resistance."
+  short_description: "Grants fire resistance 30."
+}
+value {
+  gold: 44000
+}
+probability: RARE

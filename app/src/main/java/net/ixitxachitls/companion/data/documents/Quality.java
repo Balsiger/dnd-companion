@@ -30,6 +30,7 @@ import com.google.common.collect.ImmutableMap;
 
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.templates.QualityTemplate;
+import net.ixitxachitls.companion.data.values.Speed;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.util.Texts;
 
@@ -79,17 +80,17 @@ public class Quality extends NestedDocument implements Parcelable {
     return template;
   }
 
-  @Override
-  public int describeContents() {
-    return 0;
+  public Map<String, Texts.Value> collectFormatValues(int count, Character character) {
+    return ImmutableMap.<String, Texts.Value>builder()
+        .putAll(character.collectFormatValues())
+        .put("count", new Texts.IntegerValue(count))
+        .put("source", new Texts.StringValue(entity))
+        .build();
   }
 
   @Override
-  public void writeToParcel(Parcel parcel, int flags) {
-    parcel.writeString(template.getName());
-    parcel.writeString(entity);
-
-    // TODO(merlin): Need to write the parametrized template proto here as well!
+  public int describeContents() {
+    return 0;
   }
 
   public Spannable formatName(Context context, int count, Character character) {
@@ -97,12 +98,8 @@ public class Quality extends NestedDocument implements Parcelable {
         collectFormatValues(count, character));
   }
 
-  public Map<String, Texts.Value> collectFormatValues(int count, Character character) {
-    return ImmutableMap.<String, Texts.Value>builder()
-        .putAll(character.collectFormatValues())
-        .put("count", new Texts.IntegerValue(count))
-        .put("source", new Texts.StringValue(entity))
-        .build();
+  public int getSpeedSquares(Speed.Mode mode) {
+    return template.getSpeedSquares(mode);
   }
 
   @Override
@@ -114,6 +111,14 @@ public class Quality extends NestedDocument implements Parcelable {
   public Data write() {
     return Data.empty()
         .set(FIELD_NAME, getName());
+  }
+
+  @Override
+  public void writeToParcel(Parcel parcel, int flags) {
+    parcel.writeString(template.getName());
+    parcel.writeString(entity);
+
+    // TODO(merlin): Need to write the parametrized template proto here as well!
   }
 
   public static Quality read(Data data, String entity) {

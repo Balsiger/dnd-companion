@@ -32,7 +32,4 @@ public class FakeUser extends User {
   public String getId() {
     return "fake";
   }
-
-  @Override
-  protected void init() {}
 }

@@ -41,6 +41,9 @@ public enum MagicEffectType implements Enums.Named, Enums.Proto<Template.MagicTe
   DAMAGE("Damage", "DMG", Template.MagicTemplateProto.Type.DAMAGE),
   ARMOR_CLASS("Armor Class", "AC", Template.MagicTemplateProto.Type.ARMOR_CLASS),
   HIDE("Hide", "HD", Template.MagicTemplateProto.Type.HIDE),
+  REFLEX("Reflex", "Ref", Template.MagicTemplateProto.Type.REFLEX),
+  WILL("Will", "Will", Template.MagicTemplateProto.Type.WILL),
+  FORTITUDE("Fortitude", "For", Template.MagicTemplateProto.Type.FORTITUDE),
   MOVE_SILENTLY("Move Silently", "MS", Template.MagicTemplateProto.Type.MOVE_SILENTLY);
 
   private final String name;

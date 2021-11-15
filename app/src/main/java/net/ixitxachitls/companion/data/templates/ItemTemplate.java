@@ -325,7 +325,9 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
   }
 
   public boolean isArmor() {
-    return proto.hasArmor();
+    return proto.hasArmor() ||
+        (proto.hasMagic() && proto.getMagic().getModifierList().stream()
+            .anyMatch(m -> m.getType() == Template.MagicTemplateProto.Type.ARMOR_CLASS));
   }
 
   public boolean isBaseOnly() {
@@ -338,6 +340,10 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
 
   public boolean isCounted() {
     return proto.hasCounted();
+  }
+
+  public boolean isMagic() {
+    return proto.hasMagic();
   }
 
   public boolean isMonetary() {
@@ -353,11 +359,13 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
   }
 
   public boolean isReal() {
-    return !isTemplate();
+    List<ItemTemplate> templates = collectTemplates();
+    return templates.stream().anyMatch(t -> !t.getWeight().isZero())
+        && templates.stream().anyMatch(t -> !t.getValue().isZero());
   }
 
   public boolean isTemplate() {
-    return weight.isZero() || value.isZero();
+    return !isReal();
   }
 
   public boolean isTimed() {

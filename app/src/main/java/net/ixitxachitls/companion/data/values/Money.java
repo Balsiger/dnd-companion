@@ -98,6 +98,19 @@ public class Money {
         + armor * armor * 1000 + weapon * weapon * 2000;
   }
 
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Money money = (Money) o;
+    return platinum == money.platinum &&
+        gold == money.gold &&
+        silver == money.silver &&
+        copper == money.copper &&
+        armor == money.armor &&
+        weapon == money.weapon;
+  }
+
   public Money half() {
     int platinum = this.platinum;
     int gold = this.gold;
@@ -114,7 +127,7 @@ public class Money {
     }
     gold /= 2;
 
-    if (silver %2 != 0) {
+    if (silver % 2 != 0) {
       copper += 5;
     }
     silver /= 2;
@@ -127,49 +140,6 @@ public class Money {
   @Override
   public int hashCode() {
     return Objects.hash(platinum, gold, silver, copper, armor, weapon);
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    Money money = (Money) o;
-    return platinum == money.platinum &&
-        gold == money.gold &&
-        silver == money.silver &&
-        copper == money.copper &&
-        armor == money.armor &&
-        weapon == money.weapon;
-  }
-
-  @Override
-  public String toString() {
-    List<String> parts = new ArrayList<>();
-
-    if (platinum > 0) {
-      parts.add(platinum + " pp");
-    }
-    if (gold > 0) {
-      parts.add(gold + " gp");
-    }
-    if (silver > 0) {
-      parts.add(silver + " sp");
-    }
-    if (copper > 0) {
-      parts.add(copper + " cp");
-    }
-    if (armor > 0) {
-      parts.add(armor + " armor");
-    }
-    if (weapon > 0) {
-      parts.add(weapon + " weapon");
-    }
-
-    if (parts.isEmpty()) {
-      return "0 gp";
-    }
-
-    return Strings.SPACE_JOINER.join(parts);
   }
 
   public Money multiply(int factor) {
@@ -226,6 +196,36 @@ public class Money {
         .build();
   }
 
+  @Override
+  public String toString() {
+    List<String> parts = new ArrayList<>();
+
+    if (platinum > 0) {
+      parts.add(platinum + " pp");
+    }
+    if (gold > 0) {
+      parts.add(gold + " gp");
+    }
+    if (silver > 0) {
+      parts.add(silver + " sp");
+    }
+    if (copper > 0) {
+      parts.add(copper + " cp");
+    }
+    if (armor > 0) {
+      parts.add(armor + " armor");
+    }
+    if (weapon > 0) {
+      parts.add(weapon + " weapon");
+    }
+
+    if (parts.isEmpty()) {
+      return "0 gp";
+    }
+
+    return Strings.SPACE_JOINER.join(parts);
+  }
+
   public Map<String, Object> write() {
     Map<String, Object> data = new HashMap<>();
     data.put(FIELD_PLATINUM, platinum);
@@ -259,7 +259,8 @@ public class Money {
     try {
       List<Integer> values = PARSER.parse(text);
       return Optional.of(new Money(
-          values.get(0), values.get(1), values.get(2), values.get(3), values.get(4), values.get(5)));
+          values.get(0), values.get(1), values.get(2), values.get(3), values.get(4),
+          values.get(5)));
     } catch (IllegalArgumentException e) {
       return Optional.empty();
     }

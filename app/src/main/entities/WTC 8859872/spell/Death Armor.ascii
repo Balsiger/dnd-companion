@@ -1,0 +1,45 @@
+template {
+  name: "Death Armor"
+  reference {
+    name: "WTC 8859872"
+    pages {
+      low: 60
+      high: 60
+    }
+  }
+  world: "Generic"
+  description: "\\emph{You smear yourself with white paste, drawing a skull on your bare flesh. Immediately, a wreath of black flames crackles to life around you.}\n\nThe black flames created by this spell injure creatures that contact them. Any creature striking you with its body or handheld weapons takes 1d4 points of damage +1 point per two caster levels (maximum +10). If the creature has spell resistance, it applies to the damage. Weapons with reach, such as longspears, do not endanger their users in this way."
+  short_description: "Wrap yourself in black flames that hurt attackers (1d4 +1/level (max 10)"
+}
+school: NECROMANCY
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+components: FOCUS
+material {
+ component: "Paste made from ground bones"
+}
+focus {
+  component: "An onyx worth 50 gp"
+}
+casting_time: {
+  standard_actions: 1
+}
+special_range: PERSONAL
+target: "You"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+}
+saving_throw: "None"
+spell_resistance: "No"

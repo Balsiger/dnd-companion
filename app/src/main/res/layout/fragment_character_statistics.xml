@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2017-2018 Peter Balsiger
   ~ All rights reserved
   ~
@@ -20,8 +19,7 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_character_statistics"
     android:layout_width="match_parent"
@@ -31,7 +29,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="5dp"
-      android:layout_marginEnd="5dp"
+      android:layout_marginEnd="10dp"
       android:orientation="vertical">
 
     <LinearLayout
@@ -48,7 +46,7 @@
           android:layout_marginEnd="10dp"
           android:alpha="0.2"
           android:tint="@color/characterDark"
-          app:srcCompat="@drawable/noun_abilities_1553895"/>
+          app:srcCompat="@drawable/noun_abilities_1553895" />
 
       <view
           android:id="@+id/strength"
@@ -57,7 +55,7 @@
           android:layout_height="wrap_content"
           android:layout_margin="10dp"
           android:layout_weight="1"
-          app:attribute_name="STR"/>
+          app:attribute_name="STR" />
 
       <view
           android:id="@+id/dexterity"
@@ -66,7 +64,7 @@
           android:layout_height="wrap_content"
           android:layout_margin="10dp"
           android:layout_weight="1"
-          app:attribute_name="DEX"/>
+          app:attribute_name="DEX" />
 
       <view
           android:id="@+id/constitution"
@@ -75,7 +73,7 @@
           android:layout_height="wrap_content"
           android:layout_margin="10dp"
           android:layout_weight="1"
-          app:attribute_name="CON"/>
+          app:attribute_name="CON" />
 
       <view
           android:id="@+id/intelligence"
@@ -84,7 +82,7 @@
           android:layout_height="wrap_content"
           android:layout_margin="10dp"
           android:layout_weight="1"
-          app:attribute_name="INT"/>
+          app:attribute_name="INT" />
 
       <view
           android:id="@+id/wisdom"
@@ -93,7 +91,7 @@
           android:layout_height="wrap_content"
           android:layout_margin="10dp"
           android:layout_weight="1"
-          app:attribute_name="WIS"/>
+          app:attribute_name="WIS" />
 
       <view
           android:id="@+id/charisma"
@@ -102,7 +100,7 @@
           android:layout_height="wrap_content"
           android:layout_margin="10dp"
           android:layout_weight="1"
-          app:attribute_name="CHA"/>
+          app:attribute_name="CHA" />
 
     </LinearLayout>
 
@@ -119,7 +117,7 @@
           android:layout_marginEnd="10dp"
           android:alpha="0.2"
           android:tint="@color/characterDark"
-          app:srcCompat="@drawable/noun_layers_1745903"/>
+          app:srcCompat="@drawable/noun_layers_1745903" />
 
       <net.ixitxachitls.companion.ui.views.LabelledTextView
           android:id="@+id/levels"
@@ -130,7 +128,7 @@
           app:labelColor="@color/characterDark"
           app:labelText="Level"
           app:lineColor="@color/characterDark"
-          app:textColor="@color/characterText"/>
+          app:textColor="@color/characterText" />
 
       <net.ixitxachitls.companion.ui.views.LabelledEditTextView
           android:id="@+id/xp"
@@ -152,7 +150,7 @@
           android:layout_width="wrap_content"
           android:layout_height="24dp"
           android:layout_gravity="center_vertical"
-          app:srcCompat="@drawable/plus_minus_box"/>
+          app:srcCompat="@drawable/plus_minus_box" />
 
     </LinearLayout>
 
@@ -170,7 +168,7 @@
           android:layout_marginEnd="10dp"
           android:alpha="0.2"
           android:tint="@color/characterDark"
-          app:srcCompat="@drawable/baseline_favorite_black_24"/>
+          app:srcCompat="@drawable/baseline_favorite_black_24" />
 
       <LinearLayout
           android:id="@+id/conditions"
@@ -201,7 +199,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center_vertical"
-          android:text=" / "/>
+          android:text=" / " />
 
       <TextView
           android:id="@+id/hp_max"
@@ -209,14 +207,14 @@
           android:layout_height="wrap_content"
           android:layout_gravity="center_vertical"
           android:layout_marginEnd="5dp"
-          android:text="20"/>
+          android:text="20" />
 
       <ImageView
           android:id="@+id/hp_adjust"
           android:layout_width="wrap_content"
           android:layout_height="24dp"
           android:layout_gravity="center_vertical"
-          app:srcCompat="@drawable/plus_minus_box"/>
+          app:srcCompat="@drawable/plus_minus_box" />
 
       <net.ixitxachitls.companion.ui.views.LabelledEditTextView
           android:id="@+id/hp_nonlethal"
@@ -229,14 +227,14 @@
           app:labelColor="@color/characterDark"
           app:labelText="Non"
           app:lineColor="@color/characterDark"
-          app:textColor="@color/characterText"/>
+          app:textColor="@color/characterText" />
 
       <ImageView
           android:id="@+id/nonlethal_adjust"
           android:layout_width="wrap_content"
           android:layout_height="24dp"
           android:layout_gravity="center_vertical"
-          app:srcCompat="@drawable/plus_minus_box"/>
+          app:srcCompat="@drawable/plus_minus_box" />
 
     </LinearLayout>
 
@@ -253,7 +251,7 @@
           android:layout_marginEnd="10dp"
           android:alpha="0.2"
           android:tint="@color/characterDark"
-          app:srcCompat="@drawable/noun_battle_2571794"/>
+          app:srcCompat="@drawable/noun_battle_2571794" />
 
       <LinearLayout
           android:layout_width="match_parent"
@@ -274,7 +272,7 @@
               android:layout_gravity="bottom"
               android:layout_marginEnd="10dp"
               android:tint="@color/character"
-              app:srcCompat="@drawable/noun_armor_1943931"/>
+              app:srcCompat="@drawable/noun_armor_1943931" />
 
           <net.ixitxachitls.companion.ui.views.ModifiedValueView
               android:id="@+id/ac"
@@ -282,7 +280,7 @@
               android:layout_height="wrap_content"
               android:layout_gravity="bottom|center_vertical"
               android:text="10"
-              android:theme="@style/LargeText"/>
+              android:theme="@style/LargeText" />
 
           <TextView
               android:layout_width="wrap_content"
@@ -291,7 +289,7 @@
               android:paddingStart="5dp"
               android:paddingEnd="5dp"
               android:text="(touch"
-              android:theme="@style/LargeText"/>
+              android:theme="@style/LargeText" />
 
           <net.ixitxachitls.companion.ui.views.ModifiedValueView
               android:id="@+id/ac_touch"
@@ -299,7 +297,7 @@
               android:layout_height="wrap_content"
               android:layout_gravity="bottom|center_vertical"
               android:text="10"
-              android:theme="@style/LargeText"/>
+              android:theme="@style/LargeText" />
 
           <TextView
               android:layout_width="wrap_content"
@@ -307,7 +305,7 @@
               android:layout_gravity="bottom|center_vertical"
               android:paddingEnd="5dp"
               android:text=", flat-footed"
-              android:theme="@style/LargeText"/>
+              android:theme="@style/LargeText" />
 
           <net.ixitxachitls.companion.ui.views.ModifiedValueView
               android:id="@+id/ac_flat_footed"
@@ -315,14 +313,14 @@
               android:layout_height="wrap_content"
               android:layout_gravity="bottom|center_vertical"
               android:text="10"
-              android:theme="@style/LargeText"/>
+              android:theme="@style/LargeText" />
 
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_gravity="bottom|center_vertical"
               android:text=")"
-              android:theme="@style/SmallText"/>
+              android:theme="@style/SmallText" />
 
         </LinearLayout>
 
@@ -339,7 +337,7 @@
               android:layout_gravity="center_vertical"
               android:layout_marginEnd="10dp"
               android:tint="@color/character"
-              app:srcCompat="@drawable/noun_crossed_swords_152699"/>
+              app:srcCompat="@drawable/noun_crossed_swords_152699" />
 
           <LinearLayout
               android:id="@+id/attacks"
@@ -366,13 +364,13 @@
               android:layout_gravity="center_vertical"
               android:layout_marginEnd="10dp"
               android:tint="@color/character"
-              app:srcCompat="@drawable/noun_raised_hand_485413"/>
+              app:srcCompat="@drawable/noun_raised_hand_485413" />
 
           <net.ixitxachitls.companion.ui.views.ModifiedValueView
               android:id="@+id/initiative"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="+4"/>
+              android:text="+4" />
 
           <ImageView
               android:id="@+id/icon_speed"
@@ -380,47 +378,57 @@
               android:layout_height="@dimen/iconSizeSmall"
               android:layout_gravity="center_vertical"
               android:layout_marginStart="10dp"
+              android:layout_marginEnd="10dp"
               android:tint="@color/character"
-              app:srcCompat="@drawable/noun_run_560128"/>
+              app:srcCompat="@drawable/noun_run_560128" />
 
           <TextView
               android:id="@+id/speed_feet"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="feet"
-              android:theme="@style/LargeText"/>
+              android:theme="@style/LargeText" />
 
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text=" ("
-              android:theme="@style/LargeText"/>
+              android:theme="@style/LargeText" />
 
           <net.ixitxachitls.companion.ui.views.ModifiedValueView
               android:id="@+id/speed_squares"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:theme="@style/LargeText"/>
+              android:theme="@style/LargeText" />
 
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text=" squares)"
-              android:theme="@style/LargeText"/>
+              android:theme="@style/LargeText" />
+
+          <ImageView
+              android:id="@+id/icon_speed2"
+              android:layout_width="@dimen/iconSizeSmall"
+              android:layout_height="@dimen/iconSizeSmall"
+              android:layout_gravity="center_vertical"
+              android:layout_marginStart="10dp"
+              android:layout_marginEnd="10dp"
+              android:tint="@color/character"
+              app:srcCompat="@drawable/noun_danger_373434" />
 
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:layout_marginStart="10dp"
               android:layout_marginEnd="5dp"
               android:text="For"
-              android:theme="@style/SmallText"/>
+              android:theme="@style/SmallText" />
 
           <net.ixitxachitls.companion.ui.views.ModifiedValueView
               android:id="@+id/fortitude"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="+4"/>
+              android:text="+4" />
 
           <TextView
               android:layout_width="wrap_content"
@@ -428,13 +436,13 @@
               android:layout_marginStart="10dp"
               android:layout_marginEnd="5dp"
               android:text="Will"
-              android:theme="@style/SmallText"/>
+              android:theme="@style/SmallText" />
 
           <net.ixitxachitls.companion.ui.views.ModifiedValueView
               android:id="@+id/will"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="+4"/>
+              android:text="+4" />
 
           <TextView
               android:layout_width="wrap_content"
@@ -442,13 +450,13 @@
               android:layout_marginStart="10dp"
               android:layout_marginEnd="5dp"
               android:text="Ref"
-              android:theme="@style/SmallText"/>
+              android:theme="@style/SmallText" />
 
           <net.ixitxachitls.companion.ui.views.ModifiedValueView
               android:id="@+id/reflex"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="+4"/>
+              android:text="+4" />
 
 
         </LinearLayout>
@@ -471,7 +479,7 @@
           android:layout_marginEnd="10dp"
           android:alpha="0.2"
           android:tint="@color/characterDark"
-          app:srcCompat="@drawable/noun_trophy_2307484"/>
+          app:srcCompat="@drawable/noun_trophy_2307484" />
 
       <com.google.android.flexbox.FlexboxLayout
           android:id="@+id/feats"
@@ -479,7 +487,7 @@
           android:layout_height="wrap_content"
           android:layout_gravity="center_vertical"
           android:padding="10dp"
-          app:flexWrap="wrap"/>
+          app:flexWrap="wrap" />
 
     </LinearLayout>
 
@@ -497,7 +505,7 @@
           android:layout_marginEnd="10dp"
           android:alpha="0.2"
           android:tint="@color/characterDark"
-          app:srcCompat="@drawable/noun_knowledge_2307447"/>
+          app:srcCompat="@drawable/noun_knowledge_2307447" />
 
       <com.google.android.flexbox.FlexboxLayout
           android:id="@+id/skills"
@@ -505,7 +513,7 @@
           android:layout_height="wrap_content"
           android:layout_gravity="center_vertical"
           android:padding="10dp"
-          app:flexWrap="wrap"/>
+          app:flexWrap="wrap" />
 
     </LinearLayout>
 
@@ -522,7 +530,7 @@
           android:layout_marginEnd="10dp"
           android:alpha="0.2"
           android:tint="@color/characterDark"
-          app:srcCompat="@drawable/noun_mental_2307440"/>
+          app:srcCompat="@drawable/noun_mental_2307440" />
 
       <com.google.android.flexbox.FlexboxLayout
           android:id="@+id/qualities"
@@ -530,7 +538,7 @@
           android:layout_height="wrap_content"
           android:layout_gravity="center_vertical"
           android:padding="10dp"
-          app:flexWrap="wrap"/>
+          app:flexWrap="wrap" />
     </LinearLayout>
   </LinearLayout>
 </androidx.core.widget.NestedScrollView>

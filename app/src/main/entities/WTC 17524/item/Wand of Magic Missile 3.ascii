@@ -2,7 +2,7 @@ template {
   name: "Wand of Magic Missile 3"
   base: "wand"
   synonym: "Magic Missile, Wand"
-  description: "A wand with the spell \\SpellRef[Wiz 3]{Magic Missile}"
-  short_description: "A wand with \\SpellRef[Wiz 3]{Magic Missile}"
+  description: "A wand with the spell \\Spell{Magic Missile} (3rd level)"
+  short_description: "A wand with \\Spell{Magic Missile} (3rd level)"
 }
 probability: COMMON

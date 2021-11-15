@@ -1,0 +1,65 @@
+template {
+  name: "Weapon of the Celestial Host"
+  base: "Weapon +1"
+  category: "celestial"
+  category: "magic"
+  synonym: "of the celestial host"
+  synonym: "Celestial Host, Weapon of the"
+  reference {
+    name: "WTC 9579874"
+    pages {
+      low: 16
+      high: 16
+    }
+  }
+  description: "These weapons, issued to soldiers at the \\Event{Battle of Slaughtergarde}, await new champions to claim them from the \\Place{Shining Citadel}'s arsenal. They offer magical enhancement to both your offense and defense.\n\n"
+  short_description: "Adds a +1 attack, +1 shield AC and directional beam light."
+}
+value {
+  gold: 2000
+}
+probability: RARE
+lore {
+  checks {
+    skill: "Knowledge [local]"
+    dc: 20
+  }
+  description: "The distinctive feathery filigree on this weapon marks its wearer as a \\Group{Knight of the Luminous Order}"
+}
+appearance {
+  probability: COMMON
+  appearance: "The weapon has featherlike decorations. It glows when wielded."
+}
+magic {
+  modifier {
+    type: ARMOR_CLASS
+    modifier {
+      modifier {
+        value: 1
+        type: SHIELD
+      }
+    }
+  }
+}
+light {
+  bright {
+    distance {
+      imperial {
+         feet {
+           leader: 60
+         }
+       }
+     }
+    shape: CONE
+  }
+  shadowy {
+    distance {
+      imperial {
+        feet {
+          leader: 120
+        }
+      }
+    }
+    shape: CONE
+  }
+}

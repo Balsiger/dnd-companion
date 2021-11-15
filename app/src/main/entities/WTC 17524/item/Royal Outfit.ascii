@@ -1,0 +1,41 @@
+template {
+  name: "Royal Outfit"
+  category: "clothing"
+  synonym: "Outfit, Royal"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 129
+      high: 129
+    }
+    pages {
+      low: 131
+      high: 131
+    }
+  }
+  world: "Generic"
+  description: "This is just the clothing, not the royal scepter, crown, ring, and other accoutrements. Royal clothes are ostentatious, with gems, gold, silk, and fur in abundance."
+}
+value {
+  gold: 200
+}
+weight {
+  imperial {
+    pounds {
+      leader: 15
+    }
+  }
+}
+probability: RARE
+size {
+  size: MEDIUM
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "Exquisite clothing with studded gems, gold thread, silk and furth adornements."
+}
+substance {
+  material: CLOTH
+ }
+player_name: "Royal Outfit"

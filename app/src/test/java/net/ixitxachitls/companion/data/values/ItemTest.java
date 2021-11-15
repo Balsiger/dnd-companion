@@ -44,7 +44,7 @@ public class ItemTest {
 
   @Before
   public void loadEntities() {
-    Templates.init(new TestAssetAccessor(), main);
+    Templates.init(new TestAssetAccessor(), null);
   }
 
   @Test
@@ -112,7 +112,7 @@ public class ItemTest {
             .setValueMax(Value.MoneyProto.newBuilder().setCopper(1).build())
             .addCategoryOr("gear")
             .build()).stream().map(t -> t.getName()).collect(Collectors.toList()),
-        CoreMatchers.is(Arrays.asList(new String[]{"Candle", "Chalk", "Firewood", })));
+        CoreMatchers.is(Arrays.asList(new String[]{"Candle", "Chalk", "Firewood",})));
     Assert.assertThat(
         Templates.get().getItemTemplates().lookupTemplates(Template.ItemLookupProto.newBuilder()
             .setValueMin(Value.MoneyProto.newBuilder().setGold(5000).build())
@@ -194,8 +194,8 @@ public class ItemTest {
             .addContent(Template.ItemLookupProto.newBuilder().setName("Chalk").build())
             .build(), "creator", new CampaignDate()).get();
     Assert.assertThat(item.getContents().stream()
-        .map(i -> i.getName())
-        .collect(Collectors.toList()),
+            .map(i -> i.getName())
+            .collect(Collectors.toList()),
         CoreMatchers.is(Arrays.asList(new String[]{"Candle", "Longsword", "Chalk"})));
   }
 
@@ -236,7 +236,7 @@ public class ItemTest {
     return Templates.get().getItemTemplates().randomItemTemplate(templates, random).get().getName();
   }
 
-  private List<ItemTemplate> templates(String ... names) {
+  private List<ItemTemplate> templates(String... names) {
     ItemTemplates templates = Templates.get().getItemTemplates();
     return Arrays.asList(names).stream()
         .map(n -> templates.get(n).get())

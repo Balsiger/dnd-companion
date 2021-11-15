@@ -4,4 +4,7 @@ template {
   description: "As \\SpellRef[Clr 3]{Cure Moderate Wounds}."
   short_description: "As \\SpellRef[Clr 3]{Cure Moderate Wounds}."
 }
-probability: COMMON
+probability: RARE
+value {
+  gold: 300
+}

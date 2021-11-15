@@ -356,6 +356,16 @@ message ItemTemplateProto {
     RationalProto hp_multiplier = 5;
   }
   Material material = 29;
+
+  message Lore {
+    message Check {
+      string skill = 1;
+      int32 dc = 2;
+    }
+    repeated Check checks = 1;
+    string description = 2;
+  }
+  repeated Lore lore = 30;
 }
 
 message ItemLookupProto {
@@ -550,6 +560,9 @@ message MagicTemplateProto
     ARMOR_CLASS = 9;
     HIDE = 10;
     MOVE_SILENTLY = 11;
+    REFLEX = 12;
+    WILL = 13;
+    FORTITUDE = 14;
   }
 
   message Modifier
@@ -806,6 +819,7 @@ message SpellTemplateProto {
     PATTERN = 14;
     PHANTASM = 15;
     SHADOW = 16;
+    DARKNESS_SUBSCHOOL = 17;
   }
   repeated Subschool subschool = 3;
   string summary = 4;

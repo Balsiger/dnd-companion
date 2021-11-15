@@ -58,7 +58,7 @@ player_name: "Backpack"
   container {
   state: SOLID
 }
- random {
+random {
   type: MUNDANE
   item: ""
 }

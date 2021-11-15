@@ -1,0 +1,17 @@
+template {
+  name: "Mighty Cleaving"
+  category: "magic"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 225
+      high: 225
+    }
+  }
+  world: "Generic"
+  description: "A mighty cleaving weapon allows a wielder with the Cleave feat to make one additional cleave attempt in a round."
+  base_only: true
+}
+value {
+  magic_weapon: 1
+}

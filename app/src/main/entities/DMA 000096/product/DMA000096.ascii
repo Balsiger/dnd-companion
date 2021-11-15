@@ -1,0 +1,41 @@
+template {
+  name: "DMA 000096"
+  world: "Forgotten Realms"
+  description: "\\bold{This second book in New York Times bestselling author R. A. Salvatore’s all-new Forgotten Realms trilogy—full of swordplay, danger, and imaginative thrills—features one of fantasy’s most beloved and enduring characters, Drizzt Do’Urden.}\n\nSplit between time and two worlds, Zaknafein had always been conflicted. That inner turmoil was magnified by his inferior position as a male dark elf in the matriarchal drow society. Only his status as one of the greatest warriors—as well as his friendship with the mercenary Jarlaxle—kept him sane. When he finally perished, he was content knowing he left behind a legacy as substantial as his son Drizzt.\n\nExcept . . . someone isn’t ready for Zaknafein to be dead. And now he’s back, hundreds of years later, in a world he doesn’t recognize. His son’s companions are not the prideful—and bigoted—males the drow warrior was accustomed to in his previous life. Drizzt’s circle includes dwarves, elves, and, perhaps worst of all, a human wife.\n\nStruggling to navigate this transformed new world, Zaknafein realizes that some things have not changed: the threat of demons and the machinations of a drow matron no longer content with her family’s position in the ranks of Houses.\n\nThough he has been displaced in time, Zaknafein is still a warrior. And no matter what prejudices he must overcome, he knows he will do his duty and fight by Drizzt’s side to stem the tide of darkness that threatens the Realms."
+}
+title: "Boundless"
+leader: ""
+subtitle: "A Drizzt Novel"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Melnik, Aleks"
+}
+date {
+  year: 2019
+  month: 9
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "06"
+  title: "305529"
+  check: 2
+}
+pages: 380
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "Harper Voyage"
+price {
+  currency: "$"
+  number: 1699
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

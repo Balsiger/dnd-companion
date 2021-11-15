@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2017-2019 Peter Balsiger
   ~ All rights reserved
   ~
@@ -21,15 +20,18 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:paddingBottom="5dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme">
 
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:background="@color/grey_light"
       android:orientation="horizontal">
 
     <net.ixitxachitls.companion.ui.views.CloudImageView
@@ -38,6 +40,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="20dp"
+        android:backgroundTint="#D6D6D6"
         android:tint="@color/productDark"
         app:srcCompat="@drawable/noun_book_1411063">
 
@@ -100,6 +103,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="5dp"
+          android:layout_marginBottom="10dp"
           android:text="... description ... " />
 
     </LinearLayout>
@@ -110,33 +114,88 @@
       android:id="@+id/category_tabs"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_gravity="bottom"
-      app:tabIndicatorColor="@color/campaignDark">
+      android:background="@color/grey_dark"
+      android:backgroundTint="@color/grey_dark"
+      app:tabBackground="@color/grey_dark"
+      app:tabIndicatorColor="@color/campaign">
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_speak_1953141" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/campaignLight"
+        android:icon="@drawable/noun_speak_1953141" />
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_floor_1141078" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_floor_1141078" />
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_top_96396" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_top_96396" />
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_wall_2355705" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_wall_2355705" />
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_antique_2746308" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_antique_2746308" />
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_mountain_1639193" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_mountain_1639193" />
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_bear_trap_729097" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_bear_trap_729097" />
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_candle_139265" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_candle_139265" />
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_sound_735224" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_sound_735224" />
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_smell_1512570" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_smell_1512570" />
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_touch_1680154" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_touch_1680154" />
 
-    <com.google.android.material.tabs.TabItem android:icon="@drawable/noun_emotions_2049680" />
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_emotions_2049680" />
+
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/noun_spell_4235669" />
+
   </com.google.android.material.tabs.TabLayout>
+
+  <TextView
+      android:id="@+id/category_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="... title ..."
+      android:textAppearance="@style/LargeText"
+      android:textColor="@color/title"
+      android:textStyle="bold" />
 
   <LinearLayout
       android:id="@+id/category_text"
@@ -157,39 +216,13 @@
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabIndicatorColor="@color/itemDark"/>
+        app:tabIndicatorColor="@color/itemDark"
+        tools:ignore="SpeakableTextPresentCheck" />
 
   </net.ixitxachitls.companion.ui.views.ViewViewPager>
 
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-      <TextView
-          android:id="@+id/spells_title"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:paddingStart="10dp"
-          android:paddingEnd="10dp"
-          android:text="Spells"
-          android:theme="@style/LargeText" />
-
-      <LinearLayout
-          android:id="@+id/spells"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:orientation="vertical"
-          android:paddingStart="15dp"
-          android:paddingEnd="10dp"></LinearLayout>
-    </LinearLayout>
-  </ScrollView>
-
   <HorizontalScrollView
+      android:id="@+id/creatures_container"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_marginTop="10dp">
@@ -206,15 +239,28 @@
   </HorizontalScrollView>
 
   <HorizontalScrollView
+      android:id="@+id/characters_container"
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/characters"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp" />
+        android:layout_marginEnd="20dp">
+
+      <net.ixitxachitls.companion.ui.views.ImageDropTarget
+          android:id="@+id/item_remove"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:image="@drawable/noun_drop_970982"
+          app:text="Drop" />
+
+      <LinearLayout
+          android:id="@+id/characters"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent" />
+    </LinearLayout>
   </HorizontalScrollView>
 
 

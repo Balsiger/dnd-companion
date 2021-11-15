@@ -21,3 +21,14 @@ value {
   gold: 2000
 }
 probability: RARE
+magic {
+  modifier {
+    modifier {
+      modifier {
+        value: 1
+        type: DEFLECTION
+      }
+    }
+    type: ARMOR_CLASS
+  }
+}

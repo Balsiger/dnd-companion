@@ -35,12 +35,14 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.enums.MagicEffectType;
 import net.ixitxachitls.companion.data.templates.LevelTemplate;
 import net.ixitxachitls.companion.data.templates.SkillTemplate;
 import net.ixitxachitls.companion.data.values.AbilityAdjustment;
 import net.ixitxachitls.companion.data.values.Adjustment;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.data.values.ConditionData;
+import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.rules.XP;
@@ -330,6 +332,13 @@ public class Character extends Creature<Character> implements Comparable<Charact
           Modifier.Type.GENERAL, level.getName()));
     }
 
+    // Modifiers from items.
+    for (Item item : getItems()) {
+      if (isWearing(item) && item.isMagic()) {
+        value.add(item.getMagicModifiers(MagicEffectType.FORTITUDE));
+      }
+    }
+
     return value;
   }
 
@@ -375,6 +384,13 @@ public class Character extends Creature<Character> implements Comparable<Charact
     for (LevelTemplate level : counted.elementSet()) {
       value.add(new Modifier(level.getReflexModifier(counted.count(level)),
           Modifier.Type.GENERAL, level.getName()));
+    }
+
+    // Modifiers from items.
+    for (Item item : getItems()) {
+      if (isWearing(item) && item.isMagic()) {
+        value.add(item.getMagicModifiers(MagicEffectType.REFLEX));
+      }
     }
 
     return value;
@@ -441,6 +457,14 @@ public class Character extends Creature<Character> implements Comparable<Charact
           Modifier.Type.GENERAL, level.getName()));
     }
 
+    // Modifiers from items.
+    for (Item item : getItems()) {
+      if (isWearing(item) && item.isMagic()) {
+        value.add(item.getMagicModifiers(MagicEffectType.WILL));
+      }
+    }
+
+
     return value;
   }
 
@@ -457,6 +481,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
     adjustAbilityForLevels(value, ability);
     adjustAbilityForConditions(value, ability);
     adjustAbilityForQualities(value, ability);
+    adjustAbilityForItems(value, ability);
     return value;
   }
 
@@ -491,6 +516,14 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     return value;
+  }
+
+  private void adjustAbilityForItems(ModifiedValue value, Ability ability) {
+    for (Item item : getItems()) {
+      if (isWearing(item) && item.isMagic()) {
+        value.add(item.computeAbilityModifers(ability));
+      }
+    }
   }
 
   private ModifiedValue adjustAbilityForLevels(ModifiedValue value, Ability ability) {

@@ -1,0 +1,49 @@
+template {
+  name: "Quiver"
+  category: "gear"
+  world: "Generic"
+  description: "A simple quicker that holds 20 arrows or 10 javelins."
+}
+value {
+  gold: 1
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+  }
+}
+probability: COMMON
+size {
+  size: MEDIUM
+}
+hardness: 2
+hit_points: 1
+appearance {
+  probability: UNCOMMON
+  appearance: "A cure quiver."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple quiver."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A finely crafted quiver to stow your arrows or javelins."
+}
+appearance {
+  probability: RARE
+  appearance: "A finely crafted quiver."
+}
+substance {
+  material: LEATHER
+ }
+player_name: "Quiver"
+  container {
+  state: SOLID
+}
+random {
+  type: MUNDANE
+  item: ""
+}

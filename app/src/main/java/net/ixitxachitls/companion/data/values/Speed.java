@@ -28,8 +28,13 @@ import net.ixitxachitls.companion.proto.Value;
  */
 public class Speed {
 
-  public enum Mode { unknown, burrow, climb, fly, swim, run };
-  public enum Maneuverability { unknown, perfect, good, average, poor, clumsy, none };
+  public enum Mode {unknown, burrow, climb, fly, swim, run}
+
+  ;
+
+  public enum Maneuverability {unknown, perfect, good, average, poor, clumsy, none}
+
+  ;
 
   private final int squares;
   private final Mode mode;
@@ -68,7 +73,7 @@ public class Speed {
     }
   }
 
-  private static Mode convert(Value.SpeedProto.Mode mode) {
+  public static Mode convert(Value.SpeedProto.Mode mode) {
     switch (mode) {
       default:
       case UNRECOGNIZED:

@@ -1,0 +1,33 @@
+template {
+  name: "Hand of the Mage"
+  category: "amulet"
+  synonym: "Mage, Hand of the"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 258
+      high: 258
+    }
+  }
+  world: "Generic"
+  description: "This mummified elf hand hangs by a golden chain around a character’s neck (taking up space as a magic necklace would). It allows the wearer to utilize the spell \\Spell{mage hand} at will."
+  short_description: "Allows \\Spell{mage hand} at will."
+}
+value {
+  gold: 900
+}
+weight {
+  imperial {
+    pounds {
+      leader: 2
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: TINY
+}
+appearance {
+  probability: COMMON
+  appearance: "A mummified elf hand attached to a golden chain."
+}

@@ -1,0 +1,20 @@
+template {
+  name: "Adamantine Weapon"
+  synonym: "adamantine"
+  synonym: "Weapon, Adamantine"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 284
+      high: 285
+    }
+  }
+  description: "Found only in meteorites and the rarest of veins in magical areas, this ultrahard metal adds to the quality of a weapon. Weapons fashioned from adamantine have a natural ability to bypass hardness when sundering weapons or attacking objects, ignoring hardness less than 20. Adamantine is so costly that weapons and armor made from it are always of masterwork quality; the masterwork cost is included in the prices given below. Thus, adamantine weapons and ammunition have a +1 enhancement bonus on attack rolls. Items without metal parts cannot be made from adamantine. An arrow could be made of adamantine, but a quarterstaff could not.\n\nOnly weapons normally made of metal can be fashioned from adamantine. Weapons normally made of steel that are made of adamantine have one-third more hit points than normal; for instance, an adamantine greatsword has 13 hit points instead of the normal 10 for steel. Adamantine has 40 hit points per inch of thickness and hardness 20."
+  short_description: "A very hard material for creating the weapon."
+  base_only: true
+  incomplete: "Hit points are set to a fixed 10 instead of the correct +1/3."
+}
+probability: RARE
+hardness: 20
+hit_points: 10
+player_name: "Adamantine"

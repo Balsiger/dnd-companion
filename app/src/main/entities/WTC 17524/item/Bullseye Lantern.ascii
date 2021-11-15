@@ -58,15 +58,15 @@ player_name: "Bullseye Lantern"
  container {
   state: LIQUID
 }
- light {
+light {
   bright {
     distance {
       imperial {
-        feet {
-          leader: 60
-        }
-      }
-    }
+         feet {
+           leader: 60
+         }
+       }
+     }
     shape: CONE
   }
   shadowy {

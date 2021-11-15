@@ -246,19 +246,19 @@ public class ItemDialog extends Dialog {
         Texts.processCommands(getContext(), item.getDescription(owner.amDM())));
     Views.setOrHide(notes, item.getPlayerNotes(), notesLabel);
     Views.setOrHide(dmNotes, item.getPlayerNotes(), dmNotesLabel);
-    if (item.getMultiple() == 0 && !item.hasContents()) {
+    if (item.getMultiple() <= 1 && !item.hasContents()) {
       dmValue.text(item.getValue().toString());
       weight.text(item.getWeight().toString());
-    } else if (item.getMultiple() > 0 && !item.hasContents()) {
+    } else if (item.getMultiple() > 1 && !item.hasContents()) {
       dmValue.text(item.getValue().toString() +
           " (" + item.getMultiple() + " x " + item.getRawValue() + ")");
       weight.text(item.getWeight().toString() +
           " (" + item.getMultiple() + " x " + item.getRawWeight() + ")");
-    } else if (item.getMultiple() == 0 && item.hasContents()) {
+    } else if (item.getMultiple() <= 1 && item.hasContents()) {
       dmValue.text(item.getValue().toString() +
-          " (without contents" + item.getRawValue() + ")");
+          " (without contents " + item.getRawValue() + ")");
       weight.text(item.getWeight().toString() +
-          " (without contents" + item.getRawWeight() + ")");
+          " (without contents " + item.getRawWeight() + ")");
     } else {
       dmValue.text(item.getValue().toString() +
           " (" + item.getMultiple() + " x " + item.getRawValue() + ", without contents)");
@@ -293,7 +293,7 @@ public class ItemDialog extends Dialog {
     } else {
       contentsLabel.setVisibility(View.VISIBLE);
       for (Item content : item.getContents()) {
-        contents.addView(new ItemView(getContext(), campaign, owner, content));
+        contents.addView(new ItemView(getContext(), campaign, owner, content, true));
       }
     }
 

@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.enums;
 
+import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
 
 import java.util.ArrayList;
@@ -31,14 +32,17 @@ import java.util.Arrays;
  */
 public enum Ability implements Enums.Named, Enums.Proto<Value.Ability> {
 
-  UNKNOWN("Unknown", "UNK", Value.Ability.UNKNOWN),
-  STRENGTH("Strength", "STR", Value.Ability.STRENGTH),
-  DEXTERITY("Dexterity", "DEX", Value.Ability.DEXTERITY),
-  CONSTITUTION("Constitution", "CON", Value.Ability.CONSTITUTION),
-  INTELLIGENCE("Intelligence", "INT", Value.Ability.INTELLIGENCE),
-  WISDOM("Wisdom", "WIS", Value.Ability.WISDOM),
-  CHARISMA("Charisma", "CHR", Value.Ability.CHARISMA),
-  NONE("None", "-", Value.Ability.NONE);
+  UNKNOWN("Unknown", "UNK", Value.Ability.UNKNOWN, Template.MagicTemplateProto.Type.UNKNOWN),
+  STRENGTH("Strength", "STR", Value.Ability.STRENGTH, Template.MagicTemplateProto.Type.STRENGTH),
+  DEXTERITY("Dexterity", "DEX", Value.Ability.DEXTERITY,
+      Template.MagicTemplateProto.Type.DEXTERITY),
+  CONSTITUTION("Constitution", "CON", Value.Ability.CONSTITUTION,
+      Template.MagicTemplateProto.Type.CONSTITUTION),
+  INTELLIGENCE("Intelligence", "INT", Value.Ability.INTELLIGENCE,
+      Template.MagicTemplateProto.Type.INTELLIGENCE),
+  WISDOM("Wisdom", "WIS", Value.Ability.WISDOM, Template.MagicTemplateProto.Type.WISDOM),
+  CHARISMA("Charisma", "CHR", Value.Ability.CHARISMA, Template.MagicTemplateProto.Type.CHARISMA),
+  NONE("None", "-", Value.Ability.NONE, Template.MagicTemplateProto.Type.UNKNOWN);
 
   public static String PATTERN = Arrays.asList(values()).stream()
       .map(Ability::getName).reduce((a, b) -> a + "|" + b).get()
@@ -48,11 +52,18 @@ public enum Ability implements Enums.Named, Enums.Proto<Value.Ability> {
   private final String name;
   private final String shortName;
   private final Value.Ability proto;
+  private Template.MagicTemplateProto.Type magicType;
 
-  Ability(String name, String shortName, Value.Ability proto) {
+  Ability(String name, String shortName, Value.Ability proto,
+          Template.MagicTemplateProto.Type magicType) {
     this.name = name;
     this.shortName = shortName;
     this.proto = proto;
+    this.magicType = magicType;
+  }
+
+  public Template.MagicTemplateProto.Type getMagicType() {
+    return magicType;
   }
 
   @Override
@@ -79,7 +90,7 @@ public enum Ability implements Enums.Named, Enums.Proto<Value.Ability> {
   }
 
   public static int modifier(int value) {
-    if(value < 0)
+    if (value < 0)
       return 0;
 
     return (int) (value / 2) - 5;

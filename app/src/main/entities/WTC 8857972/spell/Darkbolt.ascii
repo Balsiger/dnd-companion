@@ -1,0 +1,34 @@
+template {
+  name: "Darkbolt"
+  reference {
+    name: "WTC 8859872"
+    pages {
+      low: 58
+      high: 58
+    }
+  }
+  world: "Generic"
+  description: "\\em{With a quick invocation to your deity, you call forth a nimbus of jet-black night. This terrible radiance, laced with the will of your deity, allows you to shoot black bolts of power.}\n\nYou unleash beams of darkness from your open palm. You must succeed on a ranged touch attack to strike your target. You can hurl one bolt for every two caster levels you have (maximum seven bolts). You can hurl all the bolts at once, or you can hurl one bolt per round as a free action, starting in the round when you cast the spell. You do not have to hurl a bolt in every round, but if you don’t hurl the bolt you were entitled to in a round, it is lost. If you hurl all the bolts at once, all your targets must be within 60 feet of each other.\n\nA darkbolt deals 2d8 points of damage to a living creature, and the creature is dazed for 1 round unless it makes a Will save (a creature struck by multiple bolts during the same round is dazed for a maximum of 1 round, no matter how many times it fails its save). An undead creature takes no damage, but is dazed if it fails its save."
+  short_description: "Dark bolts deal 2d8 damge and potentially daze."
+}
+school: EVOCATION
+subschool: DARKNESS_SUBSCHOOL
+level {
+  spell_class: DARKNESS
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+casting_time {
+  standard_actions: 1
+}
+special_range: MEDIUM
+effect {
+  description: "One ray/2 levels (maximum 7 rays"
+}
+duration {
+  duration_description: "Instantaneous"
+  description: "see text"
+}
+saving_throw: "Will partial"
+spell_resistance: "Yes"

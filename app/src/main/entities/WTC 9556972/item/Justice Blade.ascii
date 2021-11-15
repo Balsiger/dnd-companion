@@ -1,0 +1,33 @@
+template {
+  name: "Justice Blade"
+  base: "longsword"
+  base: "weapon +1"
+  base: "holy"
+  base: "mighty cleaving"
+  synonym: "Intercessor"
+  category: "weapon"
+  category: "blade"
+  category: "sword"
+  reference {
+    name: "WTC 9556972"
+    pages: {
+      low: 33
+      high: 33
+    }
+  }
+  world: "Forgotten Realms"
+  description: "This +1 holy mighty cleaving longsword is made of magically hardened bronze and is inscribed with Tyr’s hammer-and-scales symbol. It sheds pure white light in a 20-foot radius when drawn."
+  short_description: "A +1 holy mighty cleaving longsword"
+}
+light {
+  bright {
+    distance {
+      imperial {
+         feet {
+           leader: 20
+         }
+       }
+     }
+    shape: SPHERE
+  }
+}

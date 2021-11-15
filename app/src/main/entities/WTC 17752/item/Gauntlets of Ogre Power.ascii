@@ -38,7 +38,19 @@ appearance {
   probability: COMMON
   appearance: "Tough leather gauntlets."
 }
+magic {
+  modifier {
+    type: STRENGTH
+    modifier {
+      modifier {
+        value: 2
+        type: ENHANCEMENT
+      }
+    }
+  }
+}
 substance {
   material: LEATHER
- }
+}
 player_name: "Gauntlets"
+

@@ -26,6 +26,17 @@ weight {
     }
   }
 }
+magic {
+  modifier {
+    type: ARMOR_CLASS
+    modifier {
+      modifier {
+        value: 1
+        type: ENHANCEMENT
+      }
+    }
+  }
+}
 probability: RARE
 size {
   size: TINY

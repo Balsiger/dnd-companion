@@ -1,0 +1,231 @@
+template {
+  name: "WTC C7878"
+  world: "Forgotten Realms"
+  description: "The wizard \\NPC{Tasha}, whose great works include the spell \\Spell{Tasha's hideous laughter}, has gathered bits and bobs of precious lore during her illustrious career as an adventurer. Her enemies wouldn't want these treasured secrets scattered across the multiverse, so in defiance, she has collected and codified these tidbits for the enrichment of all.\n\nBaked into this book are rules options for all the character classes in the \\Product{Player's Handbook}, including new subclasses. Thrown in for good measure is the \\Class{artificer} class, a master of magical invention. And this witch's brw wouldn't be complete without its new artifacts, spellbook options, spells for both player characters and monsters, magical tattoos, group patrons, and other tasty goodies.\n\n\\NPC{Tasha} has never been shy about sharing her keen insights, and this book is sprinkled withy the archmage's musing on everyting from her wizardly rivals to the nature of the multiverse. Herin, she offers a taste of the great power that awaits adventurers everywhere!"
+  short_description: "A magical mixture of new rules options for the world's greatest roleplaying game."
+}
+title: "Tasha's Cauldron of Everything"
+subtitle: "What Wonderful Witchery Is This?"
+date {
+  year: 2020
+  month: 11
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "lead designer"
+}
+author {
+  name: "Dillon, Dan"
+  job: "designer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "designer"
+}
+author {
+  name: "Schneider, Wesley F."
+  job: "designer"
+}
+author {
+  name: "Teague, Elisa"
+  job: "designer"
+}
+author {
+  name: "Benham, Bill"
+  job: "additional design"
+}
+author {
+  name: "Lee, Adam"
+  job: "additional design"
+}
+author {
+  name: "Levitch, Ari"
+  job: "additional design"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "additional design"
+}
+author {
+  name: "Rehmann, Taymoor"
+  job: "additional design"
+}
+author {
+  name: "Welch, Kate"
+  job: "additional design"
+}
+author {
+  name: "Winninger, Ray"
+  job: "additional design"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "rules development"
+}
+author {
+  name: "Dillon, Dan"
+  job: "rules development"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "rules development"
+}
+author {
+  name: "Rehman, Taymoor"
+  job: "rules development"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Ross, Jessica"
+}
+editor {
+  name: "Schneider, Wesley F."
+}
+editor {
+  name: "Wyatt, James"
+}
+cover {
+  name: "Beckert, Wylie"
+}
+cover {
+  name: "Villeneuve, Magali"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Ben"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Burdett, Christopher"
+}
+illustrator {
+  name: "Chaturvedi, Sidarth"
+}
+illustrator {
+  name: "Christensen, David René"
+}
+illustrator {
+  name: "Dawes, Nikki"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Gariba, Caroline"
+}
+illustrator {
+  name: "Keiser, Sam"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Lunter, Titus"
+}
+illustrator {
+  name: "Mar, Andrew"
+}
+illustrator {
+  name: "Medeiros, Marcela"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Michael, Robson"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Nordsol, Irina"
+}
+illustrator {
+  name: "Olausson, Robin"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Prima, Livia"
+}
+illustrator {
+  name: "Prime, April"
+}
+illustrator {
+  name: "Sladek, David"
+}
+illustrator {
+  name: "Sully, Crystal"
+}
+illustrator {
+  name: "Valeza, Brian"
+}
+illustrator {
+  name: "Vellinov, Svetlin"
+}
+illustrator {
+  name: "Veltkamp, Anna"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Wurzyk, Zusanne"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "lead graphic designer"
+}
+illustrator {
+  name: "Falcone, Tristan"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+illustrator {
+  name: "Wood, Shawn"
+  job: "concept illustrator"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "project engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+pages: 192
+system: DND_5E
+audience: DM
+type: SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

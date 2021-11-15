@@ -42,7 +42,7 @@ import androidx.annotation.CallSuper;
  */
 public class Encounter extends Document<Encounter> implements Item.Owner {
 
-  private static final String FIELD_ITEMS_GROUPS= "items-groups";
+  private static final String FIELD_ITEMS_GROUPS = "items-groups";
 
   private static final Document.DocumentFactory<Encounter> FACTORY = () -> new Encounter();
 
@@ -56,6 +56,10 @@ public class Encounter extends Document<Encounter> implements Item.Owner {
 
   public List<Monster> getMonsters() {
     return monsters;
+  }
+
+  public Item.Owner getParent() {
+    return this;
   }
 
   @Override
@@ -87,7 +91,7 @@ public class Encounter extends Document<Encounter> implements Item.Owner {
 
   @Override
   public boolean canEdit() {
-    return false;
+    return amDM();
   }
 
   @Override

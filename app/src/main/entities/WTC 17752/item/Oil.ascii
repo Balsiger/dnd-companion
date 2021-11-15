@@ -1,0 +1,44 @@
+template {
+  name: "Oil"
+  category: "magic"
+  category: "oil"
+  category: "container"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 229
+      high: 229
+    }
+  }
+  world: "Generic"
+  description: "A typical oil consists of 1 ounce of liquid held in a ceramic or glass vial fitted with a tight stopper. The stoppered container usually is no more than 1 wide and 2 inches high. The vial has AC 13, 1 hit point, hardness 1, and a break DC of 12. Vials hold 1 ounce of liquid. "
+  base_only: true
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: FINE
+}
+hardness: 1
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "Some oily liquid in a metal vial."
+}
+appearance {
+  probability: COMMON
+  appearance: "Some oily liquid in a ceramic vial."
+}
+appearance {
+  probability: COMMON
+  appearance: "Some oily liquid in a glass vial."
+}
+break_dc: 12
+player_name: "Oil"

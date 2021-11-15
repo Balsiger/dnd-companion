@@ -34,6 +34,7 @@
           android:layout_height="wrap_content"
           android:padding="20dp"
           android:text="Tell your DM to invite you to his campaign or create your own!\nYou can also create a character now and move it into a campaign later."
+          android:textColor="@color/grey_dark"
           android:theme="@style/LargeText" />
 
       <LinearLayout
@@ -57,7 +58,9 @@
           android:layout_gravity="center_horizontal"
           android:layout_marginStart="20dp"
           android:layout_marginTop="20dp"
-          android:layout_marginEnd="20dp" />
+          android:layout_marginEnd="20dp"
+          android:textAlignment="center"
+          android:textColor="@color/grey_dark" />
 
       <LinearLayout
           android:layout_width="wrap_content"
@@ -69,20 +72,23 @@
         <TextView
             android:id="@+id/version"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_version" />
+            android:layout_height="match_parent"
+            android:text="@string/app_version"
+            android:textColor="@color/grey_dark" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="#" />
+            android:text="#"
+            android:textColor="@color/grey_dark" />
 
         <TextView
             android:id="@+id/build"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_build" />
+            android:text="@string/app_build"
+            android:textColor="@color/grey_dark" />
       </LinearLayout>
 
     </LinearLayout>

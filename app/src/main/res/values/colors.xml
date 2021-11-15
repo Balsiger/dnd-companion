@@ -137,4 +137,13 @@
   <color name="labelled_label_disabled">#ccc</color>
   <color name="long_press">#40FCEFB9</color>
 
+  <!-- Greys -->
+  <color name="grey_light">#ccc</color>
+  <color name="grey">#aaa</color>
+  <color name="grey_dark">#888</color>
+  <color name="grey_very_dark">#444</color>
+
+  <!-- Text styles -->
+  <color name="title">#444</color>
+
 </resources>

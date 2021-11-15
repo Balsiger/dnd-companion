@@ -36,7 +36,7 @@ appearance {
   probability: RARE
   appearance: "Extraordinarily well made."
 }
-  magic {
+magic {
   modifier {
     modifier {
       modifier {

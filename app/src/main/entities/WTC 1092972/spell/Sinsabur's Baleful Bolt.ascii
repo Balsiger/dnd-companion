@@ -1,0 +1,35 @@
+template {
+  name: "Sinsabur's Baleful Bolt"
+  reference {
+    name: "WTC 1092972"
+    pages {
+      low: 146
+      high: 146
+    }
+  }
+  world: "Forgotten Realms"
+  description: "\\emph{A black bolt of dark energy begins at your fingertips and crackles out to the maximum range}\n\nThe bolt deals temporary Constitution damage and Strength damage to each creature within its area, each equal to 1d3 points +1 per four caster levels (maximum 1d3+3). Lost ability score points are recovered normally at the rate of 1 point per day. Constitution loss also causes a reduction in hit points by lowering the victim’s Constitution modifier. (Creatures cannot be reduced to less than 1 hit point per Hit Die by Constitution loss.) This hit point loss might be fatal to a creature already injured, even if the Constitution loss alone does not kill it. Creatures without Strength scores or Constitution scores are unaffected by this spell."
+  short_description: "Bolt that deals 1d3 +1/4 level (max 3) Con and Str damage in affected area."
+}
+school: NECROMANCY
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+casting_time {
+  standard_actions: 1
+}
+special_range: MEDIUM
+area: "4 ft. wide to medium range"
+duration {
+}
+saving_throw: "Reflex half"
+spell_resistance: "Yes"
+
+

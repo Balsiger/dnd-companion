@@ -32,6 +32,7 @@ import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.documents.NestedDocument;
+import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.MagicEffectType;
 import net.ixitxachitls.companion.data.enums.Probability;
 import net.ixitxachitls.companion.data.enums.Size;
@@ -136,6 +137,8 @@ public class Item extends NestedDocument {
 
     public void combine(Item item, Item other);
 
+    //public void dragEnded(boolean result);
+
     public Optional<Item> getItem(String id);
 
     public boolean moveItemAfter(Item item, Item move);
@@ -153,6 +156,21 @@ public class Item extends NestedDocument {
 
   public void setAppearance(String appearance) {
     this.appearance = appearance;
+  }
+
+  public List<Modifier> getArmorDeflectionModifiers() {
+    List<Modifier> modifiers = new ArrayList<>();
+
+    for (ItemTemplate template : templates) {
+      for (Modifier modifier :
+          template.getMagicModifiers(Template.MagicTemplateProto.Type.ARMOR_CLASS)) {
+        if (modifier.getType() == Modifier.Type.DEFLECTION) {
+          modifiers.add(modifier);
+        }
+      }
+    }
+
+    return modifiers;
   }
 
   public List<Modifier> getArmorModifiers() {
@@ -198,6 +216,15 @@ public class Item extends NestedDocument {
     return Damage.from(templates.stream()
         .map(ItemTemplate::getDamage)
         .collect(Collectors.toList()));
+  }
+
+  public List<Item> getDeepContents() {
+    List<Item> deep = new ArrayList<>(contents);
+    for (Item item : contents) {
+      deep.addAll(item.getDeepContents());
+    }
+
+    return deep;
   }
 
   private RandomDuration getDonDuration() {
@@ -563,6 +590,10 @@ public class Item extends NestedDocument {
     return identified;
   }
 
+  public boolean isMagic() {
+    return templates.stream().filter(t -> t.isMagic()).findAny().isPresent();
+  }
+
   public boolean isMonetary() {
     return templates.stream().filter(t -> t.isMonetary()).findAny().isPresent();
   }
@@ -607,6 +638,19 @@ public class Item extends NestedDocument {
     }
 
     return false;
+  }
+
+  public List<Modifier> computeAbilityModifers(Ability ability) {
+    List<Modifier> modifiers = new ArrayList<>();
+    for (ItemTemplate template : templates) {
+      if (template.isMagic()) {
+        for (Modifier modifier : template.getMagicModifiers(ability.getMagicType())) {
+          modifiers.add(modifier);
+        }
+      }
+    }
+
+    return modifiers;
   }
 
   public int computeMaxHp() {
@@ -777,6 +821,15 @@ public class Item extends NestedDocument {
     }
 
     return Optional.empty();
+  }
+
+  public List<Modifier> getMagicModifiers(MagicEffectType type) {
+    List<Modifier> modifiers = new ArrayList<>();
+    for (ItemTemplate template : templates) {
+      modifiers.addAll(template.getMagicModifiers(type.toProto()));
+    }
+
+    return modifiers;
   }
 
   public int getMaxSpeedSquares(boolean isFast) {

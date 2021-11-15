@@ -44,9 +44,9 @@ special_range: TOUCH
 target: "Creature touched"
 duration {
   duration {
-    minutes: 1
-  }
-  levels: "level"
+      minutes: 1
+    }
+    levels: "level"
 }
 saving_throw: "Will negates (harmless)"
 spell_resistance: "Yes"

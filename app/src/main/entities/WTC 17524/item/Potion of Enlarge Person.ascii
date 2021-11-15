@@ -1,0 +1,10 @@
+template {
+  name: "Potion of Enlarge Person"
+  base: "potion"
+  description: "As \\SpellRef[Wiz 3]{Enlarge Person}."
+  short_description: "As \\SpellRef[Wiz 3]{Enlarge Person}."
+}
+probability: COMMON
+value {
+  gold: 250
+}

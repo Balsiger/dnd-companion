@@ -17,4 +17,33 @@ value {
   gold: 1000
 }
 probability: RARE
- player_name: "Cloak"
+player_name: "Cloak"
+magic {
+  modifier {
+    modifier {
+      modifier {
+        value: 1
+        type: RESISTANCE
+      }
+    }
+    type: REFLEX
+  }
+  modifier {
+    modifier {
+      modifier {
+        value: 1
+        type: RESISTANCE
+      }
+    }
+    type: WILL
+  }
+  modifier {
+    modifier {
+      modifier {
+        value: 1
+        type: RESISTANCE
+      }
+    }
+    type: FORTITUDE
+  }
+}

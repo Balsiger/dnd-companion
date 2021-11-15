@@ -1,0 +1,43 @@
+template {
+  name: "Grimwald's Graymantle"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 71
+      high: 71
+    }
+  }
+  world: "Forgotten Realms"
+  description: "You imbue a skull or bone with a pale gray radiance and then hurl (or touch) the skull or bone to hit a target creature. You can attack with the skull on the round you cast the spell, but otherwise it is a standard action.\n\nIf the skull or bone hits the target, the gray radiance is transferred from the skull to the creature, covering it entirely. For the duration of the spell, the creature cannot regain hit points or ability score points by any means. Nor can the creature remove negative levels. Natural regeneration (such as that of trolls) is stopped, as are the effects of a ring of regeneration, potion of healing, or staff of curing. Spells that return lost hit points (cure light wounds, heal) do not work on that individual. Other necromantic spells function normally, including those that cure other afflictions (disease, blindness). Those that remove hit points (cause light wounds) are unaffected by the spell. The subject can improve his current hit points by boosting his Constitution score and can receive temporary hit points (from an aid spell, for example).\n\n Upon the expiration of the spell, automatic healing abilities and items such as a ring of regeneration or a troll's regeneration ability begin to function again."
+  short_description: "Prevent all healing on the target."
+}
+school: NECROMANCY
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+  component: "The skull or bone used"
+}
+casting_time {
+  standard_actions: 1
+}
+special_range: MEDIUM
+target: "One creature"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+}
+saving_throw: "Fortitude negates"
+spell_resistance: "Yes"
+
+

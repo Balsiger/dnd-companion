@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.ui.fragments;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -46,9 +47,14 @@ import androidx.annotation.Nullable;
  */
 public class EncounterItemGroupView extends LinearLayout {
 
+  private Campaign campaign;
+  private Encounter encounter;
+  private String description;
+  private List<Item> items;
+
   // UI elements.
-  private TextWrapper<TextView> description;
-  private LinearLayout items;
+  private TextWrapper<TextView> descriptionView;
+  private LinearLayout itemsView;
 
   public EncounterItemGroupView(Context context) {
     super(context);
@@ -62,6 +68,15 @@ public class EncounterItemGroupView extends LinearLayout {
     init();
   }
 
+  public void setup(Campaign campaign, Encounter encounter, String description, List<Item> items) {
+    this.campaign = campaign;
+    this.encounter = encounter;
+    this.items = items;
+    this.description = description;
+
+    update();
+  }
+
   private void init() {
     View view =
         LayoutInflater.from(getContext()).inflate(R.layout.view_encounter_item_group, null, false);
@@ -70,21 +85,32 @@ public class EncounterItemGroupView extends LinearLayout {
     CompanionApplication.get().getCurrentActivity().getWindowManager().getDefaultDisplay()
         .getMetrics(displayMetrics);
 
-    description = TextWrapper.wrap(view, R.id.description);
-    description.get().setMaxWidth(displayMetrics.widthPixels - 100);
-    items = view.findViewById(R.id.items);
+    descriptionView = TextWrapper.wrap(view, R.id.description);
+    descriptionView.get().setMaxWidth(displayMetrics.widthPixels - 100);
+    itemsView = view.findViewById(R.id.items);
 
+    view.setOnDragListener(this::onItemDrag);
     addView(view);
   }
 
-  public void setup(Campaign campaign, Encounter encounter, String description, List<Item> items) {
-    this.description.text(description);
+  private boolean onItemDrag(View view, DragEvent event) {
+    switch (event.getAction()) {
+      case DragEvent.ACTION_DRAG_ENDED:
+        update();
+        return true;
 
-    this.items.removeAllViews();
-    for (Item item : items) {
-      ItemView itemView = new ItemView(getContext(), campaign, encounter, item);
-      this.items.addView(itemView);
+      default:
+        return true;
     }
   }
 
+  private void update() {
+    this.descriptionView.text(description);
+
+    this.itemsView.removeAllViews();
+    for (Item item : items) {
+      ItemView itemView = new ItemView(getContext(), campaign, encounter, item, false);
+      this.itemsView.addView(itemView);
+    }
+  }
 }

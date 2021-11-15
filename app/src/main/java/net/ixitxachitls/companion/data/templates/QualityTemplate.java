@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.data.templates;
 
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.values.Modifier;
+import net.ixitxachitls.companion.data.values.Speed;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
 
@@ -34,7 +35,7 @@ import java.util.stream.Collectors;
 /**
  * A template for a quality.
  */
-public class QualityTemplate extends StoredTemplate<Template .QualityTemplateProto> {
+public class QualityTemplate extends StoredTemplate<Template.QualityTemplateProto> {
 
   public static final String TYPE = "quality";
 
@@ -45,31 +46,10 @@ public class QualityTemplate extends StoredTemplate<Template .QualityTemplatePro
     this.proto = proto;
   }
 
-  @Override
-  public Set<String> getProductIds() {
-    return extractProductIds(proto.getTemplate());
-  }
-
   public List<Modifier> getAcModifiers() {
     return proto.getAcModifier().getModifierList().stream()
         .map(p -> Modifier.fromProto(p, getName()))
         .collect(Collectors.toList());
-  }
-
-  public String getNameFormat() {
-    if (proto.getNameFormat().isEmpty()) {
-      return name;
-    }
-
-    return proto.getNameFormat();
-  }
-
-  public String getShortDescription() {
-    if (proto.getTemplate().getShortDescription().isEmpty()) {
-      return "(no short description)";
-    }
-
-    return proto.getTemplate().getShortDescription();
   }
 
   public List<Modifier> getAttackModifiers() {
@@ -95,6 +75,19 @@ public class QualityTemplate extends StoredTemplate<Template .QualityTemplatePro
     return modifiers;
   }
 
+  public String getNameFormat() {
+    if (proto.getNameFormat().isEmpty()) {
+      return name;
+    }
+
+    return proto.getNameFormat();
+  }
+
+  @Override
+  public Set<String> getProductIds() {
+    return extractProductIds(proto.getTemplate());
+  }
+
   public List<Modifier> getReflexModifiers() {
     List<Modifier> modifiers = new ArrayList<>();
     for (Value.ModifierProto.Modifier modifier : proto.getReflexModifier().getModifierList()) {
@@ -102,6 +95,34 @@ public class QualityTemplate extends StoredTemplate<Template .QualityTemplatePro
     }
 
     return modifiers;
+  }
+
+  public String getShortDescription() {
+    if (proto.getTemplate().getShortDescription().isEmpty()) {
+      return "(no short description)";
+    }
+
+    return proto.getTemplate().getShortDescription();
+  }
+
+  public Template.QualityTemplateProto.Type getType() {
+    return proto.getType();
+  }
+
+  public String getTypeFormatted() {
+    switch (proto.getType()) {
+      case EXTRAORDINARY:
+        return "Extraordinary";
+      case SPELL_LIKE:
+        return "Spell Like";
+      case SUPERNATURAL:
+        return "Supernatural";
+      case UNRECOGNIZED:
+        return "Unrecognized";
+      default:
+      case UNKNOWN:
+        return "Uknown";
+    }
   }
 
   public List<Modifier> getWillModifiers() {
@@ -129,26 +150,19 @@ public class QualityTemplate extends StoredTemplate<Template .QualityTemplatePro
     return modifiers;
   }
 
-  public Template.QualityTemplateProto.Type getType() {
-    return proto.getType();
-  }
-
-  public String getTypeFormatted() {
-    switch(proto.getType()) {
-      case EXTRAORDINARY: return "Extraordinary";
-      case SPELL_LIKE: return "Spell Like";
-      case SUPERNATURAL: return "Supernatural";
-      case UNRECOGNIZED: return "Unrecognized";
-      default:
-      case UNKNOWN: return "Uknown";
+  public int getSpeedSquares(Speed.Mode mode) {
+    if (Speed.convert(proto.getSpeed().getMode()) == mode) {
+      return proto.getSpeed().getSquares();
     }
+
+    return 0;
   }
 
-  public static Template.QualityTemplateProto defaultProto () {
+  public static Template.QualityTemplateProto defaultProto() {
     return Template.QualityTemplateProto.getDefaultInstance();
   }
 
-  public static QualityTemplate fromProto (Template.QualityTemplateProto proto){
+  public static QualityTemplate fromProto(Template.QualityTemplateProto proto) {
     QualityTemplate quality = new QualityTemplate(proto, proto.getTemplate().getName());
     return quality;
   }

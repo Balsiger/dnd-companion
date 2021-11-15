@@ -42,6 +42,7 @@ import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.SavesAdjustment;
+import net.ixitxachitls.companion.data.values.Speed;
 import net.ixitxachitls.companion.data.values.SpeedAdjustment;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.data.values.Weight;
@@ -223,6 +224,15 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return Ability.modifier(getConstitution().total());
   }
 
+  public List<Item> getDeepItems() {
+    List<Item> deep = new ArrayList<>(items);
+    for (Item item : items) {
+      deep.addAll(item.getDeepContents());
+    }
+
+    return deep;
+  }
+
   public ModifiedValue getDexterity() {
     return new ModifiedValue("Dexterity", dexterity, 0, false);
   }
@@ -319,6 +329,10 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
 
   public void setNonlethalDamage(int nonlethalDamage) {
     this.nonlethalDamage = nonlethalDamage;
+  }
+
+  public Item.Owner getParent() {
+    return this;
   }
 
   public Optional<MonsterTemplate> getRace() {
@@ -606,9 +620,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
   public ModifiedValue flatFootedArmorClass() {
     ModifiedValue value = new ModifiedValue("AC", 10, false);
 
-    // Bonuses from armor and shields.
-    value.add(armorACs());
-
     // Natural armor.
     if (race.isPresent() && race.get().hasNaturalArmor()) {
       value.add(race.get().getNaturalArmor());
@@ -623,6 +634,13 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     // Qualities.
     for (Collection<Quality> qualities : collectQualities().asMap().values()) {
       value.add(qualities.iterator().next().getTemplate().getAcModifiers());
+    }
+
+    // Items.
+    for (Item item : items) {
+      if (isWearing(item)) {
+        value.add(item.getArmorModifiers());
+      }
     }
 
     return value;
@@ -801,10 +819,12 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     switch (Items.encumbrance((int) totalWeight().asPounds(), getStrength().total())) {
       case light:
         encumbranceSquares = Integer.MAX_VALUE;
+        break;
 
       case medium:
       case heavy:
         encumbranceSquares = fast ? 4 : 3;
+        break;
 
       case overloaded:
         return 0;
@@ -886,9 +906,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
   public ModifiedValue normalArmorClass() {
     ModifiedValue value = new ModifiedValue("AC", 10, false);
 
-    // Bonuses from armor and shields.
-    value.add(armorACs());
-
     // Natural armor.
     if (race.isPresent() && race.get().hasNaturalArmor()) {
       value.add(race.get().getNaturalArmor());
@@ -910,6 +927,13 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     // Qualities.
     for (Collection<Quality> qualities : collectQualities().asMap().values()) {
       value.add(qualities.iterator().next().getTemplate().getAcModifiers());
+    }
+
+    // Items.
+    for (Item item : items) {
+      if (isWearing(item)) {
+        value.add(item.getArmorModifiers());
+      }
     }
 
     return value;
@@ -963,8 +987,8 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
 
   public boolean removeItem(Item item) {
     if (amPlayer()) {
-      if (!items.remove(item)) {
-        return removeItem(item.getId());
+      if (!items.remove(item) && removeItem(item.getId()) && items.stream().anyMatch(i -> i.remove(item))) {
+        return false;
       }
 
       wearing.remove(item);
@@ -1016,6 +1040,13 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
       }
     }
 
+    for (Quality quality : collectQualities().values()) {
+      int qualitySquares = quality.getSpeedSquares(Speed.Mode.run);
+      if (qualitySquares != 0) {
+        value.add(new Modifier(qualitySquares, Modifier.Type.GENERAL, quality.getName()));
+      }
+    }
+
     return value;
   }
 
@@ -1058,6 +1089,13 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
       value.add(qualities.iterator().next().getTemplate().getAcModifiers().stream()
           .filter(m -> m.getType() == Modifier.Type.DEFLECTION)
           .collect(Collectors.toList()));
+    }
+
+    // Items.
+    for (Item item : items) {
+      if (isWearing(item)) {
+        value.add(item.getArmorDeflectionModifiers());
+      }
     }
 
     return value;
@@ -1114,16 +1152,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
         .filter(Item::isArmor)
         .filter(this::isWearing)
         .collect(Collectors.toList());
-  }
-
-  private List<Modifier> armorACs() {
-    List<Modifier> modifiers = new ArrayList<>();
-
-    for (Item armor : armor()) {
-      modifiers.addAll(armor.getArmorModifiers());
-    }
-
-    return modifiers;
   }
 
   protected boolean hasLevels() {

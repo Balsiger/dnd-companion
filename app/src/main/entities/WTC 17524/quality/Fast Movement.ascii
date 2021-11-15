@@ -11,5 +11,10 @@ template {
   }
   world: "Generic"
   description: "The characters\'s land speed is faster than the norm for his race by +$range feet. This benefit applies only when it is wearing no armor, light armor, or medium armor and not carrying a heavy load. Apply this bonus before modifying the character\'s speed because of any load carried or armor worn. \n\nFor example, a human barbarian has a speed of 40 feet, rather than 30 feet, when wearing light or no armor. When wearing medium armor or carrying a medium load, his speed drops to 30 feet. A halfling barbarian has a speed of 30 feet, rather than 20 feet, in light or no armor. When wearing medium armor or carrying a medium load, his speed drops to 20 feet."
+  incomplete: "The bonus is not automatically removed when wearing armor or having a medium load."
 }
 type: EXTRAORDINARY
+speed {
+  mode: RUN
+  squares: 2
+}

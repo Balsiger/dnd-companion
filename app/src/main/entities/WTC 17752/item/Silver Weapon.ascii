@@ -14,13 +14,4 @@ template {
 probability: UNCOMMON
 hardness: 8
 hit_points: 10
- player_name: "Silver"
-weapon {
-    reach {
-    imperial {
-      feet {
-        leader: 5
-      }
-    }
-  }
-}
+player_name: "Silver"
