@@ -65,7 +65,7 @@ public enum CountUnit implements Enums.Named, Enums.Proto<Template.CountedTempla
   }
 
   public String format(int value) {
-    if (value != 1) {
+    if (value == 1) {
       return "1 " + getName();
     }
 

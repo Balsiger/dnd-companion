@@ -34,6 +34,7 @@ import net.ixitxachitls.companion.data.enums.Size;
 import net.ixitxachitls.companion.data.values.History;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.Substance;
+import net.ixitxachitls.companion.ui.views.FormattedTextView;
 import net.ixitxachitls.companion.ui.views.ItemView;
 import net.ixitxachitls.companion.ui.views.Views;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -61,8 +62,8 @@ public class ItemDialog extends Dialog {
 
   private TextWrapper<TextView> debugId;
   private TextWrapper<TextView> appearance;
-  private TextWrapper<TextView> shortDescription;
-  private TextWrapper<TextView> description;
+  private FormattedTextView shortDescription;
+  private FormattedTextView description;
   private TextWrapper<TextView> notes;
   private TextView notesLabel;
   private TextWrapper<TextView> dmNotes;
@@ -136,8 +137,8 @@ public class ItemDialog extends Dialog {
   protected void createContent(View view) {
     debugId = TextWrapper.wrap(view, R.id.debug_id);
     appearance = TextWrapper.wrap(view, R.id.appearance);
-    shortDescription = TextWrapper.wrap(view, R.id.short_description);
-    description = TextWrapper.wrap(view, R.id.description);
+    shortDescription = view.findViewById(R.id.short_description);
+    description = view.findViewById(R.id.description);
     notes = TextWrapper.wrap(view, R.id.notes);
     notesLabel = view.findViewById(R.id.label_notes);
     dmNotes = TextWrapper.wrap(view, R.id.dm_notes);
@@ -238,12 +239,11 @@ public class ItemDialog extends Dialog {
       setTitle(item.getPlayerName());
     }
 
+    Texts.Values formattingValues = new Texts.Values();
     debugId.text(item.getId());
     appearance.text(item.getAppearance());
-    Views.setOrHide(shortDescription,
-        Texts.processCommands(getContext(), item.getShortDescription(owner.amDM())));
-    Views.setOrHide(description,
-        Texts.processCommands(getContext(), item.getDescription(owner.amDM())));
+    shortDescription.text(item.getShortDescription(owner.amDM()), formattingValues);
+    description.text(item.getDescription(owner.amDM()), formattingValues);
     Views.setOrHide(notes, item.getPlayerNotes(), notesLabel);
     Views.setOrHide(dmNotes, item.getPlayerNotes(), dmNotesLabel);
     if (item.getMultiple() <= 1 && !item.hasContents()) {

@@ -227,7 +227,7 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
   public List<Item> getDeepItems() {
     List<Item> deep = new ArrayList<>(items);
     for (Item item : items) {
-      deep.addAll(item.getDeepContents());
+      deep.addAll(item.collectDeepContents());
     }
 
     return deep;
@@ -560,7 +560,7 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
   public void combine(Item item, Item other) {
     if (item.similar(other)) {
       removeItem(other);
-      item.setMultiple(item.getMultiple() + other.getMultiple());
+      item.setCount(item.getCount() + other.getCount());
       store();
     }
   }

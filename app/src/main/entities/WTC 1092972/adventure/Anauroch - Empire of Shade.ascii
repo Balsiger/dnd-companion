@@ -611,7 +611,7 @@ encounter {
     description: "The items are carried by Culcathrax and might be used in battle."
     item {
       name: "Wand of Magic Missile 5"
-      multiuse: 48
+      multiple: 48
     }
     item {
       name: "Greater Ring of Energy Resistance (fire)"

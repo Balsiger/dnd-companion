@@ -51,6 +51,7 @@ substance {
  }
 break_dc: 16
 player_name: "Wand"
-multiuse {
+multiple {
   count: 50;
+  unit: CHARGE;
 }

@@ -98,7 +98,7 @@ public class Encounter extends Document<Encounter> implements Item.Owner {
   public void combine(Item item, Item other) {
     if (item.similar(other)) {
       removeItem(other);
-      item.setMultiple(item.getMultiple() + other.getMultiple());
+      item.setCount(item.getCount() + other.getCount());
       store();
     }
   }

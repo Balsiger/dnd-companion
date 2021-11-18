@@ -2,7 +2,10 @@ template {
   name: "Wand of Magic Missile 5"
   base: "wand"
   synonym: "Magic Missile, Wand"
-  description: "A wand with the spell \\Spell{Magic Missile} (5th level)"
-  short_description: "A wand with \\Spell{Magic Missile} (5th level)"
+  description: "A wand with the spell \\Spell[caster_level=5]{Magic Missile} (5th level)"
+  short_description: "A wand with \\Spell[caster_level=5]{Magic Missile} (5th level)"
 }
-probability: COMMON
+probability: RARE
+value {
+  gold: 75
+}

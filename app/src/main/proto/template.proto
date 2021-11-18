@@ -337,8 +337,7 @@ message ItemTemplateProto {
     enum Type {
       UNKNOWN = 0;
       MUNDANE = 1;
-    }
-    Type type = 1;
+    }    Type type = 1;
     DiceProto multiple = 2;
     repeated string item = 3;
   }
@@ -384,6 +383,7 @@ message ItemLookupProto {
   string dm_notes = 13;
   int32 multiple = 14;
   int32 multiuse = 15;
+  int32 count = 18;
   DurationProto time_left = 16;
   repeated ItemLookupProto content = 17;
 }

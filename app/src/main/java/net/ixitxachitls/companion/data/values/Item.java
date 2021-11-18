@@ -43,6 +43,7 @@ import net.ixitxachitls.companion.data.enums.WeaponType;
 import net.ixitxachitls.companion.data.templates.ItemTemplate;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
+import net.ixitxachitls.companion.util.Lazy;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
@@ -69,6 +70,7 @@ public class Item extends NestedDocument {
   private static final String FIELD_PLAYER_NAME = "player_name";
   private static final String FIELD_PLAYER_NOTES = "player_notes";
   private static final String FIELD_DM_NOTES = "dm_notes";
+  private static final String FIELD_COUNT = "counted";
   private static final String FIELD_MULTIPLE = "multiple";
   private static final String FIELD_MULTIUSE = "multiuse";
   private static final String FIELD_TIME_LEFT = "time_left";
@@ -76,7 +78,7 @@ public class Item extends NestedDocument {
   private static final String FIELD_CONTENTS = "contents";
   private static final String FIELD_HISTORY = "history";
 
-  private String id;
+  private final String id;
   private String name;
   private List<ItemTemplate> templates;
   private int hp;
@@ -87,14 +89,230 @@ public class Item extends NestedDocument {
   private String dmNotes;
   private int multiple;
   private int multiuse;
+  private int count;
   private Duration timeLeft;
   private boolean identified;
   private List<Item> contents;
   private History history;
 
+  // Lazy values.
+  private Lazy.State state = new Lazy.State();
+  private Lazy.Resettable<Money> totalValue = new Lazy.Resettable<>(state, () -> {
+    Money totalValue = multiple > 0 ? value.multiply(multiple) : value;
+    totalValue = count > 0 ? totalValue.multiply(count) : totalValue;
+    for (Item content : contents) {
+      totalValue = totalValue.add(content.getValue());
+    }
+
+    return totalValue;
+  });
+  private Lazy.Resettable<List<Modifier>> armorModifiers = new Lazy.Resettable<>(state, () ->
+      Templates.collectModifiers(templates, ItemTemplate::getArmorModifiers,
+          t -> t.getMagicModifiers(Template.MagicTemplateProto.Type.ARMOR_CLASS)));
+  private Lazy.Resettable<List<Modifier>> armorDeflectionModifiers =
+      new Lazy.Resettable<>(state, () ->
+          getArmorModifiers().stream()
+              .filter(m -> m.getType() == Modifier.Type.DEFLECTION)
+              .collect(Collectors.toList()));
+  private Lazy.Resettable<Integer> breakDC = new Lazy.Resettable<>(state, () ->
+      templates.stream().mapToInt(t -> t.getBreakDC()).max().orElse(0));
+  private Lazy.Resettable<Set<String>> categories = new Lazy.Resettable<>(state, () ->
+      templates.stream().flatMap(t -> t.getCategories().stream()).collect(Collectors.toSet()));
+  private Lazy.Resettable<Damage> damage = new Lazy.Resettable<>(state, () ->
+      Damage.from(templates.stream()
+          .map(ItemTemplate::getDamage)
+          .collect(Collectors.toList())));
+  private Lazy.Resettable<RandomDuration> donDuration = new Lazy.Resettable<>(state, () ->
+      templates.stream()
+          .map(t -> t.getDonDuration())
+          .max(RandomDuration::compareTo)
+          .orElse(RandomDuration.NULL));
+  private Lazy.Resettable<RandomDuration> donHastilyDuration = new Lazy.Resettable<>(state, () ->
+      templates.stream()
+          .map(t -> t.getDonHastilyDuration())
+          .max(RandomDuration::compareTo)
+          .orElse(RandomDuration.NULL));
+  private Lazy.Resettable<Integer> hardness = new Lazy.Resettable<>(state, () ->
+      templates.stream().mapToInt(t -> t.getHardness()).max().orElse(0));
+  private Lazy.Resettable<String> incomplete = new Lazy.Resettable<>(state, () ->
+      Strings.NEWLINE_JOINER.join(templates.stream()
+          .map(ItemTemplate::getIncomplete)
+          .collect(Collectors.toList())));
+  private Lazy.Resettable<List<Modifier>> magicAttackModifiers = new Lazy.Resettable<>(state, () ->
+      Templates.collectModifiers(templates, ItemTemplate::getMagicAttackModifiers));
+  private Lazy.Resettable<Multimap<MagicEffectType, Modifier>> magicModifiers =
+      new Lazy.Resettable<>(state, () -> {
+        Multimap<MagicEffectType, Modifier> modifiers = ArrayListMultimap.create();
+        for (ItemTemplate template : templates) {
+          modifiers.putAll(template.getMagicModifiers());
+        }
+
+        return modifiers;
+      });
+  private Lazy.Resettable<Integer> maxMultiple = new Lazy.Resettable<>(state, () ->
+      maxAmount(templates));
+  private Lazy.Resettable<Integer> maxAttacks = new Lazy.Resettable<>(state, () ->
+      templates.stream()
+          .filter(t -> t.isWeapon())
+          .mapToInt(t -> t.getMaxAttacks())
+          .min().orElse(Integer.MAX_VALUE));
+  private Lazy.Resettable<Integer> maxDexterityModifier = new Lazy.Resettable<>(state, () ->
+      templates.stream()
+          .mapToInt(t -> t.getMaxDexterityModifier())
+          .min()
+          .orElse(Integer.MAX_VALUE));
+  private Lazy.Resettable<Integer> maxUses = new Lazy.Resettable<Integer>(state, () ->
+      maxUses(templates));
+  private Lazy.Resettable<Probability> probability = new Lazy.Resettable<>(state, () -> {
+    Probability result = Probability.UNKNOWN;
+    for (ItemTemplate template : templates) {
+      Probability probability = template.getProbability();
+      if (probability.ordinal() > result.ordinal()) {
+        result = probability;
+      }
+    }
+
+    return result;
+  });
+  private Lazy.Resettable<Weight> rawWeight =
+      new Lazy.Resettable<>(state, () -> weight(templates));
+  private Lazy.Resettable<List<String>> referenes = new Lazy.Resettable<>(state, () ->
+      templates.stream()
+          .flatMap(t -> t.getReferences().stream())
+          .collect(Collectors.toList()));
+  private Lazy.Resettable<RandomDuration> removeDuration = new Lazy.Resettable<>(state, () ->
+      templates.stream()
+          .map(t -> t.getRemoveDuration())
+          .max(RandomDuration::compareTo)
+          .orElse(RandomDuration.NULL));
+  private Lazy.Resettable<Damage> secondaryDamage = new Lazy.Resettable<>(state, () ->
+      Damage.from(templates.stream().map(ItemTemplate::getSecondaryDamage)
+          .collect(Collectors.toList())));
+  private Lazy.Resettable<Size> size = new Lazy.Resettable<>(state, () -> {
+    Optional<ItemTemplate> base = getBaseTemplate();
+    if (base.isPresent()) {
+      return base.get().getSize();
+    }
+
+    return Size.UNKNOWN;
+  });
+  private Lazy.Resettable<Slot> slot = new Lazy.Resettable<>(state, () -> templates.stream()
+      .map(ItemTemplate::getSlot)
+      .filter(s -> s != Slot.UNKNOWN)
+      .findFirst()
+      .orElse(Slot.UNKNOWN));
+  private Lazy.Resettable<Damage> splashDamage = new Lazy.Resettable<>(state, () ->
+      Damage.from(templates.stream().map(ItemTemplate::getSplashDamage)
+          .collect(Collectors.toList())));
+  private Lazy.Resettable<Substance> substance = new Lazy.Resettable<>(state, () -> {
+    Optional<ItemTemplate> base = getBaseTemplate();
+    if (base.isPresent()) {
+      return base.get().getSubstance();
+    }
+
+    return Substance.ZERO;
+  });
+  private Lazy.Resettable<List<String>> synonyms = new Lazy.Resettable<>(state, () -> {
+    Optional<ItemTemplate> base = getBaseTemplate();
+    if (base.isPresent()) {
+      return base.get().getSynonyms();
+    } else {
+      return Collections.emptyList();
+    }
+  });
+  private Lazy.Resettable<List<String>> templateNames = new Lazy.Resettable<>(state, () ->
+      templates.stream().map(t -> t.getName()).collect(Collectors.toList()));
+  private Lazy.Resettable<WeaponProficiency> weaponProficiency =
+      new Lazy.Resettable<>(state, () -> {
+        Optional<Value.Proficiency> type = templates.stream()
+            .map(t -> t.getWeaponProficiency())
+            .filter(s -> s != Value.Proficiency.UNKNOWN_PROFICIENCY
+                && s != Value.Proficiency.UNRECOGNIZED)
+            .findFirst();
+
+        if (type.isPresent()) {
+          return WeaponProficiency.fromProto(type.get());
+        }
+
+        return WeaponProficiency.UNKNOWN;
+      });
+  private Lazy.Resettable<Distance> weaponRange = new Lazy.Resettable<>(state, () -> {
+    Optional<Distance> range = templates.stream()
+        .map(ItemTemplate::getRange)
+        .filter(Optional::isPresent)
+        .map(Optional::get)
+        .findFirst();
+
+    if (range.isPresent()) {
+      return range.get();
+    }
+
+    return Distance.ZERO;
+  });
+  private Lazy.Resettable<Distance> weaponReach = new Lazy.Resettable<>(state, () -> {
+    Optional<Distance> reach = templates.stream()
+        .map(ItemTemplate::getReach)
+        .filter(Optional::isPresent)
+        .map(Optional::get)
+        .findFirst();
+
+    if (reach.isPresent()) {
+      return reach.get();
+    }
+
+    return Distance.ZERO;
+  });
+  private Lazy.Resettable<WeaponStyle> weaponStyle = new Lazy.Resettable<>(state, () -> {
+    Optional<Value.WeaponStyle> style = templates.stream()
+        .map(t -> t.getWeaponStyle())
+        .filter(s -> s != Value.WeaponStyle.UNRECOGNIZED && s != Value.WeaponStyle.UNKNOWN_STYLE)
+        .findFirst();
+
+    if (style.isPresent()) {
+      return WeaponStyle.fromProto(style.get());
+    }
+
+    return WeaponStyle.UNKNOWN;
+  });
+  private Lazy.Resettable<WeaponType> weaponType = new Lazy.Resettable<>(state, () -> {
+    Optional<Template.WeaponTemplateProto.Type> type = templates.stream()
+        .map(t -> t.getWeaponType())
+        .filter(s -> s != Template.WeaponTemplateProto.Type.UNKNOWN
+            && s != Template.WeaponTemplateProto.Type.UNRECOGNIZED)
+        .findFirst();
+
+    if (type.isPresent()) {
+      return WeaponType.fromProto(type.get());
+    }
+
+    return WeaponType.UNKNOWN;
+  });
+  private Lazy.Resettable<Weight> weight = new Lazy.Resettable<>(state, () -> {
+    Weight weight = count > 0 ? getRawWeight().multiply(multiple) : getRawWeight();
+    for (Item content : contents) {
+      weight = weight.add(content.getWeight());
+    }
+
+    return weight;
+  });
+  private Lazy.Resettable<List<String>> worlds = new Lazy.Resettable<>(state, () -> {
+    Optional<ItemTemplate> base = getBaseTemplate();
+    if (base.isPresent()) {
+      return base.get().getWorlds();
+    }
+
+    return Collections.emptyList();
+  });
+
+  private Lazy.Resettable<Size> wielderSize = new Lazy.Resettable<>(state, () -> templates.stream()
+      .map(ItemTemplate::getWielderSize)
+      .filter(s -> s != Size.UNKNOWN)
+      .max((a, b) -> a.ordinal() - b.ordinal())
+      .orElse(Size.UNKNOWN));
+
   public Item(String id, String name, List<ItemTemplate> templates, int hp, Money value,
               String appearance, String playerName, String playerNotes, String dmNotes,
-              int multiple, int multiuse, Duration timeLeft, boolean identified,
+              int multiple, int multiuse, int count, Duration timeLeft, boolean identified,
               List<Item> contents, History history) {
     this.id = id;
     this.name = name;
@@ -108,6 +326,7 @@ public class Item extends NestedDocument {
     this.dmNotes = dmNotes;
     this.multiple = multiple;
     this.multiuse = multiuse;
+    this.count = count;
     this.timeLeft = timeLeft;
     this.identified = identified;
     this.contents = new ArrayList<>(contents);
@@ -159,29 +378,11 @@ public class Item extends NestedDocument {
   }
 
   public List<Modifier> getArmorDeflectionModifiers() {
-    List<Modifier> modifiers = new ArrayList<>();
-
-    for (ItemTemplate template : templates) {
-      for (Modifier modifier :
-          template.getMagicModifiers(Template.MagicTemplateProto.Type.ARMOR_CLASS)) {
-        if (modifier.getType() == Modifier.Type.DEFLECTION) {
-          modifiers.add(modifier);
-        }
-      }
-    }
-
-    return modifiers;
+    return armorDeflectionModifiers.get();
   }
 
   public List<Modifier> getArmorModifiers() {
-    List<Modifier> modifiers = new ArrayList<>();
-
-    for (ItemTemplate template : templates) {
-      modifiers.addAll(template.getArmorModifiers());
-      modifiers.addAll(template.getMagicModifiers(Template.MagicTemplateProto.Type.ARMOR_CLASS));
-    }
-
-    return modifiers;
+    return armorModifiers.get();
   }
 
   public Optional<ItemTemplate> getBaseTemplate() {
@@ -193,15 +394,24 @@ public class Item extends NestedDocument {
   }
 
   public int getBreakDC() {
-    return templates.stream().mapToInt(t -> t.getBreakDC()).max().orElse(0);
+    return breakDC.get();
   }
 
   public Set<String> getCategories() {
-    return templates.stream().flatMap(t -> t.getCategories().stream()).collect(Collectors.toSet());
+    return categories.get();
   }
 
   public List<Item> getContents() {
     return Collections.unmodifiableList(this.contents);
+  }
+
+  public int getCount() {
+    return count;
+  }
+
+  public void setCount(int count) {
+    this.count = count;
+    state.reset();
   }
 
   public String getDMNotes() {
@@ -213,36 +423,19 @@ public class Item extends NestedDocument {
   }
 
   public Damage getDamage() {
-    return Damage.from(templates.stream()
-        .map(ItemTemplate::getDamage)
-        .collect(Collectors.toList()));
-  }
-
-  public List<Item> getDeepContents() {
-    List<Item> deep = new ArrayList<>(contents);
-    for (Item item : contents) {
-      deep.addAll(item.getDeepContents());
-    }
-
-    return deep;
+    return damage.get();
   }
 
   private RandomDuration getDonDuration() {
-    return templates.stream()
-        .map(t -> t.getDonDuration())
-        .max(RandomDuration::compareTo)
-        .orElse(RandomDuration.NULL);
+    return donDuration.get();
   }
 
   private RandomDuration getDonHastilyDuration() {
-    return templates.stream()
-        .map(t -> t.getDonHastilyDuration())
-        .max(RandomDuration::compareTo)
-        .orElse(RandomDuration.NULL);
+    return donHastilyDuration.get();
   }
 
   public int getHardness() {
-    return templates.stream().mapToInt(t -> t.getHardness()).max().orElse(0);
+    return hardness.get();
   }
 
   public History getHistory() {
@@ -255,62 +448,39 @@ public class Item extends NestedDocument {
 
   public void setHp(int hp) {
     this.hp = hp;
+    state.reset();
   }
 
   public String getId() {
     return id;
   }
 
-  // TODO(merlin): Remove this once the single caller is gone.
-  @Deprecated
-  public void setId(String id) {
-    this.id = id;
-  }
-
   public String getIncomplete() {
-    return Strings.NEWLINE_JOINER.join(templates.stream()
-        .map(ItemTemplate::getIncomplete)
-        .collect(Collectors.toList()));
+    return incomplete.get();
   }
 
   public List<Modifier> getMagicAttackModifiers() {
-    List<Modifier> modifiers = new ArrayList<>();
-    for (ItemTemplate template : templates) {
-      modifiers.addAll(template.getMagicAttackModifiers());
-    }
-
-    return modifiers;
+    return magicAttackModifiers.get();
   }
 
   public Multimap<MagicEffectType, Modifier> getMagicModifiers() {
-    Multimap<MagicEffectType, Modifier> modifiers = ArrayListMultimap.create();
-    for (ItemTemplate template : templates) {
-      modifiers.putAll(template.getMagicModifiers());
-    }
-
-    return modifiers;
+    return magicModifiers.get();
   }
 
   public int getMaxAmount() {
-    return maxAmount(templates);
+    return maxMultiple.get();
   }
 
   public int getMaxAttacks() {
-    return templates.stream()
-        .filter(t -> t.isWeapon())
-        .mapToInt(t -> t.getMaxAttacks())
-        .min().orElse(Integer.MAX_VALUE);
+    return maxAttacks.get();
   }
 
   public int getMaxDexterityModifier() {
-    return templates.stream()
-        .mapToInt(t -> t.getMaxDexterityModifier())
-        .min()
-        .orElse(Integer.MAX_VALUE);
+    return maxDexterityModifier.get();
   }
 
   public int getMaxUses() {
-    return maxUses(templates);
+    return maxUses.get();
   }
 
   public int getMultiple() {
@@ -319,6 +489,7 @@ public class Item extends NestedDocument {
 
   public void setMultiple(int multiple) {
     this.multiple = multiple;
+    state.reset();
   }
 
   public int getMultiuse() {
@@ -327,6 +498,7 @@ public class Item extends NestedDocument {
 
   public void setMultiuse(int multiuse) {
     this.multiuse = multiuse;
+    state.reset();
   }
 
   public String getName() {
@@ -335,6 +507,7 @@ public class Item extends NestedDocument {
 
   public void setName(String name) {
     this.name = name;
+    state.reset();
   }
 
   public String getPlayerName() {
@@ -358,15 +531,7 @@ public class Item extends NestedDocument {
   }
 
   public Probability getProbability() {
-    Probability result = Probability.UNKNOWN;
-    for (ItemTemplate template : templates) {
-      Probability probability = template.getProbability();
-      if (probability.ordinal() > result.ordinal()) {
-        result = probability;
-      }
-    }
-
-    return result;
+    return probability.get();
   }
 
   public Money getRawValue() {
@@ -374,67 +539,43 @@ public class Item extends NestedDocument {
   }
 
   public Weight getRawWeight() {
-    return weight(templates);
+    return rawWeight.get();
   }
 
   public List<String> getReferences() {
-    return templates.stream().flatMap(t -> t.getReferences().stream()).collect(Collectors.toList());
+    return referenes.get();
   }
 
   private RandomDuration getRemoveDuration() {
-    return templates.stream()
-        .map(t -> t.getRemoveDuration())
-        .max(RandomDuration::compareTo)
-        .orElse(RandomDuration.NULL);
+    return removeDuration.get();
   }
 
   public Damage getSecondaryDamage() {
-    return Damage.from(templates.stream().map(ItemTemplate::getSecondaryDamage)
-        .collect(Collectors.toList()));
+    return secondaryDamage.get();
   }
 
   public Size getSize() {
-    Optional<ItemTemplate> base = getBaseTemplate();
-    if (base.isPresent()) {
-      return base.get().getSize();
-    }
-
-    return Size.UNKNOWN;
+    return size.get();
   }
 
   public Slot getSlot() {
-    return templates.stream()
-        .map(ItemTemplate::getSlot)
-        .filter(s -> s != Slot.UNKNOWN)
-        .findFirst()
-        .orElse(Slot.UNKNOWN);
+    return slot.get();
   }
 
   public Damage getSplashDamage() {
-    return Damage.from(templates.stream().map(ItemTemplate::getSplashDamage)
-        .collect(Collectors.toList()));
+    return splashDamage.get();
   }
 
   public Substance getSubstance() {
-    Optional<ItemTemplate> base = getBaseTemplate();
-    if (base.isPresent()) {
-      return base.get().getSubstance();
-    }
-
-    return Substance.ZERO;
+    return substance.get();
   }
 
   public List<String> getSynonyms() {
-    Optional<ItemTemplate> base = getBaseTemplate();
-    if (base.isPresent()) {
-      return base.get().getSynonyms();
-    } else {
-      return Collections.emptyList();
-    }
+    return synonyms.get();
   }
 
   public List<String> getTemplateNames() {
-    return templates.stream().map(t -> t.getName()).collect(Collectors.toList());
+    return templateNames.get();
   }
 
   public List<ItemTemplate> getTemplates() {
@@ -443,6 +584,7 @@ public class Item extends NestedDocument {
 
   public void setTemplates(List<ItemTemplate> templates) {
     this.templates = new ArrayList<>(templates);
+    state.reset();
   }
 
   public Duration getTimeLeft() {
@@ -454,112 +596,44 @@ public class Item extends NestedDocument {
   }
 
   public Money getValue() {
-    Money totalValue = multiple > 0 ? value.multiply(multiple) : value;
-    for (Item content : contents) {
-      totalValue = totalValue.add(content.getValue());
-    }
-
-    return totalValue;
+    return totalValue.get();
   }
 
   public void setValue(Money value) {
     this.value = value;
+    state.reset();
   }
 
   public WeaponProficiency getWeaponProficiency() {
-    Optional<Value.Proficiency> type = templates.stream()
-        .map(t -> t.getWeaponProficiency())
-        .filter(s -> s != Value.Proficiency.UNKNOWN_PROFICIENCY
-            && s != Value.Proficiency.UNRECOGNIZED)
-        .findFirst();
-
-    if (type.isPresent()) {
-      return WeaponProficiency.fromProto(type.get());
-    }
-
-    return WeaponProficiency.UNKNOWN;
+    return weaponProficiency.get();
   }
 
   public Distance getWeaponRange() {
-    Optional<Distance> range = templates.stream()
-        .map(ItemTemplate::getRange)
-        .filter(Optional::isPresent)
-        .map(Optional::get)
-        .findFirst();
-
-    if (range.isPresent()) {
-      return range.get();
-    }
-
-    return Distance.ZERO;
+    return weaponRange.get();
   }
 
   public Distance getWeaponReach() {
-    Optional<Distance> reach = templates.stream()
-        .map(ItemTemplate::getReach)
-        .filter(Optional::isPresent)
-        .map(Optional::get)
-        .findFirst();
-
-    if (reach.isPresent()) {
-      return reach.get();
-    }
-
-    return Distance.ZERO;
+    return weaponReach.get();
   }
 
   public WeaponStyle getWeaponStyle() {
-    Optional<Value.WeaponStyle> style = templates.stream()
-        .map(t -> t.getWeaponStyle())
-        .filter(s -> s != Value.WeaponStyle.UNRECOGNIZED && s != Value.WeaponStyle.UNKNOWN_STYLE)
-        .findFirst();
-
-    if (style.isPresent()) {
-      return WeaponStyle.fromProto(style.get());
-    }
-
-    return WeaponStyle.UNKNOWN;
+    return weaponStyle.get();
   }
 
   public WeaponType getWeaponType() {
-    Optional<Template.WeaponTemplateProto.Type> type = templates.stream()
-        .map(t -> t.getWeaponType())
-        .filter(s -> s != Template.WeaponTemplateProto.Type.UNKNOWN
-            && s != Template.WeaponTemplateProto.Type.UNRECOGNIZED)
-        .findFirst();
-
-    if (type.isPresent()) {
-      return WeaponType.fromProto(type.get());
-    }
-
-    return WeaponType.UNKNOWN;
-
+    return weaponType.get();
   }
 
   public Weight getWeight() {
-    Weight weight = multiple > 0 ? getRawWeight().multiply(multiple) : getRawWeight();
-    for (Item content : contents) {
-      weight = weight.add(content.getWeight());
-    }
-
-    return weight;
+    return weight.get();
   }
 
   public Size getWielderSize() {
-    return templates.stream()
-        .map(ItemTemplate::getWielderSize)
-        .filter(s -> s != Size.UNKNOWN)
-        .max((a, b) -> a.ordinal() - b.ordinal())
-        .orElse(Size.UNKNOWN);
+    return wielderSize.get();
   }
 
   public List<String> getWorlds() {
-    Optional<ItemTemplate> base = getBaseTemplate();
-    if (base.isPresent()) {
-      return base.get().getWorlds();
-    }
-
-    return Collections.emptyList();
+    return worlds.get();
   }
 
   public boolean isAmmunition() {
@@ -591,19 +665,19 @@ public class Item extends NestedDocument {
   }
 
   public boolean isMagic() {
-    return templates.stream().filter(t -> t.isMagic()).findAny().isPresent();
+    return templates.stream().anyMatch(ItemTemplate::isMagic);
   }
 
   public boolean isMonetary() {
-    return templates.stream().filter(t -> t.isMonetary()).findAny().isPresent();
+    return templates.stream().anyMatch(ItemTemplate::isMonetary);
   }
 
   public boolean isWeapon() {
-    return templates.stream().filter(t -> t.isWeapon()).findAny().isPresent();
+    return templates.stream().anyMatch(ItemTemplate::isWeapon);
   }
 
   public boolean isWearable() {
-    return templates.stream().filter(t -> t.isWearable()).findAny().isPresent();
+    return templates.stream().anyMatch(ItemTemplate::isWearable);
   }
 
   public void add(Item item) {
@@ -640,6 +714,15 @@ public class Item extends NestedDocument {
     return false;
   }
 
+  public List<Item> collectDeepContents() {
+    List<Item> deep = new ArrayList<>(contents);
+    for (Item item : contents) {
+      deep.addAll(item.collectDeepContents());
+    }
+
+    return deep;
+  }
+
   public List<Modifier> computeAbilityModifers(Ability ability) {
     List<Modifier> modifiers = new ArrayList<>();
     for (ItemTemplate template : templates) {
@@ -662,7 +745,7 @@ public class Item extends NestedDocument {
         templates.stream().filter(ItemTemplate::isMultiple).findFirst();
     if (template.isPresent()) {
       ItemTemplate.Count count = template.get().getAmount();
-      return multiple + " / " + count.format();
+      return multiple + "/" + count.format();
     } else {
       return "";
     }
@@ -673,7 +756,7 @@ public class Item extends NestedDocument {
         templates.stream().filter(ItemTemplate::isCounted).findFirst();
     if (template.isPresent()) {
       ItemTemplate.Count count = template.get().getCounted();
-      return count.format();
+      return count + " / " + count.format();
     } else {
       return "";
     }
@@ -928,7 +1011,8 @@ public class Item extends NestedDocument {
         && timeLeft.equals(other.timeLeft)
         && identified == other.identified
         && contents.isEmpty() && other.contents.isEmpty()
-        && multiuse == other.multiuse
+        && other.multiuse == 0 && multiuse == 0
+        && other.multiple == 0 && multiple == 0
         && similar(templates, other.templates);
   }
 
@@ -963,6 +1047,7 @@ public class Item extends NestedDocument {
         .set(FIELD_PLAYER_NOTES, playerNotes)
         .set(FIELD_DM_NOTES, dmNotes)
         .set(FIELD_MULTIPLE, multiple)
+        .set(FIELD_COUNT, count)
         .set(FIELD_MULTIUSE, multiuse)
         .set(FIELD_TIME_LEFT, timeLeft.write())
         .set(FIELD_IDENTIFIED, identified)
@@ -998,7 +1083,7 @@ public class Item extends NestedDocument {
     String name = name(templates);
     return new Item(generateId(context), name, templates, hp(templates), value(templates),
         appearance(templates), names[0], "", "", Item.maxAmount(templates), Item.maxUses(templates),
-        Item.maxTime(templates), false,
+        Item.maxCount(templates), Item.maxTime(templates), false,
         Collections.emptyList(), History.create(creatorId, date));
   }
 
@@ -1019,6 +1104,7 @@ public class Item extends NestedDocument {
         "", "", proto.getDmNotes(),
         proto.getMultiple() > 0 ? proto.getMultiple() : Item.maxAmount(templates),
         proto.getMultiuse() > 0 ? proto.getMultiuse() : Item.maxUses(templates),
+        proto.getCount() > 0 ? proto.getCount() : Item.maxCount(templates),
         proto.hasTimeLeft() ? Duration.fromProto(proto.getTimeLeft()) : Item.maxTime(templates),
         false, Item.createLookupItems(context, proto.getContentList(), creatorId, date),
         History.create(creatorId, date));
@@ -1078,6 +1164,16 @@ public class Item extends NestedDocument {
     return 0;
   }
 
+  public static int maxCount(List<ItemTemplate> templates) {
+    Optional<ItemTemplate> template =
+        templates.stream().filter(ItemTemplate::isCounted).findFirst();
+    if (template.isPresent()) {
+      return template.get().getCounted().getCount();
+    }
+
+    return 1;
+  }
+
   public static Duration maxTime(List<ItemTemplate> templates) {
     Duration result = Duration.ZERO;
 
@@ -1128,6 +1224,7 @@ public class Item extends NestedDocument {
     String dmNotes = data.get(FIELD_DM_NOTES, "");
     int multiple = data.get(FIELD_MULTIPLE, 0);
     int multiuse = data.get(FIELD_MULTIUSE, 0);
+    int count = data.get(FIELD_COUNT, 0);
     Duration timeLeft = Duration.read(data.getNested(FIELD_TIME_LEFT));
     boolean identified = data.get(FIELD_IDENTIFIED, false);
     List<Item> contents = data.getNestedList(FIELD_CONTENTS).stream()
@@ -1136,7 +1233,7 @@ public class Item extends NestedDocument {
     History history = History.read(data.getNested(FIELD_HISTORY));
 
     return new Item(id, name, templates, hp, value, appearance, playerName, playerNotes, dmNotes,
-        multiple, multiuse, timeLeft, identified, contents, history);
+        multiple, multiuse, count, timeLeft, identified, contents, history);
   }
 
   private static ItemTemplate template(String name) {

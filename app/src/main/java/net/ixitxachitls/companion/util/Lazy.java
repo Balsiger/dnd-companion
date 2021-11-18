@@ -21,15 +21,16 @@
 
 package net.ixitxachitls.companion.util;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
  * A container for handling a lazy object.
  */
-
 public class Lazy<T> {
   private final Data<T> loader;
-  private Optional<T> data = Optional.empty();
+  protected Optional<T> data = Optional.empty();
 
   public Lazy(Data<T> loader) {
     this.loader = loader;
@@ -46,5 +47,34 @@ public class Lazy<T> {
     }
 
     return data.get();
+  }
+
+  public static class State {
+    private List<Resettable<?>> lazies = new ArrayList<>();
+
+    public State() {
+    }
+
+    public void reset() {
+      for (Resettable<?> lazy : lazies) {
+        lazy.reset();
+      }
+    }
+
+    protected void add(Resettable<?> lazy) {
+      lazies.add(lazy);
+    }
+  }
+
+  public static class Resettable<T> extends Lazy<T> {
+    public Resettable(State state, Data<T> loader) {
+      super(loader);
+
+      state.add(this);
+    }
+
+    protected void reset() {
+      data = Optional.empty();
+    }
   }
 }

@@ -194,8 +194,11 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
   }
 
   private String buildItemName() {
-    String prefix = item.getMultiple() > 1 ? item.getMultiple() + "x " : "";
+    String prefix = item.getCount() > 1 ? item.getCount() + "x " : "";
     String postfix = item.getMultiuse() > 1 ? " (" + item.getMultiuse() + " uses)" : "";
+    if (item.getMultiple() > 1) {
+      postfix += (postfix.isEmpty() ? "" : " ") + "(" + item.formatAmount() + ")";
+    }
 
     if (owner.amDM()) {
       return prefix + item.getName() + postfix;

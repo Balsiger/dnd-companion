@@ -221,6 +221,29 @@ public class Texts {
         } else {
           break;
         }
+
+      case "ranges":
+        if (arguments.size() >= 1 && arguments.get(0) instanceof IntegerValue) {
+          int value = ((IntegerValue) arguments.get(0)).value;
+          for (int i = 1; i < arguments.size(); i++) {
+            if (!(arguments.get(i) instanceof StringValue)) {
+              return arguments.get(i);
+            }
+
+            String[] parts = ((StringValue) arguments.get(i)).value.split("\\s*:\\s*");
+            if (parts.length == 2) {
+              if (value <= Integer.parseInt(parts[0])) {
+                return new StringValue(parts[1]);
+              }
+            } else {
+              return arguments.get(i);
+            }
+          }
+
+          return new StringValue("no match for ranges");
+        } else {
+          break;
+        }
     }
 
     return new StringValue(name + "<" + Strings.COMMA_JOINER.join(arguments) + ">");
@@ -482,18 +505,24 @@ public class Texts {
       this.values = new HashMap<>(values);
     }
 
-    public Values put(String key, int value) {
-      return put(key, new IntegerValue(value));
+    public Values add(List<String> texts) {
+      Values values = new Values(this.values);
+      for (String text : texts) {
+        String[] parts = text.split("\\s*=\\s*");
+        if (parts.length == 2) {
+          try {
+            values.put(parts[0], Integer.parseInt(parts[1]));
+          } catch (NumberFormatException e) {
+            values.put(parts[0], parts[1]);
+          }
+        }
+      }
+
+      return values;
     }
 
-    public Values put(String key, String value) {
-      return put(key, new StringValue(value));
-    }
-
-    public Values put(String key, Value value) {
-      values.put(key, value);
-
-      return this;
+    public boolean containsKey(String key) {
+      return values.containsKey(key);
     }
 
     public int get(String key, int defaultValue) {
@@ -504,6 +533,11 @@ public class Texts {
       return defaultValue;
     }
 
+    public @Nullable
+    Value get(String key) {
+      return values.get(key);
+    }
+
     public String get(String key, String defaultValue) {
       if (values.get(key) instanceof StringValue) {
         return ((StringValue) values.get(key)).value;
@@ -512,12 +546,25 @@ public class Texts {
       return defaultValue;
     }
 
-    public boolean containsKey(String key) {
-      return values.containsKey(key);
+    public Values put(String key, Value value) {
+      values.put(key, value);
+
+      return this;
     }
 
-    public @Nullable Value get(String key) {
-      return values.get(key);
+    public Values put(String key, int value) {
+      return put(key, new IntegerValue(value));
+    }
+
+    public Values put(String key, String value) {
+      return put(key, new StringValue(value));
+    }
+
+    @Override
+    public String toString() {
+      return values.entrySet().stream()
+          .map(e -> e.getKey() + ": " + e.getValue())
+          .collect(Collectors.joining("\n"));
     }
   }
 

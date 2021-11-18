@@ -76,6 +76,7 @@ public class EditItemDialog extends Dialog {
   private LabelledEditTextView appearance;
   private LabelledEditTextView multiple;
   private LabelledEditTextView multiuse;
+  private LabelledEditTextView count;
   private LabelledEditTextView timeLeft;
   private LabelledEditTextView playerNotes;
   private LabelledEditTextView dmNotes;
@@ -141,6 +142,7 @@ public class EditItemDialog extends Dialog {
     appearance = view.findViewById(R.id.appearance);
     multiple = view.findViewById(R.id.multiple);
     multiuse = view.findViewById(R.id.multiuse);
+    count = view.findViewById(R.id.count);
     timeLeft = view.findViewById(R.id.time_left);
     playerNotes = view.findViewById(R.id.player_notes);
     dmNotes = view.findViewById(R.id.dm_notes);
@@ -153,6 +155,14 @@ public class EditItemDialog extends Dialog {
       save.gone();
       name.gone();
     }
+  }
+
+  private int parseCount() {
+    if (count.isEmpty()) {
+      return 1;
+    }
+
+    return Integer.parseInt(count.getText());
   }
 
   private int parseHp() {
@@ -238,8 +248,9 @@ public class EditItemDialog extends Dialog {
             baseTemplate.get().getName(),
             templates, parseHp(),
             itemValue.get(), appearance.getText(), "", "", "", parseMultiple(), parseMultiuse(),
-            Duration.ZERO, false, Collections.emptyList(), History.create(me().getId(),
-            campaigns().getCampaignFromNestedId(owner.getId()).getDate())));
+            parseCount(), Duration.ZERO, false, Collections.emptyList(),
+            History.create(me().getId(),
+                campaigns().getCampaignFromNestedId(owner.getId()).getDate())));
       }
     }
 

@@ -37,6 +37,7 @@ import net.ixitxachitls.companion.data.templates.QualityTemplate;
 import net.ixitxachitls.companion.data.templates.SkillTemplate;
 import net.ixitxachitls.companion.data.templates.SpellTemplate;
 import net.ixitxachitls.companion.data.templates.WorldTemplate;
+import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
@@ -91,6 +92,11 @@ public class Templates {
   @FunctionalInterface
   public interface Callback {
     public void call();
+  }
+
+  @FunctionalInterface
+  public interface Collector {
+    public List<Modifier> collect(ItemTemplate template);
   }
 
   public TemplatesStore<AdventureTemplate> getAdventureTemplates() {
@@ -261,6 +267,18 @@ public class Templates {
     for (Callback callback : loadedCallbacks) {
       callback.call();
     }
+  }
+
+  public static List<Modifier> collectModifiers(List<ItemTemplate> templates,
+                                                Collector... collectors) {
+    List<Modifier> modifiers = new ArrayList<>();
+    for (ItemTemplate template : templates) {
+      for (Collector collector : collectors) {
+        modifiers.addAll(collector.collect(template));
+      }
+    }
+
+    return modifiers;
   }
 
   public static Templates get() {

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2017-2020 Peter Balsiger
   ~ All rights reserved
   ~
@@ -57,7 +56,7 @@
       android:textStyle="bold"
       android:theme="@style/LargeText" />
 
-  <TextView
+  <net.ixitxachitls.companion.ui.views.FormattedTextView
       android:id="@+id/short_description"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -65,13 +64,13 @@
       android:text="... short description ..."
       android:theme="@style/LargeText" />
 
-  <TextView
+  <net.ixitxachitls.companion.ui.views.FormattedTextView
       android:id="@+id/description"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginBottom="10dp"
       android:text="... description ..."
-      android:theme="@style/LargeText" />
+      android:theme="@style/SmallText" />
 
   <LinearLayout
       android:layout_width="match_parent"
@@ -303,8 +302,8 @@
         android:id="@+id/label_dm_magic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Magic: "
         android:tag="dm"
+        android:text="Magic: "
         android:textStyle="bold"
         android:theme="@style/LargeText" />
 
@@ -327,8 +326,8 @@
         android:id="@+id/label_dm_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time: "
         android:tag="dm"
+        android:text="Time: "
         android:textStyle="bold"
         android:theme="@style/LargeText" />
 
@@ -485,9 +484,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:tag="dm"
         android:text="Categories: "
         android:textStyle="bold"
-        android:tag="dm"
         android:theme="@style/LargeText" />
 
     <TextView

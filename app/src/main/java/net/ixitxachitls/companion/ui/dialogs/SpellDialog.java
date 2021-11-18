@@ -1,7 +1,6 @@
 package net.ixitxachitls.companion.ui.dialogs;
 
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
 import android.view.View;
 
 import com.google.common.base.Preconditions;
@@ -12,7 +11,7 @@ import net.ixitxachitls.companion.data.enums.MetaMagic;
 import net.ixitxachitls.companion.data.enums.SpellClass;
 import net.ixitxachitls.companion.data.templates.SpellTemplate;
 import net.ixitxachitls.companion.proto.Template;
-import net.ixitxachitls.companion.proto.Value;
+import net.ixitxachitls.companion.ui.views.FormattedTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.util.Strings;
 import net.ixitxachitls.companion.util.Texts;
@@ -22,18 +21,16 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import androidx.annotation.ColorRes;
 import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
 
 /**
  * A dialog to show spell information.
  */
 public class SpellDialog extends Dialog {
 
-  public static final String VALUE_CASTER_LEVEL = "caster level";
-  public static final String VALUE_SPELL_ABILITY_BONUS = "spell ability bonus";
-  public static final String VALUE_SPELL_CLASS = "spell class";
+  public static final String VALUE_CASTER_LEVEL = "caster_level";
+  public static final String VALUE_SPELL_ABILITY_BONUS = "spell_ability_bonus";
+  public static final String VALUE_SPELL_CLASS = "spell_class";
 
   private static final String ARG_SPELL = "spell";
   private static final String ARG_CASTER_LEVEL = "caster_level";
@@ -71,9 +68,9 @@ public class SpellDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     if (metaMagics.isEmpty()) {
-      TextWrapper.wrap(view, R.id.name).text(spell.getName());
+      setTitle(spell.getName());
     } else {
-      TextWrapper.wrap(view, R.id.name).text(spell.getName() + " [" +
+      setTitle(spell.getName() + " [" +
           Strings.COMMA_JOINER.join(metaMagics.stream()
               .map(MetaMagic::getName).collect(Collectors.toList())) + "]");
     }
@@ -101,20 +98,17 @@ public class SpellDialog extends Dialog {
     TextWrapper.wrap(view, R.id.incomplete).text(spell.getIncomplete())
         .visible(!incomplete.isEmpty());
 
-    TextWrapper.wrap(view, R.id.description)
-        .text(Texts.processCommands(getContext(), spell.getDescription(),
-            new Texts.Values()
-                .put(VALUE_CASTER_LEVEL, casterLevel)
-                .put(VALUE_SPELL_ABILITY_BONUS, abilityBonus)
-                .put(VALUE_SPELL_CLASS, spellClass.getName())))
-        .get().setMovementMethod(LinkMovementMethod.getInstance());
+    ((FormattedTextView) view.findViewById(R.id.description))
+        .text(spell.getDescription(), new Texts.Values()
+            .put(VALUE_CASTER_LEVEL, casterLevel)
+            .put(VALUE_SPELL_ABILITY_BONUS, abilityBonus)
+            .put(VALUE_SPELL_CLASS, spellClass.getName()));
   }
 
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String spell, int casterLevel,
+  protected static Bundle arguments(@LayoutRes int layoutId, String spell, int casterLevel,
                                     int abilityBonus, SpellClass spellClass,
                                     List<MetaMagic> metaMagics) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    Bundle arguments = Dialog.arguments(layoutId, R.string.spell, R.color.spell, R.color.spellText);
     arguments.putString(ARG_SPELL, spell);
     arguments.putInt(ARG_CASTER_LEVEL, casterLevel);
     arguments.putInt(ARG_ABILITY_BONUS, abilityBonus);
@@ -129,7 +123,7 @@ public class SpellDialog extends Dialog {
                                         SpellClass spellClass, List<MetaMagic> metaMagics) {
     SpellDialog fragment = new SpellDialog();
     fragment.setArguments(arguments(R.layout.dialog_spell,
-        R.string.spell, R.color.spell, spell, casterLevel, abilityBonus, spellClass, metaMagics));
+        spell, casterLevel, abilityBonus, spellClass, metaMagics));
     return fragment;
   }
 }
