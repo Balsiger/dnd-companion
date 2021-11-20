@@ -164,13 +164,13 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
 
       refreshSlots();
 
-      wealth.text(character.totalValue().simplify().toString());
-      Weight totalWeight = character.totalWeight();
+      wealth.text(character.getTotalValue().simplify().toString());
+      Weight totalWeight = character.getTotalWeight();
       weight.text(totalWeight.toString() + " (" + Items.encumbrance((int) totalWeight.asPounds(),
           character.getStrength().total()) + ")");
-      ac.set(character.normalArmorClass());
-      acTouch.set(character.touchArmorClass());
-      acFlat.set(character.flatFootedArmorClass());
+      ac.set(character.getNormalArmorClass());
+      acTouch.set(character.getTouchArmorClass());
+      acFlat.set(character.getFlatFootedArmorClass());
       view.setOnDragListener((v, e) -> onItemDrag(v, e));
       addItem.visible(character.amPlayer() || character.amDM());
 

@@ -46,6 +46,7 @@ import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.rules.XP;
+import net.ixitxachitls.companion.util.Lazy;
 import net.ixitxachitls.companion.util.Texts;
 
 import java.util.ArrayList;
@@ -81,8 +82,8 @@ public class Character extends Creature<Character> implements Comparable<Charact
   private int level;
   private List<Level> levels = new ArrayList<>();
 
-  @Override
-  public int getBaseAttackBonus() {
+  // Lazy values.
+  private Lazy.Resettable<Integer> baseAttackBonus = new Lazy.Resettable<>(state, () -> {
     int attack = 0;
     Multiset<String> names = HashMultiset.create();
     for (Level level : levels) {
@@ -91,16 +92,210 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     return attack;
+  });
+  private Lazy.Resettable<ModifiedValue> charisma = new Lazy.Resettable<>(state, () ->
+      adjustAbility(super.getCharisma(), Ability.CHARISMA));
+  private Lazy.Resettable<ModifiedValue> charismaCheck = new Lazy.Resettable<>(state, () ->
+      adjustAbilityCheck(super.getCharismaCheck(), Ability.CHARISMA));
+  private Lazy.Resettable<ModifiedValue> constitution = new Lazy.Resettable<>(state, () ->
+      adjustAbility(super.getConstitution(), Ability.CONSTITUTION));
+  private Lazy.Resettable<ModifiedValue> constitutionCheck = new Lazy.Resettable<>(state, () ->
+      adjustAbilityCheck(super.getConstitutionCheck(), Ability.CONSTITUTION));
+  private Lazy.Resettable<ModifiedValue> dexterity = new Lazy.Resettable<>(state, () ->
+      adjustAbility(super.getDexterity(), Ability.DEXTERITY));
+  private Lazy.Resettable<ModifiedValue> dexterityCheck = new Lazy.Resettable<>(state, () ->
+      adjustAbilityCheck(super.getDexterityCheck(), Ability.DEXTERITY));
+  private Lazy.Resettable<ModifiedValue> fortitude = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue value = super.getFortitude();
+
+    // Modifiers from class.
+    Multiset<LevelTemplate> counted = Level.countedNames(levels);
+    for (LevelTemplate level : counted.elementSet()) {
+      value.add(new Modifier(level.getFortitudeModifier(counted.count(level)),
+          Modifier.Type.GENERAL, level.getName()));
+    }
+
+    // Modifiers from items.
+    for (Item item : getItems()) {
+      if (isWearing(item) && item.isMagic()) {
+        value.add(item.getMagicModifiers(MagicEffectType.FORTITUDE));
+      }
+    }
+
+    return value;
+  });
+  private Lazy.Resettable<ModifiedValue> initiative = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue value = super.getInitiative();
+
+    for (Level level : levels) {
+      if (level.getFeat().isPresent()) {
+        value.add(level.getFeat().get().getInitiativeAdjustment());
+      }
+    }
+
+    return value;
+  });
+  private Lazy.Resettable<ModifiedValue> intelligence = new Lazy.Resettable<>(state, () ->
+      adjustAbility(super.getIntelligence(), Ability.INTELLIGENCE));
+  private Lazy.Resettable<ModifiedValue> intelligenceCheck = new Lazy.Resettable<>(state, () ->
+      adjustAbilityCheck(super.getIntelligenceCheck(), Ability.INTELLIGENCE));
+  private Lazy.Resettable<Integer> maxHp = new Lazy.Resettable<>(state, () -> {
+    int hp = 0;
+    for (Level level : levels) {
+      hp += Math.max(1, level.getHp() + getConstitutionModifier());
+    }
+
+    return hp;
+  });
+  private Lazy.Resettable<ModifiedValue> reflex = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue value = super.getReflex();
+
+    // Modifiers from class.
+    Multiset<LevelTemplate> counted = Level.countedNames(levels);
+    for (LevelTemplate level : counted.elementSet()) {
+      value.add(new Modifier(level.getReflexModifier(counted.count(level)),
+          Modifier.Type.GENERAL, level.getName()));
+    }
+
+    // Modifiers from items.
+    for (Item item : getItems()) {
+      if (isWearing(item) && item.isMagic()) {
+        value.add(item.getMagicModifiers(MagicEffectType.REFLEX));
+      }
+    }
+
+    return value;
+  });
+  private Lazy.Resettable<ModifiedValue> strength = new Lazy.Resettable<>(state, () ->
+      adjustAbility(super.getStrength(), Ability.STRENGTH));
+  private Lazy.Resettable<ModifiedValue> strengthCheck = new Lazy.Resettable<>(state, () ->
+      adjustAbilityCheck(super.getStrengthCheck(), Ability.STRENGTH));
+  private Lazy.Resettable<ModifiedValue> will = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue value = super.getWill();
+
+    // Modifiers from class.
+    Multiset<LevelTemplate> counted = Level.countedNames(levels);
+    for (LevelTemplate level : counted.elementSet()) {
+      value.add(new Modifier(level.getWillModifier(counted.count(level)),
+          Modifier.Type.GENERAL, level.getName()));
+    }
+
+    // Modifiers from items.
+    for (Item item : getItems()) {
+      if (isWearing(item) && item.isMagic()) {
+        value.add(item.getMagicModifiers(MagicEffectType.WILL));
+      }
+    }
+
+
+    return value;
+  });
+  private Lazy.Resettable<ModifiedValue> wisdom = new Lazy.Resettable<>(state, () ->
+      adjustAbility(super.getWisdom(), Ability.WISDOM));
+  private Lazy.Resettable<ModifiedValue> wisdomCheck = new Lazy.Resettable<>(state, () ->
+      adjustAbilityCheck(super.getWisdomCheck(), Ability.WISDOM));
+  private Lazy.Resettable<Set<Feat>> feats = new Lazy.Resettable<>(state, () -> {
+    Set<Feat> feats = new HashSet<>();
+
+    // Feats set in levels.
+    for (Level level : levels) {
+      if (level.getFeat().isPresent()) {
+        feats.add(level.getFeat().get());
+      }
+      if (level.getClassFeat().isPresent()) {
+        feats.add(level.getClassFeat().get());
+      }
+      if (level.getRacialFeat().isPresent()) {
+        feats.add(level.getRacialFeat().get());
+      }
+
+      // Automatic feats by class.
+      feats.addAll(level.getAutomaticFeats());
+    }
+
+    // Automatic feats by race.
+    if (getRace().isPresent()) {
+      feats.addAll(getRace().get().getAutomaticFeats());
+    }
+
+    return feats;
+  });
+  private Lazy.Resettable<Map<String, Texts.Value>> formatValues =
+      new Lazy.Resettable<>(state, () -> ImmutableMap.<String, Texts.Value>builder()
+          .put("strength_modifier", new Texts.IntegerValue(getStrengthModifier()))
+          .put("dexterity_modifier", new Texts.IntegerValue(getDexterityModifier()))
+          .put("constitution_modifier", new Texts.IntegerValue(getConstitutionModifier()))
+          .put("intelligenve_modifier", new Texts.IntegerValue(getIntelligenceModifier()))
+          .put("widsom_modifier", new Texts.IntegerValue(getWisdomModifier()))
+          .put("charisma_modifier", new Texts.IntegerValue(getCharismaModifier()))
+          .build());
+  private Lazy.Resettable<Multimap<String, Quality>> qualities =
+      new Lazy.Resettable<>(state, () -> {
+        // Need to copy, as super might return an immutable map.
+        Multimap<String, Quality> qualities = HashMultimap.create(super.collectQualities());
+
+        // Qualities from levels.
+        Multiset<String> names = HashMultiset.create();
+        for (Level level : levels) {
+          names.add(level.getTemplate().getName());
+          qualities.putAll(
+              Multimaps.index(level.getQualities(names.count(level.getTemplate().getName())),
+                  Quality::getName));
+        }
+
+        // TODO(merlin): Add qualities by items.
+
+        return qualities;
+      });
+  private Lazy.Resettable<Map<String, ModifiedValue>> skillRanks =
+      new Lazy.Resettable<>(state, () -> {
+        Map<String, ModifiedValue> ranks = new HashMap<>();
+
+        Multiset<String> levelNames = HashMultiset.create();
+        for (Level level : levels) {
+          levelNames.add(level.getTemplate().getName());
+          for (Map.Entry<String, Integer> skillRank : level.getSkills().entrySet()) {
+            ranks.put(skillRank.getKey(),
+                ranks.getOrDefault(skillRank.getKey(), new ModifiedValue(skillRank.getKey(), 0,
+                    true))
+                    .add(new Modifier(skillRank.getValue(), Modifier.Type.GENERAL,
+                        level.getTemplate().getName()
+                            + levelNames.count(level.getTemplate().getName()))));
+          }
+        }
+
+        return ranks;
+      });
+  private Lazy.Resettable<SortedMap<String, ModifiedValue>> skills =
+      new Lazy.Resettable<>(state, () -> {
+        Map<String, ModifiedValue> skillRanks = collectSkillRanks();
+        SortedMap<String, ModifiedValue> skills = new TreeMap<>();
+        for (SkillTemplate skill : Templates.get().getSkillTemplates().getValues()) {
+          ModifiedValue ranks =
+              skillRanks.getOrDefault(skill.getName(), new ModifiedValue(skill.getName(), 0, true))
+                  .add(new Modifier(getAbilityModifier(skill.getAbility()), Modifier.Type.GENERAL,
+                      skill.getAbility().getName()));
+          if (ranks.total() != 0) {
+            skills.put(skill.getName(), ranks);
+          }
+        }
+
+        return skills;
+      });
+
+  @Override
+  public int getBaseAttackBonus() {
+    return baseAttackBonus.get();
   }
 
   @Override
   public ModifiedValue getCharisma() {
-    return adjustAbility(super.getCharisma(), Ability.CHARISMA);
+    return charisma.get();
   }
 
   @Override
   public ModifiedValue getCharismaCheck() {
-    return adjustAbilityCheck(super.getCharismaCheck(), Ability.CHARISMA);
+    return charismaCheck.get();
   }
 
   public List<ConditionData> getConditionsHistory() {
@@ -109,32 +304,42 @@ public class Character extends Creature<Character> implements Comparable<Charact
 
   @Override
   public ModifiedValue getConstitution() {
-    return adjustAbility(super.getConstitution(), Ability.CONSTITUTION);
+    return constitution.get();
   }
 
   @Override
   public ModifiedValue getConstitutionCheck() {
-    return adjustAbilityCheck(super.getConstitutionCheck(), Ability.CONSTITUTION);
+    return constitutionCheck.get();
   }
 
   @Override
   public ModifiedValue getDexterity() {
-    return adjustAbility(super.getDexterity(), Ability.DEXTERITY);
+    return dexterity.get();
   }
 
   @Override
   public ModifiedValue getDexterityCheck() {
-    return adjustAbilityCheck(super.getDexterityCheck(), Ability.DEXTERITY);
+    return dexterityCheck.get();
+  }
+
+  @Override
+  public ModifiedValue getFortitude() {
+    return fortitude.get();
+  }
+
+  @Override
+  public ModifiedValue getInitiative() {
+    return initiative.get();
   }
 
   @Override
   public ModifiedValue getIntelligence() {
-    return adjustAbility(super.getIntelligence(), Ability.INTELLIGENCE);
+    return intelligence.get();
   }
 
   @Override
   public ModifiedValue getIntelligenceCheck() {
-    return adjustAbilityCheck(super.getIntelligenceCheck(), Ability.INTELLIGENCE);
+    return intelligenceCheck.get();
   }
 
   public int getLevel() {
@@ -156,12 +361,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
 
   @Override
   public int getMaxHp() {
-    int hp = 0;
-    for (Level level : levels) {
-      hp += Math.max(1, level.getHp() + getConstitutionModifier());
-    }
-
-    return hp;
+    return maxHp.get();
   }
 
   public int getMaxLevel() {
@@ -173,23 +373,33 @@ public class Character extends Creature<Character> implements Comparable<Charact
   }
 
   @Override
+  public ModifiedValue getReflex() {
+    return reflex.get();
+  }
+
+  @Override
   public ModifiedValue getStrength() {
-    return adjustAbility(super.getStrength(), Ability.STRENGTH);
+    return strength.get();
   }
 
   @Override
   public ModifiedValue getStrengthCheck() {
-    return adjustAbilityCheck(super.getStrengthCheck(), Ability.STRENGTH);
+    return strengthCheck.get();
+  }
+
+  @Override
+  public ModifiedValue getWill() {
+    return will.get();
   }
 
   @Override
   public ModifiedValue getWisdom() {
-    return adjustAbility(super.getWisdom(), Ability.WISDOM);
+    return wisdom.get();
   }
 
   @Override
   public ModifiedValue getWisdomCheck() {
-    return adjustAbilityCheck(super.getWisdomCheck(), Ability.WISDOM);
+    return wisdomCheck.get();
   }
 
   public int getXp() {
@@ -233,77 +443,21 @@ public class Character extends Creature<Character> implements Comparable<Charact
 
   @Override
   public Set<Feat> collectFeats() {
-    Set<Feat> feats = new HashSet<>();
-
-    // Feats set in levels.
-    for (Level level : levels) {
-      if (level.getFeat().isPresent()) {
-        feats.add(level.getFeat().get());
-      }
-      if (level.getClassFeat().isPresent()) {
-        feats.add(level.getClassFeat().get());
-      }
-      if (level.getRacialFeat().isPresent()) {
-        feats.add(level.getRacialFeat().get());
-      }
-
-      // Automatic feats by class.
-      feats.addAll(level.getAutomaticFeats());
-    }
-
-    // Automatic feats by race.
-    if (getRace().isPresent()) {
-      feats.addAll(getRace().get().getAutomaticFeats());
-    }
-
-    return feats;
+    return feats.get();
   }
 
   public Map<String, Texts.Value> collectFormatValues() {
-    return ImmutableMap.<String, Texts.Value>builder()
-        .put("strength_modifier", new Texts.IntegerValue(getStrengthModifier()))
-        .put("dexterity_modifier", new Texts.IntegerValue(getDexterityModifier()))
-        .put("constitution_modifier", new Texts.IntegerValue(getConstitutionModifier()))
-        .put("intelligenve_modifier", new Texts.IntegerValue(getIntelligenceModifier()))
-        .put("widsom_modifier", new Texts.IntegerValue(getWisdomModifier()))
-        .put("charisma_modifier", new Texts.IntegerValue(getCharismaModifier()))
-        .build();
+    return formatValues.get();
   }
 
   @Override
   public Multimap<String, Quality> collectQualities() {
-    // Need to copy, as super might return an immutable map.
-    Multimap<String, Quality> qualities = HashMultimap.create(super.collectQualities());
-
-    // Qualities from levels.
-    Multiset<String> names = HashMultiset.create();
-    for (Level level : levels) {
-      names.add(level.getTemplate().getName());
-      qualities.putAll(
-          Multimaps.index(level.getQualities(names.count(level.getTemplate().getName())),
-              Quality::getName));
-    }
-
-    // TODO(merlin): Add qualities by items.
-
-    return qualities;
+    return qualities.get();
   }
 
   // Skills not returned have a total modifier of +0.
   public SortedMap<String, ModifiedValue> collectSkills() {
-    Map<String, ModifiedValue> skillRanks = collectSkillRanks();
-    SortedMap<String, ModifiedValue> skills = new TreeMap<>();
-    for (SkillTemplate skill : Templates.get().getSkillTemplates().getValues()) {
-      ModifiedValue ranks =
-          skillRanks.getOrDefault(skill.getName(), new ModifiedValue(skill.getName(), 0, true))
-              .add(new Modifier(getAbilityModifier(skill.getAbility()), Modifier.Type.GENERAL,
-                  skill.getAbility().getName()));
-      if (ranks.total() != 0) {
-        skills.put(skill.getName(), ranks);
-      }
-    }
-
-    return skills;
+    return skills.get();
   }
 
   @Override
@@ -319,27 +473,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
   public void delete(Level level) {
     levels.remove(level);
     store();
-  }
-
-  @Override
-  public ModifiedValue fortitude() {
-    ModifiedValue value = super.fortitude();
-
-    // Modifiers from class.
-    Multiset<LevelTemplate> counted = Level.countedNames(levels);
-    for (LevelTemplate level : counted.elementSet()) {
-      value.add(new Modifier(level.getFortitudeModifier(counted.count(level)),
-          Modifier.Type.GENERAL, level.getName()));
-    }
-
-    // Modifiers from items.
-    for (Item item : getItems()) {
-      if (isWearing(item) && item.isMagic()) {
-        value.add(item.getMagicModifiers(MagicEffectType.FORTITUDE));
-      }
-    }
-
-    return value;
   }
 
   public int getClassLevel(String className, int totalLevel) {
@@ -362,40 +495,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return Optional.empty();
   }
 
-  @Override
-  public ModifiedValue initiative() {
-    ModifiedValue value = super.initiative();
-
-    for (Level level : levels) {
-      if (level.getFeat().isPresent()) {
-        value.add(level.getFeat().get().getInitiativeAdjustment());
-      }
-    }
-
-    return value;
-  }
-
-  @Override
-  public ModifiedValue reflex() {
-    ModifiedValue value = super.reflex();
-
-    // Modifiers from class.
-    Multiset<LevelTemplate> counted = Level.countedNames(levels);
-    for (LevelTemplate level : counted.elementSet()) {
-      value.add(new Modifier(level.getReflexModifier(counted.count(level)),
-          Modifier.Type.GENERAL, level.getName()));
-    }
-
-    // Modifiers from items.
-    for (Item item : getItems()) {
-      if (isWearing(item) && item.isMagic()) {
-        value.add(item.getMagicModifiers(MagicEffectType.REFLEX));
-      }
-    }
-
-    return value;
-  }
-
   public void setLevel(int number, Level level) {
     if (number - 1 < levels.size()) {
       levels.set(number - 1, level);
@@ -406,6 +505,8 @@ public class Character extends Creature<Character> implements Comparable<Charact
     } else {
       Status.error("Cannot add level " + number);
     }
+
+    state.reset();
   }
 
   @Override
@@ -425,6 +526,8 @@ public class Character extends Creature<Character> implements Comparable<Charact
         }
       }
     }
+
+    state.reset();
   }
 
   public List<String> validateLevels() {
@@ -444,28 +547,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     return errors;
-  }
-
-  @Override
-  public ModifiedValue will() {
-    ModifiedValue value = super.will();
-
-    // Modifiers from class.
-    Multiset<LevelTemplate> counted = Level.countedNames(levels);
-    for (LevelTemplate level : counted.elementSet()) {
-      value.add(new Modifier(level.getWillModifier(counted.count(level)),
-          Modifier.Type.GENERAL, level.getName()));
-    }
-
-    // Modifiers from items.
-    for (Item item : getItems()) {
-      if (isWearing(item) && item.isMagic()) {
-        value.add(item.getMagicModifiers(MagicEffectType.WILL));
-      }
-    }
-
-
-    return value;
   }
 
   @Override
@@ -548,21 +629,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
   }
 
   private Map<String, ModifiedValue> collectSkillRanks() {
-    Map<String, ModifiedValue> ranks = new HashMap<>();
-
-    Multiset<String> levelNames = HashMultiset.create();
-    for (Level level : levels) {
-      levelNames.add(level.getTemplate().getName());
-      for (Map.Entry<String, Integer> skillRank : level.getSkills().entrySet()) {
-        ranks.put(skillRank.getKey(),
-            ranks.getOrDefault(skillRank.getKey(), new ModifiedValue(skillRank.getKey(), 0, true))
-                .add(new Modifier(skillRank.getValue(), Modifier.Type.GENERAL,
-                    level.getTemplate().getName()
-                        + levelNames.count(level.getTemplate().getName()))));
-      }
-    }
-
-    return ranks;
+    return skillRanks.get();
   }
 
   @Override

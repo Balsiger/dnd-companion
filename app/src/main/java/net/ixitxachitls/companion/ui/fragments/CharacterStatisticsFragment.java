@@ -249,9 +249,9 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     damageNonlethal.text(String.valueOf(character.getNonlethalDamage()));
     conditions.update(character);
 
-    ac.set(character.normalArmorClass());
-    acTouch.set(character.touchArmorClass());
-    acFlat.set(character.flatFootedArmorClass());
+    ac.set(character.getNormalArmorClass());
+    acTouch.set(character.getTouchArmorClass());
+    acFlat.set(character.getFlatFootedArmorClass());
 
     // Update attacks.
     attacks.removeAllViews();
@@ -265,13 +265,13 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
       }
     }
 
-    fortitude.set(character.fortitude());
-    will.set(character.will());
-    reflex.set(character.reflex());
+    fortitude.set(character.getFortitude());
+    will.set(character.getWill());
+    reflex.set(character.getReflex());
 
-    initiative.set(character.initiative());
-    speedFeet.text(Distance.fromSquares(character.speed().total()).toString());
-    speedSquares.set(character.speed());
+    initiative.set(character.getInitiative());
+    speedFeet.text(Distance.fromSquares(character.getSpeed().total()).toString());
+    speedSquares.set(character.getSpeed());
 
     // We sometimes call update before actually having a context.
     if (getContext() != null) {

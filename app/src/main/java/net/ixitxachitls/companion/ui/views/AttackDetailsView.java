@@ -100,7 +100,7 @@ public class AttackDetailsView extends LinearLayout {
   }
 
   public void set(Character character, Item item) {
-    ModifiedValue bonus = character.attackBonus(item);
+    ModifiedValue bonus = character.computeAttackBonus(item);
     int attacks = character.numberOfAttacks(item);
 
     weapon.text(item.getPlayerName() + ": ");
@@ -119,7 +119,7 @@ public class AttackDetailsView extends LinearLayout {
       multipleAttacks.text(multiple);
     }
 
-    Damage damageValue = character.damage(item);
+    Damage damageValue = character.computeDamage(item);
     damage.text(damageValue.toString());
     damage.onLongClick(() -> MessageDialog.create(getContext())
         .title("Damage " + item.getPlayerName())

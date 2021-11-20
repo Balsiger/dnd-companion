@@ -50,6 +50,7 @@ import net.ixitxachitls.companion.rules.Armor;
 import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.rules.Items;
 import net.ixitxachitls.companion.util.Die;
+import net.ixitxachitls.companion.util.Lazy;
 import net.ixitxachitls.companion.util.Optionals;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -95,6 +96,8 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
   private static final String FIELD_ITEMS_PER_SLOT = "items_per_slot";
   private static final String DEFAULT_DISTRIBUTION = "Default";
 
+  protected Lazy.State state = new Lazy.State();
+
   private String campaignId = "";
   private String name;
   private Optional<MonsterTemplate> race = Optional.empty();
@@ -113,46 +116,374 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
   private int encounterInitiative = 0;
   private int encounterNumber = 0;
 
+  // Lazy values.
+  private Lazy.Resettable<String> type = new Lazy.Resettable<>(state, () -> {
+    if (race.isPresent()) {
+      String type = Strings.toWords(race.get().getType().toString());
+
+      if (!race.get().getSubtypes().isEmpty()) {
+        type += " [" + race.get().getSubtypes().stream()
+            .map(t -> Strings.toWords(t.toString())).collect(Collectors.joining(", ")) + "]";
+      }
+
+      return type;
+    }
+
+    return "Unknown";
+  });
+  private Lazy.Resettable<ModifiedValue> flatFootedArmorClass = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue value = new ModifiedValue("AC", 10, false);
+
+    // Natural armor.
+    if (race.isPresent() && race.get().hasNaturalArmor()) {
+      value.add(race.get().getNaturalArmor());
+    }
+
+    // Size.
+    if (race.isPresent() && Armor.sizeModifier(race.get().getSize()) != 0) {
+      value.add(new Modifier(Armor.sizeModifier(race.get().getSize()), Modifier.Type.GENERAL,
+          "Size"));
+    }
+
+    // Qualities.
+    for (Collection<Quality> qualities : collectQualities().asMap().values()) {
+      value.add(qualities.iterator().next().getTemplate().getAcModifiers());
+    }
+
+    // Items.
+    for (Item item : items) {
+      if (isWearing(item)) {
+        value.add(item.getArmorModifiers());
+      }
+    }
+
+    return value;
+  });
+  private Lazy.Resettable<List<CreatureCondition>> creatureConditions =
+      new Lazy.Resettable<>(state, () -> {
+        List<CreatureCondition> conditions = new ArrayList<>(getConditions());
+
+        // Monsters don't yet have ability scores...
+        if (this instanceof Monster) {
+          return conditions;
+        }
+
+        if (getStrength().total() <= 0) {
+          conditions.add(
+              CreatureCondition.create(CompanionApplication.get().context(), getId(),
+                  new TimedCondition(Conditions.HELPLESS_STRENGTH_0, getCampaignId())));
+        }
+        if (getDexterity().total() <= 0) {
+          conditions.add(
+              CreatureCondition.create(CompanionApplication.get().context(), getId(),
+                  new TimedCondition(Conditions.PARALYZED_DEXTERITY_0, getCampaignId())));
+        }
+        if (getConstitution().total() <= 0) {
+          conditions.add(
+              CreatureCondition.create(CompanionApplication.get().context(), getId(),
+                  new TimedCondition(Conditions.DEAD_CONSTITUTION_0, getCampaignId())));
+        }
+        if (getIntelligence().total() <= 0) {
+          conditions.add(
+              CreatureCondition.create(CompanionApplication.get().context(), getId(),
+                  new TimedCondition(Conditions.UNCONSCIOUS_INTELLIGENCE_0, getCampaignId())));
+        }
+        if (getWisdom().total() <= 0) {
+          conditions.add(
+              CreatureCondition.create(CompanionApplication.get().context(), getId(),
+                  new TimedCondition(Conditions.UNCONSCIOUS_WISDOM_0, getCampaignId())));
+        }
+        if (getCharisma().total() <= 0) {
+          conditions.add(
+              CreatureCondition.create(CompanionApplication.get().context(), getId(),
+                  new TimedCondition(Conditions.UNCONSCIOUS_CHARISMA_0, getCampaignId())));
+        }
+
+        return conditions;
+      });
+  private Lazy.Resettable<ModifiedValue> fortitude = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue value = new ModifiedValue("Fortitude Save", 0, true);
+
+    // Modifiers from race.
+    if (!hasLevels() && race.isPresent()) {
+      value.add(new Modifier(race.get().getFortitudeSave(), Modifier.Type.GENERAL,
+          race.get().getName()));
+    }
+
+    // Modifiers from abilities.
+    value.add(new Modifier(getConstitutionModifier(), Modifier.Type.GENERAL, "Constitution"));
+
+    // Modifiers from feats.
+    for (Feat feat : collectFeats()) {
+      value.add(feat.getTemplate().getFortitudeModifiers());
+    }
+
+    // Modifiers from conditions.
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment instanceof SavesAdjustment) {
+          value.add(new Modifier(((SavesAdjustment) adjustment).getSaves(), Modifier.Type.GENERAL,
+              condition.getCondition().getName()));
+        }
+      }
+    }
+
+    return value;
+  });
+  private Lazy.Resettable<ModifiedValue> initiative = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue value = new ModifiedValue("Initiative", 0, true);
+    value.add(new Modifier(Ability.modifier(getDexterity().total()), Modifier.Type.ABILITY,
+        "Dexterity"));
+
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment instanceof InitiativeAdjustment) {
+          value.add(new Modifier(((InitiativeAdjustment) adjustment).getAdjustment(),
+              Modifier.Type.GENERAL, condition.getCondition().getCondition().getName()));
+        }
+      }
+    }
+
+    return value;
+  });
+  private Lazy.Resettable<Integer> maxDexterityModifierFromItems = new Lazy.Resettable(state, () ->
+      items.stream()
+          .filter(this::isWearing)
+          .mapToInt(i -> i.getMaxDexterityModifier())
+          .min()
+          .orElse(Integer.MAX_VALUE));
+  private Lazy.Resettable<ModifiedValue> normalArmorClass = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue value = new ModifiedValue("AC", 10, false);
+
+    // Natural armor.
+    if (race.isPresent() && race.get().hasNaturalArmor()) {
+      value.add(race.get().getNaturalArmor());
+    }
+
+    // Dexterity.
+    int dexterityModifier = getDexterityModifier();
+    if (dexterityModifier != 0) {
+      dexterityModifier = Math.min(dexterityModifier, getMaxDexerityModifierFromItems());
+      value.add(new Modifier(dexterityModifier, Modifier.Type.ABILITY, "Dexterity"));
+    }
+
+    // Size.
+    if (race.isPresent() && Armor.sizeModifier(race.get().getSize()) != 0) {
+      value.add(new Modifier(Armor.sizeModifier(race.get().getSize()), Modifier.Type.GENERAL,
+          "Size"));
+    }
+
+    // Qualities.
+    for (Collection<Quality> qualities : collectQualities().asMap().values()) {
+      value.add(qualities.iterator().next().getTemplate().getAcModifiers());
+    }
+
+    // Items.
+    for (Item item : items) {
+      if (isWearing(item)) {
+        value.add(item.getArmorModifiers());
+      }
+    }
+
+    return value;
+  });
+  private Lazy.Resettable<Money> totalValue = new Lazy.Resettable<>(state, () -> {
+    Money total = Money.ZERO;
+    for (Item item : items) {
+      total = total.add(item.getValue());
+    }
+
+    return total;
+  });
+  private Lazy.Resettable<Weight> totalWeight = new Lazy.Resettable<>(state, () -> {
+    Weight total = Weight.ZERO;
+    for (Item item : items) {
+      total = total.add(item.getWeight());
+    }
+
+    return total;
+  });
+  private Lazy.Resettable<Integer> maxDexterityFromEncumbrance =
+      new Lazy.Resettable<>(state, () -> {
+        switch (Items.encumbrance((int) getTotalWeight().asPounds(), getStrength().total())) {
+          default:
+          case light:
+            return Integer.MAX_VALUE;
+
+          case medium:
+            return 3;
+
+          case heavy:
+            return 1;
+
+          case overloaded:
+            return 0;
+        }
+      });
+  private Lazy.Resettable<Integer> dexterityModifier = new Lazy.Resettable<>(state, () -> {
+    int normal = Ability.modifier(getDexterity().total());
+
+    int maxDexterityFromItems = getMaxDexerityModifierFromItems();
+    int maxDexterityFromEncumbrance = getMaxDexterityFromEncumbrance();
+
+    return Math.min(normal, Math.min(maxDexterityFromItems, maxDexterityFromEncumbrance));
+  });
+  Lazy.Resettable<ModifiedValue> reflex = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue value = new ModifiedValue("Reflex Save", 0, true);
+
+    // Modifiers from race.
+    if (!hasLevels() && race.isPresent()) {
+      value.add(new Modifier(race.get().getReflexSave(), Modifier.Type.GENERAL,
+          race.get().getName()));
+    }
+
+    // Modifiers from abilities.
+    value.add(new Modifier(getDexterityModifier(), Modifier.Type.GENERAL, "Dexterity"));
+
+    // Modifiers from feats.
+    for (Feat feat : collectFeats()) {
+      value.add(feat.getTemplate().getReflexModifiers());
+    }
+
+    // Modifiers from conditions.
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment instanceof SavesAdjustment) {
+          value.add(new Modifier(((SavesAdjustment) adjustment).getSaves(), Modifier.Type.GENERAL,
+              condition.getCondition().getName()));
+        }
+      }
+    }
+
+    return value;
+  });
+  private Lazy.Resettable<Integer> maxSpeedSquares = new Lazy.Resettable<>(state, () -> {
+    final boolean fast =
+        !race.isPresent() || race.get().getWalkingSpeed() >= 6;
+
+    int encumbranceSquares = Integer.MAX_VALUE;
+    switch (Items.encumbrance((int) getTotalWeight().asPounds(), getStrength().total())) {
+      case light:
+        encumbranceSquares = Integer.MAX_VALUE;
+        break;
+
+      case medium:
+      case heavy:
+        encumbranceSquares = fast ? 4 : 3;
+        break;
+
+      case overloaded:
+        return 0;
+    }
+
+    return Math.min(encumbranceSquares, items.stream()
+        .filter(this::isWearing)
+        .mapToInt(i -> i.getMaxSpeedSquares(fast))
+        .min()
+        .orElse(Integer.MAX_VALUE));
+  });
+  private Lazy.Resettable<ModifiedValue> speed = new Lazy.Resettable<>(state, () -> {
+    int squares = 0;
+    if (race.isPresent()) {
+      squares = race.get().getWalkingSpeed();
+    }
+
+    squares = Math.min(squares, getMaxSpeedSquares());
+
+    ModifiedValue value = new ModifiedValue("Speed (squares)", squares, 0, false);
+
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment instanceof SpeedAdjustment) {
+          if (((SpeedAdjustment) adjustment).isHalf()) {
+            value.add(new Modifier(-squares / 2, Modifier.Type.GENERAL,
+                condition.getCondition().getName()));
+          }
+        }
+      }
+    }
+
+    for (Quality quality : collectQualities().values()) {
+      int qualitySquares = quality.getSpeedSquares(Speed.Mode.run);
+      if (qualitySquares != 0) {
+        value.add(new Modifier(qualitySquares, Modifier.Type.GENERAL, quality.getName()));
+      }
+    }
+
+    return value;
+  });
+  private Lazy.Resettable<ModifiedValue> touchArmorClass = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue value = new ModifiedValue("AC", 10, false);
+
+    // Dexterity.
+    int dexterityModifier = getDexterityModifier();
+    if (dexterityModifier != 0) {
+      dexterityModifier = Math.min(dexterityModifier, getMaxDexerityModifierFromItems());
+      value.add(new Modifier(dexterityModifier, Modifier.Type.ABILITY, "Dexterity"));
+    }
+
+    // Size.
+    if (race.isPresent() && Armor.sizeModifier(race.get().getSize()) != 0) {
+      value.add(new Modifier(Armor.sizeModifier(race.get().getSize()), Modifier.Type.GENERAL,
+          "Size"));
+    }
+
+    // Qualities.
+    for (Collection<Quality> qualities : collectQualities().asMap().values()) {
+      value.add(qualities.iterator().next().getTemplate().getAcModifiers().stream()
+          .filter(m -> m.getType() == Modifier.Type.DEFLECTION)
+          .collect(Collectors.toList()));
+    }
+
+    // Items.
+    for (Item item : items) {
+      if (isWearing(item)) {
+        value.add(item.getArmorDeflectionModifiers());
+      }
+    }
+
+    return value;
+  });
+  private Lazy.Resettable<ModifiedValue> will = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue value = new ModifiedValue("Will Save", 0, true);
+
+    // Modifiers from race.
+    if (!hasLevels() && race.isPresent()) {
+      value.add(new Modifier(race.get().getWillSave(), Modifier.Type.GENERAL,
+          race.get().getName()));
+    }
+
+    // Modifiers from abilities.
+    value.add(new Modifier(getWisdomModifier(), Modifier.Type.GENERAL, "Wisdom"));
+
+    // Modifiers from feats.
+    for (Feat feat : collectFeats()) {
+      value.add(feat.getTemplate().getWillModifiers());
+    }
+
+    // Modifiers from conditions.
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment instanceof SavesAdjustment) {
+          value.add(new Modifier(((SavesAdjustment) adjustment).getSaves(), Modifier.Type.GENERAL,
+              condition.getCondition().getName()));
+        }
+      }
+    }
+
+    // Modifiers from qualities.
+    if (race.isPresent()) {
+      for (Quality quality : race.get().getQualities()) {
+        value.add(quality.getTemplate().getWillModifiers());
+      }
+    }
+
+    return value;
+  });
+
+
   public List<CreatureCondition> getAdjustedConditions() {
-    List<CreatureCondition> conditions = new ArrayList<>(getConditions());
-
-    // Monsters don't yet have ability scores...
-    if (this instanceof Monster) {
-      return conditions;
-    }
-
-    if (getStrength().total() <= 0) {
-      conditions.add(
-          CreatureCondition.create(CompanionApplication.get().context(), getId(),
-              new TimedCondition(Conditions.HELPLESS_STRENGTH_0, getCampaignId())));
-    }
-    if (getDexterity().total() <= 0) {
-      conditions.add(
-          CreatureCondition.create(CompanionApplication.get().context(), getId(),
-              new TimedCondition(Conditions.PARALYZED_DEXTERITY_0, getCampaignId())));
-    }
-    if (getConstitution().total() <= 0) {
-      conditions.add(
-          CreatureCondition.create(CompanionApplication.get().context(), getId(),
-              new TimedCondition(Conditions.DEAD_CONSTITUTION_0, getCampaignId())));
-    }
-    if (getIntelligence().total() <= 0) {
-      conditions.add(
-          CreatureCondition.create(CompanionApplication.get().context(), getId(),
-              new TimedCondition(Conditions.UNCONSCIOUS_INTELLIGENCE_0, getCampaignId())));
-    }
-    if (getWisdom().total() <= 0) {
-      conditions.add(
-          CreatureCondition.create(CompanionApplication.get().context(), getId(),
-              new TimedCondition(Conditions.UNCONSCIOUS_WISDOM_0, getCampaignId())));
-    }
-    if (getCharisma().total() <= 0) {
-      conditions.add(
-          CreatureCondition.create(CompanionApplication.get().context(), getId(),
-              new TimedCondition(Conditions.UNCONSCIOUS_CHARISMA_0, getCampaignId())));
-    }
-
-    return conditions;
+    return creatureConditions.get();
   }
 
   public Alignment getAlignment() {
@@ -242,12 +573,7 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
   }
 
   public int getDexterityModifier() {
-    int normal = Ability.modifier(getDexterity().total());
-
-    int maxDexterityFromItems = maxDexerityModifierFromItems();
-    int maxDexterityFromEncumbrance = maxDexterityFromEncumbrance();
-
-    return Math.min(normal, Math.min(maxDexterityFromItems, maxDexterityFromEncumbrance));
+    return dexterityModifier.get();
   }
 
   public int getEncounterInitiative() {
@@ -256,6 +582,14 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
 
   public int getEncounterNumber() {
     return encounterNumber;
+  }
+
+  public ModifiedValue getFlatFootedArmorClass() {
+    return flatFootedArmorClass.get();
+  }
+
+  public ModifiedValue getFortitude() {
+    return fortitude.get();
   }
 
   public Gender getGender() {
@@ -290,6 +624,10 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     this.hp = hp;
   }
 
+  public ModifiedValue getInitiative() {
+    return initiative.get();
+  }
+
   public ModifiedValue getIntelligence() {
     return new ModifiedValue("Intelligence", intelligence, 0, false);
   }
@@ -307,12 +645,24 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return Collections.unmodifiableList(items);
   }
 
+  public int getMaxDexerityModifierFromItems() {
+    return maxDexterityModifierFromItems.get();
+  }
+
+  public int getMaxDexterityFromEncumbrance() {
+    return maxDexterityFromEncumbrance.get();
+  }
+
   public int getMaxHp() {
     return maxHp;
   }
 
   public void setMaxHp(int maxHp) {
     this.maxHp = maxHp;
+  }
+
+  public int getMaxSpeedSquares() {
+    return maxSpeedSquares.get();
   }
 
   public String getName() {
@@ -331,6 +681,10 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     this.nonlethalDamage = nonlethalDamage;
   }
 
+  public ModifiedValue getNormalArmorClass() {
+    return normalArmorClass.get();
+  }
+
   public Item.Owner getParent() {
     return this;
   }
@@ -347,12 +701,20 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     this.race = Templates.get().getMonsterTemplates().get(race);
   }
 
+  public ModifiedValue getReflex() {
+    return reflex.get();
+  }
+
   public Size getSize() {
     if (race.isPresent()) {
       return race.get().getSize();
     }
 
     return Size.UNKNOWN;
+  }
+
+  public ModifiedValue getSpeed() {
+    return speed.get();
   }
 
   public ModifiedValue getStrength() {
@@ -367,23 +729,28 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return Ability.modifier(getStrength().total());
   }
 
+  public Money getTotalValue() {
+    return totalValue.get();
+  }
+
+  public Weight getTotalWeight() {
+    return totalWeight.get();
+  }
+
+  public ModifiedValue getTouchArmorClass() {
+    return touchArmorClass.get();
+  }
+
   public String getType() {
-    if (race.isPresent()) {
-      String type = Strings.toWords(race.get().getType().toString());
-
-      if (!race.get().getSubtypes().isEmpty()) {
-        type += " [" + race.get().getSubtypes().stream()
-            .map(t -> Strings.toWords(t.toString())).collect(Collectors.joining(", ")) + "]";
-      }
-
-      return type;
-    }
-
-    return "Unknown";
+    return type.get();
   }
 
   public String getWearingName() {
     return wearing.name;
+  }
+
+  public ModifiedValue getWill() {
+    return will.get();
   }
 
   public ModifiedValue getWisdom() {
@@ -409,26 +776,32 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
 
   public void setBaseCharisma(int charisma) {
     this.charisma = charisma;
+    state.reset();
   }
 
   public void setBaseConstitution(int constitution) {
     this.constitution = constitution;
+    state.reset();
   }
 
   public void setBaseDexterity(int dexterity) {
     this.dexterity = dexterity;
+    state.reset();
   }
 
   public void setBaseIntelligence(int intelligence) {
     this.intelligence = intelligence;
+    state.reset();
   }
 
   public void setBaseStrength(int strength) {
     this.strength = strength;
+    state.reset();
   }
 
   public void setBaseWisdom(int wisdom) {
     this.wisdom = wisdom;
+    state.reset();
   }
 
   @Override
@@ -455,6 +828,7 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
 
   public void addCondition(TimedCondition condition) {
     CreatureCondition.create(context, getId(), condition).store();
+    state.reset();
   }
 
   public void addHp(int number) {
@@ -475,7 +849,41 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return false;
   }
 
-  public ModifiedValue attackBonus(Item item) {
+  @Override
+  public boolean canEdit() {
+    return false;
+  }
+
+  public void carry(Items.Slot slot, Item item) {
+    wearing.carry(slot, item);
+  }
+
+  public Set<Feat> collectFeats() {
+    if (race.isPresent()) {
+      return new HashSet<>(race.get().getFeats());
+    }
+
+    return Collections.emptySet();
+  }
+
+  public Multimap<String, Quality> collectQualities() {
+    if (race.isPresent()) {
+      return Multimaps.index(race.get().getQualities(), Quality::getName);
+    }
+
+    return HashMultimap.create();
+  }
+
+  @Override
+  public void combine(Item item, Item other) {
+    if (item.similar(other)) {
+      removeItem(other);
+      item.setCount(item.getCount() + other.getCount());
+      store();
+    }
+  }
+
+  public ModifiedValue computeAttackBonus(Item item) {
     ModifiedValue attack = new ModifiedValue(item.getName() + " Attack", getBaseAttackBonus(),
         true);
 
@@ -531,41 +939,7 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return attack;
   }
 
-  @Override
-  public boolean canEdit() {
-    return false;
-  }
-
-  public void carry(Items.Slot slot, Item item) {
-    wearing.carry(slot, item);
-  }
-
-  public Set<Feat> collectFeats() {
-    if (race.isPresent()) {
-      return new HashSet<>(race.get().getFeats());
-    }
-
-    return Collections.emptySet();
-  }
-
-  public Multimap<String, Quality> collectQualities() {
-    if (race.isPresent()) {
-      return Multimaps.index(race.get().getQualities(), Quality::getName);
-    }
-
-    return HashMultimap.create();
-  }
-
-  @Override
-  public void combine(Item item, Item other) {
-    if (item.similar(other)) {
-      removeItem(other);
-      item.setCount(item.getCount() + other.getCount());
-      store();
-    }
-  }
-
-  public Damage damage(Item item) {
+  public Damage computeDamage(Item item) {
     if (!item.isWeapon()) {
       return new Damage();
     }
@@ -615,65 +989,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     }
 
     return damage;
-  }
-
-  public ModifiedValue flatFootedArmorClass() {
-    ModifiedValue value = new ModifiedValue("AC", 10, false);
-
-    // Natural armor.
-    if (race.isPresent() && race.get().hasNaturalArmor()) {
-      value.add(race.get().getNaturalArmor());
-    }
-
-    // Size.
-    if (race.isPresent() && Armor.sizeModifier(race.get().getSize()) != 0) {
-      value.add(new Modifier(Armor.sizeModifier(race.get().getSize()), Modifier.Type.GENERAL,
-          "Size"));
-    }
-
-    // Qualities.
-    for (Collection<Quality> qualities : collectQualities().asMap().values()) {
-      value.add(qualities.iterator().next().getTemplate().getAcModifiers());
-    }
-
-    // Items.
-    for (Item item : items) {
-      if (isWearing(item)) {
-        value.add(item.getArmorModifiers());
-      }
-    }
-
-    return value;
-  }
-
-  public ModifiedValue fortitude() {
-    ModifiedValue value = new ModifiedValue("Fortitude Save", 0, true);
-
-    // Modifiers from race.
-    if (!hasLevels() && race.isPresent()) {
-      value.add(new Modifier(race.get().getFortitudeSave(), Modifier.Type.GENERAL,
-          race.get().getName()));
-    }
-
-    // Modifiers from abilities.
-    value.add(new Modifier(getConstitutionModifier(), Modifier.Type.GENERAL, "Constitution"));
-
-    // Modifiers from feats.
-    for (Feat feat : collectFeats()) {
-      value.add(feat.getTemplate().getFortitudeModifiers());
-    }
-
-    // Modifiers from conditions.
-    for (CreatureCondition condition : getConditions()) {
-      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
-        if (adjustment instanceof SavesAdjustment) {
-          value.add(new Modifier(((SavesAdjustment) adjustment).getSaves(), Modifier.Type.GENERAL,
-              condition.getCondition().getName()));
-        }
-      }
-    }
-
-    return value;
   }
 
   public int getAbilityModifier(Ability ability) {
@@ -759,23 +1074,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     }
   }
 
-  public ModifiedValue initiative() {
-    ModifiedValue value = new ModifiedValue("Initiative", 0, true);
-    value.add(new Modifier(Ability.modifier(getDexterity().total()), Modifier.Type.ABILITY,
-        "Dexterity"));
-
-    for (CreatureCondition condition : getConditions()) {
-      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
-        if (adjustment instanceof InitiativeAdjustment) {
-          value.add(new Modifier(((InitiativeAdjustment) adjustment).getAdjustment(),
-              Modifier.Type.GENERAL, condition.getCondition().getCondition().getName()));
-        }
-      }
-    }
-
-    return value;
-  }
-
   public int itemIndex(String id) {
     for (int i = 0; i < items.size(); i++) {
       if (items.get(i).getId().equals(id)) {
@@ -784,57 +1082,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     }
 
     return -1;
-  }
-
-  public int maxDexerityModifierFromItems() {
-    return items.stream()
-        .filter(this::isWearing)
-        .mapToInt(i -> i.getMaxDexterityModifier())
-        .min()
-        .orElse(Integer.MAX_VALUE);
-  }
-
-  public int maxDexterityFromEncumbrance() {
-    switch (Items.encumbrance((int) totalWeight().asPounds(), getStrength().total())) {
-      default:
-      case light:
-        return Integer.MAX_VALUE;
-
-      case medium:
-        return 3;
-
-      case heavy:
-        return 1;
-
-      case overloaded:
-        return 0;
-    }
-  }
-
-  public int maxSpeedSquares() {
-    final boolean fast =
-        !race.isPresent() || race.get().getWalkingSpeed() >= 6;
-
-    int encumbranceSquares = Integer.MAX_VALUE;
-    switch (Items.encumbrance((int) totalWeight().asPounds(), getStrength().total())) {
-      case light:
-        encumbranceSquares = Integer.MAX_VALUE;
-        break;
-
-      case medium:
-      case heavy:
-        encumbranceSquares = fast ? 4 : 3;
-        break;
-
-      case overloaded:
-        return 0;
-    }
-
-    return Math.min(encumbranceSquares, items.stream()
-        .filter(this::isWearing)
-        .mapToInt(i -> i.getMaxSpeedSquares(fast))
-        .min()
-        .orElse(Integer.MAX_VALUE));
   }
 
   @Override
@@ -903,42 +1150,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     }
   }
 
-  public ModifiedValue normalArmorClass() {
-    ModifiedValue value = new ModifiedValue("AC", 10, false);
-
-    // Natural armor.
-    if (race.isPresent() && race.get().hasNaturalArmor()) {
-      value.add(race.get().getNaturalArmor());
-    }
-
-    // Dexterity.
-    int dexterityModifier = getDexterityModifier();
-    if (dexterityModifier != 0) {
-      dexterityModifier = Math.min(dexterityModifier, maxDexerityModifierFromItems());
-      value.add(new Modifier(dexterityModifier, Modifier.Type.ABILITY, "Dexterity"));
-    }
-
-    // Size.
-    if (race.isPresent() && Armor.sizeModifier(race.get().getSize()) != 0) {
-      value.add(new Modifier(Armor.sizeModifier(race.get().getSize()), Modifier.Type.GENERAL,
-          "Size"));
-    }
-
-    // Qualities.
-    for (Collection<Quality> qualities : collectQualities().asMap().values()) {
-      value.add(qualities.iterator().next().getTemplate().getAcModifiers());
-    }
-
-    // Items.
-    for (Item item : items) {
-      if (isWearing(item)) {
-        value.add(item.getArmorModifiers());
-      }
-    }
-
-    return value;
-  }
-
   public int numberOfAttacks(Item item) {
     return Math.min((getBaseAttackBonus() / 6) + 1, item.getMaxAttacks());
   }
@@ -953,36 +1164,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return new Wearing(
         data.get(FIELD_NAME, "default"),
         wearing);
-  }
-
-  public ModifiedValue reflex() {
-    ModifiedValue value = new ModifiedValue("Reflex Save", 0, true);
-
-    // Modifiers from race.
-    if (!hasLevels() && race.isPresent()) {
-      value.add(new Modifier(race.get().getReflexSave(), Modifier.Type.GENERAL,
-          race.get().getName()));
-    }
-
-    // Modifiers from abilities.
-    value.add(new Modifier(getDexterityModifier(), Modifier.Type.GENERAL, "Dexterity"));
-
-    // Modifiers from feats.
-    for (Feat feat : collectFeats()) {
-      value.add(feat.getTemplate().getReflexModifiers());
-    }
-
-    // Modifiers from conditions.
-    for (CreatureCondition condition : getConditions()) {
-      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
-        if (adjustment instanceof SavesAdjustment) {
-          value.add(new Modifier(((SavesAdjustment) adjustment).getSaves(), Modifier.Type.GENERAL,
-              condition.getCondition().getName()));
-        }
-      }
-    }
-
-    return value;
   }
 
   public boolean removeItem(Item item) {
@@ -1019,86 +1200,10 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     store();
   }
 
-  public ModifiedValue speed() {
-    int squares = 0;
-    if (race.isPresent()) {
-      squares = race.get().getWalkingSpeed();
-    }
-
-    squares = Math.min(squares, maxSpeedSquares());
-
-    ModifiedValue value = new ModifiedValue("Speed (squares)", squares, 0, false);
-
-    for (CreatureCondition condition : getConditions()) {
-      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
-        if (adjustment instanceof SpeedAdjustment) {
-          if (((SpeedAdjustment) adjustment).isHalf()) {
-            value.add(new Modifier(-squares / 2, Modifier.Type.GENERAL,
-                condition.getCondition().getName()));
-          }
-        }
-      }
-    }
-
-    for (Quality quality : collectQualities().values()) {
-      int qualitySquares = quality.getSpeedSquares(Speed.Mode.run);
-      if (qualitySquares != 0) {
-        value.add(new Modifier(qualitySquares, Modifier.Type.GENERAL, quality.getName()));
-      }
-    }
-
-    return value;
-  }
-
-  public Money totalValue() {
-    Money total = Money.ZERO;
-    for (Item item : items) {
-      total = total.add(item.getValue());
-    }
-
-    return total;
-  }
-
-  public Weight totalWeight() {
-    Weight total = Weight.ZERO;
-    for (Item item : items) {
-      total = total.add(item.getWeight());
-    }
-
-    return total;
-  }
-
-  public ModifiedValue touchArmorClass() {
-    ModifiedValue value = new ModifiedValue("AC", 10, false);
-
-    // Dexterity.
-    int dexterityModifier = getDexterityModifier();
-    if (dexterityModifier != 0) {
-      dexterityModifier = Math.min(dexterityModifier, maxDexerityModifierFromItems());
-      value.add(new Modifier(dexterityModifier, Modifier.Type.ABILITY, "Dexterity"));
-    }
-
-    // Size.
-    if (race.isPresent() && Armor.sizeModifier(race.get().getSize()) != 0) {
-      value.add(new Modifier(Armor.sizeModifier(race.get().getSize()), Modifier.Type.GENERAL,
-          "Size"));
-    }
-
-    // Qualities.
-    for (Collection<Quality> qualities : collectQualities().asMap().values()) {
-      value.add(qualities.iterator().next().getTemplate().getAcModifiers().stream()
-          .filter(m -> m.getType() == Modifier.Type.DEFLECTION)
-          .collect(Collectors.toList()));
-    }
-
-    // Items.
-    for (Item item : items) {
-      if (isWearing(item)) {
-        value.add(item.getArmorDeflectionModifiers());
-      }
-    }
-
-    return value;
+  @Override
+  public void store() {
+    super.store();
+    state.reset();
   }
 
   @Override
@@ -1108,50 +1213,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
 
   public List<String> wearing(Items.Slot slot) {
     return wearing.wearing(slot);
-  }
-
-  public ModifiedValue will() {
-    ModifiedValue value = new ModifiedValue("Will Save", 0, true);
-
-    // Modifiers from race.
-    if (!hasLevels() && race.isPresent()) {
-      value.add(new Modifier(race.get().getWillSave(), Modifier.Type.GENERAL,
-          race.get().getName()));
-    }
-
-    // Modifiers from abilities.
-    value.add(new Modifier(getWisdomModifier(), Modifier.Type.GENERAL, "Wisdom"));
-
-    // Modifiers from feats.
-    for (Feat feat : collectFeats()) {
-      value.add(feat.getTemplate().getWillModifiers());
-    }
-
-    // Modifiers from conditions.
-    for (CreatureCondition condition : getConditions()) {
-      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
-        if (adjustment instanceof SavesAdjustment) {
-          value.add(new Modifier(((SavesAdjustment) adjustment).getSaves(), Modifier.Type.GENERAL,
-              condition.getCondition().getName()));
-        }
-      }
-    }
-
-    // Modifiers from qualities.
-    if (race.isPresent()) {
-      for (Quality quality : race.get().getQualities()) {
-        value.add(quality.getTemplate().getWillModifiers());
-      }
-    }
-
-    return value;
-  }
-
-  private List<Item> armor() {
-    return items.stream()
-        .filter(Item::isArmor)
-        .filter(this::isWearing)
-        .collect(Collectors.toList());
   }
 
   protected boolean hasLevels() {

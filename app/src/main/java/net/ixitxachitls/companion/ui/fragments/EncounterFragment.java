@@ -111,7 +111,7 @@ public class EncounterFragment extends NestedCompanionFragment {
           encounter.get().firstPlayerCharacterNeedingInitiative();
       if (character.isPresent()) {
         initiative.setLabel("Initiative for " + character.get().getName());
-        initiative.setModifier(character.get().initiative());
+        initiative.setModifier(character.get().getInitiative());
         initiative.setSelectAction(i -> {
           TransitionManager.beginDelayedTransition(view, transition);
           character.get().setEncounterInitiative(encounter.get().getNumber(), i);

@@ -68,18 +68,6 @@ public class MonsterFragment extends CompanionFragment {
   }
 
   @Override
-  public void update() {
-    if (monster.isPresent()) {
-      campaignTitle.text(monster.get().getCampaign().getName());
-      title.update(monster.get());
-      ac.set(monster.get().normalArmorClass());
-      acTouch.set(monster.get().touchArmorClass());
-      acFlat.set(monster.get().flatFootedArmorClass());
-      hitPoints.text(formatHp(monster.get()));
-    }
-  }
-
-  @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle state) {
     super.onCreateView(inflater, container, state);
 
@@ -105,6 +93,18 @@ public class MonsterFragment extends CompanionFragment {
     this.monster = Optional.of(monster);
 
     update();
+  }
+
+  @Override
+  public void update() {
+    if (monster.isPresent()) {
+      campaignTitle.text(monster.get().getCampaign().getName());
+      title.update(monster.get());
+      ac.set(monster.get().getNormalArmorClass());
+      acTouch.set(monster.get().getTouchArmorClass());
+      acFlat.set(monster.get().getFlatFootedArmorClass());
+      hitPoints.text(formatHp(monster.get()));
+    }
   }
 
   private static String formatHp(Monster monster) {
