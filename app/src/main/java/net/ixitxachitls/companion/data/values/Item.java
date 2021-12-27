@@ -34,6 +34,7 @@ import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.documents.NestedDocument;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.MagicEffectType;
+import net.ixitxachitls.companion.data.enums.Naming;
 import net.ixitxachitls.companion.data.enums.Probability;
 import net.ixitxachitls.companion.data.enums.Size;
 import net.ixitxachitls.companion.data.enums.Slot;
@@ -188,14 +189,8 @@ public class Item extends NestedDocument {
   private Lazy.Resettable<Damage> secondaryDamage = new Lazy.Resettable<>(state, () ->
       Damage.from(templates.stream().map(ItemTemplate::getSecondaryDamage)
           .collect(Collectors.toList())));
-  private Lazy.Resettable<Size> size = new Lazy.Resettable<>(state, () -> {
-    Optional<ItemTemplate> base = getBaseTemplate();
-    if (base.isPresent()) {
-      return base.get().getSize();
-    }
-
-    return Size.UNKNOWN;
-  });
+  private Lazy.Resettable<Size> size = new Lazy.Resettable<>(state, () ->
+      templates.stream().map(t -> t.getSize()).max(Enum::compareTo).orElse(Size.UNKNOWN));
   private Lazy.Resettable<Slot> slot = new Lazy.Resettable<>(state, () -> templates.stream()
       .map(ItemTemplate::getSlot)
       .filter(s -> s != Slot.UNKNOWN)
@@ -295,14 +290,10 @@ public class Item extends NestedDocument {
 
     return weight;
   });
-  private Lazy.Resettable<List<String>> worlds = new Lazy.Resettable<>(state, () -> {
-    Optional<ItemTemplate> base = getBaseTemplate();
-    if (base.isPresent()) {
-      return base.get().getWorlds();
-    }
-
-    return Collections.emptyList();
-  });
+  private Lazy.Resettable<List<String>> worlds = new Lazy.Resettable<>(state, () ->
+      new ArrayList(templates.stream()
+          .flatMap(t -> t.getWorlds().stream())
+          .collect(Collectors.toSet())));
 
   private Lazy.Resettable<Size> wielderSize = new Lazy.Resettable<>(state, () -> templates.stream()
       .map(ItemTemplate::getWielderSize)
@@ -423,7 +414,10 @@ public class Item extends NestedDocument {
   }
 
   public Damage getDamage() {
-    return damage.get();
+    // BEWARE: Damage is mutable.
+    Damage result = new Damage();
+    result.add(damage.get());
+    return result;
   }
 
   private RandomDuration getDonDuration() {
@@ -883,7 +877,7 @@ public class Item extends NestedDocument {
 
     if (dm) {
       return Strings.NEWLINE_JOINER.join(templates.stream()
-          .map(t -> Strings.ensureSentence(t.getDescription()))
+          .map(t -> "\\part{" + t.getName() + "}" + Strings.ensureSentence(t.getDescription()))
           .filter(s -> !s.isEmpty())
           .collect(Collectors.toList()));
     } else {
@@ -944,7 +938,8 @@ public class Item extends NestedDocument {
 
     if (dm) {
       return Strings.SPACE_JOINER.join(templates.stream()
-          .map(t -> Strings.ensureSentence(t.getShortDescription()))
+          .filter(t -> !t.getShortDescription().isEmpty())
+          .map(t -> "\\part{" + t.getName() + "}" + Strings.ensureSentence(t.getShortDescription()))
           .filter(t -> !t.isEmpty())
           .collect(Collectors.toList()));
     } else {
@@ -1073,14 +1068,29 @@ public class Item extends NestedDocument {
   public static String appearance(List<ItemTemplate> templates) {
     return Strings.SPACE_JOINER.join(templates.stream()
         .map(ItemTemplate::computeAppearance)
-        .collect(Collectors.toList()));
+        .collect(Collectors.toList())).trim();
+  }
+
+  public static String composeName(List<ItemTemplate> templates) {
+    return templates.stream()
+        .filter(t -> t.getNaming() == Naming.PREFIX)
+        .map(ItemTemplate::getNamePart)
+        .collect(Collectors.joining(" "))
+        + templates.stream()
+        .filter(t -> t.getNaming() == Naming.INFIX)
+        .map(ItemTemplate::getNamePart)
+        .collect(Collectors.joining(" "))
+        + templates.stream()
+        .filter(t -> t.getNaming() == Naming.POSTFIX)
+        .map(ItemTemplate::getNamePart)
+        .collect(Collectors.joining(" "));
   }
 
   public static Item create(CompanionContext context, String creatorId, CampaignDate date,
                             String... names) {
     List<ItemTemplate> templates = expandBaseTemplates(
         Arrays.asList(names).stream().map(Item::template).collect(Collectors.toList()));
-    String name = name(templates);
+    String name = composeName(templates);
     return new Item(generateId(context), name, templates, hp(templates), value(templates),
         appearance(templates), names[0], "", "", Item.maxAmount(templates), Item.maxUses(templates),
         Item.maxCount(templates), Item.maxTime(templates), false,
@@ -1097,7 +1107,7 @@ public class Item extends NestedDocument {
         .collect(Collectors.toList()));
     templates = expandBaseTemplates(templates);
 
-    return new Item(generateId(context), name(templates), templates,
+    return new Item(generateId(context), composeName(templates), templates,
         proto.getHp() > 0 ? proto.getHp() : hp(templates),
         proto.hasValue() ? Money.fromProto(proto.getValue()) : value(templates),
         proto.getAppearance().isEmpty() ? appearance(templates) : proto.getAppearance(),
@@ -1194,12 +1204,6 @@ public class Item extends NestedDocument {
     }
 
     return 0;
-  }
-
-  public static String name(List<ItemTemplate> templates) {
-    return Strings.SPACE_JOINER.join(templates.stream()
-        .map(ItemTemplate::getNamePart)
-        .collect(Collectors.toList()));
   }
 
   public static Item read(Data data) {

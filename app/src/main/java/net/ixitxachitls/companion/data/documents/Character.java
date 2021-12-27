@@ -35,6 +35,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.enums.Alignment;
 import net.ixitxachitls.companion.data.enums.MagicEffectType;
 import net.ixitxachitls.companion.data.templates.LevelTemplate;
 import net.ixitxachitls.companion.data.templates.SkillTemplate;
@@ -47,6 +48,7 @@ import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.util.Lazy;
+import net.ixitxachitls.companion.util.Strings;
 import net.ixitxachitls.companion.util.Texts;
 
 import java.util.ArrayList;
@@ -74,6 +76,12 @@ public class Character extends Creature<Character> implements Comparable<Charact
   private static final String FIELD_XP = "xpAction";
   private static final String FIELD_LEVEL = "level";
   private static final String FIELD_LEVELS = "levels";
+  private static final String FIELD_HEIGHT = "height";
+  private static final String FIELD_WEIGHT = "weight";
+  private static final String FIELD_AGE = "age";
+  private static final String FIELD_LOOKS = "looks";
+  private static final String FIELD_ALIGNMENT = "alignment";
+  private static final String FIELD_RELIGION = "religion";
   private static final int DEFAULT_LEVEL = 1;
 
   protected List<ConditionData> conditionsHistory = new ArrayList<>();
@@ -81,6 +89,12 @@ public class Character extends Creature<Character> implements Comparable<Charact
   private int xp = 0;
   private int level;
   private List<Level> levels = new ArrayList<>();
+  private String height = "";
+  private String weight = "";
+  private int age = 0;
+  private String looks = "";
+  private Alignment alignment = Alignment.UNKNOWN;
+  private String religion = "";
 
   // Lazy values.
   private Lazy.Resettable<Integer> baseAttackBonus = new Lazy.Resettable<>(state, () -> {
@@ -92,6 +106,17 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     return attack;
+  });
+  private Lazy.Resettable<ModifiedValue> grapple = new Lazy.Resettable<>(state, () -> {
+    ModifiedValue grapple = new ModifiedValue("grapple", getBaseAttackBonus(), true);
+
+    // Strength modifier.
+    grapple.add(new Modifier(getStrengthModifier(), Modifier.Type.GENERAL, "STR"));
+
+    // Size modifier.
+    grapple.add(new Modifier(getSize().getModifier(), Modifier.Type.GENERAL, "Size"));
+
+    return grapple;
   });
   private Lazy.Resettable<ModifiedValue> charisma = new Lazy.Resettable<>(state, () ->
       adjustAbility(super.getCharisma(), Ability.CHARISMA));
@@ -283,6 +308,23 @@ public class Character extends Creature<Character> implements Comparable<Charact
         return skills;
       });
 
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+  @Override
+  public Alignment getAlignment() {
+    return alignment;
+  }
+
+  public void setAlignment(Alignment alignment) {
+    this.alignment = alignment;
+  }
+
   @Override
   public int getBaseAttackBonus() {
     return baseAttackBonus.get();
@@ -327,6 +369,18 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return fortitude.get();
   }
 
+  public ModifiedValue getGrapple() {
+    return grapple.get();
+  }
+
+  public String getHeight() {
+    return height;
+  }
+
+  public void setHeight(String height) {
+    this.height = height;
+  }
+
   @Override
   public ModifiedValue getInitiative() {
     return initiative.get();
@@ -359,6 +413,14 @@ public class Character extends Creature<Character> implements Comparable<Charact
     store();
   }
 
+  public String getLooks() {
+    return looks;
+  }
+
+  public void setLooks(String looks) {
+    this.looks = looks;
+  }
+
   @Override
   public int getMaxHp() {
     return maxHp.get();
@@ -377,6 +439,14 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return reflex.get();
   }
 
+  public String getReligion() {
+    return religion;
+  }
+
+  public void setReligion(String religion) {
+    this.religion = religion;
+  }
+
   @Override
   public ModifiedValue getStrength() {
     return strength.get();
@@ -385,6 +455,14 @@ public class Character extends Creature<Character> implements Comparable<Charact
   @Override
   public ModifiedValue getStrengthCheck() {
     return strengthCheck.get();
+  }
+
+  public String getWeight() {
+    return weight;
+  }
+
+  public void setWeight(String weight) {
+    this.weight = weight;
   }
 
   @Override
@@ -475,6 +553,28 @@ public class Character extends Creature<Character> implements Comparable<Charact
     store();
   }
 
+  public String formatAttacks(Item item) {
+    int bonus = computeAttackBonus(item).total();
+    int attacks = numberOfAttacks(item);
+
+    List<String> parts = new ArrayList<>();
+    for (int i = 0; i < attacks; i++) {
+      parts.add("+" + (bonus - i * 6));
+    }
+
+    return item.getWeaponStyle().getName() + " " + Strings.SLASH_JOINER.join(parts);
+  }
+
+  public String formatCritical(Item item) {
+    int criticalLow = item.weaponCriticalLow();
+    int criticalMultiplier = item.weaponCriticalMultiplier();
+    if (criticalLow == 20) {
+      return "x" + criticalMultiplier;
+    } else {
+      return criticalLow + "-20/x" + criticalMultiplier;
+    }
+  }
+
   public int getClassLevel(String className, int totalLevel) {
     int classLevel = 0;
     for (int i = 0; i < totalLevel && i < levels.size(); i++) {
@@ -507,6 +607,22 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     state.reset();
+  }
+
+  public void setRandomAge() {
+    if (getRace().isPresent() && getLevel(1).isPresent()) {
+      age = getRace().get().randomAge(getLevel(1).get().getTemplate().getName());
+      store();
+    }
+  }
+
+  public void setRandomHeightAndWeight() {
+    if (getRace().isPresent()) {
+      String[] heightAndWeight = getRace().get().randomHeightAndWeight(getGender());
+      height = heightAndWeight[0];
+      weight = heightAndWeight[1];
+      store();
+    }
   }
 
   @Override
@@ -555,7 +671,13 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return super.write()
         .set(FIELD_XP, xp)
         .set(FIELD_LEVEL, level)
-        .setNested(FIELD_LEVELS, levels);
+        .setNested(FIELD_LEVELS, levels)
+        .set(FIELD_HEIGHT, height)
+        .set(FIELD_WEIGHT, weight)
+        .set(FIELD_AGE, age)
+        .set(FIELD_LOOKS, looks)
+        .set(FIELD_ALIGNMENT, alignment.toString())
+        .set(FIELD_RELIGION, religion);
   }
 
   private ModifiedValue adjustAbility(ModifiedValue value, Ability ability) {
@@ -648,6 +770,12 @@ public class Character extends Creature<Character> implements Comparable<Charact
     for (Data levelData : data.getNestedList(FIELD_LEVELS)) {
       levels.add(Level.read(levelData, i++));
     }
+    height = data.get(FIELD_HEIGHT, "");
+    weight = data.get(FIELD_WEIGHT, "");
+    age = data.get(FIELD_AGE, 0);
+    looks = data.get(FIELD_LOOKS, "");
+    alignment = data.get(FIELD_ALIGNMENT, Alignment.UNKNOWN);
+    religion = data.get(FIELD_RELIGION, "");
   }
 
   protected static Character create(CompanionContext context, String campaignId) {

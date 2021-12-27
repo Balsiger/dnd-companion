@@ -1,0 +1,311 @@
+template {
+  name: "WTC C9274"
+  world: "Generic"
+  description: "\\bold{Discover how dragons embody magic across the worlds of D&D and how you can bring them to life at your table in this quintessential reference guide for the world’s greatest roleplaying game.}\n\nMeet \\NPC{Fizban the Fabulous}: doddering archmage, unlikely hero of the \\Event{War of the Lance}, divine avatar of a dragon-god — and your guide to the mysteries of dragonkind in the worlds of Dungeons & Dragons.\n\nWhat is the difference between a \\Monster{red dragon} and a \\Monster{gold dragon}? What is dragonsight? How does the magic that suffuses dragons impact the world around them? Here is your comprehensive guide to dragons, filled with the tips and tools Dungeon Masters and players need for their encounters with these dangerous magical creatures.\n\nDragonslayers and dragon scholars alike will appreciate the new dragon-themed options for players eager to harness the power of dragon magic and create unique and memorable draconic characters. Dungeon Masters will discover a rich hoard of new tools and information for designing dragon-themed encounters, adventures, and campaigns. Discover a host of new dragons and other creatures. Learn about the lairs and hoards of each type of dragon, and how hoards focus the magic that suffuses dragons and connects them to the myriad worlds of the \\Place{Material Plane}. Discover everything there is to know about the most iconic monsters of D&D with help from \\NPC{Fizban}, your expert advisor on dragonkind!\\list{Introduces gem dragons to fifth edition!}{Reveals the story of the \\Place{First World} and the role \\God{Bahamut} and \\God{Tiamat} played in its creation and destruction.}{Adds new player character options, including unique draconic ancestries for \\Monster{dragonborn}, dragon-themed subclasses for \\Class{monks} and \\Class{rangers}, and new feat and spell options.}{Offers everything a Dungeon Master needs to craft adventures inspired by \\Monster{dragons} across the worlds of D&D, with new dragon lair maps and details on 20 different kinds of \\Monster{dragons}.}{Presents a complete \\Monster{dragon} bestiary and introduces a variety of new dragons and dragon-related creatures, including aspects of the dragon gods, dragon minions, and more.}\n\n\\bold{On the Cover}\n\n\\NPC{Fizban the Fabulous} protects a group of innocents as a \\Monster{crystal dragon} and a \\Monseter{red dragon} clash in the sky, in this painting by Chris Rahn."
+  short_description: "Bring dragons to live with this supplement for the world's greatest roleplaying game."
+}
+title: "Fizban's Treasury of Dragons"
+subtitle: "Straight from the Dragon's Mouth"
+date {
+  year: 2021
+  month: 10
+}
+author {
+  name: "Wyatt, James"
+  job: "lead designer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "designer"
+}
+author {
+  name: "Adams, Sydney"
+  job: "designer"
+}
+author {
+  name: "Benham, Bill"
+  job: "designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "designer"
+}
+author {
+  name: "De Armas, Makenzie"
+  job: "designer"
+}
+author {
+  name: "Dillon, Dan"
+  job: "designer"
+}
+author {
+  name: "Kenson, Steve"
+  job: "designer"
+}
+author {
+  name: "Khaw, Cassandra"
+  job: "designer"
+}
+author {
+  name: "Knipe, Renee"
+  job: "designer"
+}
+author {
+  name: "Lee, Adam"
+  job: "designer"
+}
+author {
+  name: "Levitch, Ari"
+  job: "designer"
+}
+author {
+  name: "Ludwig, Jeffrey"
+  job: "designer"
+}
+author {
+  name: "Price, Jessica"
+  job: "designer"
+}
+author {
+  name: "Rehmann, Taymoor"
+  job: "designer"
+}
+author {
+  name: "Sutter, James L."
+  job: "designer"
+}
+author {
+  name: "Vargas, Eugenio"
+  job: "designer"
+}
+author {
+  name: "Vorpahl, Amy"
+  job: "designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "rules developer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "rules developer"
+}
+editor {
+  name: "Bauer, Judy"
+}
+editor {
+  name: "Fitzgerald Gray, Scott"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Schneider, Wesley F."
+}
+cover {
+  name: "Finnstark, Anato"
+}
+cover {
+  name: "Rahn, Chris"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Bernard, Olivier"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Burmark, Ekatarina"
+}
+illustrator {
+  name: "Carlos, Dawn"
+}
+illustrator {
+  name: "Carpenter, Kai"
+}
+illustrator {
+  name: "Cearley, Clint"
+}
+illustrator {
+  name: "Chaturvedi, Sidarth"
+}
+illustrator {
+  name: "Christian, Billy"
+}
+illustrator {
+  name: "Compiet, Iris"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Dawes, Nikki"
+}
+illustrator {
+  name: "Dominic, Simon"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Gort, Ilse"
+}
+illustrator {
+  name: "Graciano, Lucas"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Keiser, Sam"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Kuzinsky, Andrey"
+}
+illustrator {
+  name: "Ladon, Katerina"
+}
+illustrator {
+  name: "Marzandedo, Antonio José"
+}
+illustrator {
+  name: "Mar, Andrew"
+}
+illustrator {
+  name: "Menendez, Oriana"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Nash, David Auden"
+}
+illustrator {
+  name: "Nordsol, Irina"
+}
+illustrator {
+  name: "Pavleeva, Anna"
+}
+illustrator {
+  name: "Prima, Livia"
+}
+illustrator {
+  name: "Prime, April"
+}
+illustrator {
+  name: "Rahn, Chris"
+}
+illustrator {
+  name: "Rallis, Chris"
+}
+illustrator {
+  name: "Scott, Dan"
+}
+illustrator {
+  name: "Sladek, David"
+}
+illustrator {
+  name: "Siswanto, Rudy"
+}
+illustrator {
+  name: "Stone, Alex"
+}
+illustrator {
+  name: "Sully, Crystal"
+}
+illustrator {
+  name: "Valeza, Brian"
+}
+illustrator {
+  name: "Vargas, Randy"
+}
+illustrator {
+  name: "Vellinov, Svetlin"
+}
+illustrator {
+  name: "Voss, Johannes"
+}
+illustrator {
+  name: "White, Campbell"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Wurzyk, Zusanne"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Stella, Zack"
+  job: "additional art director"
+}
+illustrator {
+  name: "Sheppard, Cynthia"
+  job: "additional art director"
+}
+illustrator {
+  name: "Vallas, Andrew"
+  job: "additional art director"
+}
+illustrator {
+  name: "Wood, Shawn"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+cartographer {
+  name: "Dyson Logos"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "project engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+pages: 224
+system: DND_5E
+audience: DM
+type: SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

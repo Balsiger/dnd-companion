@@ -24,6 +24,8 @@ package net.ixitxachitls.companion.data.values;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -53,6 +55,11 @@ public class ModifiedValue {
     this.base = base;
     this.min = min;
     this.signed = signed;
+  }
+
+  @FunctionalInterface
+  public interface Selector {
+    public boolean select(Modifier type);
   }
 
   public int getBase() {
@@ -108,8 +115,37 @@ public class ModifiedValue {
         + Strings.NEWLINE_JOINER.join(nonStackingLines)).trim();
   }
 
+  public List<Modifier> get(Modifier.Type type) {
+    return modifiersByType.getOrDefault(type, Collections.emptyList());
+  }
+
+  public int getNotTotal(Modifier.Type... types) {
+    int total = 0;
+    for (Modifier.Type type : modifiersByType.keySet()) {
+      if (!Arrays.stream(types).anyMatch(type::equals)) {
+        total += sum(stacking(type, modifiersByType.get(type), false));
+      }
+    }
+
+    return total;
+  }
+
   public int max() {
     return total(true);
+  }
+
+  public int total(Selector selector) {
+    ModifiedValue total = new ModifiedValue("Selection", 0, true);
+
+    for (Modifier.Type type : modifiersByType.keySet()) {
+      for (Modifier modifier : modifiersByType.get(type)) {
+        if (selector.select(modifier)) {
+          total.add(modifier);
+        }
+      }
+    }
+
+    return total.total();
   }
 
   public int total(boolean withConditions) {

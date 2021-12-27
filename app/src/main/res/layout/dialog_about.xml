@@ -561,6 +561,20 @@
             android:text="spell by Adrien Coquet from the Noun Project"
             android:theme="@style/LargeText" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="random by rizqa anindita from the Noun Project"
+            android:theme="@style/LargeText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="personality by Adrien Coquet from the Noun Project"
+            android:theme="@style/LargeText" />
+
       </LinearLayout>
     </ScrollView>
 

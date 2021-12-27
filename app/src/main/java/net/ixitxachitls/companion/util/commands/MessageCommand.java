@@ -21,7 +21,6 @@
 
 package net.ixitxachitls.companion.util.commands;
 
-import android.content.Context;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.SpannedString;
@@ -31,10 +30,20 @@ import java.util.List;
 /**
  * A command to start a new paragraph
  */
-public class ParCommand extends TextCommand {
+public class MessageCommand extends TextCommand {
+  private final String message;
+
+  public MessageCommand(String message) {
+    this.message = message;
+  }
+
   @Override
   public Spanned render(RenderingContext context, List<SpannableStringBuilder> optionals,
                         List<SpannableStringBuilder> arguments) {
-    return SpannedString.valueOf("\n\n");
+    // Also add it to the arguments, to support compound commands.
+    if (!arguments.isEmpty()) {
+      arguments.get(0).append(message);
+    }
+    return SpannedString.valueOf(message);
   }
 }

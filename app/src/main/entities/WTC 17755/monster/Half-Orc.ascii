@@ -17,3 +17,54 @@ size {
 }
 type: HUMANOID
 main_race: true
+male_height {
+  inches: 58
+  modifier {
+    number: 2
+    dice: 12
+  }
+}
+female_height {
+  inches: 53
+  modifier {
+    number: 2
+    dice: 12
+  }
+}
+male_weight {
+  pounds: 150
+  modifier {
+    number: 2
+    dice: 6
+  }
+}
+female_weight {
+  pounds: 110
+  modifier {
+    number: 2
+    dice: 6
+  }
+}
+age {
+  start: 14;
+  middle: 30;
+  old: 45;
+  venerable: 60;
+  max {
+    number: 2
+    dice: 20
+  }
+  short {
+    number: 1
+    dice: 4
+  }
+  medium {
+    number: 1
+    dice: 6
+  }
+  long {
+    number: 2
+    dice: 6
+  }
+}
+

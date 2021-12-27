@@ -30,26 +30,32 @@ import java.util.ArrayList;
  */
 public enum Size implements Enums.Named, Enums.Proto<Value.SizeProto.Size> {
 
-  UNKNOWN("Unknown", "Uk", Value.SizeProto.Size.UNKNOWN_SIZE),
-  UNRECOGNIZED("Unrecognized", "Ur", Value.SizeProto.Size.UNRECOGNIZED),
-  FINE("Fine", "F", Value.SizeProto.Size.FINE),
-  DIMINUTIVE("Diminutive", "D", Value.SizeProto.Size.DIMINUTIVE),
-  TINY("Tiny", "T", Value.SizeProto.Size.TINY),
-  SMALL("Small", "S", Value.SizeProto.Size.SMALL),
-  MEDIUM("Medium", "M", Value.SizeProto.Size.MEDIUM),
-  LARGE("Large", "L", Value.SizeProto.Size.LARGE),
-  HUGE("Huge", "H", Value.SizeProto.Size.HUGE),
-  GARGANTUAN("Gargantuan", "G", Value.SizeProto.Size.GARGANTUAN),
-  COLOSSAL("Colossal", "C", Value.SizeProto.Size.COLOSSAL);
+  UNKNOWN("Unknown", "Uk", Value.SizeProto.Size.UNKNOWN_SIZE, 0),
+  UNRECOGNIZED("Unrecognized", "Ur", Value.SizeProto.Size.UNRECOGNIZED, 0),
+  FINE("Fine", "F", Value.SizeProto.Size.FINE, -16),
+  DIMINUTIVE("Diminutive", "D", Value.SizeProto.Size.DIMINUTIVE, -12),
+  TINY("Tiny", "T", Value.SizeProto.Size.TINY, -8),
+  SMALL("Small", "S", Value.SizeProto.Size.SMALL, -4),
+  MEDIUM("Medium", "M", Value.SizeProto.Size.MEDIUM, 0),
+  LARGE("Large", "L", Value.SizeProto.Size.LARGE, 4),
+  HUGE("Huge", "H", Value.SizeProto.Size.HUGE, 8),
+  GARGANTUAN("Gargantuan", "G", Value.SizeProto.Size.GARGANTUAN, 12),
+  COLOSSAL("Colossal", "C", Value.SizeProto.Size.COLOSSAL, 16);
 
   private final String name;
   private final String shortName;
   private final Value.SizeProto.Size proto;
+  private final int modifier;
 
-  Size(String name, String shortName, Value.SizeProto.Size proto) {
+  Size(String name, String shortName, Value.SizeProto.Size proto, int modifier) {
     this.name = name;
     this.shortName = shortName;
     this.proto = proto;
+    this.modifier = modifier;
+  }
+
+  public int getModifier() {
+    return modifier;
   }
 
   @Override

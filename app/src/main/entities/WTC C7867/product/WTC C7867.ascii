@@ -1,0 +1,425 @@
+template {
+  name: "WTC C7867"
+  world: "Forgotten Realms"
+  description: "In Icewind Dale, adventure is a dish best served cold.\n\nBeneath the unyielding night sky, you stand before a towering glacier and recite an ancient rhyme, causing a crack to form in the great wall of ice. Beyond this yawning fissure, the \\Place{Caves of Hunger} await. And past this icy dungeon is a secret so old and terrifying that few dare speak of it. The mad wizards of the \\Group{Arcane Brotherhood} long to possess that which the god of winter’s wrath has so coldly preserved—as do you! What fantastic secrets and treasures are entombed in the sunless heart of the glacier, and what will their discovery mean for the denizens of \\Place{Icewind Dale}? Can you save \\Place{Ten-Towns} from the \\God{Frostmaiden}’s everlasting night?\n\n\\Product{Icewind Dale: Rime of the Frostmaiden} is a tale of dark terror that revisits the forlorn, flickering candlelights of civilization known as \\Place{Ten-Towns} and sheds light on the many bone-chilling locations that surround these frontier settlements."
+  short_description: "Feel the cold touch of death in this adventure for the world's greatest roleplaying game."
+}
+title: "Icewind Dale: Rimew of the Frostmaiden"
+subtitle: "Some Secrets are Worth Dying for!"
+date {
+  year: 2020
+  month: 9
+}
+author {
+  name: "Perkins, Chrisopher"
+  job: "story creator & lead writer"
+}
+author {
+  name: "Allan, Stacey"
+  job: "writing team"
+}
+author {
+  name: "Benham, Bill"
+  job: "writing team"
+}
+author {
+  name: "Carlan, H.H."
+  job: "writing team"
+}
+author {
+  name: "Conowith, Celeste"
+  job: "writing team"
+}
+author {
+  name: "Dillon, Dan"
+  job: "writing team"
+}
+author {
+  name: "Doyle, Will"
+  job: "writing team"
+}
+author {
+  name: "Ebel, Mikayla"
+  job: "writing team"
+}
+author {
+  name: "Gergersen, Anne"
+  job: "writing team"
+}
+author {
+  name: "Quandt, Chad"
+  job: "writing team"
+}
+author {
+  name: "Robbins, Morrigan"
+  job: "writing team"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "writing team"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "rules development"
+}
+author {
+  name: "Dillon, Dan"
+  job: "rules development"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "rules development"
+}
+author {
+  name: "Rehmann, Taymoor"
+  job: "rules development"
+}
+author {
+  name: "Daley, John Francis"
+  job: "world building"
+}
+author {
+  name: "Frasier, Crystal"
+  job: "world building"
+}
+author {
+  name: "Goldstein, Jonathan"
+  job: "world building"
+}
+author {
+  name: "Greenwood, Ed"
+  job: "world building"
+}
+author {
+  name: "Hamon, Amanda"
+  job: "world building"
+}
+author {
+  name: "Lee, Adam"
+  job: "world building"
+}
+author {
+  name: "Levitch, Ari"
+  job: "world building"
+}
+author {
+  name: "Mearls, Mike"
+  job: "world building"
+}
+author {
+  name: "Perkins, Chrisopher"
+  job: "world building"
+}
+author {
+  name: "Price, Jessica"
+  job: "world building"
+}
+author {
+  name: "Salvatore, R.A."
+  job: "world building"
+}
+author {
+  name: "Welch, Kate"
+  job: "world building"
+}
+author {
+  name: "Wood, Shawn"
+  job: "world building"
+}
+editor {
+  name: "Mohan, Kim"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "senior graphic designer"
+}
+illustrator {
+  name: "Falcone, Tryslan"
+  job: "graphic design"
+}
+cover {
+  name: "Hydro74"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Burdett, Christopher"
+}
+illustrator {
+  name: "Canava, Paul Scott"
+}
+illustrator {
+  name: "Chaturvedi, Sidharth"
+}
+illustrator {
+  name: "Chevrier, Jedo"
+}
+illustrator {
+  name: "Christensen, David René"
+}
+illustrator {
+  name: "CoupleOfKooks"
+}
+illustrator {
+  name: "Dawes, Nikki"
+}
+illustrator {
+  name: "Defois, Axel"
+}
+illustrator {
+  name: "Drebes, Olga"
+}
+illustrator {
+  name: "Ejsing, Jesper"
+}
+illustrator {
+  name: "Engle, Jason A."
+}
+illustrator {
+  name: "Gariba, Caroline"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Hannigan, Leesha"
+}
+illustrator {
+  name: "Keiser, Sam"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Lawson, Olly"
+}
+illustrator {
+  name: "Lunter, Titus"
+}
+illustrator {
+  name: "Mar, Andrew"
+}
+illustrator {
+  name: "Medeiros, Marcela"
+}
+illustrator {
+  name: "Michel, Robson"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Nordsol, Irina"
+}
+illustrator {
+  name: "Oakley, Stephen"
+}
+illustrator {
+  name: "Olausson, Robin"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Prima, Livia"
+}
+illustrator {
+  name: "Pime, April"
+}
+illustrator {
+  name: "Sladek, David"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Valeza, Brian"
+}
+illustrator {
+  name: "Velino, Svetlin"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Wuzyk, Suzanna"
+}
+cartographer {
+  name: "Allen, Stacey"
+}
+cartographer {
+  name: "Doyle, Will"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+illustrator {
+  name: "Wood, Shawn"
+  job: "concept art director"
+}
+illustrator {
+  name: "Drabas, Oleg"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Lunter, Titus"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Prime, April"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Rahn, Chris"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Ravenna, Jenn"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Whitters, Richard"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Wood, Shawn"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Yanner, Kieran"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Bolen, Sven"
+  job: "image technician"
+}
+illustrator {
+  name: "Cheung, Carmen"
+  job: "image technician"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+manager {
+  name: "Tovar, Dan"
+  job: "senior producer"
+}
+manager {
+  name: "Benham, Bill"
+  job: "producer"
+}
+manager {
+  name: "Hawkey, Robert"
+  job: "producer"
+}
+manager {
+  name: "Heleotis, Lea"
+  job: "producer"
+}
+manager {
+  name: "Callaway, Cyndy"
+  job: "project engineer"
+}
+manager {
+  name: "Gershman, David"
+  job: "production"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+manager {
+  name: "Tovar, Dan"
+  job: "production"
+}
+manager {
+  name: "Steward, Nathan"
+  job: "franchise & global brand strategy"
+}
+manager {
+  name: "Winninger, Ray"
+  job: "executive producer"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "director of licensning & publishing"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "licensing manager"
+}
+manager {
+  name: "Carrol, Bart"
+  job: "marketing & communications"
+}
+manager {
+  name: "Green, Pelham"
+  job: "marketing & communications"
+}
+manager {
+  name: "Narciso, Shauna"
+  job: "marketing & communications"
+}
+manager {
+  name: "Tanji, Emi"
+  job: "marketing & communications"
+}
+manager {
+  name: "Tito, Greg"
+  job: "marketing & communications"
+}
+manager {
+  name: "Vo, Anna"
+  job: "marketing & communications"
+}
+manager {
+  name: "Lindsay, Chris"
+  job: "product marketing manager"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand manager"
+}
+manager {
+  name: "Blakc, Orion D."
+  job: "editorial assistance"
+}
+pages: 320
+system: DND_5E
+audience: DM
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: POSTER
+  number: 1
+  description: "maps"
+}
+layout: FULL_COLOR

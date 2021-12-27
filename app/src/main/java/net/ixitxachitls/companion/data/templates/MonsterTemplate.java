@@ -25,9 +25,11 @@ import net.ixitxachitls.companion.data.documents.Feat;
 import net.ixitxachitls.companion.data.documents.Quality;
 import net.ixitxachitls.companion.data.enums.Alignment;
 import net.ixitxachitls.companion.data.enums.AlignmentStatus;
+import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.enums.MonsterSubType;
 import net.ixitxachitls.companion.data.enums.MonsterType;
 import net.ixitxachitls.companion.data.enums.Size;
+import net.ixitxachitls.companion.data.values.Dice;
 import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.data.values.Speed;
 import net.ixitxachitls.companion.proto.Template;
@@ -35,6 +37,7 @@ import net.ixitxachitls.companion.proto.Value;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -45,6 +48,7 @@ import java.util.stream.Collectors;
 public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProto> {
 
   public static final String TYPE = "monster";
+  private static final Random random = new Random();
   private final Template.MonsterTemplateProto proto;
 
   protected MonsterTemplate(String name, Template.MonsterTemplateProto proto) {
@@ -183,6 +187,55 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
 
   public boolean hasNaturalArmor() {
     return proto.hasNaturalArmor();
+  }
+
+  public int randomAge(String className) {
+    int base = proto.getAge().getStart();
+    switch (className.toLowerCase()) {
+      case "barbarian":
+      case "rogue":
+      case "sorcerer":
+        return base + Dice.fromProto(proto.getAge().getShort()).roll();
+
+      case "bard":
+      case "fighter":
+      case "paladin":
+      case "ranger":
+        return base + Dice.fromProto(proto.getAge().getMedium()).roll();
+
+      case "cleric":
+      case "druid":
+      case "monk":
+      case "wizard":
+        return base + Dice.fromProto(proto.getAge().getLong()).roll();
+
+      default:
+        return base;
+    }
+  }
+
+  public String[] randomHeightAndWeight(Gender gender) {
+    String[] heightAndWeight = new String[2];
+
+    if (gender != Gender.MALE && gender != Gender.FEMALE) {
+      gender = random.nextInt(2) == 1 ? Gender.FEMALE : Gender.MALE;
+    }
+
+    Template.MonsterTemplateProto.Height height =
+        gender == Gender.FEMALE ? proto.getFemaleHeight() : proto.getMaleHeight();
+    Template.MonsterTemplateProto.Weight weight =
+        gender == Gender.FEMALE ? proto.getFemaleWeight() : proto.getMaleWeight();
+
+    int heightRoll = Dice.fromProto(height.getModifier()).roll();
+    int weightRoll = Dice.fromProto(weight.getModifier()).roll();
+
+    int inches = height.getInches() + heightRoll;
+    int pounds = weight.getPounds() + heightRoll * weightRoll;
+
+    heightAndWeight[0] = (inches / 12) + "'" + (inches % 12) + "\"";
+    heightAndWeight[1] = pounds + " lbs";
+
+    return heightAndWeight;
   }
 
   @Override

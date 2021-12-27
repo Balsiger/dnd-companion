@@ -21,8 +21,9 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.content.Intent;
+import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,14 +39,19 @@ import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.print.CharacterPrinter;
 import net.ixitxachitls.companion.ui.views.ActionBarView;
 import net.ixitxachitls.companion.ui.views.CharacterTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Optional;
 
 import javax.annotation.Nullable;
 
+import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -69,14 +75,16 @@ public class CharacterFragment extends CompanionFragment {
   protected ActionBarView.Action move;
   protected ActionBarView.Action timed;
   protected ActionBarView.Action message;
+  protected ActionBarView.Action print;
   protected ViewPager pager;
+  protected @Nullable CharacterPersonalityFragment characterPersonalityFragment;
   protected @Nullable CharacterStatisticsFragment statisticsFragment;
   protected @Nullable CharacterInventoryFragment inventoryFragment;
-  private Optional<Handler> updateHandler = Optional.empty();
 
   public CharacterFragment() {
     super(Type.character);
 
+    characterPersonalityFragment = new CharacterPersonalityFragment();
     statisticsFragment = new CharacterStatisticsFragment();
     inventoryFragment = new CharacterInventoryFragment();
   }
@@ -133,6 +141,8 @@ public class CharacterFragment extends CompanionFragment {
         "This will remove this character from your device. If the "
             + "player is active on your WiFi, the character most likely will immediately "
             + "reappear, though.").onClick(this::delete);
+    print = addAction(R.drawable.baseline_print_24, "Print",
+        "Print the charactersheet.").onClick(this::print);
 
     return view;
   }
@@ -150,7 +160,6 @@ public class CharacterFragment extends CompanionFragment {
   public void onResume() {
     super.onResume();
 
-
     update();
   }
 
@@ -159,8 +168,9 @@ public class CharacterFragment extends CompanionFragment {
     super.onStart();
 
     TabLayout tabs = pager.findViewById(R.id.tabs);
-    tabs.getTabAt(0).setIcon(R.drawable.ic_information_outline_black_24dp);
-    tabs.getTabAt(1).setIcon(R.drawable.noun_backpack_16138);
+    tabs.getTabAt(0).setIcon(R.drawable.noun_personality_4159972);
+    tabs.getTabAt(1).setIcon(R.drawable.ic_information_outline_black_24dp);
+    tabs.getTabAt(2).setIcon(R.drawable.noun_backpack_16138);
   }
 
   public void show(Character character) {
@@ -168,6 +178,7 @@ public class CharacterFragment extends CompanionFragment {
     this.campaign = campaigns().getOptional(character.getCampaignId());
 
     title.show(character);
+    characterPersonalityFragment.show(character);
     statisticsFragment.show(character);
     inventoryFragment.show(character);
   }
@@ -213,6 +224,31 @@ public class CharacterFragment extends CompanionFragment {
     }
   }
 
+  private void print() {
+    PdfDocument document = new CharacterPrinter(getContext()).print(character);
+
+    // Create the pdf file.
+    File file = new File(getContext().getFilesDir() + "/sheets", character.getName() + ".pdf");
+    if (!file.getParentFile().exists()) {
+      file.getParentFile().mkdirs();
+    }
+    try {
+      document.writeTo(new FileOutputStream(file));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    document.close();
+
+    // Open the generated pdf for printing.
+    Intent intent = new Intent(Intent.ACTION_VIEW);
+    intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+    intent.setDataAndType(FileProvider.getUriForFile(getContext(),
+        getContext().getApplicationContext().getPackageName() + ".provider", file),
+        "application/pdf");
+    startActivity(intent);
+  }
+
   public class CharacterPagerAdapter extends FragmentPagerAdapter {
 
     public CharacterPagerAdapter(FragmentManager manager) {
@@ -221,7 +257,7 @@ public class CharacterFragment extends CompanionFragment {
 
     @Override
     public int getCount() {
-      return 2;
+      return 3;
     }
 
     @Override
@@ -229,9 +265,12 @@ public class CharacterFragment extends CompanionFragment {
       switch (position) {
         default:
         case 0:
-          return statisticsFragment;
+          return characterPersonalityFragment;
 
         case 1:
+          return statisticsFragment;
+
+        case 2:
           return inventoryFragment;
       }
     }

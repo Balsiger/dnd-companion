@@ -112,3 +112,54 @@ main_race: true
 bonus_feat: true
 skill_point_bonus: 1
 skill_point_bonus_first_level: 4
+male_height {
+  inches: 58
+  modifier {
+    number: 2
+    dice: 10
+  }
+}
+female_height {
+  inches: 53
+  modifier {
+    number: 2
+    dice: 10
+  }
+}
+male_weight {
+  pounds: 120
+  modifier {
+    number: 2
+    dice: 4
+  }
+}
+female_weight {
+  pounds: 85
+  modifier {
+    number: 2
+    dice: 4
+  }
+}
+age {
+  start: 15;
+  middle: 35;
+  old: 53;
+  venerable: 70;
+  max {
+    number: 2
+    dice: 20
+  }
+  short {
+    number: 1
+    dice: 4
+  }
+  medium {
+    number: 1
+    dice: 6
+  }
+  long {
+    number: 2
+    dice: 6
+  }
+}
+

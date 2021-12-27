@@ -1,0 +1,48 @@
+template {
+  name: "DMA 000097"
+  world: "Forgotten Realms"
+  description: "\\bold{The epic conclusion to the long-awaited trilogy featuring one of the most beloved characters in all of fantasy―Drizzt Do'Urden―a rollicking tale of life, death, intrigue, magic, danger, and the timeless bonds of family and friendship from New York Times bestselling author R. A. Salvatore.}\n\nDisplaced in time and unexpectedly reunited with his son \\NPC{Drizzt Do'Urden}, \\NPC{Zaknafein} has overcome the prejudices ingrained in him as a \\Monster{drow} warrior to help his son battle the ambitious \\God{Spider Queen} and stem the tide of darkness that has been unleashed upon the \\Place{Forgotten Realms}. Though \\NPC{Zaknafein} has endured the most difficult battles, survival has come at a terrible cost, and the fight is far from over.\n\nFacing \\Monster[demon]{demons} and \\Monster[drider]{driders}, \\NPC{Zaknafein} carries the entire weight of \\Place{Menzoberranzan} surrounding \\Place{Gauntlgym} on his shoulders once more. But the chances of survival for him and his old friend and mercenary \\NPC{Jarlaxle} look bleak. Trapped in a desperate and seemingly hopeless situation, the legendary warriors must reach deep inside themselves to face the impossible.\n\nWhile the burdens \\NPC{Zaknafein} bears are more than enough for one of \\Place{Menzoberrazan}’s greatest warriors, fate holds further challenges. When circumstances take an unexpected turn, \\MPC{Zaknafein} discovers he must not only conquer the darkness but learn to accept the uncontrollable: life itself.\n\nThe stakes have never been higher for R. A. Salvatore’s most beloved creations in this final volume of his latest bestselling trilogy begun with \\Product{Timeless} and \\Product{Boundless}. A story of brave heroes filled with dangerous thrills, \\Product{Relentless} also considers eternal questions about morality, purpose, sacrifice, and the definition of harmony. Exciting, imaginative, and thought-provoking, it takes fans on an action-packed ride that will challenge their assumptions and leave them breathless and satisfied."
+}
+title: "Relentless"
+leader: ""
+subtitle: "A Drizzt Novel"
+author {
+  name: "Salvatore, R.A."
+}
+cover {
+  name: "Melnik, Aleks"
+}
+cartography {
+  name: "Wizards of the Coast"
+}
+illustrator {
+  name: "Russel Szafranski, Paula"
+  job: "designer"
+}
+date {
+  year: 2020
+  month: 7
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "06"
+  title: "308587"
+  check: 9
+}
+pages: 442
+system: NONE
+audience: ALL
+type: NOVEL
+style: PAPERBACK
+producer: "Harper Voyage"
+price {
+  currency: "$"
+  number: 2899
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: COLOR_COVER

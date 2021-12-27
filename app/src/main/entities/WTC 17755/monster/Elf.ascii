@@ -198,3 +198,54 @@ automatic_feat {
   name: "Martial Weapon Proficiency"
   qualifier: "Composite Shortbow"
 }
+male_height {
+  inches: 53
+  modifier {
+    number: 2
+    dice: 6
+  }
+}
+female_height {
+  inches: 53
+  modifier {
+    number: 2
+    dice: 6
+  }
+}
+male_weight {
+  pounds: 85
+  modifier {
+    number: 1
+    dice: 6
+  }
+}
+female_weight {
+  pounds: 80
+  modifier {
+    number: 1
+    dice: 6
+  }
+}
+age {
+  start: 110;
+  middle: 175;
+  old: 263;
+  venerable: 350;
+  max {
+    number: 4
+    dice: 100
+  }
+  short {
+    number: 4
+    dice: 6
+  }
+  medium {
+    number: 6
+    dice: 6
+  }
+  long {
+    number: 10
+    dice: 6
+  }
+}
+

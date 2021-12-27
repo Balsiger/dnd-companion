@@ -41,6 +41,7 @@ public class Strings {
   public static final Joiner PIPE_JOINER = Joiner.on("|").skipNulls();
   public static final Joiner PLUS_JOINER = Joiner.on(" plus ").skipNulls();
   public static final Joiner AND_JOINER = Joiner.on("&").skipNulls();
+  public static final Joiner SLASH_JOINER = Joiner.on("/").skipNulls();
   private static final String SPACES =
       "                                                                      "
           + "                                                                     "
@@ -62,7 +63,8 @@ public class Strings {
           + "0000000000000000000000000000000000000000000000000000000000000000000000"
           + "0000000000000000000000000000000000000000000000000000000000000000000000";
 
-  private Strings() {}
+  private Strings() {
+  }
 
   public static String ensureSentence(String text) {
     text = text.trim();
@@ -108,6 +110,30 @@ public class Strings {
     return minutes + "m " + seconds + "s";
   }
 
+  public static String formatSigned(int number) {
+    if (number < 0) {
+      return String.valueOf(number);
+    }
+
+    return "+" + number;
+  }
+
+  public static String numeral(int number) {
+    if (number == 1) {
+      return "1st";
+    }
+
+    if (number == 2) {
+      return "2nd";
+    }
+
+    if (number == 3) {
+      return "3rd";
+    }
+
+    return number + "th";
+  }
+
   public static Optional<String> optionalIfEmpty(String value) {
     if (value == null || value.trim().isEmpty()) {
       return Optional.empty();
@@ -134,17 +160,20 @@ public class Strings {
       return inText + SPACES.substring(0, inLength - inText.length());
   }
 
-  public static String pad(long inNumber, int inLength, boolean inLeft)
-  {
+  public static String pad(long inNumber, int inLength, boolean inLeft) {
     String text = Long.toString(inNumber);
 
-    if(text.length() >= inLength)
+    if (text.length() >= inLength)
       return text;
 
-    if(inLeft)
+    if (inLeft)
       return ZEROES.substring(0, inLength - text.length()) + text;
     else
       return text + SPACES.substring(0, inLength - text.length());
+  }
+
+  public static String plural(int number, String singular, String plural) {
+    return number + " " + (number == 1 ? singular : plural);
   }
 
   public static String signed(int number) {
@@ -153,22 +182,6 @@ public class Strings {
     }
 
     return "+" + number;
-  }
-
-  public static String numeral(int number) {
-    if (number == 1) {
-      return "1st";
-    }
-
-    if (number == 2) {
-      return "2nd";
-    }
-
-    if (number == 3) {
-      return "3rd";
-    }
-
-    return number + "th";
   }
 
   public static String spaces(int length) {
@@ -184,9 +197,5 @@ public class Strings {
         .map(word -> word.isEmpty() ? word : Character.toTitleCase(word.charAt(0)) +
             word.substring(1).toLowerCase())
         .collect(Collectors.joining(" "));
-  }
-
-  public static String plural(int number, String singular, String plural) {
-    return number + " " + (number == 1 ? singular : plural);
   }
 }

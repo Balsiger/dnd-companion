@@ -31,19 +31,19 @@ import java.util.ArrayList;
 public enum WeaponType implements Enums.Named, Enums.Proto<Template.WeaponTemplateProto.Type> {
 
   UNKNOWN("Unknown", "UNK", Template.WeaponTemplateProto.Type.UNKNOWN),
-  PIERCING_OR_SLASHING("piercing or slashing", "POS",
+  PIERCING_OR_SLASHING("piercing or slashing", "P/S",
       Template.WeaponTemplateProto.Type.PIERCING_OR_SLASHING),
-  BLUDGEONING_OR_PIERING("bludgeoning or piercing", "BOP",
+  BLUDGEONING_OR_PIERING("bludgeoning or piercing", "B/P",
       Template.WeaponTemplateProto.Type.BLUDGEONING_OR_PIERCING),
-  BLUDGEONING_AND_PIERCING("bludgeoning and piercing", "BAP",
+  BLUDGEONING_AND_PIERCING("bludgeoning and piercing", "B&P",
       Template.WeaponTemplateProto.Type.BLUDGEONING_AND_PIERCING),
-  SLASHING_OR_PIERCING("slashing or piercing", "SOP",
+  SLASHING_OR_PIERCING("slashing or piercing", "S/P",
       Template.WeaponTemplateProto.Type.SLASHING_OR_PIERCING),
-  SLASHING("slashing", "SLH", Template.WeaponTemplateProto.Type.SLASHING),
-  BLUDGEONING("bludgeoning", "BLD", Template.WeaponTemplateProto.Type.BLUDGEONING),
-  PIERCING("piercing", "PRC", Template.WeaponTemplateProto.Type.PIERCING),
-  GRENADE("grenade", "GRD", Template.WeaponTemplateProto.Type.GRENADE),
-  NONE("none", "NON", Template.WeaponTemplateProto.Type.NONE);
+  SLASHING("slashing", "S", Template.WeaponTemplateProto.Type.SLASHING),
+  BLUDGEONING("bludgeoning", "B", Template.WeaponTemplateProto.Type.BLUDGEONING),
+  PIERCING("piercing", "P", Template.WeaponTemplateProto.Type.PIERCING),
+  GRENADE("grenade", "G", Template.WeaponTemplateProto.Type.GRENADE),
+  NONE("none", "-", Template.WeaponTemplateProto.Type.NONE);
 
   private final String name;
   private final String shortName;

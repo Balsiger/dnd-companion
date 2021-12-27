@@ -28,6 +28,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.CountUnit;
 import net.ixitxachitls.companion.data.enums.MagicEffectType;
+import net.ixitxachitls.companion.data.enums.Naming;
 import net.ixitxachitls.companion.data.enums.Probability;
 import net.ixitxachitls.companion.data.enums.Size;
 import net.ixitxachitls.companion.data.enums.Slot;
@@ -56,6 +57,7 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
 
   public static final String TYPE = "item";
 
+  private final String composedName;
   private final List<String> synonyms;
   private final String description;
   private final Money value;
@@ -67,12 +69,14 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
   private final boolean monetary;
   private final Template.ItemTemplateProto proto;
 
-  protected ItemTemplate(String name, List<String> synonyms, String description, Money value,
-                         Weight weight, int hp, Substance substance, Container container,
-                         Appearances appearances, boolean monetary,
+  protected ItemTemplate(String name, String composedName, List<String> synonyms,
+                         String description,
+                         Money value, Weight weight, int hp, Substance substance,
+                         Container container, Appearances appearances, boolean monetary,
                          Template.ItemTemplateProto proto) {
     super(proto.getTemplate(), name);
 
+    this.composedName = composedName;
     this.synonyms = synonyms;
     this.description = description;
     this.value = value;
@@ -186,7 +190,10 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
   }
 
   public String getNamePart() {
-    // TODO(merlind): Handle this whole things better somehow...
+    if (!composedName.isEmpty()) {
+      return composedName;
+    }
+
     if (synonyms.isEmpty() || isReal()) {
       return name;
     }
@@ -196,6 +203,10 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     }
 
     return synonyms.get(0);
+  }
+
+  public Naming getNaming() {
+    return Naming.fromProto(proto.getTemplate().getNaming());
   }
 
   public Probability getProbability() {
@@ -459,7 +470,7 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
   }
 
   public static ItemTemplate createEmpty(String name) {
-    return new ItemTemplate(name, Collections.emptyList(), "", Money.ZERO, Weight.ZERO, 0,
+    return new ItemTemplate(name, "", Collections.emptyList(), "", Money.ZERO, Weight.ZERO, 0,
         Substance.ZERO, Container.NONE, Appearances.EMPTY, false, defaultProto());
   }
 
@@ -470,6 +481,7 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
   public static ItemTemplate fromProto(
       net.ixitxachitls.companion.proto.Template.ItemTemplateProto proto) {
     ItemTemplate item = new ItemTemplate(proto.getTemplate().getName(),
+        proto.getTemplate().getComposedName(),
         proto.getTemplate().getSynonymList(), proto.getTemplate().getDescription(),
         Money.fromProto(proto.getValue()), Weight.fromProto(proto.getWeight()),
         proto.getHitPoints(), Substance.fromProto(proto.getSubstance()),

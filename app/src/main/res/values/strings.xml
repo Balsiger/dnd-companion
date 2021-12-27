@@ -47,6 +47,7 @@
   <string name="character_edit_name">Edit Name</string>
   <string name="character_edit_race">Select Race</string>
   <string name="character_edit_gender">Select Gender</string>
+  <string name="character_edit_alignment">Select Alignment</string>
   <string name="character_edit_level">Edit Level</string>
   <string name="character_edit_levels">Edit Levels</string>
   <string name="character_edit_hp_label">hit points</string>

@@ -1,0 +1,330 @@
+template {
+  name: "WTC C9276"
+  world: "Generic"
+  description: "Once every eight years, the fantastic \\Group{Witchlight Carnival} touches down on your world, bringing joy to one settlement after the next. Its owners, \\NPC{Mister Witch} and \\NPC{Mister Light}, know how to put on a good show. But there’s more to this magical extravaganza than meets the eye!\n\nThe carnival is a gateway to a fantastic \\Place{Feywild} domain unlike anything found on the \\Place{Material Plane}. Time has not been kind to this realm, however, and dark days lie ahead unless someone can thwart the dastardly schemes of the \\Group{Hourglass Coven}.\n\n\\Product{The Wild Beyond the Witchlight} takes adventurers from the \\Place{Witchlight Carnival} to \\Place{Prismeer}, a \\PlaceFeywild} domain of delight, and is designed for characters of levels 1–8. This book comes with a poster map that shows the carnival on one side and \\Place{Prismeer} on the other.\n\n\\list{Explore the \\Place{Plane of Faerie} in the first official D&D adventure set primarily in the \\Place{Feywild}.}{The adventure begins on a campaign world of the DM’s choice. The \\Group{Witchlight Carnival}, which serves as the means by which the characters enter the \\Place{Feywild}, can be dropped easily into any campaign setting.}{Adds two new character backgrounds: the Feylost (for characters who grew up in the Feywild) and the Witchlight Hand (for characters who work at the Witchlight Carnival).}{Introduces two races — play as a \\Monster{fairy} or as a \\Place{harengon}, a race of humanoid rabbits.}{All encounters in the adventure include a non-combat option, allowing players to think and roleplay their way through the adventure if they wish.}{Classic 1980s Dungeons & Dragons characters return, including \\NPC{Warduke}, \\NPC{Strongheart}, and \\NPC{Kelek}.\n\n\\bold{On the Cover}\n\n\\Group{The Witchlight Carnival} has come to town! On the back cover, a displacer beast finds 8-year-old Tyler Jacobson and leads him back to the carnival, where he belongs."
+  short_description: "A wickedly whimsical adventure for the world's greates roleplaying game."
+}
+title: "Wild Beyond the Witchlight"
+leader: "The"
+subtitle: "Something Wicked This Way Comes"
+date {
+  year: 2021
+  month: 9
+}
+author {
+  name: "Perkins, Christopher"
+  job: "project leader"
+}
+author {
+  name: "Allan, Stacy"
+  job: "writer"
+}
+author {
+  name: "Doyle, Will"
+  job: "writer"
+}
+author {
+  name: "Levitch, Ari"
+  job: "writer"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "writer"
+}
+author {
+  name: "Camaraza, Julien"
+  job: "addiional writer"
+}
+author {
+  name: "Farmer, Belle"
+  job: "additional writer"
+}
+author {
+  name: "Lee, Adam"
+  job: "additional writer"
+}
+author {
+  name: "Rehman, Taymoor"
+  job: "additional writer"
+}
+author {
+  name: "Robbins, Morrigan"
+  job: "additional writer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "rules development"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "rules development"
+}
+author {
+  name: "Rehman, Taymoor"
+  job: "rules development"
+}
+author {
+  name: "Rothfuss, Patrick"
+  job: "story consultant"
+}
+author {
+  name: "Lai, Shiaw-Ling"
+  job: "cultural consultant"
+}
+editor {
+  name: "Bauer, Judy"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Rose, Hannah"
+}
+cover {
+  name: "Hydro74"
+}
+cover {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Almeida, Helder"
+}
+illustrator {
+  name: "Babbey, Tom"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Burbura, Filip"
+}
+illustrator {
+  name: "Burdett, Christopher"
+}
+illustrator {
+  name: "Canava, Paul Scott"
+}
+illustrator {
+  name: "Carlos, Dawn"
+}
+illustrator {
+  name: "Carpenter, Kai"
+}
+illustrator {
+  name: "Cearley, Clint"
+}
+illustrator {
+  name: "Chaturvedi, Sidarth"
+}
+illustrator {
+  name: "Christensen, David René"
+}
+illustrator {
+  name: "Daarken"
+}
+illustrator {
+  name: "Danner, Alayna"
+}
+illustrator {
+  name: "Dawes, Nikki"
+}
+illustrator {
+  name: "Defois, Axel"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Gariba, Caroline"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Keiser, Sam"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Ladon, Katerina"
+}
+illustrator {
+  name: "Ladon, Katerina"
+}
+illustrator {
+  name: "Lawson, Olly"
+}
+illustrator {
+  name: "Lunter, Titus"
+}
+illustrator {
+  name: "Mar, Andrew"
+}
+illustrator {
+  name: "Medeiros, Marcela"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Michel, Robson"
+}
+illustrator {
+  name: "Moeller, Christopher"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Nordsol, Irina"
+}
+illustrator {
+  name: "Olausson, Robin"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Prime, April"
+}
+illustrator {
+  name: "Rainvill, Jason"
+}
+illustrator {
+  name: "Rallis, Chris"
+}
+illustrator {
+  name: "Rogers, Ned"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Stewart, Matt"
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Valeza, Brian"
+}
+illustrator {
+  name: "Veltkamp, Anna"
+}
+illustrator {
+  name: "Villeneuve, Magali"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Winters, Mark"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Wurzyk, Zuzanna"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Yochum, Trish"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wood, Shawn"
+  job: "concept art director"
+}
+illustrator {
+  name: "Chevier, Jedd"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Daarken"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Gas, Toma Feizo"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Lunter, Titus"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Prime, April"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Shkipin, Ilya"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Wood, Shawn"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Yammer, Kieran"
+  job: "concept illustrator"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+cartographer {
+  name: "Allan, Stacey"
+}
+cartographer {
+  name: "Doyle, Will"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "project engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+pages: 256
+system: DND_5E
+audience: DM
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: POSTER
+  number: 1
+}
+layout: FULL_COLOR

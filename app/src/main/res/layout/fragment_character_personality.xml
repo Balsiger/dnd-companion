@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="end"
+      android:text="Basics"
+      android:textColor="@color/character"
+      android:theme="@style/LargeText" />
+
+  <ImageView
+      android:layout_width="500dp"
+      android:layout_height="5dp"
+      android:layout_gravity="end"
+      android:tint="@color/character"
+      app:srcCompat="@drawable/gradient" />
+
+  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      android:id="@+id/name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:inputType="text"
+      app:descriptionText="The name of the character."
+      app:labelColor="@color/characterDark"
+      app:labelText="Name"
+      app:lineColor="@color/characterDark"
+      app:textColor="@color/characterText">
+
+  </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <net.ixitxachitls.companion.ui.views.LabelledTextView
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        app:descriptionText="The gender of the character."
+        app:labelColor="@color/characterDark"
+        app:labelText="Gender"
+        app:lineColor="@color/characterDark"
+        app:textColor="@color/characterText" />
+
+    <net.ixitxachitls.companion.ui.views.LabelledTextView
+        android:id="@+id/race"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:descriptionText="The race of the character."
+        app:labelColor="@color/characterDark"
+        app:labelText="Race"
+        app:lineColor="@color/characterDark"
+        app:textColor="@color/characterText" />
+  </LinearLayout>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="end"
+      android:text="Appearance"
+      android:textColor="@color/character"
+      android:theme="@style/LargeText" />
+
+  <ImageView
+      android:layout_width="500dp"
+      android:layout_height="5dp"
+      android:layout_gravity="end"
+      android:tint="@color/character"
+      app:srcCompat="@drawable/gradient" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="text"
+        app:descriptionText="The character's height."
+        app:labelColor="@color/characterDark"
+        app:labelText="Height"
+        app:lineColor="@color/characterDark"
+        app:textColor="@color/characterText">
+
+    </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="text"
+        app:descriptionText="The character's weight."
+        app:labelColor="@color/characterDark"
+        app:labelText="Weight"
+        app:lineColor="@color/characterDark"
+        app:textColor="@color/characterText" />
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="number"
+        app:descriptionText="The character's age."
+        app:labelColor="@color/characterDark"
+        app:labelText="Age"
+        app:lineColor="@color/characterDark"
+        app:textColor="@color/characterText" />
+
+    <ImageView
+        android:id="@+id/random_height_weight"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0"
+        android:tint="@color/characterDark"
+        app:srcCompat="@drawable/noun_random_1905751" />
+
+  </LinearLayout>
+
+  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      android:id="@+id/looks"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:inputType="text"
+      app:descriptionText="How the character generally looks like."
+      app:labelColor="@color/characterDark"
+      app:labelText="Looks"
+      app:lineColor="@color/characterDark"
+      app:textColor="@color/characterText" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="end"
+      android:text="Character"
+      android:textColor="@color/character"
+      android:theme="@style/LargeText" />
+
+  <ImageView
+      android:layout_width="500dp"
+      android:layout_height="5dp"
+      android:layout_gravity="end"
+      android:tint="@color/character"
+      app:srcCompat="@drawable/gradient" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <net.ixitxachitls.companion.ui.views.LabelledTextView
+        android:id="@+id/alignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        app:descriptionText="The alignment of the character."
+        app:labelColor="@color/characterDark"
+        app:labelText="Alignment"
+        app:lineColor="@color/characterDark"
+        app:textColor="@color/characterText" />
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/religion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="text"
+        app:descriptionText="The character's religon or his patron deity."
+        app:labelColor="@color/characterDark"
+        app:labelText="Religion/Patron Deity"
+        app:lineColor="@color/characterDark"
+        app:textColor="@color/characterText" />
+
+  </LinearLayout>
+
+</LinearLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="net.ixitxachitls.companion">
+    package="net.ixitxachitls.companion">
 
   <!-- requried permissions -->
   <uses-permission android:name="android.permission.INTERNET" />
@@ -17,26 +17,44 @@
         android:configChanges="orientation|screenSize"
         android:theme="@style/SplashTheme">
       <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
-        <category android:name="android.intent.category.LAUNCHER"/>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name="com.tenmiles.helpstack.activities.HomeActivity"
+    <activity
+        android:name="com.tenmiles.helpstack.activities.HomeActivity"
         android:theme="@style/AppTheme"></activity>
-    <activity android:name="com.tenmiles.helpstack.activities.ArticleActivity"
+    <activity
+        android:name="com.tenmiles.helpstack.activities.ArticleActivity"
         android:theme="@style/AppTheme"></activity>
-    <activity android:name="com.tenmiles.helpstack.activities.EditAttachmentActivity"
+    <activity
+        android:name="com.tenmiles.helpstack.activities.EditAttachmentActivity"
         android:theme="@style/AppTheme"></activity>
-    <activity android:name="com.tenmiles.helpstack.activities.ImageAttachmentDisplayActivity"
+    <activity
+        android:name="com.tenmiles.helpstack.activities.ImageAttachmentDisplayActivity"
         android:theme="@style/AppTheme"></activity>
-    <activity android:name="com.tenmiles.helpstack.activities.IssueDetailActivity"
+    <activity
+        android:name="com.tenmiles.helpstack.activities.IssueDetailActivity"
         android:theme="@style/AppTheme"></activity>
-    <activity android:name="com.tenmiles.helpstack.activities.NewIssueActivity"
+    <activity
+        android:name="com.tenmiles.helpstack.activities.NewIssueActivity"
         android:theme="@style/AppTheme"></activity>
-    <activity android:name="com.tenmiles.helpstack.activities.NewUserActivity"
+    <activity
+        android:name="com.tenmiles.helpstack.activities.NewUserActivity"
         android:theme="@style/AppTheme"></activity>
-    <activity android:name="com.tenmiles.helpstack.activities.SectionActivity"
+    <activity
+        android:name="com.tenmiles.helpstack.activities.SectionActivity"
         android:theme="@style/AppTheme"></activity>
+
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="${applicationId}.provider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+      <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/provider_paths" />
+    </provider>
 
   </application>
 

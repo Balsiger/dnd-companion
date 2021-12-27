@@ -1,0 +1,56 @@
+template {
+  name: "WTC C9940"
+  world: "Generic"
+  description: "This kit equips the Dungeon Master with a screen and other tools that are perfect for running D&D adventures through dungeons, whether ruined or thriving.\n\nThe Dungeon Master’s screen features a painting of a fantastic vista that plunges into the deep reaches of a mountain. Useful rules references cover the screen’s interior, with an emphasis on dungeon-delving.\n\n\list{DM screen specially designed for dungeon delving, with tables for encountering monsters and exploring ruins and dungeons.}{Features 36 punch out dungeon geomorph cards with pathway connection points, perfect for planning a dungeon during game preparation or for coming up with a map in the middle of play.}{Customizable double-sided dry-erase sheet offers unlimited versatility for tactical gameplay. Numbered grid for sketching maps or placing random encounters or treasure on one side, and summary of the main actions a character can take in combat on the other.}{18 illustrated punch out condition cards, including mold and slime cards for dungeon encounters.}{9 punch out numbered and illustrated initiative cards to easily track the turn order for players, monsters, and nonplayer characters.}"
+  short_description: "Delve into the Dungeon's Depths"
+}
+title: "Dungeon Master's Screen - Dungeon Kit"
+subtitle: "Delve into dungeons with this kit for the world's greatest roleplaying game."
+date {
+  year: 2021
+  month: 09
+}
+pages: 0
+system: DND_5E
+audience: DM
+type: SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2499
+  precision: 100
+}
+content {
+  part: SCREEN
+  number: 1
+}
+content {
+  part: FOLDER
+  number: 1
+}
+content {
+  part: CARD
+  number: 36
+  description: "dungeon geomporth cards with pathway connections"
+}
+content {
+  part: SHEET
+  number: 1
+  descripition: "dry-erase sheet"
+}
+content {
+  part: CARD
+  number: 18
+  description: "condition cards"
+}
+content {
+  part: CARD
+  number: 9
+  description: "initiative cards"
+}
+content {
+  part: BOX
+  number: 1
+}
+layout: FULL_COLOR

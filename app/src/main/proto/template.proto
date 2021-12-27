@@ -15,6 +15,15 @@ message TemplateProto {
   string short_description = 9;
   string incomplete = 10;
   bool base_only = 11;
+
+  enum Naming {
+    INFIX = 0;
+    POSTFIX = 1;
+    PREFIX = 2;
+    IGNORE = 3;
+  }
+  Naming naming = 12;
+  string composed_name = 13;
 }
 
 message WorldTemplateProto {
@@ -265,6 +274,32 @@ message MonsterTemplateProto {
   repeated FeatSelection automatic_feat = 38;
   int32 skill_point_bonus = 39;
   int32 skill_point_bonus_first_level = 40;
+
+  message Height {
+    int32 inches = 1;
+    DiceProto modifier = 2;
+  }
+  Height male_height = 41;
+  Height female_height = 42;
+
+  message Weight {
+    int32 pounds = 1;
+    DiceProto modifier = 2;
+  }
+  Weight male_weight = 43;
+  Weight female_weight = 44;
+
+  message Age {
+    int32 start = 1;
+    int32 middle = 2;
+    int32 old = 3;
+    int32 venerable = 4;
+    DiceProto max = 5;
+    DiceProto short = 6;
+    DiceProto medium = 7;
+    DiceProto long = 8;
+  }
+  Age age = 45;
 }
 
 message ItemTemplateProto {

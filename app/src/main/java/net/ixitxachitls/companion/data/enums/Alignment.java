@@ -71,11 +71,6 @@ public enum Alignment implements Enums.Named, Enums.Proto<Value.Alignment> {
     return proto;
   }
 
-  @Override
-  public String toString() {
-    return getName();
-  }
-
   public static Alignment fromName(String name) {
     return Enums.fromName(name, values());
   }

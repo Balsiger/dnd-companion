@@ -176,3 +176,54 @@ skill {
   name: "appraise"
 }
 main_race: true
+male_height {
+  inches: 36
+  modifier {
+    number: 2
+    dice: 4
+  }
+}
+female_height {
+  inches: 34
+  modifier {
+    number: 2
+    dice: 4
+  }
+}
+male_weight {
+  pounds: 40
+  modifier {
+    number: 1
+    dice: 1
+  }
+}
+female_weight {
+  pounds: 35
+  modifier {
+    number: 1
+    dice: 1
+  }
+}
+age {
+  start: 40;
+  middle: 100;
+  old: 150;
+  venerable: 200;
+  max {
+    number: 3
+    dice: 100
+  }
+  short {
+    number: 4
+    dice: 6
+  }
+  medium {
+    number: 6
+    dice: 6
+  }
+  long {
+    number: 9
+    dice: 6
+  }
+}
+

@@ -145,3 +145,54 @@ skill {
   ranks: 1
 }
 main_race: true
+male_height {
+  inches: 32
+  modifier {
+    number: 2
+    dice: 4
+  }
+}
+female_height {
+  inches: 30
+  modifier {
+    number: 2
+    dice: 4
+  }
+}
+male_weight {
+  pounds: 30
+  modifier {
+    number: 1
+    dice: 1
+  }
+}
+female_weight {
+  pounds: 25
+  modifier {
+    number: 1
+    dice: 1
+  }
+}
+age {
+  start: 20;
+  middle: 50;
+  old: 75;
+  venerable: 100;
+  max {
+    number: 5
+    dice: 20
+  }
+  short {
+    number: 2
+    dice: 4
+  }
+  medium {
+    number: 3
+    dice: 6
+  }
+  long {
+    number: 4
+    dice: 6
+  }
+}
+

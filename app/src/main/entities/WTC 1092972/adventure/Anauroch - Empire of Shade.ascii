@@ -617,8 +617,6 @@ encounter {
       name: "Greater Ring of Energy Resistance (fire)"
     }
   }
-
-
   spell_group {
     name: "Blighted Bloodfire"
     description: "Hot but ugly"
@@ -761,6 +759,7 @@ encounter {
     spell { name: "detect magic" }
   }
 }
+
 encounter {
   name: "Chambers of the Master"
   short_name: "C32"
@@ -774,6 +773,107 @@ encounter {
     ability_bonus: 0
     spell_class: SORCERER
     spell { name: "bear's endurance" }
+  }
+  read_aloud {
+    text: "Hubba Hubba Hubba"
+  }
+  treasure {
+    name: "Kir-Lanan Gargoyles"
+    description: "The items are carried by the Gargoyles and might be used in battle"
+    item {
+      name: "Potion of Bear's Endurance"
+    }
+    item {
+      name: "Potion of Bear's Endurance"
+    }
+    item {
+      name: "Potion of Protection from Energy (fire)"
+    }
+    item {
+      name: "Potion of Protection from Energy (fire)"
+    }
+    item {
+      name: "Potion of Eagle's Splendor"
+    }
+    item {
+      name: "Potion of Eagle's Splendor"
+    }
+    item {
+      name: "Potion of Eagle's Splendor"
+    }
+    item {
+      name: "Potion of Eagle's Splendor"
+    }
+    item {
+      name: "Necklace of Fireballs II"
+    }
+    item {
+      name: "Necklace of Fireballs II"
+    }
+    item {
+      name: "Wand of Inflight Light Wounds"
+      multiple: 40
+    }
+    item {
+      name: "Wand of Inflight Light Wounds"
+      multiple: 40
+    }
+    item {
+      name: "Bracers of Armor +4"
+    }
+    item {
+      name: "Bracers of Armor +4"
+    }
+    item {
+      name: "Amulet of Mighty Fists +2"
+    }
+    item {
+      name: "Amulet of Mighty Fists +2"
+    }
+  }
+  treasure {
+    name: "Drullister"
+    description: "Items are carried and potentially used by Drullister"
+    item {
+      name: "Staff of Evocation"
+      templates: "Shadow Weave Item"
+    }
+    item {
+      name: "Lesser Meta-Magic Rod of Enlarge Spell (shadow weave)"
+      templates: "Shadow Weave Item"
+    }
+    item {
+      name: "Wand of Cure Critical Wounds (shadow weave)"
+      multiple: 20
+      templates: "Shadow Weave Item"
+    }
+    item {
+      name: "Ring of Freedom of Movement (shadow weave)"
+      templates: "Shadow Weave Item"
+    }
+    item {
+      name: "Ring of Mind Shielding"
+      templates: "Shadow Weave Item"
+    }
+    item {
+      name: "Pale Lavender Ellipsoid Ioun Stone"
+      templates: "Shadow Weave Item"
+    }
+  }
+  treasure {
+    name: "Cushtal"
+    description: "The items are carried and potentially used by Cushtal"
+    item {
+      name: "Greatsword"
+      templates: "Weapon +1"
+      templates: "Speed"
+    }
+    item {
+      name: "Ring of Protection +1"
+    }
+    item {
+      name: "Gauntlets of Ogre Power"
+    }
   }
   spell_group {
     name: "Potion of Protection from Energy (Fire)"

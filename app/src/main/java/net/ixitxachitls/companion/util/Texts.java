@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.util;
 
 import android.content.Context;
+import android.text.Layout;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 
@@ -32,12 +33,15 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.enums.SpellClass;
 import net.ixitxachitls.companion.ui.dialogs.SpellDialog;
+import net.ixitxachitls.companion.util.commands.AlignmentCommand;
 import net.ixitxachitls.companion.util.commands.BoldCommand;
 import net.ixitxachitls.companion.util.commands.ClickableCommand;
 import net.ixitxachitls.companion.util.commands.ColorCommand;
+import net.ixitxachitls.companion.util.commands.CompoundCommand;
 import net.ixitxachitls.companion.util.commands.ItalicsCommand;
 import net.ixitxachitls.companion.util.commands.ListCommand;
-import net.ixitxachitls.companion.util.commands.ParCommand;
+import net.ixitxachitls.companion.util.commands.MessageCommand;
+import net.ixitxachitls.companion.util.commands.SizeCommand;
 import net.ixitxachitls.companion.util.commands.TableCommand;
 import net.ixitxachitls.companion.util.commands.TextCommand;
 
@@ -96,11 +100,13 @@ public class Texts {
       .put("Feat", new ColorCommand(R.color.featDark))
       .put("Product", new ColorCommand(R.color.productDark))
       .put("Skill", new ColorCommand(R.color.skillDark))
-      .put("par", new ParCommand())
+      .put("par", new MessageCommand("\n\n"))
       .put("bold", new BoldCommand())
       .put("emph", new ItalicsCommand())
       .put("table", new TableCommand())
       .put("list", new ListCommand())
+      .put("part", new CompoundCommand(new AlignmentCommand(Layout.Alignment.ALIGN_CENTER),
+          new ColorCommand(R.color.grey), new SizeCommand(24), new MessageCommand("\n")))
       .build();
 
   protected static String clean(String text) {

@@ -295,7 +295,7 @@ public class EditItemDialog extends Dialog {
   }
 
   private void update(List<ItemTemplate> templates) {
-    String fullName = Item.name(templates);
+    String fullName = Item.composeName(templates);
     if (owner.amDM()) {
       name.text(fullName);
     } else if (item.isPresent()) {

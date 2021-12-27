@@ -34,7 +34,6 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
-import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.dialogs.MessageDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 
@@ -78,23 +77,12 @@ public class LocalCharacterFragment extends CharacterFragment {
                            Bundle savedInstanceState) {
     View view = super.onCreateView(inflater, container, savedInstanceState);
 
-    title.setAction(this::editBase);
     title.setImageAction(this::editImage);
-    edit.show().onClick(this::editBase);
     timed.show().onClick(this::timed);
     move.show().onClick(this::move);
     message.show().onClick(this::sendMessage);
 
     return view;
-  }
-
-  private void editBase() {
-    if (!canEdit()) {
-      return;
-    }
-
-    CharacterDialog.newInstance(character.getId(),
-        character.getCampaignId()).display();
   }
 
   private void editImage() {

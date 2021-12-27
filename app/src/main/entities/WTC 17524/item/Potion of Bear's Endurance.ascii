@@ -1,7 +1,10 @@
 template {
-  name: "Potion of Bear\'s Endurance"
+  name: "Potion of Bear's Endurance"
   base: "potion"
-  description: "As \\SpellRef[Clr 3]{Bear\'s Endurance}."
-  short_description: "As \\SpellRef[Clr 3]{Bear\'s Endurance}."
+  description: "As \\Spell[caster_level=3]{Bear's Endurance}."
+  short_description: "As \\Spell[caster_level=3]{Bear's Endurance}."
 }
-probability: COMMON
+probability: RARE
+value {
+  gold: 300
+}
