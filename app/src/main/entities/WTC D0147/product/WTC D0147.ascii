@@ -1,0 +1,391 @@
+template {
+  name: "WTC D0147"
+  world: "Generic"
+  description: "The greatest minds in the multiverse meet at \\Place{Strixhaven University}. Professors convey fantastic secrets to eager students, and life on campus is frenetic. But danger lurks even here. Campus hijinks mix with mishaps and sinister plots, and it’s up to you to save the day.\n\n\\Product{Strixhaven: A Curriculum of Chaos} introduces the fantastical setting of Strixhaven University, drawn from the multiverse of Magic: The Gathering, and provides rules for creating characters who are students in one of its five colleges. Characters can explore the setting over the course of four adventures, which can be played together or on their own. Each adventure describes an academic year filled with scholarly pursuits, campus shenanigans, exciting friendships, hidden dangers, and perhaps even romance.\n\nThis book includes a poster map that shows \\Place{Strixhaven}’s campuses on one side and location maps on the other.\n\n\\list{Through the book’s multiyear campaign, players begin as first-year students who study, socialize, and adventure their way to graduation.}{Experience D&D in new ways through the academic challenges, extracurricular activities and jobs, and relationships explored on campus.}{Includes four adventures that can be played as stand-alones or woven together to create one campaign taking players from level 1 to level 10.}{Players can create characters using a new race presented in the book, an owlin, one of the owlfolk who study at the university.}{Adds new player character options including feats and backgrounds.}{Includes new spells and magic items that help your character feel connected to the college they choose to join.}{Encounter over forty magical, mysterious creatures and NPCs in the bestiary.}{\\Place{Strixhaven} can easily be dropped into any D&D world or campaign with the provided rules for adventuring as a student of magic.}\n\n\\bold{On the Cover}\n\nThree Strixhaven students find distractions from their studies in Magali Villeneuve's cover illustration. On the back, a harried Biblioplex assistant tries to tidy the mess."
+  short_description: "Rollicking campus adventures for the world's greatest roleplaying game."
+}
+title: "Strixhaven: A Curriculum of Chaos"
+leader: ""
+subtitle: "The School of Magic is in Session"
+date {
+  year: 2021
+  month: 12
+}
+author {
+  name: "Hamon, Amanda"
+  job: "lead designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "assistant lead designer"
+}
+author {
+  name: "Benham, Bill"
+  job: "designer"
+}
+author {
+  name: "De Armas, Makenzie"
+  job: "designer"
+}
+author {
+  name: "Dillon Dan"
+  job: "designer"
+}
+author {
+  name: "Kenson, Steve"
+  job: "designer"
+}
+author {
+  name: "Stangroom, T. Alexander"
+  job: "designer"
+}
+author {
+  name: "Adams, Sydney"
+  job: "assistant designer"
+}
+author {
+  name: "Rehman, Taymoor"
+  job: "assistant designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "rules developer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "rules developer"
+}
+editor {
+  name: "Bauer, Judy"
+}
+editor {
+  name: "Carter, Michelle"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Natividad, Ianara"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Schneider, F. Wesley"
+}
+cover {
+  name: "Hydro74"
+}
+cover {
+  name: "Villeneuve, Magali"
+}
+illustrator {
+  name: "Argyle, Steve"
+}
+illustrator {
+  name: "Bae, Jinho"
+}
+illustrator {
+  name: "Balanescu, Cristi"
+}
+illustrator {
+  name: "Bierek, Mike"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Brok, Alex"
+}
+illustrator {
+  name: "Burbura, Filip"
+}
+illustrator {
+  name: "Burmak, Dmitry"
+}
+illustrator {
+  name: "Burmak, Ekatarina"
+}
+illustrator {
+  name: "Canava, Paul Scott"
+}
+illustrator {
+  name: "Castañon, Manuel"
+}
+illustrator {
+  name: "Choo, Jehan"
+}
+illustrator {
+  name: "Christian, Billy"
+}
+illustrator {
+  name: "Cold, Chris"
+}
+illustrator {
+  name: "Cruz, Justine"
+}
+illustrator {
+  name: "Danner, Alayna"
+}
+illustrator {
+  name: "De Rio, Jonas"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "Dura, Piotr"
+}
+illustrator {
+  name: "Ejsin, Jesper"
+}
+illustrator {
+  name: "Fehr, Anna"
+}
+illustrator {
+  name: "Foti, Tony"
+}
+illustrator {
+  name: "Gariba, Caroline"
+}
+illustrator {
+  name: "Gort, Ilse"
+}
+illustrator {
+  name: "Grenier, Johan"
+}
+illustrator {
+  name: "Han, Yeong-Hao"
+}
+illustrator {
+  name: "Hassa, Josh"
+}
+illustrator {
+  name: "Hyrdro74"
+}
+illustrator {
+  name: "Izzy"
+}
+illustrator {
+  name: "Jedrusek, Tomasz"
+}
+illustrator {
+  name: "Jihun, Jason Kan"
+}
+illustrator {
+  name: "Kieryluk, Igor"
+}
+illustrator {
+  name: "Kollros, Mathias"
+}
+illustrator {
+  name: "Koroglu, Yigit"
+}
+illustrator {
+  name: "Kotaki, Kekai"
+}
+illustrator {
+  name: "Kusinzkiy, Andrey"
+}
+illustrator {
+  name: "Lafitte, Luiza"
+}
+illustrator {
+  name: "Lasahido, Luis"
+}
+illustrator {
+  name: "Lee, Ryan Alexander"
+}
+willustrator {
+  name: "Setiawan, Lee"
+}
+illustrator {
+  name: "Ljunggren, Daniel"
+}
+illustrator {
+  name: "Look, Lindsey"
+}
+iillustrator {
+   name: "Lyon, Howard"
+ }
+llustrator {
+  name: "Maniak, Slawomir"
+}
+illustrator {
+  name: "Manzanedo, Antonio José"
+}
+illustrator {
+  name: "Meehan, Joseph"
+}
+illustrator {
+  name: "Menezes, Viko"
+}
+illustrator {
+  name: "Michel, Robson"
+}
+illustrator {
+  name: "Miyara, Fransico"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Nael, Marta"
+}
+illustrator {
+  name: "Ortiz, Hector"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Pisano, Alexandra"
+}
+illustrator {
+  name: "Prescott, Steve"
+}
+illustrator {
+  name: "Rahn, Chris"
+}
+illustrator {
+  name: "Rainvill, Jason"
+}
+illustrator {
+  name: "Rocha, Andreas"
+}
+illustrator {
+  name: "Rooke, Denman"
+}
+illustrator {
+  name: "Sevestre, Sean"
+}
+illustrator {
+  name: "Smislshkalne, Liiga"
+}
+illustrator {
+  name: "Sola, Bryan"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Swanland, Raymond"
+}
+illustrator {
+  name: "Tang, YW"
+}
+illustrator {
+  name: "Titov, Viktor"
+}
+illustrator {
+  name: "Uoginta, Jokuba
+}
+illustrator {
+  name: "Vargas, Randy"
+}
+illustrator {
+  name: "Velinov, Svetlin"
+}
+illustrator {
+  name: "Vitale, Raoul"
+}
+illustrator {
+  name: "Voss, Johannes"
+}
+illustrator {
+  name: "Winters, Sara"
+}
+illustrator {
+  name: "Wu, Bayard"
+}
+illustrator {
+  name: "Yanner, Kieran"
+}
+illustrator {
+  name: "Zafiratos, Andreas"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "art director"
+}
+illustrator {
+  name: "Falcopne, Tristan"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: ""
+  job: "additional art director"
+}
+illustrator {
+  name: "Cartagena, Ovidio"
+  job: "additional art director"
+}
+illustrator {
+  name: "Ingvarsson, Taylor"
+  job: "additional art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "additional art director"
+}
+illustrator {
+  name: "Jenkot, Thomas"
+  job: "additional art director"
+}
+illustrator {
+  name: "Stella, Zack"
+  job: "additional art director"
+}
+illustrator {
+  name: "Wassell, Sarah"
+  job: "additional art director"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+cartographer {
+  name: "Baerald, Francesca"
+}
+cartographer {
+  name: "Macdonald, Sean"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "project engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+pages: 224
+system: DND_5E
+audience: DM
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+content {
+  part: POSTER
+  number: 1
+}
+layout: FULL_COLOR
